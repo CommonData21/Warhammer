@@ -1,0 +1,174 @@
+##WEAPONS##
+
+sword_1 = { ##Runesword
+	martial = 1
+	vassal_opinion = 2
+	monthly_character_prestige = 0.2
+	random = no	 
+	opposites =  {
+		sword_2
+		sword_3
+		sword_4
+		sword_5
+	}
+	combat_rating = 1
+	command_modifier = {
+		damage = 0.05
+	}
+	customizer = no
+}
+
+sword_2 = { #Sword of Ice
+	martial = 2
+	vassal_opinion = 4
+	monthly_character_prestige = 0.25
+	random = no	 
+	opposites =  {
+		sword_1
+		sword_3
+		sword_4
+		sword_5
+	}
+	combat_rating = 2
+	command_modifier = {
+		damage = 0.1
+	}
+	customizer = no
+}
+
+sword_3 = { #Sword of Fire
+	martial = 3
+	vassal_opinion = 6
+	monthly_character_prestige = 0.30
+	random = no	 
+	opposites =  {
+		sword_1
+		sword_2
+		sword_4
+		sword_5
+	}
+	combat_rating = 3
+	command_modifier = {
+		damage = 0.125
+	}
+	customizer = no
+}
+
+sword_4 = { #Sword of Lightning
+	martial = 4
+	vassal_opinion = 8
+	monthly_character_prestige = 0.35
+	random = no	 
+	opposites =  {
+		sword_1
+		sword_2
+		sword_3
+		sword_5
+	}
+	combat_rating = 4
+	command_modifier = {
+		damage = 0.15
+	}
+	customizer = no
+}
+
+sword_5 = { #Sword of Destruction
+	martial = 5
+	vassal_opinion = 10
+	monthly_character_prestige = 0.40
+	random = no	
+	opposites =  {
+		sword_1
+		sword_2
+		sword_3
+		sword_4
+	}	
+	combat_rating = 5
+	command_modifier = {
+		damage = 0.175
+	}
+	customizer = no
+}
+
+
+##RINGS##
+
+ring_of_persuasion = {
+random = no
+diplomacy = 5
+customizer = no
+}
+
+ring_of_invisibility = {
+random = no
+intrigue = 5
+customizer = no
+}
+
+ring_of_command = {
+random = no
+martial = 5
+command_modifier = {
+morale_defence = 0.1
+morale_offence = 0.1
+}
+customizer = no
+}
+
+ring_of_speed = {
+random = no
+customizer = no
+command_modifier = {
+speed = 0.1
+}
+}
+
+
+##AMULETS##
+
+amulet_of_protection_1 = {
+random = no
+customizer = no
+combat_rating = 1
+command_modifier = {
+defence = 0.1
+}
+}
+
+amulet_of_protection_3 = {
+random = no
+customizer = no
+combat_rating = 1
+command_modifier = {
+defence = 0.15
+}
+}
+
+amulet_of_protection_5 = {
+random = no 
+customizer = no
+combat_rating = 1
+command_modifier = {
+defence = 0.2
+}
+}
+
+##POTIONS##
+
+elixir_of_eternal_youth = {
+random = no
+customizer = no
+immortal = yes
+	ruler_designer_cost = 50
+}
+
+potion_of_beauty = {
+random = no
+customizer = no
+sex_appeal_opinion = 25
+}
+
+potion_of_healing = {
+random = no
+customizer = no
+}

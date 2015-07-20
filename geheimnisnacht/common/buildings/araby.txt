@@ -1,0 +1,81 @@
+castle = {
+
+	# Arabian Camel Cavalry
+	ca_culture_group_arabic_1 = {
+		desc = ca_culture_group_arabic_1_desc
+		potential = {
+			FROM = {
+				culture_group = arabyan_group
+				NOT = { culture = bayaji }
+				NOT = { culture = wasai }
+			}
+		}
+		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+		prerequisites = { ca_wall_2 }
+		gold_cost = 200
+		build_time = 730
+		camel_cavalry = 30
+		camel_cavalry_defensive = 0.15
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.0
+	}
+	ca_culture_group_arabic_2 = {
+		desc = ca_culture_group_arabic_1_desc
+		potential = {
+			FROM = {
+				culture_group = arabyan_group
+				NOT = { culture = bayaji }
+				NOT = { culture = wasai }
+			}
+		}
+		trigger = { TECH_CASTLE_CONSTRUCTION = 1 }
+		upgrades_from = ca_culture_group_arabic_1
+		gold_cost = 300
+		build_time = 1095
+		camel_cavalry = 40
+		camel_cavalry_defensive = 0.15
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 10.0
+	}
+	ca_culture_group_arabic_3 = {
+		desc = ca_culture_group_arabic_1_desc
+		potential = {
+			FROM = {
+				culture_group = arabyan_group
+				NOT = { culture = bayaji }
+				NOT = { culture = wasai }
+			}
+		}
+		trigger = { TECH_CASTLE_CONSTRUCTION = 2 }
+		upgrades_from = ca_culture_group_arabic_2
+		gold_cost = 400
+		build_time = 2190
+		camel_cavalry = 50
+		camel_cavalry_defensive = 0.15
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 10.0
+	}
+	ca_culture_group_arabic_4 = {
+		desc = ca_culture_group_arabic_1_desc
+		potential = {
+			FROM = {
+				culture_group = arabyan_group
+				NOT = { culture = bayaji }
+				NOT = { culture = wasai }
+			}
+		}
+		trigger = { TECH_CASTLE_CONSTRUCTION = 4 }
+		upgrades_from = ca_culture_group_arabic_3
+		gold_cost = 500
+		build_time = 2190
+		camel_cavalry = 60
+		camel_cavalry_defensive = 0.15
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 10.0
+	}
+	
+	}

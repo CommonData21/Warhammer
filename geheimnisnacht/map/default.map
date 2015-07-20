@@ -1,0 +1,70 @@
+max_provinces = 2419
+# stats:  2410 provinces
+# unused: 1630-1633 1818-1819
+definitions = "definition.csv"
+provinces = "provinces.bmp"
+positions = "positions.txt"
+terrain = "terrain.bmp"
+rivers = "rivers.bmp"
+terrain_definition = "terrain.txt"
+heightmap = "topology.bmp"
+tree_definition = "trees.bmp"
+continent = "continent.txt"
+adjacencies = "adjacencies.csv"
+climate = "climate.txt"
+region = "island_region.txt"
+geographical_region = "geographical_region.txt"
+static = "static.txt"
+seasons = "seasons.txt"
+
+sea_zones = { 2063 2077 }
+sea_zones = { 2118 2152 }
+sea_zones = { 1820 2062 }
+sea_zones = { 2078 2117 }
+sea_zones = { 2153 2286 }
+
+ocean_region = {	# OCEAN2
+	sea_zones = { 1 2 }
+}
+
+ocean_region = {	# OCEAN1
+	sea_zones = { 3 4 5 }
+}
+
+# Define which indices in trees.bmp palette which should count as trees for automatic terrain assignment
+tree = { 3 4 7 10 }
+
+major_rivers = 
+{
+	# OCEAN2
+	
+	# OCEAN1
+	2080 2081 2082 2083 2085 2087 2088 2089 2283 2284  #Amaxon River
+	2272  #Halkild
+	2273  #Iisgalt
+	1835 1977 2053  #Korv Ozero/Drakflojt
+	1850 1852 2248 2249  #River Aver
+	2265 2280  #River Brienne
+	2264  #River Dypvann
+	1836 1837 1885 2058 2059 2276  #River Grismerie
+	2267  #River Guadariz
+	2173 2177  #River Kwitanga
+	2095 2102  #River Lambada
+	2279  #River Morceaux
+	2024  #River Olimen
+	1935 2110 2112  #River Phrates
+	2156 2285 2286  #River Qurveza
+	2251 2252 2253  #River Reik
+	2278  #River Sannez
+	2250  #River Soll
+	2268 2269 2270  #River Starnek
+	2244 2245 2246 2247  #River Stir
+	1843 2257 2258  #River Talabec
+	1978 2048  #River Talebec
+	2266  #River Tarmos
+	2217 2219  #River Tigis
+	2259 2260 2261 2262 2263  #River Tobol/River Tolsol
+	2254 2255 2256  #River Urskoy
+	2274  #Ursfjord
+
+}

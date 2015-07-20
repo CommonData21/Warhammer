@@ -1,0 +1,20 @@
+# c_tor_elyr
+
+# County Title
+title = c_tor_elyr
+
+# Settlements
+max_settlements = 3
+
+b_tor_elyr = castle
+#b_tor_arec = city
+#b_silvergale = temple
+
+# Misc
+culture = ellyrian
+religion = cadai
+
+#History
+1.1.1={ 
+b_tor_elyr = ca_ellyrion_reavers
+}

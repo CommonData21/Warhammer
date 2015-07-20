@@ -1,0 +1,16 @@
+# c_nochi
+
+# County Title
+title = c_nochi
+
+# Settlements
+max_settlements = 2
+
+b_nochi = tribal
+#b_ramana = city
+
+# Misc
+culture = lizardman
+religion = old_ones
+terrain = jungle
+#History

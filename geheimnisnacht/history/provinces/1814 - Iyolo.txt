@@ -1,0 +1,16 @@
+# c_iyolo
+
+# County Title
+title = c_iyolo
+
+# Settlements
+max_settlements = 2
+
+b_iyolo = tribal
+#b_hualtlalin = city
+
+# Misc
+culture = lizardman
+religion = old_ones
+terrain = jungle
+#History

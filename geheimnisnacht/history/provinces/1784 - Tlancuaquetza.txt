@@ -1,0 +1,16 @@
+# c_tlancuaquetza
+
+# County Title
+title = c_tlancuaquetza
+
+# Settlements
+max_settlements = 2
+
+b_tlancuaquetza = tribal
+#b_tlanmalocuauh = city
+
+# Misc
+culture = lizardman
+religion = old_ones
+terrain = jungle
+#History

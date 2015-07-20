@@ -1,0 +1,41 @@
+# 3 Songs of Byzantium
+
+song = {
+	name = "komnenos.ogg"
+	
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			NOT = {	religion_group = dwarf_gods_group }
+			NOT = {	religion = hashut }
+		}		
+	}
+}
+
+song = {
+	name = "legacyofrome.ogg"
+	
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			NOT = {	religion_group = dwarf_gods_group }
+			NOT = {	religion = hashut }
+		}		
+	}
+}
+
+song = {
+	name = "thebyzantineempire.ogg"
+	
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			NOT = {	religion_group = dwarf_gods_group }
+			NOT = {	religion = hashut }
+		}		
+	}
+}
+

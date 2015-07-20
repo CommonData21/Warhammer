@@ -1,0 +1,26 @@
+forest_group = {
+	graphical_culture = westerngfx
+
+	forest_main = {
+		graphical_culture = treemangfx
+
+		color = { 0.3 1.0 0.6 }
+
+		male_names = {
+			Acar Adanhu Aeconthor Ailmer Aimer Airdan Amadri Amrynn Amrynnar Aornendril Arun Ayduin Azelar Baelm Baerencor Barenak Bethetel Biarfay Blaedar Burhusk Bursce Byreplas Byspyne Coeddil Cyran Cyveraef Delmuth Dregenis Drimrael Durthu Dynsenek Eathemyve Elaith Elamstaer Elduin Elorian Elorshin Erlathan Falael Fangorn Fargorn Gaeleath Galather Haele Haemir Hagluin Haryk Hathelos Ilphas Iolas Irosolom Iroun Jaonos Jhaartael Julniele Khatar Kindel Kyrenic Laradow Larchtwig Lashul Malon Marlevaur Matalon Merith Mnementh Narbeth Nym  Orrian Phaendar Phaornik Popharim Pyacorth Reptar Rhydysann Riluaneth Rychell Scorach Scoram Scorlder Seiveril Taindril Taithocar Taldorn Tanith Tanithil Tasar Thanan Tinlef Tresrouthe Urddusk Verncese Vuduin Walnerflor Wepanlar Wylderaen Wylfaen Wynnrun Yalathanil Zabath Zenoth
+		}
+		female_names = {
+			Ahrendue Aleesia Alenia Almedha Amra Ara Arnarra Artin Ashrae Aurae Bellaluna Calarel Calithae Cellica Chalsarda Daratrine Darshee Delimbiyra Drycha Duru Ealla Eallyrl Enania Esyae Fae Faylen Gaelira Gaylia Gylledha Ialantha Imryll Itiireae Iythra Iythronel Jhaumrithe Kasula Keenor Keishara Lensa Lyeecia Maelyrra Marona Meira Melarue Merialeth Nabooru Nithroel Nueleth Nuovis Oldae Omylia Ornus Penelo Pyria Quamara Raerauntha Rathiain Renna Rysharak Shae Sharaera Shearah Solana Solaryn Sumia Symrustar Talanashta Tanath Tanulia Tiatha Tiriara Vaeri Valindra Velatha Ylrisae Yndestra
+		}
+
+		pat_grf_name_chance = 0
+		mat_grf_name_chance = 0
+		father_name_chance = 0
+
+		pat_grm_name_chance = 0
+		mat_grm_name_chance = 0
+		mother_name_chance = 0
+		
+		modifier = default_culture_modifier
+	}
+}

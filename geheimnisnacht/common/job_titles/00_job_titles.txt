@@ -1,0 +1,537 @@
+##########################################
+# COUNCILLOR TITLES
+##########################################
+
+#	attribute: This attribute is added to the ruler's for governance purposes
+#	viceroy: This is the Viceroy title for de jure Kingdoms
+#	allow: conditions for the character to hold the title
+#    gain_effect: fires when the title is granted
+#    lose_effect: fires when a title is lost if dismissal_trigger evaluates to false
+#    The other fields are all character modifiers.
+
+# Modded for warhammer purposes (just basic things)
+# Added basis restrictions chaos follower cannot help order
+
+job_chancellor = {
+    is_chancellor = yes
+	attribute = diplomacy
+	dignity = 0.33
+	opinion_effect = 15
+	
+	monthly_salary = 0.1
+	monthly_prestige = 0.015
+	
+	allow = {
+		OR = {
+			AND = {
+				OR = { is_female = no
+					AND = { is_female = yes
+						liege = { religion = amazon } }
+					AND = { is_female = yes
+						liege = { religion_group = cadai_group } }
+					AND = { is_female = yes
+						liege = { religion_group = cytharai_group } }
+					}
+				is_adult = yes
+				}
+			AND = {
+				is_female = yes
+				liege = { 
+					primary_title = {
+						OR = { has_law = enatic_succession
+							has_law = enatic_cognatic_succession
+							has_law = true_cognatic_succession
+							}
+						}
+					}
+					is_adult = yes
+				}
+            has_character_flag = special_chancellor
+        }
+        # warhammer restriction
+	NOT = { trait = creature_slann }
+        OR = { 
+               AND = { NOT = { trait = creature_beastman }
+                	NOT = { FROM = { trait = creature_beastman } } }
+               AND = { trait = creature_beastman
+                	FROM = { trait = creature_beastman } }
+        }
+		OR = { 
+               AND = { 
+					NOT = { 
+						OR = { 
+							culture_group = orc_group
+							culture_group = goblin_group
+						}
+					}
+					NOT = { 
+							FROM = { 
+								OR = { 
+								culture_group = orc_group
+								culture_group = goblin_group
+							} 
+						}
+					} 
+				}
+               AND = { 
+					OR = { 
+						culture_group = orc_group
+						culture_group = goblin_group
+					}
+                	FROM = { 
+							OR = { 
+							culture_group = orc_group
+							culture_group = goblin_group
+							} 
+					}
+				}
+		}
+        OR = { 
+            religion_group = FROM
+            AND = {
+                religion_group = old_gods_group
+                FROM = { religion_group = chaos_gods_group }
+            }
+        }
+                
+		prisoner = no
+		NOT = { trait = incapable }
+		NOT = { trait = in_hiding }
+	}
+	gain_effect = {
+	}
+	lose_effect = {
+		opinion = { who = FROM modifier = opinion_fired_from_council }
+	}
+	
+	action = action_improve_relations
+	action = action_fabricate_claims
+	action = action_clan_sentiment # Replaces Fabricate Claims for Nomads
+	action = action_sow_dissent
+
+	lift_fow = yes
+}
+
+# NOTE: The allow trigger for this job also determines who can command armies! - No longer, apparently.
+job_marshal = {
+	is_marshal = yes
+	attribute = martial
+	dignity = 0.33
+	opinion_effect = 15
+	
+	monthly_salary = 0.1
+	monthly_prestige = 0.015
+	
+	allow = {
+		NOT = { trait = pregnant }
+		OR = {
+			AND = {
+				OR = { is_female = no
+					AND = { is_female = yes
+						liege = { religion = amazon } }
+					AND = { is_female = yes
+						liege = { religion_group = cytharai_group } }
+					AND = { is_female = yes
+						liege = { religion = asrai_cadai } }
+					}
+				is_adult = yes
+				}
+			AND = {
+				is_female = yes
+				liege = { 
+					primary_title = {
+						OR = { has_law = enatic_succession
+							has_law = enatic_cognatic_succession
+							has_law = true_cognatic_succession
+							}
+						}
+					}
+					is_adult = yes
+				}
+			AND = { age = 14				# No more commander toddler
+				OR = { has_character_modifier = magic_power_1
+					has_character_modifier = magic_power_2
+					has_character_modifier = magic_power_3
+					has_character_modifier = magic_power_4 } 
+				}
+	            has_character_flag = special_marshal
+       		 }
+        # warhammer restriction
+	NOT = { trait = creature_slann }
+        OR = { 
+               AND = { NOT = { trait = creature_beastman }
+                	NOT = { FROM = { trait = creature_beastman } } }
+               AND = { trait = creature_beastman
+                	FROM = { trait = creature_beastman } }
+        }
+        OR = { 
+            religion_group = FROM
+            AND = {
+                religion_group = old_gods_group
+                FROM = { religion_group = chaos_gods_group }
+            }
+        }
+		#Lizardman must appoint Saurus, unless they have no Saurus
+		OR = {
+			NOT = { religion = old_ones }
+			trait = creature_saurus
+			NOT = { liege = { any_courtier = { trait = creature_saurus } } }
+			}
+		OR = { 
+               AND = { 
+					NOT = { 
+						OR = { 
+							culture_group = orc_group
+							culture_group = goblin_group
+						}
+					}
+					NOT = { 
+							FROM = { 
+								OR = { 
+								culture_group = orc_group
+								culture_group = goblin_group
+							} 
+						}
+					} 
+				}
+               AND = { 
+					OR = { 
+						culture_group = orc_group
+						culture_group = goblin_group
+					}
+                	FROM = { 
+							OR = { 
+							culture_group = orc_group
+							culture_group = goblin_group
+							} 
+					}
+				}
+		}
+        prisoner = no
+		NOT = { trait = incapable }
+		NOT = { trait = in_hiding }
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+		opinion = { who = FROM modifier = opinion_fired_from_council }
+	}
+	action = action_spread_chaos 
+	action = action_despoil_land
+	action = action_assist_arrest
+	action = action_train_troops
+	action = action_train_troops_nomadic
+	action = action_advance_mil_tech
+	action = action_organize_raid # Replaces action_advance_mil_tech for Tribes
+	action = action_make_province_green
+
+	lift_fow = yes
+}
+
+job_treasurer = {
+	is_treasurer = yes
+	attribute = stewardship
+	dignity = 0.2
+	opinion_effect = 15
+	
+	monthly_salary = 0.1
+	monthly_prestige = 0.015
+	
+	allow = {
+		OR = {
+			AND = {
+				OR = { is_female = no
+					AND = { is_female = yes
+						liege = { religion = amazon } }
+					AND = { is_female = yes
+						liege = { religion_group = cadai_group } }
+					AND = { is_female = yes
+						liege = { religion_group = cytharai_group } }
+					}
+				is_adult = yes
+				}
+			AND = {
+				is_female = yes
+				liege = { 
+					primary_title = {
+						OR = { has_law = enatic_succession
+							has_law = enatic_cognatic_succession
+							has_law = true_cognatic_succession
+							}
+						}
+					}
+					is_adult = yes
+				}
+            has_character_flag = special_treasurer
+        }
+        # warhammer restriction
+	NOT = { trait = creature_slann }
+        OR = { 
+               AND = { NOT = { trait = creature_beastman }
+                	NOT = { FROM = { trait = creature_beastman } } }
+               AND = { trait = creature_beastman
+                	FROM = { trait = creature_beastman } }
+        }
+        OR = { 
+            religion_group = FROM
+            AND = {
+                religion_group = old_gods_group
+                FROM = { religion_group = chaos_gods_group }
+            }
+        }
+		OR = { 
+               AND = { 
+					NOT = { 
+						OR = { 
+							culture_group = orc_group
+							culture_group = goblin_group
+						}
+					}
+					NOT = { 
+							FROM = { 
+								OR = { 
+								culture_group = orc_group
+								culture_group = goblin_group
+							} 
+						}
+					} 
+				}
+               AND = { 
+					OR = { 
+						culture_group = orc_group
+						culture_group = goblin_group
+					}
+                	FROM = { 
+							OR = { 
+							culture_group = orc_group
+							culture_group = goblin_group
+							} 
+					}
+				}
+		}
+        prisoner = no
+		NOT = { trait = incapable }
+		NOT = { trait = in_hiding }
+	}
+	gain_effect = {
+	}
+	lose_effect = {
+		opinion = { who = FROM modifier = opinion_fired_from_council }
+	}
+	
+	action = action_squeeze_peasants
+	action = action_collect_tribute # Replaces action_squeeze_peasants for Nomads
+	action = action_settle_tribe # Replaces action_squeeze_peasants for Tribes
+	action = action_oversee_construction
+	action = action_advance_eco_tech
+	action = action_build_legend # Replaces action_advance_eco_tech for Tribes
+
+	lift_fow = yes
+}
+
+job_spymaster = {
+	is_spymaster = yes
+	attribute = intrigue
+	dignity = 0.1
+	opinion_effect = 15
+	
+	monthly_salary = 0.1
+	
+	allow = {
+		OR = {
+			AND = {
+				is_adult = yes
+           			 }
+            has_character_flag = special_spymaster
+        }
+        # warhammer restriction
+	NOT = { trait = creature_slann }
+        OR = { 
+               AND = { NOT = { trait = creature_beastman }
+                	NOT = { FROM = { trait = creature_beastman } } }
+               AND = { trait = creature_beastman
+                	FROM = { trait = creature_beastman } }
+        }
+        OR = { 
+            religion_group = FROM
+            AND = {
+                religion_group = old_gods_group
+                FROM = { religion_group = chaos_gods_group }
+            }
+        }
+		OR = { 
+               AND = { 
+					NOT = { 
+						OR = { 
+							culture_group = orc_group
+							culture_group = goblin_group
+						}
+					}
+					NOT = { 
+							FROM = { 
+								OR = { 
+								culture_group = orc_group
+								culture_group = goblin_group
+							} 
+						}
+					} 
+				}
+               AND = { 
+					OR = { 
+						culture_group = orc_group
+						culture_group = goblin_group
+					}
+                	FROM = { 
+							OR = { 
+							culture_group = orc_group
+							culture_group = goblin_group
+							} 
+					}
+				}
+		}
+        prisoner = no
+		NOT = { trait = incapable }
+		NOT = { trait = in_hiding }
+	}
+	gain_effect = {
+	}
+	lose_effect = {
+		opinion = { who = FROM modifier = opinion_fired_from_council }
+	}
+	
+	action = action_uncover_plots
+	action = action_organize_spies
+	action = action_study_technology
+
+	lift_neighbor_fow = yes
+}
+
+job_spiritual = {
+	is_spiritual = yes
+	attribute = learning
+	dignity = 0.15
+	opinion_effect = 15
+	
+	monthly_salary = 0.1
+	monthly_piety = 0.015
+	
+	allow = {
+		prisoner = no
+		OR = { NOT = { trait = incapable }
+			trait = creature_slann }
+		NOT = { trait = in_hiding }
+		liege = {
+			religion = ROOT
+		}
+		OR = {
+			AND = {
+				is_adult = yes
+				OR = {
+					is_female = no
+					religion = stromfels
+					religion = grail
+					religion = myrmidian
+					religion = taalite
+					religion = manannite
+					religion_allows_female_temple_holders = yes
+					AND = {
+						is_female = yes
+						liege = { religion = amazon }
+					}
+				}
+			}
+			has_character_flag = special_spiritual
+		}
+        # warhammer restriction
+               OR = { trait = khemri_liche_priest
+                	NOT = { FROM = { trait = creature_nehekharan } } }
+               OR = { trait = creature_slann
+                	NOT = { FROM = { trait = creature_skink } }
+                	NOT = { FROM = { trait = creature_slann } } }
+        OR = { 
+               AND = { NOT = { trait = creature_beastman }
+                	NOT = { FROM = { trait = creature_beastman } } }
+               AND = { trait = creature_beastman
+                	FROM = { trait = creature_beastman } }
+        }
+        OR = { 
+            religion_group = FROM
+            AND = {
+                religion_group = old_gods_group
+                FROM = { religion_group = chaos_gods_group }
+            }
+        }
+		
+		OR = {
+			is_theocracy = yes
+			AND = {
+				liege = { is_tribal = yes }
+				is_ruler = no
+			}
+			#liege = { religion_group = muslim }
+			AND = {
+				is_ruler = no
+				has_autocephaly = no
+			}
+		}
+		
+		OR = {
+			#NOT = { religion_group = muslim }
+			#NOT = { liege = { religion_group = muslim } }
+			trait = creature_slann
+			trait = khemri_liche_priest
+			trait = detached_priest
+			trait = martial_cleric
+			trait = scholarly_theologian
+			trait = mastermind_theologian
+		}
+		OR = { 
+               AND = { 
+					NOT = { 
+						OR = { 
+							culture_group = orc_group
+							culture_group = goblin_group
+						}
+					}
+					NOT = { 
+							FROM = { 
+								OR = { 
+								culture_group = orc_group
+								culture_group = goblin_group
+							} 
+						}
+					} 
+				}
+               AND = { 
+					OR = { 
+						culture_group = orc_group
+						culture_group = goblin_group
+					}
+                	FROM = { 
+							OR = { 
+							culture_group = orc_group
+							culture_group = goblin_group
+							} 
+					}
+				}
+		}
+	}
+	gain_effect = {
+	}
+	lose_effect = {
+		opinion = { who = FROM modifier = opinion_fired_from_council }
+	}
+	dismiss_trigger = {
+		#NOT = { FROM = { religion_group = muslim } }
+	}
+	
+	action = action_inquisition
+	action = action_advance_cul_tech
+	action = action_improve_rel_relations
+	action = action_charity
+	action = action_build_zeal # Tribal replacement for 'action_advance_cul_tech'
+	action = action_awaken_servants
+
+	lift_fow = yes
+}

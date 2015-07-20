@@ -1,0 +1,1516 @@
+namespace = slunacy
+
+#Umbrella event (yearly pulse)
+character_event = {
+	id = slunacy.1
+	hide_window = yes
+	is_triggered_only = yes
+
+    # things which exclude mutation
+	trigger = {
+		NOT = { trait = creature_forestspirit }
+		NOT = { trait = creature_treekin }
+		NOT = { trait = creature_nehekharan }
+		NOT = { trait = creature_chaosspawn }
+		NOT = { trait = vampire_lahmian_visible }
+		NOT = { trait = vampire_carstein_visible }
+		NOT = { trait = vampire_blood_visible }
+		NOT = { trait = vampire_strigoi_visible }
+		NOT = { trait = vampire_necrach_visible }
+		NOT = { trait = vampire_jade_visible }
+		NOT = { trait = vampire_mahtmasi_visible }
+		NOT = { trait = vampire_lahmian_hidden }
+		NOT = { trait = vampire_carstein_hidden }
+		NOT = { trait = vampire_blood_hidden }
+		NOT = { trait = vampire_strigoi_hidden }
+		NOT = { trait = vampire_necrach_hidden }
+		NOT = { trait = vampire_jade_hidden }
+		NOT = { trait = vampire_mahtmasi_hidden }
+
+		OR = { trait = lunatic_1
+			trait = lunatic_2
+			trait = lunatic_3 }
+	}
+
+	weight_multiplier = { factor = 1
+
+        # Cosmic modifers not geography or trait dependent
+        # Morrslieb presence
+        modifier = {
+            factor = 1.25
+            has_global_flag = morrslieb_full
+        }
+
+        # Chaos counter modifier
+        modifier = {
+            factor = 1.2
+            has_global_flag = doom_low
+        }
+        modifier = {
+            factor = 1.5
+            has_global_flag = doom_medium
+        }
+        modifier = {
+            factor = 1.75
+            has_global_flag = doom_high
+        }
+        modifier = {
+            factor = 2
+            has_global_flag = doom_very_high
+        }
+        modifier = {
+            factor = 3
+            has_global_flag = doom
+        }
+        #
+        # Trait dependent modifiers
+        #
+        modifier = {
+            factor = 0.75
+            trait = creature_dwarf 
+        }
+        modifier = {
+            factor = 0.75
+            OR = {
+                trait = creature_orc
+                trait = creature_snotling
+                trait = creature_goblin
+            }
+        }
+        modifier = {
+            factor = 2
+            trait = creature_chaos_dwarf 
+        }
+        modifier = {
+            factor = 0.5
+            trait = creature_halfling
+        }
+        modifier = {
+            factor = 1.5
+            trait = mutation_minor
+        }
+        modifier = {
+            factor = 2
+            trait = mutation_major
+        }
+        modifier = {
+            factor = 3
+            trait = mutation_massive
+        }
+        modifier = {
+            factor = 1.25
+            trait = addict
+        }
+        modifier = {
+            factor = 1.5
+            trait = lore_tzeentch
+        }
+        modifier = {
+            factor = 1.25
+		NOT = { trait = magic_potential_1 }
+		NOT = { trait = magic_potential_2 }
+		NOT = { trait = magic_potential_3 }
+		NOT = { trait = magic_potential_4 }
+        }
+        modifier = {
+            factor = 1.25
+		NOT = { has_character_modifier = magic_power_1 }
+		NOT = { has_character_modifier = magic_power_2 }
+		NOT = { has_character_modifier = magic_power_3 }
+		NOT = { has_character_modifier = magic_power_4 }
+        }
+        modifier = {
+            factor = 2
+            has_character_flag = forsaken_flag
+        }
+        
+        # Religion dependent modifier (obviously service under darks gods banner increase chance)
+        # basic modifer 
+        modifier = {
+            factor = 1.5
+                religion_group = chaos_gods_group
+		}
+		modifier = {
+            factor = 1.25
+            has_character_flag = hidden_cultist_tzeentch
+		}
+		modifier = {
+            factor = 1.5
+            has_character_flag = hidden_cultist_tzeentch2
+		}
+		modifier = {
+            factor = 1.75
+            has_character_flag = hidden_cultist_tzeentch3
+		}
+		modifier = {
+            factor = 1.25
+			OR = {
+				has_character_flag = hidden_cultist_khorne
+				has_character_flag = hidden_cultist_slaanesh
+				has_character_flag = hidden_cultist_nurgle
+				has_character_flag = hidden_cultist_undivided
+			}
+		}
+		modifier = {
+            factor = 1.25
+			OR = {
+				has_character_flag = hidden_cultist_khorne2
+				has_character_flag = hidden_cultist_slaanesh2
+				has_character_flag = hidden_cultist_nurgle2
+				has_character_flag = hidden_cultist_undivided2
+			}
+		}
+		modifier = {
+            factor = 1.25
+			OR = {
+				has_character_flag = hidden_cultist_khorne3
+				has_character_flag = hidden_cultist_slaanesh3
+				has_character_flag = hidden_cultist_nurgle3
+				has_character_flag = hidden_cultist_undivided3
+			}
+		}
+		
+        # Location dependent modifiers
+        modifier = {
+            factor = 1.5
+            location = { empire = { title = e_chaos_wastes } }
+		}
+        modifier = {
+            factor = 1.25
+            location = { kingdom = { title = k_sylvania } }
+		}
+        modifier = {
+            factor = 1.25
+            location = { kingdom = { title = k_mousillon } }
+		}
+        modifier = {
+            factor = 1.25
+            location = { duchy = { title = d_geisterforst } }
+		}
+        modifier = {
+            factor = 1.5
+            location = { has_province_modifier = warpdust_traces }
+		}
+	}
+    # trigger a random mutation
+    immediate = { 
+
+	#always add modifiers to decide which god would approve more of which sort of madness
+	#always call for mutation.1005 on any added insanity to determine the new value of the variable.
+        random_list = {
+		#shadows behind (twitchy becomes paranoid)
+		#untouched by others' misery (twitchy becomes cruel)
+		#offered substance to ease stress (twitchy loses stressed, gains addict)
+		#mage tries dangerous experiment (twitchy, on success increased learning, on failure wounded, on critical failure disfigured+wounded courtier)		
+		#drunkard feels poisoned (twitchy loses drunkard)
+
+		#maniac gets Blind Virtue maddness
+		#maniac gets Fake Mage maddness
+		#maniac gets Despairing Laughter maddness
+		#maniac gets Unfeeling maddness
+
+		#lunatic gets Bloodthirsty maddness
+		#lunatic gets God Delusion maddness
+		
+		
+		#lunatic kills random courtier
+		#lunatic goes on a killing spree (province modifier)
+		#lunatic mage blows up a building (province modifier)
+
+		10 = { character_event = { id = slunacy.2 } } #twitchy
+		10 = { character_event = { id = slunacy.3 } } #twitchy
+		10 = { character_event = { id = slunacy.4 } } #twitchy
+		5 = { character_event = { id = slunacy.5 } } #twitchy
+		#5 = { character_event = { id = slunacy.6 } } #twitchy
+		#5 = { character_event = { id = slunacy.7 } } #twitchy
+		#5 = { character_event = { id = slunacy.8 } } #twitchy
+		5 = { character_event = { id = slunacy.9 } } #twitchy
+		10 = { modifier = {
+          			factor = 0
+          			NOT = { trait = lunatic_2 }
+				}
+			character_event = { id = slunacy.10 } } #maniac
+		10 = { modifier = {
+          			factor = 0
+          			NOT = { trait = lunatic_2 }
+				}
+			character_event = { id = slunacy.11 } } #maniac
+		10 = { modifier = {
+          			factor = 0
+          			NOT = { trait = lunatic_2 }
+				}
+			character_event = { id = slunacy.12 } } #maniac
+		10 = { modifier = {
+          			factor = 0
+          			NOT = { trait = lunatic_2 }
+				}
+			character_event = { id = slunacy.13 } } #maniac
+		10 = { modifier = {
+          			factor = 0
+          			NOT = { trait = lunatic_3 }
+				}
+			character_event = { id = slunacy.14 } } #lunatic
+		10 = { modifier = {
+          			factor = 0
+          			NOT = { trait = lunatic_3 }
+				}
+			character_event = { id = slunacy.15 } } #lunatic
+		}
+	}
+}
+
+# Twitchy - Whispers and Shadows
+character_event = {
+	id = slunacy.2
+	desc = EVTDESCslunacy2
+	picture = GFX_evt_whispers
+
+	trigger = { trait = lunatic_1
+		NOT = { trait = paranoid } }
+
+	is_triggered_only = yes
+    
+	option = {
+		name = EVTOPTAslunacy2
+		random = { chance = 50
+				add_trait = paranoid }
+		hidden_tooltip = { character_event = { id = mutation.1005 } } #lunacy counter
+	}
+}
+# Twitchy - Unsympathetic
+character_event = {
+	id = slunacy.3
+	desc = EVTDESCslunacy3
+	picture = GFX_evt_lunatic
+
+	trigger = { trait = lunatic_1
+		NOT = { trait = cruel } }
+
+	is_triggered_only = yes
+    
+	option = {
+		name = EVTOPTAslunacy3
+		random = { chance = 50
+				add_trait = cruel }
+		hidden_tooltip = { character_event = { id = mutation.1005 } } #lunacy counter
+	}
+}
+
+# Twitchy - Too stressed
+character_event = {
+	id = slunacy.4
+	desc = EVTDESCslunacy4
+	picture = GFX_evt_lunatic
+
+	trigger = { trait = lunatic_1
+			trait = stressed }
+
+	is_triggered_only = yes
+    
+	option = {
+		name = EVTOPTAslunacy4
+		random = { chance = 50
+				remove_trait = stressed
+				add_trait = addict }
+		hidden_tooltip = { character_event = { id = mutation.1005 } } #lunacy counter
+	}
+}
+
+# Twitchy Mage - Dangerous experiment
+character_event = {
+	id = slunacy.5
+	desc = EVTDESCslunacy5
+	picture = GFX_evt_lunatic
+
+	trigger = { trait = lunatic_1
+		OR = { has_character_modifier = magic_power_1
+			has_character_modifier = magic_power_2
+			has_character_modifier = magic_power_3
+			has_character_modifier = magic_power_4 } 
+		}
+
+	is_triggered_only = yes
+    
+	option = {
+		name = EVTOPTAslunacy5
+		hidden_tooltip = { random_list = { 33 = { 
+        						modifier = {
+								factor = 1.5
+								trait = patient
+								}
+        						modifier = {
+								factor = 1.5
+								has_character_modifier = magic_power_4
+								}
+        						modifier = {
+								factor = 1.5
+								has_character_modifier = magic_power_3
+								}
+							character_event = { id = slunacy.6 } }
+							34 = { character_event = { id = slunacy.7 } }
+							33 = { character_event = { id = slunacy.8 } }
+			
+						 }
+				 }
+	}
+}
+
+# Twitchy Mage - Experiment successfull
+character_event = {
+	id = slunacy.6
+	desc = EVTDESCslunacy6
+	picture = GFX_evt_lunatic
+
+	trigger = { trait = lunatic_1 }
+
+	is_triggered_only = yes
+    
+	option = {
+		name = EVTOPTAslunacy6
+		change_learning = 1
+		hidden_tooltip = { character_event = { id = mutation.1005 } } #lunacy counter
+	}
+}
+
+# Twitchy Mage - Experiment failed
+character_event = {
+	id = slunacy.7
+	desc = EVTDESCslunacy7
+	picture = GFX_evt_lunatic
+
+	trigger = { trait = lunatic_1 }
+
+	is_triggered_only = yes
+    
+	option = {
+		name = EVTOPTAslunacy7
+		change_variable = { which = "lunatic_counter" value = 1 }
+		hidden_tooltip = { character_event = { id = mutation.1005 } } #lunacy counter
+	}
+}
+
+# Twitchy Mage - Experiment critical failure
+character_event = {
+	id = slunacy.8
+	desc = EVTDESCslunacy8
+	picture = GFX_evt_lunatic
+
+	trigger = { trait = lunatic_1 }
+
+	is_triggered_only = yes
+    
+	option = {
+		name = EVTOPTAslunacy8
+		if = { limit = { trait = disfigured }
+			death = { death_reason = death_accident } 
+			break = yes }
+		if = { limit = { NOT = { trait = disfigured } }
+			add_trait = disfigured }
+		change_variable = { which = "lunatic_counter" value = 1 }
+		hidden_tooltip = { character_event = { id = mutation.1005 } } #lunacy counter
+	}
+}
+
+# Twitchy - Drunkard feels poisoned
+character_event = {
+	id = slunacy.9
+	desc = EVTDESCslunacy9
+	picture = GFX_evt_lunatic
+
+	trigger = { trait = lunatic_1
+			trait = drunkard }
+
+	is_triggered_only = yes
+    
+	option = {
+		name = EVTOPTAslunacy9
+		remove_trait = drunkard
+		hidden_tooltip = { character_event = { id = mutation.1005 } } #lunacy counter
+	}
+}
+
+# Maniac - Gets Blind Virtue
+character_event = {
+	id = slunacy.10
+	desc = EVTDESCslunacy10
+	picture = GFX_evt_lunatic
+
+	trigger = { trait = lunatic_2
+		NOT = { trait = creature_forestspirit }
+		NOT = { has_character_modifier = blind_virtue }
+		NOT = { has_character_modifier = fake_mage }
+		NOT = { has_character_modifier = despairing_laughter }
+		NOT = { has_character_modifier = unfeeling }
+		NOT = { has_character_modifier = bloodthirsty }
+		NOT = { has_character_modifier = god_delusion } }
+
+	is_triggered_only = yes
+    
+	option = {
+		name = EVTOPTAslunacy10
+		if = { limit = { OR = { religion = nurgle
+					AND = { NOT = { religion_group = chaos_gods_group }
+						NOT = { religion_group = horned_rat_god_group } } }
+				 }
+			piety = -400 }
+		hidden_tooltip = {
+			any_vassal = { 
+				limit = { OR = { religion = nurgle
+					AND = { NOT = { religion_group = chaos_gods_group }
+						NOT = { religion_group = horned_rat_god_group } } }
+					 }
+				opinion = { modifier = opinion_lunatic_w
+						who = ROOT
+						years = 10 } } 
+			any_courtier = { 
+				limit = { is_landed = no
+					OR = { religion = nurgle
+					AND = { NOT = { religion_group = chaos_gods_group }
+						NOT = { religion_group = horned_rat_god_group } } }
+					 }
+				opinion = { modifier = opinion_lunatic_w
+						who = ROOT
+						years = 10 } } 
+				} 
+		change_variable = { which = "lunatic_counter" value = 3 }
+		add_character_modifier = { name = blind_virtue duration = -1 }
+		hidden_tooltip = { character_event = { id = mutation.1005 } } #lunacy counter
+	}
+}
+
+
+# Maniac - Gets Fake Mage
+character_event = {
+	id = slunacy.11
+	desc = EVTDESCslunacy11
+	picture = GFX_evt_lunatic
+
+	trigger = { trait = lunatic_2
+		NOT = { trait = creature_forestspirit }
+		NOT = { has_character_modifier = blind_virtue }
+		NOT = { has_character_modifier = fake_mage }
+		NOT = { has_character_modifier = despairing_laughter }
+		NOT = { has_character_modifier = unfeeling }
+		NOT = { has_character_modifier = bloodthirsty }
+		NOT = { has_character_modifier = god_delusion }
+		NOT = { has_character_modifier = magic_power_1 }
+		NOT = { has_character_modifier = magic_power_2 }
+		NOT = { has_character_modifier = magic_power_3 }
+		NOT = { has_character_modifier = magic_power_4 } }
+
+	is_triggered_only = yes
+    
+	option = {
+		name = EVTOPTAslunacy11
+		if = { limit = { OR = { religion = khorne
+					AND = { NOT = { religion_group = chaos_gods_group }
+						NOT = { religion_group = horned_rat_god_group } } }
+
+				 }
+			piety = -800 }
+		hidden_tooltip = {
+			any_vassal = { 
+				limit = { OR = { religion = nurgle
+					AND = { NOT = { religion_group = chaos_gods_group }
+						NOT = { religion_group = horned_rat_god_group } } }
+					 }
+				opinion = { modifier = opinion_lunatic_w
+						who = ROOT
+						years = 10 } } 
+			any_courtier = { 
+				limit = { is_landed = no
+					OR = { religion = nurgle
+					AND = { NOT = { religion_group = chaos_gods_group }
+						NOT = { religion_group = horned_rat_god_group } } }
+					 }
+				opinion = { modifier = opinion_lunatic_w
+						who = ROOT
+						years = 10 } } 
+				} 
+		change_variable = { which = "lunatic_counter" value = 3 }
+		add_character_modifier = { name = fake_mage duration = -1 }
+		hidden_tooltip = { character_event = { id = mutation.1005 } } #lunacy counter
+	}
+}
+
+
+# Maniac - Gets Despairing Laughter
+character_event = {
+	id = slunacy.12
+	desc = EVTDESCslunacy12
+	picture = GFX_evt_lunatic
+
+	trigger = { trait = lunatic_2
+		NOT = { trait = creature_forestspirit }
+		NOT = { has_character_modifier = blind_virtue }
+		NOT = { has_character_modifier = fake_mage }
+		NOT = { has_character_modifier = despairing_laughter }
+		NOT = { has_character_modifier = unfeeling }
+		NOT = { has_character_modifier = bloodthirsty }
+		NOT = { has_character_modifier = god_delusion } }
+
+	is_triggered_only = yes
+    
+	option = {
+		name = EVTOPTAslunacy12
+		if = { limit = {  NOT = { religion_group = chaos_gods_group }
+				NOT = { religion_group = horned_rat_god_group }
+				 }
+			piety = -400 }
+		hidden_tooltip = {
+			any_vassal = { 
+				limit = { OR = { religion = nurgle
+					AND = { NOT = { religion_group = chaos_gods_group }
+						NOT = { religion_group = horned_rat_god_group } } }
+					 }
+				opinion = { modifier = opinion_lunatic_w
+						who = ROOT
+						years = 10 } } 
+			any_courtier = { 
+				limit = { is_landed = no
+					OR = { religion = nurgle
+					AND = { NOT = { religion_group = chaos_gods_group }
+						NOT = { religion_group = horned_rat_god_group } } }
+					 }
+				opinion = { modifier = opinion_lunatic_w
+						who = ROOT
+						years = 10 } } 
+				} 
+		change_variable = { which = "lunatic_counter" value = 3 }
+		add_character_modifier = { name = despairing_laughter duration = -1 }
+		hidden_tooltip = { character_event = { id = mutation.1005 } } #lunacy counter
+	}
+}
+
+# Maniac - Gets Unfeeling
+character_event = {
+	id = slunacy.13
+	desc = EVTDESCslunacy13
+	picture = GFX_evt_lunatic
+
+	trigger = { trait = lunatic_2
+		NOT = { trait = creature_forestspirit }
+		NOT = { has_character_modifier = blind_virtue }
+		NOT = { has_character_modifier = fake_mage }
+		NOT = { has_character_modifier = despairing_laughter }
+		NOT = { has_character_modifier = unfeeling }
+		NOT = { has_character_modifier = bloodthirsty }
+		NOT = { has_character_modifier = god_delusion } }
+
+	is_triggered_only = yes
+    
+	option = {
+		name = EVTOPTAslunacy13
+		if = { limit = { OR = { religion = slaanesh
+					AND = { NOT = { religion_group = chaos_gods_group }
+						NOT = { religion_group = horned_rat_god_group } } }
+
+				 }
+			piety = -800 }
+		hidden_tooltip = {
+			any_vassal = { 
+				limit = { OR = { religion = nurgle
+					AND = { NOT = { religion_group = chaos_gods_group }
+						NOT = { religion_group = horned_rat_god_group } } }
+					 }
+				opinion = { modifier = opinion_lunatic_w
+						who = ROOT
+						years = 10 } } 
+			any_courtier = { 
+				limit = { is_landed = no
+					OR = { religion = nurgle
+					AND = { NOT = { religion_group = chaos_gods_group }
+						NOT = { religion_group = horned_rat_god_group } } }
+					 }
+				opinion = { modifier = opinion_lunatic_w
+						who = ROOT
+						years = 10 } } 
+				} 
+		change_variable = { which = "lunatic_counter" value = 3 }
+		add_character_modifier = { name = unfeeling duration = -1 }
+		hidden_tooltip = { character_event = { id = mutation.1005 } } #lunacy counter
+	}
+}
+
+# Lunatic - Gets Bloodthirsty
+character_event = {
+	id = slunacy.14
+	desc = EVTDESCslunacy14
+	picture = GFX_evt_lunatic
+
+	trigger = { trait = lunatic_3
+		NOT = { trait = creature_forestspirit }
+		NOT = { has_character_modifier = blind_virtue }
+		NOT = { has_character_modifier = fake_mage }
+		NOT = { has_character_modifier = despairing_laughter }
+		NOT = { has_character_modifier = unfeeling }
+		NOT = { has_character_modifier = bloodthirsty }
+		NOT = { has_character_modifier = god_delusion } }
+
+	is_triggered_only = yes
+    
+	option = {
+		name = EVTOPTAslunacy14
+		if = { limit = { OR = { religion = nurgle
+					AND = { NOT = { religion_group = chaos_gods_group }
+						NOT = { religion_group = horned_rat_god_group } } }
+
+				 }
+			piety = -400 }
+		hidden_tooltip = {
+			any_vassal = { 
+				limit = { OR = { religion = nurgle
+					AND = { NOT = { religion_group = chaos_gods_group }
+						NOT = { religion_group = horned_rat_god_group } } }
+					 }
+				opinion = { modifier = opinion_lunatic_w
+						who = ROOT
+						years = 10 } } 
+			any_courtier = { 
+				limit = { is_landed = no
+					OR = { religion = nurgle
+					AND = { NOT = { religion_group = chaos_gods_group }
+						NOT = { religion_group = horned_rat_god_group } } }
+					 }
+				opinion = { modifier = opinion_lunatic_w
+						who = ROOT
+						years = 10 } } 
+				} 
+		change_variable = { which = "lunatic_counter" value = 4 }
+		add_character_modifier = { name = bloodthirsty duration = -1 }
+		hidden_tooltip = { character_event = { id = mutation.1005 } } #lunacy counter
+	}
+}
+
+# Lunatic - Gets God Delusion
+character_event = {
+	id = slunacy.15
+	desc = EVTDESCslunacy15
+	picture = GFX_evt_lunatic
+
+	trigger = { trait = lunatic_3
+		is_ruler = yes
+		NOT = { trait = creature_forestspirit }
+		NOT = { has_character_modifier = blind_virtue }
+		NOT = { has_character_modifier = fake_mage }
+		NOT = { has_character_modifier = despairing_laughter }
+		NOT = { has_character_modifier = unfeeling }
+		NOT = { has_character_modifier = bloodthirsty }
+		NOT = { has_character_modifier = god_delusion } }
+
+	is_triggered_only = yes
+    
+	option = {
+		name = EVTOPTAslunacy15
+		if = { limit = { NOT = { religion_group = chaos_gods_group }
+				NOT = { religion_group = horned_rat_god_group }
+				 }
+			piety = -400 }
+		hidden_tooltip = {
+			any_vassal = { 
+				limit = { OR = { religion = nurgle
+					AND = { NOT = { religion_group = chaos_gods_group }
+						NOT = { religion_group = horned_rat_god_group } } }
+					 }
+				opinion = { modifier = opinion_lunatic_w
+						who = ROOT
+						years = 10 } } 
+			any_courtier = { 
+				limit = { is_landed = no
+					OR = { religion = nurgle
+					AND = { NOT = { religion_group = chaos_gods_group }
+						NOT = { religion_group = horned_rat_god_group } } }
+					 }
+				opinion = { modifier = opinion_lunatic_w
+						who = ROOT
+						years = 10 } } 
+				} 
+		change_variable = { which = "lunatic_counter" value = 4 }
+		add_character_modifier = { name = god_delusion duration = -1 }
+		hidden_tooltip = { character_event = { id = mutation.1005 } } #lunacy counter
+	}
+}
+
+##################################################################
+#########################Random Lunacy Events#####################
+##################################################################
+
+#Lunatic - Bloodthirsty kills somebody
+character_event = {
+	id = slunacy.16
+	desc = EVTDESCslunacy16
+	picture = GFX_evt_lunatic
+
+	trigger = { prisoner = no
+			age = 16
+			trait = lunatic_3
+			has_character_modifier = bloodthirsty
+			NOT = { trait = resting }
+			NOT = { trait = incapable }
+			NOT = { trait = incapacitated }
+			NOT = { trait = studying_magic }
+			NOT = { trait = crafting_magic_item }
+			liege = { any_courtier = { NOT = { is_ruler = yes }
+					NOT = { trait = avatar_isha }
+					NOT = { trait = avatar_kurnous }
+					NOT = { trait = creature_treekin }
+					NOT = { trait = creature_forestspirit }
+					NOT = { trait = creature_nehekharan }
+					NOT = { trait = tzeentch_demon }
+					NOT = { trait = slaanesh_demon }
+					NOT = { trait = nurgle_demon }
+					NOT = { trait = khorne_demon }
+					NOT = { has_character_modifier = magic_power_1 }
+					NOT = { has_character_modifier = magic_power_2 }
+					NOT = { has_character_modifier = magic_power_3 }
+					NOT = { has_character_modifier = magic_power_4 } } }
+			}
+	
+	mean_time_to_happen = { months = 120 }
+	
+	option = { 
+		name = EVTOPTAslunacy16
+		hidden_tooltip = { character_event = { id = mutation.1005 } } #lunacy counter
+			liege = { random_courtier = { limit = { NOT = { trait = creature_forestspirit }
+								NOT = { is_ruler = yes }
+								NOT = { trait = avatar_isha }
+								NOT = { trait = avatar_kurnous }
+								NOT = { trait = creature_treekin }
+								NOT = { trait = creature_nehekharan }
+								NOT = { trait = tzeentch_demon }
+								NOT = { trait = slaanesh_demon }
+								NOT = { trait = nurgle_demon }
+								NOT = { trait = khorne_demon }
+								NOT = { trait = daemon_kdaai }
+								NOT = { has_character_modifier = magic_power_1 }
+								NOT = { has_character_modifier = magic_power_2 }
+								NOT = { has_character_modifier = magic_power_3 }
+								NOT = { has_character_modifier = magic_power_4 } } 
+								character_event = { id = slunacy.17 } 
+							} 
+				}
+			}
+	
+}
+
+#Ping victim
+character_event = {
+	id = slunacy.17
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+			death = { death_reason = death_murder
+				killer = FROM } 
+			any_dynasty_member = { 
+				opinion = { modifier = opinion_murderous_lunatic
+						who = FROM
+						years = 100 } 
+					character_event = { id = slunacy.18 } }
+			spouse = { 
+				opinion = { modifier = opinion_murderous_lunatic
+						who = FROM
+						years = 100 } 
+					character_event = { id = slunacy.18 } }
+			liege = { 
+				opinion = { modifier = opinion_murderous_lunatic
+						who = ROOT
+						years = 10 } 
+					character_event = { id = slunacy.18 } }
+	}
+}
+
+# Close people informed of murder
+character_event = {
+	id = slunacy.18
+	desc = EVTDESCslunacy18
+	picture = GFX_evt_lunatic
+
+	trigger = { NOT = { character = FROMFROM } }
+
+	is_triggered_only = yes
+    
+	option = {
+		name = EVTOPTAslunacy18
+	}
+}
+
+#Bloodthirsty lunatic goes on a killing spree
+character_event = {
+	id = slunacy.19
+	desc = EVTDESCslunacy19
+	picture = GFX_evt_lunatic
+
+	trigger = { prisoner = no
+			age = 16
+			trait = lunatic_3
+			is_ruler = yes
+			has_character_modifier = bloodthirsty
+			NOT = { trait = resting }
+			NOT = { trait = incapable }
+			NOT = { trait = incapacitated }
+			NOT = { trait = studying_magic }
+			NOT = { trait = crafting_magic_item }
+			any_demesne_province = { NOT = { has_province_modifier = bloodthirsty_rampage } }
+			}
+	
+	mean_time_to_happen = { months = 120 }
+	
+	option = { 
+		name = EVTOPTAslunacy19
+		hidden_tooltip = { character_event = { id = mutation.1005 } } #lunacy counter
+			random_demesne_province = { limit = { NOT = { has_province_modifier = bloodthirsty_rampage } }
+							add_province_modifier = { name = bloodthirsty_rampage
+											duration = 800 } }
+			}
+	
+}
+
+#Bloodthirsty mage blows up a building
+character_event = {
+	id = slunacy.20
+	desc = EVTDESCslunacy20
+	picture = GFX_evt_lunatic
+
+	trigger = { prisoner = no
+			age = 16
+			trait = lunatic_3
+			is_ruler = yes
+			has_character_modifier = bloodthirsty
+			NOT = { trait = resting }
+			NOT = { trait = incapable }
+			NOT = { trait = incapacitated }
+			NOT = { trait = studying_magic }
+			NOT = { trait = crafting_magic_item }
+			OR = { has_character_modifier = magic_power_1
+				has_character_modifier = magic_power_2
+				has_character_modifier = magic_power_3
+				has_character_modifier = magic_power_4 }
+			}
+	
+	mean_time_to_happen = { months = 120 }
+	
+	option = { 
+		name = EVTOPTAslunacy20
+		hidden_tooltip = { character_event = { id = mutation.1005 } } #lunacy counter
+			location = { destroy_random_building = yes
+				 	owner = { character_event = { id = slunacy.21 } } }
+			}
+	
+}
+	
+# Owner of province informed of destruction
+character_event = {
+	id = slunacy.21
+	desc = EVTDESCslunacy21
+	picture = GFX_evt_lunatic
+
+	trigger = { NOT = { character = FROM } }
+
+	is_triggered_only = yes
+    
+	option = {
+		name = EVTOPTAslunacy21
+				opinion = { modifier = opinion_murderous_lunatic
+						who = FROM
+						years = 10 } 
+	}
+}
+
+# Maniac - Blind Virtue - becomes arbitrary
+character_event = {
+	id = slunacy.22
+	desc = EVTDESCslunacy22
+	picture = GFX_evt_lunatic
+
+	trigger = { has_character_modifier = blind_virtue
+			trait = lunatic_2
+			age = 12
+			NOT = { trait = resting }
+			NOT = { trait = incapable }
+			NOT = { trait = incapacitated } }
+
+	mean_time_to_happen = { months = 120 }
+    
+	option = {
+		name = EVTOPTAslunacy22
+		hidden_tooltip = { character_event = { id = mutation.1005 } } #lunacy counter
+		add_trait = arbitrary
+	}
+}
+# Maniac - Blind Virtue - no longer cruel
+character_event = {
+	id = slunacy.23
+	desc = EVTDESCslunacy23
+	picture = GFX_evt_lunatic
+
+	min_age = 16
+	only_capable = yes
+	
+
+	trigger = { has_character_modifier = blind_virtue
+			trait = lunatic_2
+			trait = cruel
+			NOT = { trait = resting }
+			NOT = { trait = incapable }
+			NOT = { trait = incapacitated } }
+
+	mean_time_to_happen = { months = 120 }
+    
+	option = {
+		name = EVTOPTAslunacy23
+		hidden_tooltip = { character_event = { id = mutation.1005 } } #lunacy counter
+		remove_trait = cruel
+	}
+}
+	
+# Maniac - Blind Virtue - releases a prisoner
+character_event = {
+	id = slunacy.24
+	desc = EVTDESCslunacy24
+	picture = GFX_evt_lunatic
+
+	min_age = 16
+	only_capable = yes
+	only_rulers = yes	
+
+	trigger = { has_character_modifier = blind_virtue
+			trait = lunatic_2
+			NOT = { trait = resting }
+			NOT = { trait = incapable }
+			NOT = { trait = incapacitated }
+			any_courtier = { host = { character = ROOT }
+					prisoner = yes } }
+
+	mean_time_to_happen = { months = 120 }
+    
+	option = {
+		name = EVTOPTAslunacy24
+		random_courtier = { limit = { host = { character = ROOT }
+					prisoner = yes }
+					prisoner = no }
+	}
+}
+
+# Maniac - Fake Mage - becomes real mage
+character_event = {
+	id = slunacy.25
+	desc = EVTDESCslunacy25
+	picture = GFX_evt_lunatic
+
+	min_age = 16
+	only_capable = yes
+	only_rulers = yes	
+
+	trigger = { has_character_modifier = fake_mage
+			trait = lunatic_2
+			NOT = { trait = resting }
+			NOT = { trait = incapable }
+			NOT = { trait = incapacitated }
+			OR = { has_character_modifier = magic_power_1
+				has_character_modifier = magic_power_2
+				has_character_modifier = magic_power_3
+				has_character_modifier = magic_power_4 } }
+
+	mean_time_to_happen = { months = 12 }
+    
+	option = {
+		name = EVTOPTAslunacy25
+		remove_character_modifier = fake_mage
+		change_variable = { which = "lunatic_counter" value = -3 }
+	}
+}
+
+# Maniac - Fake Mage - blows up laboratory
+character_event = {
+	id = slunacy.26
+	desc = EVTDESCslunacy26
+	picture = GFX_evt_lunatic
+
+	min_age = 16
+	only_capable = yes
+	only_rulers = yes	
+
+	trigger = { has_character_modifier = fake_mage
+			trait = lunatic_2
+			NOT = { trait = wounded }
+			NOT = { trait = resting }
+			NOT = { trait = incapable }
+			NOT = { trait = incapacitated } }
+
+	mean_time_to_happen = { months = 120 }
+    
+	option = {
+		name = EVTOPTAslunacy26
+		add_trait = wounded
+		hidden_tooltip = { character_event = { id = mutation.1005 } } #lunacy counter
+	}
+}
+
+# Maniac - Despairing Laughter - makes fun of courtier
+character_event = {
+	id = slunacy.27
+	hide_window = yes
+
+	min_age = 16
+	only_capable = yes	
+
+	trigger = { has_character_modifier = despairing_laughter
+			trait = lunatic_2
+			NOT = { trait = wounded }
+			NOT = { trait = resting }
+			NOT = { trait = incapable }
+			NOT = { trait = incapacitated }
+
+			liege = { any_courtier = { 
+					NOT = { trait = incapable }
+					NOT = { trait = incapacitated }
+					NOT = { trait = tzeentch_demon }
+					NOT = { trait = slaanesh_demon }
+					NOT = { trait = nurgle_demon }
+					NOT = { trait = khorne_demon }
+					NOT = { trait = daemon_kdaai }
+					OR = { trait = infirm
+						trait = wounded
+						trait = maimed
+						trait = disfigured
+						trait = burnt_by_asuryan
+						trait = fat
+						trait = undernourished
+						trait = leper
+						trait = pneumonic
+						trait = ill
+						trait = syphilitic
+						trait = troubled_pregnancy
+						trait = hard_pregnancy
+						trait = mutation_minor
+						trait = mutation_major
+						trait = mutation_massive
+						trait = lunatic_3 } } }
+		 }
+
+	mean_time_to_happen = { months = 80 }
+    
+	immediate = { 
+		character_event = { id = mutation.1005 } #lunacy counter
+			liege = { random_courtier = { limit = {  NOT = { trait = incapable }
+								NOT = { trait = incapacitated }
+								NOT = { trait = tzeentch_demon }
+								NOT = { trait = slaanesh_demon }
+								NOT = { trait = nurgle_demon }
+								NOT = { trait = khorne_demon }
+								NOT = { trait = daemon_kdaai }
+							OR = { trait = infirm
+								trait = wounded
+								trait = maimed
+								trait = disfigured
+								trait = burnt_by_asuryan
+								trait = fat
+								trait = undernourished
+								trait = leper
+								trait = pneumonic
+								trait = ill
+								trait = syphilitic
+								trait = troubled_pregnancy
+								trait = hard_pregnancy
+								trait = mutation_minor
+								trait = mutation_major
+								trait = mutation_massive
+								trait = lunatic_3 } } 
+								character_event = { id = slunacy.28 } 
+							} 
+				}
+			}
+}
+
+# Person insulted
+character_event = {
+	id = slunacy.28
+	desc = { text = EVTDESCAslunacy28
+		trigger = { trait = infirm }
+		 }
+	desc = { text = EVTDESCBslunacy28
+		trigger = { OR = { trait = maimed
+				trait = wounded } }
+		 }
+	desc = { text = EVTDESCCslunacy28
+		trigger = { OR = { trait = disfigured
+				trait = burnt_by_asuryan } }
+		 }
+	desc = { text = EVTDESCDslunacy28
+		trigger = { trait = fat }
+		 }
+	desc = { text = EVTDESCEslunacy28
+		trigger = { trait = undernourished }
+		 }
+	desc = { text = EVTDESCFslunacy28
+		trigger = { OR = { trait = leper
+				trait = pneumonic
+				trait = ill
+				trait = syphilitic } }
+		 }
+	desc = { text = EVTDESCGslunacy28
+		trigger = { OR = { trait = hard_pregnancy
+				trait = troubled_pregnancy } }
+		 }
+	desc = { text = EVTDESCHslunacy28
+		trigger = { OR = { trait = mutation_minor
+				trait = mutation_major
+				trait = mutation_massive } }
+		 }
+	desc = { text = EVTDESCIslunacy28
+		trigger = { trait = lunatic_3 }
+		 }
+	picture = GFX_evt_lunatic
+
+	is_triggered_only = yes
+    
+	option = {
+		name = EVTOPTAslunacy28
+				opinion = { modifier = opinion_evil_laughter
+						who = FROM
+						years = 5 } 
+				random = { chance = 10
+						add_trait = depressed } 
+		hidden_tooltip = { FROM = { character_event = { id = slunacy.29 } } } 
+	}
+}
+
+# Maniac laughs at misery
+character_event = {
+	id = slunacy.29
+	desc = { text = EVTDESCAslunacy29
+		trigger = { FROM = { trait = infirm } }
+		 }
+	desc = { text = EVTDESCBslunacy29
+		trigger = { FROM = { OR = { trait = maimed
+					trait = wounded } } }
+		 }
+	desc = { text = EVTDESCCslunacy29
+		trigger = { FROM = { OR = { trait = disfigured
+					trait = burnt_by_asuryan } } }
+		 }
+	desc = { text = EVTDESCDslunacy29
+		trigger = { FROM = { trait = fat } }
+		 }
+	desc = { text = EVTDESCEslunacy29
+		trigger = { FROM = { trait = undernourished } }
+		 }
+	desc = { text = EVTDESCFslunacy29
+		trigger = { FROM = { OR = { trait = leper
+					trait = pneumonic
+					trait = ill
+					trait = syphilitic } } }
+		 }
+	desc = { text = EVTDESCGslunacy29
+		trigger = { FROM = { OR = { trait = hard_pregnancy
+					trait = troubled_pregnancy } } }
+		 }
+	desc = { text = EVTDESCHslunacy29
+		trigger = { FROM = { OR = { trait = mutation_minor
+					trait = mutation_major
+					trait = mutation_massive } } }
+		 }
+	desc = { text = EVTDESCIslunacy29
+		trigger = { FROM = { trait = lunatic_3 } }
+		 }
+	picture = GFX_evt_lunatic
+
+	is_triggered_only = yes
+    
+	option = {
+		name = EVTOPTAslunacy29
+				random = { chance = 10
+						add_trait = cruel } 
+	}
+}
+
+# Maniac - Unfeeling - Loses craven
+character_event = {
+	id = slunacy.30
+	desc = EVTDESCslunacy30
+	picture = GFX_evt_lunatic
+
+	trigger = { has_character_modifier = unfeeling
+			trait = lunatic_2
+			age = 12
+			OR = { trait = craven
+				NOT = { trait = brave } }
+			NOT = { trait = resting }
+			NOT = { trait = incapable }
+			NOT = { trait = incapacitated } }
+
+	mean_time_to_happen = { months = 120 }
+    
+	option = {
+		name = EVTOPTAslunacy30
+		hidden_tooltip = { character_event = { id = mutation.1005 } } #lunacy counter
+		remove_trait = craven
+		add_trait = brave
+	}
+}
+
+# Maniac - Unfeeling - Loses paranoid
+character_event = {
+	id = slunacy.31
+	desc = EVTDESCslunacy31
+	picture = GFX_evt_lunatic
+
+	trigger = { has_character_modifier = unfeeling
+			trait = lunatic_2
+			age = 12
+			trait = paranoid
+			NOT = { trait = resting }
+			NOT = { trait = incapable }
+			NOT = { trait = incapacitated } }
+
+	mean_time_to_happen = { months = 120 }
+    
+	option = {
+		name = EVTOPTAslunacy31
+		hidden_tooltip = { character_event = { id = mutation.1005 } } #lunacy counter
+		remove_trait = paranoid
+	}
+}
+
+# Maniac - Unfeeling - Wounds himself
+character_event = {
+	id = slunacy.32
+	desc = EVTDESCslunacy32
+	picture = GFX_evt_lunatic
+
+	trigger = { has_character_modifier = unfeeling
+			trait = lunatic_2
+			age = 12
+			NOT = { trait = craven }
+			NOT = { trait = resting }
+			NOT = { trait = incapable }
+			NOT = { trait = incapacitated } }
+
+	mean_time_to_happen = { months = 120 }
+    
+	option = {
+		name = EVTOPTAslunacy32
+		hidden_tooltip = { character_event = { id = mutation.1005 } } #lunacy counter
+		if = { limit = { trait = maimed }
+			random = { chance = 50
+				remove_trait = maimed
+				add_trait = incapable } }
+ 		if = { limit = { OR = { trait = scarred
+					trait = wounded } }
+			random = { chance = 50
+				add_trait = maimed } }
+ 		if = { limit = { NOT = { trait = scarred }
+				 NOT = { trait = wounded }
+				 NOT = { trait = maimed } }
+			add_trait = wounded }
+	}
+}
+
+# Lunatic - God delusional makes people worship him
+character_event = {
+	id = slunacy.33
+	desc = { text = EVTDESCAslunacy33
+		trigger = { is_female = no }
+		 }
+	desc = { text = EVTDESCBslunacy33
+		trigger = { is_female = yes }
+		 }
+	picture = GFX_evt_lunatic
+
+	trigger = { prisoner = no
+			age = 16
+			trait = lunatic_3
+			is_ruler = yes
+			has_character_modifier = god_delusion
+			NOT = { trait = resting }
+			NOT = { trait = incapable }
+			NOT = { trait = incapacitated }
+			NOT = { trait = studying_magic }
+			NOT = { trait = crafting_magic_item }
+			}
+	
+	mean_time_to_happen = { months = 120				
+        			modifier = { factor = 0.75
+						trait = immortal_trait
+						} 
+        			modifier = { factor = 0.75
+						trait = elixir_of_eternal_youth
+						} 
+				}
+	
+	option = { 
+		name = EVTOPTAslunacy33
+		hidden_tooltip = { character_event = { id = mutation.1005 } } #lunacy counter
+			prestige = 350
+			piety = -400
+			}
+}
+
+# Lunatic - God delusional becomes Chaos Undivided (worship himself)
+character_event = {
+	id = slunacy.34
+	desc = { text = EVTDESCAslunacy34
+		trigger = { religion = sigmarite }
+		 }
+	desc = { text = EVTDESCBslunacy34
+		trigger = { NOT = { religion = sigmarite } }
+		 }
+	picture = GFX_evt_lunatic
+
+	trigger = { prisoner = no
+			age = 16
+			trait = lunatic_3
+			is_ruler = yes
+			has_character_modifier = god_delusion
+			NOT = { trait = resting }
+			NOT = { trait = incapable }
+			NOT = { trait = incapacitated }
+			NOT = { religion = chaos }
+			}
+	
+	mean_time_to_happen = { months = 120				
+        			modifier = { factor = 0.75
+						trait = immortal_trait
+						} 
+        			modifier = { factor = 0.75
+						trait = elixir_of_eternal_youth
+						} 
+				}
+	
+	option = { 
+		name = EVTOPTAslunacy34
+		hidden_tooltip = { character_event = { id = mutation.1005 } } #lunacy counter
+			religion = chaos
+			piety = -400
+			}
+}
+
+
+#Unfeeling - loses a lover
+character_event = {
+	id = slunacy.35
+	desc = EVTDESCslunacy35
+	picture = GFX_evt_lunatic
+
+	trigger = { prisoner = no
+			age = 16
+			trait = lunatic_2
+			has_character_modifier = unfeeling
+			NOT = { trait = resting }
+			NOT = { trait = incapable }
+			NOT = { trait = incapacitated }
+			has_lover = yes
+			any_lover = { NOT = { trait = pet_consort } }
+			}
+	
+	mean_time_to_happen = { months = 120 }
+	
+	option = { 
+		name = EVTOPTAslunacy35
+		hidden_tooltip = { character_event = { id = mutation.1005 } } #lunacy counter
+			random_lover = { limit = { NOT = { trait = pet_consort } }
+					character_event = { id = slunacy.35005 }
+					remove_lover = ROOT }
+			}
+	
+}
+
+#Lover informed
+character_event = {
+	id = slunacy.35005
+	desc = EVTDESCslunacy35005
+	picture = GFX_evt_lunatic
+
+	is_triggered_only = yes
+	
+	option = { 
+		name = EVTOPTAslunacy35005
+		}
+	
+}
+
+#Unfeeling - loses a rival
+character_event = {
+	id = slunacy.36
+	desc = EVTDESCslunacy36
+	picture = GFX_evt_lunatic
+
+	trigger = { prisoner = no
+			age = 16
+			trait = lunatic_2
+			has_character_modifier = unfeeling
+			NOT = { trait = resting }
+			NOT = { trait = incapable }
+			NOT = { trait = incapacitated }
+			any_rival = { is_alive = yes }
+			}
+	
+	mean_time_to_happen = { months = 120 }
+	
+	option = { 
+		name = EVTOPTAslunacy36
+		hidden_tooltip = { character_event = { id = mutation.1005 } } #lunacy counter
+			random_lover = { limit = { NOT = { trait = pet_consort } }
+					character_event = { id = slunacy.36005 }
+					remove_rival = ROOT }
+			}
+	
+}
+
+#Rival informed
+character_event = {
+	id = slunacy.36005
+	desc = EVTDESCslunacy36005
+	picture = GFX_evt_lunatic
+
+	is_triggered_only = yes
+	
+	option = { 
+		name = EVTOPTAslunacy36005
+		}
+	
+}
+
+#Unfeeling - loses a friend
+character_event = {
+	id = slunacy.37
+	desc = EVTDESCslunacy37
+	picture = GFX_evt_lunatic
+
+	trigger = { prisoner = no
+			age = 16
+			trait = lunatic_2
+			has_character_modifier = unfeeling
+			NOT = { trait = resting }
+			NOT = { trait = incapable }
+			NOT = { trait = incapacitated }
+			has_friend = yes
+			}
+	
+	mean_time_to_happen = { months = 120 }
+	
+	option = { 
+		name = EVTOPTAslunacy37
+		hidden_tooltip = { character_event = { id = mutation.1005 } } #lunacy counter
+			random_lover = { limit = { NOT = { trait = pet_consort } }
+					character_event = { id = slunacy.37005 }
+					remove_friend = ROOT }
+			}
+	
+}
+
+#Friend informed
+character_event = {
+	id = slunacy.37005
+	desc = EVTDESCslunacy37005
+	picture = GFX_evt_lunatic
+
+	is_triggered_only = yes
+	
+	option = { 
+		name = EVTOPTAslunacy37005
+		}
+	
+}

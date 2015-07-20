@@ -1,0 +1,752 @@
+namespace = khornecultist
+
+#Cultist Menu - Khorne#
+character_event = {
+id = khornecultist.1
+    desc = EVTDESCKHORNECULTIST.1 # Khorne, the Blood God, demands that you do his bidding. What service shall you render the lord of the Skull Throne? Once you've completed your task, you  will need to wait 1000 days before undertaking another, so as to not arouse suspicion. 
+    picture = "GFX_evt_khorne"
+    min_age = 16
+    capable_only = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = EVTOPTKHORNECULTIST.1.a # I will donate money to our cult's coffers.
+	trigger = { wealth = 100 }
+	set_character_flag = cultist_cooldown
+	random_playable_ruler = { 
+	limit = { has_character_flag = hidden_khorne_cultist3 }
+	wealth = 100
+	character_event = { id = khornecultist.3 }
+	}
+	wealth = -100
+	change_variable = { which = khornefavor value = 2 }  
+	character_event = { id = khornecultist.2 days = 1000 }	
+	299 = {  change_variable = { which = khornecultpower value = 1 } }
+	}
+	
+	option = {
+	name = EVTOPTKHORNECULTIST.1.b # What would it take to perform the Rite of the Crimson Skull?
+	trigger = { 
+	NOT = { num_of_prisoners = 8 }
+	}
+	character_event = { id = khornecultist.6 }
+	}
+	
+	option = {
+	name = EVTOPTKHORNECULTIST.1.c # Prepare to initiate the Rite of the Crimson Skull!
+	trigger = { 
+	num_of_prisoners = 8
+	higher_tier_than = BARON
+	has_character_flag = hidden_cultist_khorne3
+	NOT = { has_character_flag = hosting_khorne_rite }
+	}
+	set_character_flag = cultist_cooldown
+	character_event = { id = khornecultist.7 }
+	character_event = { id = khornecultist.2 days = 1000 }	
+	}
+	
+	option = {
+	name = khornecultist1A #How do I summon a demonic host and wreak havoc on the world?
+	trigger = {
+	AND = {
+	age = 16
+	NOT = { has_character_flag = hidden_cultist_khorne3 }
+	}
+	}	
+	character_event = { id = khornecultist.13 }
+	}
+	
+	option = {
+	name = khornecultist1B #Openly turn to chaos, and summon a demonic host!
+	trigger = {
+	AND = {
+	prisoner = no
+	age = 16
+	has_character_flag = hidden_cultist_khorne3
+	NOT = { has_character_flag = summonedkhornehost }
+	higher_tier_than = BARON
+	OR = {
+	trait = ambitious
+	trait = lunatic_3
+	trait = lunatic_2
+	trait = lunatic_1
+	trait = zealous
+	ai = no
+	}
+	}
+	}
+	character_event = { id = khornecultist.14 }
+	}
+	
+	option = { 
+	name = EVTOPTKHORNECULTIST.1.d # Show more choices / Close Menu
+	}
+	
+	}
+	
+character_event = {
+id = khornecultist.2
+    desc = EVTDESCKHORNECULTIST.2 # It has been some time since you've performed your last service for the Blood God. It should be safe to undertake another service for him without arousing too much suspicion... 
+    picture = "GFX_evt_khorne"
+    min_age = 16
+    capable_only = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = EXCELLENT
+	clr_character_flag = cultist_cooldown
+	}
+	
+	}
+
+	#a random playable ruler that is level 3 cultist gets the donation#
+character_event = {
+id = khornecultist.3
+    desc = EVTDESCKHORNECULTIST.3 # A fellow servant of Khorne has given you some money in recognition of all the blood you have spilled in the Blood God's name. Use these funds bring Khorne even greater glory! 
+    picture = "GFX_evt_khorne"
+    min_age = 16
+    capable_only = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = EXCELLENT
+	}
+	
+	}
+	
+##Now for the events where you get promoted inside the cult##
+character_event = {
+id = khornecultist.4
+    desc = EVTDESCKHORNECULTIST.4 # Your service to Blood God has been recognized by others in his service. You are no longer a mere Acolyte, but a Magus in the cult of Khorne. Congratulations! 
+    picture = "GFX_evt_khorne"
+    min_age = 16
+    capable_only = yes
+	
+	trigger = {
+	check_variable = { which = khornefavor value = 5 }
+	NOT = { has_character_flag = hidden_cultist_khorne2 }
+	}
+	
+	mean_time_to_happen = {
+	days = 30
+	}
+	
+	option = {
+	name = EVTOPTKHORNECULTIST.4.A # BLOOD FOR THE BLOOD GOD! SKULLS FOR THE SKULL THRONE!
+	clr_character_flag = hidden_cultist_khorne
+	set_character_flag = hidden_cultist_khorne2
+	}
+	
+	}
+	
+character_event = {
+id = khornecultist.5
+    desc = EVTDESCKHORNECULTIST.5 # You have reached even even higher into the cults hierarchy, and you are now considered a High-Magus of Khorne. Congratulations! 
+    picture = "GFX_evt_khorne"
+    min_age = 16
+    capable_only = yes
+	
+	trigger = {
+	check_variable = { which = khornefavor value = 10 }
+	NOT = { has_character_flag = hidden_cultist_khorne3 }
+	}
+	
+	mean_time_to_happen = {
+	days = 30
+	}
+	
+	option = {
+	name = EVTOPTKHORNECULTIST.5.A # BLOOD FOR THE BLOOD GOD! SKULLS FOR THE SKULL THRONE!
+	clr_character_flag = hidden_cultist_khorne2
+	set_character_flag = hidden_cultist_khorne3
+	}
+	
+	}
+	
+character_event = {
+id = khornecultist.6
+    desc = EVTDESCKHORNECULTIST.6 # The Rite of the Crimson Skull requires that you be a High-Magus of Khorne and have eight prisoners of noble blood ready for sacrifice. Once the rite is completed, the winds of chaos will be strengthened and you will be granted the Blood God's favour. 
+    picture = "GFX_evt_cultist"
+    min_age = 16
+    capable_only = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = I_SEE # I see.
+	}
+	
+	}
+	
+character_event = {
+id = khornecultist.7
+    desc = EVTDESCKHORNECULTIST.7 # You are a a High-Magus of Khorne and have eight prisoners of noble blood in your dungeons, which means you have everything you need to perform the Rite of the Crimson Skull. Shall we gather other servants of the Blood God so we can perform this ritual? 
+    picture = "GFX_evt_cultist"
+    min_age = 16
+    capable_only = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = NATURALLY # Naturally!
+		set_character_flag = hosting_khorne_rite
+		change_variable = { which = suspicion value = 2 } 
+		any_playable_ruler = {
+			limit = {
+				age = 15
+				culture_group = ROOT
+				OR = {
+					has_character_flag = hidden_cultist_khorne
+					has_character_flag = hidden_cultist_khorne2
+					has_character_flag = hidden_cultist_khorne3
+				}
+			}
+		character_event = { id = khornecultist.8 days = 7 }
+		}
+	}
+
+	
+	option = {
+		name = NO_NOT_RIGHT_NOW
+	}
+	
+	
+	}
+character_event = {
+id = khornecultist.8
+    desc = EVTDESCKHORNECULTIST.8 # [From.GetBestName], a High-Magus of Khorne, has invited you to take part in the Rite of the Crimson Skull! By ritually sacrificing eight highborn prisoners the winds of chaos will grow stronger and all in attendance will gain favour with the Blood God. 
+    picture = "GFX_evt_cultist"
+    min_age = 16
+    capable_only = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = CERTAINLY_I_SHALL_ATTEND # Certainly I shall attend!
+	set_character_flag = attending_khorne_rite
+	change_variable = { which = suspicion value = 2 } 
+	FROM = { character_event = { id = khornecultist.9 } }
+	}
+	
+	option = {
+	name = NO_IM_EHH_BUSY
+	change_variable = { which = khornefavor value = -2 }
+	}
+	
+	}
+	
+character_event = {
+id = khornecultist.9
+    desc = EVTDESCKHORNECULTIST.9 # I shall join you in your ritual. BLOOD FOR THE BLOOD GOD! SKULLS FOR THE SKULL THRONE! 
+    picture = "GFX_evt_cultist"
+    min_age = 16
+    capable_only = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = EXCELLENT
+	}
+	
+	}
+	
+##Grand Rite begins for host##
+character_event = {
+id = khornecultist.10
+    desc = EVTDESCKHORNECULTIST.10 # In a wooded clearing in a secure location, you begin the Rite of the Crimson Skull. Your prisoners are brought forth, and to the cheers of the crowd, their faces are ripped off while still alive and screaming. The crowd descends on the prisoners and the are ripped apart with bare hands, drenching everyone in the still warm blood. Khorne will be pleased today! 
+    picture = "GFX_evt_beheading"
+    min_age = 16
+    capable_only = yes
+	
+	trigger = { 
+	age = 16
+	has_character_flag = hosting_khorne_rite
+	}
+	
+	mean_time_to_happen = {
+	days = 30
+	}
+	
+	option = {
+		name = EVTOPTKHORNECULTIST.10.a # BLOOD FOR THE BLOOD GOD! SKULLS FOR THE SKULL THRONE!
+		1 = { change_variable = { which = "doom_counter" value = 5 } }
+		clr_character_flag = hosting_khorne_rite
+		change_variable = { which = khornefavor value = 2 } 
+		random_list = {
+			25 = { 
+				modifier = { factor = 2.5
+						martial = 40
+						}
+				 }
+			25 = { change_martial = 2 }
+			25 = { change_martial = 3 }
+			25 = { change_martial = 4
+			character_event = { id = mutation.1 }
+				}
+			}
+		any_courtier= {
+			limit = {
+				prisoner = yes
+			}
+			character_event = { id = khornecultist.11 }
+		}
+	}
+	
+	}
+	
+	#prisoner is informed#
+character_event = {
+    id = khornecultist.11
+    title = CULTIST_SACRIFICE # Cultist Sacrifice!
+    desc = EVTDESCKHORNECULTIST.11 # One day your captors drag you from your cell, and lead you to a stone altar in wooded clearing. You soon realize yo are surrounded by cultists of the Ruinous Powers and you are about to be sacrificed! You can only scream with terror as your face is ripped from your skull!
+    picture = "GFX_evt_beheading"
+
+	is_triggered_only = yes	
+	
+	option = {
+		name = NOOOOOO # Noooooo!
+		if ={
+	limit = {
+		trait = carstein_ring
+	}
+	character_event = {
+		id = carstein.13 days = 1
+	}
+	break = yes
+}
+
+	
+		if = {
+ limit = {
+ trait = khemri_tomb_king }
+
+			character_event = {
+ id = snehekharan.1 days = 1 }
+	
+			break = yes 
+}
+		death = {
+			death_reason = death_execution
+		}
+	}	
+}
+		
+	##Grand Rite begins for guests##
+character_event = {
+id = khornecultist.12
+    desc = EVTDESCKHORNECULTIST.12 # In a wooded clearing in a secure location, the Rite of the Crimson Skull begins. The prisoners are brought forth, and to the cheers of the crowd, their faces are ripped off while still alive and screaming. The crowd descends on the prisoners and the are ripped apart with bare hands, drenching everyone in the still warm blood. Khorne will be pleased today!
+    picture = "GFX_evt_beheading"
+    min_age = 16
+    capable_only = yes
+	
+	trigger = { 
+	age = 16
+	has_character_flag = attending_khorne_rite
+	}
+	
+	mean_time_to_happen = {
+	days = 30
+	}
+	
+	option = {
+	name = EVTOPTKHORNECULTIST.10.a # BLOOD FOR THE BLOOD GOD! SKULLS FOR THE SKULL THRONE!
+	clr_character_flag = attending_khorne_rite
+	change_variable = { which = khornefavor value = 1 }
+ 		random_list = {
+			25 = { 
+				modifier = { factor = 2.5
+						martial = 40
+						}
+				 }
+			25 = { change_martial = 2 }
+			25 = { change_martial = 3 }
+			25 = { change_martial = 4
+			character_event = { id = mutation.1 }
+				}
+			}
+	}
+
+}	
+
+character_event = {
+id = khornecultist.13
+    desc = EVTDESCKHORNECULTIST.13 # To be worthy of the Blood God's attentions, the winds of chaos must be strong and you must be a be a level 3 cultist. Hold a grand rite or donate to the cult's coffers, and in time, he will bless you with his power and send armies to aid you.
+    picture = "GFX_evt_khorne"
+    min_age = 16
+    capable_only = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = OK
+	}
+	
+	}
+	
+character_event = {
+id = khornecultist.14
+    desc = EVTDESCKHORNECULTIST.14 # Do you wish to openly serve Khorne, and enact a ritual that will open a portal to the realm of chaos? Be warned: There is no going back from this choice, once made...
+    picture = "GFX_evt_khorne"
+    min_age = 16
+    capable_only = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = khornecultist14A #BLOOD FOR THE BLOOD GOD!
+		set_character_flag = summonedkhornehost
+		religion = khorne
+		hidden_tooltip = { 1 = { change_variable = { which = "doom_counter" value = 1 } }
+				if = { limit = { NOT = { check_variable = { which = "nurgle_favor" value = 1 } }
+					 NOT = { check_variable = { which = "slaanesh_favor" value = 1 } }
+					 NOT = { check_variable = { which = "tzeentch_favor" value = 1 } } } 
+					change_variable = { which = "khorne_favor" value = 1 } }
+
+				if = { limit = { OR = { check_variable = { which = "nurgle_favor" value = 1 }
+							check_variable = { which = "slaanesh_favor" value = 1 }
+							check_variable = { which = "tzeentch_favor" value = 1 } } } 
+					change_variable = { which = "nurgle_favor" value = -2 }
+					change_variable = { which = "slaanesh_favor" value = -2 }
+					change_variable = { which = "tzeentch_favor" value = -2 } } }
+
+		if = {
+			limit = {
+				top_liege = {
+					NOT = { religion = khorne }
+				}
+			}
+			top_liege = {
+				ROOT = {
+					set_defacto_liege = PREV
+				}
+			}
+			liege = {
+				reverse_war = {
+					target = ROOT
+					casus_belli = cultist_bid_for_independence
+				}
+			}
+		}
+		prestige = 500
+		piety = 500
+		any_playable_ruler = {
+			limit = {
+				OR = {
+					culture_group = ROOT
+					same_realm = ROOT
+				}
+			}
+			character_event = { id = khornecultist.15 days = 7 }
+		}
+		if = {
+			limit = { 
+				NOT = { 1 = { check_variable = { which = "doom_counter" value = 30 } } } 
+			}		
+			create_random_soldier = {
+			random_traits = no
+			dynasty = RANDOM
+			culture = bloodletter_khorne
+			religion = khorne
+			age = 888
+			attributes = {
+				martial = 20
+				diplomacy = 4
+				stewardship = 5
+				intrigue = 4
+				learning = 3
+			}
+			health = 6
+			fertility = 0.7
+			trait = brilliant_strategist
+			trait = wroth
+			trait = cruel
+			trait = proud
+			trait = zealous
+			trait = khorne_demon
+			trait = khorne_bloodletter
+		}
+		new_character = {
+		set_character_flag = host_demon_commander
+		add_friend = ROOT	#familiar mechanics
+		location = {
+			ROOT = {
+			spawn_unit = {
+			cannot_inherit = yes
+			province = PREV
+				troops =
+				{
+					daemonic_host = { 2500 2500 }
+					daemonic_host = { 1500 1500 }
+					daemonic_host = { 1500 1500 }
+				}
+			}
+		}
+		}
+		}	
+	}
+if = {
+	limit = { 
+	AND = {
+	1 = { check_variable = { which = "doom_counter" value = 30 } }
+	NOT = { 1 = { check_variable = { which = "doom_counter" value = 60 } } } 
+	}
+	}
+create_random_soldier = {
+			random_traits = no
+			dynasty = RANDOM
+			culture = bloodletter_khorne
+			religion = khorne
+			age = 888
+			attributes = {
+				martial = 20
+				diplomacy = 4
+				stewardship = 5
+				intrigue = 4
+				learning = 3
+			}
+			health = 6
+			fertility = 0.7
+			trait = brilliant_strategist
+			trait = wroth
+			trait = cruel
+			trait = proud
+			trait = zealous
+			trait = khorne_demon
+			trait = khorne_bloodletter
+		}
+		new_character = {
+		set_character_flag = host_demon_commander
+		add_friend = ROOT	#familiar mechanics
+		location = {
+			ROOT = {
+			spawn_unit = {
+			cannot_inherit = yes
+			province = PREV
+				troops =
+				{
+					daemonic_host = { 4500 4500 }
+					daemonic_host = { 2000 2000 }
+					daemonic_host = { 3000 3000 }
+				}
+			}
+		}
+		}
+		}
+	}
+	if = {
+	limit = { 
+	AND = {
+	1 = { check_variable = { which = "doom_counter" value = 60 } }
+	NOT = { 1 = { check_variable = { which = "doom_counter" value = 90 } } } 
+	}
+	}
+create_random_soldier = {
+			random_traits = no
+			dynasty = RANDOM
+			culture = bloodletter_khorne
+			religion = khorne
+			age = 888
+			attributes = {
+				martial = 20
+				diplomacy = 4
+				stewardship = 5
+				intrigue = 4
+				learning = 3
+			}
+			health = 6
+			fertility = 0.7
+			trait = brilliant_strategist
+			trait = wroth
+			trait = cruel
+			trait = proud
+			trait = zealous
+			trait = khorne_demon
+			trait = khorne_bloodletter
+		}
+		new_character = {
+		set_character_flag = host_demon_commander
+		add_friend = ROOT	#familiar mechanics
+		location = {
+			ROOT = {
+			spawn_unit = {
+			cannot_inherit = yes
+			province = PREV
+				troops =
+				{
+					daemonic_host = { 5000 5000 }
+					daemonic_host = { 3000 3000 }
+					daemonic_host = { 3000 3000 }
+				}
+			}
+		}
+		}
+		}
+	}
+	if = {
+	limit = { 
+	AND = {
+	1 = { check_variable = { which = "doom_counter" value = 90 } }
+	}
+	}
+create_random_soldier = {
+			random_traits = no
+			dynasty = RANDOM
+			culture = bloodletter_khorne
+			religion = khorne
+			age = 888
+			attributes = {
+				martial = 20
+				diplomacy = 4
+				stewardship = 5
+				intrigue = 4
+				learning = 3
+			}
+			health = 6
+			fertility = 0.7
+			trait = brilliant_strategist
+			trait = wroth
+			trait = cruel
+			trait = proud
+			trait = zealous
+			trait = khorne_demon
+			trait = khorne_bloodletter
+		}
+		new_character = {
+		set_character_flag = host_demon_commander
+		add_friend = ROOT	#familiar mechanics
+		location = {
+			ROOT = {
+			spawn_unit = {
+			cannot_inherit = yes
+			province = PREV
+				troops =
+				{
+					daemonic_host = { 7500 7500 }
+					daemonic_host = { 2000 2000 }
+					daemonic_host = { 3000 3000 }
+					daemonic_host = { 2000 2000 }
+					daemonic_host = { 3000 3000 }
+				}
+			}
+		}
+		}
+		}
+	}
+	}
+	
+	option = {
+	name = khornecultist14B #No, now is not the opportune time...
+	trigger = { ai = no }
+	}
+	
+	}
+	
+character_event = {
+id = khornecultist.15
+    desc = EVTDESCKHORNECULTIST.15 # This ruler has been a secret servant of the Ruinous Powers for some time now, and has finally proclaimed his allegiance. He has summoned a demonic army and is preparing to wage a war of conquest!
+    picture = "GFX_evt_khorne"
+    min_age = 16
+    capable_only = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = {
+				NOT = {	
+					has_character_flag = hidden_cultist_khorne
+					has_character_flag = hidden_cultist_khorne2 
+					has_character_flag = hidden_cultist_khorne3
+					has_character_flag = hidden_cultist_undivided
+					has_character_flag = hidden_cultist_undivided2
+					has_character_flag = hidden_cultist_undivided3
+					religion = chaos
+					religion = khorne
+				}
+			}
+			opinion = {
+				who = FROM
+				modifier = opinion_confirmed_heretic
+				months = 240
+			}
+			FROM = {
+				father = {
+					reverse_opinion = {
+						who = ROOT
+						modifier = opinion_family_of_confirmed_heretic
+						months = 240
+					}
+				}
+				mother = {
+					reverse_opinion = {
+						who = ROOT
+						modifier = opinion_family_of_confirmed_heretic
+						months = 240
+					}
+				}
+				any_sibling = {					
+					reverse_opinion = {
+						who = ROOT
+						modifier = opinion_family_of_confirmed_heretic
+						months = 240
+					}
+				}
+				any_child = {
+					reverse_opinion = {
+						who = ROOT
+						modifier = opinion_family_of_confirmed_heretic
+						months = 240
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = khornecultist15A #By the gods... !
+		ai_chance =  { factor = 1
+				modifier = { factor = 0
+					OR =  { has_character_flag = hidden_cultist_khorne
+						has_character_flag = hidden_cultist_khorne2 
+						has_character_flag = hidden_cultist_khorne3
+						has_character_flag = hidden_cultist_undivided
+						has_character_flag = hidden_cultist_undivided2
+						has_character_flag = hidden_cultist_undivided3 } 
+					 }
+				 }
+	}
+	option = {
+		name = khornecultist15B #It shall be my time as well!
+		trigger = { prisoner = no
+			FROM = { liege_before_war = { ROOT = { liege = { character = PREVPREV } } } }
+			independent = no
+			liege = { opinion = { modifier = opinion_confirmed_heretic 
+					 	who = ROOT
+						years = 150 } }
+			OR = {		has_character_flag = hidden_cultist_khorne
+					has_character_flag = hidden_cultist_khorne2 
+					has_character_flag = hidden_cultist_khorne3
+					has_character_flag = hidden_cultist_undivided
+					has_character_flag = hidden_cultist_undivided2
+					has_character_flag = hidden_cultist_undivided3
+					religion = khorne
+					religion = chaos }
+			 } 
+				if = { limit = { OR = {		has_character_flag = hidden_cultist_nurgle
+								has_character_flag = hidden_cultist_nurgle2 
+								has_character_flag = hidden_cultist_nurgle3 } }
+					religion = nurgle }
+				if = { limit = { OR = {		has_character_flag = hidden_cultist_undivided
+								has_character_flag = hidden_cultist_undivided2 
+								has_character_flag = hidden_cultist_undivided3 } }
+					religion = chaos }
+				set_defacto_liege = FROM
+				set_character_flag = independent_joining_flag 
+				join_defender_wars = FROM
+				join_attacker_wars = FROM
+		ai_chance =  { factor = 1 }
+	}
+}

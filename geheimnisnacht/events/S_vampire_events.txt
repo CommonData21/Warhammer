@@ -1,0 +1,3061 @@
+namespace = svampires
+#####################################
+
+# on death, give titles to heir.
+#character_event = {
+#	id = svampires.0
+#	hide_window = yes
+#
+#	is_triggered_only = yes 
+#	
+#	trigger = {
+#			OR = { 
+#			trait = vampire_lahmian_visible
+#			trait = vampire_carstein_visible
+#			trait = vampire_blood_visible
+#			trait = vampire_strigoi_visible
+#			trait = vampire_necrach_visible
+#			trait = vampire_jade_visible
+#			trait = vampire_mahtmasi_visible
+#			trait = vampire_lahmian_hidden
+#			trait = vampire_carstein_hidden
+#			trait = vampire_blood_hidden
+#			trait = vampire_strigoi_hidden
+#			trait = vampire_necrach_hidden
+#			trait = vampire_jade_hidden
+#			trait = vampire_mahtmasi_hidden }
+#						vampire_heir = {
+#							has_opinion_modifier = {
+#								modifier = opinion_chosen_fledgling
+#								who = ROOT
+#							}
+#						}
+#	}
+#	immediate = { vampire_heir = { limit = { has_opinion_modifier = {
+#								modifier = opinion_chosen_fledgling
+#								who = ROOT
+#								} 
+#						}
+#				remove_trait = vampire_heir
+#				ROOT = { any_demesne_title = { grant_title = PREVPREV } } } }
+#}
+
+#On death of a Vampire ruler, any thralls he made who are not legitimized gain claims on his title
+character_event = {
+	id = svampires.1
+	#desc = EVTDESCsvampires.1
+	#picture = GFX_evt_vampire_blood
+	hide_window = yes
+
+	    min_age = 16
+   	    capable_only = yes
+	    prisoner = no
+
+
+	is_triggered_only = yes
+
+	trigger = { OR = { trait = vampire_lahmian_visible
+			trait = vampire_carstein_visible
+			trait = vampire_blood_visible
+			trait = vampire_strigoi_visible
+			trait = vampire_necrach_visible
+			trait = vampire_jade_visible
+			trait = vampire_mahtmasi_visible }
+			any_realm_character = { OR = { trait = vampire_lahmian_visible
+							trait = vampire_carstein_visible
+							trait = vampire_blood_visible
+							trait = vampire_strigoi_visible
+							trait = vampire_necrach_visible
+							trait = vampire_jade_visible
+							trait = vampire_mahtmasi_visible }
+					NOT = { dynasty = ROOT } }
+			 }
+	immediate = {
+		
+		any_realm_character = { limit = { OR = { trait = vampire_lahmian_visible
+									trait = vampire_carstein_visible
+									trait = vampire_blood_visible
+									trait = vampire_strigoi_visible
+									trait = vampire_necrach_visible
+									trait = vampire_jade_visible
+									trait = vampire_mahtmasi_visible }
+								NOT = { dynasty = ROOT } }
+							character_event = { id = svampires.1001 } }
+	}
+}
+character_event = {
+    id = svampires.1001
+    hide_window = yes
+	
+	is_triggered_only = yes
+		
+	immediate = {
+	FROM = { primary_title = { ROOT = { add_claim = PREV } } } 
+	}
+}
+	
+
+#if someone in dynasty has 2+ duchy titles. (by-yearly event)
+character_event = {
+	id = svampires.2
+	desc = EVTDESCsvampires.2
+	picture = "GFX_evt_vampire_politics"
+	
+	min_age = 16
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = { has_landed_title = no
+			lower_tier_than = COUNT }
+		OR = { trait = vampire_lahmian_visible
+			trait = vampire_carstein_visible
+			trait = vampire_blood_visible
+			trait = vampire_strigoi_visible
+			trait = vampire_necrach_visible
+			trait = vampire_jade_visible
+			trait = vampire_mahtmasi_visible }
+		any_dynasty_member = {
+			ROOT = { has_opinion_modifier = { modifier = opinion_sired_me
+							who = PREV } }
+			ROOT = { liege = { character = PREVPREV } }
+			demesne_size = 2
+			num_of_duke_titles = 2
+			higher_tier_than = DUKE
+		}
+		NOT = { trait = incapable }
+	}
+	
+	weight_multiplier = {
+		days = 1
+		modifier = {
+			factor = 10
+			trait = ambitious
+		}
+		modifier = {
+			factor = 5
+			trait = proud
+		}		
+		modifier = {
+			factor = 0.8
+			trait = stressed
+		}
+		modifier = {
+			factor = 0.8
+			trait = depressed
+		}
+		modifier = {
+			factor = 0.5
+			trait = lunatic_3
+		}
+		modifier = {
+			factor = 0.75
+			trait = lunatic_2
+		}
+		modifier = {
+			factor = 0.95
+			trait = lunatic_1
+		}
+		modifier = {
+			factor = 0.75
+			trait = possessed
+		}
+		modifier = {
+			factor = 0.9
+			trait = ill
+		}
+		modifier = {
+			factor = 0.8
+			trait = pneumonic
+		}
+		modifier = {
+			factor = 0.8
+			trait = syphilitic
+		}
+		modifier = {
+			factor = 0.5
+			trait = leper
+		}
+		modifier = {
+			factor = 0.9
+			trait = wounded
+		}
+		modifier = {
+			factor = 0.8
+			trait = maimed
+		}
+		modifier = {
+			factor = 0.5
+			trait = infirm
+		}
+		modifier = {
+			factor = 0.4
+			trait = incapable
+		}
+		modifier = {
+			factor = 0.5
+			trait = drunkard
+		}
+		modifier = {
+			factor = 0.5
+            trait = has_rattlelung
+		}
+		modifier = {
+			factor = 0.5
+            trait = has_bone_auge
+		}
+		modifier = {
+			factor = 0.5
+            trait = has_tomb_rot
+		}
+		modifier = {
+			factor = 0.5
+            trait = has_creeping_buboes
+		}
+		modifier = {
+			factor = 0.5
+            trait = has_red_pox
+		}		
+		modifier = {
+			factor = 0.5
+            trait = has_green_pox
+		}
+	}
+	
+	option = {
+		name = EVTOPTAsvampires.2
+		random_dynasty_member = {
+			limit = { ROOT = { has_opinion_modifier = { modifier = opinion_sired_me
+							who = PREV } }
+				ROOT = { liege = { character = PREVPREV } }
+				demesne_size = 2
+				num_of_duke_titles = 2
+				higher_tier_than = DUKE
+			}
+			character_event = { id = svampires.3 days = 1 tooltip = EVTTOOLTIP66051 }
+		}		
+	}
+	option = {
+		name = EVTOPTBsvampires.2
+		trigger = { ai = no }		
+	}
+}
+
+character_event = {
+	id = svampires.3 
+	desc = EVTDESCsvampires.3
+	picture = "GFX_evt_vampire_politics"
+	
+	is_triggered_only = yes
+	
+	#no need for notifactions back, landless character gets it anyway.
+	option = {
+		name = EVTOPTAsvampires.3 
+		
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 2
+				from = { diplomacy = 14 }
+			}
+			modifier = {
+				factor = 2
+				from = { martial = 14 }
+			}
+			modifier = {
+				factor = 2
+				from = { intrigue = 14 }
+			}
+			modifier = {
+				factor = 1.5
+				opinion = { who = from value =  25 }
+			}
+			modifier = {
+				factor = 2
+				opinion = { who = from value =  50 }
+			}
+			modifier = {
+				factor = 3
+				opinion = { who = from value =  75 }
+			}
+		}		
+		prestige = -5
+		FROM = { character_event = { id = svampires.4 } }
+		random_demesne_title = {
+			limit = {
+				tier = DUKE
+				NOT = { is_primary_holder_title = yes }
+			}
+			grant_title = FROM
+		}
+		
+	}
+	
+	option = {
+		name = EVTOPTBsvampires.3 
+		FROM = { character_event = { id = svampires.5 } }
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 0
+				opinion = { who = from value =  80 }
+			}
+		}
+		
+		FROM = {
+			opinion = {
+				modifier = dynastic_refused_title
+				who = ROOT
+				years = 100
+			}
+		}
+	}
+}
+
+character_event = {
+    id = svampires.4
+    desc = EVTDESCsvampires.4
+    picture = "GFX_evt_vampire_politics"
+	
+	is_triggered_only = yes
+		
+	option = {
+	name = EVTOPTAsvampires.4
+	}
+}
+	
+character_event = {
+    id = svampires.5
+    desc = EVTDESCsvampires.5
+    picture = "GFX_evt_vampire_politics"
+	
+	is_triggered_only = yes
+		
+	option = {
+	name = EVTOPTAsvampires.5
+	}
+}
+	
+#if someone in dynasty has 4+ county titles. (by-yearly event)
+character_event = {
+	id = svampires.6
+	desc = EVTDESCsvampires.2
+	picture = "GFX_evt_vampire_politics"
+	
+	min_age = 16
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		is_ruler = no
+		OR = { trait = vampire_lahmian_visible
+			trait = vampire_carstein_visible
+			trait = vampire_blood_visible
+			trait = vampire_strigoi_visible
+			trait = vampire_necrach_visible
+			trait = vampire_jade_visible
+			trait = vampire_mahtmasi_visible }
+		any_dynasty_member = {
+			ROOT = { has_opinion_modifier = { modifier = opinion_sired_me
+							who = PREV } }
+			ROOT = { liege = { character = PREVPREV } }
+			demesne_size = 4
+			num_of_count_titles = 4
+			higher_tier_than = COUNT
+		}
+		NOT = { trait = incapable }
+	}
+	
+	weight_multiplier = {
+		days = 1
+		modifier = {
+			factor = 10
+			trait = ambitious
+		}
+		modifier = {
+			factor = 5
+			trait = proud
+		}		
+		modifier = {
+			factor = 0.8
+			trait = stressed
+		}
+		modifier = {
+			factor = 0.8
+			trait = depressed
+		}
+		modifier = {
+			factor = 0.5
+			trait = lunatic_3
+		}
+		modifier = {
+			factor = 0.75
+			trait = lunatic_2
+		}
+		modifier = {
+			factor = 0.95
+			trait = lunatic_1
+		}
+		modifier = {
+			factor = 0.75
+			trait = possessed
+		}
+		modifier = {
+			factor = 0.9
+			trait = ill
+		}
+		modifier = {
+			factor = 0.8
+			trait = pneumonic
+		}
+		modifier = {
+			factor = 0.8
+			trait = syphilitic
+		}
+		modifier = {
+			factor = 0.5
+			trait = leper
+		}
+		modifier = {
+			factor = 0.9
+			trait = wounded
+		}
+		modifier = {
+			factor = 0.8
+			trait = maimed
+		}
+		modifier = {
+			factor = 0.5
+			trait = infirm
+		}
+		modifier = {
+			factor = 0.4
+			trait = incapable
+		}
+		modifier = {
+			factor = 0.5
+			trait = drunkard
+		}
+		modifier = {
+			factor = 0.5
+            trait = has_rattlelung
+		}
+		modifier = {
+			factor = 0.5
+            trait = has_bone_auge
+		}
+		modifier = {
+			factor = 0.5
+            trait = has_tomb_rot
+		}
+		modifier = {
+			factor = 0.5
+            trait = has_creeping_buboes
+		}
+		modifier = {
+			factor = 0.5
+            trait = has_red_pox
+		}		
+		modifier = {
+			factor = 0.5
+            trait = has_green_pox
+		}
+	}
+	
+	option = {
+		name = EVTOPTAsvampires.2
+		random_dynasty_member = {
+			limit = { ROOT = { has_opinion_modifier = { modifier = opinion_sired_me
+							who = PREV } }
+				ROOT = { liege = { character = PREVPREV } }
+				demesne_size = 4
+				num_of_count_titles = 4
+				higher_tier_than = COUNT
+			}
+			character_event = { id = svampires.7 days = 1 tooltip = EVTTOOLTIP66051 }
+		}		
+	}
+	option = {
+		name = EVTOPTBsvampires.2
+		trigger = { ai = no }		
+	}
+}
+
+character_event = {
+	id = svampires.7 
+	desc = EVTDESCsvampires.3
+	picture = "GFX_evt_vampire_politics"
+	
+	is_triggered_only = yes
+	
+	#no need for notifactions back, landless character gets it anyway.
+	option = {
+		name = EVTOPTAsvampires.3 
+		
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 2
+				from = { diplomacy = 14 }
+			}
+			modifier = {
+				factor = 2
+				from = { martial = 14 }
+			}
+			modifier = {
+				factor = 2
+				from = { intrigue = 14 }
+			}
+			modifier = {
+				factor = 1.5
+				opinion = { who = from value =  25 }
+			}
+			modifier = {
+				factor = 2
+				opinion = { who = from value =  50 }
+			}
+			modifier = {
+				factor = 3
+				opinion = { who = from value =  75 }
+			}
+		}		
+		prestige = -5
+		FROM = { character_event = { id = svampires.4 } }
+		random_demesne_title = {
+			limit = {
+				tier = COUNT
+				NOT = { is_primary_holder_title = yes }
+			}
+			grant_title = FROM
+		}
+		
+	}
+	
+	option = {
+		name = EVTOPTBsvampires.3 
+		FROM = { character_event = { id = svampires.5 } }
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 0
+				opinion = { who = from value =  80 }
+			}
+		}
+		
+		FROM = {
+			opinion = {
+				modifier = dynastic_refused_title
+				who = ROOT
+				years = 100
+			}
+		}
+	}
+}
+
+#A random subject is turned into a vampire
+	character_event = {
+	id = svampires.8
+	title = UNDEATH
+	picture = "GFX_evt_vampire_kiss"
+	desc = EVTDESCsvampires8
+	
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = EVTOPTAsvampires8
+	opinion = { modifier = opinion_sired_me
+		who = FROMFROM
+		months = 240000 }
+	FROMFROM = { character_event = { id = svampires.9 } }
+			ai_chance = { factor = 1 }
+	}
+}
+		
+#A kid is turned into a vampire
+character_event = {
+	id = svampires.9
+	title = UNDEATH
+	desc = EVTDESCsvampires9
+	picture = "GFX_evt_vampire_kiss"
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = EVTOPTAsvampires9
+	hidden_tooltip = { FROM = {  clr_character_flag = hidden_tzeentch_cultist3
+					clr_character_flag = hidden_tzeentch_cultist2
+					clr_character_flag = hidden_tzeentch_cultist
+					clr_character_flag = hidden_nurgle_cultist3
+					clr_character_flag = hidden_nurgle_cultist2
+					clr_character_flag = hidden_nurgle_cultist
+					clr_character_flag = hidden_khorne_cultist3
+					clr_character_flag = hidden_khorne_cultist2
+					clr_character_flag = hidden_khorne_cultist
+					clr_character_flag = hidden_slaanesh_cultist3
+					clr_character_flag = hidden_slaanesh_cultist2
+					clr_character_flag = hidden_slaanesh_cultist
+					clr_character_flag = hidden_undivided_cultist3
+					clr_character_flag = hidden_undivided_cultist2
+					clr_character_flag = hidden_undivided_cultist } }
+
+	if = { limit = { trait = vampire_lahmian_visible }
+		FROM = { add_trait = vampire_lahmian_visible
+	set_graphical_culture = kid_vampire_lahmian }
+		FROM = { religion = vampiric }
+		}
+	if = { limit = { trait = vampire_carstein_visible }
+		FROM = { add_trait = vampire_carstein_visible
+	set_graphical_culture = kid_vampire }
+		FROM = { religion = vampiric }
+		}	
+	if = { limit = { trait = vampire_blood_visible }
+		FROM = { add_trait = vampire_blood_visible
+	set_graphical_culture = generic_vampire }
+		FROM = { religion = vampiric }
+		}		
+	if = { limit = { trait = vampire_necrach_visible }
+		FROM = { add_trait = vampire_necrach_visible
+	set_graphical_culture = generic_vampire }
+		FROM = { religion = vampiric }
+		}		
+	if = { limit = { trait = vampire_jade_visible }
+		FROM = { add_trait = vampire_jade_visible
+	set_graphical_culture = generic_vampire }
+		FROM = { religion = vampiric }
+		}		
+	if = { limit = { trait = vampire_mahtmasi_visible }
+		FROM = { add_trait = vampire_mahtmasi_visible
+	set_graphical_culture = generic_vampire }
+		FROM = { religion = vampiric }
+		}		
+	recalc_succession = yes
+	}
+}
+
+#####################################################################################
+##############################NECROMANCY STUFF#######################################
+	
+#A prisoner is turned into part of a necromantic ritual
+character_event = {
+	id = svampires.10
+	picture = "GFX_evt_zombies"
+	desc = EVTDESCsvampires10
+	
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = EVTOPTAsvampires10
+	if = { limit = { has_character_modifier = necromantic_power_4 } 
+		remove_character_modifier = necromantic_power_4
+		add_character_modifier = { name = necromantic_power_5 duration = 30 } }
+	if = { limit = { has_character_modifier = necromantic_power_3 } 
+		remove_character_modifier = necromantic_power_3
+		add_character_modifier = { name = necromantic_power_4 duration = 30 } }
+	if = { limit = { has_character_modifier = necromantic_power_2 } 
+		remove_character_modifier = necromantic_power_2
+		add_character_modifier = { name = necromantic_power_3 duration = 30 } }
+	if = { limit = { has_character_modifier = necromantic_power_1 } 
+		remove_character_modifier = necromantic_power_1
+		add_character_modifier = { name = necromantic_power_2 duration = 30 } }
+	if = { limit = { NOT = { has_character_modifier = necromantic_power_1 }
+			NOT = { has_character_modifier = necromantic_power_2 }
+			NOT = { has_character_modifier = necromantic_power_3 }
+			NOT = { has_character_modifier = necromantic_power_4 }
+			NOT = { has_character_modifier = necromantic_power_5 } } 
+		add_character_modifier = { name = necromantic_power_1 duration = 30 } }
+	}
+}
+
+#Summon undead horde
+character_event = {
+	id = svampires.11
+	picture = "GFX_evt_zombies"
+	desc = EVTDESCsvampires11
+	
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = EVTOPTAsvampires11
+	trigger = { has_character_modifier = necromantic_power_5
+				has_character_modifier = magic_power_4 } 
+	piety = -350
+	if = { limit = { has_character_modifier = necromantic_power_5 } 
+		remove_character_modifier = necromantic_power_5
+		}
+	random_list = { 50 = { character_event = { id = svampires.11009 } } #Small Endless horde
+			50 = { modifier = { factor = 0
+					location = { culture = nehekharan } }
+				modifier = { factor = 1.75
+					religion = nagashi }
+				modifier = { factor = 0.85
+					trait = hedge_wizard }
+				modifier = { factor = 1.85
+					trait = creature_nehekharan }
+				modifier = { factor = 1.75
+					OR = { trait = vampire_lahmian_visible
+						trait = vampire_carstein_visible
+						trait = vampire_blood_visible
+						trait = vampire_strigoi_visible
+						trait = vampire_necrach_visible
+						trait = vampire_jade_visible
+						trait = vampire_mahtmasi_visible
+						trait = vampire_lahmian_hidden
+						trait = vampire_carstein_hidden
+						trait = vampire_blood_hidden
+						trait = vampire_strigoi_hidden
+						trait = vampire_necrach_hidden
+						trait = vampire_jade_hidden
+						trait = vampire_mahtmasi_hidden } }
+				modifier = { factor = 1.65
+					has_character_modifier = magic_power_2 }
+				modifier = { factor = 1.75
+					has_character_modifier = magic_power_3 }
+				modifier = { factor = 1.85
+					has_character_modifier = magic_power_4 }
+				character_event = { id = svampires.11010 } } #Big Endless horde
+			}
+
+
+	}
+	option = {
+	name = EVTOPTBsvampires11
+	trigger = { OR = { has_character_modifier = necromantic_power_5
+			has_character_modifier = necromantic_power_4 }
+			OR = { has_character_modifier = magic_power_3
+				has_character_modifier = magic_power_4 } } 
+	piety = -200
+	if = { limit = { has_character_modifier = necromantic_power_5 } 
+		remove_character_modifier = necromantic_power_5
+		add_character_modifier = { name = necromantic_power_1 duration = 10 }
+		}
+	if = { limit = { has_character_modifier = necromantic_power_4 } 
+		remove_character_modifier = necromantic_power_4
+		}
+	random_list = { 50 = { character_event = { id = svampires.11007 } } #Small Huge horde
+			50 = { modifier = { factor = 0
+					location = { culture = nehekharan } }
+				modifier = { factor = 1.75
+					religion = nagashi }
+				modifier = { factor = 0.85
+					trait = hedge_wizard }
+				modifier = { factor = 1.85
+					trait = creature_nehekharan }
+				modifier = { factor = 1.75
+					OR = { trait = vampire_lahmian_visible
+						trait = vampire_carstein_visible
+						trait = vampire_blood_visible
+						trait = vampire_strigoi_visible
+						trait = vampire_necrach_visible
+						trait = vampire_jade_visible
+						trait = vampire_mahtmasi_visible
+						trait = vampire_lahmian_hidden
+						trait = vampire_carstein_hidden
+						trait = vampire_blood_hidden
+						trait = vampire_strigoi_hidden
+						trait = vampire_necrach_hidden
+						trait = vampire_jade_hidden
+						trait = vampire_mahtmasi_hidden } }
+				modifier = { factor = 1.65
+					has_character_modifier = magic_power_2 }
+				modifier = { factor = 1.75
+					has_character_modifier = magic_power_3 }
+				modifier = { factor = 1.85
+					has_character_modifier = magic_power_4 }
+				character_event = { id = svampires.11008 } } #Big Huge horde
+			}
+
+	}
+	option = {
+	name = EVTOPTCsvampires11
+	trigger = { OR = { has_character_modifier = necromantic_power_5
+			has_character_modifier = necromantic_power_4
+			has_character_modifier = necromantic_power_3 } } 
+	piety = -100
+	if = { limit = { has_character_modifier = necromantic_power_5 } 
+		remove_character_modifier = necromantic_power_5
+		add_character_modifier = { name = necromantic_power_2 duration = 10 }
+		}
+	if = { limit = { has_character_modifier = necromantic_power_4 } 
+		remove_character_modifier = necromantic_power_4
+		add_character_modifier = { name = necromantic_power_1 duration = 10 }
+		}
+	if = { limit = { has_character_modifier = necromantic_power_3 } 
+		remove_character_modifier = necromantic_power_3
+		}
+	random_list = { 50 = { character_event = { id = svampires.11005 } } #Small Large horde
+			50 = { modifier = { factor = 0
+					location = { culture = nehekharan } }
+				modifier = { factor = 1.75
+					religion = nagashi }
+				modifier = { factor = 0.85
+					trait = hedge_wizard }
+				modifier = { factor = 1.85
+					trait = creature_nehekharan }
+				modifier = { factor = 1.75
+					OR = { trait = vampire_lahmian_visible
+						trait = vampire_carstein_visible
+						trait = vampire_blood_visible
+						trait = vampire_strigoi_visible
+						trait = vampire_necrach_visible
+						trait = vampire_jade_visible
+						trait = vampire_mahtmasi_visible
+						trait = vampire_lahmian_hidden
+						trait = vampire_carstein_hidden
+						trait = vampire_blood_hidden
+						trait = vampire_strigoi_hidden
+						trait = vampire_necrach_hidden
+						trait = vampire_jade_hidden
+						trait = vampire_mahtmasi_hidden } }
+				modifier = { factor = 1.65
+					has_character_modifier = magic_power_2 }
+				modifier = { factor = 1.75
+					has_character_modifier = magic_power_3 }
+				modifier = { factor = 1.85
+					has_character_modifier = magic_power_4 }
+				character_event = { id = svampires.11006 } } #Big Large horde
+			}
+
+	}
+	option = {
+	name = EVTOPTDsvampires11
+	trigger = { OR = { has_character_modifier = necromantic_power_5
+			has_character_modifier = necromantic_power_4
+			has_character_modifier = necromantic_power_3
+			has_character_modifier = necromantic_power_2 } } 
+	piety = -50
+	if = { limit = { has_character_modifier = necromantic_power_5 } 
+		remove_character_modifier = necromantic_power_5
+		add_character_modifier = { name = necromantic_power_3 duration = 10 }
+		}
+	if = { limit = { has_character_modifier = necromantic_power_4 } 
+		remove_character_modifier = necromantic_power_4
+		add_character_modifier = { name = necromantic_power_2 duration = 10 }
+		}
+	if = { limit = { has_character_modifier = necromantic_power_3 } 
+		remove_character_modifier = necromantic_power_3
+		add_character_modifier = { name = necromantic_power_1 duration = 10 }
+		}
+	if = { limit = { has_character_modifier = necromantic_power_2 } 
+		remove_character_modifier = necromantic_power_2
+		}
+	random_list = { 50 = { character_event = { id = svampires.11003 } } #Small Average horde
+			50 = { modifier = { factor = 0
+					location = { culture = nehekharan } }
+				modifier = { factor = 1.75
+					religion = nagashi }
+				modifier = { factor = 0.85
+					trait = hedge_wizard }
+				modifier = { factor = 1.85
+					trait = creature_nehekharan }
+				modifier = { factor = 1.75
+					OR = { trait = vampire_lahmian_visible
+						trait = vampire_carstein_visible
+						trait = vampire_blood_visible
+						trait = vampire_strigoi_visible
+						trait = vampire_necrach_visible
+						trait = vampire_jade_visible
+						trait = vampire_mahtmasi_visible
+						trait = vampire_lahmian_hidden
+						trait = vampire_carstein_hidden
+						trait = vampire_blood_hidden
+						trait = vampire_strigoi_hidden
+						trait = vampire_necrach_hidden
+						trait = vampire_jade_hidden
+						trait = vampire_mahtmasi_hidden } }
+				modifier = { factor = 1.65
+					has_character_modifier = magic_power_2 }
+				modifier = { factor = 1.75
+					has_character_modifier = magic_power_3 }
+				modifier = { factor = 1.85
+					has_character_modifier = magic_power_4 }
+				character_event = { id = svampires.11004 } } #Big Average horde
+			}
+	}
+	option = {
+	name = EVTOPTEsvampires11
+	trigger = { OR = { has_character_modifier = necromantic_power_4
+			has_character_modifier = necromantic_power_3
+			has_character_modifier = necromantic_power_2
+			has_character_modifier = necromantic_power_1 } } 
+	piety = -25
+	if = { limit = { has_character_modifier = necromantic_power_4 } 
+		remove_character_modifier = necromantic_power_4
+		add_character_modifier = { name = necromantic_power_3 duration = 10 }
+		}
+	if = { limit = { has_character_modifier = necromantic_power_3 } 
+		remove_character_modifier = necromantic_power_3
+		add_character_modifier = { name = necromantic_power_2 duration = 10 }
+		}
+	if = { limit = { has_character_modifier = necromantic_power_2 } 
+		remove_character_modifier = necromantic_power_2
+		add_character_modifier = { name = necromantic_power_1 duration = 10 }
+		}
+	if = { limit = { has_character_modifier = necromantic_power_1 } 
+		remove_character_modifier = necromantic_power_1
+		}
+	random_list = { 50 = { character_event = { id = svampires.11001 } } #Small small horde
+			50 = { modifier = { factor = 0
+					location = { culture = nehekharan } }
+				modifier = { factor = 1.75
+					religion = nagashi }
+				modifier = { factor = 0.85
+					trait = hedge_wizard }
+				modifier = { factor = 1.85
+					trait = creature_nehekharan }
+				modifier = { factor = 1.75
+					OR = { trait = vampire_lahmian_visible
+						trait = vampire_carstein_visible
+						trait = vampire_blood_visible
+						trait = vampire_strigoi_visible
+						trait = vampire_necrach_visible
+						trait = vampire_jade_visible
+						trait = vampire_mahtmasi_visible
+						trait = vampire_lahmian_hidden
+						trait = vampire_carstein_hidden
+						trait = vampire_blood_hidden
+						trait = vampire_strigoi_hidden
+						trait = vampire_necrach_hidden
+						trait = vampire_jade_hidden
+						trait = vampire_mahtmasi_hidden } }
+				modifier = { factor = 1.65
+					has_character_modifier = magic_power_2 }
+				modifier = { factor = 1.75
+					has_character_modifier = magic_power_3 }
+				modifier = { factor = 1.85
+					has_character_modifier = magic_power_4 }
+				character_event = { id = svampires.11002 } } #Big small horde
+			}
+	}
+}
+
+#Small small horde
+character_event = {
+	id = svampires.11001 
+	desc = EVTDESCAsvampires11001
+	picture = "GFX_evt_zombies"
+	border = GFX_event_normal_frame_war
+	
+	is_triggered_only = yes
+	
+	option = { name = EVTOPTAsvampires11001
+		hidden_tooltip = { ROOT = { character_event = { id = svampires.12001 days = 450 random = 490 } } }
+				location = { add_province_modifier = { name = province_tainted_1
+									duration = 650 }
+					ROOT = {
+					spawn_unit = {
+						province = PREV
+						owner = ROOT
+						earmark = summoned_zombiehorde_1
+						troops = {
+							undead_horde = { 1500 1500 }
+							}
+						cannot_inherit = yes
+						attrition = 0
+						}
+					} #endroot
+				} #endlocation
+		}
+}
+
+#The undead fall apart
+character_event = {
+	id = svampires.12001 
+	desc = EVTDESCAsvampires12001
+	picture = "GFX_evt_zombies"
+	border = GFX_event_normal_frame_war
+	
+	notification = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		disband_event_forces = summoned_zombiehorde_1
+		}
+	option = {
+		}
+}
+	
+#Big small horde
+character_event = {
+	id = svampires.11002 
+	desc = EVTDESCAsvampires11002
+	picture = "GFX_evt_zombies"
+	border = GFX_event_normal_frame_war
+	
+	is_triggered_only = yes
+	
+	option = { name = EVTOPTAsvampires11002
+		hidden_tooltip = { ROOT = { character_event = { id = svampires.12002 days = 450 random = 490 } } }
+				location = { add_province_modifier = { name = province_tainted_1
+									duration = 650 }
+					ROOT = {
+					spawn_unit = {
+						province = PREV
+						owner = ROOT
+						earmark = summoned_zombiehorde_2
+						troops = {
+							undead_horde = { 1750 1750 }
+							}
+						cannot_inherit = yes
+						attrition = 0
+						}
+					} #endroot
+				} #endlocation
+		}
+}
+
+#The undead fall apart
+character_event = {
+	id = svampires.12002 
+	desc = EVTDESCAsvampires12002
+	picture = "GFX_evt_zombies"
+	border = GFX_event_normal_frame_war
+	
+	notification = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		disband_event_forces = summoned_zombiehorde_2
+		}
+	option = {
+		}
+}
+
+#Small average horde
+character_event = {
+	id = svampires.11003 
+	desc = EVTDESCAsvampires11003
+	picture = "GFX_evt_zombies"
+	border = GFX_event_normal_frame_war
+	
+	is_triggered_only = yes
+	
+	option = { name = EVTOPTAsvampires11003
+		hidden_tooltip = { ROOT = { character_event = { id = svampires.12003 days = 450 random = 590 } } }
+				location = { add_province_modifier = { name = province_tainted_2
+									duration = 850 }
+					ROOT = {
+					spawn_unit = {
+						province = PREV
+						owner = ROOT
+						earmark = summoned_zombiehorde_3
+						troops = {
+							undead_horde = { 2000 2000 }
+							}
+						cannot_inherit = yes
+						attrition = 0
+						}
+					spawn_unit = {
+						province = PREV
+						owner = ROOT
+						earmark = summoned_zombiehorde_3
+						troops = {
+							undead_horde = { 1000 1000 }
+							}
+						cannot_inherit = yes
+						attrition = 0
+						}
+					spawn_unit = {
+						province = PREV
+						owner = ROOT
+						earmark = summoned_zombiehorde_3
+						troops = {
+							undead_horde = { 500 500 }
+							}
+						cannot_inherit = yes
+						attrition = 0
+						}
+					} #endroot
+				} #endlocation
+		}
+}
+
+#The undead fall apart
+character_event = {
+	id = svampires.12003
+	desc = EVTDESCAsvampires12003
+	picture = "GFX_evt_zombies"
+	border = GFX_event_normal_frame_war
+	
+	notification = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		disband_event_forces = summoned_zombiehorde_3
+		}
+	option = {
+		}
+}
+#Big average horde
+character_event = {
+	id = svampires.11004 
+	desc = EVTDESCAsvampires11004
+	picture = "GFX_evt_zombies"
+	border = GFX_event_normal_frame_war
+	
+	is_triggered_only = yes
+	
+	option = { name = EVTOPTAsvampires11004
+		hidden_tooltip = { ROOT = { character_event = { id = svampires.12004 days = 450 random = 590 } } }
+				location = { add_province_modifier = { name = province_tainted_2
+									duration = 850 }
+					ROOT = {
+					spawn_unit = {
+						province = PREV
+						owner = ROOT
+						earmark = summoned_zombiehorde_4
+						troops = {
+							undead_horde = { 2000 2000 }
+							}
+						cannot_inherit = yes
+						attrition = 0
+						}
+					spawn_unit = {
+						province = PREV
+						owner = ROOT
+						earmark = summoned_zombiehorde_4
+						troops = {
+							undead_horde = { 1000 1000 }
+							}
+						cannot_inherit = yes
+						attrition = 0
+						}
+					spawn_unit = {
+						province = PREV
+						owner = ROOT
+						earmark = summoned_zombiehorde_4
+						troops = {
+							undead_horde = { 1000 1000 }
+							}
+						cannot_inherit = yes
+						attrition = 0
+						}
+					} #endroot
+				} #endlocation
+		}
+}
+
+#The undead fall apart
+character_event = {
+	id = svampires.12004
+	desc = EVTDESCAsvampires12004
+	picture = "GFX_evt_zombies"
+	border = GFX_event_normal_frame_war
+
+	notification = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		disband_event_forces = summoned_zombiehorde_4
+		}
+	option = {
+		}
+}
+#Small large horde
+character_event = {
+	id = svampires.11005
+	desc = EVTDESCAsvampires11005
+	picture = "GFX_evt_zombies"
+	border = GFX_event_normal_frame_war
+	
+	is_triggered_only = yes
+	
+	option = { name = EVTOPTAsvampires11005
+		hidden_tooltip = { ROOT = { character_event = { id = svampires.12005 days = 450 random = 690 } } }
+				location = { add_province_modifier = { name = province_tainted_3
+									duration = 1000 }
+					ROOT = {
+					spawn_unit = {
+						province = PREV
+						owner = ROOT
+						earmark = summoned_zombiehorde_5
+						troops = {
+							undead_horde = { 2000 2000 }
+							}
+						cannot_inherit = yes
+						attrition = 0
+						}
+					spawn_unit = {
+						province = PREV
+						owner = ROOT
+						earmark = summoned_zombiehorde_5
+						troops = {
+							undead_horde = { 2000 2000 }
+							}
+						cannot_inherit = yes
+						attrition = 0
+						}
+					spawn_unit = {
+						province = PREV
+						owner = ROOT
+						earmark = summoned_zombiehorde_5
+						troops = {
+							undead_horde = { 1000 1000 }
+							}
+						cannot_inherit = yes
+						attrition = 0
+						}
+					spawn_unit = {
+						province = PREV
+						owner = ROOT
+						earmark = summoned_zombiehorde_5
+						troops = {
+							undead_horde = { 1000 1000 }
+							}
+						cannot_inherit = yes
+						attrition = 0
+						}
+					} #endroot
+				} #endlocation
+		}
+}
+
+#The undead fall apart
+character_event = {
+	id = svampires.12005
+	desc = EVTDESCAsvampires12005
+	picture = "GFX_evt_zombies"
+	border = GFX_event_normal_frame_war
+	
+	notification = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		disband_event_forces = summoned_zombiehorde_5
+		}
+	option = {
+		}
+}
+
+#Big large horde
+character_event = {
+	id = svampires.11006
+	desc = EVTDESCAsvampires11006
+	picture = "GFX_evt_zombies"
+	border = GFX_event_normal_frame_war
+	
+	is_triggered_only = yes
+	
+	option = { name = EVTOPTAsvampires11006
+		hidden_tooltip = { ROOT = { character_event = { id = svampires.12006 days = 450 random = 690 } } }
+				location = { add_province_modifier = { name = province_tainted_3
+									duration = 1000 }
+					ROOT = {
+					spawn_unit = {
+						province = PREV
+						owner = ROOT
+						earmark = summoned_zombiehorde_6
+						troops = {
+							undead_horde = { 2000 2000 }
+							}
+						cannot_inherit = yes
+						attrition = 0
+						}
+					spawn_unit = {
+						province = PREV
+						owner = ROOT
+						earmark = summoned_zombiehorde_6
+						troops = {
+							undead_horde = { 2000 2000 }
+							}
+						cannot_inherit = yes
+						attrition = 0
+						}
+					spawn_unit = {
+						province = PREV
+						owner = ROOT
+						earmark = summoned_zombiehorde_6
+						troops = {
+							undead_horde = { 1000 1000 }
+							}
+						cannot_inherit = yes
+						attrition = 0
+						}
+					spawn_unit = {
+						province = PREV
+						owner = ROOT
+						earmark = summoned_zombiehorde_6
+						troops = {
+							undead_horde = { 1000 1000 }
+							}
+						cannot_inherit = yes
+						attrition = 0
+						}
+					spawn_unit = {
+						province = PREV
+						owner = ROOT
+						earmark = summoned_zombiehorde_3
+						troops = {
+							undead_horde = { 1000 1000 }
+							}
+						cannot_inherit = yes
+						attrition = 0
+						}
+					spawn_unit = {
+						province = PREV
+						owner = ROOT
+						earmark = summoned_zombiehorde_6
+						troops = {
+							undead_horde = { 1000 1000 }
+							}
+						cannot_inherit = yes
+						attrition = 0
+						}
+					} #endroot
+				} #endlocation
+		}
+}
+
+#The undead fall apart
+character_event = {
+	id = svampires.12006
+	desc = EVTDESCAsvampires12006
+	picture = "GFX_evt_zombies"
+	border = GFX_event_normal_frame_war
+	
+	notification = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		disband_event_forces = summoned_zombiehorde_6
+		}
+	option = {
+		}
+}
+
+#Small Huge horde
+character_event = {
+	id = svampires.11007
+	desc = EVTDESCAsvampires11007
+	picture = "GFX_evt_zombies"
+	border = GFX_event_normal_frame_war
+	
+	is_triggered_only = yes
+	
+	option = { name = EVTOPTAsvampires11007
+		hidden_tooltip = { ROOT = { character_event = { id = svampires.12007 days = 450 random = 790 } } }
+				location = { add_province_modifier = { name = province_tainted_4
+									duration = 1500 }
+					ROOT = {
+					spawn_unit = {
+						province = PREV
+						owner = ROOT
+						earmark = summoned_zombiehorde_7
+						troops = {
+							undead_horde = { 2000 2000 }
+							}
+						cannot_inherit = yes
+						attrition = 0
+						}
+					spawn_unit = {
+						province = PREV
+						owner = ROOT
+						earmark = summoned_zombiehorde_7
+						troops = {
+							undead_horde = { 2000 2000 }
+							}
+						cannot_inherit = yes
+						attrition = 0
+						}
+					spawn_unit = {
+						province = PREV
+						owner = ROOT
+						earmark = summoned_zombiehorde_7
+						troops = {
+							undead_horde = { 2000 2000 }
+							}
+						cannot_inherit = yes
+						attrition = 0
+						}
+					spawn_unit = {
+						province = PREV
+						owner = ROOT
+						earmark = summoned_zombiehorde_7
+						troops = {
+							undead_horde = { 1000 1000 }
+							}
+						cannot_inherit = yes
+						attrition = 0
+						}
+					spawn_unit = {
+						province = PREV
+						owner = ROOT
+						earmark = summoned_zombiehorde_7
+						troops = {
+							undead_horde = { 1000 1000 }
+							}
+						cannot_inherit = yes
+						attrition = 0
+						}
+					spawn_unit = {
+						province = PREV
+						owner = ROOT
+						earmark = summoned_zombiehorde_7
+						troops = {
+							undead_horde = { 1000 1000 }
+							}
+						cannot_inherit = yes
+						attrition = 0
+						}
+					spawn_unit = {
+						province = PREV
+						owner = ROOT
+						earmark = summoned_zombiehorde_7
+						troops = {
+							undead_horde = { 1000 1000 }
+							}
+						cannot_inherit = yes
+						attrition = 0
+						}
+					} #endroot
+				} #endlocation
+		}
+}
+
+#The undead fall apart
+character_event = {
+	id = svampires.12007
+	desc = EVTDESCAsvampires12007
+	picture = "GFX_evt_zombies"
+	border = GFX_event_normal_frame_war
+	
+	notification = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		disband_event_forces = summoned_zombiehorde_7
+		}
+	option = {
+		}
+}
+
+#Big Huge horde
+character_event = {
+	id = svampires.11008
+	desc = EVTDESCAsvampires11008
+	picture = "GFX_evt_zombies"
+	border = GFX_event_normal_frame_war
+	
+	is_triggered_only = yes
+	
+	option = { name = EVTOPTAsvampires11008
+		hidden_tooltip = { ROOT = { character_event = { id = svampires.12008 days = 450 random = 790 } } }
+				location = { add_province_modifier = { name = province_tainted_4
+									duration = 1500 }
+					ROOT = {
+					spawn_unit = {
+						province = PREV
+						owner = ROOT
+						earmark = summoned_zombiehorde_8
+						troops = {
+							undead_horde = { 2500 2500 }
+							}
+						cannot_inherit = yes
+						attrition = 0
+						}
+					spawn_unit = {
+						province = PREV
+						owner = ROOT
+						earmark = summoned_zombiehorde_8
+						troops = {
+							undead_horde = { 2500 2500 }
+							}
+						cannot_inherit = yes
+						attrition = 0
+						}
+					spawn_unit = {
+						province = PREV
+						owner = ROOT
+						earmark = summoned_zombiehorde_8
+						troops = {
+							undead_horde = { 2000 2000 }
+							}
+						cannot_inherit = yes
+						attrition = 0
+						}
+					spawn_unit = {
+						province = PREV
+						owner = ROOT
+						earmark = summoned_zombiehorde_8
+						troops = {
+							undead_horde = { 1000 1000 }
+							}
+						cannot_inherit = yes
+						attrition = 0
+						}
+					spawn_unit = {
+						province = PREV
+						owner = ROOT
+						earmark = summoned_zombiehorde_8
+						troops = {
+							undead_horde = { 1000 1000 }
+							}
+						cannot_inherit = yes
+						attrition = 0
+						}
+					spawn_unit = {
+						province = PREV
+						owner = ROOT
+						earmark = summoned_zombiehorde_8
+						troops = {
+							undead_horde = { 1000 1000 }
+							}
+						cannot_inherit = yes
+						attrition = 0
+						}
+					spawn_unit = {
+						province = PREV
+						owner = ROOT
+						earmark = summoned_zombiehorde_8
+						troops = {
+							undead_horde = { 1000 1000 }
+							}
+						cannot_inherit = yes
+						attrition = 0
+						}
+					spawn_unit = {
+						province = PREV
+						owner = ROOT
+						earmark = summoned_zombiehorde_8
+						troops = {
+							undead_horde = { 1000 1000 }
+							}
+						cannot_inherit = yes
+						attrition = 0
+						}
+					spawn_unit = {
+						province = PREV
+						owner = ROOT
+						earmark = summoned_zombiehorde_8
+						troops = {
+							undead_horde = { 1000 1000 }
+							}
+						cannot_inherit = yes
+						attrition = 0
+						}
+					} #endroot
+				} #endlocation
+		}
+}
+
+#The undead fall apart
+character_event = {
+	id = svampires.12008
+	desc = EVTDESCAsvampires12008
+	picture = "GFX_evt_zombies"
+	border = GFX_event_normal_frame_war
+	
+	notification = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		disband_event_forces = summoned_zombiehorde_8
+		}
+	option = {
+		}
+}
+
+#Small Endless horde
+character_event = {
+	id = svampires.11009
+	desc = EVTDESCAsvampires11009
+	picture = "GFX_evt_zombies"
+	border = GFX_event_normal_frame_war
+	
+	is_triggered_only = yes
+	
+	option = { name = EVTOPTAsvampires11009
+		hidden_tooltip = { ROOT = { character_event = { id = svampires.12009 days = 450 random = 890 } } }
+				location = { add_province_modifier = { name = province_tainted_5
+									duration = 2000 }
+					ROOT = {
+					spawn_unit = {
+						province = PREV
+						owner = ROOT
+						earmark = summoned_zombiehorde_9
+						troops = {
+							undead_horde = { 2500 2500 }
+							}
+						cannot_inherit = yes
+						attrition = 0
+						}
+					spawn_unit = {
+						province = PREV
+						owner = ROOT
+						earmark = summoned_zombiehorde_9
+						troops = {
+							undead_horde = { 2500 2500 }
+							}
+						cannot_inherit = yes
+						attrition = 0
+						}
+					spawn_unit = {
+						province = PREV
+						owner = ROOT
+						earmark = summoned_zombiehorde_9
+						troops = {
+							undead_horde = { 2500 2500 }
+							}
+						cannot_inherit = yes
+						attrition = 0
+						}
+					spawn_unit = {
+						province = PREV
+						owner = ROOT
+						earmark = summoned_zombiehorde_9
+						troops = {
+							undead_horde = { 1500 1500 }
+							}
+						cannot_inherit = yes
+						attrition = 0
+						}
+					spawn_unit = {
+						province = PREV
+						owner = ROOT
+						earmark = summoned_zombiehorde_9
+						troops = {
+							undead_horde = { 1500 1500 }
+							}
+						cannot_inherit = yes
+						attrition = 0
+						}
+					spawn_unit = {
+						province = PREV
+						owner = ROOT
+						earmark = summoned_zombiehorde_9
+						troops = {
+							undead_horde = { 1500 1500 }
+							}
+						cannot_inherit = yes
+						attrition = 0
+						}
+					spawn_unit = {
+						province = PREV
+						owner = ROOT
+						earmark = summoned_zombiehorde_9
+						troops = {
+							undead_horde = { 1500 1500 }
+							}
+						cannot_inherit = yes
+						attrition = 0
+						}
+					spawn_unit = {
+						province = PREV
+						owner = ROOT
+						earmark = summoned_zombiehorde_9
+						troops = {
+							undead_horde = { 1000 1000 }
+							}
+						cannot_inherit = yes
+						attrition = 0
+						}
+					spawn_unit = {
+						province = PREV
+						owner = ROOT
+						earmark = summoned_zombiehorde_9
+						troops = {
+							undead_horde = { 1000 1000 }
+							}
+						cannot_inherit = yes
+						attrition = 0
+						}
+					} #endroot
+				} #endlocation
+		}
+}
+
+#The undead fall apart
+character_event = {
+	id = svampires.12009
+	desc = EVTDESCAsvampires12009
+	picture = "GFX_evt_zombies"
+	border = GFX_event_normal_frame_war
+	
+	notification = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		disband_event_forces = summoned_zombiehorde_9
+		}
+	option = {
+		}
+}
+#Big Endless horde
+character_event = {
+	id = svampires.11010
+	desc = EVTDESCAsvampires11010
+	picture = "GFX_evt_zombies"
+	border = GFX_event_normal_frame_war
+	
+	is_triggered_only = yes
+	
+	option = { name = EVTOPTAsvampires11010
+		hidden_tooltip = { ROOT = { character_event = { id = svampires.12010 days = 450 random = 890 } } }
+				location = { add_province_modifier = { name = province_tainted_5
+									duration = 2000 }
+					ROOT = {
+					spawn_unit = {
+						province = PREV
+						owner = ROOT
+						earmark = summoned_zombiehorde_10
+						troops = {
+							undead_horde = { 2500 2500 }
+							}
+						cannot_inherit = yes
+						attrition = 0
+						}
+					spawn_unit = {
+						province = PREV
+						owner = ROOT
+						earmark = summoned_zombiehorde_10
+						troops = {
+							undead_horde = { 2500 2500 }
+							}
+						cannot_inherit = yes
+						attrition = 0
+						}
+					spawn_unit = {
+						province = PREV
+						owner = ROOT
+						earmark = summoned_zombiehorde_10
+						troops = {
+							undead_horde = { 2500 2500 }
+							}
+						cannot_inherit = yes
+						attrition = 0
+						}
+					spawn_unit = {
+						province = PREV
+						owner = ROOT
+						earmark = summoned_zombiehorde_10
+						troops = {
+							undead_horde = { 2500 2500 }
+							}
+						cannot_inherit = yes
+						attrition = 0
+						}
+					spawn_unit = {
+						province = PREV
+						owner = ROOT
+						earmark = summoned_zombiehorde_10
+						troops = {
+							undead_horde = { 2500 2500 }
+							}
+						cannot_inherit = yes
+						attrition = 0
+						}
+					spawn_unit = {
+						province = PREV
+						owner = ROOT
+						earmark = summoned_zombiehorde_10
+						troops = {
+							undead_horde = { 1500 1500 }
+							}
+						cannot_inherit = yes
+						attrition = 0
+						}
+					spawn_unit = {
+						province = PREV
+						owner = ROOT
+						earmark = summoned_zombiehorde_10
+						troops = {
+							undead_horde = { 1500 1500 }
+							}
+						cannot_inherit = yes
+						attrition = 0
+						}
+					spawn_unit = {
+						province = PREV
+						owner = ROOT
+						earmark = summoned_zombiehorde_10
+						troops = {
+							undead_horde = { 1500 1500 }
+							}
+						cannot_inherit = yes
+						attrition = 0
+						}
+					spawn_unit = {
+						province = PREV
+						owner = ROOT
+						earmark = summoned_zombiehorde_10
+						troops = {
+							undead_horde = { 1500 1500 }
+							}
+						cannot_inherit = yes
+						attrition = 0
+						}
+					spawn_unit = {
+						province = PREV
+						owner = ROOT
+						earmark = summoned_zombiehorde_10
+						troops = {
+							undead_horde = { 1000 1000 }
+							}
+						cannot_inherit = yes
+						attrition = 0
+						}
+					spawn_unit = {
+						province = PREV
+						owner = ROOT
+						earmark = summoned_zombiehorde_10
+						troops = {
+							undead_horde = { 1000 1000 }
+							}
+						cannot_inherit = yes
+						attrition = 0
+						}
+					} #endroot
+				} #endlocation
+		}
+}
+
+#The undead fall apart
+character_event = {
+	id = svampires.12010
+	desc = EVTDESCAsvampires12010
+	picture = "GFX_evt_zombies"
+	border = GFX_event_normal_frame_war
+	
+	notification = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		disband_event_forces = summoned_zombiehorde_10
+		}
+	option = {
+		}
+}
+
+
+###################################################################################################
+###################################################################################################
+
+#Ping the Carstein Ring owner for stealing
+character_event = {
+	id = svampires.13
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = { FROM = { character_event = { id = svampires.13001 } }
+	}
+}
+
+#What to do with the Ring?
+character_event = {
+	id = svampires.13001
+	desc = EVTDESCAsvampires13001
+	picture = "GFX_evt_carstein"
+	border = GFX_event_normal_frame_war
+	
+	is_triggered_only = yes
+	
+	option = { name = EVTOPTAsvampires13001
+						#Steal for yourself
+		trigger = {  OR = { 
+			trait = vampire_lahmian_visible
+			trait = vampire_carstein_visible
+			trait = vampire_blood_visible
+			trait = vampire_strigoi_visible
+			trait = vampire_necrach_visible
+			trait = vampire_jade_visible
+			trait = vampire_mahtmasi_visible
+			trait = vampire_lahmian_hidden
+			trait = vampire_carstein_hidden
+			trait = vampire_blood_hidden
+			trait = vampire_strigoi_hidden
+			trait = vampire_necrach_hidden
+			trait = vampire_jade_hidden
+			trait = vampire_mahtmasi_hidden } } 
+		FROM = { remove_trait = carstein_ring }
+		add_trait = carstein_ring
+		if = { limit = { religion_group = necromantic_group }
+			piety = 250
+			prestige = 250 }
+		ai_chance = { factor = 100 }
+	hidden_tooltip = {
+		any_playable_ruler = {
+			limit = {
+				OR = {
+					culture_group = imperial_group
+					culture_group = kislevite_group
+					culture_group = estalian_group
+					culture_group = tilean_group
+					culture_group = bretonnian_group
+					culture_group = dwarf_group
+				}
+				ai = no
+			}
+			character_event = { id = svampires.13002 days = 7 }
+		}
+		any_playable_ruler = {
+			limit = {
+					NOT = { culture_group = imperial_group }
+					NOT = { culture_group = kislevite_group }
+					NOT = { culture_group = estalian_group }
+					NOT = { culture_group = tilean_group }
+					NOT = { culture_group = bretonnian_group }
+					NOT = { culture_group = dwarf_group }
+				ai = no
+				}
+			character_event = { id = svampires.13002 days = 30 }
+			}
+		}
+	}
+	option = { name = EVTOPTBsvampires13001
+						#Destroy it
+		ai_chance = { factor = 100
+			modifier = { factor = 0
+				OR = { 
+				trait = vampire_lahmian_visible
+				trait = vampire_carstein_visible
+				trait = vampire_blood_visible
+				trait = vampire_strigoi_visible
+				trait = vampire_necrach_visible
+				trait = vampire_jade_visible
+				trait = vampire_mahtmasi_visible
+				trait = vampire_lahmian_hidden
+				trait = vampire_carstein_hidden
+				trait = vampire_blood_hidden
+				trait = vampire_strigoi_hidden
+				trait = vampire_necrach_hidden
+				trait = vampire_jade_hidden
+				trait = vampire_mahtmasi_hidden }
+				}
+			 }
+	hidden_tooltip = {
+		FROM = { remove_trait = carstein_ring }
+		if = { limit = { NOT = { religion_group = necromantic_group } }
+			piety = 1000
+			prestige = 500 }
+		any_playable_ruler = {
+			limit = {
+				OR = {
+					culture_group = imperial_group
+					culture_group = kislevite_group
+					culture_group = estalian_group
+					culture_group = tilean_group
+					culture_group = bretonnian_group
+					culture_group = dwarf_group
+				}
+				ai = no
+			}
+			character_event = {
+				id = carstein.8 days = 7
+			}
+		}
+		any_playable_ruler = {
+			limit = {
+					NOT = { culture_group = imperial_group }
+					NOT = { culture_group = kislevite_group }
+					NOT = { culture_group = estalian_group }
+					NOT = { culture_group = tilean_group }
+					NOT = { culture_group = bretonnian_group }
+					NOT = { culture_group = dwarf_group }
+				ai = no
+			}
+			character_event = { id = carstein.8 days = 30 }
+			}
+		}
+		
+	}
+}
+
+#Another vampire has taken the ring
+character_event = {
+	id = svampires.13002 
+	desc = EVTDESCAsvampires13002
+	picture = "GFX_evt_carstein"
+	border = GFX_event_normal_frame_war
+	
+	is_triggered_only = yes
+	
+	option = { name = EVTOPTAsvampires13002
+		 }
+}
+
+#####################################################################################
+#################################PLOT TO STEAL THE RING##############################
+#####################################################################################
+
+# The plotter sees an opportunity
+character_event = {
+	id = svampires.14
+	desc = "EVTDESCsvampires14"
+	picture = GFX_evt_whispers
+	border = GFX_event_normal_frame_intrigue
+	
+	capable_only = yes
+	prisoner = no
+	
+	trigger = {
+			has_plot = plot_steal_carstein_ring
+		plot_target_char = {
+			age = 16
+			prisoner = no
+			# at_location = ROOT # The Plot Head needs to be at the target's location to get a chance
+			NOT = { trait = incapable }
+			# NOT = { trait = in_hiding }
+		}
+		NOT = { has_character_flag = ringstealing_in_motion }
+		plot_power_contribution = 
+		{
+			plotter = ROOT
+			power = 0.025
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 8400
+		
+		modifier = {
+			factor = 0.7
+			plot_target_char = { check_variable = { which = carstein_death_count value = 3 } }
+		}
+		modifier = {
+			factor = 0.6
+			plot_target_char = { check_variable = { which = carstein_death_count value = 5 } }
+		}
+		modifier = {
+			factor = 0.6
+			plot_target_char = { check_variable = { which = carstein_death_count value = 8 } }
+		}
+		modifier = {
+			factor = 0.6
+			plot_target_char = { check_variable = { which = carstein_death_count value = 10 } }
+		}
+		modifier = {
+			factor = 0.6
+			plot_target_char = { in_command = yes }
+		}
+		modifier = {
+			factor = 0.6
+			plot_target_char = { realm_size = 150 }
+		}
+		modifier = {
+			factor = 0.8
+			learning = 10
+		}
+		modifier = {
+			factor = 0.8
+			learning = 15
+		}
+		modifier = {
+			factor = 0.8
+			learning = 20
+		}
+		modifier = {
+			factor = 0.8
+			learning = 25
+		}
+		modifier = {
+			factor = 0.7
+			has_focus = focus_intrigue 
+		}
+		modifier = {
+			factor = 0.7
+			trait = schemer 
+		}
+		modifier = {
+			factor = 1.7
+			plot_target_char = { trait = in_hiding }
+		}
+		modifier = {
+			factor = 0.7
+			plot_power_contribution = 
+			{
+				plotter = ROOT
+				power = 0.40
+			}
+		}
+		modifier = {
+			factor = 0.7
+			plot_power_contribution = 
+			{
+				plotter = ROOT
+				power = 0.50
+			}
+		}
+		modifier = {
+			factor = 0.7
+			plot_power_contribution = 
+			{
+				plotter = ROOT
+				power = 0.60
+			}
+		}
+		modifier = {
+			factor = 0.7
+			plot_power_contribution = 
+			{
+				plotter = ROOT
+				power = 0.70
+			}
+		}
+		modifier = {
+			factor = 0.7
+			plot_power_contribution = 
+			{
+				plotter = ROOT
+				power = 0.80
+			}
+		}
+		modifier = {
+			factor = 0.7
+			plot_power_contribution = 
+			{
+				plotter = ROOT
+				power = 0.90
+			}
+		}
+		modifier = {
+			factor = 0.7
+			plot_power_contribution = 
+			{
+				plotter = ROOT
+				power = 1.0
+			}
+		}
+		modifier = {
+			factor = 0.5
+			plot_power_contribution = 
+			{
+				plotter = ROOT
+				power = 1.5
+			}
+		}
+		
+		modifier = {
+			factor = 0.33
+			any_backed_character = {
+			has_plot = plot_steal_carstein_ring
+				plot_power = 1.0
+			}
+		}
+		modifier = {
+			factor = 0.33
+			any_backed_character = {
+			has_plot = plot_steal_carstein_ring
+				plot_power = 1.5
+			}
+		}
+		modifier = {
+			factor = 0.33
+			any_backed_character = {
+			has_plot = plot_steal_carstein_ring
+				plot_power = 2.0
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTAsvampires14" # The conspirators provide the poison
+		trigger = {
+			plot_power = 1.0
+		}
+		hidden_tooltip = {
+			any_plot_backer = {
+				character_event = { id = svampires.14012 days = 1 }
+			}
+		}
+		
+		set_character_flag = ringstealing_in_motion 
+		plot_target_char = { character_event = { id = svampires.14005 days = 30 tooltip = "EVTTOOLTIPsvampires14005" } }
+	}
+	option = {
+		name = "EVTOPTBsvampires14" # Buy the poison
+		trigger = {
+			NOT = { plot_power = 0.5 }
+			NOT = { learning = 10 }
+		}
+		scaled_wealth = -1.0
+		
+		hidden_tooltip = {
+			any_plot_backer = {
+				character_event = { id = svampires.14012 days = 1 }
+			}
+		}
+		
+		set_character_flag = ringstealing_in_motion 
+		plot_target_char = { character_event = { id = svampires.14005 days = 30 tooltip = "EVTTOOLTIPsvampires14005" } }
+	}
+	option = {
+		name = "EVTOPTBsvampires14" # Buy the poison
+		trigger = {
+			plot_power = 0.5
+			NOT = { plot_power = 1.0 }
+			NOT = { learning = 10 }
+		}
+		scaled_wealth = -0.5
+		
+		hidden_tooltip = {
+			any_plot_backer = {
+				character_event = { id = svampires.14012 days = 1 }
+			}
+		}
+		
+		set_character_flag = ringstealing_in_motion 
+		plot_target_char = { character_event = { id = svampires.14005 days = 30 tooltip = "EVTTOOLTIPsvampires14005" } }
+	}
+	option = {
+		name = "EVTOPTCsvampires14" # Hemlock goes well with the Red...
+		tooltip_info = learning
+		trigger = {
+			plot_power = 0.5
+			learning = 10
+		}
+		
+		hidden_tooltip = {
+			any_plot_backer = {
+				character_event = { id = svampires.14012 days = 1 }
+			}
+		}
+		
+		set_character_flag = ringstealing_in_motion 
+		plot_target_char = { character_event = { id = svampires.14005 days = 30 tooltip = "EVTTOOLTIPsvampires14005" } }
+	}
+	option = {
+		name = "EVTOPTDsvampires14" # I cannot afford this
+		trigger = {
+			ai = no
+			NOT = { learning = 10 }
+			NOT = { plot_power = 1.0 }
+		}
+	}
+}
+
+# A plot backer sees an opportunity - Stealing the Ring
+character_event = {
+	id = svampires.14001
+	desc = EVTDESCsvampires14001
+	picture = GFX_evt_whispers
+	border = GFX_event_normal_frame_intrigue
+	
+	capable_only = yes
+	prisoner = no
+	
+	trigger = {
+		any_backed_character = {
+			has_plot = plot_steal_carstein_ring 
+			plot_power = 0.5
+			plot_target_char = {
+				age = 16
+				prisoner = no
+				NOT = { trait = incapable }
+				# NOT = { trait = in_hiding }
+			}
+			NOT = { has_character_flag = ringstealing_in_motion }
+			ROOT = {
+				plot_power_contribution = 
+				{
+					plotter = PREV
+					power = 0.025
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 4200
+		
+		modifier = {
+			factor = 0.7
+			plot_target_char = { check_variable = { which = carstein_death_count value = 3 } }
+		}
+		modifier = {
+			factor = 0.6
+			plot_target_char = { check_variable = { which = carstein_death_count value = 5 } }
+		}
+		modifier = {
+			factor = 0.6
+			plot_target_char = { check_variable = { which = carstein_death_count value = 8 } }
+		}
+		modifier = {
+			factor = 0.6
+			plot_target_char = { check_variable = { which = carstein_death_count value = 10 } }
+		}
+		modifier = {
+			factor = 0.6
+			plot_target_char = { in_command = yes }
+		}
+		modifier = {
+			factor = 0.6
+			plot_target_char = { realm_size = 150 }
+		}
+		modifier = {
+			factor = 0.8
+			learning = 10
+		}
+		modifier = {
+			factor = 0.8
+			learning = 15
+		}
+		modifier = {
+			factor = 0.8
+			learning = 20
+		}
+		modifier = {
+			factor = 0.8
+			learning = 25
+		}
+		modifier = {
+			factor = 0.7
+			has_focus = focus_intrigue 
+		}
+		modifier = {
+			factor = 0.7
+			trait = schemer 
+		}
+		modifier = {
+			factor = 1.7
+			plot_target_char = { trait = in_hiding }
+		}
+		modifier = {
+			factor = 0.6
+			any_backed_character = {
+			has_plot = plot_steal_carstein_ring 
+				ROOT = {
+					plot_power_contribution = 
+					{
+						plotter = PREV
+						power = 0.10
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.6
+			any_backed_character = {
+			has_plot = plot_steal_carstein_ring 
+				ROOT = {
+					plot_power_contribution = 
+					{
+						plotter = PREV
+						power = 0.20
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.6
+			any_backed_character = {
+			has_plot = plot_steal_carstein_ring 
+				ROOT = {
+					plot_power_contribution = 
+					{
+						plotter = PREV
+						power = 0.30
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.6
+			any_backed_character = {
+			has_plot = plot_steal_carstein_ring 
+				ROOT = {
+					plot_power_contribution = 
+					{
+						plotter = PREV
+						power = 0.40
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.6
+			any_backed_character = {
+			has_plot = plot_steal_carstein_ring 
+				ROOT = {
+					plot_power_contribution = 
+					{
+						plotter = PREV
+						power = 0.50
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.6
+			any_backed_character = {
+			has_plot = plot_steal_carstein_ring 
+				ROOT = {
+					plot_power_contribution = 
+					{
+						plotter = PREV
+						power = 0.60
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.6
+			any_backed_character = {
+			has_plot = plot_steal_carstein_ring 
+				ROOT = {
+					plot_power_contribution = 
+					{
+						plotter = PREV
+						power = 0.70
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.6
+			any_backed_character = {
+			has_plot = plot_steal_carstein_ring 
+				ROOT = {
+					plot_power_contribution = 
+					{
+						plotter = PREV
+						power = 0.80
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.6
+			any_backed_character = {
+			has_plot = plot_steal_carstein_ring 
+				ROOT = {
+					plot_power_contribution = 
+					{
+						plotter = PREV
+						power = 0.90
+					}
+				}
+			}
+		}
+		
+		modifier = {
+			factor = 0.33
+			any_backed_character = {
+			has_plot = plot_steal_carstein_ring 
+				plot_power = 1.0
+			}
+		}
+		modifier = {
+			factor = 0.33
+			any_backed_character = {
+			has_plot = plot_steal_carstein_ring 
+				plot_power = 1.5
+			}
+		}
+		modifier = {
+			factor = 0.33
+			any_backed_character = {
+			has_plot = plot_steal_carstein_ring 
+				plot_power = 2.0
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTAsvampires14001" # The conspirators provide the poison
+		trigger = {
+			any_backed_character = {
+			has_plot = plot_steal_carstein_ring 
+				plot_power = 1.0
+			}
+		}
+		random_backed_character = {
+			limit = {
+			has_plot = plot_steal_carstein_ring 
+				plot_power = 1.0
+			}
+			character_event = { id = svampires.14010 days = 3 tooltip = "EVTTOOLTIPsvampires14010" }
+			set_character_flag = ringstealing_in_motion 
+		}
+	}
+	option = {
+		name = "EVTOPTBsvampires14001" # Ask the Plotter for funds
+		trigger = {
+			NOT = { learning = 10 }
+			NOT = {
+				any_backed_character = {
+			has_plot = plot_steal_carstein_ring 
+					plot_power = 1.0
+				}
+			}
+		}
+		random_backed_character = {
+			limit = {
+			has_plot = plot_steal_carstein_ring 
+				NOT = { plot_power = 1.0 }
+			}
+			character_event = { id = svampires.14002 days = 3 tooltip = "EVTTOOLTIPsvampires14002" }
+			set_character_flag = ringstealing_in_motion 
+		}
+	}
+	
+	option = {
+		name = "EVTOPTBsvampires14001" # Buy the poison
+		trigger = {
+			NOT = { learning = 10 }
+			NOT = {
+				any_backed_character = {
+			has_plot = plot_steal_carstein_ring 
+					plot_power = 1.0
+				}
+			}
+		}
+		scaled_wealth = -0.5
+		random_backed_character = {
+			limit = {
+			has_plot = plot_steal_carstein_ring 
+				NOT = { plot_power = 1.0 }
+			}
+			character_event = { id = svampires.14010 days = 3 tooltip = "EVTTOOLTIPsvampires14010" }
+			set_character_flag = ringstealing_in_motion 
+		}
+	}
+	option = {
+		name = "EVTOPTCsvampires14001" # Hemlock goes well with the Red...
+		tooltip_info = learning
+		trigger = {
+			learning = 10
+			any_backed_character = {
+			has_plot = plot_steal_carstein_ring 
+				plot_power = 0.5
+			}
+		}
+		
+		random_backed_character = {
+			limit = {
+			has_plot = plot_steal_carstein_ring 
+				plot_power = 0.5
+			}
+			character_event = { id = svampires.14010 days = 3 tooltip = "EVTTOOLTIPsvampires14010" }
+			set_character_flag = ringstealing_in_motion 
+		}
+	}
+	
+	option = {
+		name = "EVTOPTDsvampires14001" # I cannot afford this
+		trigger = {
+			ai = no
+			NOT = { learning = 10 }
+			NOT = {
+				any_backed_character = {
+					has_plot = plot_steal_carstein_ring 
+					plot_power = 1.0
+				}
+			}
+		}
+	}
+}
+
+# Stealing the Ring - Plot backer requests funds
+character_event = {
+	id = svampires.14002
+	desc = "EVTDESCsvampires14002"
+	picture = GFX_evt_spymaster
+	border = GFX_event_normal_frame_intrigue
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTAsvampires14002"
+		transfer_scaled_wealth = {
+				from = ROOT
+				to = FROM
+				value = 1.0
+		}
+		FROM = { character_event = { id = svampires.14003 tooltip = "EVTTOOLTIPsvampires14003" } }
+	}
+	
+	option = {
+		name = "EVTOPTBsvampires14002"
+		FROM = { character_event = { id = svampires.14004 tooltip = "EVTTOOLTIPsvampires14004" } }
+	}
+}
+
+# Stealing the Ring - plot backer receives funds
+character_event = {
+	id = svampires.14003
+	desc = "EVTDESCsvampires14003"
+	picture = GFX_evt_spymaster
+	border = GFX_event_normal_frame_intrigue
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EXCELLENT"
+		FROM = { plot_target_char = { character_event = { id = svampires.14005 days = 27 tooltip = "EVTTOOLTIPsvampires14005" } } }
+	}
+}
+
+# Stealing the Ring - plot backer does NOT receive funds
+character_event = {
+	id = svampires.14004
+	desc = "EVTDESCsvampires14004"
+	picture = GFX_evt_spymaster
+	border = GFX_event_normal_frame_intrigue
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTAsvampires14004" # Pay for it myself
+		scaled_wealth = -1.0
+		FROM = { plot_target_char = { character_event = { id = svampires.14005 days = 27 tooltip = "EVTTOOLTIPsvampires14005" } } }
+	}
+	option = {
+		name = "EVTOPTBsvampires14004" # Screw this
+		clr_character_flag = ringstealing_in_motion 
+	}
+}
+
+# Stealing the Ring - the stealing attempt
+character_event = {
+	id = svampires.14005
+	desc = EVTDESCsvampires14005
+	picture = GFX_evt_shadow
+	border = GFX_event_normal_frame_intrigue
+	
+	hide_from = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		prisoner = no
+		
+		# Is the plot still in motion?
+		OR = {
+			FROM = {
+			has_plot = plot_steal_carstein_ring 
+				plot_target_char = {
+					character = ROOT
+				}
+			}
+			FROMFROM = {
+			has_plot = plot_steal_carstein_ring 
+				plot_target_char = {
+					character = ROOT
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		save_event_target_as = target_victim
+	}
+	
+	option = {
+		name = "EVTOPTAsvampires14005" # Drinks the wine
+		trigger = {
+			NOT = {
+				OR = {
+					AND = {
+						trait = paranoid
+						random = 33
+					}
+					AND = {
+						trait = slothful
+						random = 50
+					}
+					AND = {
+						in_command = yes
+						random = 90
+					}
+					AND = {
+						NOT = { trait = slothful }
+						NOT = { in_command = yes }
+						NOT = { trait = paranoid }
+						random = 75
+					}
+				}
+			}
+		}
+		hidden_tooltip = {
+			random_list = {
+				25 = {
+					hidden_tooltip = {
+						FROM = { character_event = { id = svampires.14013 days = 1 } }
+						FROMFROM = { character_event = { id = svampires.14013 days = 1 } }
+					}
+					character_event = { id = svampires.14006 days = 1 } # Stolen, thief discovered
+				}
+				75 = {
+					hidden_tooltip = {
+						FROM = { character_event = { id = svampires.14014 days = 1 } }
+						FROMFROM = { character_event = { id = svampires.14014 days = 1 } }
+					}
+					character_event = { id = svampires.14007 days = 1 } # Stolen, thief unknown
+				}
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTBsvampires14005" # Discovers the poison
+		trigger = {
+			OR = {
+				AND = {
+					trait = paranoid
+					random = 33
+				}
+				AND = {
+					trait = slothful
+					random = 50
+				}
+				AND = {
+					in_command = yes
+					random = 90
+				}
+				AND = {
+					NOT = { trait = slothful }
+					NOT = { in_command = yes }
+					NOT = { trait = paranoid }
+					random = 75
+				}
+			}
+		}
+		hidden_tooltip = {
+			random_list = {
+				50 = {
+					hidden_tooltip = {
+						FROM = { character_event = { id = svampires.14015 days = 1 } }
+						FROMFROM = { character_event = { id = svampires.14015 days = 1 } }
+					}
+					character_event = { id = svampires.14008 days = 1 } # Not stolen, thief discovered
+				}
+				50 = {
+					hidden_tooltip = {
+						FROM = { character_event = { id = svampires.14016 days = 1 } }
+						FROMFROM = { character_event = { id = svampires.14016 days = 1 } }
+					}
+					character_event = { id = svampires.14009 days = 1 } # Not stolen, thief unknown
+				}
+			}
+		}
+	}
+}
+
+# Stealing the Ring - Stolen, thief(s) discovered
+character_event = {
+	id = svampires.14006
+	desc = EVTDESCsvampires14006
+	picture = GFX_evt_shadow
+	border = GFX_event_normal_frame_intrigue
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTAsvampires14006
+	hidden_tooltip = {
+		
+		if = {
+			limit = { FROMFROMFROM = { has_plot = plot_steal_carstein_ring 
+						plot_target_char = { character = ROOT }
+						}
+				}
+			opinion = {
+				who = FROMFROMFROM
+				modifier = opinion_stolen_ring 
+				months = 24000
+				}
+			FROMFROMFROM = { random_list = { 70 = { character_event = { id = svampires.14017 days = 5 random = 7 } } #the thief disappears
+							30 = { character_event = { id = svampires.13001 days = 5 random = 7 } } } }
+			}
+		if = { limit = { is_alive = yes }
+			opinion = {
+				who = FROMFROM
+				modifier = opinion_stolen_ring 
+				months = 24000
+				}
+			FROMFROM = { random_list = { 70 = { character_event = { id = svampires.14017 days = 5 random = 7 } } #the thief disappears
+							30 = { character_event = { id = svampires.13001 days = 5 random = 7 } } } }
+			}
+		} #closehiddentooltip
+	}
+}
+
+# Stealing the Ring - Stolen, thief NOT discovered
+character_event = {
+	id = svampires.14007
+	desc = "EVTDESCsvampires14007"
+	picture = GFX_evt_shadow
+	border = GFX_event_normal_frame_intrigue
+	
+	hide_from = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTAsvampires14007"
+	hidden_tooltip = {		
+		if = { limit = { FROMFROMFROM = { has_plot = plot_steal_carstein_ring 
+						plot_target_char = { character = ROOT }
+						}
+				}
+			opinion = {
+				who = FROMFROMFROM
+				modifier = opinion_stolen_ring 
+				months = 24000
+				}
+			FROMFROMFROM = { random_list = { 40 = { character_event = { id = svampires.14017 days = 5 random = 7 } } #the thief disappears
+							60 = { character_event = { id = svampires.13001 days = 5 random = 7 } } } }
+		}
+		if = { limit = { is_alive = yes }
+			opinion = {
+				who = FROMFROM
+				modifier = opinion_stolen_ring 
+				months = 24000
+				}
+			FROMFROM = { random_list = { 40 = { character_event = { id = svampires.14017 days = 5 random = 7 } } #the thief disappears
+							60 = { character_event = { id = svampires.13001 days = 5 random = 7 } } } }
+			}
+		} #closehiddentooltip
+	}
+}
+
+# Stealing the Ring - Not stolen, thief discovered
+character_event = {
+	id = svampires.14008
+	desc = "EVTDESCsvampires14008"
+	picture = GFX_evt_shadow
+	border = GFX_event_normal_frame_intrigue
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTAsvampires14008"
+	}
+}
+
+# Stealing the Ring - Not stolen, thief NOT discovered
+character_event = {
+	id = svampires.14009
+	desc = "EVTDESCsvampires14009"
+	picture = GFX_evt_shadow
+	border = GFX_event_normal_frame_intrigue
+	
+	hide_from = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTAsvampires14009"
+	}
+}
+
+# Stealing the Ring - Backer informs Plotter of plan
+character_event = {
+	id = svampires.14010
+	desc = "EVTDESCsvampires14010"
+	picture = GFX_evt_whispers
+	border = GFX_event_normal_frame_intrigue
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTAsvampires14010"
+		FROM = { character_event = { id = svampires.14011 tooltip = "EVTTOOLTIPsvampires14011" } }
+		hidden_tooltip = {
+				any_plot_backer = { limit = { NOT = { character = FROM } }
+					character_event = { id = svampires.14012 days = 1 }
+					}
+				}
+	}
+}
+
+# Stealing the Ring - Plotter tells backer to go ahead
+character_event = {
+	id = svampires.14011
+	desc = "EVTDESCsvampires14011"
+	picture = GFX_evt_whispers
+	border = GFX_event_normal_frame_intrigue
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTAsvampires14011"
+		FROM = { plot_target_char = { character_event = { id = svampires.14005 days = 27 tooltip = "EVTTOOLTIPsvampires14005" } } }
+	}
+}
+
+# Stealing the Ring - Initiator informs other plotter
+character_event = {
+	id = svampires.14012
+	desc = "EVTDESCsvampires14012"
+	picture = GFX_evt_whispers
+	border = GFX_event_normal_frame_intrigue
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTAsvampires14012"
+	}
+}
+
+# Stealing the Ring - Notification: Success, but discovered
+character_event = {
+	id = svampires.14013
+	desc = EVTDESCsvampires14013
+	picture = GFX_evt_shadowy_cabal
+	border = GFX_event_normal_frame_intrigue
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		character_event = { id = 10 } # Consequences of discovery
+		clear_event_target = target_victim
+	}
+	
+	option = {
+		name = "EVTOPTAsvampires14013"
+	}
+}
+
+# Stealing the Ring - Notification: Success, and NOT discovered
+character_event = {
+	id = svampires.14014
+	desc = "EVTDESCsvampires14014"
+	picture = GFX_evt_shadowy_cabal
+	border = GFX_event_normal_frame_intrigue
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTAsvampires14014"
+	}
+}
+
+# Stealing the Ring - Notification: Failure, and discovered
+character_event = {
+	id = svampires.14015
+	desc = "EVTDESCsvampires14015"
+	picture = GFX_evt_shadowy_cabal
+	border = GFX_event_normal_frame_intrigue
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		character_event = { id = 11 } # Consequences of discovery
+		clear_event_target = target_victim
+		
+		if = {
+			limit = { 
+				plot_target_char = {
+					character = FROM
+				}
+			has_plot = plot_steal_carstein_ring 
+			}
+			reveal_plot = yes
+		}
+	}
+	
+	option = {
+		name = "EVTOPTAsvampires14015"
+		if = {
+			limit = { 
+				plot_target_char = {
+					character = FROM
+				}
+			has_plot = plot_steal_carstein_ring 
+			}
+			clr_character_flag = ringstealing_in_motion 
+			tooltip = { reveal_plot = yes }
+		}
+	}
+}
+
+# Stealing the Ring - Notification: Failure, but NOT discovered
+character_event = {
+	id = svampires.14016
+	desc = "EVTDESCsvampires14016"
+	picture = GFX_evt_shadowy_cabal
+	border = GFX_event_normal_frame_intrigue
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTAsvampires14016"
+		
+		if = {
+			limit = {  plot_target_char = { character = FROM }
+			has_plot = plot_steal_carstein_ring 
+			}
+			clr_character_flag = ringstealing_in_motion 
+		}
+	}
+}
+# Stealing the Ring - Notification: The Thief has disappeared
+character_event = {
+	id = svampires.14017
+	desc = "EVTDESCsvampires14017"
+	picture = GFX_evt_shadowy_cabal
+	border = GFX_event_normal_frame_intrigue
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTAsvampires14017"
+		if = {
+			limit = { religion_group = necromantic_group }
+			prestige = -500 }
+	}
+}
+
+
+############################################################################################
+############################################################################################
+
+#Group of Ghouls arrives in a province
+#province_event = {
+#	id = svampires.15
+#	desc = EVTDESCsvampires15
+#	picture = GFX_evt_ghoul
+#
+#	trigger = {
+#		owner = { OR = { trait = vampire_carstein_visible
+#				 trait = vampire_strigoi_visible
+#				 trait = vampire_carstein_hidden
+#				 trait = vampire_strigoi_hidden } }
+#		NOT = { has_building = ca_ghoul_colony_1 }
+##		NOT = { has_building = ct_ghoul_colony_1 }
+#		NOT = { has_building = tp_ghoul_colony_1 }
+#		NOT = { has_building = tb_ghoul_colony_1 }
+#		}
+#
+#	mean_time_to_happen = {
+#		months = 3900
+#		modifier = {
+#			factor = 15
+#			owner = { liege = { any_realm_province = { OR = { has_building = ca_ghoul_colony_1
+#									has_building = ct_ghoul_colony_1
+#									has_building = tp_ghoul_colony_1
+#									has_building = tb_ghoul_colony_1 } } } }
+#			}
+#		modifier = {
+#			factor = 0.5
+#			culture = sylvanian
+#			}
+#		modifier = {
+#			factor = 0.25
+#			owner = { OR = { trait = vampire_strigoi_visible
+#				 trait = vampire_strigoi_hidden } }
+#			}
+#		}
+#
+#	option = {
+#		name = EVTOPTAsvampires15
+#			if = { limit = { is_feudal = yes }
+#				add_building = ca_ghoul_colony_1 }
+#			if = { limit = { is_republic = yes }
+#				add_building = ct_ghoul_colony_1 }
+#			if = { limit = { is_theocracy = yes }
+#				add_building = tp_ghoul_colony_1 }
+#			if = { limit = { is_tribal = yes }
+#				add_building = tb_ghoul_colony_1 }
+#	}
+#	option = {
+#		name = EVTOPTBsvampires15
+#		hidden_tooltip = { random = { chance = 10
+#						add_province_modifier = { name = ghoul_unrest
+#									duration = 1250 } }
+#			 }
+#	}
+#}

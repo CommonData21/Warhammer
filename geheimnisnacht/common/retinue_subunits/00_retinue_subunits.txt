@@ -1,0 +1,1292 @@
+# Types:
+# 0 - Light Infantry
+# 1 - Heavy Infantry
+# 2 - Pikemen
+# 3 - Light Cavalry
+# 4 - Heavy Cavalry
+# 5 - Archers
+# 6 - Special troops
+
+#IMPERIAL RETINUES#
+RETTYPE_CUL_IMP =
+{
+	first_type = 0
+	first_amount = 250
+	second_type = 5
+	second_amount = 250
+	potential = {
+	 	culture_group = imperial_group
+		OR = {
+			primary_title = { higher_tier_than = BARON } 
+			is_patrician = yes	
+		}
+	}
+	
+	modifier = {
+		archers_defensive = 0.4
+		light_infantry_defensive = 0.2
+	}
+}
+
+RETTYPE_CUL_IMP2 =
+{
+	first_type = 1
+	first_amount = 250
+	second_type = 2
+	second_amount = 250
+	
+	potential = {
+		culture_group = imperial_group
+		OR = {
+			 holder_scope = { higher_tier_than = BARON }
+			 holder_scope = { is_patrician = yes }	
+		}
+	}
+	
+	modifier = {
+		pikemen_offensive = 0.4
+		heavy_infantry_defensive = 0.2
+	}
+}
+
+RETTYPE_CUL_IMP3 =
+{
+	first_type = 2
+	first_amount = 400
+	
+	potential = {
+		culture_group = imperial_group
+		OR = {
+			 holder_scope = { higher_tier_than = BARON }
+			 holder_scope = { is_patrician = yes }
+		}
+	}
+	
+	modifier = {
+		pikemen_defensive = 0.4
+	}
+}
+
+RETTYPE_CUL_IMP4 = {
+    first_type = 6
+    first_amount = 150
+	special_troops = gunpowder
+	potential = {
+	 	culture_group = imperial_group
+		OR = {
+			primary_title = { higher_tier_than = BARON } 
+			is_patrician = yes	
+		}
+	}
+	
+    modifier = {
+        gunpowder_defensive = 0.2
+        gunpowder_offensive = 0.4
+    }
+}
+
+RETTYPE_CUL_IMP5 = {
+    first_type = 1
+	first_amount = 400
+
+	potential = {
+	 	culture_group = imperial_group
+		OR = {
+			primary_title = { higher_tier_than = BARON } 
+			is_patrician = yes	
+		}
+	}
+	
+    modifier = {
+       heavy_infantry_offensive = 0.3
+    }
+}
+
+#BRETONNIAN RETINUES#
+
+RETTYPE_CUL_BRET =
+{
+	first_type = 1
+	first_amount = 250
+	second_type = 2
+	second_amount = 250
+	
+	potential = {
+		culture_group = bretonnian_group
+	}
+	modifier = {
+		pikemen_defensive = 0.4
+		heavy_infantry_defensive = 0.2
+	}
+}
+
+RETTYPE_CUL_BRET2 =
+{
+	first_type = 0
+	first_amount = 250
+	second_type = 5
+	second_amount = 250
+	
+	
+	potential = {
+		culture_group = bretonnian_group
+	}
+	modifier = {
+		archers_defensive = 0.4
+		light_infantry_defensive = 0.2
+	}
+}
+
+knightsoftherealm = {
+    first_type = 4
+    first_amount = 100
+	potential = {
+		culture_group = bretonnian_group
+	}
+    modifier = {
+        knights_defensive = 0.4
+        knights_offensive = 0.4
+        knights_morale = 0.5    
+    }
+	}
+
+squires = {
+    first_type = 3
+    first_amount = 250
+	potential = {
+		culture_group = bretonnian_group
+	}
+    modifier = {
+        light_cavalry_defensive = 0.4
+        light_cavalry_offensive = 0.2
+        light_cavalry_morale = 0.3  
+    }
+	}
+
+#KISLEV RETINUES#
+
+RETTYPE_CUL_KISLEV1 =
+{
+	first_type = 0
+	first_amount = 250
+	second_type = 5
+	second_amount = 250
+	
+	
+	potential = {
+		culture_group = kislevite_group
+	}
+	modifier = {
+		archers_defensive = 0.4
+		light_infantry_defensive = 0.2
+		light_infantry_offensive = 0.2
+	}
+}
+
+RETTYPE_CUL_KISLEV2 =
+{
+	first_type = 1
+	first_amount = 100
+	second_type = 2
+	second_amount = 400
+	
+	
+	potential = {
+		culture_group = kislevite_group
+	}
+	modifier = {
+                heavy_infantry_defensive = 0.2
+                pikemen_offensive = 0.2
+	}
+}
+
+#VAMPIRE RETINUES#
+
+vampireknights = {
+    first_type = 4
+    first_amount = 100
+	potential = {
+	holder_scope = {
+	OR = {
+		trait = vampire_carstein_visible
+		trait = vampire_blood_visible
+	}
+	}
+	}
+    modifier = {
+        knights_defensive = 1.0
+        knights_offensive = 1.0
+        knights_morale = 0.5    
+    }
+}
+
+
+#ORC RETINUES#
+
+blackorcs =
+{
+    first_type = 1
+    first_amount = 250
+	potential = {
+		culture = orc_main
+	}
+    modifier = {
+        heavy_infantry_defensive = 0.4
+        heavy_infantry_offensive = 0.4
+        heavy_infantry_morale = 0.5       
+    }
+}
+
+#DWARF RETINUES#
+
+dwarflongbeards =
+{
+    first_type = 1
+    first_amount = 250
+	potential = {
+		culture_group = dwarf_group
+	}
+    modifier = {
+        heavy_infantry_defensive = 0.4
+        heavy_infantry_offensive = 0.4
+        heavy_infantry_morale = 0.4     
+    }
+}
+
+#DARK ELF RETINUES#
+
+#Naggaroth#
+blackguard =
+{
+    first_type = 1
+    first_amount = 200
+	potential = {
+		culture_group = druchi_group
+	holder_scope = {
+		has_landed_title = k_naggarond
+		}
+	}
+    modifier = {
+        heavy_infantry_defensive = 1.0
+        heavy_infantry_offensive = 1.0
+        heavy_infantry_morale = 0.6     
+    }
+}
+
+#Ghrond#
+ghrondsorceresses =
+{
+    first_type = 5
+    first_amount = 100
+	potential = {
+		culture_group = druchi_group
+	holder_scope = {
+			has_landed_title = k_ghrond
+			trait = druchi_sorceress
+			}
+		}
+    modifier = {
+        archers_offensive = 1.5
+        archers_morale = 0.5     
+    }
+}
+
+#Karond Kar#
+karondkarcorsairs =
+{
+    first_type = 5
+	second_type = 0
+    first_amount = 100
+	second_amount = 100
+	potential = {
+		culture_group = druchi_group
+	holder_scope = {
+		has_landed_title = k_karond_kar
+			}
+		}
+    modifier = {
+        archers_offensive = 0.7 
+		light_infantry_offensive = 0.7
+    }
+}
+
+#Har Ganeth#
+harganethexecutioners =
+{
+    first_type = 1
+    first_amount = 200
+	potential = {
+		culture_group = druchi_group
+	holder_scope = {
+			has_landed_title = k_har_ganeth
+			}
+		}
+    modifier = {
+        heavy_infantry_offensive = 1.5 
+		heavy_infantry_defensive = 0.5
+		heavy_infantry_morale = 0.7
+    }
+}
+
+#Cold One Knights#
+coldoneknights =
+{
+    first_type = 4
+    first_amount = 100
+	potential = {
+		culture_group = druchi_group
+	}
+    modifier = {
+        knights_defensive = 0.3
+        knights_offensive = 1.0    
+    }
+	}
+	
+#Druuchi Spearmen#
+druchispearmen =
+{
+    first_type = 2
+    first_amount = 200
+	potential = {
+		culture_group = druchi_group
+	}
+    modifier = {
+        pikemen_defensive = 0.3
+        pikemen_offensive = 0.3    
+    }
+	}
+	
+#Druuchi Crossbows#
+druchicrossbows =
+{
+    first_type = 5
+    first_amount = 200
+	potential = {
+		culture_group = druchi_group
+	}
+    modifier = {
+        archers_offensive = 0.5
+        archers_morale = 0.6     
+    }
+	}
+	
+#Dark Riders#
+darkriders =
+{
+    first_type = 3
+    first_amount = 100
+	potential = {
+		culture_group = druchi_group
+	}
+    modifier = {
+        light_cavalry_offensive = 0.3
+		light_cavalry_defensive = 0.3
+        light_cavalry_morale = 0.2     
+    }
+	}
+	
+#Witch Elves#
+witchelves =
+{
+    first_type = 0
+    first_amount = 200
+	potential = {
+		culture_group = druchi_group
+	}
+    modifier = {
+        light_infantry_offensive = 1.0
+		light_infantry_morale = 0.7    
+    }
+	}
+
+#HIGH ELF RETINUES#
+
+#Tiranoc#
+tiranocchariots =
+{
+    first_type = 6
+    first_amount = 100
+	potential = {
+		culture_group = asur_group
+		holder_scope = {
+		OR = {
+		has_landed_title = e_ulthuan
+		has_landed_title = k_tiranoc
+		has_landed_title = d_tiranoc
+		has_landed_title = d_anroc
+		}
+		}
+	}
+	special_troops = horse_archers
+    modifier = {
+        horse_archers_defensive = 0.5
+        horse_archers_offensive = 0.7
+        horse_archers_morale = 0.7  
+    }
+}
+
+#Eataine#
+lothernseaguard =
+{
+    first_type = 5
+	second_type = 0
+    first_amount = 100
+	second_amount = 100
+	potential = {
+		culture_group = asur_group
+			holder_scope = {
+		OR = {
+		has_landed_title = e_ulthuan
+		has_landed_title = k_eataine }
+		}
+		}
+    modifier = {
+        archers_offensive = 0.7 
+		light_infantry_offensive = 0.7
+    }
+}
+
+#Caledor#
+dragonprinces =
+{
+    first_type = 4
+    first_amount = 100
+	potential = {
+		culture_group = asur_group
+			holder_scope = {
+		OR = {
+		has_landed_title = e_ulthuan
+		has_landed_title = d_dragonwake
+		has_landed_title = d_caladai
+		has_landed_title = d_caelandriol
+		has_landed_title = k_caledor
+	}
+	}
+	}
+    modifier = {
+        knights_defensive = 1.0
+        knights_offensive = 1.0    
+		knights_morale = 1.0
+	}
+	}
+	
+#Nagarythe#
+shadowwarriors =
+{
+    first_type = 5
+	second_type = 0
+    first_amount = 100
+	second_amount = 100
+	potential = {
+		culture_group = asur_group
+			holder_scope = {
+		OR = {
+		has_landed_title = e_ulthuan
+		has_landed_title = d_anlec
+		has_landed_title = d_shadowmarch
+		has_landed_title = d_isle_of_blight
+		has_landed_title = k_nagarythe
+		has_landed_title = d_the_isles
+		has_landed_title = d_sundered_strand
+		}
+		}
+		}
+    modifier = {
+        archers_offensive = 0.7 
+		light_infantry_defensive = 1.0
+    }
+}
+
+#Saphery#
+swordmasters =
+{
+    first_type = 1
+    first_amount = 200
+	potential = {
+		culture_group = asur_group
+			holder_scope = {
+		OR = {
+		has_landed_title = e_ulthuan
+		has_landed_title = k_saphery
+		has_landed_title = d_thanon
+		has_landed_title = d_finu
+		}
+		}
+		}
+    modifier = {
+        heavy_infantry_offensive = 0.8
+		heavy_infantry_defensive = 0.8
+		heavy_infantry_morale = 0.6
+    }
+}
+
+#Chrace#
+whitelions =
+{
+    first_type = 1
+    first_amount = 200
+	potential = {
+		culture_group = asur_group
+			holder_scope = {
+				OR = {
+				has_landed_title = e_ulthuan
+				has_landed_title = k_chrace
+				has_landed_title = d_chrace
+				has_landed_title = d_blackswale
+				}
+			}
+		}
+    modifier = {
+        heavy_infantry_offensive = 0.8
+		heavy_infantry_defensive = 0.8
+		heavy_infantry_morale = 0.6
+    }
+}
+
+#Ellyrian Reavers#
+reavers =
+{
+    first_type = 3
+    first_amount = 200
+	potential = {
+		culture_group = asur_group
+		holder_scope = { OR = {
+				has_landed_title = e_ulthuan
+				has_landed_title = k_ellyrion
+				has_landed_title = d_elyr
+				has_landed_title = d_highvale
+				has_landed_title = d_reavers_mark
+				has_landed_title = d_arsuai
+				}
+			}
+		}
+    modifier = {
+        light_cavalry_offensive = 0.6
+		light_cavalry_defensive = 0.3
+		light_cavalry_morale = 0.6
+    }
+}
+
+#Elven Spearmen#
+elvenspearmen =
+{
+    first_type = 2
+    first_amount = 200
+	potential = {
+		culture_group = asur_group
+	}
+    modifier = {
+        pikemen_defensive = 0.3
+        pikemen_offensive = 0.3    
+    }
+	}
+	
+#Elven Archers#
+elvenarchers =
+{
+    first_type = 5
+    first_amount = 200
+	potential = {
+		culture_group = asur_group
+	}
+    modifier = {
+        archers_offensive = 0.5
+        archers_morale = 0.6     
+    }
+	}
+	
+silverhelms =
+{
+    first_type = 4
+    first_amount = 100
+	potential = {
+		culture_group = asur_group
+	}
+    modifier = {
+        knights_defensive = 0.6
+        knights_offensive = 0.6  
+		knights_morale = 0.6
+	}
+	}
+	
+##KHEMRI##
+
+#skeletonarchers =
+#{
+ #   first_type = 5
+#    first_amount = 200
+#	potential = {
+#		culture_group = nehekharan_group
+#	}
+ #   modifier = {
+  #      archers_offensive = 0.2
+   #     archers_morale = 1.0    
+    #}
+	#}
+	
+#skeletonspearmen =
+#{
+ #   first_type = 2
+  #  first_amount = 200
+#	potential = {
+#		culture_group = nehekharan_group
+#	}
+ #   modifier = {
+  #     pikemen_morale = 1.0    
+   # }
+	#}
+	
+#skeletoncavalry =
+#{
+ #   first_type = 3
+  #  first_amount = 200
+#	potential = {
+#		culture_group = nehekharan_group
+#		}
+ #   modifier = {
+#		light_cavalry_morale = 1.0
+ #   }
+#}
+
+##CHAOS/NORSCANS##
+
+chaoschampions =
+{
+   first_type = 1
+   first_amount = 150
+   potential = {
+        religion = chaos
+	holder_scope = { NOT = { trait = creature_beastman } }
+		}
+	modifier = {
+	    heavy_infantry_offensive = 0.5
+		heavy_infantry_morale = 0.5
+		}
+}
+
+nurglitechampions =
+{
+   first_type = 1
+   first_amount = 150
+   potential = {
+        religion = nurgle
+		}
+	modifier = {
+	    heavy_infantry_defensive = 0.6
+		heavy_infantry_morale = 0.3
+		}
+}
+
+khornatechampions =
+{
+   first_type = 1
+   first_amount = 150
+   potential = {
+        religion = khorne
+		}
+	modifier = {
+	    heavy_infantry_offensive = 0.7
+		}
+}
+
+slaaneshichampions =
+{
+   first_type = 1
+   first_amount = 150
+   potential = {
+        religion = slaanesh
+		}
+	modifier = {
+	    heavy_infantry_defensive = 0.15
+		heavy_infantry_morale = 0.7
+		}
+}
+
+tzeentchchampions =
+{
+   first_type = 1
+   first_amount = 150
+   potential = {
+        religion = tzeentch
+		}
+	modifier = {
+	    heavy_infantry_defensive = 0.35
+		heavy_infantry_morale = 0.35
+		heavy_infantry_offensive = 0.35
+		}
+}
+
+norscanoathsworn =
+{
+   first_type = 1
+   first_amount = 120
+   second_type = 5
+   second_amount = 80
+   potential = {
+        culture_group = norscan_group
+		}
+	modifier = {
+	    heavy_infantry_offensive = 0.3
+		archers_offensive = 0.3
+		}
+}
+
+hungnoblecavalry =
+{
+   first_type = 6
+   first_amount = 190
+   second_type = 4
+   second_amount = 110
+   
+   special_troops = horse_archers
+   
+   potential = {
+        culture_group = hung_group
+		}
+	modifier = {
+	    horse_archers_offensive = 0.45
+		horse_archers_morale = 0.35
+		knights_offensive = 0.3
+		}
+}
+
+kurganmaraudercavalry =
+{
+   first_type = 3
+   first_amount = 375
+   
+   potential = {
+        culture_group = kurgan_group
+		}
+	modifier = {
+	    light_cavalry_offensive = 0.65
+		}
+}
+
+##AMAZONS##
+
+amazon_spearmaiden = {
+	first_type = 0
+	first_amount = 250
+	
+	potential = {
+		culture_group = amazon_group
+	}
+	
+	modifier = {
+	    light_infantry_defensive = 0.50
+		light_infantry_morale = 0.50
+		light_infantry_offensive = 0.50
+	}
+}
+
+amazon_beast_mistress = {
+	first_type = 4
+	first_amount = 100
+	
+	potential = {
+		culture_group = amazon_group
+	}
+	
+	modifier = {
+		knights_offensive = 0.65
+		knights_defensive = 0.65
+	}
+}
+
+amazon_temple_guards = {
+	first_type = 2
+	first_amount = 100
+	second_type = 5
+	second_amount = 100
+	
+	potential = {
+		culture_group = amazon_group
+	}
+	
+	modifier = {
+	    pikemen_offensive = 0.65
+		archers_offensive = 1.00
+	}
+}
+
+##TILEANS/ESTALIANS/MYKENS##
+
+agema_cavalry = {
+	first_type = 4
+	first_amount = 150
+	second_type = 3
+	second_amount = 50
+	
+	potential = {
+		culture = myken
+	}
+	
+	modifier = {
+	    knights_morale = 0.35
+		knights_defensive = 0.4
+	}
+}
+
+theuros_spears = {
+	first_type = 2
+	first_amount = 175
+	second_type = 5
+	second_amount = 125
+	
+	potential = {
+		culture = myken
+	}
+	
+	modifier = {
+	    pikemen_offensive = 1.00
+		archers_offensive = 0.65
+	}
+}
+
+royalthorax_hoplites = {
+	first_type = 2
+	first_amount = 125
+	second_type = 1
+	second_amount = 50
+	
+	potential = {
+		culture = myken
+	}
+	
+	modifier = {
+	    pikemen_defensive = 1.00
+		heavy_infantry_defensive = 0.75
+		pikemen_morale = 0.6
+	}
+}
+
+caballeros = {
+	first_type = 1
+	first_amount = 150
+	second_type = 4
+	second_amount = 25
+	
+	potential = {
+		culture_group = estalian_group
+	}
+	
+	modifier = {
+	    heavy_infantry_morale = 0.5
+		knights_morale = 0.35
+	}
+}
+
+jinetes = {
+	first_type = 3
+	first_amount = 225
+	second_type = 6
+	second_amount = 75
+	
+	special_troops = horse_archers
+	potential = {
+		culture_group = estalian_group
+	}
+	
+	modifier = {
+	    light_cavalry_offensive = 0.35
+		horse_archers_morale = 0.3
+	}
+}
+
+conquistadors = {
+	first_type = 4
+	first_amount = 150
+	
+	potential = {
+		culture_group = estalian_group
+	}
+	
+	modifier = {
+		knights_morale = 0.5
+	}
+}
+
+pikecondottieri = {
+	first_type = 2
+	first_amount = 175
+	second_type = 1
+	second_amount = 125
+	
+	potential = {
+		culture_group = tilean_group
+		NOT = { culture = myken }
+    }
+	
+	modifier = {
+		pikemen_defensive = 0.4
+	}
+}
+
+crossbowcondottieri = {
+	first_type = 5
+	first_amount = 130
+	second_type = 1
+	second_amount = 70
+	
+	potential = {
+		culture_group = tilean_group
+		NOT = { culture = myken }
+	}
+	
+	modifier = {
+		pikemen_defensive = 0.35
+		archers_defensive = 0.4
+	}
+}
+
+musketeercondottieri = {
+	first_type = 6
+	first_amount = 110
+	
+	special_troops = gunpowder
+	potential = {
+		culture_group = tilean_group
+		NOT = { culture = myken }
+	}
+	
+	modifier = {
+		gunpowder_defensive = 0.55
+	}
+}
+
+myrmidons = {
+	first_type = 1
+	first_amount = 150
+	
+	potential = {
+		religion = myrmidian
+	}
+	
+	modifier = {
+		heavy_infantry_defensive = 0.45
+		heavy_infantry_morale = 0.4
+	}
+}
+
+#Chaos Dwarfs
+
+RET_fireglaives = {
+    first_type = 6
+    first_amount = 100
+	potential = {
+		holder_scope = { trait = creature_chaos_dwarf }
+	}
+	special_troops = gunpowder
+    modifier = {
+		gunpowder_offensive = 0.4
+		gunpowder_morale = 0.2
+    }
+}
+
+RET_earthshaker = {
+
+    first_type = 6
+    first_amount = 50
+	potential = {
+		holder_scope = { trait = creature_chaos_dwarf }
+	}
+	special_troops = artillery
+    modifier = {
+		artillery_offensive = 0.6
+    }
+}
+
+#Chaos Dwarfs
+RET_bull_centaurs = {
+    first_type = 4
+    first_amount = 100
+	potential = {
+		holder_scope = { trait = creature_chaos_dwarf }
+	}
+    modifier = {
+		knights_defensive = 0.4
+		knights_offensive = 0.4
+    }
+}
+
+RET_infernalguard = {
+    first_type = 1
+    first_amount = 100
+	potential = {
+		holder_scope = { trait = creature_chaos_dwarf }
+	}
+    modifier = {
+		heavy_infantry_defensive = 0.4
+		heavy_infantry_morale = 0.2
+    }
+}
+
+#Araby
+RETTYPE_CUL_ARABY = 
+{
+	first_type = 6
+	first_amount = 250
+	
+	special_troops = camel_cavalry
+	
+	potential = {
+		culture_group = arabyan_group
+		NOT = { culture = bayaji }
+		NOT = { culture = wasai }
+	}
+	
+	modifier = {
+		camel_cavalry_offensive = 0.2
+		camel_cavalry_defensive = 0.2
+		camel_cavalry_morale = 0.2
+	}
+}
+
+RETTYPE_CUL_BAJAYI = 
+{
+	first_type = 0
+	first_amount = 400
+	
+	potential = {
+		culture = bayaji
+	}
+	
+	modifier = {
+		light_infantry_offensive = 0.4
+		light_infantry_defensive = 0.4
+	}
+}
+
+RETTYPE_CUL_WASAI = 
+{
+	first_type = 0
+	first_amount = 400
+	
+	second_type = 5
+	second_amount = 100
+	
+	potential = {
+		culture = wasai
+	}
+	
+	modifier = {
+		light_infantry_offensive = 0.6
+		light_infantry_defensive = 0.1
+		light_infantry_morale = 0.1
+	}
+}
+
+#Strigany
+RETTYPE_CUL_STRIGOS = 
+{
+	first_type = 4
+	first_amount = 100
+	
+	second_type = 3
+	second_amount = 150
+	
+	potential = {
+		culture_group = sanguine_group
+	}
+	
+	modifier = {
+		knights_defensive = 0.1
+		knights_morale = 0.1
+		light_cavalry_defensive = 0.2
+		light_cavalry_offensive = 0.2
+	}
+}
+
+#Wood Elf
+RETTYPE_CUL_ASRAI = 
+{
+	first_type = 5
+	first_amount = 250
+	
+	potential = {
+		culture_group = asrai_group
+	}
+	
+	modifier = {
+		archers_offensive = 0.2
+		archers_defensive = 0.1
+	}
+}
+HORDE_RETTYPE_CAV1 = 
+{
+	first_type = 3
+	first_amount = 250
+	
+	hire_cost = 10
+	costs_prestige = yes
+	
+	maintenance_multiplier = 0.27
+	
+	potential = {
+		is_nomadic = yes
+	}
+}
+
+HORDE_RETTYPE_CAV2 = 
+{
+	first_type = 3
+	first_amount = 225
+	second_type = 6
+	second_amount = 25
+
+	special_troops = horse_archers
+	
+	hire_cost = 25
+	costs_prestige = yes
+	
+	maintenance_multiplier = 0.5263
+	
+	potential = {
+		is_nomadic = yes
+	}
+}
+
+HORDE_RETTYPE_CAV3 =
+{
+	first_type = 3
+	first_amount = 200
+	second_type = 6
+	second_amount = 50
+
+	special_troops = horse_archers
+	
+	hire_cost = 25
+	
+	maintenance_multiplier = 0.125
+	
+	potential = {
+		is_nomadic = yes
+	}
+}
+
+HORDE_RETTYPE_CAV4 =
+{
+	first_type = 3
+	first_amount = 150
+	second_type = 6
+	second_amount = 100
+
+	special_troops = horse_archers
+	
+	hire_cost = 50
+	
+	maintenance_multiplier = 0.238
+	
+	potential = {
+		is_nomadic = yes
+	}
+}
+
+HORDE_RETTYPE_CAV5 =
+{
+	first_type = 3
+	first_amount = 200
+	second_type = 4
+	second_amount = 50
+	
+	hire_cost = 50
+	
+	maintenance_multiplier = 0.227
+	
+	potential = {
+		is_nomadic = yes
+	}
+}
+
+HORDE_RETTYPE_CAV6 =
+{
+	first_type = 3
+	first_amount = 100
+	second_type = 4
+	second_amount = 150
+	
+	hire_cost = 75
+	
+	maintenance_multiplier = 0.25
+	
+	potential = {
+		is_nomadic = yes
+	}
+}
+
+HORDE_RETTYPE_CAV7 =
+{
+	first_type = 6
+	first_amount = 250
+	
+	special_troops = horse_archers
+	
+	hire_cost = 75
+	
+	maintenance_multiplier = 0.3
+	
+	potential = {
+		is_nomadic = yes
+	}
+}
+
+HORDE_RETTYPE_INDIAN = 
+{
+	first_type = 3
+	first_amount = 200
+	second_type = 6
+	second_amount = 50
+	
+	special_troops = war_elephants
+
+	hire_cost = 100
+	
+	maintenance_multiplier = 0.625
+	
+	potential = {
+		is_nomadic = yes
+		capital_scope = {
+			region = world_india
+		}
+	}
+}
+
+HORDE_RETTYPE_DESERT = {
+	first_type = 3
+	first_amount = 100
+	second_type = 6
+	second_amount = 150
+	
+	special_troops = camel_cavalry
+	
+	hire_cost = 50
+	
+	maintenance_multiplier = 0.416
+	
+	potential = {
+		is_nomadic = yes
+		capital_scope = {
+			terrain = desert
+		}
+	}
+}
+
+HORDE_RETTYPE_EUROPE = {
+	first_type = 4
+	first_amount = 250
+	
+	hire_cost = 100
+	
+	maintenance_multiplier = 0.37
+	
+	potential = {
+		is_nomadic = yes
+		capital_scope = {
+			OR = {
+				region = world_europe_west
+				region = world_europe_south
+			}
+		}
+	}
+}

@@ -1,0 +1,17 @@
+# c_arique
+
+# County Title
+title = c_arique
+
+# Settlements
+max_settlements = 3
+
+b_arique = castle
+#b_elyrica = city
+#b_anduth = temple
+
+# Misc
+culture = eatainian
+religion = cadai
+
+#History

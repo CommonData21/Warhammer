@@ -1,0 +1,16 @@
+# c_calamis
+
+# County Title
+title = c_calamis
+
+# Settlements
+max_settlements = 2
+
+b_calamis = castle
+b_othbrauko = city
+
+# Misc
+culture = clari
+religion = cytharai
+
+#History

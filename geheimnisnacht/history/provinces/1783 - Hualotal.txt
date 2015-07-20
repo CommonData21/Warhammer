@@ -1,0 +1,17 @@
+# c_hualotal
+
+# County Title
+title = c_hualotal
+
+# Settlements
+max_settlements = 3
+
+b_hualotal = tribal
+#b_co_lotl = city
+#b_cuauhcamina = temple
+
+# Misc
+culture = lizardman
+religion = old_ones
+terrain = jungle
+#History

@@ -1,0 +1,16 @@
+# c_canchu
+
+# County Title
+title = c_canchu
+
+# Settlements
+max_settlements = 2
+
+b_canchu = tribal
+#b_xointtlah = city
+
+# Misc
+culture = lizardman
+religion = old_ones
+terrain = jungle
+#History

@@ -1,0 +1,4229 @@
+
+######Mercenaries
+
+## Bodyguards and Private Armies
+
+d_estalian_inquisition = {
+	color={ 230 230 230 }
+	color2={ 255 255 255 }
+	
+	capital = 554 #Magritta
+	
+	allow = {
+		has_landed_title = k_cult_of_myrmidia
+		culture_group = estalian_group
+		religion_group = old_world_group
+	}
+	
+	religion = myrmidian
+	culture = reman
+	
+	title = "GRAND_INQUISITOR"
+	title_female = "GRAND_INQUISITOR"
+	foa = "GRAND_INQUISITOR_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+	
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_estalian_inquisition_modifier
+}
+
+d_tilean_inquisition = {
+	color={ 230 230 230 }
+	color2={ 255 255 255 }
+	
+	capital = 600 #Remas
+	
+	allow = {
+		has_landed_title = k_cult_of_myrmidia
+		culture_group = tilean_group
+		religion_group = old_world_group
+	}
+	
+	religion = myrmidian
+	culture = reman
+	
+	title = "GRAND_INQUISITOR"
+	title_female = "GRAND_INQUISITOR"
+	foa = "GRAND_INQUISITOR_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+	
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_tilean_inquisition_modifier
+}
+
+
+d_reiksguard = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 299 #Altdorf
+
+	allow = {
+		has_landed_title = e_the_empire
+		religion_group = old_world_group
+	}
+	
+	religion = sigmarite
+	culture = reiklander
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_reiksguard_modifier
+}
+
+
+d_mercy_killers = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 810 #Couronne
+	
+	allow = {
+		has_landed_title = k_cult_of_shallya
+		religion = shallyan
+	}
+	religion = shallyan
+	culture = breton
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_mercy_killers_modifier
+}
+
+###Imperial
+
+d_ragged_company = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 330 #Torpin
+
+	allow = {
+		OR = {
+			religion_group = old_world_group
+		}
+		NOT = {
+			religion = grail
+		}
+	}
+	
+	religion = taalite
+	culture = talabeclander
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_ragged_company_modifier
+}
+
+d_scarlet_company = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 343 #Wurtbad
+
+	allow = {
+		OR = {
+			religion_group = old_world_group
+		}
+		NOT = {
+			religion = grail
+		}
+	}
+	
+	religion = sigmarite
+	culture = stirlander
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_scarlet_company_modifier
+}
+
+d_hammershields_of_black_tower = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 324 # c_talabheim
+
+	allow = {
+		OR = {
+			religion_group = old_world_group
+		}
+		NOT = {
+			religion = grail
+		}
+	}
+	
+	religion = taalite
+	culture = talabeclander
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_hammershields_of_black_tower_modifier
+}
+
+d_schwarzspears = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 309 #Nuln
+
+	allow = {
+		OR = {
+			religion_group = old_world_group
+		}
+		NOT = {
+			religion = grail
+		}
+	}
+	
+	religion = sigmarite
+	culture = wissenlander
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_schwarzspears_modifier
+}
+
+d_swords_of_nuln = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 309 #Nuln
+
+	allow = {
+		OR = {
+			religion_group = old_world_group
+		}
+		NOT = {
+			religion = grail
+		}
+	}
+	
+	religion = sigmarite
+	culture = wissenlander
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_swords_of_nuln_modifier
+}
+
+d_sea_devils = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 236 #Manaansufer
+
+	allow = {
+		OR = {
+			religion_group = old_world_group
+		}
+		NOT = {
+			religion = grail
+		}
+	}
+	
+	religion = sigmarite
+	culture = nordlander
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_sea_devils_modifier
+}
+
+d_guard_of_the_golden_cross = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 270 #Carroburg
+
+	allow = {
+		OR = {
+			religion_group = old_world_group
+		}
+		NOT = {
+			religion = grail
+		}
+	}
+	
+	religion = sigmarite
+	culture = middenlander
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_guard_of_the_golden_cross_modifier
+}
+
+d_regiment_of_foot = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 299 #Altdorf
+
+	allow = {
+		OR = {
+			religion_group = old_world_group
+		}
+		NOT = {
+			religion = grail
+		}
+	}
+	
+	religion = sigmarite
+	culture = reiklander
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_regiment_of_foot_modifier
+}
+
+d_altdorf_blackbolts = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 299 #Altdorf
+
+	allow = {
+		OR = {
+			religion_group = old_world_group
+		}
+		NOT = {
+			religion = grail
+		}
+	}
+	
+	religion = sigmarite
+	culture = reiklander
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_altdorf_blackbolts_modifier
+}
+
+d_carroburg_greatswords = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 270 #Carroburg
+
+	allow = {
+		OR = {
+			religion_group = old_world_group
+		}
+		NOT = {
+			religion = grail
+		}
+	}
+	
+	religion = sigmarite
+	culture = reiklander
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_carroburg_greatswords_modifier
+}
+
+d_swords_of_ulric = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 274 #Middenheim
+	
+	allow = {
+		OR = {
+			religion_group = old_world_group
+		}
+		NOT = {
+			religion = grail
+		}
+	}
+	
+	religion = ulrican
+	culture = middenlander
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_swords_of_ulric_modifier
+}
+
+d_star_of_victory = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 270 #Carroburg
+
+	allow = {
+		OR = {
+			religion_group = old_world_group
+		}
+		NOT = {
+			religion = grail
+		}
+	}
+	
+	religion = sigmarite
+	culture = reiklander
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_star_of_victory_modifier
+}
+
+d_black_fire_defenders = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 357 #Averheim
+
+	allow = {
+		OR = {
+			religion_group = old_world_group
+		}
+		NOT = {
+			religion = grail
+		}
+	}
+	
+	religion = sigmarite
+	culture = averlander
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_black_fire_defenders_modifier
+}
+
+d_deathjacks = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 343 #Wurtbad
+
+	allow = {
+		OR = {
+			religion_group = old_world_group
+		}
+		NOT = {
+			religion = grail
+		}
+	}
+	
+	religion = sigmarite
+	culture = stirlander
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_deathjacks_modifier
+}
+
+d_grundels_defenders = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 309 #Nuln
+
+	allow = {
+		OR = {
+			religion_group = old_world_group
+		}
+		NOT = {
+			religion = grail
+		}
+	}
+	
+	religion = sigmarite
+	culture = wissenlander
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_grundels_defenders_modifier
+}
+
+d_riders_of_the_mark = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 366 #Bechafen
+
+	allow = {
+		OR = {
+			religion_group = old_world_group
+		}
+		NOT = {
+			religion = grail
+		}
+	}
+	
+	religion = taalite
+	culture = ostermarker
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_riders_of_the_mark_modifier
+}
+
+d_nordsee_marines = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 240 #Norden
+
+	allow = {
+		OR = {
+			religion_group = old_world_group
+		}
+		NOT = {
+			religion = grail
+		}
+	}
+	
+	religion = sigmarite
+	culture = nordlander
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_nordsee_marines_modifier
+}
+
+d_fireloques_of_ferlangen = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 247 #Ferlangen
+
+	allow = {
+		OR = {
+			religion_group = old_world_group
+		}
+		NOT = {
+			religion = grail
+		}
+	}
+	
+	religion = ulrican
+	culture = ostlander
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_fireloques_of_ferlangen_modifier
+}
+
+
+d_drakwald_patrol = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 270 #Carroburg
+
+	allow = {
+		OR = {
+			religion_group = old_world_group
+		}
+		NOT = {
+			religion = grail
+		}
+	}
+	religion = sigmarite
+	culture = drakwalder
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_drakwald_patrol_modifier
+}
+
+d_stir_river_patrol = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 343 #Wurtbad
+
+	allow = {
+		OR = {
+			religion_group = old_world_group
+		}
+		NOT = {
+			religion = grail
+		}
+	}
+	religion = sigmarite
+	culture = stirlander
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_stir_river_patrol_modifier
+}
+
+d_helhuntens_redeemers = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 343 #Wurtbad
+
+	allow = {
+		OR = {
+			religion_group = old_world_group
+		}
+		NOT = {
+			religion = grail
+		}
+	}
+	
+	religion = sigmarite
+	culture = stirlander
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_helhuntens_redeemers_modifier
+}
+
+d_murderers_out_of_marienburg = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 222 #Marienburg
+
+	allow = {
+		OR = {
+			religion_group = old_world_group
+		}
+		NOT = {
+			religion = grail
+		}
+	}
+	religion = sigmarite
+	culture = westerlander
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_murderers_out_of_marienburg_modifier
+}
+
+d_deaths_heads = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 366 #Bechafen
+
+	allow = {
+		OR = {
+			religion_group = old_world_group
+		}
+		NOT = {
+			religion = grail
+		}
+	}
+	
+	religion = ulrican
+	culture = ostermarker
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_deaths_heads_modifier
+}
+
+
+d_company_of_the_red_claws = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 222 #Marienburg
+
+	allow = {
+		OR = {
+			religion_group = old_world_group
+		}
+		NOT = {
+			religion = grail
+		}
+	}
+	
+	religion = myrmidian
+	culture = reman
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_company_of_the_red_claws_modifier
+}
+
+
+d_fighting_cocks = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 350 #Eicheschatten
+
+	allow = {
+		OR = {
+			religion_group = old_world_group
+		}
+		NOT = {
+			religion = grail
+		}
+	}
+	
+	religion = halfling_gods
+	culture = mootlander
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_fighting_cocks_modifier
+}
+
+
+d_red_redemption = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+
+	capital = 299 #Altdorf
+	
+	allow = {
+		religion = sigmarite
+	}
+	
+	religion = sigmarite
+	culture = reiklander
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_red_redemption_modifier
+}
+
+
+
+
+
+###Tilean
+
+d_alcatani_fellowship = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 583 #Ravola
+	
+	allow = {
+		OR = {
+			religion_group = old_world_group
+		}
+		NOT = {
+			religion = grail
+		}
+	}
+	religion = myrmidian
+	culture = umbrian
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_alcatani_fellowship_modifier
+}
+
+d_brazangas_besiegers = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 592 #Urbimo
+	
+	allow = {
+		OR = {
+			religion_group = old_world_group
+		}
+		NOT = {
+			religion = grail
+		}
+	}
+	religion = myrmidian
+	culture = umbrian
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_brazangas_besiegers_modifier
+}
+
+d_riccos_republican_guard = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 600 #Remas
+
+	allow = {
+		OR = {
+			religion_group = old_world_group
+		}
+		NOT = {
+			religion = grail
+		}
+	}
+	religion = myrmidian
+	culture = reman
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_riccos_republican_guard_modifier
+}
+
+d_marksmen_of_miragliano = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 584 #Miragliano
+	
+	allow = {
+		OR = {
+			religion_group = old_world_group
+		}
+		NOT = {
+			religion = grail
+		}
+	}
+	religion = myrmidian
+	culture = miraglian
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_marksmen_of_miragliano_modifier
+}
+
+d_volands_venators = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 600 #Remas
+	
+	allow = {
+		OR = {
+			religion_group = old_world_group
+		}
+		NOT = {
+			religion = grail
+		}
+	}
+	religion = myrmidian
+	culture = umbrian
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_volands_venators_modifier
+}
+
+d_bronzinos_galloper_guns = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 584 #Miragliano
+	
+	allow = {
+		OR = {
+			religion_group = old_world_group
+		}
+		NOT = {
+			religion = grail
+		}
+	}
+	religion = myrmidian
+	culture = miraglian
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_bronzinos_galloper_guns_modifier
+}
+
+d_leopolds_leopard_company = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 614 #Luccini
+	
+	allow = {
+		OR = {
+			religion_group = old_world_group
+		}
+		NOT = {
+			religion = grail
+		}
+	}
+	religion = myrmidian
+	culture = lucian
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_leopolds_leopard_company_modifier
+}
+
+d_birdmen_of_catrazza = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 596 #Catrazza
+	
+	allow = {
+		OR = {
+			religion_group = old_world_group
+		}
+		NOT = {
+			religion = grail
+		}
+	}
+	religion = myrmidian
+	culture = reman
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_birdmen_of_catrazza_modifier
+}
+
+d_red_company = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 600 #Remas
+	
+	allow = {
+		OR = {
+			religion_group = old_world_group
+		}
+		NOT = {
+			religion = grail
+		}
+	}
+	religion = myrmidian
+	culture = reman
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_red_company_modifier
+}
+
+d_black_gulf_guard_company = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 657 #Myrmidens
+	
+	allow = {
+		OR = {
+			religion_group = old_world_group
+		}
+		NOT = {
+			religion = grail
+		}
+	}
+	religion = myrmidian
+	culture = myken
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_black_gulf_guard_company_modifier
+}
+
+d_badlands_company = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 703 #Levrellian
+	
+	allow = {
+		OR = {
+			religion_group = old_world_group
+		}
+		NOT = {
+			religion = grail
+		}
+	}
+	religion = myrmidian
+	culture = oltremari
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_badlands_company_modifier
+}
+
+d_circle_of_the_fair_maiden = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 754 #Mykal
+	
+	allow = {
+		OR = {
+			religion_group = old_world_group
+		}
+		NOT = {
+			religion = grail
+		}
+	}
+	religion = myrmidian
+	culture = oltremari
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_circle_of_the_fair_maiden_modifier
+}
+### Estalian
+
+d_pirazzos_lost_legion = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 553 #Magritta
+	
+	allow = {
+		OR = {
+			religion_group = old_world_group
+		}
+		NOT = {
+			religion = grail
+		}
+	}
+	religion = myrmidian
+	culture = astur
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_pirazzos_lost_legion_modifier
+}
+
+d_barboza_lancers = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 515 #Barboza
+	
+	allow = {
+		OR = {
+			religion_group = old_world_group
+		}
+		NOT = {
+			religion = grail
+		}
+	}
+	religion = myrmidian
+	culture = tigarrese
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_barboza_lancers_modifier
+}
+
+d_calafina_company = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 919 #Santa Clair
+	
+	allow = {
+		OR = {
+			religion_group = old_world_group
+		}
+		NOT = {
+			religion = grail
+		}
+	}
+	religion = myrmidian
+	culture = astur
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_calafina_company_modifier
+}
+
+d_company_of_the_red_hat = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 574 #Tobaro
+	
+	allow = {
+		OR = {
+			religion_group = old_world_group
+		}
+		NOT = {
+			religion = grail
+		}
+	}
+	religion = myrmidian
+	culture = astur
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_company_of_the_red_hat_modifier
+}
+
+d_carcassonne_cavaliers = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 894 #Carcassonne
+	
+	allow = {
+		OR = {
+			religion_group = old_world_group
+		}
+		NOT = {
+			religion = grail
+		}
+	}
+	religion = myrmidian
+	culture = carcassian
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_carcassonne_cavaliers_modifier
+}
+
+d_blades_of_valour = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 520 #Bilbali
+	
+	allow = {
+		OR = {
+			religion_group = old_world_group
+		}
+		NOT = {
+			religion = grail
+		}
+	}
+	religion = myrmidian
+	culture = tigarrese
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_blades_of_valour_modifier
+}
+
+d_santa_clair_sellswords = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 919 #Santa Clair
+	
+	allow = {
+		OR = {
+			religion_group = old_world_group
+		}
+		NOT = {
+			religion = grail
+		}
+	}
+	religion = myrmidian
+	culture = astur
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_santa_clair_sellswords_modifier
+}
+
+d_finterra_tercios = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 542 #Finterra
+	
+	allow = {
+		OR = {
+			religion_group = old_world_group
+		}
+		NOT = {
+			religion = grail
+		}
+	}
+	religion = myrmidian
+	culture = avilian
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_finterra_tercios_modifier
+}
+
+###Shallyan
+
+d_peoples_band = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 554 #Magritta
+	
+	allow = {
+		religion = shallyan
+	}
+	religion = shallyan
+	culture = astur
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_peoples_band_modifier
+}
+
+d_free_company = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 554 #Magritta
+	
+	allow = {
+		has_landed_title = e_communards
+		religion = shallyan
+	}
+	religion = shallyan
+	culture = astur
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_free_company_modifier
+}
+
+d_morrs_heralds = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 343 #Wurtbad
+	
+	allow = {
+		religion = shallyan
+	}
+	religion = shallyan
+	culture = stirlander
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_morrs_heralds_modifier
+}
+
+d_bretonnian_band = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 844 #Bastonne
+	
+	allow = {
+		religion = shallyan
+	}
+	religion = shallyan
+	culture = breton
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_bretonnian_band_modifier
+}
+###Norscan
+
+d_vanaheim_marauders = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 14 #Vanaheim
+
+	allow = {
+		OR = {
+			religion_group = old_world_group
+			religion_group = old_gods_group
+			religion_group = ormazd_gods_group
+			religion_group = halfling_gods_group
+		}
+		NOT = {
+			religion = grail
+		}
+	}
+	religion = norscan_gods
+	culture = bjornling
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_vanaheim_marauders_modifier
+}
+
+d_bearmen_of_ursulo = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 130 #Urslo
+
+	allow = {
+		OR = {
+			religion_group = old_world_group
+			religion_group = old_gods_group
+			religion_group = ormazd_gods_group
+			religion_group = halfling_gods_group
+		}
+		NOT = {
+			religion = grail
+		}
+	}
+	religion = norscan_gods
+	culture = baersonling
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_bearmen_of_ursulo_modifier
+}
+
+d_midgard_shieldmaidens = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 28 #Fyodravik
+
+	allow = {
+		OR = {
+			religion_group = old_world_group
+			religion_group = old_gods_group
+			religion_group = ormazd_gods_group
+			religion_group = halfling_gods_group
+		}
+		NOT = {
+			religion = grail
+		}
+	}
+	religion = norscan_gods
+	culture = skaeling
+	
+	title = "CAPTAIN"
+	title_female = "SHIELDSISTER"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_midgard_shieldmaidens_modifier
+}
+
+d_shieldmaidens_of_the_storm = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 66 #Jotunir
+
+	allow = {
+		OR = {
+			religion_group = old_world_group
+			religion_group = old_gods_group
+			religion_group = ormazd_gods_group
+			religion_group = halfling_gods_group
+		}
+		NOT = {
+			religion = grail
+		}
+	}
+	religion = norscan_gods
+	culture = sarl
+	
+	title = "CAPTAIN"
+	title_female = "SHIELDSISTER"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_shieldmaidens_of_the_storm_modifier
+}
+
+d_nordlig_reavers = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 66 #Jotunir
+
+	allow = {
+		OR = {
+			religion_group = old_world_group
+			religion_group = old_gods_group
+			religion_group = ormazd_gods_group
+			religion_group = halfling_gods_group
+		}
+		NOT = {
+			religion = grail
+		}
+	}
+	religion = norscan_gods
+	culture = varg
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_nordlig_reavers_modifier
+}
+
+d_sons_of_fimbulvintr = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 81 #Fimbulvintr
+
+	allow = {
+		OR = {
+			religion_group = old_world_group
+			religion_group = old_gods_group
+			religion_group = ormazd_gods_group
+			religion_group = halfling_gods_group
+		}
+		NOT = {
+			religion = grail
+		}
+	}
+	religion = norscan_gods
+	culture = aesling
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_sons_of_fimbulvintr_modifier
+}
+
+d_norscveg_band = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 52 #Norscveg
+
+	allow = {
+		OR = {
+			religion_group = old_world_group
+			religion_group = old_gods_group
+			religion_group = ormazd_gods_group
+			religion_group = halfling_gods_group
+		}
+		NOT = {
+			religion = grail
+		}
+	}
+	religion = norscan_gods
+	culture = varg
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_norscveg_band_modifier
+}
+
+d_longhall_guardians = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 37 #Mount Vanir
+
+	allow = {
+		OR = {
+			religion_group = old_world_group
+			religion_group = old_gods_group
+			religion_group = ormazd_gods_group
+			religion_group = halfling_gods_group
+		}
+		NOT = {
+			religion = grail
+		}
+	}
+	religion = norscan_gods
+	culture = skaeling
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_longhall_guardians_modifier
+}
+
+d_weregild_huskarls = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 1167 #Viksjoergsberg
+
+	allow = {
+		OR = {
+			religion_group = old_world_group
+			religion_group = old_gods_group
+			religion_group = ormazd_gods_group
+			religion_group = halfling_gods_group
+		}
+		NOT = {
+			religion = grail
+		}
+	}
+	religion = norscan_gods
+	culture = skaeling
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_weregild_huskarls_modifier
+}
+
+d_sons_of_syrul = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 64 #Syrul's Pinnacle
+
+	allow = {
+		OR = {
+			religion_group = old_world_group
+			religion_group = old_gods_group
+			religion_group = ormazd_gods_group
+			religion_group = halfling_gods_group
+		}
+		NOT = {
+			religion = grail
+		}
+	}
+	religion = norscan_gods
+	culture = skaeling
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_sons_of_syrul_modifier
+}
+
+d_wyrmscale_band = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 1200 #Kuldevind
+
+	allow = {
+		OR = {
+			religion_group = old_world_group
+			religion_group = old_gods_group
+			religion_group = ormazd_gods_group
+			religion_group = halfling_gods_group
+		}
+		NOT = {
+			religion = grail
+		}
+	}
+	religion = norscan_gods
+	culture = skaeling
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_wyrmscale_band_modifier
+}
+
+d_gianthome_wildmen = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 148 #Galafell
+
+	allow = {
+		OR = {
+			religion_group = old_world_group
+			religion_group = old_gods_group
+			religion_group = ormazd_gods_group
+			religion_group = halfling_gods_group
+		}
+		NOT = {
+			religion = grail
+		}
+	}
+	religion = norscan_gods
+	culture = skaeling
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_gianthome_wildmen_modifier
+}
+### Kislevite
+
+d_gryphon_legion = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 202 #Kislev
+	
+	allow = {
+		religion_group = old_world_group
+	}
+	
+	religion = ursun
+	culture = gospodar
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_gryphon_legion_modifier
+}
+
+d_winged_company = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 202 #Kislev
+	
+	allow = {
+		religion = ursun
+	}
+	
+	religion = ursun
+	culture = gospodar
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_winged_company_modifier
+}
+
+d_lynsk_defenders = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 182 #Praag
+	
+	allow = {
+		religion = ursun
+	}
+	
+	religion = ursun
+	culture = ungol
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_lynsk_defenders_modifier
+}
+
+d_dobryrion_company = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 202 #Kislev
+	
+	allow = {
+		religion = ursun
+	}
+	
+	religion = ursun
+	culture = ungol
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_dobryrion_company_modifier
+}
+
+d_north_guard = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 160 #Zenilev
+	
+	allow = {
+		religion = ursun
+	}
+	
+	religion = ursun
+	culture = gospodar
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_north_guard_modifier
+}
+
+d_dukhyls_militia = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 194 #Dukhyls Spirits
+	
+	allow = {
+		religion = ursun
+	}
+	
+	religion = ursun
+	culture = gospodar
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_dukhyls_militia_modifier
+}
+
+d_ropsmann_raiders = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 175 #Erengrad
+	
+	allow = {
+		religion = ursun
+	}
+	
+	religion = ursun
+	culture = ropsmann
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_ropsmann_raiders_modifier
+}
+###Vampire
+
+d_night_witches = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 386 #Drakenhof
+	
+	allow = {
+		religion_group = necromantic_group
+	}
+	
+	religion = vampiric
+	culture = sylvanian
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_night_witches_modifier
+}
+
+d_blood_pact = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 382 #Waldenhof
+	
+	allow = {
+		religion_group = necromantic_group
+	}
+	
+	religion = vampiric
+	culture = sylvanian
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_blood_pact_modifier
+}
+
+d_dragonblooded = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 906 #Blood Keep
+	
+	allow = {
+		religion_group = necromantic_group
+	}
+	
+	religion = vampiric
+	culture = bourgon
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_dragonbloods_modifier
+}
+
+c_blood_dragon_knights = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 906 #Blood Keep
+	
+	allow = {
+		AND = {
+		trait = vampire_blood_visible
+		religion_group = necromantic_group
+		}
+	}
+	
+	religion = vampiric
+	culture = bourgon
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = c_blood_dragon_knights_modifier
+}
+d_mousillonian_unliving = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 826 #Mousillon
+	
+	allow = {
+		religion_group = necromantic_group
+	}
+	
+	religion = vampiric
+	culture = mousillonian
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_mousillonian_unliving_modifier
+}
+
+d_sylvanian_unliving = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 376 #Konigstein
+	
+	allow = {
+		religion_group = necromantic_group
+	}
+	
+	religion = vampiric
+	culture = sylvanian
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_sylvanian_unliving_modifier
+}
+
+d_bone_breakers = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 584 #Miragliano
+	
+	allow = {
+		religion_group = necromantic_group
+	}
+	
+	religion = vampiric
+	culture = miraglian
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_bone_breakers_modifier
+}
+
+d_dark_accord = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 299 #Altdorf
+	
+	allow = {
+		religion_group = necromantic_group
+	}
+	
+	religion = vampiric
+	culture = sylvanian
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_dark_accord_modifier
+}
+
+d_nightmare_legion = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 299 #Altdorf
+	
+	allow = {
+		religion_group = necromantic_group
+	}
+	
+	religion = vampiric
+	culture = sylvanian
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_nightmare_legion_modifier
+}
+###Arabyan
+
+
+d_sorcerers_league = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 1055 #Hadmaut Islands
+	
+	allow = {
+		religion = ormazd
+	}
+	
+	religion = ormazd
+	culture = cophic
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_sorcerers_league_modifier
+}
+
+d_desert_dogs = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 1028 #Songhai
+	
+	allow = {
+		religion = ormazd
+	}
+	
+	religion = ormazd
+	culture = cophic
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_desert_dogs_modifier
+}
+
+d_death_commandos = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 1028 #Songhai
+	
+	allow = {
+		religion = ormazd
+	}
+	
+	religion = ormazd
+	culture = cophic
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_desert_dogs_modifier
+}
+
+d_red_sands_riders = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 1046 #Tambukta
+	
+	allow = {
+		religion = ormazd
+	}
+	
+	religion = ormazd
+	culture = tevari
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_red_sands_riders_modifier
+}
+
+d_tevari_band = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 1046 #Tambukta
+	
+	allow = {
+		religion = ormazd
+	}
+	
+	religion = ormazd
+	culture = tevari
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_tevari_band_modifier
+}
+
+d_araby_adventurers = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 1052 #Istrabul
+	
+	allow = {
+		religion = ormazd
+	}
+	
+	religion = myrmidian
+	culture = sartosan_tilean
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_araby_adventurers_modifier
+}
+
+d_southern_company = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 1038 #Al Haikk
+	
+	allow = {
+		religion = ormazd
+	}
+	
+	religion = ormazd
+	culture = sartosan_arabyan
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_southern_company_modifier
+}
+
+d_venture_company = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 1019 #El Kalabad
+	
+	allow = {
+		religion = ormazd
+	}
+	
+	religion = ormazd
+	culture = medean
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_venture_company_modifier
+}
+
+d_swords_of_songhai = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 1028 #Songhai
+	
+	allow = {
+		religion = ormazd
+	}
+	
+	religion = ormazd
+	culture = cophic
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_swords_of_songhai_modifier
+}
+
+### Chaos
+
+d_swords_of_chaos = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+
+	capital = 405 #Zanbaijin
+	
+	allow = {
+		religion = chaos
+	}
+	
+	religion = chaos
+	culture = kul
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_swords_of_chaos_modifier
+}
+
+d_headtakers = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+
+	capital = 405 #Zanbaijin
+	
+	allow = {
+		religion = chaos
+	}
+	
+	religion = chaos
+	culture = kul
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_headtakers_modifier
+}
+
+d_storm_raiders = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+
+	capital = 405 #Zanbaijin
+	
+	allow = {
+		religion = chaos
+	}
+	
+	religion = chaos
+	culture = kul
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_storm_raiders_modifier
+}
+
+d_beastbloods = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+
+	capital = 405 #Zanbaijin
+	
+	allow = {
+		religion = chaos
+	}
+	
+	religion = chaos
+	culture = kul
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_beastbloods_modifier
+}
+
+d_eight_pointed_star = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+
+	capital = 299 #Altdorf
+	
+	allow = {
+		religion = chaos
+	}
+	
+	religion = chaos
+	culture = reiklander
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_eight_pointed_star_modifier
+}
+
+d_lost_and_damned = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+
+	capital = 299 #Altdorf
+	
+	allow = {
+		religion_group = chaos_gods_group
+	}
+	
+	religion = chaos
+	culture = reiklander
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_lost_and_damned_modifier
+}
+
+
+d_banner_of_mayhem = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+
+	capital =  1683 #Kazarajin
+	
+	allow = {
+	religion_group = chaos_gods_group
+	}
+	
+	religion = chaos
+	culture = aghol
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_banner_of_mayhem_modifier
+}
+
+d_disciples_of_chaos = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+
+	capital =  1683 #Kazarajin
+	
+	allow = {
+	religion_group = chaos_gods_group
+	}
+	
+	religion = chaos
+	culture = aghol
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_disciples_of_chaos_modifier
+}
+
+d_subjugators = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+
+	capital =  1672 #Taiko
+	
+	allow = {
+
+	religion_group = chaos_gods_group
+
+	}
+	
+	religion = chaos
+	culture = mung
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_subjugators_modifier
+}
+
+d_tainted_band = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+
+	capital =  479 #Unzkadrin
+	
+	allow = {
+	religion_group = chaos_gods_group
+	}
+	
+	religion = chaos
+	culture = dolgan
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_tainted_band_modifier
+}
+
+d_wretched = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+
+	capital =  1679 #Turang
+	
+	allow = {
+	religion_group = chaos_gods_group
+	}
+	
+	religion = chaos
+	culture = aghol
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_wretched_modifier
+}
+
+d_damned_souls = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+
+	capital =  1223 #Mesch
+	
+	allow = {
+	religion_group = chaos_gods_group
+	}
+ 
+	religion = chaos
+	culture = gharhar
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_damned_souls_modifier
+}
+
+d_black_uhlans = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+
+	capital =  1244 #Azkaroth
+	
+	allow = {
+	religion_group = chaos_gods_group
+	}
+ 
+	religion = chaos
+	culture = dolgan
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_black_uhlans_modifier
+}
+
+#Tzeentch
+
+d_purple_hand = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+
+	capital = 309 #Nuln
+	
+	allow = {
+		religion = tzeentch
+	}
+	
+	religion = tzeentch
+	culture = wissenlander
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_purple_hand_modifier
+}
+
+d_desolators = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+
+	capital =  1660 #Obo
+	
+	allow = {
+	OR = {
+	religion = chaos
+	religion = tzeentch
+	}
+	}
+	
+	religion = tzeentch
+	culture = mung
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_desolators_modifier
+}
+
+d_duskstriders = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+
+	capital =  1660 #Obo
+	
+	allow = {
+	OR = {
+	religion = chaos
+	religion = tzeentch
+	}
+	}
+	
+	religion = tzeentch
+	culture = mung
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_duskstriders_modifier
+}
+
+#Slaanesh
+
+d_velvet_touch = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+
+	capital = 309 #Nuln
+	
+	allow = {
+		religion = slaanesh
+	}
+	
+	religion = slaanesh
+	culture = wissenlander
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_velvet_touch_modifier
+}
+
+d_sybarites = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+
+	capital = 309 #Nuln
+	
+	allow = {
+		religion = slaanesh
+	}
+	
+	religion = slaanesh
+	culture = wissenlander
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_sybarites_modifier
+}
+
+d_riders_of_loesh = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+
+	capital = 1245 #Tohkar
+	
+	allow = {
+		religion = slaanesh
+	}
+	
+	religion = slaanesh
+	culture = tokmar
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_riders_of_loesh_modifier
+}
+
+d_slaves_of_excess = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+
+	capital =  84 #Erkum
+	
+	allow = {
+	OR = {
+	religion = chaos
+	religion = slaanesh
+	}
+	}
+	
+	religion = slaanesh
+	culture = varg
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_slaves_of_excess_modifier
+}
+
+#Khorne
+
+d_bloody_skull_warband = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+
+	capital = 299 #Altdorf
+	
+	allow = {
+		religion = khorne
+	}
+	
+	religion = khorne
+	culture = reiklander
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_bloody_skull_warband_modifier
+}
+
+d_brass_sisters = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+
+	capital = 299 #Altdorf
+	
+	allow = {
+		religion = khorne
+	}
+	
+	religion = khorne
+	culture = middenlander
+	
+	title = "CAPTAIN"
+	title_female = "CHAMPION"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_brass_sisters_modifier
+}
+
+d_disciples_of_the_red_redemption = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+
+	capital = 299 #Altdorf
+	
+	allow = {
+		religion = khorne
+	}
+	
+	religion = khorne
+	culture = reiklander
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_disciples_of_the_red_redemption_modifier
+}
+
+d_steeds_of_carnage = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+
+	capital =  1666 #Tasanda
+	
+	allow = {
+	OR = {
+	religion = chaos
+	religion = khorne
+	}
+	}
+	
+	religion = khorne
+	culture = chi-an
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_steeds_of_carnage_modifier
+}
+
+#Nurgle
+
+d_children_of_the_greatfather = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+
+	capital = 309 #Nuln
+	
+	allow = {
+		religion = nurgle
+	}
+	
+	religion = nurgle
+	culture = wissenlander
+	
+	title = "FATHER"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_children_of_the_greatfather_modifier
+}
+
+d_captives_of_decay = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+
+	capital =  391 #Sopot
+	
+	allow = {
+	OR = {
+	religion = chaos
+	religion = nurgle
+	}
+	}
+	
+	religion = nurgle
+	culture = tahmak
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_captives_of_decay_modifier
+}
+
+d_children_of_the_blight = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+
+	capital =  1237 #Yakhdoi
+	
+	allow = {
+	OR = {
+	religion = chaos
+	religion = nurgle
+	}
+	}
+	
+	religion = nurgle
+	culture = hastling
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_children_of_the_blight_modifier
+}
+
+d_dismal_defilers = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+
+	capital =  1237 #Yakhdoi
+	
+	allow = {
+	OR = {
+	religion = chaos
+	religion = nurgle
+	}
+	}
+	
+	religion = nurgle
+	culture = hastling
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_dismal_defilers_modifier
+}
+
+### Stromfels ###Sartosan
+
+d_sartosa_sirens = {
+	color={ 50 50 200 }
+	color2={ 255 255 255 }
+	
+	capital = 626 #Sartosa
+	
+	allow = {
+		religion_group = old_world_group
+	}
+	
+	religion = stromfels
+	culture = sartosan_tilean
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_sartosa_sirens_modifier
+}
+
+d_blackwater_raiders = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+
+	capital = 626 #Sartosa
+	
+	allow = {
+		religion = stromfels
+	}
+	
+	religion = stromfels
+	culture = sartosan_tilean
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_blackwater_raiders_modifier
+}
+
+d_bloodsail_buccaneers = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+
+	capital = 626 #Sartosa
+	
+	allow = {
+		religion = stromfels
+	}
+	
+	religion = stromfels
+	culture = sartosan_tilean
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_bloodsail_buccaneers_modifier
+}
+
+d_siren_sellswords = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+
+	capital = 626 #Sartosa
+	
+	allow = {
+		religion = stromfels
+	}
+	
+	religion = stromfels
+	culture = sartosan_tilean
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_siren_sellswords_modifier
+}
+
+###Elf
+#Asrai
+
+d_greenwoods = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+
+	capital = 2378 # Yn Edryl Koiran
+	
+	allow = {
+		religion = asrai_cadai
+	}
+		
+	religion = asrai_cadai
+	culture = loren
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_greenwoods_modifier
+}
+
+#Asur
+
+d_shadow_warriors = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+
+	capital = 1579 #Shadowhalls / Bladewatch
+	
+	allow = {
+		religion = cadai
+	}
+	
+	religion = cadai
+	culture = nagarythi
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_shadow_warriors_modifier
+}
+
+#Druchi
+
+d_executioners = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+
+	capital = 1393 # Har Ganeth
+		
+	allow = {
+		religion = cytharai
+	}
+	
+	religion = cytharai
+	culture = ganethi
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_executioners_modifier
+}
+
+d_tower_of_blessed_dread = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+
+	capital = 1347 # Blacklight
+			
+	allow = {
+		religion = cytharai
+	}
+	
+	religion = cytharai
+	culture = karondi
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_tower_of_blessed_dread_modifier
+}
+
+###Greenskin
+
+d_mother_crushers = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+
+	capital = 464 #Squigoruz / Mount Squighorn
+	
+	allow = {
+		religion_group = greenskin_gods_group
+	}
+		
+	religion = greenskin_gods
+	culture = orc_main
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_mother_crushers_modifier
+}
+
+d_spike_clan_commandos = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 450 #Mount Gunbad
+	
+	allow = {
+		religion_group = greenskin_gods_group
+	}
+		
+	religion = greenskin_gods
+	culture = orc_main
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_spike_clan_commandos_modifier
+}
+
+d_black_mountain_boys = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 441 #Karak Varn
+	
+	allow = {
+		religion_group = greenskin_gods_group
+	}
+		
+	religion = greenskin_gods
+	culture = orc_main
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_black_mountain_boys_modifier
+}
+
+d_battle_chariots_of_bogdan = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+
+	capital = 1277 #Grey Waste
+	
+	allow = {
+		religion_group = greenskin_gods_group
+	}
+		
+	religion = greenskin_gods
+	culture = orc_main
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_battle_chariots_of_bogdan_modifier
+}
+
+d_notlobs_bolt_throwers = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 448 #Iron Hills
+	
+	allow = {
+		religion_group = greenskin_gods_group
+	}
+		
+	religion = greenskin_gods
+	culture = orc_main
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_notlobs_bolt_throwers_modifier
+}
+
+d_throgs_hobgoblin_despoilers = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 448 #Iron Hills
+	
+	allow = {
+		religion_group = greenskin_gods_group
+	}
+		
+	religion = greenskin_gods
+	culture = goblin_main
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_throgs_hobgoblin_despoilers_modifier
+}
+
+d_blue_face_boyz = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 465 #Black Crag
+	
+	allow = {
+		religion_group = greenskin_gods_group
+	}
+		
+	religion = greenskin_gods
+	culture = orc_main
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_blue_face_boyz_modifier
+}
+
+d_broken_tooth_boyz = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 781 #Misty Mountain
+	
+	allow = {
+		religion_group = greenskin_gods_group
+	}
+		
+	religion = greenskin_gods
+	culture = orc_main
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_broken_tooth_boyz_modifier
+}
+
+d_dead_head_boyz = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 762 #Mount Bloodhorn
+	
+	allow = {
+		religion_group = greenskin_gods_group
+	}
+		
+	religion = greenskin_gods
+	culture = orc_main
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_dead_head_boyz_modifier
+}
+
+### Ships
+
+
+d_siren_isles_sailors = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 581 #Autaria
+
+	religion = stromfels
+	culture = sartosan_tilean
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	mercenary_type = d_siren_isles_sailors_modifier
+}
+
+d_kuldevind_convoy = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 1200 #Kuldevind
+
+	religion = norscan_gods
+	culture = graeling
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	mercenary_type = d_kuldevind_convoy_modifier
+}
+
+d_sartosan_hulks = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 626 #Sartosa
+
+	religion = stromfels
+	culture = sartosan_tilean
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	mercenary_type = d_sartosan_hulks_modifier
+}
+
+d_norscan_seafarers = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 39 #Ulfsland
+
+	religion = norscan_gods
+	culture = sarl
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	mercenary_type = d_norscan_seafarers_modifier
+}
+
+d_erengrad_convoy = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 175 #Erengrad	
+	
+	religion = ursun
+	culture = gospodar
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	mercenary_type = d_erengrad_convoy_modifier
+}
+
+d_marienburg_merchant_fleet = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+		
+	capital = 222 #Marienburg
+
+	religion = sigmarite
+	culture = westerlander
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	mercenary_type = d_marienburg_merchant_fleet_modifier
+}
+
+d_tiranq_traders = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+		
+	capital = 1026 #Sud
+
+	religion = atruhayid
+	culture = cophic
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	mercenary_type = d_tiranq_traders_modifier
+}
+
+d_nurgle_hulks = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+
+	capital = 222 #Marienburg
+	
+	allow = {
+		religion = nurgle
+	}
+
+	religion = nurgle
+	culture = westerlander
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	mercenary_type = d_nurgle_hulks_modifier
+}
+
+d_waveriders_of_slaanesh = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 222 #Marienburg
+	
+	allow = {
+		religion = slaanesh
+	}
+
+	religion = slaanesh
+	culture = westerlander
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	mercenary_type = d_waveriders_of_slaanesh_modifier
+}
+
+d_bloodwater_corsairs = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 222 #Marienburg
+	
+	allow = {
+		religion = khorne
+	}
+
+	religion = khorne
+	culture = westerlander
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	mercenary_type = d_bloodwater_corsairs_modifier
+}
+
+d_tides_of_magic = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 222 #Marienburg
+	
+	allow = {
+		religion = tzeentch
+	}
+
+	religion = tzeentch
+	culture = westerlander
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	mercenary_type = d_tides_of_magic_modifier
+}
+
+### Dwarfs
+
+d_sons_of_war = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+
+	capital =  451 #Karaz-A-Karak / Everpeak
+	
+	 allow = {
+	OR = {
+	religion_group = dwarf_gods_group
+	religion_group = old_world_group
+	}
+	}
+ 
+	religion = ancestor_gods
+	culture = dwarf_main
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	strength_growth_per_century = 0.05
+	
+	mercenary_type = d_sons_of_war_modifier
+}
+
+d_hammers_of_azagar = {
+	color={ 167 167 167 }
+	color2={ 100 100 100 }
+ 
+	capital = 686 #Barak Varr
+ 
+	allow = {
+	OR = {
+	religion_group = dwarf_gods_group
+	religion_group = old_world_group
+	}
+	}
+
+	religion = ancestor_gods
+	culture = dwarf_main
+ 
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+ 
+	mercenary = yes
+	landless = yes 
+	primary = yes 
+	independent = yes
+	
+	strength_growth_per_century = 0.05
+
+	mercenary_type = d_hammers_of_azagar_modifier
+	}
+
+d_oreguard = {
+	color={ 187 187 187 }
+	color2={ 100 100 100 }
+ 
+	capital = 470 #Karak Azul
+ 
+	allow = {
+	religion_group = dwarf_gods_group
+	}
+
+	religion = ancestor_gods
+	culture = dwarf_main
+ 
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+ 
+	mercenary = yes
+	landless = yes 
+	primary = yes 
+	independent = yes
+	
+	strength_growth_per_century = 0.05
+
+	mercenary_type = d_oreguard_modifier
+}
+
+### Chaos Wastes

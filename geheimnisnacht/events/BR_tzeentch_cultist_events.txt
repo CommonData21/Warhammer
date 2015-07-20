@@ -1,0 +1,754 @@
+namespace = tzeentchcultist
+
+#Cultist Menu - Tzeentch#
+character_event = {
+id = tzeentchcultist.1
+    desc = EVTDESCTZEENTCHCULTIST.1 # Tzeentch, the Architect of Fate, demands that you do his bidding. What service shall you render the Changer of Ways? Once you've completed your task, you will need to wait 1000 days before undertaking another, so as to not arouse suspicion. 
+    picture = "GFX_evt_tzeentch"
+    min_age = 16
+    capable_only = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = EVTOPTTZEENTCHCULTIST.1.a # I will donate to our cult's coffers.
+	trigger = { wealth = 100 }
+	wealth = -100
+	set_character_flag = cultist_cooldown
+	random_playable_ruler = { 
+	limit = { has_character_flag = hidden_tzeentch_cultist3 }
+	wealth = 100
+	character_event = { id = tzeentchcultist.3 }
+	}
+	change_variable = { which = tzeentchfavor value = 2 }  
+	character_event = { id = tzeentchcultist.2 days = 1000 }	
+	299 = {  change_variable = { which = tzeentchcultpower value = 1 } }
+	}
+	
+	option = {
+	name = EVTOPTTZEENTCHCULTIST.1.b # What would it take to perform the Rite of Pure Form?
+	trigger = { 
+	NOT = { num_of_prisoners = 9 }
+	}
+	character_event = { id = tzeentchcultist.6 }
+	}
+	
+	option = {
+	name = EVTOPTTZEENTCHCULTIST.1.c # Prepare to initiate the Rite of Pure Form!
+	trigger = { 
+	num_of_prisoners = 9
+	higher_tier_than = BARON
+	has_character_flag = hidden_cultist_tzeentch3
+	NOT = { has_character_flag = hosting_tzeentch_rite }
+	}
+	set_character_flag = cultist_cooldown
+	character_event = { id = tzeentchcultist.7 }
+	character_event = { id = tzeentchcultist.2 days = 1000 }	
+	}
+	
+	option = {
+	name = nurglecultist1A #How do I summon a demonic host and wreak havoc on the world?
+	trigger = {
+	AND = {
+	age = 16
+	NOT = { has_character_flag = hidden_cultist_tzeentch3 }
+	}
+	}	
+	character_event = { id = tzeentchcultist.13 }
+	}
+	
+	option = {
+	name = nurglecultist1B #Openly turn to chaos, and summon a demonic host!
+	trigger = {
+	AND = {
+	prisoner = no
+	age = 16
+	has_character_flag = hidden_cultist_tzeentch3
+	NOT = { has_character_flag = summonedtzeentchhost }
+	higher_tier_than = BARON
+	OR = {
+	trait = ambitious
+	trait = lunatic_3
+	trait = lunatic_2
+	trait = lunatic_1
+	trait = zealous
+	ai = no
+	}
+	}
+	}
+	character_event = { id = tzeentchcultist.14 }
+	}
+	
+	option = { 
+	name = EVTOPTTZEENTCHCULTIST.1.d # Show more choices / Close Menu
+	}
+	
+	}
+	
+character_event = {
+id = tzeentchcultist.2
+    desc = EVTDESCTZEENTCHCULTIST.2 # It has been some time since you've performed your last service for the Great Mutator. It should be safe to undertake another service for him without arousing too much suspicion...
+    picture = "GFX_evt_tzeentch"
+    min_age = 16
+    capable_only = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = EXCELLENT
+	clr_character_flag = cultist_cooldown
+	}
+	
+	}
+	
+
+#a random playable ruler that is level 3 cultist gets the donation#
+character_event = {
+id = tzeentchcultist.3
+    desc = EVTDESCTZEENTCHCULTIST.3 # A fellow servant of Tzeentch has given you some money in recognition of all change you have brought in the Architect of Fate's name. Use these funds bring Tzeentch even greater glory!
+    picture = "GFX_evt_tzeentch"
+    min_age = 16
+    capable_only = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = EXCELLENT
+	}
+	
+	}
+
+##Now for the events where you get promoted inside the cult##
+character_event = {
+id = tzeentchcultist.4
+    desc = EVTDESCTZEENTCHCULTIST.4 # Your service to the Changer of Ways has been recognized by others in his service. You are no longer a mere Acolyte, but a Magus in the cult of Tzeentch. Congratulations! 
+    picture = "GFX_evt_tzeentch"
+    min_age = 16
+    capable_only = yes
+	
+	trigger = {
+	check_variable = { which = tzeentchfavor value = 5 }
+	NOT = { has_character_flag = hidden_cultist_tzeentch2 }
+	}
+	
+	mean_time_to_happen = {
+	days = 30
+	}
+	
+	option = {
+	name = I_LIVE_TO_SERVE
+	clr_character_flag = hidden_cultist_tzeentch
+	set_character_flag = hidden_cultist_tzeentch2
+	}
+	
+	}
+	
+character_event = {
+id = tzeentchcultist.5
+    desc = EVTDESCTZEENTCHCULTIST.5 # You have reached even higher into the cults hierarchy, and you are now considered a High-Magus of Tzeentch. Congratulations! 
+    picture = "GFX_evt_tzeentch"
+    min_age = 16
+    capable_only = yes
+	
+	trigger = {
+	check_variable = { which = tzeentchfavor value = 10 }
+	NOT = { has_character_flag = hidden_cultist_tzeentch3 }
+	}
+	
+	mean_time_to_happen = {
+	days = 30
+	}
+	
+	option = {
+	name = I_LIVE_TO_SERVE
+	clr_character_flag = hidden_cultist_tzeentch2
+	set_character_flag = hidden_cultist_tzeentch3
+	}
+	
+	}	
+	
+character_event = {
+id = tzeentchcultist.6
+    desc = EVTDESCTZEENTCHCULTIST.6 # The Rite of Pure Form requires that you be a High-Magus of Tzeentch and have nine prisoners of noble blood ready for sacrifice. Once the rite is completed, the winds of chaos will be strengthened and you will be granted the Great Mutator's favour. 
+    picture = "GFX_evt_cultist"
+    min_age = 16
+    capable_only = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = I_SEE # I see.
+	}
+	
+	}
+	
+character_event = {
+id = tzeentchcultist.7
+    desc = EVTDESCTZEENTCHCULTIST.7 # You are a a High-Magus of Tzeentch and have nine prisoners of noble blood in your dungeons, which means you have everything you need to perform the Rite of Pure Form. Shall we gather other servants of the Changer of Ways so we can perform this ritual? 
+    picture = "GFX_evt_cultist"
+    min_age = 16
+    capable_only = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = NATURALLY # Naturally!
+	set_character_flag = hosting_tzeentch_rite
+	change_variable = { which = suspicion value = 2 } 
+	any_playable_ruler = {
+	limit = {
+	age = 15
+	culture_group = ROOT
+	OR = {
+	has_character_flag = hidden_cultist_tzeentch
+	has_character_flag = hidden_cultist_tzeentch2
+	has_character_flag = hidden_cultist_tzeentch3	
+	}
+	}
+	character_event = { id = tzeentchcultist.8 days = 7 }
+	}
+	}
+
+	
+	option = {
+	name = NO_NOT_RIGHT_NOW
+	}
+	
+	
+	}
+character_event = {
+id = tzeentchcultist.8
+    desc = EVTDESCTZEENTCHCULTIST.8 # [From.GetBestName], a High-Magus of Tzeentch, has invited you to take part in the Rite of Pure Form! By ritually sacrificing nine highborn prisoners the winds of chaos will grow stronger and all in attendance will gain favour with the Architect of Fate. 
+    picture = "GFX_evt_cultist"
+    min_age = 16
+    capable_only = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = CERTAINLY_I_SHALL_ATTEND # Certainly I shall attend!
+	set_character_flag = attending_tzeentch_rite
+	change_variable = { which = suspicion value = 2 } 
+	FROM = { character_event = { id = tzeentchcultist.9 } }
+	}
+	
+	option = {
+	name = NO_IM_EHH_BUSY
+	change_variable = { which = tzeentchfavor value = -2 }
+	}
+	
+	}
+	
+character_event = {
+id = tzeentchcultist.9
+    desc = EVTDESCTZEENTCHCULTIST.9 # I shall join you in your ritual. May everyone have their form purified under the Great Mutator gaze! 
+    picture = "GFX_evt_cultist"
+    min_age = 16
+    capable_only = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = EXCELLENT
+	}
+	
+	}
+	
+##Grand Rite begins for host##
+character_event = {
+id = tzeentchcultist.10
+    desc = EVTDESCTZEENTCHCULTIST.10 # At a grand gala in a secure location, you begin the Rite of Pure Form. Your prisoners are brought forth, and to the cheers of the crowd, they are forcibly fed Warpstone. Before long the bodies of the prisoners begin to change and mutate become deformed monstrosities before finally succumbing to death's embrace. Tzeentch will be pleased today! 
+    picture = "GFX_evt_cultist"
+    min_age = 16
+    capable_only = yes
+	
+	trigger = { 
+	age = 16
+	has_character_flag = hosting_tzeentch_rite
+	}
+	
+	mean_time_to_happen = {
+	days = 30
+	}
+	
+	option = {
+	name = EVTOPTTZEENTCHCULTIST.10.a # All hail the Architect of Fate!
+	1 = { change_variable = { which = "doom_counter" value = 5 } }
+	clr_character_flag = hosting_tzeentch_rite
+	change_variable = { which = tzeentchfavor value = 2 } 
+ 		random_list = {
+			25 = { 
+				modifier = { factor = 2.5
+						intrigue = 40
+						}
+				 }
+			25 = { change_intrigue = 2 }
+			25 = { change_intrigue = 3 }
+			25 = { change_intrigue = 4
+			character_event = { id = mutation.1 }
+				}
+			}
+	any_courtier= {
+		limit = { prisoner = yes }
+		character_event = { id = tzeentchcultist.11 }
+		}
+	}
+	
+	}
+	
+	#prisoner is informed#
+	character_event = {
+    id = tzeentchcultist.11
+    title = CULTIST_SACRIFICE # Cultist Sacrifice!
+    desc = EVTDESCTZEENTCHCULTIST.11 # One night your are dragged out of your cell and taken to a great gala. You soon realize you are surrounded by cultists of the Ruinous Powers as they begin force feeding you warpstone! You can only scream with terror as your body and mind mutate into forms no person should ever experience!
+    picture = "GFX_evt_cultist"
+
+	is_triggered_only = yes	
+	
+	option = {
+	name = NOOOOOO # Noooooo!
+			if ={
+	limit = {
+		trait = carstein_ring
+	}
+	character_event = {
+		id = carstein.13 days = 1
+	}
+	break = yes
+}
+
+
+		if = {
+ limit = {
+ trait = khemri_tomb_king }
+
+			character_event = {
+ id = snehekharan.1 days = 1 }
+	
+			break = yes 
+}
+		death = {
+				death_reason = death_execution
+			}
+		}
+		
+		}
+		
+	##Grand Rite begins for guests##
+character_event = {
+id = tzeentchcultist.12
+    desc = EVTDESCTZEENTCHCULTIST.12 # At a grand gala in a secure location, the Rite of Pure Form begins. The prisoners are brought forth, and to the cheers of the crowd, they are forcibly fed Warpstone. Before long the bodies of the prisoners begin to change and mutate become deformed monstrosities before finally succumbing to death's embrace. Tzeentch will be pleased today!  
+    picture = "GFX_evt_cultist"
+    min_age = 16
+    capable_only = yes
+	
+	trigger = { 
+	age = 16
+	has_character_flag = attending_tzeentch_rite
+	}
+	
+	mean_time_to_happen = {
+	days = 30
+	}
+	
+	option = {
+	name = EVTOPTTZEENTCHCULTIST.12.a # All hail the Architect of Fate!
+	clr_character_flag = attending_tzeentch_rite
+	change_variable = { which = tzeentchfavor value = 1 }
+ 		random_list = {
+			25 = { 
+				modifier = { factor = 2.5
+						intrigue = 40
+						}
+				 }
+			25 = { change_intrigue = 2 }
+			25 = { change_intrigue = 3 }
+			25 = { change_intrigue = 4
+			character_event = { id = mutation.1 }
+				}
+			}
+	}
+
+}
+
+character_event = {
+id = tzeentchcultist.13
+    desc = tzeentchcultist13desc # To be worthy of the Lord of Change's attentions, the winds of chaos must be strong and you must be a be a level 3 cultist. Hold a grand rite or donate to the cult's coffers, and in time, he will bless you with his power and send armies to aid you.
+    picture = "GFX_evt_tzeentch"
+    min_age = 16
+    capable_only = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = OK
+	}
+	
+	}
+	
+character_event = {
+id = tzeentchcultist.14
+    desc = tzeentchcultist14desc # Do you wish to openly serve Tzeentch, and enact a ritual that will open a portal to the realm of chaos? Be warned: There is no going back from this choice, once made...
+    picture = "GFX_evt_tzeentch"
+    min_age = 16
+    capable_only = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = tzeentchcultist14A #ALL MUST SERVE THE ARCHITECT OF FATE!
+	set_character_flag = summonedtzeentchhost
+	religion = tzeentch
+		hidden_tooltip = {  1 = { change_variable = { which = "doom_counter" value = 1 } }
+				if = { limit = { NOT = { check_variable = { which = "nurgle_favor" value = 1 } }
+					 NOT = { check_variable = { which = "khorne_favor" value = 1 } }
+					 NOT = { check_variable = { which = "slaanesh_favor" value = 1 } } } 
+					change_variable = { which = "tzeentch_favor" value = 1 } }
+
+				if = { limit = { OR = { check_variable = { which = "nurgle_favor" value = 1 }
+							check_variable = { which = "khorne_favor" value = 1 }
+							check_variable = { which = "slaanesh_favor" value = 1 } } } 
+					change_variable = { which = "nurgle_favor" value = -2 }
+					change_variable = { which = "khorne_favor" value = -2 }
+					change_variable = { which = "slaanesh_favor" value = -2 } } }
+	if = {
+		limit = {
+			top_liege = {
+				NOT = { religion = tzeentch }
+			}
+		}
+		top_liege = {
+			ROOT = {
+				set_defacto_liege = PREV
+			}
+		}
+		liege = {
+			reverse_war = {
+				target = ROOT
+				casus_belli = cultist_bid_for_independence
+			}
+		}
+	}
+	prestige = 500
+	piety = 500
+	any_playable_ruler = {
+	limit = {
+	OR = {
+	culture_group = ROOT
+	same_realm = ROOT
+	}
+	}
+	character_event = { id = tzeentchcultist.15 days = 7 }
+	}
+	if = {
+	limit = { 
+	NOT = { 1 = { check_variable = { which = "doom_counter" value = 30 } } } 
+	}
+create_random_soldier = {
+			random_traits = no
+			dynasty = RANDOM
+			culture = flamer_tzeentch
+			religion = tzeentch
+			age = 999
+			attributes = {
+				martial = 15
+				diplomacy = 4
+				stewardship = 5
+				intrigue = 30
+				learning = 3
+			}
+			health = 6
+			fertility = 0.7
+			trait = brilliant_strategist
+			trait = wroth
+			trait = genius
+			trait = mystic
+			trait = cruel
+			trait = zealous
+			trait = tzeentch_demon
+			trait = tzeentch_flamer
+		}
+		new_character = {
+		set_character_flag = host_demon_commander
+		add_friend = ROOT	#familiar mechanics
+		location = {
+			ROOT = {
+			spawn_unit = {
+			cannot_inherit = yes
+			province = PREV
+				troops =
+				{
+					daemonic_host = { 2500 2500 }
+					daemonic_host = { 1500 1500 }
+					daemonic_host = { 1500 1500 }
+				}
+			}
+		}
+		}
+		}	
+	}
+if = {
+	limit = { 
+	AND = {
+	1 = { check_variable = { which = "doom_counter" value = 30 } }
+	NOT = { 1 = { check_variable = { which = "doom_counter" value = 60 } } } 
+	}
+	}
+create_random_soldier = {
+			random_traits = no
+			dynasty = RANDOM
+			culture = flamer_tzeentch
+			religion = tzeentch
+			age = 999
+			attributes = {
+				martial = 15
+				diplomacy = 4
+				stewardship = 5
+				intrigue = 30
+				learning = 3
+			}
+			health = 6
+			fertility = 0.7
+			trait = brilliant_strategist
+			trait = wroth
+			trait = genius
+			trait = mystic
+			trait = cruel
+			trait = zealous
+			trait = tzeentch_demon
+			trait = tzeentch_flamer
+		}
+		new_character = {
+		set_character_flag = host_demon_commander
+		add_friend = ROOT	#familiar mechanics
+		location = {
+			ROOT = {
+			spawn_unit = {
+			cannot_inherit = yes
+			province = PREV
+				troops =
+				{
+					daemonic_host = { 4500 4500 }
+					daemonic_host = { 2000 2000 }
+					daemonic_host = { 3000 3000 }
+				}
+			}
+		}
+		}
+		}
+	}
+	if = {
+	limit = { 
+	AND = {
+	1 = { check_variable = { which = "doom_counter" value = 60 } }
+	NOT = { 1 = { check_variable = { which = "doom_counter" value = 90 } } } 
+	}
+	}
+create_random_soldier = {
+			random_traits = no
+			dynasty = RANDOM
+			culture = flamer_tzeentch
+			religion = tzeentch
+			age = 999
+			attributes = {
+				martial = 15
+				diplomacy = 4
+				stewardship = 5
+				intrigue = 30
+				learning = 3
+			}
+			health = 6
+			fertility = 0.7
+			trait = brilliant_strategist
+			trait = wroth
+			trait = genius
+			trait = mystic
+			trait = cruel
+			trait = zealous
+			trait = tzeentch_demon
+			trait = tzeentch_flamer
+		}
+		new_character = {
+		set_character_flag = host_demon_commander
+		add_friend = ROOT	#familiar mechanics
+		location = {
+			ROOT = {
+			spawn_unit = {
+			cannot_inherit = yes
+			province = PREV
+				troops =
+				{
+					daemonic_host = { 5000 5000 }
+					daemonic_host = { 3000 3000 }
+					daemonic_host = { 3000 3000 }
+				}
+			}
+		}
+		}
+		}
+	}
+	if = {
+	limit = { 
+	AND = {
+	1 = { check_variable = { which = "doom_counter" value = 90 } }
+	}
+	}
+create_random_soldier = {
+			random_traits = no
+			dynasty = RANDOM
+			culture = flamer_tzeentch
+			religion = tzeentch
+			age = 999
+			attributes = {
+				martial = 15
+				diplomacy = 4
+				stewardship = 5
+				intrigue = 30
+				learning = 3
+			}
+			health = 6
+			fertility = 0.7
+			trait = brilliant_strategist
+			trait = wroth
+			trait = genius
+			trait = mystic
+			trait = cruel
+			trait = zealous
+			trait = tzeentch_demon
+			trait = tzeentch_flamer
+		}
+		new_character = {
+		set_character_flag = host_demon_commander
+		add_friend = ROOT	#familiar mechanics
+		location = {
+			ROOT = {
+			spawn_unit = {
+			cannot_inherit = yes
+			province = PREV
+				troops =
+				{
+					daemonic_host = { 7500 7500 }
+					daemonic_host = { 2000 2000 }
+					daemonic_host = { 3000 3000 }
+					daemonic_host = { 2000 2000 }
+					daemonic_host = { 3000 3000 }
+				}
+			}
+		}
+		}
+		}
+	}
+	}
+	
+	option = {
+	name = slaaneshcultist14B #No, now is not the opportune time...
+	trigger = { ai = no }
+	}
+	
+	}
+character_event = {
+id = tzeentchcultist.15
+    desc = EVTDESCKHORNECULTIST.15 # This ruler has been a secret servant of the Ruinous Powers for some time now, and has finally proclaimed his allegiance. He has summoned a demonic army and is preparing to wage a war of conquest!
+    picture = "GFX_evt_tzeentch"
+    min_age = 16
+    capable_only = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = {
+				NOT = {	
+					has_character_flag = hidden_cultist_tzeentch
+					has_character_flag = hidden_cultist_tzeentch2 
+					has_character_flag = hidden_cultist_tzeentch3
+					has_character_flag = hidden_cultist_undivided
+					has_character_flag = hidden_cultist_undivided2
+					has_character_flag = hidden_cultist_undivided3
+					religion = chaos
+					religion = tzeentch
+				}
+			}
+			opinion = {
+				who = FROM
+				modifier = opinion_confirmed_heretic
+				months = 240
+			}
+			FROM = {
+				father = {
+					reverse_opinion = {
+						who = ROOT
+						modifier = opinion_family_of_confirmed_heretic
+						months = 240
+					}
+				}
+				mother = {
+					reverse_opinion = {
+						who = ROOT
+						modifier = opinion_family_of_confirmed_heretic
+						months = 240
+					}
+				}
+				any_sibling = {					
+					reverse_opinion = {
+						who = ROOT
+						modifier = opinion_family_of_confirmed_heretic
+						months = 240
+					}
+				}
+				any_child = {
+					reverse_opinion = {
+						who = ROOT
+						modifier = opinion_family_of_confirmed_heretic
+						months = 240
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = khornecultist15A #By the gods... !
+		ai_chance =  { factor = 1
+				modifier = { factor = 0
+					OR =  { has_character_flag = hidden_cultist_tzeentch
+						has_character_flag = hidden_cultist_tzeentch2 
+						has_character_flag = hidden_cultist_tzeentch3
+						has_character_flag = hidden_cultist_undivided
+						has_character_flag = hidden_cultist_undivided2
+						has_character_flag = hidden_cultist_undivided3 } 
+					 }
+				 }
+	}
+	option = {
+		name = khornecultist15B #It shall be my time as well!
+		trigger = { prisoner = no
+			 FROM = { liege_before_war = { ROOT = { liege = { character = PREVPREV } } } }
+			independent = no
+			liege = { opinion = { modifier = opinion_confirmed_heretic 
+					 	who = ROOT
+						years = 150 } }
+			OR = {		has_character_flag = hidden_cultist_tzeentch
+					has_character_flag = hidden_cultist_tzeentch2 
+					has_character_flag = hidden_cultist_tzeentch3
+					has_character_flag = hidden_cultist_undivided
+					has_character_flag = hidden_cultist_undivided2
+					has_character_flag = hidden_cultist_undivided3
+					religion = tzeentch
+					religion = chaos }
+			 } 
+				if = { limit = { OR = {		has_character_flag = hidden_cultist_tzeentch
+								has_character_flag = hidden_cultist_tzeentch2 
+								has_character_flag = hidden_cultist_tzeentch3 } }
+					religion = tzeentch }
+				if = { limit = { OR = {		has_character_flag = hidden_cultist_undivided
+								has_character_flag = hidden_cultist_undivided2 
+								has_character_flag = hidden_cultist_undivided3 } }
+					religion = chaos }
+				set_defacto_liege = FROM
+				set_character_flag = independent_joining_flag 
+				join_defender_wars = FROM
+				join_attacker_wars = FROM
+		ai_chance =  { factor = 1 }
+	}
+}	

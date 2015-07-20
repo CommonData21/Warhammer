@@ -1,0 +1,1093 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+###General;;;;;;;;;;;;;;
+#Tribal;;;;;;;;;;;;;;
+tribal_baron;Chief;;;;;;;;;;;;;x
+tribal_baron_female;Chieftess;;;;;;;;;;;;;x
+tribal_count;Chief;;;;;;;;;;;;;x
+tribal_count_female;Chieftess;;;;;;;;;;;;;x
+tribal_duke;High Chief;;;;;;;;;;;;;x
+tribal_duke_female;High Chieftess;;;;;;;;;;;;;x
+tribal_king;King;;;;;;;;;;;;;x
+tribal_king_female;Queen;;;;;;;;;;;;;x
+tribal_emperor;High King;;;;;;;;;;;;;x
+tribal_emperor_female;High Queen;;;;;;;;;;;;;x
+tribal_barony;Tribe;;;;;;;;;;;;;x
+tribal_county;Chiefdom;;;;;;;;;;;;;x
+tribal_duchy;High Chiefdom;;;;;;;;;;;;;x
+tribal_kingdom;Kingdom;;;;;;;;;;;;;x
+tribal_empire;High Kingdom;;;;;;;;;;;;;x
+tribal_barony_of;Tribe of;;;;;;;;;;;;;x
+tribal_county_of;Chiefdom of;;;;;;;;;;;;;x
+tribal_duchy_of;High Chiefdom of;;;;;;;;;;;;;x
+tribal_kingdom_of;Kingdom of;;;;;;;;;;;;;x
+tribal_empire_of;High Kingdom of;;;;;;;;;;;;;x
+#Barony;;;;;;;;;;;;;;
+baron;Baron;;;;;;;;;;;;;x
+baron_female;Baroness;;;;;;;;;;;;;x
+count;Count;;;;;;;;;;;;;x
+count_female;Countess;;;;;;;;;;;;;x
+duke;Duke;;;;;;;;;;;;;x
+duke_female;Duchess;;;;;;;;;;;;;x
+king;King;;;;;;;;;;;;;x
+king_female;Queen;;;;;;;;;;;;;x
+emperor;High King;;;;;;;;;;;;;x
+emperor_female;High Queen;;;;;;;;;;;;;x
+barony;Barony;;;;;;;;;;;;;x
+county;County;;;;;;;;;;;;;x
+duchy;Duchy;;;;;;;;;;;;;x
+kingdom;Kingdom;;;;;;;;;;;;;x
+empire;High Kingdom;;;;;;;;;;;;;x
+barony_of;Barony of;;;;;;;;;;;;;x
+county_of;County of;;;;;;;;;;;;;x
+duchy_of;Duchy of;;;;;;;;;;;;;x
+kingdom_of;Kingdom of;;;;;;;;;;;;;x
+empire_of;High Kingdom of;;;;;;;;;;;;;x
+#City;;;;;;;;;;;;;;
+city_baron;Mayor;;;;;;;;;;;;;x
+city_baron_female;Mayor;;;;;;;;;;;;;x
+city_count;Lord Mayor;;;;;;;;;;;;;x
+city_count_female;Lady Mayor;;;;;;;;;;;;;x
+city_duke;Lord Chancellor;;;;;;;;;;;;;x
+city_duke_female;Lady Chancellor;;;;;;;;;;;;;x
+city_king;Prince;;;;;;;;;;;;;x
+city_king_female;Princess;;;;;;;;;;;;;x
+city_emperor;Grand Prince;;;;;;;;;;;;;x
+city_emperor_female;Grand Princess;;;;;;;;;;;;;x
+city_barony;City;;;;;;;;;;;;;x
+city_county;Free City;;;;;;;;;;;;;x
+city_duchy;League;;;;;;;;;;;;;x
+city_kingdom;Principality;;;;;;;;;;;;;x
+city_empire;Grand Principality;;;;;;;;;;;;;x
+city_barony_of;City of;;;;;;;;;;;;;x
+city_county_of;Free City of;;;;;;;;;;;;;x
+city_duchy_of;League of;;;;;;;;;;;;;x
+city_kingdom_of;Principality of;;;;;;;;;;;;;x
+city_empire_of;Grand Principality of;;;;;;;;;;;;;x
+#Extra;;;;;;;;;;;;;;
+title_queen_mother;Lady;;;;;;;;;;;;;x
+count_title_queen_mother_female;Lady;;;;;;;;;;;;;x
+duke_title_queen_mother_female;Lady;;;;;;;;;;;;;x
+king_title_queen_mother_female;Lady;;;;;;;;;;;;;x
+emperor_title_queen_mother_female;Lady;;;;;;;;;;;;;x
+###Imperial Group;;;;;;;;;;;;;;
+#Barony;;;;;;;;;;;;;;
+baron_imperial_group;Baron;;;;;;;;;;;;;x
+baron_female_imperial_group;Baroness;;;;;;;;;;;;;x
+count_imperial_group;Count;;;;;;;;;;;;;x
+count_female_imperial_group;Countess;;;;;;;;;;;;;x
+duke_imperial_group;Duke;;;;;;;;;;;;;x
+duke_female_imperial_group;Duchess;;;;;;;;;;;;;x
+king_imperial_group;Graf;;;;;;;;;;;;;x
+king_female_imperial_group;Gräfin;;;;;;;;;;;;;x
+emperor_imperial_group;Emperor;;;;;;;;;;;;;x
+emperor_female_imperial_group;Empress;;;;;;;;;;;;;x
+barony_of_imperial_group;Barony of;;;;;;;;;;;;;x
+county_of_imperial_group;County of;;;;;;;;;;;;;x
+duchy_of_imperial_group;Duchy of;;;;;;;;;;;;;x
+kingdom_of_imperial_group;Grand County of;;;;;;;;;;;;;x
+empire_of_imperial_group;Empire of;;;;;;;;;;;;;x
+#City;;;;;;;;;;;;;;
+city_baron_imperial_group;Mayor;;;;;;;;;;;;;x
+city_count_imperial_group;Lord Mayor;;;;;;;;;;;;;x
+city_duke_imperial_group;Lord Chancellor;;;;;;;;;;;;;x
+city_king_imperial_group;Prince;;;;;;;;;;;;;x
+city_emperor_imperial_group;Grand Prince;;;;;;;;;;;;;x
+city_barony_of_imperial_group;City of;;;;;;;;;;;;;x
+city_county_of_imperial_group;Free City of;;;;;;;;;;;;;x
+city_duchy_of_imperial_group;League of;;;;;;;;;;;;;x
+city_kingdom_of_imperial_group;Principality of;;;;;;;;;;;;;x
+city_empire_of_imperial_group;Grand Principality of;;;;;;;;;;;;;x
+###Bretonnian Group;;;;;;;;;;;;;;
+#Barony;;;;;;;;;;;;;;
+baron_bretonnian_group;Baron;;;;;;;;;;;;;x
+baron_female_bretonnian_group;Baroness;;;;;;;;;;;;;x
+count_bretonnian_group;Count;;;;;;;;;;;;;x
+count_female_bretonnian_group;Countess;;;;;;;;;;;;;x
+duke_bretonnian_group;Marquis;;;;;;;;;;;;;x
+duke_female_bretonnian_group;Marquise;;;;;;;;;;;;;x
+king_bretonnian_group;Duke;;;;;;;;;;;;;x
+king_female_bretonnian_group;Duchess;;;;;;;;;;;;;x
+emperor_bretonnian_group;King;;;;;;;;;;;;;x
+emperor_female_bretonnian_group;Queen;;;;;;;;;;;;;x
+barony_of_bretonnian_group;Barony of;;;;;;;;;;;;;x
+county_of_bretonnian_group;County of;;;;;;;;;;;;;x
+duchy_of_bretonnian_group;Marche of;;;;;;;;;;;;;x
+kingdom_of_bretonnian_group;Grand Duchy of;;;;;;;;;;;;;x
+empire_of_bretonnian_group;Kingdom of;;;;;;;;;;;;;x
+#City;;;;;;;;;;;;;;
+city_baron_bretonnian_group;Mayor;;;;;;;;;;;;;x
+city_count_bretonnian_group;Lord Mayor;;;;;;;;;;;;;x
+city_duke_bretonnian_group;Maire;;;;;;;;;;;;;x
+city_king_bretonnian_group;Provost;;;;;;;;;;;;;x
+city_emperor_bretonnian_group;Lord Provost;;;;;;;;;;;;;x
+city_barony_of_bretonnian_group;City of;;;;;;;;;;;;;x
+city_county_of_bretonnian_group;Free City of;;;;;;;;;;;;;x
+city_duchy_of_bretonnian_group;League of;;;;;;;;;;;;;x
+city_kingdom_of_bretonnian_group;Republic of;;;;;;;;;;;;;x
+city_empire_of_bretonnian_group;Grand Republic of;;;;;;;;;;;;;x
+###Kislevite Group;;;;;;;;;;;;;;
+#Barony;;;;;;;;;;;;;;
+baron_kislevite_group;Dvoryanin;;;;;;;;;;;;;x
+baron_female_kislevite_group;Dvoryanka;;;;;;;;;;;;;x
+count_kislevite_group;Boyar;;;;;;;;;;;;;x
+count_female_kislevite_group;Boyarynya;;;;;;;;;;;;;x
+duke_kislevite_group;Voievode;;;;;;;;;;;;;x
+duke_female_kislevite_group;Voievode;;;;;;;;;;;;;x
+king_kislevite_group;Prince;;;;;;;;;;;;;x
+king_female_kislevite_group;Princess;;;;;;;;;;;;;x
+emperor_kislevite_group;Tzar;;;;;;;;;;;;;x
+emperor_female_kislevite_group;Tzarina;;;;;;;;;;;;;x
+barony_of_kislevite_group;Khutor of;;;;;;;;;;;;;x
+county_of_kislevite_group;Zupa of;;;;;;;;;;;;;x
+duchy_of_kislevite_group;Voivodeship of;;;;;;;;;;;;;x
+kingdom_of_kislevite_group;Oblast of;;;;;;;;;;;;;x
+empire_of_kislevite_group;Tzardom of;;;;;;;;;;;;;x
+#City;;;;;;;;;;;;;;
+city_baron_kislevite_group;Starosta;;;;;;;;;;;;;x
+city_count_kislevite_group;Stolnik;;;;;;;;;;;;;x
+city_duke_kislevite_group;Posadnik;;;;;;;;;;;;;x
+city_king_kislevite_group;Prince;;;;;;;;;;;;;x
+city_emperor_kislevite_group;Grand Prince;;;;;;;;;;;;;x
+city_barony_of_kislevite_group;City of;;;;;;;;;;;;;x
+city_county_of_kislevite_group;Grand City of;;;;;;;;;;;;;x
+city_duchy_of_kislevite_group;League of;;;;;;;;;;;;;x
+city_kingdom_of_kislevite_group;Principality of;;;;;;;;;;;;;x
+city_empire_of_kislevite_group;Grand Principality of;;;;;;;;;;;;;x
+###Estalian Group;;;;;;;;;;;;;;
+#Barony;;;;;;;;;;;;;;
+baron_estalian_group;Baron;;;;;;;;;;;;;x
+baron_female_estalian_group;Baroness;;;;;;;;;;;;;x
+count_estalian_group;Count;;;;;;;;;;;;;x
+count_female_estalian_group;Countess;;;;;;;;;;;;;x
+duke_estalian_group;Duke;;;;;;;;;;;;;x
+duke_female_estalian_group;Duchess;;;;;;;;;;;;;x
+king_estalian_group;King;;;;;;;;;;;;;x
+king_female_estalian_group;Queen;;;;;;;;;;;;;x
+emperor_estalian_group;Imperator;;;;;;;;;;;;;x
+emperor_female_estalian_group;Imperatrix;;;;;;;;;;;;;x
+barony_of_estalian_group;Barony of;;;;;;;;;;;;;x
+county_of_estalian_group;County of;;;;;;;;;;;;;x
+duchy_of_estalian_group;Duchy of;;;;;;;;;;;;;x
+kingdom_of_estalian_group;Kingdom of;;;;;;;;;;;;;x
+empire_of_estalian_group;Empire of;;;;;;;;;;;;;x
+#City;;;;;;;;;;;;;;
+city_baron_estalian_group;Alcaide;;;;;;;;;;;;;x
+city_count_estalian_group;Regidor;;;;;;;;;;;;;x
+city_duke_estalian_group;Iudex;;;;;;;;;;;;;x
+city_king_estalian_group;Prince;;;;;;;;;;;;;x
+city_emperor_estalian_group;Grand Prince;;;;;;;;;;;;;x
+city_barony_of_estalian_group;City of;;;;;;;;;;;;;x
+city_county_of_estalian_group;Concejo of;;;;;;;;;;;;;x
+city_duchy_of_estalian_group;Junta of;;;;;;;;;;;;;x
+city_kingdom_of_estalian_group;Republic of;;;;;;;;;;;;;x
+city_empire_of_estalian_group;Grand Republic of;;;;;;;;;;;;;x
+###Tilean;;;;;;;;;;;;;;
+#Barony;;;;;;;;;;;;;;
+baron_tilean_group;Baron;;;;;;;;;;;;;x
+baron_female_tilean_group;Baroness;;;;;;;;;;;;;x
+count_tilean_group;Conte;;;;;;;;;;;;;x
+count_female_tilean_group;Contessa;;;;;;;;;;;;;x
+duke_tilean_group;Duca;;;;;;;;;;;;;x
+duke_female_tilean_group;Duchessa;;;;;;;;;;;;;x
+king_tilean_group;Prince;;;;;;;;;;;;;x
+king_female_tilean_group;Princess;;;;;;;;;;;;;x
+emperor_tilean_group;Imperator;;;;;;;;;;;;;x
+emperor_female_tilean_group;Imperatrix;;;;;;;;;;;;;x
+barony_of_tilean_group;Barony of;;;;;;;;;;;;;x
+county_of_tilean_group;County of;;;;;;;;;;;;;x
+duchy_of_tilean_group;Duchy of;;;;;;;;;;;;;x
+kingdom_of_tilean_group;Principality of;;;;;;;;;;;;;x
+empire_of_tilean_group;Empire of;;;;;;;;;;;;;x
+#City;;;;;;;;;;;;;;
+city_baron_tilean_group;Mayor;;;;;;;;;;;;;x
+city_count_tilean_group;Lord Mayor;;;;;;;;;;;;;x
+city_duke_tilean_group;Chancellor;;;;;;;;;;;;;x
+city_king_tilean_group;Doge;;;;;;;;;;;;;x
+city_emperor_tilean_group;Princeps;;;;;;;;;;;;;x
+city_barony_of_tilean_group;City of;;;;;;;;;;;;;x
+city_county_of_tilean_group;Grand City of;;;;;;;;;;;;;x
+city_duchy_of_tilean_group;League of;;;;;;;;;;;;;x
+city_kingdom_of_tilean_group;Republic of;;;;;;;;;;;;;x
+city_empire_of_tilean_group;Grand Republic of;;;;;;;;;;;;;x
+##Myken;;;;;;;;;;;;;;
+#Barony;;;;;;;;;;;;;;
+baron_myken_group;Baron;;;;;;;;;;;;;x
+baron_female_myken_group;Baroness;;;;;;;;;;;;;x
+count_myken_group;Count;;;;;;;;;;;;;x
+count_female_myken_group;Countess;;;;;;;;;;;;;x
+duke_myken_group;Doux;;;;;;;;;;;;;x
+duke_female_myken_group;Douxa;;;;;;;;;;;;;x
+king_myken_group;Prince;;;;;;;;;;;;;x
+king_female_myken_group;Princess;;;;;;;;;;;;;x
+emperor_myken_group;Basilius;;;;;;;;;;;;;x
+emperor_female_myken_group;Basilissa;;;;;;;;;;;;;x
+#City;;;;;;;;;;;;;;
+city_duke_myken_group;Archon;;;;;;;;;;;;;x
+city_king_myken_group;Grand Archon;;;;;;;;;;;;;x
+###Sartosan;;;;;;;;;;;;;;
+#Barony;;;;;;;;;;;;;;
+#City;;;;;;;;;;;;;;
+city_king_sartosan_group;Doge;;;;;;;;;;;;;x
+city_emperor_sartosan_group;Princeps;;;;;;;;;;;;;x
+###Norscan Group;;;;;;;;;;;;;;
+#Tribal;;;;;;;;;;;;;;
+tribal_baron_norscan_group;Chief;;;;;;;;;;;;;x
+tribal_baron_female_norscan_group;Chieftess;;;;;;;;;;;;;x
+tribal_count_norscan_group;Jarl;;;;;;;;;;;;;x
+tribal_count_female_norscan_group;Jarlina;;;;;;;;;;;;;x
+tribal_duke_norscan_group;Jerg;;;;;;;;;;;;;x
+tribal_duke_female_norscan_group;Jergin;;;;;;;;;;;;;x
+tribal_king_norscan_group;King;;;;;;;;;;;;;x
+tribal_king_female_norscan_group;Queen;;;;;;;;;;;;;x
+tribal_emperor_norscan_group;High King;;;;;;;;;;;;;x
+tribal_emperor_female_norscan_group;High Queen;;;;;;;;;;;;;x
+tribal_barony_of_norscan_group;Chiefdom of;;;;;;;;;;;;;x
+tribal_county_of_norscan_group;Jarldom of;;;;;;;;;;;;;x
+tribal_duchy_of_norscan_group;Jergdom of;;;;;;;;;;;;;x
+tribal_kingdom_of_norscan_group;Kingdom of;;;;;;;;;;;;;x
+tribal_empire_of_norscan_group;High Kingdom of;;;;;;;;;;;;;x
+#Barony;;;;;;;;;;;;;;
+baron_norscan_group;Chief;;;;;;;;;;;;;x
+baron_female_norscan_group;Chieftess;;;;;;;;;;;;;x
+count_norscan_group;Jarl;;;;;;;;;;;;;x
+count_female_norscan_group;Jarlina;;;;;;;;;;;;;x
+duke_norscan_group;Jerg;;;;;;;;;;;;;x
+duke_female_norscan_group;Jergin;;;;;;;;;;;;;x
+king_norscan_group;King;;;;;;;;;;;;;x
+king_female_norscan_group;Queen;;;;;;;;;;;;;x
+emperor_norscan_group;High King;;;;;;;;;;;;;x
+emperor_female_norscan_group;High Queen;;;;;;;;;;;;;x
+barony_of_norscan_group;Chiefdom of;;;;;;;;;;;;;x
+county_of_norscan_group;Jarldom of;;;;;;;;;;;;;x
+duchy_of_norscan_group;Jergdom of;;;;;;;;;;;;;x
+kingdom_of_norscan_group;Kingdom of;;;;;;;;;;;;;x
+empire_of_norscan_group;High Kingdom of;;;;;;;;;;;;;x
+#City;;;;;;;;;;;;;;
+city_baron_norscan_group;Hetman;;;;;;;;;;;;;x
+city_baron_female_norscan_group;Hetwoman;;;;;;;;;;;;;x
+city_count_norscan_group;Chief Hetman;;;;;;;;;;;;;x
+city_count_female_norscan_group;Chief Hetwoman;;;;;;;;;;;;;x
+city_duke_norscan_group;Elderman;;;;;;;;;;;;;x
+city_duke_female_norscan_group;Elderwoman;;;;;;;;;;;;;x
+city_king_norscan_group;Prince;;;;;;;;;;;;;x
+city_king_female_norscan_group;Princess;;;;;;;;;;;;;x
+city_emperor_norscan_group;Grand Prince;;;;;;;;;;;;;x
+city_emperor_female_norscan_group;Grand Princess;;;;;;;;;;;;;x
+city_barony_of_norscan_group;City of;;;;;;;;;;;;;x
+city_county_of_norscan_group;Great City of;;;;;;;;;;;;;x
+city_duchy_of_norscan_group;League of;;;;;;;;;;;;;x
+city_kingdom_of_norscan_group;Principality of;;;;;;;;;;;;;x
+city_empire_of_norscan_group;Grand Principality of;;;;;;;;;;;;;x
+###Nehekharan;;;;;;;;;;;;;;
+#Barony;;;;;;;;;;;;;;
+baron_nehekharan_group;Lord;;;;;;;;;;;;;x
+baron_female_nehekharan_group;Lady;;;;;;;;;;;;;x
+count_nehekharan_group;Lord;;;;;;;;;;;;;x
+count_female_nehekharan_group;Lady;;;;;;;;;;;;;x
+duke_nehekharan_group;Prince;;;;;;;;;;;;;x
+duke_female_nehekharan_group;Princess;;;;;;;;;;;;;x
+king_nehekharan_group;King;;;;;;;;;;;;;x
+king_female_nehekharan_group;Queen;;;;;;;;;;;;;x
+emperor_nehekharan_group;High King;;;;;;;;;;;;;x
+emperor_female_nehekharan_group;High Queen;;;;;;;;;;;;;x
+barony_of_nehekharan_group;Citadel of;;;;;;;;;;;;;x
+county_of_nehekharan_group;Province of;;;;;;;;;;;;;x
+duchy_of_nehekharan_group;Principality of;;;;;;;;;;;;;x
+kingdom_of_nehekharan_group;Kingdom of;;;;;;;;;;;;;x
+empire_of_nehekharan_group;Empire of;;;;;;;;;;;;;x
+#City;;;;;;;;;;;;;;
+city_baron_nehekharan_group;Mayor;;;;;;;;;;;;;x
+city_count_nehekharan_group;Vizier;;;;;;;;;;;;;x
+city_duke_nehekharan_group;Lord Vizier;;;;;;;;;;;;;x
+city_king_nehekharan_group;Vizier-King;;;;;;;;;;;;;x
+city_emperor_nehekharan_group;Grand Vizier;;;;;;;;;;;;;x
+city_barony_of_nehekharan_group;City of;;;;;;;;;;;;;x
+city_county_of_nehekharan_group;Great City of;;;;;;;;;;;;;x
+city_duchy_of_nehekharan_group;Domain of;;;;;;;;;;;;;x
+city_kingdom_of_nehekharan_group;Great Domain of;;;;;;;;;;;;;x
+city_empire_of_nehekharan_group;High Domain of;;;;;;;;;;;;;x
+###Amazon Group;;;;;;;;;;;;;;
+#Tribal;;;;;;;;;;;;;;
+tribal_baron_amazon_group;Master;;;;;;;;;;;;;x
+tribal_baron_female_amazon_group;Mistress;;;;;;;;;;;;;x
+tribal_count_amazon_group;Chief;;;;;;;;;;;;;x
+tribal_count_female_amazon_group;Chieftess;;;;;;;;;;;;;x
+tribal_duke_amazon_group;Prince;;;;;;;;;;;;;x
+tribal_duke_female_amazon_group;Princess;;;;;;;;;;;;;x
+tribal_king_amazon_group;King;;;;;;;;;;;;;x
+tribal_king_female_amazon_group;Queen;;;;;;;;;;;;;x
+tribal_emperor_amazon_group;High King;;;;;;;;;;;;;x
+tribal_emperor_female_amazon_group;High Queen;;;;;;;;;;;;;x
+tribal_barony_of_amazon_group;Tribe of;;;;;;;;;;;;;x
+tribal_county_of_amazon_group;Chiefdom of;;;;;;;;;;;;;x
+tribal_duchy_of_amazon_group;Domain of;;;;;;;;;;;;;x
+tribal_kingdom_of_amazon_group;Great Domain of;;;;;;;;;;;;;x
+tribal_empire_of_amazon_group;High Domain of;;;;;;;;;;;;;x
+#Barony;;;;;;;;;;;;;;
+baron_amazon_group;Master;;;;;;;;;;;;;x
+baron_female_amazon_group;Mistress;;;;;;;;;;;;;x
+count_amazon_group;Lord;;;;;;;;;;;;;x
+count_female_amazon_group;Lady;;;;;;;;;;;;;x
+duke_amazon_group;Prince;;;;;;;;;;;;;x
+duke_female_amazon_group;Princess;;;;;;;;;;;;;x
+king_amazon_group;King;;;;;;;;;;;;;x
+king_female_amazon_group;Queen;;;;;;;;;;;;;x
+emperor_amazon_group;High King;;;;;;;;;;;;;x
+emperor_female_amazon_group;High Queen;;;;;;;;;;;;;x
+barony_of_amazon_group;Stronghold of;;;;;;;;;;;;;x
+county_of_amazon_group;Chiefdom of;;;;;;;;;;;;;x
+duchy_of_amazon_group;Domain of;;;;;;;;;;;;;x
+kingdom_of_amazon_group;Great Domain of;;;;;;;;;;;;;x
+empire_of_amazon_group;High Domain of;;;;;;;;;;;;;x
+#City;;;;;;;;;;;;;;
+city_baron_amazon_group;Mayor;;;;;;;;;;;;;x
+city_baron_female_amazon_group;Mayor;;;;;;;;;;;;;x
+city_count_amazon_group;Lord Mayor;;;;;;;;;;;;;x
+city_count_female_amazon_group;Lady Mayor;;;;;;;;;;;;;x
+city_duke_amazon_group;Prince-Mayor;;;;;;;;;;;;;x
+city_duke_female_amazon_group;Princess-Mayor;;;;;;;;;;;;;x
+city_king_amazon_group;Grand Prince;;;;;;;;;;;;;x
+city_king_female_amazon_group;Grand Princess;;;;;;;;;;;;;x
+city_emperor_amazon_group;High Prince;;;;;;;;;;;;;x
+city_emperor_female_amazon_group;High Princess;;;;;;;;;;;;;x
+city_barony_of_amazon_group;City of;;;;;;;;;;;;;x
+city_county_of_amazon_group;Great City of;;;;;;;;;;;;;x
+city_duchy_of_amazon_group;Domain of;;;;;;;;;;;;;x
+city_kingdom_of_amazon_group;Great Domain of;;;;;;;;;;;;;x
+city_empire_of_amazon_group;High Domain of;;;;;;;;;;;;;x
+###Arabyan Group;;;;;;;;;;;;;;
+#Tribal;;;;;;;;;;;;;;
+tribal_baron_arabyan_group;Sheikh;;;;;;;;;;;;;x
+tribal_baron_female_arabyan_group;Sheikha;;;;;;;;;;;;;x
+tribal_count_arabyan_group;Wali;;;;;;;;;;;;;x
+tribal_count_female_arabyan_group;Wali;;;;;;;;;;;;;x
+tribal_duke_arabyan_group;Emir;;;;;;;;;;;;;x
+tribal_duke_female_arabyan_group;Emira;;;;;;;;;;;;;x
+tribal_king_arabyan_group;Sultan;;;;;;;;;;;;;x
+tribal_king_female_arabyan_group;Sultana;;;;;;;;;;;;;x
+tribal_emperor_arabyan_group;Caliph;;;;;;;;;;;;;x
+tribal_emperor_female_arabyan_group;Calipha;;;;;;;;;;;;;x
+tribal_barony_of_arabyan_group;Sheikhdom of;;;;;;;;;;;;;x
+tribal_county_of_arabyan_group;Wilayah of;;;;;;;;;;;;;x
+tribal_duchy_of_arabyan_group;Emirate of;;;;;;;;;;;;;x
+tribal_kingdom_of_arabyan_group;Sultanate of;;;;;;;;;;;;;x
+tribal_empire_of_arabyan_group;Caliphate of;;;;;;;;;;;;;x
+tribal_barony_arabyan_group;Sheikhdom;;;;;;;;;;;;;x
+tribal_county_arabyan_group;Wilayah;;;;;;;;;;;;;x
+tribal_duchy_arabyan_group;Emirate;;;;;;;;;;;;;x
+tribal_kingdom_arabyan_group;Sultanate;;;;;;;;;;;;;x
+tribal_empire_arabyan_group;Caliphate;;;;;;;;;;;;;x
+#Barony;;;;;;;;;;;;;;
+baron_arabyan_group;Sheikh;;;;;;;;;;;;;x
+baron_female_arabyan_group;Sheikha;;;;;;;;;;;;;x
+count_arabyan_group;Wali;;;;;;;;;;;;;x
+count_female_arabyan_group;Wali;;;;;;;;;;;;;x
+duke_arabyan_group;Emir;;;;;;;;;;;;;x
+duke_female_arabyan_group;Emira;;;;;;;;;;;;;x
+king_arabyan_group;Sultan;;;;;;;;;;;;;x
+king_female_arabyan_group;Sultana;;;;;;;;;;;;;x
+emperor_arabyan_group;Caliph;;;;;;;;;;;;;x
+emperor_female_arabyan_group;Calipha;;;;;;;;;;;;;x
+barony_of_arabyan_group;Sheikhdom of;;;;;;;;;;;;;x
+county_of_arabyan_group;Wilayah of;;;;;;;;;;;;;x
+duchy_of_arabyan_group;Emirate of;;;;;;;;;;;;;x
+kingdom_of_arabyan_group;Sultanate of;;;;;;;;;;;;;x
+empire_of_arabyan_group;Caliphate of;;;;;;;;;;;;;x
+barony_arabyan_group;Sheikhdom;;;;;;;;;;;;;x
+county_arabyan_group;Wilayah;;;;;;;;;;;;;x
+duchy_arabyan_group;Emirate;;;;;;;;;;;;;x
+kingdom_arabyan_group;Sultanate;;;;;;;;;;;;;x
+empire_arabyan_group;Caliphate;;;;;;;;;;;;;x
+#City;;;;;;;;;;;;;;
+city_baron_arabyan_group;Mir;;;;;;;;;;;;;x
+city_count_arabyan_group;Sirdar;;;;;;;;;;;;;x
+city_duke_arabyan_group;Wali-Emir;;;;;;;;;;;;;x
+city_king_arabyan_group;Rais;;;;;;;;;;;;;x
+city_emperor_arabyan_group;Grand Wali-Malik;;;;;;;;;;;;;x
+city_barony_of_arabyan_group;City of;;;;;;;;;;;;;x
+city_county_of_arabyan_group;Grand City of;;;;;;;;;;;;;x
+city_duchy_of_arabyan_group;League of;;;;;;;;;;;;;x
+city_kingdom_of_arabyan_group;Dominion of;;;;;;;;;;;;;x
+city_empire_of_arabyan_group;Grand Dominion of;;;;;;;;;;;;;x
+city_barony_arabyan_group;City;;;;;;;;;;;;;x
+city_county_arabyan_group;Grand City;;;;;;;;;;;;;x
+city_duchy_arabyan_group;League;;;;;;;;;;;;;x
+city_kingdom_arabyan_group;Dominion;;;;;;;;;;;;;x
+city_empire_arabyan_group;Grand Dominion;;;;;;;;;;;;;x
+##Ramaccan;;;;;;;;;;;;;;
+#Barony;;;;;;;;;;;;;;
+baron_ramaccan;Timariot;;;;;;;;;;;;;x
+baron_female_ramaccan;Timariota;;;;;;;;;;;;;x
+count_ramaccan;Bey;;;;;;;;;;;;;x
+count_female_ramaccan;Bayan;;;;;;;;;;;;;x
+barony_of_ramaccan;Timar of;;;;;;;;;;;;;x
+county_of_ramaccan;Beylik of;;;;;;;;;;;;;x
+barony_ramaccan;Timar;;;;;;;;;;;;;x
+county_ramaccan;Beylik;;;;;;;;;;;;;x
+##Wasai;;;;;;;;;;;;;;
+#Barony;;;;;;;;;;;;;;
+count_wasai;Farin;;;;;;;;;;;;;x
+count_female_wasai;Farina;;;;;;;;;;;;;x
+duke_wasai;Farbas;;;;;;;;;;;;;x
+duke_female_wasai;Farba;;;;;;;;;;;;;x
+king_wasai;Mansa;;;;;;;;;;;;;x
+king_female_wasai;Mansina;;;;;;;;;;;;;x
+county_of_wasai;Wilayah of;;;;;;;;;;;;;x
+county_wasai;Wilayah;;;;;;;;;;;;;x
+##Bayaji;;;;;;;;;;;;;;
+#Barony;;;;;;;;;;;;;;
+count_bayaji;Farin;;;;;;;;;;;;;x
+count_female_bayaji;Farina;;;;;;;;;;;;;x
+duke_bayaji;Farbas;;;;;;;;;;;;;x
+duke_female_bayaji;Farba;;;;;;;;;;;;;x
+king_bayaji;Mansa;;;;;;;;;;;;;x
+king_female_bayaji;Mansina;;;;;;;;;;;;;x
+county_of_bayaji;Wilayah of;;;;;;;;;;;;;x
+county_bayaji;Wilayah;;;;;;;;;;;;;x
+###Kurgan Group;;;;;;;;;;;;;;
+#Tribal;;;;;;;;;;;;;;
+tribal_baron_kurgan_group;Chieftain;;;;;;;;;;;;;x
+tribal_baron_female_kurgan_group;Chieftess;;;;;;;;;;;;;x
+tribal_count_kurgan_group;Tarkan;;;;;;;;;;;;;x
+tribal_count_female_kurgan_group;Tarkanum;;;;;;;;;;;;;x
+tribal_duke_kurgan_group;Beg;;;;;;;;;;;;;x
+tribal_duke_female_kurgan_group;Begum;;;;;;;;;;;;;x
+tribal_king_kurgan_group;Zar;;;;;;;;;;;;;x
+tribal_king_female_kurgan_group;Zarina;;;;;;;;;;;;;x
+tribal_emperor_kurgan_group;Great Zar;;;;;;;;;;;;;x
+tribal_emperor_female_kurgan_group;Great Zarina;;;;;;;;;;;;;x
+tribal_barony_of_kurgan_group;Chiefdom of;;;;;;;;;;;;;x
+tribal_county_of_kurgan_group;Tarkanate of;;;;;;;;;;;;;x
+tribal_duchy_of_kurgan_group;Begzate of;;;;;;;;;;;;;x
+tribal_kingdom_of_kurgan_group;Zardom of;;;;;;;;;;;;;x
+tribal_empire_of_kurgan_group;Great Zardom of;;;;;;;;;;;;;x
+tribal_barony_kurgan_group;Chiefdom;;;;;;;;;;;;;x
+tribal_county_kurgan_group;Tarkanate;;;;;;;;;;;;;x
+tribal_duchy_kurgan_group;Begzate;;;;;;;;;;;;;x
+tribal_kingdom_kurgan_group;Zardom;;;;;;;;;;;;;x
+tribal_empire_kurgan_group;Great Zardom;;;;;;;;;;;;;x
+#Barony;;;;;;;;;;;;;;
+baron_kurgan_group;Chieftain;;;;;;;;;;;;;x
+baron_female_kurgan_group;Chieftess;;;;;;;;;;;;;x
+count_kurgan_group;Tarkan;;;;;;;;;;;;;x
+count_female_kurgan_group;Tarkanum;;;;;;;;;;;;;x
+duke_kurgan_group;Beg;;;;;;;;;;;;;x
+duke_female_kurgan_group;Begum;;;;;;;;;;;;;x
+king_kurgan_group;Zar;;;;;;;;;;;;;x
+king_female_kurgan_group;Zarina;;;;;;;;;;;;;x
+emperor_kurgan_group;Great Zar;;;;;;;;;;;;;x
+emperor_female_kurgan_group;Great Zarina;;;;;;;;;;;;;x
+barony_of_kurgan_group;Chiefdom of;;;;;;;;;;;;;x
+county_of_kurgan_group;Tarkanate of;;;;;;;;;;;;;x
+duchy_of_kurgan_group;Begzate of;;;;;;;;;;;;;x
+kingdom_of_kurgan_group;Zardom of;;;;;;;;;;;;;x
+empire_of_kurgan_group;Great Zardom of;;;;;;;;;;;;;x
+barony_kurgan_group;Chiefdom;;;;;;;;;;;;;x
+county_kurgan_group;Tarkanate;;;;;;;;;;;;;x
+duchy_kurgan_group;Begzate;;;;;;;;;;;;;x
+kingdom_kurgan_group;Zardom;;;;;;;;;;;;;x
+empire_kurgan_group;Great Zardom;;;;;;;;;;;;;x
+#City;;;;;;;;;;;;;;
+city_baron_kurgan_group;Hetman;;;;;;;;;;;;;x
+city_baron_female_kurgan_group;Hetwoman;;;;;;;;;;;;;x
+city_count_kurgan_group;Chief Hetman;;;;;;;;;;;;;x
+city_count_female_kurgan_group;Chief Hetwoman;;;;;;;;;;;;;x
+city_duke_kurgan_group;Beg;;;;;;;;;;;;;x
+city_duke_female_kurgan_group;Begum;;;;;;;;;;;;;x
+city_king_kurgan_group;Zar;;;;;;;;;;;;;x
+city_king_female_kurgan_group;Zarina;;;;;;;;;;;;;x
+city_emperor_kurgan_group;Great Zar;;;;;;;;;;;;;x
+city_emperor_female_kurgan_group;Great Zarina;;;;;;;;;;;;;x
+city_barony_of_kurgan_group;City of;;;;;;;;;;;;;x
+city_county_of_kurgan_group;Great City of;;;;;;;;;;;;;x
+city_duchy_of_kurgan_group;Begzate of;;;;;;;;;;;;;x
+city_kingdom_of_kurgan_group;Zardom of;;;;;;;;;;;;;x
+city_empire_of_kurgan_group;Great Zardom of;;;;;;;;;;;;;x
+city_barony_kurgan_group;City;;;;;;;;;;;;;x
+city_county_kurgan_group;Great City;;;;;;;;;;;;;x
+city_duchy_kurgan_group;Begzate;;;;;;;;;;;;;x
+city_kingdom_kurgan_group;Zardom;;;;;;;;;;;;;x
+city_empire_kurgan_group;Great Zardom;;;;;;;;;;;;;x
+###Hung Group;;;;;;;;;;;;;;
+#Tribal;;;;;;;;;;;;;;
+tribal_baron_hung_group;Chieftain;;;;;;;;;;;;;x
+tribal_baron_female_hung_group;Chieftess;;;;;;;;;;;;;x
+tribal_count_hung_group;Darqan;;;;;;;;;;;;;x
+tribal_count_female_hung_group;Darqanum;;;;;;;;;;;;;x
+tribal_duke_hung_group;Baig;;;;;;;;;;;;;x
+tribal_duke_female_hung_group;Baigum;;;;;;;;;;;;;x
+tribal_king_hung_group;Khan;;;;;;;;;;;;;x
+tribal_king_female_hung_group;Khanum;;;;;;;;;;;;;x
+tribal_emperor_hung_group;Khagan;;;;;;;;;;;;;x
+tribal_emperor_female_hung_group;Khatun;;;;;;;;;;;;;x
+tribal_barony_of_hung_group;Taishi of;;;;;;;;;;;;;x
+tribal_county_of_hung_group;Darqanate of;;;;;;;;;;;;;x
+tribal_duchy_of_hung_group;Aimag of;;;;;;;;;;;;;x
+tribal_kingdom_of_hung_group;Khanate of;;;;;;;;;;;;;x
+tribal_empire_of_hung_group;Khaganate of;;;;;;;;;;;;;x
+tribal_barony_hung_group;Taishi;;;;;;;;;;;;;x
+tribal_county_hung_group;Darqanate;;;;;;;;;;;;;x
+tribal_duchy_hung_group;Aimag;;;;;;;;;;;;;x
+tribal_kingdom_hung_group;Khanate;;;;;;;;;;;;;x
+tribal_empire_hung_group;Khaganate;;;;;;;;;;;;;x
+#Barony;;;;;;;;;;;;;;
+baron_hung_group;Chieftain;;;;;;;;;;;;;x
+baron_female_hung_group;Chieftess;;;;;;;;;;;;;x
+count_hung_group;Darqan;;;;;;;;;;;;;x
+count_female_hung_group;Darqanum;;;;;;;;;;;;;x
+duke_hung_group;Baig;;;;;;;;;;;;;x
+duke_female_hung_group;Baigum;;;;;;;;;;;;;x
+king_hung_group;Khan;;;;;;;;;;;;;x
+king_female_hung_group;Khanum;;;;;;;;;;;;;x
+emperor_hung_group;Khagan;;;;;;;;;;;;;x
+emperor_female_hung_group;Khatun;;;;;;;;;;;;;x
+barony_of_hung_group;Taishi of;;;;;;;;;;;;;x
+county_of_hung_group;Darqanate of;;;;;;;;;;;;;x
+duchy_of_hung_group;Aimag of;;;;;;;;;;;;;x
+kingdom_of_hung_group;Khanate of;;;;;;;;;;;;;x
+empire_of_hung_group;Khaganate of;;;;;;;;;;;;;x
+barony_hung_group;Taishi;;;;;;;;;;;;;x
+county_hung_group;Darqanate;;;;;;;;;;;;;x
+duchy_hung_group;Aimag;;;;;;;;;;;;;x
+kingdom_hung_group;Khanate;;;;;;;;;;;;;x
+empire_hung_group;Khaganate;;;;;;;;;;;;;x
+#City;;;;;;;;;;;;;;
+city_baron_hung_group;Hetman;;;;;;;;;;;;;x
+city_count_hung_group;Chief Hetman;;;;;;;;;;;;;x
+city_duke_hung_group;Baigum;;;;;;;;;;;;;x
+city_king_hung_group;Khan;;;;;;;;;;;;;x
+city_emperor_hung_group;Khagan;;;;;;;;;;;;;x
+city_barony_of_hung_group;City of;;;;;;;;;;;;;x
+city_county_of_hung_group;Great City of;;;;;;;;;;;;;x
+city_duchy_of_hung_group;Hoshun of;;;;;;;;;;;;;x
+city_kingdom_of_hung_group;Hoshun-Khanate of;;;;;;;;;;;;;x
+city_empire_of_hung_group;Hoshun-Khaganate of;;;;;;;;;;;;;x
+city_barony_hung_group;City;;;;;;;;;;;;;x
+city_county_hung_group;Great City;;;;;;;;;;;;;x
+city_duchy_hung_group;Hoshun;;;;;;;;;;;;;x
+city_kingdom_hung_group;Hoshun-Khanate;;;;;;;;;;;;;x
+city_empire_hung_group;Hoshun-Khaganate;;;;;;;;;;;;;x
+###Greenskin Group;;;;;;;;;;;;;;
+##Orc;;;;;;;;;;;;;;
+#Tribal;;;;;;;;;;;;;;
+tribal_baron_orc_group;Chief;;;;;;;;;;;;;x
+tribal_count_orc_group;Boss;;;;;;;;;;;;;x
+tribal_duke_orc_group;Big Boss;;;;;;;;;;;;;x
+tribal_king_orc_group;Warboss;;;;;;;;;;;;;x
+tribal_emperor_orc_group;Warlord;;;;;;;;;;;;;x
+tribal_barony_orc_group;Tribe;;;;;;;;;;;;;x
+tribal_county_orc_group;Clan;;;;;;;;;;;;;x
+tribal_duchy_orc_group;Horde;;;;;;;;;;;;;x
+tribal_kingdom_orc_group;Great Horde;;;;;;;;;;;;;x
+tribal_empire_orc_group;Empire;;;;;;;;;;;;;x
+tribal_barony_of_orc_group;Tribe of;;;;;;;;;;;;;x
+tribal_county_of_orc_group;Clan of;;;;;;;;;;;;;x
+tribal_duchy_of_orc_group;Horde of;;;;;;;;;;;;;x
+tribal_kingdom_of_orc_group;Great Horde of;;;;;;;;;;;;;x
+tribal_empire_of_orc_group;Empire of;;;;;;;;;;;;;x
+#Barony;;;;;;;;;;;;;;
+baron_orc_group;Chief;;;;;;;;;;;;;x
+count_orc_group;Boss;;;;;;;;;;;;;x
+duke_orc_group;Big Boss;;;;;;;;;;;;;x
+king_orc_group;Warboss;;;;;;;;;;;;;x
+emperor_orc_group;Warlord;;;;;;;;;;;;;x
+barony_orc_group;Hold;;;;;;;;;;;;;x
+county_orc_group;Clan;;;;;;;;;;;;;x
+duchy_orc_group;Horde;;;;;;;;;;;;;x
+kingdom_orc_group;Great Horde;;;;;;;;;;;;;x
+empire_orc_group;Empire;;;;;;;;;;;;;x
+barony_of_orc_group;Hold of;;;;;;;;;;;;;x
+county_of_orc_group;Clan of;;;;;;;;;;;;;x
+duchy_of_orc_group;Horde of;;;;;;;;;;;;;x
+kingdom_of_orc_group;Great Horde of;;;;;;;;;;;;;x
+empire_of_orc_group;Empire of;;;;;;;;;;;;;x
+#City;;;;;;;;;;;;;;
+city_baron_orc_group;Runtherder;;;;;;;;;;;;;x
+city_count_orc_group;Chief Runtherder;;;;;;;;;;;;;x
+city_duke_orc_group;Boss;;;;;;;;;;;;;x
+city_king_orc_group;Warboss;;;;;;;;;;;;;x
+city_emperor_orc_group;Warlord;;;;;;;;;;;;;x
+city_barony_of_orc_group;Runtherd of;;;;;;;;;;;;;x
+city_county_of_orc_group;Clan of;;;;;;;;;;;;;x
+city_duchy_of_orc_group;Horde of;;;;;;;;;;;;;x
+city_kingdom_of_orc_group;Great Horde of;;;;;;;;;;;;;x
+city_empire_of_orc_group;Empire of;;;;;;;;;;;;;x
+city_barony_orc_group;Runtherd;;;;;;;;;;;;;x
+city_county_orc_group;Clan;;;;;;;;;;;;;x
+city_duchy_orc_group;Horde;;;;;;;;;;;;;x
+city_kingdom_orc_group;Great Horde;;;;;;;;;;;;;x
+city_empire_orc_group;Empire;;;;;;;;;;;;;x
+##Goblin;;;;;;;;;;;;;;
+#Tribal;;;;;;;;;;;;;;
+tribal_baron_goblin_group;Chief;;;;;;;;;;;;;x
+tribal_count_goblin_group;Boss;;;;;;;;;;;;;x
+tribal_duke_goblin_group;Big Boss;;;;;;;;;;;;;x
+tribal_king_goblin_group;Warboss;;;;;;;;;;;;;x
+tribal_emperor_goblin_group;Warlord;;;;;;;;;;;;;x
+tribal_barony_goblin_group;Tribe;;;;;;;;;;;;;x
+tribal_county_goblin_group;Clan;;;;;;;;;;;;;x
+tribal_duchy_goblin_group;Horde;;;;;;;;;;;;;x
+tribal_kingdom_goblin_group;Great Horde;;;;;;;;;;;;;x
+tribal_empire_goblin_group;Empire;;;;;;;;;;;;;x
+tribal_barony_of_goblin_group;Tribe of;;;;;;;;;;;;;x
+tribal_county_of_goblin_group;Clan of;;;;;;;;;;;;;x
+tribal_duchy_of_goblin_group;Horde of;;;;;;;;;;;;;x
+tribal_kingdom_of_goblin_group;Great Horde of;;;;;;;;;;;;;x
+tribal_empire_of_goblin_group;Empire of;;;;;;;;;;;;;x
+#Barony;;;;;;;;;;;;;;
+baron_goblin_group;Chief;;;;;;;;;;;;;x
+count_goblin_group;Boss;;;;;;;;;;;;;x
+duke_goblin_group;Big Boss;;;;;;;;;;;;;x
+king_goblin_group;Warboss;;;;;;;;;;;;;x
+emperor_goblin_group;Warlord;;;;;;;;;;;;;x
+barony_goblin_group;Hold;;;;;;;;;;;;;x
+county_goblin_group;Clan;;;;;;;;;;;;;x
+duchy_goblin_group;Horde;;;;;;;;;;;;;x
+kingdom_goblin_group;Great Horde;;;;;;;;;;;;;x
+empire_goblin_group;Empire;;;;;;;;;;;;;x
+barony_of_goblin_group;Hold of;;;;;;;;;;;;;x
+county_of_goblin_group;Clan of;;;;;;;;;;;;;x
+duchy_of_goblin_group;Horde of;;;;;;;;;;;;;x
+kingdom_of_goblin_group;Great Horde of;;;;;;;;;;;;;x
+empire_of_goblin_group;Empire of;;;;;;;;;;;;;x
+#City;;;;;;;;;;;;;;
+city_baron_goblin_group;Runtherder;;;;;;;;;;;;;x
+city_count_goblin_group;Chief Runtherder;;;;;;;;;;;;;x
+city_duke_goblin_group;Boss;;;;;;;;;;;;;x
+city_king_goblin_group;Warboss;;;;;;;;;;;;;x
+city_emperor_goblin_group;Warlord;;;;;;;;;;;;;x
+city_barony_of_goblin_group;Runtherd of;;;;;;;;;;;;;x
+city_county_of_goblin_group;Clan of;;;;;;;;;;;;;x
+city_duchy_of_goblin_group;Horde of;;;;;;;;;;;;;x
+city_kingdom_of_goblin_group;Great Horde of;;;;;;;;;;;;;x
+city_empire_of_goblin_group;Empire of;;;;;;;;;;;;;x
+city_barony_goblin_group;Runtherd;;;;;;;;;;;;;x
+city_county_goblin_group;Clan;;;;;;;;;;;;;x
+city_duchy_goblin_group;Horde;;;;;;;;;;;;;x
+city_kingdom_goblin_group;Great Horde;;;;;;;;;;;;;x
+city_empire_goblin_group;Empire;;;;;;;;;;;;;x
+###Halfling;;;;;;;;;;;;;;
+##Mootlander;;;;;;;;;;;;;;
+#Barony;;;;;;;;;;;;;;
+baron_mootlander;Master;;;;;;;;;;;;;x
+baron_female_mootlander;Mistress;;;;;;;;;;;;;x
+count_mootlander;Lord;;;;;;;;;;;;;x
+count_female_mootlander;Lady;;;;;;;;;;;;;x
+duke_mootlander;High Lord;;;;;;;;;;;;;x
+duke_female_mootlander;High Lady;;;;;;;;;;;;;x
+king_mootlander;Elder;;;;;;;;;;;;;x
+king_female_mootlander;Elder;;;;;;;;;;;;;x
+emperor_mootlander;Emperor;;;;;;;;;;;;;x
+emperor_female_mootlander;Empress;;;;;;;;;;;;;x
+barony_of_mootlander;Barony of;;;;;;;;;;;;;x
+county_of_mootlander;County of;;;;;;;;;;;;;x
+duchy_of_mootlander;March of;;;;;;;;;;;;;x
+kingdom_of_mootlander;Grand County of;;;;;;;;;;;;;x
+empire_of_mootlander;Empire of;;;;;;;;;;;;;x
+#City;;;;;;;;;;;;;;
+city_baron_mootlander;Mayor;;;;;;;;;;;;;x
+city_count_mootlander;Lord Mayor;;;;;;;;;;;;;x
+city_duke_mootlander;Kanzler;;;;;;;;;;;;;x
+city_king_mootlander;Bundeskanzler;;;;;;;;;;;;;x
+city_emperor_mootlander;Emperor;;;;;;;;;;;;;x
+city_barony_of_mootlander;City of;;;;;;;;;;;;;x
+city_county_of_mootlander;Free City of;;;;;;;;;;;;;x
+city_duchy_of_mootlander;League of;;;;;;;;;;;;;x
+city_kingdom_of_mootlander;Republic of;;;;;;;;;;;;;x
+city_empire_of_mootlander;Grand Republic of;;;;;;;;;;;;;x
+##Miyan;;;;;;;;;;;;;;
+#Tribal;;;;;;;;;;;;;;
+tribal_baron_miyan;Master;;;;;;;;;;;;;x
+tribal_baron_female_miyan;Mistress;;;;;;;;;;;;;x
+tribal_count_miyan;Chief;;;;;;;;;;;;;x
+tribal_count_female_miyan;Chieftess;;;;;;;;;;;;;x
+tribal_duke_miyan;Prince;;;;;;;;;;;;;x
+tribal_duke_female_miyan;Princess;;;;;;;;;;;;;x
+tribal_king_miyan;King;;;;;;;;;;;;;x
+tribal_king_female_miyan;Queen;;;;;;;;;;;;;x
+tribal_emperor_miyan;High King;;;;;;;;;;;;;x
+tribal_emperor_female_miyan;High Queen;;;;;;;;;;;;;x
+tribal_barony_of_miyan;Tribe of;;;;;;;;;;;;;x
+tribal_county_of_miyan;Chiefdom of;;;;;;;;;;;;;x
+tribal_duchy_of_miyan;Domain of;;;;;;;;;;;;;x
+tribal_kingdom_of_miyan;Great Domain of;;;;;;;;;;;;;x
+tribal_empire_of_miyan;High Domain of;;;;;;;;;;;;;x
+#Barony;;;;;;;;;;;;;;
+baron_miyan;Master;;;;;;;;;;;;;x
+baron_female_miyan;Mistress;;;;;;;;;;;;;x
+count_miyan;Lord;;;;;;;;;;;;;x
+count_female_miyan;Lady;;;;;;;;;;;;;x
+duke_miyan;Prince;;;;;;;;;;;;;x
+duke_female_miyan;Princess;;;;;;;;;;;;;x
+king_miyan;King;;;;;;;;;;;;;x
+king_female_miyan;Queen;;;;;;;;;;;;;x
+emperor_miyan;High King;;;;;;;;;;;;;x
+emperor_female_miyan;High Queen;;;;;;;;;;;;;x
+barony_of_miyan;Stronghold of;;;;;;;;;;;;;x
+county_of_miyan;Chiefdom of;;;;;;;;;;;;;x
+duchy_of_miyan;Domain of;;;;;;;;;;;;;x
+kingdom_of_miyan;Great Domain of;;;;;;;;;;;;;x
+empire_of_miyan;High Domain of;;;;;;;;;;;;;x
+#City;;;;;;;;;;;;;;
+city_baron_miyan;Mayor;;;;;;;;;;;;;x
+city_baron_female_miyan;Mayor;;;;;;;;;;;;;x
+city_count_miyan;Lord Mayor;;;;;;;;;;;;;x
+city_count_female_miyan;Lady Mayor;;;;;;;;;;;;;x
+city_duke_miyan;Prince-Mayor;;;;;;;;;;;;;x
+city_duke_female_miyan;Princess-Mayor;;;;;;;;;;;;;x
+city_king_miyan;Grand Prince;;;;;;;;;;;;;x
+city_king_female_miyan;Grand Princess;;;;;;;;;;;;;x
+city_emperor_miyan;High Prince;;;;;;;;;;;;;x
+city_emperor_female_miyan;High Princess;;;;;;;;;;;;;x
+city_barony_of_miyan;City of;;;;;;;;;;;;;x
+city_county_of_miyan;Great City of;;;;;;;;;;;;;x
+city_duchy_of_miyan;Domain of;;;;;;;;;;;;;x
+city_kingdom_of_miyan;Great Domain of;;;;;;;;;;;;;x
+city_empire_of_miyan;High Domain of;;;;;;;;;;;;;x
+###Dwarf Group;;;;;;;;;;;;;;
+#Dwarf;;;;;;;;;;;;;;
+baron_dwarf_group;Master;;;;;;;;;;;;;x
+baron_female_dwarf_group;Mistress;;;;;;;;;;;;;x
+count_dwarf_group;Lord;;;;;;;;;;;;;x
+count_female_dwarf_group;Lady;;;;;;;;;;;;;x
+duke_dwarf_group;Thane;;;;;;;;;;;;;x
+duke_female_dwarf_group;Thaness;;;;;;;;;;;;;x
+king_dwarf_group;King;;;;;;;;;;;;;x
+king_female_dwarf_group;Queen;;;;;;;;;;;;;x
+emperor_dwarf_group;High King;;;;;;;;;;;;;x
+emperor_female_dwarf_group;High Queen;;;;;;;;;;;;;x
+barony_of_dwarf_group;Stronghold of;;;;;;;;;;;;;x
+county_of_dwarf_group;Hold of;;;;;;;;;;;;;x
+duchy_of_dwarf_group;Thanehold of;;;;;;;;;;;;;x
+kingdom_of_dwarf_group;Kingdom of;;;;;;;;;;;;;x
+empire_of_dwarf_group;Empire of;;;;;;;;;;;;;x
+#City;;;;;;;;;;;;;;
+city_baron_dwarf_group;Mayor;;;;;;;;;;;;;x
+city_baron_female_dwarf_group;Mayor;;;;;;;;;;;;;x
+city_count_dwarf_group;Lord Mayor;;;;;;;;;;;;;x
+city_count_female_dwarf_group;Lady Mayor;;;;;;;;;;;;;x
+city_duke_dwarf_group;Thane-Mayor;;;;;;;;;;;;;x
+city_duke_female_dwarf_group;Thaness-Mayor;;;;;;;;;;;;;x
+city_king_dwarf_group;Prince;;;;;;;;;;;;;x
+city_king_female_dwarf_group;Princess;;;;;;;;;;;;;x
+city_emperor_dwarf_group;Lord Prince;;;;;;;;;;;;;x
+city_emperor_female_dwarf_group;Lady Princess;;;;;;;;;;;;;x
+city_barony_of_dwarf_group;City of;;;;;;;;;;;;;x
+city_county_of_dwarf_group;Great City of;;;;;;;;;;;;;x
+city_duchy_of_dwarf_group;League of;;;;;;;;;;;;;x
+city_kingdom_of_dwarf_group;Domain of;;;;;;;;;;;;;x
+city_empire_of_dwarf_group;Grand Domain of;;;;;;;;;;;;;x
+###Chaos Dwarf Group;;;;;;;;;;;;;;
+#Barony;;;;;;;;;;;;;;
+baron_dwarf_chaos_group;Master;;;;;;;;;;;;;x
+baron_female_dwarf_chaos_group;Mistress;;;;;;;;;;;;;x
+count_dwarf_chaos_group;Lord;;;;;;;;;;;;;x
+count_female_dwarf_chaos_group;Lady;;;;;;;;;;;;;x
+duke_dwarf_chaos_group;Despot;;;;;;;;;;;;;x
+duke_female_dwarf_chaos_group;Despotess;;;;;;;;;;;;;x
+king_dwarf_chaos_group;Overlord;;;;;;;;;;;;;x
+king_female_dwarf_chaos_group;Overlady;;;;;;;;;;;;;x
+emperor_dwarf_chaos_group;High Overlord;;;;;;;;;;;;;x
+emperor_female_dwarf_chaos_group;High Overlady;;;;;;;;;;;;;x
+barony_of_dwarf_chaos_group;Stronghold of;;;;;;;;;;;;;x
+county_of_dwarf_chaos_group;Fortress of;;;;;;;;;;;;;x
+duchy_of_dwarf_chaos_group;Despotate of;;;;;;;;;;;;;x
+kingdom_of_dwarf_chaos_group;Dominion of;;;;;;;;;;;;;x
+empire_of_dwarf_chaos_group;Empire of;;;;;;;;;;;;;x
+#City;;;;;;;;;;;;;;
+city_baron_dwarf_chaos_group;Overseer;;;;;;;;;;;;;x
+city_baron_female_dwarf_chaos_group;Overseer;;;;;;;;;;;;;x
+city_count_dwarf_chaos_group;Master;;;;;;;;;;;;;x
+city_count_female_dwarf_chaos_group;Mistress;;;;;;;;;;;;;x
+city_duke_dwarf_chaos_group;High Master;;;;;;;;;;;;;x
+city_duke_female_dwarf_chaos_group;High Mistress;;;;;;;;;;;;;x
+city_king_dwarf_chaos_group;Great Master;;;;;;;;;;;;;x
+city_king_female_dwarf_chaos_group;Great Mistress;;;;;;;;;;;;;x
+city_emperor_dwarf_chaos_group;Glorious Master;;;;;;;;;;;;;x
+city_emperor_female_dwarf_chaos_group;Glorious Mistress;;;;;;;;;;;;;x
+city_barony_of_dwarf_chaos_group;City of;;;;;;;;;;;;;x
+city_county_of_dwarf_chaos_group;Great City of;;;;;;;;;;;;;x
+city_duchy_of_dwarf_chaos_group;League of;;;;;;;;;;;;;x
+city_kingdom_of_dwarf_chaos_group;Domain of;;;;;;;;;;;;;x
+city_empire_of_dwarf_chaos_group;Grand Domain of;;;;;;;;;;;;;x
+###Asur;;;;;;;;;;;;;;
+#Tribal;;;;;;;;;;;;;;
+tribal_baron_asur_group;Master;;;;;;;;;;;;;x
+tribal_baron_female_asur_group;Mistress;;;;;;;;;;;;;x
+tribal_count_asur_group;Lord;;;;;;;;;;;;;x
+tribal_count_female_asur_group;Lady;;;;;;;;;;;;;x
+tribal_duke_asur_group;Prince;;;;;;;;;;;;;x
+tribal_duke_female_asur_group;Princess;;;;;;;;;;;;;x
+tribal_king_asur_group;High Prince;;;;;;;;;;;;;x
+tribal_king_female_asur_group;High Princess;;;;;;;;;;;;;x
+tribal_emperor_asur_group;High King;;;;;;;;;;;;;x
+tribal_emperor_female_asur_group;High Queen;;;;;;;;;;;;;x
+tribal_barony_of_asur_group;Estate of;;;;;;;;;;;;;x
+tribal_county_of_asur_group;Hold of;;;;;;;;;;;;;x
+tribal_duchy_of_asur_group;March of;;;;;;;;;;;;;x
+tribal_kingdom_of_asur_group;Kingdom of;;;;;;;;;;;;;x
+tribal_empire_of_asur_group;High Kingdom of;;;;;;;;;;;;;x
+#Barony;;;;;;;;;;;;;;
+baron_asur_group;Master;;;;;;;;;;;;;x
+baron_female_asur_group;Mistress;;;;;;;;;;;;;x
+count_asur_group;Lord;;;;;;;;;;;;;x
+count_female_asur_group;Lady;;;;;;;;;;;;;x
+duke_asur_group;Prince;;;;;;;;;;;;;x
+duke_female_asur_group;Princess;;;;;;;;;;;;;x
+king_asur_group;High Prince;;;;;;;;;;;;;x
+king_female_asur_group;High Princess;;;;;;;;;;;;;x
+emperor_asur_group;High King;;;;;;;;;;;;;x
+emperor_female_asur_group;High Queen;;;;;;;;;;;;;x
+barony_of_asur_group;Estate of;;;;;;;;;;;;;x
+county_of_asur_group;Hold of;;;;;;;;;;;;;x
+duchy_of_asur_group;March of;;;;;;;;;;;;;x
+kingdom_of_asur_group;Kingdom of;;;;;;;;;;;;;x
+empire_of_asur_group;High Kingdom of;;;;;;;;;;;;;x
+#City;;;;;;;;;;;;;;
+city_baron_asur_group;Mayor;;;;;;;;;;;;;x
+city_baron_female_asur_group;Mayor;;;;;;;;;;;;;x
+city_count_asur_group;Lord Mayor;;;;;;;;;;;;;x
+city_count_female_asur_group;Lady Mayor;;;;;;;;;;;;;x
+city_duke_asur_group;Prince;;;;;;;;;;;;;x
+city_duke_female_asur_group;Princess;;;;;;;;;;;;;x
+city_king_asur_group;High Prince;;;;;;;;;;;;;x
+city_king_female_asur_group;High Princess;;;;;;;;;;;;;x
+city_emperor_asur_group;Grand Prince;;;;;;;;;;;;;x
+city_emperor_female_asur_group;Grand Princess;;;;;;;;;;;;;x
+city_barony_of_asur_group;City of;;;;;;;;;;;;;x
+city_county_of_asur_group;Grand City of;;;;;;;;;;;;;x
+city_duchy_of_asur_group;League of;;;;;;;;;;;;;x
+city_kingdom_of_asur_group;Principality of;;;;;;;;;;;;;x
+city_empire_of_asur_group;Grand Principality of;;;;;;;;;;;;;x
+###Asrai Group;;;;;;;;;;;;;;
+#Tribal;;;;;;;;;;;;;;
+tribal_baron_asrai_group;Master;;;;;;;;;;;;;x
+tribal_baron_female_asrai_group;Mistress;;;;;;;;;;;;;x
+tribal_count_asrai_group;Lord;;;;;;;;;;;;;x
+tribal_count_female_asrai_group;Lady;;;;;;;;;;;;;x
+tribal_duke_asrai_group;Prince;;;;;;;;;;;;;x
+tribal_duke_female_asrai_group;Princess;;;;;;;;;;;;;x
+tribal_king_asrai_group;High Prince;;;;;;;;;;;;;x
+tribal_king_female_asrai_group;High Princess;;;;;;;;;;;;;x
+tribal_emperor_asrai_group;High King;;;;;;;;;;;;;x
+tribal_emperor_female_asrai_group;High Queen;;;;;;;;;;;;;x
+tribal_barony_of_asrai_group;Ward of;;;;;;;;;;;;;x
+tribal_county_of_asrai_group;Hold of;;;;;;;;;;;;;x
+tribal_duchy_of_asrai_group;March of;;;;;;;;;;;;;x
+tribal_kingdom_of_asrai_group;Kingdom of;;;;;;;;;;;;;x
+tribal_empire_of_asrai_group;High Kingdom of;;;;;;;;;;;;;x
+#Barony;;;;;;;;;;;;;;
+baron_asrai_group;Master;;;;;;;;;;;;;x
+baron_female_asrai_group;Mistress;;;;;;;;;;;;;x
+count_asrai_group;Lord;;;;;;;;;;;;;x
+count_female_asrai_group;Lady;;;;;;;;;;;;;x
+duke_asrai_group;Prince;;;;;;;;;;;;;x
+duke_female_asrai_group;Princess;;;;;;;;;;;;;x
+king_asrai_group;High Prince;;;;;;;;;;;;;x
+king_female_asrai_group;High Princess;;;;;;;;;;;;;x
+emperor_asrai_group;High King;;;;;;;;;;;;;x
+emperor_female_asrai_group;High Queen;;;;;;;;;;;;;x
+barony_of_asrai_group;Ward of;;;;;;;;;;;;;x
+county_of_asrai_group;Hold of;;;;;;;;;;;;;x
+duchy_of_asrai_group;March of;;;;;;;;;;;;;x
+kingdom_of_asrai_group;Kingdom of;;;;;;;;;;;;;x
+empire_of_asrai_group;High Kingdom of;;;;;;;;;;;;;x
+#City;;;;;;;;;;;;;;
+city_baron_asrai_group;Mayor;;;;;;;;;;;;;x
+city_baron_female_asrai_group;Mayor;;;;;;;;;;;;;x
+city_count_asrai_group;High Mayor;;;;;;;;;;;;;x
+city_count_female_asrai_group;High Mayor;;;;;;;;;;;;;x
+city_duke_asrai_group;Prince;;;;;;;;;;;;;x
+city_duke_female_asrai_group;Princess;;;;;;;;;;;;;x
+city_king_asrai_group;High Prince;;;;;;;;;;;;;x
+city_king_female_asrai_group;High Princess;;;;;;;;;;;;;x
+city_emperor_asrai_group;Grand Prince;;;;;;;;;;;;;x
+city_emperor_female_asrai_group;Grand Princess;;;;;;;;;;;;;x
+city_barony_of_asrai_group;City of;;;;;;;;;;;;;x
+city_county_of_asrai_group;Grand City of;;;;;;;;;;;;;x
+city_duchy_of_asrai_group;League of;;;;;;;;;;;;;x
+city_kingdom_of_asrai_group;Principality of;;;;;;;;;;;;;x
+city_empire_of_asrai_group;Grand Principality of;;;;;;;;;;;;;x
+###Druchi Group;;;;;;;;;;;;;;
+#Tribal;;;;;;;;;;;;;;
+tribal_baron_druchi_group;Master;;;;;;;;;;;;;x
+tribal_baron_female_druchi_group;Mistress;;;;;;;;;;;;;x
+tribal_count_druchi_group;Lord;;;;;;;;;;;;;x
+tribal_count_female_druchi_group;Lady;;;;;;;;;;;;;x
+tribal_duke_druchi_group;Vaulkhar;;;;;;;;;;;;;x
+tribal_duke_female_druchi_group;Vaulkhara;;;;;;;;;;;;;x
+tribal_king_druchi_group;Drachau;;;;;;;;;;;;;x
+tribal_king_female_druchi_group;Drachaura;;;;;;;;;;;;;x
+tribal_emperor_druchi_group;High King;;;;;;;;;;;;;x
+tribal_emperor_female_druchi_group;High Queen;;;;;;;;;;;;;x
+tribal_barony_of_druchi_group;Citadel of;;;;;;;;;;;;;x
+tribal_county_of_druchi_group;Hold of;;;;;;;;;;;;;x
+tribal_duchy_of_druchi_group;March of;;;;;;;;;;;;;x
+tribal_kingdom_of_druchi_group;Kingdom of;;;;;;;;;;;;;x
+tribal_empire_of_druchi_group;High Kingdom of;;;;;;;;;;;;;x
+#Barony;;;;;;;;;;;;;;
+baron_druchi_group;Master;;;;;;;;;;;;;x
+baron_female_druchi_group;Mistress;;;;;;;;;;;;;x
+count_druchi_group;Lord;;;;;;;;;;;;;x
+count_female_druchi_group;Lady;;;;;;;;;;;;;x
+duke_druchi_group;Vaulkhar;;;;;;;;;;;;;x
+duke_female_druchi_group;Vaulkhara;;;;;;;;;;;;;x
+king_druchi_group;Drachau;;;;;;;;;;;;;x
+king_female_druchi_group;Drachaura;;;;;;;;;;;;;x
+emperor_druchi_group;High King;;;;;;;;;;;;;x
+emperor_female_druchi_group;High Queen;;;;;;;;;;;;;x
+barony_of_druchi_group;Citadel of;;;;;;;;;;;;;x
+county_of_druchi_group;Hold of;;;;;;;;;;;;;x
+duchy_of_druchi_group;March of;;;;;;;;;;;;;x
+kingdom_of_druchi_group;Kingdom of;;;;;;;;;;;;;x
+empire_of_druchi_group;High Kingdom of;;;;;;;;;;;;;x
+#City;;;;;;;;;;;;;;
+city_baron_druchi_group;Mayor;;;;;;;;;;;;;x
+city_baron_female_druchi_group;Mayor;;;;;;;;;;;;;x
+city_count_druchi_group;Lord Mayor;;;;;;;;;;;;;x
+city_count_female_druchi_group;Lady Mayor;;;;;;;;;;;;;x
+city_duke_druchi_group;Prince;;;;;;;;;;;;;x
+city_duke_female_druchi_group;Princess;;;;;;;;;;;;;x
+city_king_druchi_group;High Prince;;;;;;;;;;;;;x
+city_king_female_druchi_group;High Princess;;;;;;;;;;;;;x
+city_emperor_druchi_group;Grand Prince;;;;;;;;;;;;;x
+city_emperor_female_druchi_group;Grand Princess;;;;;;;;;;;;;x
+###Beastman Group;;;;;;;;;;;;;;
+#Tribal;;;;;;;;;;;;;;
+tribal_baron_beastman_group;Chief;;;;;;;;;;;;;x
+tribal_baron_female_beastman_group;Herdmother;;;;;;;;;;;;;x
+tribal_count_beastman_group;Wargor;;;;;;;;;;;;;x
+tribal_count_female_beastman_group;Gormother;;;;;;;;;;;;;x
+tribal_duke_beastman_group;Hordemaster;;;;;;;;;;;;;x
+tribal_duke_female_beastman_group;Hordemother;;;;;;;;;;;;;x
+tribal_king_beastman_group;Beastlord;;;;;;;;;;;;;x
+tribal_king_female_beastman_group;Beastmother;;;;;;;;;;;;;x
+tribal_emperor_beastman_group;Great Beastlord;;;;;;;;;;;;;x
+tribal_emperor_female_beastman_group;Great Beastmother;;;;;;;;;;;;;x
+tribal_barony_of_beastman_group;Herd of;;;;;;;;;;;;;x
+tribal_county_of_beastman_group;Warherd of;;;;;;;;;;;;;x
+tribal_duchy_of_beastman_group;Horde of;;;;;;;;;;;;;x
+tribal_kingdom_of_beastman_group;Beastherd of;;;;;;;;;;;;;x
+tribal_empire_of_beastman_group;Great Beasthorde of;;;;;;;;;;;;;x
+tribal_barony_beastman_group;Herd;;;;;;;;;;;;;x
+tribal_county_beastman_group;Warherd;;;;;;;;;;;;;x
+tribal_duchy_beastman_group;Horde;;;;;;;;;;;;;x
+tribal_kingdom_beastman_group;Beastherd;;;;;;;;;;;;;x
+tribal_empire_beastman_group;Great Beasthorde;;;;;;;;;;;;;x
+#Barony;;;;;;;;;;;;;;
+baron_beastman_group;Chief;;;;;;;;;;;;;x
+baron_female_beastman_group;Herdmother;;;;;;;;;;;;;x
+count_beastman_group;Wargor;;;;;;;;;;;;;x
+count_female_beastman_group;Gormother;;;;;;;;;;;;;x
+duke_beastman_group;Hordemaster;;;;;;;;;;;;;x
+duke_female_beastman_group;Hordemother;;;;;;;;;;;;;x
+king_beastman_group;Beastlord;;;;;;;;;;;;;x
+king_female_beastman_group;Beastmother;;;;;;;;;;;;;x
+emperor_beastman_group;Great Beastlord;;;;;;;;;;;;;x
+emperor_female_beastman_group;Great Beastmother;;;;;;;;;;;;;x
+barony_of_beastman_group;Herd of;;;;;;;;;;;;;x
+county_of_beastman_group;Warherd of;;;;;;;;;;;;;x
+duchy_of_beastman_group;Horde of;;;;;;;;;;;;;x
+kingdom_of_beastman_group;Beastherd of;;;;;;;;;;;;;x
+empire_of_beastman_group;Empire of;;;;;;;;;;;;;x
+barony_beastman_group;Herd;;;;;;;;;;;;;x
+county_beastman_group;Warherd;;;;;;;;;;;;;x
+duchy_beastman_group;Horde;;;;;;;;;;;;;x
+kingdom_beastman_group;Beastherd;;;;;;;;;;;;;x
+empire_beastman_group;Great Beasthorde;;;;;;;;;;;;;x
+#City;;;;;;;;;;;;;;
+city_baron_beastman_group;Chief;;;;;;;;;;;;;x
+city_baron_female_beastman_group;Herdmother;;;;;;;;;;;;;x
+city_count_beastman_group;Wargor;;;;;;;;;;;;;x
+city_count_female_beastman_group;Gormother;;;;;;;;;;;;;x
+city_duke_beastman_group;Hordemaster;;;;;;;;;;;;;x
+city_duke_female_beastman_group;Hordemother;;;;;;;;;;;;;x
+city_king_beastman_group;Beastlord;;;;;;;;;;;;;x
+city_king_female_beastman_group;Beastmother;;;;;;;;;;;;;x
+city_emperor_beastman_group;Great Beastlord;;;;;;;;;;;;;x
+city_emperor_female_beastman_group;Great Beastmother;;;;;;;;;;;;;x
+city_barony_of_beastman_group;Herd of;;;;;;;;;;;;;x
+city_county_of_beastman_group;Warherd of;;;;;;;;;;;;;x
+city_duchy_of_beastman_group;Horde of;;;;;;;;;;;;;x
+city_kingdom_of_beastman_group;Beastherd of;;;;;;;;;;;;;x
+city_empire_of_beastman_group;Empire of;;;;;;;;;;;;;x
+city_barony_beastman_group;Herd;;;;;;;;;;;;;x
+city_county_beastman_group;Warherd;;;;;;;;;;;;;x
+city_duchy_beastman_group;Horde;;;;;;;;;;;;;x
+city_kingdom_beastman_group;Beastherd;;;;;;;;;;;;;x
+city_empire_beastman_group;Great Beasthorde;;;;;;;;;;;;;x
+###Lizardman Group;;;;;;;;;;;;;;
+#Tribal;;;;;;;;;;;;;;
+tribal_baron_lizardman_group;Brave;;;;;;;;;;;;;x
+tribal_baron_female_lizardman_group;Brave;;;;;;;;;;;;;x
+tribal_count_lizardman_group;Chief;;;;;;;;;;;;;x
+tribal_count_female_lizardman_group;Chief;;;;;;;;;;;;;x
+tribal_duke_lizardman_group;High Chief;;;;;;;;;;;;;x
+tribal_duke_female_lizardman_group;High Chief;;;;;;;;;;;;;x
+tribal_king_lizardman_group;Warchief;;;;;;;;;;;;;x
+tribal_king_female_lizardman_group;Warchief;;;;;;;;;;;;;x
+tribal_emperor_lizardman_group;High Warchief;;;;;;;;;;;;;x
+tribal_emperor_female_lizardman_group;High Warchief;;;;;;;;;;;;;x
+tribal_barony_of_lizardman_group;Tribe of;;;;;;;;;;;;;x
+tribal_county_of_lizardman_group;Chiefdom of;;;;;;;;;;;;;x
+tribal_duchy_of_lizardman_group;High Chiefdom of;;;;;;;;;;;;;x
+tribal_kingdom_of_lizardman_group;Domain of;;;;;;;;;;;;;x
+tribal_empire_of_lizardman_group;High Domain of;;;;;;;;;;;;;x
+tribal_barony_lizardman_group;Tribe;;;;;;;;;;;;;x
+tribal_county_lizardman_group;Chiefdom;;;;;;;;;;;;;x
+tribal_duchy_lizardman_group;High Chiefdom;;;;;;;;;;;;;x
+tribal_kingdom_lizardman_group;Domain;;;;;;;;;;;;;x
+tribal_empire_lizardman_group;High Domain;;;;;;;;;;;;;x
+#Barony;;;;;;;;;;;;;;
+baron_lizardman_group;Brave;;;;;;;;;;;;;x
+baron_female_lizardman_group;Brave;;;;;;;;;;;;;x
+count_lizardman_group;Chief;;;;;;;;;;;;;x
+count_female_lizardman_group;Chief;;;;;;;;;;;;;x
+duke_lizardman_group;High Chief;;;;;;;;;;;;;x
+duke_female_lizardman_group;High Chief;;;;;;;;;;;;;x
+king_lizardman_group;Warchief;;;;;;;;;;;;;x
+king_female_lizardman_group;Warchief;;;;;;;;;;;;;x
+emperor_lizardman_group;High Warchief;;;;;;;;;;;;;x
+emperor_female_lizardman_group;High Warchief;;;;;;;;;;;;;x
+barony_of_lizardman_group;Stronghold of;;;;;;;;;;;;;x
+county_of_lizardman_group;Chiefdom of;;;;;;;;;;;;;x
+duchy_of_lizardman_group;High Chiefdom of;;;;;;;;;;;;;x
+kingdom_of_lizardman_group;Domain of;;;;;;;;;;;;;x
+empire_of_lizardman_group;High Domain of;;;;;;;;;;;;;x
+barony_lizardman_group;Stronghold;;;;;;;;;;;;;x
+county_lizardman_group;Chiefdom;;;;;;;;;;;;;x
+duchy_lizardman_group;High Chiefdom;;;;;;;;;;;;;x
+kingdom_lizardman_group;Domain;;;;;;;;;;;;;x
+empire_lizardman_group;High Domain;;;;;;;;;;;;;x
+#City;;;;;;;;;;;;;;
+city_baron_lizardman_group;Counter;;;;;;;;;;;;;x
+city_count_lizardman_group;Caretaker;;;;;;;;;;;;;x
+city_duke_lizardman_group;High Caretaker;;;;;;;;;;;;;x
+city_king_lizardman_group;Treasurer;;;;;;;;;;;;;x
+city_emperor_lizardman_group;High Treasurer;;;;;;;;;;;;;x
+city_barony_of_lizardman_group;City of;;;;;;;;;;;;;x
+city_county_of_lizardman_group;Great City of;;;;;;;;;;;;;x
+city_duchy_of_lizardman_group;City-Domain of;;;;;;;;;;;;;x
+city_kingdom_of_lizardman_group;Domain of;;;;;;;;;;;;;x
+city_empire_of_lizardman_group;High Domain of;;;;;;;;;;;;;x
+city_barony_lizardman_group;City;;;;;;;;;;;;;x
+city_county_lizardman_group;Great City;;;;;;;;;;;;;x
+city_duchy_lizardman_group;City-Domain;;;;;;;;;;;;;x
+city_kingdom_lizardman_group;Domain;;;;;;;;;;;;;x
+city_empire_lizardman_group;High Domain;;;;;;;;;;;;;x
+###Druchi Group Viceroialties;;;;;;;;;;;;;;
+vice_royalty_baron_druchi_group;Taskmaster;;;;;;;;;;;;;
+vice_royalty_baron_female_druchi_group;Taskmistress;;;;;;;;;;;;;
+vice_royalty_count_druchi_group;Captain;;;;;;;;;;;;;
+vice_royalty_count_female_druchi_group;Captain;;;;;;;;;;;;;
+vice_royalty_duke_druchi_group;Lordling;;;;;;;;;;;;;
+vice_royalty_duke_female_druchi_group;Lordling;;;;;;;;;;;;;
+vice_royalty_king_druchi_group;Dread Lord;;;;;;;;;;;;;
+vice_royalty_king_female_druchi_group;Dread Lady;;;;;;;;;;;;;
+vice_royalty_emperor_druchi_group;High Prince;;;;;;;;;;;;;
+vice_royalty_emperor_female_druchi_group;High Princess;;;;;;;;;;;;;
+vice_royalty_barony_of_druchi_group;Ward of;;;;;;;;;;;;;
+vice_royalty_county_of_druchi_group;Lordship of;;;;;;;;;;;;;
+vice_royalty_duchy_of_druchi_group;High Lordship of;;;;;;;;;;;;;
+vice_royalty_kingdom_of_druchi_group;Principality of;;;;;;;;;;;;;
+vice_royalty_empire_of_druchi_group;High Principality of;;;;;;;;;;;;;

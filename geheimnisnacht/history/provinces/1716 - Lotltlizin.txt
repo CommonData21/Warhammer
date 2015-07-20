@@ -1,0 +1,15 @@
+# c_lotltlizin
+
+# County Title
+title = c_lotltlizin
+
+# Settlements
+max_settlements = 1
+
+b_lotltlizin = tribal
+
+# Misc
+culture = lizardman
+religion = old_ones
+terrain = jungle
+#History

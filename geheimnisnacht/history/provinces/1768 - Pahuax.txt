@@ -1,0 +1,17 @@
+# c_pahuax
+
+# County Title
+title = c_pahuax
+
+# Settlements
+max_settlements = 3
+
+b_pahuax = tribal
+#b_panyauhliz = city
+#b_necatlyo = temple
+
+# Misc
+culture = lizardman
+religion = old_ones
+terrain = jungle
+#History

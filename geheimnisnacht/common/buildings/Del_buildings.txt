@@ -1,0 +1,606 @@
+##Empire unique buildings##
+
+castle={
+	ca_middenheim = {
+		
+		desc = ca_middenheim_desc
+				
+			
+		gold_cost = 1000
+
+		build_time = 3000
+
+		fort_level = 5					
+		
+		knights = 200
+			
+		garrison_size = 1.00
+		
+		ai_creation_factor = 97
+		
+		potential = {
+			FROMFROM = { title = b_middenheim_palast } #
+		}	
+		
+		extra_tech_building_start = 0.2
+	
+	
+
+	}
+
+	ca_altdorf = {
+		
+		desc = ca_altdorf_desc	
+			
+			
+		gold_cost = 1000
+
+		build_time = 3000
+
+		fort_level = 3					
+		
+		knights = 300 			
+		tax_income = 3.00
+		
+		ai_creation_factor = 97
+		
+		potential = {
+			FROMFROM = { title = b_kaiserliche_palast } #
+		}	
+		
+		extra_tech_building_start = 0.2
+	
+	
+
+	}
+
+	ca_nuln = {
+		
+		desc = ca_nuln_desc	
+			
+			
+		gold_cost = 1000
+
+		build_time = 3000
+				
+		
+		gunpowder = 300			
+		tax_income = 2.50
+		
+		ai_creation_factor = 97
+		
+		potential = {
+			FROMFROM = { title = b_festunginsel } #
+		}		
+		
+		extra_tech_building_start = 0.2
+	
+
+	}
+	
+	ca_marienburg = {
+		
+		desc = ca_marienburg_desc	
+			
+			
+		gold_cost = 1000
+
+		build_time = 3000
+				
+		
+		galleys = 30 
+		fort_level = 1.50			
+		tax_income = 6.00
+		
+		ai_creation_factor = 97
+		
+		potential = {
+			FROMFROM = { title = b_rijkers_isle } #
+		}			
+		
+		extra_tech_building_start = 0.2
+	
+	}
+
+	ca_talabheim = {
+		
+		desc = ca_talabheim_desc	
+			
+			
+		gold_cost = 1000
+
+		build_time = 3000
+				
+		
+		fort_level = 4.00 			
+		garrison_size = 1.00
+
+		tax_income = 1.50		
+		ai_creation_factor = 97
+		
+		potential = {
+			FROMFROM = { title = b_dankerood } #
+		}		
+		
+		extra_tech_building_start = 0.2
+	}
+
+	ca_drakenhof = {
+		
+		desc = ca_drakenhof_desc	
+			
+			
+		gold_cost = 1000
+
+		build_time = 3000
+				
+		
+		fort_level = 1.50 					
+		ai_creation_factor = 97
+		
+		potential = {
+			FROMFROM = { title = b_schloss_drakenhof } #
+		}		
+
+		extra_tech_building_start = 0.2
+	}
+	
+	ca_averheim = {
+		
+		desc = ca_averheim_desc	
+			
+			
+		gold_cost = 1000
+
+		build_time = 3000
+				
+		
+		fort_level = 1.50 
+		tax_income = 1.00					
+		ai_creation_factor = 97
+		
+		potential = {
+			FROMFROM = { title = b_averburg } #
+		}		
+
+		extra_tech_building_start = 0.2
+
+	}
+
+	ca_hergig = {
+		
+		desc = ca_hergig_desc	
+			
+			
+		gold_cost = 1000
+
+		build_time = 3000
+				
+		
+		fort_level = 1.50 
+		gunpowder = 50
+		archers = 80					
+		ai_creation_factor = 97
+		
+		potential = {
+			FROMFROM = { title = b_hergig } #
+		}
+
+		extra_tech_building_start = 0.2
+	}
+	
+	ca_wolfenburg = {
+		
+		desc = ca_wolfenburg_desc	
+			
+			
+		gold_cost = 1000
+
+		build_time = 3000
+				
+		
+		fort_level = 2.00 
+		land_morale = 0.2				
+		ai_creation_factor = 97
+		
+		potential = {
+			FROMFROM = { title = b_wolfenburg } #
+		}
+
+		extra_tech_building_start = 0.2
+	}
+		#Gunnery school, provides blackpowder units
+		ca_imperial_gunnery_school_1 = {
+		desc = ca_imperial_gunnery_school_desc
+		trigger = { TECH_CASTLE_CONSTRUCTION = 3 }
+		potential = {
+			culture_group = imperial_group
+			NOT = { culture = sylvanian }
+		}
+		gold_cost = 400
+		build_time = 365
+		gunpowder = 40
+		ai_creation_factor = 80
+
+		extra_tech_building_start = 0.4
+	}
+		ca_imperial_gunnery_school_2 = {
+		desc = ca_imperial_gunnery_school_desc
+		trigger = { TECH_CASTLE_CONSTRUCTION = 4 }
+		potential = {
+			culture_group = imperial_group
+			NOT = { culture = sylvanian }
+		}
+		upgrades_from = ca_imperial_gunnery_school_1
+		gold_cost = 450
+		build_time = 850
+		gunpowder = 60
+		ai_creation_factor = 80
+
+		extra_tech_building_start = 0.8
+	}
+	
+		ca_imperial_gunnery_school_3 = {
+		desc = ca_imperial_gunnery_school_desc
+		trigger = { TECH_CASTLE_CONSTRUCTION = 5 }
+		potential = {
+			culture_group = imperial_group
+			NOT = { culture = sylvanian }
+		}
+		upgrades_from = ca_imperial_gunnery_school_2
+		gold_cost = 600
+		build_time = 1500
+		gunpowder = 100
+		ai_creation_factor = 80
+
+		extra_tech_building_start = 0.8
+	}
+		#Nuln artillery foundry#
+		ca_nuln_artillery_foundry = {
+		desc = ca_nuln_artillery_foundry_desc
+		trigger = { TECH_CASTLE_CONSTRUCTION = 4 }
+		potential = { province_id = 309 } # Nuln
+
+		gold_cost = 2000
+		build_time = 2065
+		artillery = 15
+
+		extra_tech_building_start = 0.8
+	}
+	##Bretonnian unique buildings##
+
+	ca_couronne = {
+		
+		desc = ca_couronne_desc	
+			
+			
+		gold_cost = 1000
+
+		build_time = 3000
+
+		fort_level = 3					
+		
+		knights = 500 			
+		tax_income = 2.50
+		
+		ai_creation_factor = 97
+		
+		potential = {
+			FROMFROM = { title = b_hauteville } #
+		}	
+		
+		extra_tech_building_start = 0.2
+	
+	}
+
+	ca_languille = {
+		
+		desc = ca_languille_desc	
+			
+			
+		gold_cost = 1000
+
+		build_time = 3000
+
+		fort_level = 5					
+					
+		tax_income = 4.00
+		
+		ai_creation_factor = 97
+		
+		potential = {
+			FROMFROM = { title = b_languille } #
+		}	
+		
+		extra_tech_building_start = 0.2
+	
+	}
+
+	ca_brionne = {
+		
+		desc = ca_brionne_desc	
+			
+			
+		gold_cost = 1000
+
+		build_time = 3000
+
+		fort_level = 3.50					
+					
+		galleys = 20
+
+		knights = 200		
+		ai_creation_factor = 97
+		
+		potential = {
+			FROMFROM = { title = b_brionne } #
+		}	
+		
+		extra_tech_building_start = 0.2
+	
+	}
+	
+	ca_lyonesse = {
+		
+		desc = ca_lyonesse_desc	
+			
+			
+		gold_cost = 1000
+
+		build_time = 3000
+
+		fort_level = 4.00					
+							
+		ai_creation_factor = 97
+		
+		potential = {
+			FROMFROM = { title = b_lyonesse } #
+		}	
+		
+		extra_tech_building_start = 0.2
+	
+	}
+	ca_montfort = {
+		
+		desc = ca_montfort_desc	
+			
+			
+		gold_cost = 1000
+
+		build_time = 3000
+
+		fort_level = 6.00
+		tax_income = 2.00					
+							
+		ai_creation_factor = 97
+		
+		potential = {
+			FROMFROM = { title = b_montfort } #
+		}	
+		
+		extra_tech_building_start = 0.2
+	
+	}
+		ca_parravon = {
+		
+		desc = ca_parravon_desc	
+			
+			
+		gold_cost = 1000
+
+		build_time = 3000
+
+		fort_level = 3.00
+		tax_income = 1.50
+		knights = 200					
+							
+		ai_creation_factor = 97
+		
+		potential = {
+			FROMFROM = { title = b_parravon } #
+		}
+		
+		extra_tech_building_start = 0.2
+	
+	}
+	##Kislev unique building##
+		
+		ca_kislev = {
+		
+		desc = ca_kislev_desc	
+			
+			
+		gold_cost = 1000
+
+		build_time = 3000
+
+		fort_level = 2.00
+		land_morale = 0.2
+		knights = 150
+		light_cavalry = 250				
+							
+		ai_creation_factor = 97
+		
+		potential = {
+			FROMFROM = { title = b_zimniy_dvorets } #
+		}
+		
+		extra_tech_building_start = 0.2
+	
+	}	
+
+	##Tomb King buildings##
+
+		ca_the_black_tower = {
+		desc = ca_the_black_tower_desc	
+			
+			
+		gold_cost = 1000
+
+		build_time = 3000
+
+		fort_level = 4.00
+		liege_piety = 2.00
+		heavy_infantry = 200					
+							
+		ai_creation_factor = 97
+		
+		potential = {
+			FROMFROM = { title = b_arkhan } #
+		}
+	
+		extra_tech_building_start = 0.2
+	
+	}
+
+		ca_necropolis_of_khemri = {
+		desc = ca_necropolis_of_khemri_desc	
+			
+			
+		gold_cost = 1000
+
+		build_time = 3000
+
+		fort_level = 3.00
+		liege_prestige = 1.00
+		heavy_infantry = 200
+		light_infantry = 500					
+							
+		ai_creation_factor = 97
+		
+		potential = {
+			FROMFROM = { title = b_khemri } #
+		}
+	
+		extra_tech_building_start = 0.2
+	
+	}
+	
+		ca_lybaras = {
+		desc = ca_lybaras_desc	
+			
+			
+		gold_cost = 1000
+
+		build_time = 3000
+
+		liege_piety = 1.00
+		fort_level = 4.00					
+							
+		ai_creation_factor = 97
+		
+		potential = {
+			FROMFROM = { title = b_lybaras } #
+		}
+	
+		extra_tech_building_start = 0.2
+	
+	}
+}
+##Temple buildings##
+temple={
+
+		tp_the_forge_of_starlight = {
+		desc = tp_the_forge_of_starlight_desc
+		
+		
+			
+		gold_cost = 1000
+		
+		build_time = 3000
+		
+		pikemen_offensive = 0.1
+ 		pikemen_defensive = 0.1
+ 		heavy_infantry_offensive = 0.1
+ 		heavy_infantry_defensive = 0.1
+ 		light_infantry_offensive = 0.1
+ 		light_infantry_defensive = 0.1
+ 		archers_offensive = 0.1
+ 		archers_defensive = 0.1
+		liege_piety = 0.05				
+		ai_creation_factor = 97
+		
+		potential = {
+			FROMFROM = { title = b_ystin_vaul } #
+		}	
+		
+		extra_tech_building_start = 0.2
+		
+
+	}
+}
+##Wood elf buildings##
+tribal = {
+
+	tb_the_oak_of_ages = {		
+		desc = tb_the_oak_of_ages_desc
+				
+			
+		gold_cost = 1000
+
+		build_time = 3000
+
+		fort_level = 8					
+		
+		liege_piety = 2.00
+			
+		garrison_size = 1.00
+		
+		ai_creation_factor = 97
+		
+		potential = {
+			FROMFROM = { title = b_biafyndar } #
+		}		
+		
+		extra_tech_building_start = 0.2
+	
+	
+
+	}
+
+	tb_wydrioth = {		
+		desc = tb_wydrioth_desc
+				
+			
+		gold_cost = 1000
+
+		build_time = 3000
+
+		fort_level = 5					
+					
+		garrison_size = 1.00
+		
+		ai_creation_factor = 97
+		
+		potential = {
+			FROMFROM = { title = b_findol } #
+		}	
+		
+		extra_tech_building_start = 0.2
+	
+	
+
+	}
+
+	tb_cavaroc = {		
+		desc = tb_cavaroc_desc
+				
+			
+		gold_cost = 1000
+
+		build_time = 3000
+		light_cavalry = 250
+
+		horse_archers = 250		
+		ai_creation_factor = 97
+		
+		potential = {
+			FROMFROM = { title = b_equos } #
+		}		
+		
+		extra_tech_building_start = 0.2
+	
+	
+
+	}
+}

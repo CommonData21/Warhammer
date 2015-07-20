@@ -1,0 +1,17 @@
+# c_saphai
+
+# County Title
+title = c_saphai
+
+# Settlements
+max_settlements = 3
+
+b_scelo = tribal
+#b_scinc = city
+#b_gurru = temple
+
+# Misc
+culture = lizardman_lost
+religion = old_ones
+
+#History

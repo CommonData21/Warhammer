@@ -1,0 +1,15 @@
+# c_nochlicuil
+
+# County Title
+title = c_nochlicuil
+
+# Settlements
+max_settlements = 1
+
+b_nochlicuil = tribal
+
+# Misc
+culture = lizardman
+religion = old_ones
+terrain = jungle
+#History

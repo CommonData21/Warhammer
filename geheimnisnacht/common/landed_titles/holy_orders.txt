@@ -1,0 +1,869 @@
+
+######Holy Orders
+
+###Ulric
+
+d_knights_of_the_white_wolf = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	#graphical_culture = holygfx
+	
+	capital = 274 #Middenheim
+
+	religion = ulrican
+	culture = middenlander
+	
+	title = "GRANDMASTER"
+	foa = "GRANDMASTER_FOA"
+
+	holy_order = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+	
+	monthly_income = 3
+	
+	mercenary_type = d_knights_of_the_white_wolf_modifier
+}
+
+d_order_of_the_howling_wolf = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	#graphical_culture = holygfx
+	
+	capital = 274 #Middenheim
+
+	religion = ulrican
+	culture = middenlander
+	
+	title = "GRANDMASTER"
+	foa = "GRANDMASTER_FOA"
+
+	holy_order = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	monthly_income = 3
+	
+	mercenary_type = d_order_of_the_howling_wolf_modifier
+}
+
+d_order_of_the_winter_throne = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	#graphical_culture = holygfx
+	
+	capital = 274 #Middenheim
+
+	religion = ulrican
+	culture = middenlander
+	
+	title = "GRANDMASTER"
+	foa = "GRANDMASTER_FOA"
+
+	holy_order = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	monthly_income = 3
+	
+	mercenary_type = d_order_of_the_winter_throne_modifier
+}
+
+d_ragnarhalt = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	#graphical_culture = holygfx
+
+	capital = 70 #Olricstaad
+
+	religion = ulrican
+	culture = nordlander
+	
+	title = "GRANDMASTER"
+	foa = "GRANDMASTER_FOA"
+
+	holy_order = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	monthly_income = 3
+	
+	mercenary_type = d_ragnarhalt_modifier
+}
+
+
+###Sigmar
+
+d_knights_of_sigmars_blood = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	#graphical_culture = holygfx
+	
+	capital = 299 #Altdorf
+
+	religion = sigmarite
+	culture = reiklander
+	
+	title = "GRANDMASTER"
+	foa = "GRANDMASTER_FOA"
+
+	holy_order = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	monthly_income = 3
+	
+	mercenary_type = d_knights_of_sigmars_blood_modifier
+}
+
+d_templars_of_sigmar = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	#graphical_culture = holygfx
+	
+	capital = 299 #Altdorf
+
+	religion = sigmarite
+	culture = reiklander
+	
+	title = "GRANDMASTER"
+	foa = "GRANDMASTER_FOA"
+
+	holy_order = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	monthly_income = 3
+	
+	mercenary_type = d_templars_of_sigmar_modifier
+}
+
+d_knights_griffon = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	#graphical_culture = holygfx
+	
+	capital = 309 #Nuln
+
+	religion = sigmarite
+	culture = wissenlander
+	
+	title = "GRANDMASTER"
+	foa = "GRANDMASTER_FOA"
+
+	holy_order = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	monthly_income = 3
+	
+	mercenary_type = d_knights_griffon_modifier
+}
+
+
+d_knights_of_the_broken_sword = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	#graphical_culture = holygfx
+	
+	capital = 357 #Averheim
+
+	religion = sigmarite
+	culture = averlander
+	
+	title = "GRANDMASTER"
+	foa = "GRANDMASTER_FOA"
+
+	holy_order = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	monthly_income = 3
+	
+	mercenary_type = d_knights_of_the_broken_sword_modifier
+}
+
+
+d_knights_of_the_cleansing_flame = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	#graphical_culture = holygfx
+	
+	capital = 357 #Averheim
+
+	religion = sigmarite
+	culture = averlander
+	
+	title = "GRANDMASTER"
+	foa = "GRANDMASTER_FOA"
+
+	holy_order = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+	
+	monthly_income = 3
+	
+	mercenary_type = d_knights_of_the_cleansing_flame_modifier
+}
+
+d_knights_of_the_fiery_heart = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	#graphical_culture = holygfx
+	
+	capital = 333 # c_krugenheim
+
+	religion = sigmarite
+	culture = talabeclander
+	
+	title = "GRANDMASTER"
+	foa = "GRANDMASTER_FOA"
+
+	holy_order = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	monthly_income = 3
+	
+	mercenary_type = d_knights_of_the_fiery_heart_modifier
+}
+
+d_sisters_of_sigmar = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	#graphical_culture = holygfx
+	
+	capital = 370 #Mordheim
+
+	religion = sigmarite
+	culture = ostermarker
+	
+	title = "HIGH_PATRIARCH"
+	title_female = "HIGH_MATRIARCH"
+
+	holy_order = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	monthly_income = 3
+	
+	mercenary_type = d_sisters_of_sigmar_modifier
+}
+
+d_sisters_of_faith_and_chastity = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	#graphical_culture = holygfx
+	
+	capital = 299 #Altdorf
+
+	religion = sigmarite
+	culture = ostermarker
+	
+	title = "HIGH_PATRIARCH"
+	title_female = "HIGH_MATRIARCH"
+
+	holy_order = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+	
+	monthly_income = 3
+	
+	mercenary_type = d_sisters_of_faith_and_chastity_modifier
+}
+
+###Myrmidia
+
+d_knights_of_the_blazing_sun = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	#graphical_culture = holygfx
+	
+	capital = 324 # c_talabheim
+
+	religion = myrmidian
+	culture = talabeclander
+	
+	title = "GRANDMASTER"
+	foa = "GRANDMASTER_FOA"
+
+	holy_order = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+	
+	monthly_income = 3
+	
+	mercenary_type = d_knights_of_the_blazing_sun_modifier
+}
+
+d_order_of_the_eagle = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	capital = 553 #Magritta
+
+	religion = myrmidian
+	culture = avilian
+	
+	title = "GRANDMASTER"
+	foa = "GRANDMASTER_FOA"
+
+	holy_order = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+	
+	monthly_income = 3
+	
+	mercenary_type = d_order_of_the_eagle_modifier
+}
+
+d_order_of_the_righteous_spear = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	#graphical_culture = holygfx
+	
+	capital = 553 #Magritta
+
+	religion = myrmidian
+	culture = obregonese
+	
+	title = "GRANDMASTER"
+	foa = "GRANDMASTER_FOA"
+
+	holy_order = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	monthly_income = 3
+	
+	mercenary_type = d_order_of_the_righteous_spear_modifier
+}
+
+d_order_of_fury = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	#graphical_culture = holygfx
+	
+	capital = 553 #Magritta
+
+	religion = myrmidian
+	culture = astur
+	
+	title = "GRANDMASTER"
+	foa = "GRANDMASTER_FOA"
+
+	holy_order = yes
+	landless = yes
+	primary = yes
+	independent = yes
+
+	monthly_income = 3
+	
+	mercenary_type = d_order_of_fury_modifier
+}
+
+d_knights_of_the_everlasting_light = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	#graphical_culture = holygfx
+	
+	capital = 366 #Bechafen
+
+	religion = myrmidian
+	culture = ostermarker
+	
+	title = "GRANDMASTER"
+	foa = "GRANDMASTER_FOA"
+
+	holy_order = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	monthly_income = 3
+	
+	mercenary_type = d_knights_of_the_everlasting_light_modifier
+}
+
+d_knights_panther = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	#graphical_culture = holygfx
+	
+	capital = 553 #Magritta
+
+	religion = myrmidian
+	culture = astur
+	
+	title = "GRANDMASTER"
+	foa = "GRANDMASTER_FOA"
+
+	holy_order = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	monthly_income = 3
+	
+	mercenary_type = d_knights_panther_modifier
+}
+
+d_order_of_sword_and_scale = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	#graphical_culture = holygfx
+	
+	capital = 553 #Magritta
+
+	religion = myrmidian
+	culture = astur
+	
+	title = "GRANDMASTER"
+	foa = "GRANDMASTER_FOA"
+
+	holy_order = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	monthly_income = 3
+	
+	mercenary_type = d_order_of_sword_and_scale_modifier
+}
+
+d_knights_of_the_gold_lion = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	#graphical_culture = holygfx
+	
+	capital = 309 #Nuln
+
+	religion = myrmidian
+	culture = wissenlander
+	
+	title = "GRANDMASTER"
+	foa = "GRANDMASTER_FOA"
+
+	holy_order = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	monthly_income = 3
+	
+	mercenary_type = d_knights_of_the_gold_lion_modifier
+}
+
+###Taal
+
+d_knights_of_the_black_rose = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	#graphical_culture = holygfx
+	
+	capital = 343 #Wurtbad
+
+	religion = taalite
+	culture = stirlander
+	
+	title = "GRANDMASTER"
+	foa = "GRANDMASTER_FOA"
+
+	holy_order = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	monthly_income = 3
+	
+	mercenary_type = d_knights_of_the_black_rose_modifier
+}
+
+d_longshanks = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	#graphical_culture = holygfx
+	
+	capital = 324 # c_talabheim
+
+	religion = taalite
+	culture = talabeclander
+	
+	title = "GRANDMASTER"
+	foa = "GRANDMASTER_FOA"
+
+	holy_order = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	monthly_income = 3
+	
+	mercenary_type = d_longshanks_modifier
+}
+
+d_horned_hunters = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	#graphical_culture = holygfx
+	
+	capital = 324 # c_talabheim
+
+	religion = taalite
+	culture = talabeclander
+	
+	title = "GRANDMASTER"
+	foa = "GRANDMASTER_FOA"
+
+	holy_order = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	monthly_income = 3
+	
+	mercenary_type = d_horned_hunters_modifier
+}
+
+d_order_of_the_raven = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	#graphical_culture = holygfx
+	
+	capital = 375 #Sternieste
+
+	religion = taalite
+	culture = stirlander
+	
+	title = "GRANDMASTER"
+	foa = "GRANDMASTER_FOA"
+
+	holy_order = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	monthly_income = 3
+	
+	mercenary_type = d_order_of_the_raven_modifier
+}
+
+d_knights_of_taals_fury = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	#graphical_culture = holygfx
+	
+	capital = 375 #Sternieste
+
+	religion = taalite
+	culture = stirlander
+	
+	title = "GRANDMASTER"
+	foa = "GRANDMASTER_FOA"
+
+	holy_order = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	monthly_income = 3
+	
+	mercenary_type = d_knights_of_taals_fury_modifier
+}
+
+### Grail
+
+d_knights_of_origo = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	#graphical_culture = holygfx
+	
+	capital = 1021 #Fyrus
+
+	religion = grail
+	culture = breton
+	
+	title = "GRANDMASTER"
+	foa = "GRANDMASTER_FOA"
+
+	holy_order = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	monthly_income = 3
+	
+	mercenary_type = d_knights_of_origo_modifier
+}
+
+d_knights_of_the_lily = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	#graphical_culture = holygfx
+	
+	capital = 844 #Bastonne
+
+	religion = grail
+	culture = breton
+	
+	title = "GRANDMASTER"
+	foa = "GRANDMASTER_FOA"
+
+	holy_order = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	monthly_income = 3
+	
+	mercenary_type = d_knights_of_the_lily_modifier
+}
+
+d_knights_of_our_lady_of_battle = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	#graphical_culture = holygfx
+	
+	capital = 884 #Quenelles
+
+	religion = grail
+	culture = breton
+	
+	title = "GRANDMASTER"
+	foa = "GRANDMASTER_FOA"
+
+	holy_order = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	monthly_income = 3
+	
+	mercenary_type = d_knights_of_our_lady_of_battle_modifier
+}
+
+###Manann
+
+d_knights_mariner = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	#graphical_culture = holygfx
+	
+	capital = 222 #Marienburg
+
+	religion = manannite
+	culture = westerlander
+	
+	title = "GRANDMASTER"
+	foa = "GRANDMASTER_FOA"
+
+	holy_order = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	monthly_income = 3
+	
+	mercenary_type = d_knights_mariner_modifier
+}
+
+d_sons_of_manann = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	#graphical_culture = holygfx
+	
+	capital = 222 #Marienburg
+
+	religion = manannite
+	culture = westerlander
+	
+	title = "GRANDMASTER"
+	foa = "GRANDMASTER_FOA"
+
+	holy_order = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	monthly_income = 3
+	
+	mercenary_type = d_sons_of_manann_modifier
+}
+
+###Dwarf
+
+d_dragon_company = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	#graphical_culture = holygfx
+	
+	capital = 451 #Karaz-a-Karak
+
+	allow = {
+		religion_group = dwarf_gods_group
+	}
+	
+	religion = ancestor_gods
+	culture = dwarf_main
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	monthly_income = 3
+	
+	mercenary_type = d_dragon_company_modifier
+}
+
+d_slayer_legion = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	#graphical_culture = holygfx
+	
+	capital = 451 #Karaz-a-Karak
+
+	allow = {
+		religion_group = dwarf_gods_group
+	}
+	
+	religion = ancestor_gods
+	culture = dwarf_main
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	mercenary = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	monthly_income = 3
+	
+	mercenary_type = d_slayer_legion_modifier
+}
+
+#Asur
+
+
+d_shining_guard = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	#graphical_culture = holygfx
+	
+	capital = 1492 # Lothern
+
+	religion = cadai
+	culture = eatainian
+	
+	title = "GRANDMASTER"
+	foa = "GRANDMASTER_FOA"
+
+	holy_order = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	monthly_income = 3
+	
+	mercenary_type = d_shining_guard_modifier
+}
+
+d_fortress_of_dawn = {
+	color={ 160 160 160 }
+	color2={ 255 255 255 }
+	
+	#graphical_culture = holygfx
+	
+	capital = 1492 # Lothern
+
+	religion = cadai
+	culture = eatainian
+	
+	title = "GRANDMASTER"
+	foa = "GRANDMASTER_FOA"
+
+	holy_order = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	monthly_income = 3
+	
+	mercenary_type = d_fortress_of_dawn_modifier
+}
+
+##### Old Ones
+d_chameleon_skinks = {
+	color={ 233 40 40 }
+	color2={ 40 233 40 }
+	
+	#graphical_culture = holygfx
+	
+	capital = 1754 # Itza
+
+	religion = old_ones
+	culture = lizardman
+	
+	title = "GRANDMASTER"
+	foa = "GRANDMASTER_FOA"
+
+	holy_order = yes
+	landless = yes	
+	primary = yes	
+	independent = yes
+
+	monthly_income = 3
+	
+	mercenary_type = d_chameleon_skinks_modifier
+}

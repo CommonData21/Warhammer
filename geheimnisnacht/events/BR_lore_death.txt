@@ -1,0 +1,55 @@
+# namespace = death
+
+# character_event = {
+	# id = death.0
+	# title = SPELLCASTING
+	# desc = darkmagic0 #The spell has expired and the troops and flag are removed
+	# picture = "GFX_evt_miscast"
+	# hide_window = yes
+	
+	# is_triggered_only = yes
+	
+	# option = {
+	# name = OK
+	# clr_character_flag = cast_spirit_leech
+	# disband_event_forces = spirit_leech_troops
+	# }
+	
+	# }
+
+	
+# #doom_and_darkness
+# character_event = {
+	# id = death.1
+	# title = SPELLCASTING
+	# desc = darkmagic0 #The spell has expired and the troops and flag are removed
+	# picture = "GFX_evt_miscast"
+	# hide_window = yes
+	
+	# is_triggered_only = yes
+	
+	# option = {
+	# name = OK
+	# clr_character_flag = cast_doom_and_darkness
+	# disband_event_forces = doom_and_darkness_troops
+	# }
+	
+	# }
+	
+# #purple sun of xereus
+# character_event = {
+	# id = death.2
+	# title = SPELLCASTING
+	# desc = darkmagic0 #The spell has expired and the troops and flag are removed
+	# picture = "GFX_evt_miscast"
+	# hide_window = yes
+	
+	# is_triggered_only = yes
+	
+	# option = {
+	# name = OK
+	# clr_character_flag = cast_purple_sun_of_xereus
+	# disband_event_forces = purple_sun_of_xereus_troops
+	# }
+	
+	# }

@@ -1,0 +1,53 @@
+# namespace = metal
+
+# character_event = {
+	# id = metal.0
+	# title = SPELLCASTING
+	# desc = darkmagic0 #The spell has expired and the troops and flag are removed
+	# picture = "GFX_evt_miscast"
+	# hide_window = yes
+	
+	# is_triggered_only = yes
+	
+	# option = {
+	# name = OK
+	# clr_character_flag = cast_searing_doom
+	# disband_event_forces = searing_doom_troops
+	# }
+	
+	# }
+
+	
+# character_event = {
+	# id = metal.1
+	# title = SPELLCASTING
+	# desc = darkmagic0 #The spell has expired and the troops and flag are removed
+	# picture = "GFX_evt_miscast"
+	# hide_window = yes
+	
+	# is_triggered_only = yes
+	
+	# option = {
+	# name = OK
+	# clr_character_flag = cast_gehennas_golden_hounds
+	# disband_event_forces = gehennas_golden_hounds_troops
+	# }
+	
+	# }
+	
+# character_event = {
+	# id = metal.2
+	# title = SPELLCASTING
+	# desc = darkmagic0 #The spell has expired and the troops and flag are removed
+	# picture = "GFX_evt_miscast"
+	# hide_window = yes
+	
+	# is_triggered_only = yes
+	
+	# option = {
+	# name = OK
+	# clr_character_flag = cast_final_transmutation
+	# disband_event_forces = final_transmutation_troops
+	# }
+	
+	# }

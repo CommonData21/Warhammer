@@ -1,0 +1,16 @@
+# c_zanziar
+
+# County Title
+title = c_zanziar
+
+# Settlements
+max_settlements = 2
+
+b_zanziar = castle
+b_klath_kheir = city
+
+# Misc
+culture = ganethi
+religion = cytharai
+
+#History

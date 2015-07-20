@@ -1,0 +1,192 @@
+namespace = witchhunter_initiation
+
+character_event = {
+	id = witchhunter_initiation.0
+	desc = EVTDESC_WITCHHUNTER_INITIATION_0 #The witch hunters do good work. I should help them  root out evil.
+	picture = GFX_evt_crusaders
+	border = GFX_event_normal_frame_religion
+	
+	min_age = 16
+	max_age = 45
+	only_capable = yes
+	prisoner = no
+	
+	trigger = {
+		is_ruler = no
+		religion_group = old_world_group
+		trait = zealous
+		NOT= { trait = mutation_minor }
+		NOT= { trait = mutation_major }
+		NOT= { trait = mutation_massive }
+		NOT= { trait = magic_potential_1 }
+		NOT= { trait = magic_potential_2 }
+		NOT= { trait = magic_potential_3 }
+		NOT= { trait = magic_potential_4 } 
+	}
+	
+	mean_time_to_happen = {
+		years = 100
+		modifier = {
+			factor = 0.5
+			trait = celibate
+		}
+		modifier = {
+			factor = 0.25
+			trait = paranoid
+		}
+		modifier = {
+			factor = 0.25
+			trait = lunatic_3
+		}
+		modifier = {
+			factor = 0.5
+			trait = lunatic_2
+		}
+		modifier = {
+			factor = 0.75
+			trait = lunatic_1
+		}
+		modifier = {
+			factor = 0.75
+			trait = chaste
+		}
+		modifier = {
+			factor = 0.75
+			NOT = { age = 25 }
+		}
+		modifier = {
+			factor = 1.5
+			trait = slothful
+		}
+		modifier = {
+			factor = 2.0
+			trait = lustful
+		}
+		modifier = {
+			factor = 2.0
+			trait = cynical
+		}
+		modifier = {
+			factor = 2.0
+			trait = hedonist
+		}
+		modifier = {
+			factor = 2.0
+			trait = ambitious
+		}
+		modifier = {
+			factor = 2.0
+			any_heir_title = {
+				always = yes
+			}
+		}
+		modifier = {
+			factor = 2.0
+			is_primary_heir = yes
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_WITCHHUNTER_INITIATION_0 # Ask to go
+		ai_chance = {
+			factor = 100
+		}
+		liege = {
+			character_event = {
+				id = witchhunter_initiation.1
+			}
+		}
+	}
+	option = {
+		name = EVTOPTB_WITCHHUNTER_INITIATION_0 # It's a bad idea
+	}
+}
+
+# Son or brother asks to join the Knights Templar
+character_event = {
+	id = witchhunter_initiation.1
+	desc = EVTDESC_WITCHHUNTER_INITIATION_1 #My [GetFromRelation], [From.GetTitledFirstName], has requested to join the Knights Templar in their struggle against the infidel, even though this will forever disinherit him.
+	picture = GFX_evt_crusaders
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_WITCHHUNTER_INITIATION_1 #Go with my blessing.
+		ai_chance = {
+			factor = 100
+		}
+		
+		change_variable = { which = suspicion value = -1.0 }
+		
+		FROM = {
+			character_event = {
+				id = witchhunter_initiation.2 
+				tooltip = EVTTOOLTIP_WITCHHUNTER_INITIATION_1A #[This.GetTitledFirstName] becomes a Witch Hunter.
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_WITCHHUNTER_INITIATION_1 #Absolutely not!
+		
+		change_variable = { which = suspicion value = 1.0 }
+		
+		FROM = {
+			character_event = {
+				id = witchhunter_initiation.3
+				tooltip = EVTTOOLTIP_WITCHHUNTER_INITIATION_1B #[This.GetTitledFirstName] is disappointed.
+			}
+		}
+	}
+}
+
+# Son or brother joins the witch hunters
+character_event = {
+	id = witchhunter_initiation.2
+	desc = EVTDESC_WITCHHUNTER_INITIATION_2 #[This.GetTitledFirstName] becomes a witch hunter.
+	picture = GFX_evt_crusaders
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EXCELLENT
+		religion_head = {
+			ROOT = {
+				move_character = PREV
+				add_trait = witch_hunter
+				if = {
+					limit = { trait = in_hiding }
+					remove_trait = in_hiding
+					clr_character_flag = do_not_disturb
+					add_character_modifier = {
+						name = went_out_of_hiding_timer
+						duration = 180
+						hidden = yes
+					}
+				}
+			}
+		}
+	}
+}
+
+
+# Liege refuses request to join the witch hunter
+character_event = {
+	id = witchhunter_initiation.3
+	desc = EVTDESC_WITCHHUNTER_INITIATION_3
+	picture = GFX_evt_crusaders
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_WITCHHUNTER_INITIATION_3
+		
+		opinion = {
+			who = FROM
+			modifier = opinion_refused_request_holy_order
+		}
+	}
+}

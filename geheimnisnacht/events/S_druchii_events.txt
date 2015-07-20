@@ -1,0 +1,935 @@
+namespace = druchiiinv
+#####################################
+#####################################
+
+
+# Umbrella event when started the preparation for an invasion (Druchii)
+character_event = {
+	id = druchiiinv.1
+	hide_window = yes
+	
+	trigger = { has_character_modifier = preparing_ulthuan_invasion }	#the chain stops when the modifier expires
+	is_triggered_only = yes 
+	
+	immediate= {
+			
+		random_list = { 30 = { 
+					character_event = { id = druchiiinv.6 days = 40 random = 15 } }	#Some troops
+				20 = { 
+					modifier = {
+						factor = 1.25
+						martial = 15
+						}
+					modifier = {
+						factor = 1.25
+						martial = 20
+						}
+					modifier = {
+						factor = 1.25
+						diplomacy = 15
+						}
+					modifier = {
+						factor = 1.25
+						diplomacy = 20
+						}
+					modifier = {
+						factor = 1.25
+						prestige = 1000
+						}
+					modifier = {
+						factor = 0.75
+						NOT = { martial = 10 }
+						}
+					modifier = {
+						factor = 0.5
+						NOT = { martial = 7 }
+						}
+					modifier = {
+						factor = 0.75
+						NOT = { diplomacy = 10 }
+						}
+					modifier = {
+						factor = 0.5
+						NOT = { diplomacy = 7 }
+						}
+					modifier = {
+						factor = 0.5
+						NOT = { prestige = 100 }
+						}
+					character_event = { id = druchiiinv.5 days = 40 random = 15 } }	#Famous Commander
+				10 = { 
+					modifier = {
+						factor = 1.25
+						martial = 15
+						}
+					modifier = {
+						factor = 1.25
+						martial = 20
+						}
+					modifier = {
+						factor = 1.25
+						diplomacy = 15
+						}
+					modifier = {
+						factor = 1.25
+						diplomacy = 20
+						}
+					modifier = {
+						factor = 1.25
+						prestige = 1000
+						}
+					modifier = {
+						factor = 0.75
+						NOT = { martial = 10 }
+						}
+					modifier = {
+						factor = 0.5
+						NOT = { martial = 7 }
+						}
+					modifier = {
+						factor = 0.75
+						NOT = { diplomacy = 10 }
+						}
+					modifier = {
+						factor = 0.5
+						NOT = { diplomacy = 7 }
+						}
+					modifier = {
+						factor = 0.5
+						NOT = { prestige = 100 }
+						}
+					character_event = { id = druchiiinv.4 days = 40 random = 15 } }	#More troops
+				40 = { 
+					character_event = { id = druchiiinv.1 days = 40 random = 15 } }	#repeat each month until expirement
+				}
+	}
+}
+
+# Ulthuan is under attack!
+character_event = {
+	id = druchiiinv.2
+	desc = { text = EVTDESCA_druchiiinv.2
+		trigger = { religion_group = cadai_group }
+		}
+	desc = { text = EVTDESCB_druchiiinv.2
+		trigger = { religion_group = cytharai_group }
+		}
+
+	picture = GFX_evt_ulthuan_war
+	border = GFX_event_normal_frame_war
+	
+	is_triggered_only = yes
+	
+	option = {
+		trigger = { religion_group = cadai_group }
+		name = EVTOPTAdruchiiinv.2	
+	}
+	option = {
+		trigger = { religion_group = cytharai_group }
+		name = EVTOPTBdruchiiinv.2
+	}
+}
+# You waited to long
+character_event = {
+	id = druchiiinv.3
+	desc = { text = EVTDESCA_druchiiinv.3
+		trigger = { religion_group = cadai_group }
+		}
+	desc = { text = EVTDESCB_druchiiinv.3
+		trigger = { religion_group = cytharai_group }
+		}
+	picture = GFX_evt_ulthuan_war
+	border = GFX_event_normal_frame_war
+	
+	trigger = { NOT = { any_war = { using_cb = ulthuan_invasion } } }	#If you start the war, the event won't pop up
+
+	is_triggered_only = yes
+	
+	option = {
+		trigger = { religion_group = cadai_group }
+		name = EVTOPTAdruchiiinv.3
+		disband_event_forces = prepared_invasion
+		clr_character_flag = preparing_druchii_invasion 
+		prestige = -1000	
+		add_character_modifier = { modifier = attempted_ulthuan_invasion
+						duration = 3650 }
+	}
+	option = {
+		trigger = { religion_group = cytharai_group }
+		name = EVTOPTBdruchiiinv.3
+		disband_event_forces = prepared_invasion
+		clr_character_flag = preparing_druchii_invasion 
+		prestige = -1000
+		add_character_modifier = { modifier = attempted_ulthuan_invasion
+						duration = 3650 }
+		
+	}
+}
+
+
+# Troops flock to your banner
+# The target character is in FROM
+character_event = {
+	id = druchiiinv.4
+	desc = { text = EVTDESCA_druchiiinv.4
+		trigger = { religion_group = cadai_group }
+		}
+	desc = { text = EVTDESCB_druchiiinv.4
+		trigger = { religion_group = cytharai_group }
+		}
+	trigger = { has_character_modifier = preparing_ulthuan_invasion }	#the chain stops when the modifier expires
+
+	picture = GFX_evt_ulthuan_war
+	border = GFX_event_normal_frame_war
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTBdruchiiinv.4
+		capital_scope = {
+			ROOT = {
+				spawn_unit = {
+					province = PREV
+					owner = ROOT
+					match_character = ROOT
+					match_mult = 0.01
+					earmark = prepared_invasion
+					attrition = 1.0
+				}
+				spawn_fleet = {
+					province = closest
+					owner = ROOT
+					match_character = ROOT
+					match_mult = 0.01
+					match_min = 7
+					earmark = prepared_invasion
+				}
+			}
+		}
+	hidden_tooltip = {
+			
+		random_list = { 30 = { 
+					character_event = { id = druchiiinv.6 days = 40 random = 15 } }	#Some troops
+				20 = { 
+					modifier = {
+						factor = 1.25
+						martial = 15
+						}
+					modifier = {
+						factor = 1.25
+						martial = 20
+						}
+					modifier = {
+						factor = 1.25
+						diplomacy = 15
+						}
+					modifier = {
+						factor = 1.25
+						diplomacy = 20
+						}
+					modifier = {
+						factor = 1.25
+						prestige = 1000
+						}
+					modifier = {
+						factor = 0.75
+						NOT = { martial = 10 }
+						}
+					modifier = {
+						factor = 0.5
+						NOT = { martial = 7 }
+						}
+					modifier = {
+						factor = 0.75
+						NOT = { diplomacy = 10 }
+						}
+					modifier = {
+						factor = 0.5
+						NOT = { diplomacy = 7 }
+						}
+					modifier = {
+						factor = 0.5
+						NOT = { prestige = 100 }
+						}
+					character_event = { id = druchiiinv.5 days = 40 random = 15 } }	#Famous Commander
+				10 = { 
+					modifier = {
+						factor = 1.25
+						martial = 15
+						}
+					modifier = {
+						factor = 1.25
+						martial = 20
+						}
+					modifier = {
+						factor = 1.25
+						diplomacy = 15
+						}
+					modifier = {
+						factor = 1.25
+						diplomacy = 20
+						}
+					modifier = {
+						factor = 1.25
+						prestige = 1000
+						}
+					modifier = {
+						factor = 0.75
+						NOT = { martial = 10 }
+						}
+					modifier = {
+						factor = 0.5
+						NOT = { martial = 7 }
+						}
+					modifier = {
+						factor = 0.75
+						NOT = { diplomacy = 10 }
+						}
+					modifier = {
+						factor = 0.5
+						NOT = { diplomacy = 7 }
+						}
+					modifier = {
+						factor = 0.5
+						NOT = { prestige = 100 }
+						}
+					character_event = { id = druchiiinv.4 days = 40 random = 15 } }	#More troops
+				40 = { 
+					character_event = { id = druchiiinv.1 days = 40 random = 15 } }	#repeat each month until expirement
+				}
+		}
+	}
+}
+
+# A hero and his retinue appear in your court
+# The target character is in FROM
+character_event = {
+	id = druchiiinv.5
+	desc = { text = EVTDESCA_druchiiinv.5
+		trigger = { religion_group = cadai_group }
+		}
+	desc = { text = EVTDESCB_druchiiinv.5
+		trigger = { religion_group = cytharai_group }
+		}
+	picture = GFX_evt_ulthuan_war
+	border = GFX_event_normal_frame_war
+	trigger = { has_character_modifier = preparing_ulthuan_invasion }	#the chain stops when the modifier expires
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTBdruchiiinv.5
+		capital_scope = {
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				religion = ROOT
+				culture = ROOT
+				female = no
+				age = 30
+				attributes = {
+					martial = 8
+				}
+				trait = brave
+				trait = zealous
+				trait = brilliant_strategist
+				trait = holy_warrior
+			}
+			new_character = {
+				spawn_unit = {
+					province = PREV
+					owner = ROOT
+					match_character = ROOT
+					match_mult = 0.015
+					earmark = prepared_invasion
+					attrition = 1.0
+				}
+			}
+		}
+		
+		spawn_fleet = {
+			province = closest
+			owner = ROOT
+			match_character = ROOT
+			match_mult = 0.15
+			match_min = 10
+			earmark = prepared_invasion
+		}
+	hidden_tooltip = {
+			
+		random_list = { 30 = { 
+					character_event = { id = druchiiinv.6 days = 40 random = 15 } }	#Some troops
+				20 = { 
+					modifier = {
+						factor = 1.25
+						martial = 15
+						}
+					modifier = {
+						factor = 1.25
+						martial = 20
+						}
+					modifier = {
+						factor = 1.25
+						diplomacy = 15
+						}
+					modifier = {
+						factor = 1.25
+						diplomacy = 20
+						}
+					modifier = {
+						factor = 1.25
+						prestige = 1000
+						}
+					modifier = {
+						factor = 0.75
+						NOT = { martial = 10 }
+						}
+					modifier = {
+						factor = 0.5
+						NOT = { martial = 7 }
+						}
+					modifier = {
+						factor = 0.75
+						NOT = { diplomacy = 10 }
+						}
+					modifier = {
+						factor = 0.5
+						NOT = { diplomacy = 7 }
+						}
+					modifier = {
+						factor = 0.5
+						NOT = { prestige = 100 }
+						}
+					character_event = { id = druchiiinv.5 days = 40 random = 15 } }	#Famous Commander
+				10 = { 
+					modifier = {
+						factor = 1.25
+						martial = 15
+						}
+					modifier = {
+						factor = 1.25
+						martial = 20
+						}
+					modifier = {
+						factor = 1.25
+						diplomacy = 15
+						}
+					modifier = {
+						factor = 1.25
+						diplomacy = 20
+						}
+					modifier = {
+						factor = 1.25
+						prestige = 1000
+						}
+					modifier = {
+						factor = 0.75
+						NOT = { martial = 10 }
+						}
+					modifier = {
+						factor = 0.5
+						NOT = { martial = 7 }
+						}
+					modifier = {
+						factor = 0.75
+						NOT = { diplomacy = 10 }
+						}
+					modifier = {
+						factor = 0.5
+						NOT = { diplomacy = 7 }
+						}
+					modifier = {
+						factor = 0.5
+						NOT = { prestige = 100 }
+						}
+					character_event = { id = druchiiinv.4 days = 40 random = 15 } }	#More troops
+				40 = { 
+					character_event = { id = druchiiinv.1 days = 40 random = 15 } }	#repeat each month until expirement
+				}
+		}
+	}
+}
+
+# A smaller force arrives for the invasion
+# The target character is in FROM
+character_event = {
+	id = druchiiinv.6
+	desc = { text = EVTDESCA_druchiiinv.6
+		trigger = { religion_group = cadai_group }
+		}
+	desc = { text = EVTDESCB_druchiiinv.6
+		trigger = { religion_group = cytharai_group }
+		}
+	picture = GFX_evt_ulthuan_war
+	border = GFX_event_normal_frame_war
+	trigger = { has_character_modifier = preparing_ulthuan_invasion }	#the chain stops when the modifier expires
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTBdruchiiinv.6
+		capital_scope = {
+			ROOT = {
+				spawn_unit = {
+					province = PREV
+					owner = ROOT
+					match_character = ROOT
+					match_mult = 0.0075
+					earmark = prepared_invasion
+					attrition = 1.0
+				}
+				spawn_fleet = {
+					province = closest
+					owner = ROOT
+					match_character = ROOT
+					match_mult = 0.0075
+					match_min = 5
+					earmark = prepared_invasion
+				}
+			}
+		}
+	hidden_tooltip = {
+			
+		random_list = { 30 = { 
+					character_event = { id = druchiiinv.6 days = 40 random = 15 } }	#Some troops
+				20 = { 
+					modifier = {
+						factor = 1.25
+						martial = 15
+						}
+					modifier = {
+						factor = 1.25
+						martial = 20
+						}
+					modifier = {
+						factor = 1.25
+						diplomacy = 15
+						}
+					modifier = {
+						factor = 1.25
+						diplomacy = 20
+						}
+					modifier = {
+						factor = 1.25
+						prestige = 1000
+						}
+					modifier = {
+						factor = 0.75
+						NOT = { martial = 10 }
+						}
+					modifier = {
+						factor = 0.5
+						NOT = { martial = 7 }
+						}
+					modifier = {
+						factor = 0.75
+						NOT = { diplomacy = 10 }
+						}
+					modifier = {
+						factor = 0.5
+						NOT = { diplomacy = 7 }
+						}
+					modifier = {
+						factor = 0.5
+						NOT = { prestige = 100 }
+						}
+					character_event = { id = druchiiinv.5 days = 40 random = 15 } }	#Famous Commander
+				10 = { 
+					modifier = {
+						factor = 1.25
+						martial = 15
+						}
+					modifier = {
+						factor = 1.25
+						martial = 20
+						}
+					modifier = {
+						factor = 1.25
+						diplomacy = 15
+						}
+					modifier = {
+						factor = 1.25
+						diplomacy = 20
+						}
+					modifier = {
+						factor = 1.25
+						prestige = 1000
+						}
+					modifier = {
+						factor = 0.75
+						NOT = { martial = 10 }
+						}
+					modifier = {
+						factor = 0.5
+						NOT = { martial = 7 }
+						}
+					modifier = {
+						factor = 0.75
+						NOT = { diplomacy = 10 }
+						}
+					modifier = {
+						factor = 0.5
+						NOT = { diplomacy = 7 }
+						}
+					modifier = {
+						factor = 0.5
+						NOT = { prestige = 100 }
+						}
+					character_event = { id = druchiiinv.4 days = 40 random = 15 } }	#More troops
+				40 = { 
+					character_event = { id = druchiiinv.1 days = 40 random = 15 } }	#repeat each month until expirement
+				}
+		}
+	}
+}
+
+# Stupid AI, attack!
+character_event = {
+	id = druchiiinv.7
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		e_ulthuan = {
+				holder_scope = {
+					ROOT = {
+						war = {
+							casus_belli = ulthuan_invasion
+							target = PREVPREV # The top liege of the owner of the province
+							thirdparty_title = PREV # The de jure kingdom
+						}
+					}
+				}
+			}
+	}
+}
+
+# Feed to nauglir - (Jailer)
+character_event = {
+	id = druchiiinv.8
+	desc = EVTDESCA_druchiiinv.8
+	picture = GFX_evt_nauglir
+	border = GFX_event_normal_frame_war
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTAdruchiiinv.8	
+		any_vassal = { limit = { NOT = { trait = brave }
+					NOT = { trait = quick }
+					NOT = { trait = genius }
+					}
+				opinion = { modifier = opinion_scared_into_submission
+						who = ROOT }
+			 }
+		any_courtier = { limit = { NOT = { trait = brave }
+					NOT = { trait = quick }
+					NOT = { trait = genius }
+					is_ruler = no
+					}
+				opinion = { modifier = opinion_scared_into_submission
+						who = ROOT }
+			 }
+	}
+}
+
+# Feed to nauglir - (Victim)
+character_event = {
+	id = druchiiinv.9
+	desc = EVTDESCA_druchiiinv.9
+	picture = GFX_evt_nauglir
+	border = GFX_event_normal_frame_war
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTAdruchiiinv.9	
+	}
+}
+# Feed to dragon - (Jailer)
+character_event = {
+	id = druchiiinv.10
+	desc = EVTDESCA_druchiiinv.10
+	picture = GFX_evt_dragon
+	border = GFX_event_normal_frame_war
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTAdruchiiinv.10	
+		any_vassal = { limit = { NOT = { trait = brave }
+					NOT = { trait = quick }
+					NOT = { trait = genius }
+					}
+				opinion = { modifier = opinion_scared_into_submission
+						who = ROOT }
+			 }
+		any_courtier = { limit = { NOT = { trait = brave }
+					NOT = { trait = quick }
+					NOT = { trait = genius }
+					}
+				opinion = { modifier = opinion_scared_into_submission
+						who = ROOT }
+			 }
+	}
+}
+
+# Feed to dragon - (Victim)
+character_event = {
+	id = druchiiinv.11
+	desc = EVTDESCA_druchiiinv.11
+	picture = GFX_evt_dragon
+	border = GFX_event_normal_frame_war
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTAdruchiiinv.11	
+	}
+}
+# Feed to gryphon - (Jailer)
+character_event = {
+	id = druchiiinv.12
+	desc = EVTDESCA_druchiiinv.12
+	picture = GFX_evt_gryphon
+	border = GFX_event_normal_frame_war
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTAdruchiiinv.12	
+		any_vassal = { limit = { NOT = { trait = brave }
+					NOT = { trait = quick }
+					NOT = { trait = genius }
+					}
+				opinion = { modifier = opinion_scared_into_submission
+						who = ROOT }
+			 }
+		any_courtier = { limit = { NOT = { trait = brave }
+					NOT = { trait = quick }
+					NOT = { trait = genius }
+					}
+				opinion = { modifier = opinion_scared_into_submission
+						who = ROOT }
+			 }
+	}
+}
+
+# Feed to gryphon - (Victim)
+character_event = {
+	id = druchiiinv.13
+	desc = EVTDESCA_druchiiinv.13
+	picture = GFX_evt_gryphon
+	border = GFX_event_normal_frame_war
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTAdruchiiinv.13	
+	}
+}
+
+# Feed to wyvern - (Jailer)
+character_event = {
+	id = druchiiinv.12005
+	desc = EVTDESCA_druchiiinv.12005
+	picture = GFX_evt_wyvern
+	border = GFX_event_normal_frame_war
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTAdruchiiinv.12005	
+		any_vassal = { limit = { NOT = { trait = brave }
+					NOT = { trait = quick }
+					NOT = { trait = genius }
+					}
+				opinion = { modifier = opinion_scared_into_submission
+						who = ROOT }
+			 }
+		any_courtier = { limit = { NOT = { trait = brave }
+					NOT = { trait = quick }
+					NOT = { trait = genius }
+					}
+				opinion = { modifier = opinion_scared_into_submission
+						who = ROOT }
+			 }
+	}
+}
+
+# Feed to wyvern - (Victim)
+character_event = {
+	id = druchiiinv.13005
+	desc = EVTDESCA_druchiiinv.13005
+	picture = GFX_evt_wyvern
+	border = GFX_event_normal_frame_war
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTAdruchiiinv.13005	
+	}
+}
+
+# Malekith dies (ping)
+character_event = {
+	id = druchiiinv.14
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	trigger = { trait = malekith }
+
+	immediate = {
+		killer = { long_character_event = { id = druchiiinv.15 } }
+	}
+}
+
+# Malekith dies (killer)
+long_character_event = {
+	id = druchiiinv.15
+	title = EVTTITLE_druchiiinv.15
+	desc = { text = EVTDESCA_druchiiinv.15
+		trigger = { is_female  = yes
+				OR = { has_character_modifier = magic_power_1
+					has_character_modifier = magic_power_2
+					has_character_modifier = magic_power_3
+					has_character_modifier = magic_power_4 } }
+		}
+	desc = { text = EVTDESCB_druchiiinv.15
+		trigger = { is_female  = no
+				OR = { has_character_modifier = magic_power_1
+					has_character_modifier = magic_power_2
+					has_character_modifier = magic_power_3
+					has_character_modifier = magic_power_4 } }
+		}
+	desc = { text = EVTDESCC_druchiiinv.15
+		trigger = { NOT = { has_character_modifier = magic_power_1
+					has_character_modifier = magic_power_2
+					has_character_modifier = magic_power_3
+					has_character_modifier = magic_power_4 } }
+		}
+	picture = GFX_evt_malekith
+	border = GFX_event_normal_frame_war
+	
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTAdruchiiinv.15
+		prestige = 500
+	}
+}
+
+# Malekith cracks on factions
+character_event = {
+	id = druchiiinv.16
+	desc = EVTDESCA_druchiiinv.16
+	picture = GFX_evt_malekith
+	border = GFX_event_normal_frame_war
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTAdruchiiinv.16
+	}
+}
+
+# A Druchii is under Malekith, not hiding his magical capabilities
+character_event = {
+	id = druchiiinv.17
+	hide_window = yes
+	
+	men_only = yes
+	capable_only = yes
+	
+	trigger = {
+		trait = creature_elf
+		is_female = no
+		NOT = { trait = in_hiding }
+		NOT = { trait = malekith }
+		independent = no
+		top_liege = { trait = malekith }
+		OR = { trait = magic_potential_1
+			trait = magic_potential_2
+			trait = magic_potential_3
+			trait = magic_potential_4
+			has_character_modifier = magic_power_1
+			has_character_modifier = magic_power_2
+			has_character_modifier = magic_power_3
+			has_character_modifier = magic_power_4 }	
+		}
+	mean_time_to_happen = { months = 60
+				modifier = {
+					factor = 3
+					trait = magic_potential_1
+					}
+				modifier = {
+					factor = 2
+					trait = magic_potential_2
+					}
+				modifier = {
+					factor = 1.75
+					trait = magic_potential_3
+					}
+				modifier = {
+					factor = 1.5
+					trait = magic_potential_4
+					}
+				modifier = {
+					factor = 1.25
+					has_character_modifier = magic_power_1
+					}
+				modifier = {
+					factor = 0.75
+					has_character_modifier = magic_power_2
+					}
+				modifier = {
+					factor = 0.5
+					has_character_modifier = magic_power_3
+					}
+				modifier = {
+					factor = 0.25
+					has_character_modifier = magic_power_4
+					}
+
+				 }
+	immediate = {
+		character_event = { id = druchiiinv.18 }
+	}
+}
+
+character_event = {
+	id = druchiiinv.18
+	desc = { text = EVTDESCA_druchiiinv.18
+		trigger = { FROM = { father = { NOT = { character = ROOT } } } } }
+	desc = { text = EVTDESCB_druchiiinv.18
+		trigger = { FROM = { father = { character = ROOT } } } }
+	picture = GFX_evt_malekith
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTAdruchiiinv.18
+		trigger = { FROM = { father = { NOT = { character = ROOT } } } }
+		character_event = { id = druchiiinv.19 }
+	}
+	option = {
+		name = EVTOPTBdruchiiinv.18
+		trigger = { FROM = { father = { character = ROOT } } }
+		character_event = { id = druchiiinv.19 }
+	}
+}
+
+character_event = {
+	id = druchiiinv.19
+	desc = EVTDESCA_druchiiinv.19
+	picture = GFX_evt_malekith
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTAdruchiiinv.19
+		death = { death_reason = death_execution }
+	}
+}

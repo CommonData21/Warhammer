@@ -1,0 +1,53 @@
+# namespace = fire
+
+# character_event = {
+	# id = fire.0
+	# title = SPELLCASTING
+	# desc = darkmagic0 #The spell has expired and the troops and flag are removed
+	# picture = "GFX_evt_miscast"
+	# hide_window = yes
+	
+	# is_triggered_only = yes
+	
+	# option = {
+	# name = OK
+	# clr_character_flag = cast_fireball
+	# disband_event_forces = fireball_troops
+	# }
+	
+	# }
+
+	
+# character_event = {
+	# id = fire.1
+	# title = SPELLCASTING
+	# desc = darkmagic0 #The spell has expired and the troops and flag are removed
+	# picture = "GFX_evt_miscast"
+	# hide_window = yes
+	
+	# is_triggered_only = yes
+	
+	# option = {
+	# name = OK
+	# clr_character_flag = cast_piercing_bolts_of_burning
+	# disband_event_forces = piercing_bolts_of_burning_troops
+	# }
+	
+	# }
+	
+# character_event = {
+	# id = fire.2
+	# title = SPELLCASTING
+	# desc = darkmagic0 #The spell has expired and the troops and flag are removed
+	# picture = "GFX_evt_miscast"
+	# hide_window = yes
+	
+	# is_triggered_only = yes
+	
+	# option = {
+	# name = OK
+	# clr_character_flag = cast_flame_storm
+	# disband_event_forces = flame_storm_troops
+	# }
+	
+	# }

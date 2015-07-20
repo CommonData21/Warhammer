@@ -1,0 +1,733 @@
+namespace = undividedcultist
+
+#Cultist Menu - undivided#
+character_event = {
+id = undividedcultist.1
+    desc = EVTDESCUNDIVIDEDCULTIST.1 # The Dark Gods of Chaos demand that you do their bidding. What service shall you render the Ruinous Powers? Once you've completed your task, you will need to wait 1000 days before undertaking another, so as to not arouse suspicion. 
+    picture = "GFX_evt_undivided"
+    min_age = 16
+    capable_only = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = EVTOPTUNDIVIDEDCULTIST.1.a # I will donate to our cult's coffers.
+	trigger = { wealth = 100 }
+	wealth = -100
+	set_character_flag = cultist_cooldown
+	random_playable_ruler = { 
+	limit = { has_character_flag = hidden_undivided_cultist3 }
+	wealth = 100
+	character_event = { id = undividedcultist.3 }
+	}
+	change_variable = { which = undividedfavor value = 2 }  
+	character_event = { id = undividedcultist.2 days = 1000 }	
+	299 = {  change_variable = { which = undividedcultpower value = 1 } }
+	}
+	
+	option = {
+	name = EVTOPTUNDIVIDEDCULTIST.1.b # What would it take to perform the Rite of Blasphemous Offering?
+	trigger = { 
+	NOT = { num_of_prisoners = 8 }
+	}
+	character_event = { id = undividedcultist.6 }
+	}
+	
+	option = {
+	name = EVTOPTUNDIVIDEDCULTIST.1.c # Prepare to initiate the Rite of Blasphemous Offering!
+	trigger = { 
+	num_of_prisoners = 8
+	higher_tier_than = BARON
+	has_character_flag = hidden_cultist_undivided3
+	}
+	set_character_flag = cultist_cooldown
+	character_event = { id = undividedcultist.7 }
+	character_event = { id = undividedcultist.2 days = 1000 }
+	}
+	
+	option = {
+	name = nurglecultist1A #How do I summon a demonic host and wreak havoc on the world?
+	trigger = {
+	AND = {
+	age = 16
+	NOT = { has_character_flag = hidden_cultist_undivided3 }
+	}
+	}	
+	character_event = { id = undividedcultist.13 }
+	}
+	
+	option = {
+	name = nurglecultist1B #Openly turn to chaos, and summon a demonic host!
+	trigger = {
+	AND = {
+	prisoner = no
+	age = 16
+	has_character_flag = hidden_cultist_undivided3
+	NOT = { has_character_flag = summonedundividedhost }
+	higher_tier_than = BARON
+	OR = {
+	trait = ambitious
+	trait = lunatic_3
+	trait = lunatic_2
+	trait = zealous
+	ai = no
+	}
+	}
+	}
+	character_event = { id = undividedcultist.14 }
+	}	
+
+	option = { 
+	name = EVTOPTUNDIVIDEDCULTIST.1.d # Show more choices / Close Menu
+	}
+	
+	}
+	
+character_event = {
+id = undividedcultist.2
+    desc = EVTDESCUNDIVIDEDCULTIST.2 # It has been some time since you've performed your last service for the Dark Gods. It should be safe to undertake another service for them without arousing too much suspicion...
+    picture = "GFX_evt_undivided"
+    min_age = 16
+    capable_only = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = EXCELLENT
+	clr_character_flag = cultist_cooldown
+	}
+	
+	}
+	
+
+#a random playable ruler that is level 3 cultist gets the donation#
+character_event = {
+id = undividedcultist.3
+    desc = EVTDESCUNDIVIDEDCULTIST.3 # A fellow servant of Chaos has given you some money in recognition of all you have done in the name of the Dark Gods. Use these funds bring Chaos Undivided even greater glory!
+    picture = "GFX_evt_undivided"
+    min_age = 16
+    capable_only = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = EXCELLENT
+	}
+	
+	}
+
+##Now for the events where you get promoted inside the cult##
+character_event = {
+id = undividedcultist.4
+    desc = EVTDESCUNDIVIDEDCULTIST.4 # Your service to the Dark Gods has been recognized by others in their service. You are no longer a mere Acolyte, but a Magus in the cult of Chaos Undivided. Congratulations! 
+    picture = "GFX_evt_undivided"
+    min_age = 16
+    capable_only = yes
+	
+	trigger = {
+	check_variable = { which = undividedfavor value = 5 }
+	NOT = { has_character_flag = hidden_cultist_undivided2 }
+	}
+	
+	mean_time_to_happen = {
+	days = 30
+	}
+	
+	option = {
+	name = I_LIVE_TO_SERVE
+	clr_character_flag = hidden_cultist_undivided
+	set_character_flag = hidden_cultist_undivided2
+	}
+	
+	}
+	
+character_event = {
+id = undividedcultist.5
+    desc = EVTDESCUNDIVIDEDCULTIST.5 # You have reached even higher into the cult's hierarchy, and you are now considered a High-Magus of Chaos Undivided. Congratulations! 
+    picture = "GFX_evt_undivided"
+    min_age = 16
+    capable_only = yes
+	
+	trigger = {
+	check_variable = { which = undividedfavor value = 10 }
+	NOT = { has_character_flag = hidden_cultist_undivided3 }
+	}
+	
+	mean_time_to_happen = {
+	days = 30
+	}
+	
+	option = {
+	name = I_LIVE_TO_SERVE
+	clr_character_flag = hidden_cultist_undivided2
+	set_character_flag = hidden_cultist_undivided3
+	}
+	
+	}	
+	
+character_event = {
+id = undividedcultist.6
+    desc = EVTDESCUNDIVIDEDCULTIST.6 # The Rite of Blasphemous Offering requires that you be a High-Magus of Chaos Undivided and have eight prisoners of noble blood ready for sacrifice. Once the rite is completed, the winds of chaos will be strengthened and you will be granted the favour of the Dark Gods. 
+    picture = "GFX_evt_cultist"
+    min_age = 16
+    capable_only = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = I_SEE # I see.
+	}
+	
+	}
+	
+character_event = {
+id = undividedcultist.7
+    desc = EVTDESCUNDIVIDEDCULTIST.7 # You are a a High-Magus of Chaos Undivided and have eight prisoners of noble blood in your dungeons, which means you have everything you need to perform the Rite of Blasphemous Offering. Shall we gather other servants of the Dark Gods so we can perform this ritual? 
+    picture = "GFX_evt_cultist"
+    min_age = 16
+    capable_only = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = NATURALLY # Naturally!
+	set_character_flag = hosting_undivided_rite
+	change_variable = { which = suspicion value = 2 } 
+	any_playable_ruler = {
+	limit = {
+	age = 15
+	culture_group = ROOT
+	OR = {
+	has_character_flag = hidden_cultist_undivided
+	has_character_flag = hidden_cultist_undivided2
+	has_character_flag = hidden_cultist_undivided3	
+	}
+	}
+	character_event = { id = undividedcultist.8 days = 7 }
+	}
+	}
+
+	
+	option = {
+	name = NO_NOT_RIGHT_NOW
+	}
+	
+	
+	}
+character_event = {
+id = undividedcultist.8
+    desc = EVTDESCUNDIVIDEDCULTIST.8 # [From.GetBestName], a High-Magus of Chaos Undivided, has invited you to take part in the Rite of Blasphemous Offering! By ritually sacrificing eight highborn prisoners the winds of chaos will grow stronger and all in attendance will gain favour with the Dark Gods. 
+    picture = "GFX_evt_cultist"
+    min_age = 16
+    capable_only = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = CERTAINLY_I_SHALL_ATTEND # Certainly I shall attend!
+	set_character_flag = attending_undivided_rite
+	change_variable = { which = suspicion value = 2 } 
+	FROM = { character_event = { id = undividedcultist.9 } }
+	}
+	
+	option = {
+	name = NO_IM_EHH_BUSY
+	change_variable = { which = undividedfavor value = -2 }
+	}
+	
+	}
+	
+character_event = {
+id = undividedcultist.9
+    desc = EVTDESCUNDIVIDEDCULTIST.9 # I shall join you in your ritual. May we all be blessed in the sight of Gods of Chaos! 
+    picture = "GFX_evt_cultist"
+    min_age = 16
+    capable_only = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = EXCELLENT
+	}
+	
+	}
+	
+##Grand Rite begins for host##
+character_event = {
+id = undividedcultist.10
+    desc = EVTDESCUNDIVIDEDCULTIST.10 # At a grand gala in a secure location, you begin the Rite of Blasphemous Offering. Your prisoners are brought forth, and to the cheers of the crowd, profane symbols are carved into their flesh. Before long the prisoners are possessed by daemons who scream blaspheme after blaspheme before slitting their own throats. The Dark Gods will be pleased today! 
+    picture = "GFX_evt_cultist"
+    min_age = 16
+    capable_only = yes
+	
+	trigger = { 
+	age = 16
+	has_character_flag = hosting_undivided_rite
+	}
+	
+	mean_time_to_happen = {
+	days = 30
+	}
+	
+	option = {
+	name = EVTOPTUNDIVIDEDCULTIST.10.a # All hail the Dark Gods!
+	1 = { change_variable = { which = "doom_counter" value = 5 } }
+	clr_character_flag = hosting_undivided_rite
+	change_variable = { which = undividedfavor value = 2 } 
+	random_list = {
+	33 = { change_intrigue = 2 }
+	33 = { change_intrigue = 3 }
+	33 = { 
+	change_intrigue = 4
+	add_trait = mutation_minor
+	}
+	}
+	any_courtier= {
+	limit = {
+	prisoner = yes
+	age = 16
+	}
+	character_event = { id = undividedcultist.11 }
+	}
+	}
+	
+	}
+	
+	#prisoner is informed#
+	character_event = {
+    id = undividedcultist.11
+    title = CULTIST_SACRIFICE # Cultist Sacrifice!
+    desc = EVTDESCUNDIVIDEDCULTIST.11 # One night your are dragged out of your cell and taken to a great gala. You soon realize you are surrounded by cultists of the Ruinous Powers as they begin force carving symbols into your flesh! You feel a daemon take control of your body as they use your tongue to utter blasphemes against [Root.Religion.GetRandomGodNameCap] before they kill you!
+    picture = "GFX_evt_cultist"
+
+	is_triggered_only = yes	
+	
+	option = {
+	name = NOOOOOO # Noooooo!
+			if ={
+	limit = {
+		trait = carstein_ring
+	}
+	character_event = {
+		id = carstein.13 days = 1
+	}
+	break = yes
+}
+
+		if = {
+ limit = {
+ trait = khemri_tomb_king }
+
+			character_event = {
+ id = snehekharan.1 days = 1 }
+	
+			break = yes 
+}
+		
+death = {
+				death_reason = death_execution
+				killer = PREV
+			}
+		}
+		
+		}
+		
+	##Grand Rite begins for guests##
+character_event = {
+id = undividedcultist.12
+    desc = EVTDESCUNDIVIDEDCULTIST.12 # At a grand gala in a secure location, the Rite of Blasphemous Offering begins. The prisoners are brought forth, and to the cheers of the crowd, profane symbols are carved into their flesh. Before long the prisoners are possessed by daemons who scream blaspheme after blaspheme before slitting their own throats. The Dark Gods will be pleased today!  
+    picture = "GFX_evt_cultist"
+    min_age = 16
+    capable_only = yes
+	
+	trigger = { 
+	age = 16
+	has_character_flag = attending_undivided_rite
+	}
+	
+	mean_time_to_happen = {
+	days = 30
+	}
+	
+	option = {
+	name = EVTOPTUNDIVIDEDCULTIST.12.a # All hail the Dark Gods!
+	clr_character_flag = attending_undivided_rite
+	change_variable = { which = undividedfavor value = 1 } 
+	random_list = {
+	33 = { change_intrigue = 1 }
+	33 = { change_intrigue = 2 }
+	33 = { change_intrigue = 3 }
+	}
+}
+
+}	
+
+character_event = {
+id = undividedcultist.13
+    desc = undividedcultist13desc # To be worthy of the Chaos Gods attentions, the winds of chaos must be strong and you must be a be a level 3 cultist. Hold a grand rite or donate to the cult's coffers, and in time, he will bless you with his power and send armies to aid you.
+    picture = "GFX_evt_khorne"
+    min_age = 16
+    capable_only = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = OK
+	}
+	
+	}
+	
+character_event = {
+id = undividedcultist.14
+    desc = undividedcultist14desc # Do you wish to openly serve the Chaos Gods, and enact a ritual that will open a portal to the realm of chaos? Be warned: There is no going back from this choice, once made...
+    picture = "GFX_evt_khorne"
+    min_age = 16
+    capable_only = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = undividedcultist14A #THE WORLD SHALL FALL!
+	set_character_flag = summonedundividedhost
+	religion = chaos
+	if = {
+		limit = {
+			top_liege = {
+				NOT = { religion = chaos }
+			}
+		}
+		top_liege = {
+			ROOT = {
+				set_defacto_liege = PREV
+			}
+		}
+		liege = {
+			reverse_war = {
+				target = ROOT
+				casus_belli = cultist_bid_for_independence
+			}
+		}
+	}
+	prestige = 500
+	piety = 500
+	any_playable_ruler = {
+	limit = {
+	OR = {
+	culture_group = ROOT
+	same_realm = ROOT
+	}
+	}
+	character_event = { id = undividedcultist.15 days = 7 }
+	}
+	if = {
+	limit = { 
+	NOT = { 1 = { check_variable = { which = "doom_counter" value = 30 } } } 
+	}
+		create_random_soldier = {
+			random_traits = no
+			dynasty = RANDOM
+			culture = bloodletter_khorne
+			religion = khorne
+			age = 888
+			attributes = {
+				martial = 20
+				diplomacy = 4
+				stewardship = 5
+				intrigue = 4
+				learning = 3
+			}
+			health = 6
+			fertility = 0.7
+			trait = brilliant_strategist
+			trait = wroth
+			trait = cruel
+			trait = proud
+			trait = zealous
+			trait = khorne_demon
+			trait = khorne_bloodletter
+		}
+		new_character = {
+		set_character_flag = host_demon_commander
+		add_friend = ROOT	#familiar mechanics
+		location = {
+			ROOT = {
+			spawn_unit = {
+			cannot_inherit = yes
+			province = PREV
+				troops =
+				{
+					daemonic_host = { 2500 2500 }
+					daemonic_host = { 1500 1500 }
+					daemonic_host = { 1500 1500 }
+				}
+			}
+		}
+		}
+		}	
+	}
+if = {
+	limit = { 
+	AND = {
+	1 = { check_variable = { which = "doom_counter" value = 30 } }
+	NOT = { 1 = { check_variable = { which = "doom_counter" value = 60 } } } 
+	}
+	}
+			create_random_soldier = {
+			random_traits = no
+			dynasty = RANDOM
+			culture = bloodletter_khorne
+			religion = khorne
+			age = 888
+			attributes = {
+				martial = 20
+				diplomacy = 4
+				stewardship = 5
+				intrigue = 4
+				learning = 3
+			}
+			health = 6
+			fertility = 0.7
+			trait = brilliant_strategist
+			trait = wroth
+			trait = cruel
+			trait = proud
+			trait = zealous
+			trait = khorne_demon
+			trait = khorne_bloodletter
+		}
+		new_character = {
+		set_character_flag = host_demon_commander
+		add_friend = ROOT	#familiar mechanics
+		location = {
+			ROOT = {
+			spawn_unit = {
+			cannot_inherit = yes
+			province = PREV
+				troops =
+				{
+					daemonic_host = { 4500 4500 }
+					daemonic_host = { 2000 2000 }
+					daemonic_host = { 3000 3000 }
+				}
+			}
+		}
+		}
+		}
+	}
+	if = {
+	limit = { 
+	AND = {
+	1 = { check_variable = { which = "doom_counter" value = 60 } }
+	NOT = { 1 = { check_variable = { which = "doom_counter" value = 90 } } } 
+	}
+	}
+			create_random_soldier = {
+			random_traits = no
+			dynasty = RANDOM
+			culture = bloodletter_khorne
+			religion = khorne
+			age = 888
+			attributes = {
+				martial = 20
+				diplomacy = 4
+				stewardship = 5
+				intrigue = 4
+				learning = 3
+			}
+			health = 6
+			fertility = 0.7
+			trait = brilliant_strategist
+			trait = wroth
+			trait = cruel
+			trait = proud
+			trait = zealous
+			trait = khorne_demon
+			trait = khorne_bloodletter
+		}
+		new_character = {
+		set_character_flag = host_demon_commander
+		add_friend = ROOT	#familiar mechanics
+		location = {
+			ROOT = {
+			spawn_unit = {
+			cannot_inherit = yes
+			province = PREV
+				troops =
+				{
+					daemonic_host = { 5000 5000 }
+					daemonic_host = { 3000 3000 }
+					daemonic_host = { 3000 3000 }
+				}
+			}
+		}
+		}
+		}
+	}
+	if = {
+	limit = { 
+	AND = {
+	1 = { check_variable = { which = "doom_counter" value = 90 } }
+	}
+	}
+			create_random_soldier = {
+			random_traits = no
+			dynasty = RANDOM
+			culture = bloodletter_khorne
+			religion = khorne
+			age = 888
+			attributes = {
+				martial = 20
+				diplomacy = 4
+				stewardship = 5
+				intrigue = 4
+				learning = 3
+			}
+			health = 6
+			fertility = 0.7
+			trait = brilliant_strategist
+			trait = wroth
+			trait = cruel
+			trait = proud
+			trait = zealous
+			trait = khorne_demon
+			trait = khorne_bloodletter
+		}
+		new_character = {
+		set_character_flag = host_demon_commander
+		add_friend = ROOT	#familiar mechanics
+		location = {
+			ROOT = {
+			spawn_unit = {
+			cannot_inherit = yes
+			province = PREV
+				troops =
+				{
+					daemonic_host = { 7500 7500 }
+					daemonic_host = { 2000 2000 }
+					daemonic_host = { 3000 3000 }
+					daemonic_host = { 2000 2000 }
+					daemonic_host = { 3000 3000 }
+				}
+			}
+		}
+		}
+		}
+	}
+	}
+	
+	option = {
+	name = khornecultist14B #No, now is not the opportune time...
+	trigger = { ai = no }
+	}
+	
+	}
+	
+character_event = {
+id = undividedcultist.15
+    desc = EVTDESCKHORNECULTIST.15 # This ruler has been a secret servant of the Ruinous Powers for some time now, and has finally proclaimed his allegiance. He has summoned a demonic army and is preparing to wage a war of conquest!
+    picture = "GFX_evt_khorne"
+    min_age = 16
+    capable_only = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = {
+				NOT = {	
+					has_character_flag = hidden_cultist_tzeentch
+					has_character_flag = hidden_cultist_tzeentch2 
+					has_character_flag = hidden_cultist_tzeentch3
+					has_character_flag = hidden_cultist_khorne
+					has_character_flag = hidden_cultist_khorne2 
+					has_character_flag = hidden_cultist_khorne3
+					has_character_flag = hidden_cultist_nurgle
+					has_character_flag = hidden_cultist_nurgle2 
+					has_character_flag = hidden_cultist_nurgle3
+					has_character_flag = hidden_cultist_slaanesh
+					has_character_flag = hidden_cultist_slaanesh2 
+					has_character_flag = hidden_cultist_slaanesh3
+					has_character_flag = hidden_cultist_undivided
+					has_character_flag = hidden_cultist_undivided2
+					has_character_flag = hidden_cultist_undivided3
+					religion = chaos
+					religion = slaanesh
+					religion = nurgle
+					religion = tzeentch
+					religion = khorne
+				}
+			}
+			opinion = {
+				who = FROM
+				modifier = opinion_confirmed_heretic
+				months = 240
+			}
+			FROM = {
+				father = {
+					reverse_opinion = {
+						who = ROOT
+						modifier = opinion_family_of_confirmed_heretic
+						months = 240
+					}
+				}
+				mother = {
+					reverse_opinion = {
+						who = ROOT
+						modifier = opinion_family_of_confirmed_heretic
+						months = 240
+					}
+				}
+				any_sibling = {					
+					reverse_opinion = {
+						who = ROOT
+						modifier = opinion_family_of_confirmed_heretic
+						months = 240
+					}
+				}
+				any_child = {
+					reverse_opinion = {
+						who = ROOT
+						modifier = opinion_family_of_confirmed_heretic
+						months = 240
+					}
+				}
+			}
+		}
+	}
+	
+	
+	option = {
+		name = khornecultist15A #By the gods... !
+		ai_chance =  { factor = 1
+				modifier = { factor = 0
+					OR =  { has_character_flag = hidden_cultist_undivided
+						has_character_flag = hidden_cultist_undivided2
+						has_character_flag = hidden_cultist_undivided3 } 
+					 }
+				 }
+	}
+	option = {
+		name = khornecultist15B #It shall be my time as well!
+		trigger = { prisoner = no
+			 FROM = { liege_before_war = { ROOT = { liege = { character = PREVPREV } } } }
+			independent = no
+			liege = { opinion = { modifier = opinion_confirmed_heretic 
+					 	who = ROOT
+						years = 150 } }
+			OR = {		
+					has_character_flag = hidden_cultist_undivided
+					has_character_flag = hidden_cultist_undivided2
+					has_character_flag = hidden_cultist_undivided3
+					religion = chaos }
+			 }
+				if = { limit = { OR = {		has_character_flag = hidden_cultist_undivided
+								has_character_flag = hidden_cultist_undivided2 
+								has_character_flag = hidden_cultist_undivided3 } }
+					religion = chaos }
+				set_defacto_liege = FROM
+				set_character_flag = independent_joining_flag 
+				join_defender_wars = FROM
+				join_attacker_wars = FROM
+		ai_chance =  { factor = 1 }
+	}
+}

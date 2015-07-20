@@ -1,0 +1,34 @@
+ransom_timer = { icon = 1 }
+
+faction_isolationist_elves_ultimatum_timer = { icon = 1 }
+
+faction_interventionist_elves_ultimatum_timer = { icon = 1 }
+
+stage_progressed = { icon = 1 }
+
+crusade_cooldown = { icon = 34 }
+
+magic_cooldown = { icon = 1 }
+
+hds_magic_cooldown = { icon = 1 }
+
+summoned_spirits_timer = { icon = 1 }
+
+appease_spirits_timer = { icon = 1 }
+
+hidden_fat = { icon = 1 }
+hidden_undernourished = { icon = 1 }
+hidden_disfigurement = { icon = 1 }
+hidden_spines = { icon = 1 }
+hidden_horns = { icon = 1 }
+hidden_scales = { icon = 1 }
+hidden_thirdeye = { icon = 1 }
+hidden_tongue = { icon = 1 }
+hidden_crests = { icon = 1 }
+
+ai_quirking_cooldown = { icon = 1 }
+magic_cooldown_summoning = { icon = 1 }
+summoned_daemons_timer = { icon = 1 }
+apprenticeship_refused_necr = { icon = 1 }
+hunting_beastmen = { icon = 1 }
+hunting_greenskins = { icon = 1 }

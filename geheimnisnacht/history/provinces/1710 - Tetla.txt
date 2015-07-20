@@ -1,0 +1,16 @@
+# c_tetla
+
+# County Title
+title = c_tetla
+
+# Settlements
+max_settlements = 2
+
+b_tetla = tribal
+#b_tuparo = city
+
+# Misc
+culture = amazon_main
+religion = amazon
+terrain = jungle
+#History

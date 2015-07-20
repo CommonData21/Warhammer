@@ -1,0 +1,71 @@
+# Warhammer illnesses
+has_creeping_buboes = {
+	is_epidemic = yes
+	is_illness = yes
+	
+	health = -5
+	combat_rating = -2
+	
+	customizer = no
+}
+has_green_pox = { # smallpox
+	is_epidemic = yes
+	is_illness = yes
+	
+	health = -3
+	combat_rating = -2
+	
+	customizer = no
+}
+has_red_pox = { # measles
+	is_epidemic = yes
+	is_illness = yes
+	
+	health = -4
+	combat_rating = -2
+	
+	customizer = no
+}
+has_rattlelung = { # tuberclosis
+	is_epidemic = yes
+	is_illness = yes
+	
+	health = -3
+	combat_rating = -2
+	
+	customizer = no
+}
+has_tomb_rot = { # typhus ?
+	is_illness = yes
+	is_health = yes
+
+	health = -2
+	combat_rating = -2
+	diplomacy = -2
+	sex_appeal_opinion = -20
+
+	customizer = no
+}
+has_nurgles_rot = {
+	is_illness = yes
+	is_epidemic = yes
+	health = -5
+	diplomacy = -2
+	martial = -1
+	combat_rating = -4
+	sex_appeal_opinion = -30
+
+	customizer = no
+}
+has_bone_auge = { # typhoid_fever
+	is_health = yes
+	is_illness = yes
+	health = -6
+	diplomacy = -1
+	intrigue = -1
+	martial = -1
+	combat_rating = -2
+
+	sex_appeal_opinion = -20
+	customizer = no
+}

@@ -1,0 +1,18 @@
+# c_noveum
+
+# County Title
+title = c_noveum
+
+# Settlements
+max_settlements = 4
+
+b_noveum = castle
+b_vellex = city
+b_wynde = city
+b_andityr = castle
+
+# Misc
+culture = tiranoci
+religion = cadai
+
+#History

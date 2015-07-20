@@ -1,0 +1,17 @@
+# c_berhessa
+
+# County Title
+title = c_berhessa
+
+# Settlements
+max_settlements = 3
+
+b_berhessa = castle
+#b_aphinica = city
+#b_korhalla = temple
+
+# Misc
+culture = ellyrian
+religion = cadai
+
+#History

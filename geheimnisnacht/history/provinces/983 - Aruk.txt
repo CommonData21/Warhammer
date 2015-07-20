@@ -1,0 +1,19 @@
+# c_aruk
+
+# County Title
+title = c_aruk
+
+# Settlements
+max_settlements = 3
+
+b_aruk = castle
+#b_arang = city
+#b_misir = temple
+
+# Misc
+culture = wasai
+religion = ormazd
+
+#History
+
+1.1.2010 = { trade_post = b_gurmanche }

@@ -1,0 +1,133 @@
+castle={
+
+	ca_lothern_seaguard = {
+		desc = ca_lothern_seaguard_desc
+		
+		fort_level = 8
+		gold_cost = 1000
+		build_time = 3000
+		archers = 1000
+		light_infantry = 1000
+		pikemen = 250
+		garrison_size = 1.00
+		tax_income = 10
+		ai_creation_factor = 97
+		potential = {
+			FROMFROM = { title = b_lothern_tor } #
+		}
+
+		extra_tech_building_start = 0.2
+	}
+	
+	ca_caledor_dragonprinces = {
+		desc = ca_caledor_dragonprinces_desc
+		
+		fort_level = 5
+		gold_cost = 1000
+		build_time = 3000
+		knights = 750
+		ai_creation_factor = 97
+		garrison_size = 0.50
+		potential = {
+			FROMFROM = { title = b_summersong } #
+		}
+		extra_tech_building_start = 0.2
+	}
+	
+	ca_tor_anroc = {
+		desc = ca_tor_anroc_desc
+		
+		fort_level = 4
+		gold_cost = 1000
+		build_time = 3000
+		horse_archers = 1000
+		galleys = 50
+		ai_creation_factor = 97
+		garrison_size = 0.50
+		potential = {
+			FROMFROM = { title = b_tor_anroc } #
+		}
+
+		extra_tech_building_start = 0.2
+	}
+	
+	ca_cothique = {
+		desc = ca_cothique_desc
+		
+		fort_level = 4
+		gold_cost = 1000
+		build_time = 3000
+		light_infantry = 1000
+		galleys = 100
+		ai_creation_factor = 97
+		garrison_size = 0.50
+		potential = {
+			FROMFROM = { title = b_tor_dynal } #
+		}
+
+		extra_tech_building_start = 0.2
+	}
+	
+	ca_tor_yvresse = {
+		desc = ca_tor_yvresse_desc
+		
+		fort_level = 5
+		gold_cost = 1000
+		build_time = 3000
+		light_infantry = 250
+		archers = 500
+		pikemen = 250
+		ai_creation_factor = 97
+		garrison_size = 0.50
+		potential = {
+			FROMFROM = { title = b_tor_yvraine } #
+		}
+
+		extra_tech_building_start = 0.2
+	}
+	
+	ca_ellyrion_reavers = {
+		desc = ca_ellyrion_reavers_desc
+		
+		fort_level = 4
+		gold_cost = 1000
+		build_time = 3000
+		light_cavalry = 1000
+		ai_creation_factor = 97
+		potential = {
+			FROMFROM = { title = b_tor_elyr } #
+		}
+		garrison_size = 0.50
+		extra_tech_building_start = 0.2
+	}
+	
+	ca_court_of_everqueen = {
+		desc = ca_court_of_everqueen_desc
+		
+		fort_level = 4
+		gold_cost = 1000
+		build_time = 3000
+		light_infantry = 1000
+		ai_creation_factor = 97
+		potential = {
+			FROMFROM = { title = b_gaen_tor } #
+		}
+
+		extra_tech_building_start = 0.2
+	}
+	
+	ca_white_tower = {
+		desc = ca_white_tower_desc
+		
+		fort_level = 6
+		gold_cost = 1000
+		build_time = 3000
+		heavy_infantry = 1000
+		ai_creation_factor = 97
+		potential = {
+			FROMFROM = { title = b_tor_hoeth } #
+		}
+		garrison_size = 0.50
+		extra_tech_building_start = 0.2
+	}
+}

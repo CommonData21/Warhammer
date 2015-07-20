@@ -1,0 +1,17 @@
+# c_lilithorn
+
+# County Title
+title = c_lilithorn
+
+# Settlements
+max_settlements = 3
+
+b_lilithorn = castle
+#b_obestae = city
+#b_tor_ganet = temple
+
+# Misc
+culture = eatainian
+religion = cadai
+
+#History

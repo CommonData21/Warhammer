@@ -1,0 +1,94 @@
+#	Example:
+# 
+#	example_trigger = {
+#		year = 1066
+#		num_of_spouses = 2
+#	}
+#
+#
+#	In a script file:
+#
+#	trigger = {
+#		exampel_trigger = yes
+#	}
+
+is_vampire_trigger = {	OR = { 		
+					trait = vampire_lahmian_visible
+					trait = vampire_carstein_visible
+					trait = vampire_blood_visible
+					trait = vampire_strigoi_visible
+					trait = vampire_necrach_visible
+					trait = vampire_jade_visible
+					trait = vampire_mahtmasi_visible
+
+					trait = vampire_lahmian_hidden
+					trait = vampire_carstein_hidden
+					trait = vampire_blood_hidden
+					trait = vampire_strigoi_hidden
+					trait = vampire_necrach_hidden
+					trait = vampire_jade_hidden
+					trait = vampire_mahtmasi_hidden } 
+}
+
+is_vampire_visible_trigger = {	OR = { 		
+					trait = vampire_lahmian_visible
+					trait = vampire_carstein_visible
+					trait = vampire_blood_visible
+					trait = vampire_strigoi_visible
+					trait = vampire_necrach_visible
+					trait = vampire_jade_visible 
+					trait = vampire_mahtmasi_visible } 
+}
+
+is_undead_trigger = {	OR = { 		#more entries might be added later on
+
+					trait = vampire_lahmian_visible
+					trait = vampire_carstein_visible
+					trait = vampire_blood_visible
+					trait = vampire_strigoi_visible
+					trait = vampire_necrach_visible
+					trait = vampire_jade_visible
+					trait = vampire_mahtmasi_visible
+
+					trait = vampire_lahmian_hidden
+					trait = vampire_carstein_hidden
+					trait = vampire_blood_hidden
+					trait = vampire_strigoi_hidden
+					trait = vampire_necrach_hidden
+					trait = vampire_jade_hidden
+					trait = vampire_mahtmasi_hidden
+			
+					trait = creature_nehekharan } 
+}
+
+is_invincible_trigger = { OR = { trait = carstein_ring		#more entries might be added later on
+				trait = khemri_tomb_king } 
+}
+
+is_immortal_trigger = {	OR = { 		#more entries might be added later on
+
+					trait = immortal_trait
+					trait = elixir_of_eternal_youth 
+
+					trait = creature_ork
+					trait = creature_goblin
+					trait = creature_slann
+					trait = creature_skink
+					trait = creature_nehekharan
+					
+					trait = vampire_lahmian_visible
+					trait = vampire_carstein_visible
+					trait = vampire_blood_visible
+					trait = vampire_strigoi_visible
+					trait = vampire_necrach_visible
+					trait = vampire_jade_visible
+					trait = vampire_mahtmasi_visible
+
+					trait = vampire_lahmian_hidden
+					trait = vampire_carstein_hidden
+					trait = vampire_blood_hidden
+					trait = vampire_strigoi_hidden
+					trait = vampire_necrach_hidden
+					trait = vampire_jade_hidden
+					trait = vampire_mahtmasi_hidden } 
+}

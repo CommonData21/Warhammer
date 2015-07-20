@@ -1,0 +1,17 @@
+# c_elthrai
+
+# County Title
+title = c_elthrai
+
+# Settlements
+max_settlements = 3
+
+b_elthrai = castle
+#b_andelath = city
+#b_porsust = temple
+
+# Misc
+culture = ellyrian
+religion = cadai
+
+#History

@@ -1,0 +1,303 @@
+## Skin tones are 0 (light), 1 (tan), 2 (dark) and 3 (black)
+
+empiregfx = {
+	skin_tone = 0
+}
+sylvaniangfx = {
+	skin_tone = 0
+}
+kurgangfx = {
+	skin_tone = 2
+}
+arabyangfx = {
+	skin_tone = 2
+}
+westerngfx_immortal = {
+	skin_tone = 0
+}
+dwarfgfx = {
+	skin_tone = 0
+}
+
+imperialdwarfgfx = {
+	skin_tone = 0
+}
+chaosdwarfgfx = {
+	skin_tone = 1
+}
+elfgfx = {
+	skin_tone = 0
+}
+asurgfx = {
+	skin_tone = 0
+}
+
+asraigfx = {
+	skin_tone = 0
+}
+druchiigfx = {
+	skin_tone = 0
+}
+skavengfx = {
+	skin_tone = 1
+}
+lizardmangfx = {
+	skin_tone = 1
+}
+hobbitsgfx = {
+	skin_tone = 0
+}
+ogregfx = {
+	skin_tone = 0
+}
+sartosantileangfx = {
+ skin_tone = 1
+}
+bretonniagfx = {
+ skin_tone = 0
+}
+amazongfx = {
+ skin_tone = 1
+}
+northempiregfx = {
+ skin_tone = 0
+}
+tileagfx = {
+ skin_tone = 1
+}
+estileangfx = {
+ skin_tone = 1
+}
+hunggfx = {
+	skin_tone = 2
+}
+southarabyangfx = {
+	skin_tone = 3
+}
+
+northmangfx = {
+	skin_tone = 0
+}
+beastmangfx = {
+	skin_tone = 1
+}
+treemangfx = {
+	skin_tone = 1
+}
+lahmiangfx = {
+	skin_tone = 0
+}
+lahmianeverkidgfx = {
+	skin_tone = 0
+}
+livinglahmiangfx = {
+	skin_tone = 0
+}
+orcgfx = {
+	skin_tone = 0
+}
+goblingfx = {
+	skin_tone = 0
+}
+ungorgfx = {
+	skin_tone = 0
+}
+nehekharangfx = {
+	skin_tone = 0
+}
+nomadgfx = {
+	skin_tone = 1
+}
+
+olddwarfgfx = {
+	skin_tone = 0
+}
+
+oldchaosdwarfgfx = {
+	skin_tone = 0
+}
+
+chaosspawngfx = {
+	skin_tone = 0
+}
+
+daemonettegfx = {
+	skin_tone = 0
+}
+bloodlettergfx = {
+	skin_tone = 0
+}
+plaguebearergfx = {
+	skin_tone = 0
+}
+flamergfx = {
+	skin_tone = 0
+}
+stonedchaosdwarfgfx = {
+	skin_tone = 0
+}
+carsteingfx = {
+	skin_tone = 0
+}
+carsteineverkidgfx = {
+	skin_tone = 0
+}
+khorneprincegfx = {
+	skin_tone = 0
+}
+nurgleprincegfx = {
+	skin_tone = 0
+}
+slaaneshprincegfx = {
+	skin_tone = 0
+}
+tzeentchprincegfx = {
+	skin_tone = 0
+}
+kdaaigfx = {
+	skin_tone = 0
+}
+
+
+
+####SLAANESHI SWITCHED STUFF####
+
+
+empirerevgfx = {
+	skin_tone = 0
+}
+sylvanianrevgfx = {
+	skin_tone = 0
+}
+kurganrevgfx = {
+	skin_tone = 2
+}
+arabyanrevgfx = {
+	skin_tone = 2
+}
+dwarfrevgfx = {
+	skin_tone = 0
+}
+
+imperialdwarfrevgfx = {
+	skin_tone = 0
+}
+chaosdwarfrevgfx = {
+	skin_tone = 1
+}
+asurrevgfx = {
+	skin_tone = 0
+}
+
+asrairevgfx = {
+	skin_tone = 0
+}
+druchiirevgfx = {
+	skin_tone = 0
+}
+hobbitsrevgfx = {
+	skin_tone = 0
+}
+sartosantileanrevgfx = {
+ skin_tone = 1
+}
+bretonniarevgfx = {
+ skin_tone = 0
+}
+amazonrevgfx = {
+ skin_tone = 1
+}
+northempirerevgfx = {
+ skin_tone = 0
+}
+tilearevgfx = {
+ skin_tone = 1
+}
+estileanrevgfx = {
+ skin_tone = 1
+}
+hungrevgfx = {
+	skin_tone = 2
+}
+southarabyanrevgfx = {
+	skin_tone = 3
+}
+
+northmanrevgfx = {
+	skin_tone = 0
+}
+beastmanrevgfx = {
+	skin_tone = 1
+}
+ungorrevgfx = {
+	skin_tone = 0
+}
+nomadrevgfx = {
+	skin_tone = 1
+}
+olddwarfrevgfx = {
+	skin_tone = 0
+}
+
+oldchaosdwarfrevgfx = {
+	skin_tone = 0
+}
+
+
+
+westernrevgfx = {
+	skin_tone = 2
+}
+
+occitanrevgfx = {
+	skin_tone = 0
+}
+southernrevgfx = {
+	skin_tone = 1
+}
+celticrevgfx = {
+	skin_tone = 0
+}
+norserevgfx = {
+	skin_tone = 0
+	#christian_portraits = yes
+}
+saxonrevgfx = {
+	skin_tone = 0
+}
+
+# Eastern
+
+easternslavicrevgfx = {
+	skin_tone = 0
+}
+byzantinerevgfx = {
+	skin_tone = 1
+}
+# Muslim
+muslimrevgfx = {
+	skin_tone = 2
+}
+
+turkishrevgfx = {
+	skin_tone = 2
+}
+mongolrevgfx = {
+	skin_tone = 1
+}
+africanrevgfx = {
+	skin_tone = 3
+}
+andalusianrevgfx = {
+	skin_tone = 1
+}
+
+
+#Other
+
+indianrevgfx = {
+	skin_tone = 2
+}
+persianrevgfx = {
+	skin_tone = 2
+}

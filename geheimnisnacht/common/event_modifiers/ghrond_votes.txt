@@ -1,0 +1,10 @@
+ghrond_support_1 = { icon = 87 }
+ghrond_support_2 = { icon = 87 }
+ghrond_support_3 = { icon = 87 }
+ghrond_support_4 = { icon = 87 }
+ghrond_support_5 = { icon = 87 }
+ghrond_support_6 = { icon = 87 }
+ghrond_support_7 = { icon = 87 }
+ghrond_support_8 = { icon = 87 }
+ghrond_support_9 = { icon = 87 }
+ghrond_support_10 = { icon = 87 }

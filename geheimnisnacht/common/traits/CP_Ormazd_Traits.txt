@@ -1,0 +1,45 @@
+ormazd_sayyid = { #Sayyid equivalents for ormazdians
+	agnatic = yes # Always inherited from fathers
+
+	# potential = { always = no }
+	
+	opposites =  {
+		non_mirza
+		mirza
+	}
+	religious = yes
+	same_religion_opinion = 10
+	customizer = no
+}
+
+ormazd_mirza = {
+	same_religion_opinion = 5
+	
+	opposites =  {
+		sayyid
+		non_sayyid
+	}
+	customizer = no
+	religious = yes
+}
+
+non_ormazd_sayyid = { #Sayyid equivalents for ormazdians
+	agnatic = yes # Always inherited from fathers
+	# potential = { always = no }
+	
+	opposites =  {
+		non_mirza
+		mirza
+	}
+	religious = yes
+	customizer = no
+}
+
+non_ormazd_mirza = {
+	opposites =  {
+		sayyid
+		non_sayyid
+	}
+	religious = yes
+	customizer = no
+}

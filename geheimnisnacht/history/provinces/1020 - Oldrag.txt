@@ -1,0 +1,22 @@
+# c_oldrag
+
+# County Title
+title = c_oldrag
+
+# Settlements
+max_settlements = 4
+
+b_oldrag = castle
+b_zogoro = city
+b_dajane = temple
+#b_guro = castle
+
+# Misc
+culture = wasai
+religion = akghan
+
+#History
+
+2250.1.1 = {
+	b_dajane = temple
+}

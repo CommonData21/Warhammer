@@ -1,0 +1,30 @@
+decisions = {
+
+	mend_imperial_schism = {
+		is_high_prio = yes
+		potential = {
+			age = 16
+			prisoner = no
+			tier = EMPEROR
+			OR = {
+				religion = sigmarite
+				religion = ulrican
+				religion = taalite
+			}
+			
+			NOT = { has_global_flag = imperial_churches_unified }
+		}
+		allow = {
+			piety = 1000
+			is_heretic = no
+			# religion_authority = 0.7
+			has_landed_title = e_the_empire
+		}
+		effect = {
+			narrative_event = { id = DR_imperial.1 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -1,0 +1,17 @@
+# c_tralinia
+
+# County Title
+title = c_tralinia
+
+# Settlements
+max_settlements = 3
+
+b_tralinia = castle
+#b_tor_lir = city
+#b_tolfarene = temple
+
+# Misc
+culture = yvressi
+religion = cadai
+
+#History

@@ -1,0 +1,67 @@
+# 4 Songs for playing english characters
+
+song = {
+	name = "englandanno1066.ogg"
+	
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			NOT = {	culture_group = bretonnian_group }
+			NOT = {	religion = grail }
+			NOT = {	religion = false_grail }
+		}		
+	}
+}
+
+
+
+song = {
+	name = "thecoronationofaking.ogg"
+	
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			NOT = {	culture_group = bretonnian_group }
+			NOT = {	religion = grail }
+			NOT = {	religion = false_grail }
+			NOT = {	has_landed_title = e_the_empire }
+			NOT = { top_liege = { has_landed_title = e_the_empire } }
+		}		
+	}
+}
+
+
+
+song = {
+	name = "theforest.ogg"
+	
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			NOT = {	culture_group = bretonnian_group }
+			NOT = {	religion = grail }
+			NOT = {	religion = false_grail }
+			NOT = {	culture_group = asrai_group }
+		}		
+	}
+}
+
+
+
+song = {
+	name = "thekingscrusade.ogg"
+	
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			NOT = {	culture_group = bretonnian_group }
+			NOT = {	religion = grail }
+			NOT = {	religion = false_grail }
+		}		
+	}
+}
+

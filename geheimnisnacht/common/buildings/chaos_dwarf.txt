@@ -1,0 +1,678 @@
+castle = {
+	ca_zharr_naggrund = {
+		desc = ca_zharr_naggrund_desc
+		potential = {
+			FROMFROM = { title = b_gromthidum } #Zharr-Naggrund's castle holding
+		}
+		auto_add_at_year = 10
+		
+		gold_cost = 1000
+		build_time = 3000
+		fort_level = 7
+		heavy_infantry = 500
+		artillery = 100
+		tax_income = 5
+		ai_creation_factor = 97
+		garrison_size = 0.50
+		extra_tech_building_start = 0.2
+		
+	}
+	
+	ca_tower_gorgoth = {
+		desc = ca_tower_gorgoth_desc
+		potential = {
+			FROMFROM = { title = b_hazar_gorgoth } #Gorgoth's castle holding
+		}
+		auto_add_at_year = 10
+		
+		gold_cost = 1000
+		build_time = 3000
+		fort_level = 5
+		light_infantry = 600 #Slaves
+		heavy_infantry = 200
+		artillery = 10
+		tax_income = 5
+		ai_creation_factor = 97
+		garrison_size = 0.50
+		extra_tech_building_start = 0.2
+		
+	}
+	
+	ca_black_fortress = {
+		desc = ca_black_fortress_desc
+		potential = {
+			FROMFROM = { title = b_the_black_fortress } #Black Fortress' castle holding
+		}
+		auto_add_at_year = 10
+		
+		gold_cost = 1000
+		build_time = 3000
+		fort_level = 9
+		#Legion of Azgorh
+		heavy_infantry = 500
+		knights = 100
+		artillery = 20
+		tax_income = 4
+		ai_creation_factor = 97
+		garrison_size = 1.00
+		extra_tech_building_start = 0.2
+		
+	}
+	
+	ca_chaos_dwarf_barracks_1 = {
+		desc = ca_chaos_dwarf_barracks_1_desc
+		potential = {
+			FROM = {
+				culture_group = dwarf_chaos_group
+			}
+		}
+		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+		gold_cost = 100
+		build_time = 365
+		heavy_infantry = 30
+		ai_creation_factor = 105
+		
+		extra_tech_building_start = 1.0
+	}
+	ca_chaos_dwarf_barracks_2 = {
+		desc = ca_chaos_dwarf_barracks_1_desc
+		potential = {
+			FROM = {
+				culture_group = dwarf_chaos_group
+			}
+		}
+		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+		prerequisites = { ca_wall_1 }
+		upgrades_from = ca_chaos_dwarf_barracks_1
+		gold_cost = 120
+		build_time = 547
+		heavy_infantry = 50
+		ai_creation_factor = 104
+		
+		extra_tech_building_start = 1.8
+	}
+	ca_chaos_dwarf_barracks_3 = {
+		desc = ca_chaos_dwarf_barracks_1_desc
+		potential = {
+			FROM = {
+				culture_group = dwarf_chaos_group
+			}
+		}
+		trigger = { TECH_CASTLE_CONSTRUCTION = 1 }
+		prerequisites = { ca_wall_2 }
+		upgrades_from = ca_chaos_dwarf_barracks_2
+		gold_cost = 200
+		build_time = 730
+		heavy_infantry = 65
+		ai_creation_factor = 103
+
+		extra_tech_building_start = 3.0
+	}
+	ca_chaos_dwarf_barracks_4 = {
+		potential = {
+			FROM = {
+				culture_group = dwarf_chaos_group
+			}
+		}
+		desc = ca_chaos_dwarf_barracks_1_desc
+		trigger = { TECH_CASTLE_CONSTRUCTION = 3 }
+		upgrades_from = ca_chaos_dwarf_barracks_3
+		gold_cost = 300
+		build_time = 1095
+		heavy_infantry = 70
+		ai_creation_factor = 102
+
+		extra_tech_building_start = 3.0
+	}
+	ca_chaos_dwarf_barracks_5 = {
+		potential = {
+			FROM = {
+				culture_group = dwarf_chaos_group
+			}
+		}
+		desc = ca_chaos_dwarf_barracks_1_desc
+		trigger = { TECH_CASTLE_CONSTRUCTION = 5 }
+		upgrades_from = ca_chaos_dwarf_barracks_4
+		gold_cost = 400
+		build_time = 2190
+		heavy_infantry = 85
+		ai_creation_factor = 101
+
+		extra_tech_building_start = 2.0
+	}
+	ca_chaos_dwarf_barracks_6 = {
+		potential = {
+			FROM = {
+				culture_group = dwarf_chaos_group
+			}
+		}
+		desc = ca_chaos_dwarf_barracks_1_desc
+		trigger = { TECH_CASTLE_CONSTRUCTION = 7 }
+		upgrades_from = ca_chaos_dwarf_barracks_5
+		gold_cost = 500
+		build_time = 2190
+		heavy_infantry = 100
+		ai_creation_factor = 100
+
+		extra_tech_building_start = 0.2
+	}
+	
+	ca_hobgoblin_tents_1 = {
+		desc = ca_hobgoblin_tents_1_desc
+		potential = {
+			FROM = {
+				culture_group = dwarf_chaos_group
+			}
+		}
+		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+		gold_cost = 100
+		build_time = 365
+		light_cavalry = 30
+		ai_creation_factor = 89
+		
+		extra_tech_building_start = 0.4
+	}
+	ca_hobgoblin_tents_2 = {
+		desc = ca_hobgoblin_tents_1_desc
+		potential = {
+			FROM = {
+				culture_group = dwarf_chaos_group
+			}
+		}
+		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+		prerequisites = { ca_wall_1 }
+		upgrades_from = ca_hobgoblin_tents_1
+		gold_cost = 120
+		build_time = 547
+		light_cavalry = 40
+		ai_creation_factor = 88
+
+		extra_tech_building_start = 0.8
+	}
+	ca_hobgoblin_tents_3 = {
+		desc = ca_hobgoblin_tents_1_desc
+		potential = {
+			FROM = {
+				culture_group = dwarf_chaos_group
+			}
+		}
+		trigger = { TECH_CASTLE_CONSTRUCTION = 2 }
+		prerequisites = { ca_wall_2 }
+		upgrades_from = ca_hobgoblin_tents_2
+		gold_cost = 200
+		build_time = 730
+		light_cavalry = 50
+		ai_creation_factor = 87
+
+		extra_tech_building_start = 0.2
+	}
+	ca_hobgoblin_tents_4 = {
+		desc = ca_hobgoblin_tents_1_desc
+		potential = {
+			FROM = {
+				culture_group = dwarf_chaos_group
+			}
+		}
+		trigger = { TECH_CASTLE_CONSTRUCTION = 4 }
+		upgrades_from = ca_hobgoblin_tents_3
+		gold_cost = 300
+		build_time = 1095
+		light_cavalry = 60
+		ai_creation_factor = 86
+
+		extra_tech_building_start = 0.2
+	}
+	ca_hobgoblin_tents_5 = {
+		desc = ca_hobgoblin_tents_1_desc
+		potential = {
+			FROM = {
+				culture_group = dwarf_chaos_group
+			}
+		}
+		trigger = { TECH_CASTLE_CONSTRUCTION = 6 }
+		upgrades_from = ca_hobgoblin_tents_4
+		gold_cost = 400
+		build_time = 2190
+		light_cavalry = 70
+		ai_creation_factor = 85
+
+		extra_tech_building_start = 0.2
+	}
+	ca_hobgoblin_tents_6 = {
+		desc = ca_hobgoblin_tents_1_desc
+		potential = {
+			FROM = {
+				culture_group = dwarf_chaos_group
+			}
+		}
+		trigger = { TECH_CASTLE_CONSTRUCTION = 8 }
+		upgrades_from = ca_hobgoblin_tents_5
+		gold_cost = 500
+		build_time = 2190
+		light_cavalry = 80
+		ai_creation_factor = 85
+
+		extra_tech_building_start = 0.2
+	}
+	
+	ca_chaos_dwarf_factory_1 = {
+		desc = ca_chaos_dwarf_factory_desc
+		potential = {
+			FROM = { culture_group = dwarf_chaos_group }
+		}
+		trigger = { always = no }
+		gold_cost = 300
+		build_time = 0
+		ai_creation_factor = 0
+		tax_income = 2
+		artillery = 10
+		
+	}
+	ca_chaos_dwarf_factory_2 = {
+		desc = ca_chaos_dwarf_factory_desc
+		upgrades_from = ca_chaos_dwarf_factory_1
+		potential = {
+			FROM = { culture_group = dwarf_chaos_group }
+		}
+		trigger = { always = no }
+		ai_creation_factor = 0
+		gold_cost = 400
+		build_time = 0
+		tax_income = 2
+		artillery = 10
+	}
+	ca_chaos_dwarf_factory_3 = {
+		desc = ca_chaos_dwarf_factory_desc
+		upgrades_from = ca_chaos_dwarf_factory_2
+		potential = {
+			FROM = { culture_group = dwarf_chaos_group }
+		}
+		trigger = { always = no }
+		ai_creation_factor = 0
+		gold_cost = 500
+		build_time = 0
+		tax_income = 2
+		artillery = 25
+	}
+	ca_chaos_dwarf_factory_4 = {
+		desc = ca_chaos_dwarf_factory_desc
+		upgrades_from = ca_chaos_dwarf_factory_3
+		potential = {
+			FROM = { culture_group = dwarf_chaos_group }
+		}
+		trigger = { always = no }
+		ai_creation_factor = 0
+		gold_cost = 600
+		build_time = 0
+		tax_income = 2
+		artillery = 25
+	}
+	
+	
+	ca_chaos_dwarf_slave_levy_1 = {
+		desc = ca_chaos_dwarf_slave_levy_desc
+		potential = {
+			FROM = { culture_group = dwarf_chaos_group }
+		}
+		trigger = { always = no }
+		ai_creation_factor = 0
+		gold_cost = 300
+		build_time = 0
+		light_infantry = 750
+		light_infantry_morale = -0.25 #They're slaves, after all
+	}
+	ca_chaos_dwarf_slave_levy_2 = {
+		desc = ca_chaos_dwarf_slave_levy_desc
+		upgrades_from = ca_chaos_dwarf_slave_levy_1
+		potential = {
+			FROM = { culture_group = dwarf_chaos_group }
+		}
+		trigger = { always = no }
+		ai_creation_factor = 0
+		gold_cost = 400
+		build_time = 0
+		light_infantry = 750
+	}
+	ca_chaos_dwarf_slave_levy_3 = {
+		desc = ca_chaos_dwarf_slave_levy_desc
+		upgrades_from = ca_chaos_dwarf_slave_levy_2
+		potential = {
+			FROM = { culture_group = dwarf_chaos_group }
+		}
+		trigger = { always = no }
+		ai_creation_factor = 0
+		gold_cost = 500
+		build_time = 0
+		light_infantry = 750
+	}
+	ca_chaos_dwarf_slave_levy_4 = {
+		desc = ca_chaos_dwarf_slave_levy_desc
+		upgrades_from = ca_chaos_dwarf_slave_levy_3
+		potential = {
+			FROM = { culture_group = dwarf_chaos_group }
+		}
+		trigger = { always = no }
+		ai_creation_factor = 0
+		gold_cost = 600
+		build_time = 0
+		light_infantry = 750
+	}
+	
+}
+
+city = {
+
+	ct_chaos_dwarf_factory_1 = {
+		desc = ca_chaos_dwarf_factory_desc
+		potential = {
+			FROM = { culture_group = dwarf_chaos_group }
+		}
+		trigger = { always = no }
+		gold_cost = 300
+		build_time = 0
+		ai_creation_factor = 0
+		tax_income = 2
+		artillery = 10
+		
+	}
+	ct_chaos_dwarf_factory_2 = {
+		desc = ca_chaos_dwarf_factory_desc
+		upgrades_from = ct_chaos_dwarf_factory_1
+		potential = {
+			FROM = { culture_group = dwarf_chaos_group }
+		}
+		trigger = { always = no }
+		ai_creation_factor = 0
+		gold_cost = 400
+		build_time = 0
+		tax_income = 2
+		artillery = 10
+	}
+	ct_chaos_dwarf_factory_3 = {
+		desc = ca_chaos_dwarf_factory_desc
+		upgrades_from = ct_chaos_dwarf_factory_2
+		potential = {
+			FROM = { culture_group = dwarf_chaos_group }
+		}
+		trigger = { always = no }
+		ai_creation_factor = 0
+		gold_cost = 500
+		build_time = 0
+		tax_income = 2
+		artillery = 25
+	}
+	ct_chaos_dwarf_factory_4 = {
+		desc = ca_chaos_dwarf_factory_desc
+		upgrades_from = ct_chaos_dwarf_factory_3
+		potential = {
+			FROM = { culture_group = dwarf_chaos_group }
+		}
+		trigger = { always = no }
+		ai_creation_factor = 0
+		gold_cost = 600
+		build_time = 0
+		tax_income = 2
+		artillery = 25
+	}
+	
+	
+	ct_chaos_dwarf_slave_levy_1 = {
+		desc = ca_chaos_dwarf_slave_levy_desc
+		potential = {
+			FROM = { culture_group = dwarf_chaos_group }
+		}
+		trigger = { always = no }
+		ai_creation_factor = 0
+		gold_cost = 300
+		build_time = 0
+		light_infantry = 750
+		light_infantry_morale = -0.25 #They're slaves, after all
+	}
+	ct_chaos_dwarf_slave_levy_2 = {
+		desc = ca_chaos_dwarf_slave_levy_desc
+		upgrades_from = ct_chaos_dwarf_slave_levy_1
+		potential = {
+			FROM = { culture_group = dwarf_chaos_group }
+		}
+		trigger = { always = no }
+		ai_creation_factor = 0
+		gold_cost = 400
+		build_time = 0
+		light_infantry = 750
+	}
+	ct_chaos_dwarf_slave_levy_3 = {
+		desc = ca_chaos_dwarf_slave_levy_desc
+		upgrades_from = ct_chaos_dwarf_slave_levy_2
+		potential = {
+			FROM = { culture_group = dwarf_chaos_group }
+		}
+		trigger = { always = no }
+		ai_creation_factor = 0
+		gold_cost = 500
+		build_time = 0
+		light_infantry = 750
+	}
+	ct_chaos_dwarf_slave_levy_4 = {
+		desc = ca_chaos_dwarf_slave_levy_desc
+		upgrades_from = ct_chaos_dwarf_slave_levy_3
+		potential = {
+			FROM = { culture_group = dwarf_chaos_group }
+		}
+		trigger = { always = no }
+		ai_creation_factor = 0
+		gold_cost = 600
+		build_time = 0
+		light_infantry = 750
+	}
+
+}
+
+temple = {
+tp_chaos_dwarf_factory_1 = {
+		desc = ca_chaos_dwarf_factory_desc
+		potential = {
+			FROM = { culture_group = dwarf_chaos_group }
+		}
+		trigger = { always = no }
+		gold_cost = 300
+		build_time = 0
+		ai_creation_factor = 0
+		tax_income = 2
+		artillery = 10
+		
+	}
+	tp_chaos_dwarf_factory_2 = {
+		desc = ca_chaos_dwarf_factory_desc
+		upgrades_from = tp_chaos_dwarf_factory_1
+		potential = {
+			FROM = { culture_group = dwarf_chaos_group }
+		}
+		trigger = { always = no }
+		ai_creation_factor = 0
+		gold_cost = 400
+		build_time = 0
+		tax_income = 2
+		artillery = 10
+	}
+	tp_chaos_dwarf_factory_3 = {
+		desc = ca_chaos_dwarf_factory_desc
+		upgrades_from = tp_chaos_dwarf_factory_2
+		potential = {
+			FROM = { culture_group = dwarf_chaos_group }
+		}
+		trigger = { always = no }
+		ai_creation_factor = 0
+		gold_cost = 500
+		build_time = 0
+		tax_income = 2
+		artillery = 25
+	}
+	tp_chaos_dwarf_factory_4 = {
+		desc = ca_chaos_dwarf_factory_desc
+		upgrades_from = tp_chaos_dwarf_factory_3
+		potential = {
+			FROM = { culture_group = dwarf_chaos_group }
+		}
+		trigger = { always = no }
+		ai_creation_factor = 0
+		gold_cost = 600
+		build_time = 0
+		tax_income = 2
+		artillery = 25
+	}
+	
+	
+	tp_chaos_dwarf_slave_levy_1 = {
+		desc = ca_chaos_dwarf_slave_levy_desc
+		potential = {
+			FROM = { culture_group = dwarf_chaos_group }
+		}
+		trigger = { always = no }
+		ai_creation_factor = 0
+		gold_cost = 300
+		build_time = 0
+		light_infantry = 750
+		light_infantry_morale = -0.25 #They're slaves, after all
+	}
+	tp_chaos_dwarf_slave_levy_2 = {
+		desc = ca_chaos_dwarf_slave_levy_desc
+		upgrades_from = tp_chaos_dwarf_slave_levy_1
+		potential = {
+			FROM = { culture_group = dwarf_chaos_group }
+		}
+		trigger = { always = no }
+		ai_creation_factor = 0
+		gold_cost = 400
+		build_time = 0
+		light_infantry = 750
+	}
+	tp_chaos_dwarf_slave_levy_3 = {
+		desc = ca_chaos_dwarf_slave_levy_desc
+		upgrades_from = tp_chaos_dwarf_slave_levy_2
+		potential = {
+			FROM = { culture_group = dwarf_chaos_group }
+		}
+		trigger = { always = no }
+		ai_creation_factor = 0
+		gold_cost = 500
+		build_time = 0
+		light_infantry = 750
+	}
+	tp_chaos_dwarf_slave_levy_4 = {
+		desc = ca_chaos_dwarf_slave_levy_desc
+		upgrades_from = tp_chaos_dwarf_slave_levy_3
+		potential = {
+			FROM = { culture_group = dwarf_chaos_group }
+		}
+		trigger = { always = no }
+		ai_creation_factor = 0
+		gold_cost = 600
+		build_time = 0
+		light_infantry = 750
+	}
+}
+
+family_palace = {
+fp_chaos_dwarf_factory_1 = {
+		desc = ca_chaos_dwarf_factory_desc
+		potential = {
+			FROM = { culture_group = dwarf_chaos_group }
+		}
+		trigger = { always = no }
+		gold_cost = 300
+		build_time = 0
+		ai_creation_factor = 0
+		tax_income = 2
+		artillery = 10
+		
+	}
+	fp_chaos_dwarf_factory_2 = {
+		desc = ca_chaos_dwarf_factory_desc
+		upgrades_from = fp_chaos_dwarf_factory_1
+		potential = {
+			FROM = { culture_group = dwarf_chaos_group }
+		}
+		trigger = { always = no }
+		ai_creation_factor = 0
+		gold_cost = 400
+		build_time = 0
+		tax_income = 2
+		artillery = 10
+	}
+	fp_chaos_dwarf_factory_3 = {
+		desc = ca_chaos_dwarf_factory_desc
+		upgrades_from = fp_chaos_dwarf_factory_2
+		potential = {
+			FROM = { culture_group = dwarf_chaos_group }
+		}
+		trigger = { always = no }
+		ai_creation_factor = 0
+		gold_cost = 500
+		build_time = 0
+		tax_income = 2
+		artillery = 25
+	}
+	fp_chaos_dwarf_factory_4 = {
+		desc = ca_chaos_dwarf_factory_desc
+		upgrades_from = fp_chaos_dwarf_factory_3
+		potential = {
+			FROM = { culture_group = dwarf_chaos_group }
+		}
+		trigger = { always = no }
+		ai_creation_factor = 0
+		gold_cost = 600
+		build_time = 0
+		tax_income = 2
+		artillery = 25
+	}
+	
+	
+	fp_chaos_dwarf_slave_levy_1 = {
+		desc = ca_chaos_dwarf_slave_levy_desc
+		potential = {
+			FROM = { culture_group = dwarf_chaos_group }
+		}
+		trigger = { always = no }
+		ai_creation_factor = 0
+		gold_cost = 300
+		build_time = 0
+		light_infantry = 750
+		light_infantry_morale = -0.25 #They're slaves, after all
+	}
+	fp_chaos_dwarf_slave_levy_2 = {
+		desc = ca_chaos_dwarf_slave_levy_desc
+		upgrades_from = fp_chaos_dwarf_slave_levy_1
+		potential = {
+			FROM = { culture_group = dwarf_chaos_group }
+		}
+		trigger = { always = no }
+		ai_creation_factor = 0
+		gold_cost = 400
+		build_time = 0
+		light_infantry = 750
+	}
+	fp_chaos_dwarf_slave_levy_3 = {
+		desc = ca_chaos_dwarf_slave_levy_desc
+		upgrades_from = fp_chaos_dwarf_slave_levy_2
+		potential = {
+			FROM = { culture_group = dwarf_chaos_group }
+		}
+		trigger = { always = no }
+		ai_creation_factor = 0
+		gold_cost = 500
+		build_time = 0
+		light_infantry = 750
+	}
+	fp_chaos_dwarf_slave_levy_4 = {
+		desc = ca_chaos_dwarf_slave_levy_desc
+		upgrades_from = fp_chaos_dwarf_slave_levy_3
+		potential = {
+			FROM = { culture_group = dwarf_chaos_group }
+		}
+		trigger = { always = no }
+		ai_creation_factor = 0
+		gold_cost = 600
+		build_time = 0
+		light_infantry = 750
+	}
+}

@@ -1,0 +1,128 @@
+decisions = {
+
+openslaverymenu ={
+
+potential = {
+age = 16
+NOT = { religion = hashut }
+NOT = { trait = creature_beastman }
+OR = {
+religion_group = cytharai_group
+religion_group = greenskin_gods_group
+religion_group = chaos_gods_group
+religion_group = old_gods_group
+religion = amazon
+}
+}
+
+allow = {
+OR = {
+check_variable = { which = elfslaves value = 1 }
+check_variable = { which = dwarfslaves value = 1 }
+check_variable = { which = humanslaves value = 1 }
+}
+}
+
+effect = {
+ROOT = { character_event = { id = slavery.2 } }
+	}
+	
+	ai_will_do = {
+	factor = 1
+	}
+	
+	}
+	
+# sellelfslaves ={
+
+# potential = {
+# age = 16
+# NOT = { religion = hashut }
+# NOT = { trait = creature_beastman }
+# OR = {
+# religion_group = cytharai_group
+# religion_group = greenskin_gods_group
+# religion_group = chaos_gods_group
+# religion_group = old_gods_group
+# religion = amazon
+# }
+# }
+
+# allow = {
+# check_variable = { which = elfslaves value = 1 }
+# }
+
+# effect = {
+# change_variable = { which = elfslaves value = -1 }
+# wealth = 100
+	# }
+	
+	# ai_will_do = {
+	# factor = 0
+	# }
+	
+	# }
+	
+# sellhumanslaves ={
+
+# potential = {
+# age = 16
+# NOT = { religion = hashut }
+# NOT = { trait = creature_beastman }
+# OR = {
+# religion_group = cytharai_group
+# religion_group = greenskin_gods_group
+# religion_group = chaos_gods_group
+# religion_group = old_gods_group
+# religion = amazon
+# }
+# }
+
+# allow = {
+# check_variable = { which = humanslaves value = 1 }
+# }
+
+# effect = {
+# change_variable = { which = humanslaves value = -1 }
+# wealth = 50
+	# }
+	
+	# ai_will_do = {
+	# factor = 0
+	# }
+	
+	# }	
+	
+# selldwarfslaves ={
+
+# potential = {
+# age = 16
+# NOT = { religion = hashut }
+# NOT = { trait = creature_beastman }
+# OR = {
+# religion_group = cytharai_group
+# religion_group = greenskin_gods_group
+# religion_group = chaos_gods_group
+# religion_group = old_gods_group
+# religion = amazon
+# }
+# }
+
+# allow = {
+# check_variable = { which = dwarfslaves value = 1 }
+# }
+
+# effect = {
+# change_variable = { which = dwarfslaves value = -1 }
+# wealth = 300
+	# }
+	
+	# ai_will_do = {
+	# factor = 0
+	# }
+	
+	# }
+	
+	
+}
+	

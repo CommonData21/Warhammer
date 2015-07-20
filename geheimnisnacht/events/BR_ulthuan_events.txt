@@ -1,0 +1,604 @@
+namespace = ulthuan
+
+#Provinces in Ulthuan slowly depopulate even during peace, but much faster during times of war when the province is occupied - first we assign each province in Ulthuan a modifier
+province_event = {
+	id = ulthuan.0
+	title = "Ulthuan"
+	desc = "Ulthuan is a nation in decline"
+	picture = GFX_evt_council
+	hide_window = yes
+	
+	trigger = {
+	culture_group = asur_group
+	NOT = { has_province_modifier = ulthuan }
+	OR = {
+	#province_id = 1492 ##Not Lothern, it welcomes visitors from around the world and hence non elves replace elven population losses
+	province_id = 1493
+	province_id = 1494
+	province_id = 1495
+	province_id = 1496
+	province_id = 1497	
+	province_id = 1498
+	province_id = 1503
+	province_id = 1504
+	province_id = 1499
+	province_id = 1500
+	province_id = 1501
+	province_id = 1502
+	province_id = 1505
+	province_id = 1506	
+	province_id = 1507
+	province_id = 1508
+	province_id = 1509
+	province_id = 1510
+	province_id = 1511
+	province_id = 1512
+	province_id = 1513
+	province_id = 1514
+	province_id = 1515	
+	province_id = 1516
+	province_id = 1517
+	province_id = 1518
+	province_id = 1519
+	province_id = 1520
+	province_id = 1521
+	province_id = 1522
+	province_id = 1523
+	province_id = 1524	
+	province_id = 1525
+	province_id = 1526
+	province_id = 1527
+	province_id = 1529
+	province_id = 1528
+	province_id = 1530
+	province_id = 1531
+	province_id = 1532
+	province_id = 1533	
+	province_id = 1534
+	province_id = 1535
+	province_id = 1536
+	province_id = 1537
+	province_id = 1538
+	province_id = 1539
+	province_id = 1540
+	province_id = 1541
+	province_id = 1542	
+	province_id = 1543
+	province_id = 1544
+	province_id = 1545
+	province_id = 1546
+	province_id = 1547
+	province_id = 1548
+	province_id = 1549
+	province_id = 1550
+	province_id = 1551	
+	province_id = 1552
+	province_id = 1553
+	province_id = 1554
+	province_id = 1555
+	province_id = 1556
+	province_id = 1557
+	province_id = 1558
+	province_id = 1559
+	province_id = 1560	
+	province_id = 1561
+	province_id = 1562
+	province_id = 1563
+	province_id = 1564
+	province_id = 1565
+	province_id = 1566
+	province_id = 1567
+	province_id = 1568
+	province_id = 1569	
+	province_id = 1570
+	province_id = 1571
+	province_id = 1572
+	province_id = 1573
+	province_id = 1574
+	province_id = 1575
+	province_id = 1576
+	province_id = 1577
+	province_id = 1578
+	province_id = 1579
+	province_id = 1580
+	province_id = 1581
+	province_id = 1582
+	province_id = 1583
+	province_id = 1584
+	province_id = 1585
+	province_id = 1586
+	province_id = 1587	
+	province_id = 1588
+	province_id = 1589
+	province_id = 1590
+	province_id = 1591
+	province_id = 1592
+	province_id = 1593
+	province_id = 1594
+	province_id = 1595
+	province_id = 1596	
+	province_id = 1597
+	province_id = 1598
+	province_id = 1599
+	province_id = 1600
+	province_id = 1601
+	province_id = 1602
+	province_id = 1603
+	province_id = 1604
+	province_id = 1605	
+	province_id = 1606
+	province_id = 1607
+	province_id = 1608
+	province_id = 1609
+	province_id = 1610
+	province_id = 1614
+	province_id = 1615
+	province_id = 1616
+	province_id = 1611	
+	province_id = 1612
+	province_id = 1613
+	province_id = 1617
+	province_id = 1618
+	province_id = 1619
+	province_id = 1620
+	province_id = 1621
+	province_id = 1622
+	province_id = 1623	
+	province_id = 1624
+	province_id = 1625
+	province_id = 1626
+	province_id = 1627
+	province_id = 1628
+	province_id = 1629
+	}
+	}
+	
+	mean_time_to_happen = {
+	days = 1	
+	}
+	
+	option = {
+	name = "OK"
+	ROOT = {
+	add_province_modifier = { name = ulthuan duration = -1 }
+}
+}
+
+}
+
+	#Now count tier and above rulers get the event informing them that their province has been depopulated to lightly depopulated##
+	character_event = {
+	id = ulthuan.1
+	desc = ulthuan1desc # Whether through war or just the slow passage of time, the population in this province has fallen. Such is the fate of all elves in Ulthuan, to slowly diminish, but they will never yield to their enemies even so.
+	picture = "GFX_evt_elf_city"
+	
+	trigger = {
+	higher_tier_than = BARON
+	any_demesne_province = {
+	AND = {
+	has_province_modifier = ulthuan
+	NOT = { has_province_modifier = ulthuan_lightly_depopulated } 
+	NOT = { has_province_modifier = ulthuan_moderately_depopulated }
+	NOT = { has_province_modifier = ulthuan_heavily_depopulated }
+	NOT = { has_province_modifier = ulthuan_severely_depopulated }
+	}
+	}
+	}
+	
+	mean_time_to_happen = {
+	months = 2400 #200 years
+	
+	modifier = {
+        factor = 0.33
+        liege = {
+            war = yes
+            has_raised_levies = ROOT
+        }
+        }
+	
+	}
+	
+	option = {
+	name = OK
+	random_demesne_province={
+	if = {
+	limit = {
+	AND = {
+	has_province_modifier = ulthuan
+	NOT = { has_province_modifier = ulthuan_lightly_depopulated } 
+	NOT = { has_province_modifier = ulthuan_moderately_depopulated }
+	NOT = { has_province_modifier = ulthuan_heavily_depopulated }
+	NOT = { has_province_modifier = ulthuan_severely_depopulated }
+	}
+	}
+	add_province_modifier = { name = ulthuan_lightly_depopulated duration = -1 }
+	}
+	}
+	}
+	
+	}
+
+	character_event = {
+	id = ulthuan.2
+	desc = ulthuan2desc #Whether through war or just the slow passage of time, the population in this province is now moderately depopulated. Empty villages and mansions dot the country side, their former inhabitants now only a distant memory.#
+	picture = "GFX_evt_elf_city"
+	
+	trigger = {
+	higher_tier_than = BARON
+	any_demesne_province = {
+	AND = {
+	has_province_modifier = ulthuan
+	has_province_modifier = ulthuan_lightly_depopulated
+	}
+	}
+	}
+	
+	mean_time_to_happen = {
+	months = 2400 #200 years
+	
+	modifier = {
+        factor = 0.5
+        liege = {
+            war = yes
+            has_raised_levies = ROOT
+        }
+        }
+	
+	}
+	
+	option = {
+	name = OK
+	random_demesne_province={
+	if = {
+	limit = {
+	AND = {
+	has_province_modifier = ulthuan
+	has_province_modifier = ulthuan_lightly_depopulated
+	}
+	}
+	add_province_modifier = { name = ulthuan_moderately_depopulated duration = -1 }
+	remove_province_modifier = ulthuan_lightly_depopulated
+	}
+	}
+	}
+	
+	}
+	
+	character_event = {
+	id = ulthuan.3
+	desc = ulthuan3desc # Whether through war or just the slow passage of time, the population in this province is now heavily depopulated. The Lords there struggle to maintain a semblance of civilization, and many areas are now devoid of elves entirely, given over to nature and the wild beasts.#
+	picture = "GFX_evt_elf_city"
+	
+	trigger = {
+	higher_tier_than = BARON
+	any_demesne_province = {
+	AND = {
+	has_province_modifier = ulthuan
+	has_province_modifier = ulthuan_moderately_depopulated
+	}
+	}
+	}
+	
+	mean_time_to_happen = {
+	months = 2400 #200 years
+	
+	modifier = {
+        factor = 0.5
+        liege = {
+            war = yes
+            has_raised_levies = ROOT
+        }
+        }
+	
+	}
+	
+	option = {
+	name = OK
+	random_demesne_province={
+	if = {
+	limit = {
+	AND = {
+	has_province_modifier = ulthuan
+	has_province_modifier = ulthuan_moderately_depopulated
+	}
+	}
+	add_province_modifier = { name = ulthuan_heavily_depopulated duration = -1 }
+	remove_province_modifier = ulthuan_moderately_depopulated
+	}
+	}
+	}
+	
+	}
+	
+	character_event = {
+	id = ulthuan.4
+	desc = ulthuan4desc # Whether through war or just the slow passage of time, the population in this province is now severely depopulated. The major noble families still maintain their mansions and the immediate surrounds, but they have lost the ability to control much more than that.#
+	picture = "GFX_evt_elf_city"
+	
+	trigger = {
+	higher_tier_than = BARON
+	any_demesne_province = {
+	AND = {
+	has_province_modifier = ulthuan
+	has_province_modifier = ulthuan_heavily_depopulated
+	}
+	}
+	}
+	
+	mean_time_to_happen = {
+	months = 2400 #200 years
+	
+	modifier = {
+        factor = 0.5
+        liege = {
+            war = yes
+            has_raised_levies = ROOT
+        }
+        }
+	
+	}
+	
+	option = {
+	name = OK
+	random_demesne_province={
+	if = {
+	limit = {
+	AND = {
+	has_province_modifier = ulthuan
+	has_province_modifier = ulthuan_heavily_depopulated
+	}
+	}
+	add_province_modifier = { name = ulthuan_severely_depopulated duration = -1 }
+	remove_province_modifier = ulthuan_heavily_depopulated
+	}
+	}
+	}
+	
+	}
+	
+	##Now for when a province is occupied, the population decline is even faster##
+	character_event = {
+	id = ulthuan.5
+	desc = ulthuan5desc # This province is occupied by enemies and many precious elven lives have been lost. 
+	picture = "GFX_evt_elf_city"
+	
+	trigger = {
+	culture_group = asur_group
+	higher_tier_than = BARON
+		any_demesne_title = {
+		location = {
+			has_province_modifier = ulthuan
+				}
+		tier = baron
+		NOT = { controlled_by = ROOT }
+				}
+	}
+	
+	mean_time_to_happen = {
+	months = 60 #5 years#
+	}
+	
+	option = {
+	name = OK
+	random_demesne_province={
+	if = {
+	limit = {
+	NOT = { controlled_by = ROOT }
+	}
+	if = {
+	limit = {
+	AND = {
+	has_province_modifier = ulthuan
+	has_province_modifier = ulthuan_heavily_depopulated
+	}
+	}
+	add_province_modifier = { name = ulthuan_severely_depopulated duration = -1 }
+	remove_province_modifier = ulthuan_heavily_depopulated
+	}
+	if = {
+	limit = {
+	AND = {
+	has_province_modifier = ulthuan
+	has_province_modifier = ulthuan_moderately_depopulated
+	}
+	}
+	add_province_modifier = { name = ulthuan_heavily_depopulated duration = -1 }
+	remove_province_modifier = ulthuan_moderately_depopulated
+	}
+	if = {
+	limit = {
+	AND = {
+	has_province_modifier = ulthuan
+	has_province_modifier = ulthuan_lightly_depopulated
+	}
+	}
+	add_province_modifier = { name = ulthuan_moderately_depopulated duration = -1 }
+	remove_province_modifier = ulthuan_lightly_depopulated
+	}
+	if = {
+	limit = {
+	AND = {
+	has_province_modifier = ulthuan
+	NOT = { has_province_modifier = ulthuan_lightly_depopulated } 
+	NOT = { has_province_modifier = ulthuan_moderately_depopulated }
+	NOT = { has_province_modifier = ulthuan_heavily_depopulated }
+	NOT = { has_province_modifier = ulthuan_severely_depopulated }
+	}
+	}
+	add_province_modifier = { name = ulthuan_lightly_depopulated duration = -1 }
+	}
+	}	
+	}
+	}	
+	
+	}
+
+	##Now to remove the modifier if the culture changes to non-asur##
+province_event = {
+	id = ulthuan.6
+	title = "Ulthuan"
+	desc = ulthuan6desc #"Non elves are not affected by the vortex, nor - we suppose - dark elves who are... more aligned with chaos or just have more sex?"
+	picture = GFX_evt_council
+	hide_window = yes
+	
+	trigger = {
+	NOT = { culture_group = asur_group }
+	has_province_modifier = ulthuan
+	OR = {
+	#province_id = 1492 ##Not Lothern, it welcomes visitors from around the world and hence non elves replace elven population losses
+	province_id = 1493
+	province_id = 1494
+	province_id = 1495
+	province_id = 1496
+	province_id = 1497	
+	province_id = 1498
+	province_id = 1503
+	province_id = 1504
+	province_id = 1499
+	province_id = 1500
+	province_id = 1501
+	province_id = 1502
+	province_id = 1505
+	province_id = 1506	
+	province_id = 1507
+	province_id = 1508
+	province_id = 1509
+	province_id = 1510
+	province_id = 1511
+	province_id = 1512
+	province_id = 1513
+	province_id = 1514
+	province_id = 1515	
+	province_id = 1516
+	province_id = 1517
+	province_id = 1518
+	province_id = 1519
+	province_id = 1520
+	province_id = 1521
+	province_id = 1522
+	province_id = 1523
+	province_id = 1524	
+	province_id = 1525
+	province_id = 1526
+	province_id = 1527
+	province_id = 1529
+	province_id = 1528
+	province_id = 1530
+	province_id = 1531
+	province_id = 1532
+	province_id = 1533	
+	province_id = 1534
+	province_id = 1535
+	province_id = 1536
+	province_id = 1537
+	province_id = 1538
+	province_id = 1539
+	province_id = 1540
+	province_id = 1541
+	province_id = 1542	
+	province_id = 1543
+	province_id = 1544
+	province_id = 1545
+	province_id = 1546
+	province_id = 1547
+	province_id = 1548
+	province_id = 1549
+	province_id = 1550
+	province_id = 1551	
+	province_id = 1552
+	province_id = 1553
+	province_id = 1554
+	province_id = 1555
+	province_id = 1556
+	province_id = 1557
+	province_id = 1558
+	province_id = 1559
+	province_id = 1560	
+	province_id = 1561
+	province_id = 1562
+	province_id = 1563
+	province_id = 1564
+	province_id = 1565
+	province_id = 1566
+	province_id = 1567
+	province_id = 1568
+	province_id = 1569	
+	province_id = 1570
+	province_id = 1571
+	province_id = 1572
+	province_id = 1573
+	province_id = 1574
+	province_id = 1575
+	province_id = 1576
+	province_id = 1577
+	province_id = 1578
+	province_id = 1579
+	province_id = 1580
+	province_id = 1581
+	province_id = 1582
+	province_id = 1583
+	province_id = 1584
+	province_id = 1585
+	province_id = 1586
+	province_id = 1587	
+	province_id = 1588
+	province_id = 1589
+	province_id = 1590
+	province_id = 1591
+	province_id = 1592
+	province_id = 1593
+	province_id = 1594
+	province_id = 1595
+	province_id = 1596	
+	province_id = 1597
+	province_id = 1598
+	province_id = 1599
+	province_id = 1600
+	province_id = 1601
+	province_id = 1602
+	province_id = 1603
+	province_id = 1604
+	province_id = 1605	
+	province_id = 1606
+	province_id = 1607
+	province_id = 1608
+	province_id = 1609
+	province_id = 1610
+	province_id = 1614
+	province_id = 1615
+	province_id = 1616
+	province_id = 1611	
+	province_id = 1612
+	province_id = 1613
+	province_id = 1617
+	province_id = 1618
+	province_id = 1619
+	province_id = 1620
+	province_id = 1621
+	province_id = 1622
+	province_id = 1623	
+	province_id = 1624
+	province_id = 1625
+	province_id = 1626
+	province_id = 1627
+	province_id = 1628
+	province_id = 1629
+	}
+	}
+	
+	mean_time_to_happen = {
+	days = 1	
+	}
+	
+	option = {
+	name = "OK"
+	ROOT = {
+	remove_province_modifier = ulthuan
+	remove_province_modifier = ulthuan_lightly_depopulated
+	remove_province_modifier = ulthuan_moderately_depopulated
+	remove_province_modifier = ulthuan_heavily_depopulated
+	remove_province_modifier = ulthuan_severely_depopulated
+}
+}
+
+}	

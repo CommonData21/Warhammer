@@ -1,0 +1,16 @@
+# c_nawal
+
+# County Title
+title = c_nawal
+
+# Settlements
+max_settlements = 2
+
+b_nawal = castle
+#b_kadil = city
+
+# Misc
+culture = wasai
+religion = akghan
+
+#History

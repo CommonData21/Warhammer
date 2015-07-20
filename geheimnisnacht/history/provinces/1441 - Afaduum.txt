@@ -1,0 +1,15 @@
+# c_afaduum
+
+# County Title
+title = c_afaduum
+
+# Settlements
+max_settlements = 1
+
+b_afaduum = tribal
+
+# Misc
+culture = autarri
+religion = anath_raema
+
+#History

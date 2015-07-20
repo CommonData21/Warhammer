@@ -1,0 +1,27 @@
+# 2 Songs for being very devout.
+
+song = {
+	name = "inthenameofgod.ogg"
+	
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			NOT = {	religion_group = dwarf_gods_group }
+		}
+	}		
+}
+
+
+
+song = {
+	name = "thetemplechurch.ogg"
+	
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 2
+			NOT = {	culture_group = asur_group }
+		}
+	}
+}

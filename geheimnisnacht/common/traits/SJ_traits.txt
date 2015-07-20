@@ -1,0 +1,234 @@
+SJ_dwarf_mason = {
+	lifestyle = yes
+	
+	potential = {
+		culture_group = dwarf_group
+	}
+	opposites = { SJ_dwarf_master_mason  }
+	
+	stewardship = 1
+	same_religion_opinion = 10
+	
+	religious = yes
+	random = no
+	customizer = no
+}
+
+SJ_dwarf_master_mason = {
+	lifestyle = yes
+	
+	potential = {
+		culture_group = dwarf_group
+	}
+	opposites = { SJ_dwarf_mason }
+	
+	stewardship = 3
+	learning = 1
+	same_religion_opinion = 10
+	
+	religious = yes
+	random = no
+	customizer = no
+}
+
+beardling = {
+	potential = {
+		culture_group = dwarf_group
+		trait = creature_dwarf
+		religion_group = dwarf_gods_group
+		is_female = no
+		NOT = { age = 75 }
+	}
+		opposites = { 
+				# beardling
+				hammerer 
+				dwarf_warrior
+				quarreller 
+				thunderer 
+				longbeard 
+				ironbreaker
+				 }
+	
+	martial = -1
+	same_religion_opinion = -10
+	same_opinion = 15
+	combat_rating = -1
+	monthly_character_prestige = -0.50
+	
+	agnatic = yes
+	random = no
+	religious = yes
+	customizer = no
+	
+	ai_rationality = -10
+}
+
+dwarf_warrior = {
+	potential = {
+		culture_group = dwarf_group
+		trait = creature_dwarf
+		religion_group = dwarf_gods_group
+		is_female = no
+		age = 75
+	}
+		opposites = { 
+				# dwarf_warrior
+				quarreller 
+				thunderer 
+				 }
+	
+	martial = 1
+	combat_rating = 1
+	same_religion_opinion = 5
+	same_opinion = 10
+	command_modifier = {
+		terrain = mountain_pass
+	}
+	
+	ai_honor = 15
+	random = no
+	customizer = no
+	religious = yes
+}
+
+hammerer = {
+	potential = {
+		culture_group = dwarf_group
+		trait = creature_dwarf
+		religion_group = dwarf_gods_group
+		is_female = no
+		age = 250
+	}
+	
+	martial = 2
+	combat_rating = 2
+	health = 3
+	same_religion_opinion = 10
+	same_opinion = 10
+	
+	ai_rationality = 10
+	ai_honor = 50
+	random = no
+	customizer = no
+	religious = yes
+}
+
+quarreller = {
+	potential = {
+		culture_group = dwarf_group
+		trait = creature_dwarf
+		religion_group = dwarf_gods_group
+		is_female = no
+		age = 75
+	}
+	
+	opposites = { thunderer }
+	
+	opposite_opinion = -30
+	martial = 1
+	combat_rating = 1
+	same_religion_opinion = 5
+	same_opinion = 10
+	
+	ai_honor = 15
+	random = no
+	customizer = no
+	religious = yes
+	
+	command_modifier = {
+		terrain = mountain_pass
+	}
+}
+
+thunderer = {
+	potential = {
+		culture_group = dwarf_group
+		trait = creature_dwarf
+		religion_group = dwarf_gods_group
+		is_female = no
+		age = 75
+	}
+	
+	opposites = { quarreller }
+	
+	opposite_opinion = -30
+	martial = 1
+	combat_rating = 1
+	same_religion_opinion = 5
+	command_modifier = {
+		terrain = mountain_pass
+	}
+	
+	random = no
+	customizer = no
+	religious = yes
+	
+	ai_honor = 15
+}
+
+longbeard = {
+	potential = {
+		culture_group = dwarf_group
+		trait = creature_dwarf
+		religion_group = dwarf_gods_group
+		is_female = no
+		age = 250
+	}
+	
+		opposites = { 
+				beardling 
+				# longbeard 
+				ironbreaker
+				 }
+	martial = 3
+	combat_rating = 2
+	health = 3
+	same_religion_opinion = 10
+	same_opinion = 10
+	command_modifier = {
+		terrain = impassable_mountains
+	}
+	
+	random =  no
+	customizer = no
+	religious = yes
+	
+	ai_honor = 25
+	ai_rationality = 15
+}
+
+ironbreaker = {
+	potential = {
+		culture_group = dwarf_group
+		trait = creature_dwarf
+		religion_group = dwarf_gods_group
+		is_female = no
+		age = 250
+	}
+		opposites = { 
+				beardling
+				hammerer 
+				dwarf_warrior
+				quarreller 
+				thunderer 
+				longbeard 
+				# ironbreaker
+				 }
+	
+	martial = 4
+	combat_rating = 2
+	health = 3
+	same_religion_opinion = 10
+	same_opinion = 10
+	command_modifier = {
+		terrain = mountain
+	}
+	
+	random = no
+	customizer = no
+	religious = yes
+	
+	ai_honor = 25
+	ai_rationality = 15
+}
+	

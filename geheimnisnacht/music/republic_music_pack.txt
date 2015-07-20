@@ -1,0 +1,40 @@
+# 3 Songs exclusively for Merchant Republics
+
+song = {
+	name = "atuscannight.ogg"
+	
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			NOT = {	culture_group = tilean_group }
+			NOT = {	culture_group = estalian_group }
+		}		
+	}
+}
+
+song = {
+	name = "florence.ogg"
+	
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			NOT = {	culture_group = tilean_group }
+		}		
+	}
+}
+
+song = {
+	name = "theballadformaria.ogg"
+	
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			NOT = {	culture_group = tilean_group }
+			NOT = {	culture_group = estalian_group }
+		}		
+	}
+}
+

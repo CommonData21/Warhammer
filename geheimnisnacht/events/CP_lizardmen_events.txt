@@ -1,0 +1,3259 @@
+### Lizardmen events. Created by Careful Plum
+
+namespace = lizardman
+
+## 1-100: Events about spawning new lizardmen
+
+##Spawn a new generation of lizardman - triggered by decade pulse
+
+
+character_event = { #Once-a-decade chance to produce more lizardman
+	id = lizardman.5
+	desc = lizardman5desc
+	
+	hide_window = yes #Only show an event if any lizardmen are actually spawned (lizardman.0)
+	
+	is_triggered_only = yes
+	only_rulers = yes
+	
+	trigger = {
+		culture_group = lizardman_group
+		is_ruler = yes
+		primary_title = { higher_tier_than = BARON }
+		NOT = { has_character_flag = spawnedlizardman }
+		NOT = {
+			any_courtier = {
+				count = 15
+			}
+		}
+	}
+	
+	option = {
+		name = OK
+		if = { # If we spawned lizardmen last time, we won't do it now, but we will do it the next time the event fires (maybe too rare, because the skinks are actually mortal...)
+			limit = { has_character_flag = spawnedlizardman }
+			clr_character_flag = spawnedlizardman
+		}
+		if = {
+			limit = { NOT = { has_character_flag = spawnedlizardman } }
+			random = {
+				chance = 30
+				set_character_flag = spawnedlizardman
+				ROOT = { character_event = { id = lizardman.0 } } #Spawn the spawning pool
+			}
+		}
+	}
+}
+
+character_event = {
+	id = lizardman.0 #A new generation of lizardman crawls from the spawn pools
+	desc = lizardman0desc
+	
+	only_rulers = yes
+
+	trigger = {
+		culture_group = lizardman_group
+		is_ruler = yes
+		primary_title = { higher_tier_than = BARON }
+	}	
+	
+	is_triggered_only = yes
+		
+	option = {
+		name = OK
+
+		create_character = {
+			random_traits = no
+			name = "Spawn Pool"
+			female = no
+			age = 0
+			dynasty = ROOT
+			religion = ROOT
+		}
+		new_character = {
+			set_father = ROOT
+			dynasty = ROOT
+			character_event = {	id = lizardman.1 }
+		}
+	}
+}
+
+character_event = { #The pool creates the new lizardman
+	id = lizardman.1
+	desc = lizardman1desc
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = OK
+			random = {
+				chance = 50
+				create_character = {
+					random_traits = yes
+					dynasty = ROOT
+					religion = ROOT
+					culture = lizardman
+					female = no
+					age = 16
+					trait = creature_skink
+				}
+				new_character = {
+					set_father = ROOT
+					dynasty = ROOT
+					character_event = { id = lizardman.3 }
+				}
+			}
+			random = {
+				chance = 50
+				create_character = {
+					random_traits = yes
+					dynasty = ROOT
+					religion = ROOT
+					culture = lizardman
+					female = no
+					age = 16
+					trait = creature_skink
+				}
+				new_character = {
+					set_father = ROOT
+					dynasty = ROOT
+					character_event = { id = lizardman.3 }
+				}
+			}
+			random = {
+				chance = 50
+				create_character = {
+					random_traits = yes
+					dynasty = ROOT
+					religion = ROOT
+					culture = lizardman
+					female = no
+					age = 16
+					trait = creature_skink
+				}
+				new_character = {
+					set_father = ROOT
+					dynasty = ROOT
+					character_event = { id = lizardman.3 }
+				}
+			}
+			random = {
+				chance = 50
+				create_character = {
+					random_traits = yes
+					dynasty = ROOT
+					religion = ROOT
+					culture = lizardman
+					female = no
+					age = 16
+					trait = creature_skink
+				}
+				new_character = {
+					set_father = ROOT
+					dynasty = ROOT
+					character_event = { id = lizardman.3 }
+				}
+			}
+			random = {
+				chance = 50
+				create_character = {
+					random_traits = yes
+					dynasty = ROOT
+					religion = ROOT
+					culture = lizardman
+					female = no
+					age = 16
+					trait = creature_skink
+				}
+				new_character = {
+					set_father = ROOT
+					dynasty = ROOT
+					character_event = { id = lizardman.3 }
+				}
+			}
+			random = {
+				chance = 50
+				create_character = {
+					random_traits = yes
+					dynasty = ROOT
+					religion = ROOT
+					culture = lizardman
+					female = no
+					age = 16
+					trait = creature_skink
+				}
+				new_character = {
+					set_father = ROOT
+					dynasty = ROOT
+					character_event = { id = lizardman.3 }
+				}
+			}
+			random = {
+				chance = 50
+				create_character = {
+					random_traits = yes
+					dynasty = ROOT
+					religion = ROOT
+					culture = lizardman
+					female = no
+					age = 16
+					trait = creature_skink
+				}
+				new_character = {
+					set_father = ROOT
+					dynasty = ROOT
+					character_event = { id = lizardman.3 }
+				}
+			}
+			random = {
+				chance = 50
+				create_character = {
+					random_traits = yes
+					dynasty = ROOT
+					religion = ROOT
+					culture = lizardman
+					female = no
+					age = 16
+					trait = creature_skink
+				}
+				new_character = {
+					set_father = ROOT
+					dynasty = ROOT
+					character_event = { id = lizardman.3 }
+				}
+			}
+
+			random = {
+				chance = 50
+				create_random_soldier = {
+					random_traits = yes
+					dynasty = ROOT
+					religion = ROOT
+					culture = lizardman
+					female = no
+					age = 16
+					trait = creature_saurus
+				}
+				new_character = {
+					set_father = ROOT
+					dynasty = ROOT
+					character_event = { id = lizardman.3 }
+				}
+			}
+			random = {
+				chance = 50
+				create_random_soldier = {
+					random_traits = yes
+					dynasty = ROOT
+					religion = ROOT
+					culture = lizardman
+					female = no
+					age = 16
+					trait = creature_saurus
+				}
+				new_character = {
+					set_father = ROOT
+					dynasty = ROOT
+					character_event = { id = lizardman.3 }
+				}
+			}
+			death = { death_reason = death_execution }
+		recalc_succession = yes
+	}
+}
+		
+character_event = { #ping the new lizardman
+	id = lizardman.3
+	desc = lizardman3desc
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = OK
+		host = { character_event = { id = lizardman.4 } }
+	}
+}
+
+character_event = { #tell the ruler about the new lizardman
+	id = lizardman.4
+	desc = lizardman4desc
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = OK
+		recalc_succession = yes
+	}
+}
+
+#lizardman.5 is at the top
+
+# 101-200: Events related to Slann being awake or sleeping
+
+#lizardman.101: Get negative traits for not being contemplating enough, or remove them for being in deep slumber
+character_event = {
+	id = lizardman.101
+	desc = lizardman101desc	
+	picture = "GFX_evt_lustria_slann"
+	
+	hide_window = yes
+	
+	is_triggered_only = yes #Triggered by bi-yearly pulse
+	
+	only_rulers = yes #Maybe remove, depending on how we handle sleeping non-ruling Slann
+	
+	trigger = {
+		is_ruler = yes
+		trait = creature_slann
+	}
+	
+	option = { 
+		name = OK
+		random_list = {
+			50 = { #Bad event
+				modifier = {
+					factor = 0
+					NOT = { trait = lizardman_sleepingslann }
+				}
+				modifier = {
+					factor = 0.8
+					check_variable = { which = "sleep_level" value = 100 }
+				}
+				modifier = {
+					factor = 0.8
+					check_variable = { which = "sleep_level" value = 200 }
+				}
+				modifier = {
+					factor = 0.8
+					check_variable = { which = "sleep_level" value = 300 }
+				}
+				modifier = {
+					factor = 0.8
+					check_variable = { which = "sleep_level" value = 400 }
+				}
+				modifier = {
+					factor = 0.8
+					check_variable = { which = "sleep_level" value = 500 }
+				}
+				character_event = { id = lizardman.102 }
+			}
+			50 = { #Good event
+				modifier = {
+					factor = 0.8
+					NOT = {
+						check_variable = { which = "sleep_level" value = 100 }
+					}
+				}
+				modifier = {
+					factor = 0.8
+					NOT = {
+						check_variable = { which = "sleep_level" value = 200 }
+					}
+				}
+				modifier = {
+					factor = 0.8
+					NOT = {
+						check_variable = { which = "sleep_level" value = 300 }
+					}
+				}
+				modifier = {
+					factor = 0.8
+					NOT = {
+						check_variable = { which = "sleep_level" value = 400 }
+					}
+				}
+				modifier = {
+					factor = 0.8
+					NOT = {
+						check_variable = { which = "sleep_level" value = 500 }
+					}
+				}
+				character_event = { id = lizardman.103 }
+			}
+		}
+	}
+}
+
+#lizardman.102: Bad event happens because of light sleep
+character_event = {
+	id = lizardman.102
+	desc = lizardman102desc		
+	picture = "GFX_evt_lustria_slann"
+	
+
+	is_triggered_only = yes
+	
+	only_rulers = yes #Maybe remove, depending on how we handle sleeping non-ruling Slann
+	
+	trigger = {
+		is_ruler = yes
+		trait = creature_slann
+		# trait = lizardman_sleepingslann
+	}
+	
+	option = {
+		name = lizardman102optA
+			random_list = {
+			10 = {
+				modifier = {
+					factor = 2
+					NOT = {
+						trait = stressed
+					}
+				}
+				modifier = {
+					factor = 2
+					NOT = {
+						trait = depressed
+					}
+				}
+				modifier = {
+					factor = 2
+					NOT = {
+						trait = lunatic_3
+					}
+				}
+				modifier = {
+					factor = 0
+					trait = lunatic_3
+				}
+				
+				
+				if = {
+					limit = { trait = stressed 
+						 trait = depressed 
+						NOT = { trait = lunatic_3 } }
+					change_variable = { which = "lunatic_counter" value = 5 } 
+					hidden_tooltip = { character_event = { id = mutation.1005 } } #lunacy
+				}
+				if = {
+					limit = { trait = stressed 
+							NOT = { trait = depressed }
+							NOT = { trait = lunatic_3 } }
+					add_trait = depressed
+				}
+				if = {
+					limit = { NOT = { trait = stressed }
+						NOT = { trait = depressed }
+						NOT = { trait = lunatic_3 } }
+					add_trait = stressed
+				}
+			}
+			10 = {
+				modifier = {
+					factor = 0
+					trait = ill
+				}
+				add_trait = ill
+			}
+			10 = {
+				modifier = {
+					factor = 0
+					trait = slothful
+				}
+				add_trait = slothful
+			}
+			10 = {
+				modifier = {
+					factor = 0
+					NOT = { trait = patient }
+				}
+				remove_trait = patient
+			}
+			10 = {
+				modifier = {
+					factor = 0
+					NOT = { trait = diligent }
+				}
+				remove_trait = diligent
+			}
+			10 = {
+				piety = -50
+				prestige = -50
+			}
+		}
+	}
+}
+
+#lizardman.103: Good event happens because of deep sleep
+character_event = {
+	id = lizardman.103
+	desc = lizardman103desc		
+	picture = "GFX_evt_lustria_slann"
+	
+	is_triggered_only = yes
+	
+	only_rulers = yes #Maybe remove, depending on how we handle sleeping non-ruling Slann
+	
+	trigger = {
+		is_ruler = yes
+		trait = creature_slann
+		trait = lizardman_sleepingslann
+	}
+	
+	option = {
+		name = lizardman103optA
+		random_list = {
+		10 = {
+			modifier = {
+				factor = 2
+				trait = stressed
+			}
+			modifier = {
+				factor = 2
+				trait = depressed
+			}
+			modifier = {
+				factor = 2
+				trait = lunatic_3
+			}
+			modifier = {
+				factor = 0
+				NOT = { trait = stressed } 
+				NOT = { trait = depressed }
+				NOT = { trait = lunatic_3 }
+			}
+			if = {
+				limit = { trait = stressed 
+					NOT = { trait = depressed }
+					NOT = { trait = lunatic_3 } }
+				remove_trait = stressed
+			}
+			if = {
+				limit = { trait = stressed 
+					trait = depressed 
+					NOT = { trait = depressed } }
+				remove_trait = depressed
+			}
+			if = {
+				limit = { trait = stressed 
+					trait = depressed 
+					trait = lunatic_3 }
+				change_variable = { which = "lunatic_counter" value = -5 } 
+			}
+		}
+		10 = {
+			modifier = {
+				factor = 0
+				NOT = { trait = ill }
+			}
+			remove_trait = ill
+		}
+		10 = {
+			modifier = {
+				factor = 0
+				NOT = { trait = slothful }
+			}
+			remove_trait = slothful
+		}
+		10 = {
+			modifier = {
+				factor = 0
+				trait = patient
+			}
+			add_trait = patient
+		}
+		10 = {
+			modifier = {
+				factor = 0
+				trait = diligent
+			}
+			add_trait = diligent
+		}
+		10 = {
+			piety = 50
+			prestige = 50
+		}
+		}
+	}
+}
+
+#104: Remove recent_sleep_change flag
+
+character_event = {
+	id = lizardman.104
+	desc = lizardman104desc		
+	picture = "GFX_evt_lustria_slann"
+	
+	only_rulers = yes
+	
+	hide_window = yes
+	
+	is_triggered_only = yes #2year pulse
+	
+	trigger = {
+		had_character_flag = { flag = recent_sleep_change months = 18 }
+	}
+	
+	option = {
+		name = OK
+		clr_character_flag = recent_sleep_change
+	}
+}
+
+# 201-300: Events dealing with the Lustrian jungle
+
+#201: The Lustrian jungle is growing
+
+province_event = {
+	id = lizardman.201
+	desc = lizardman201desc	
+	picture = "GFX_evt_lustria_jungle"
+	
+	mean_time_to_happen = {
+		years = 2
+		modifier = {
+			factor = 1.5
+			OR ={ #Jungle grows slower for natives
+				culture_group = lizardman_group
+				culture_group = amazon_group
+			}
+		}
+		modifier = { #Jungle grows slower next to rivers and coast (inland should be wilder and less useful)
+			factor = 1.25
+			OR = {
+				borders_major_river = yes
+				port = yes
+			}
+		}
+		modifier = { #Jungle grows faster if more controlled
+			factor = 0.8
+			holder_scope = { ai = no }
+			has_province_modifier = lustria_light_jungle
+		}
+		modifier = { #Jungle grows a little slower once it's dense
+			factor = 1.2
+			holder_scope = { ai = no }
+			has_province_modifier = lustria_dense_jungle
+		}
+	}
+	
+	trigger = {
+		has_province_modifier = lustria_jungle
+		OR = {
+			NOT = { has_province_modifier = lustria_oppressive_jungle }
+			holder_scope = {
+				ai = yes #AI manages its jungle with this event
+			}
+		}
+		terrain = jungle
+	}
+	
+	option = {
+		name = OK
+		trigger = {
+			holder_scope = { ai = no }
+		}
+		if = {
+			limit = {
+				has_province_modifier = 
+					lustria_dense_jungle				
+			}
+			remove_province_modifier = lustria_dense_jungle
+			add_province_modifier = {name = lustria_oppressive_jungle duration = -1 }
+		}
+		if = {
+			limit = {
+				has_province_modifier = 
+					lustria_medium_jungle
+				
+			}
+			remove_province_modifier = lustria_medium_jungle
+			add_province_modifier = {name = lustria_dense_jungle duration = -1 }
+		}
+		if = {
+			limit = {
+				has_province_modifier = 
+					lustria_light_jungle				
+			}
+			remove_province_modifier = lustria_light_jungle
+			add_province_modifier = { name = lustria_medium_jungle duration = -1 }
+		}
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						has_province_modifier = lustria_light_jungle
+						has_province_modifier = lustria_medium_jungle
+						has_province_modifier = lustria_dense_jungle
+						has_province_modifier = lustria_oppressive_jungle
+					}
+				}
+			}
+			add_province_modifier = { name = lustria_light_jungle duration = -1 }
+		}
+	}
+
+	option = {
+		name = OK
+		trigger = {
+			holder_scope = { ai = yes }
+		}
+		random_list = {
+			50 = {					
+				modifier = {
+					factor = 1.1
+					holder_scope = {
+					NOT = { realm_stewardship = 15 }
+					}
+				}
+				if = {
+					limit = {
+						has_province_modifier = 
+							lustria_dense_jungle				
+					}
+					remove_province_modifier = lustria_dense_jungle
+					add_province_modifier = {name = lustria_oppressive_jungle duration = -1 }
+				}
+				if = {
+					limit = {
+						has_province_modifier = 
+							lustria_medium_jungle						
+					}
+					remove_province_modifier = lustria_medium_jungle
+					add_province_modifier = {name = lustria_dense_jungle duration = -1 }
+				}
+				if = {
+					limit = {
+						has_province_modifier = 
+							lustria_light_jungle				
+					}
+					remove_province_modifier = lustria_light_jungle
+					add_province_modifier = { name = lustria_medium_jungle duration = -1 }
+				}
+				if = {
+					limit = {
+						NOT = {
+							OR = {
+								has_province_modifier = lustria_light_jungle
+								has_province_modifier = lustria_medium_jungle
+								has_province_modifier = lustria_dense_jungle
+								has_province_modifier = lustria_oppressive_jungle
+							}
+						}
+					}
+					add_province_modifier = { name = lustria_light_jungle duration = -1 }
+				}
+			}
+			50 = {
+				modifier = {
+					factor = 1.1
+					holder_scope = {
+					realm_stewardship = 30
+					}
+				}
+				if = {
+					limit = {
+						has_province_modifier = lustria_medium_jungle
+					}
+					remove_province_modifier = lustria_medium_jungle
+					add_province_modifier = { name = lustria_light_jungle duration = -1 }
+				}
+				if = {
+					limit = {
+						has_province_modifier = lustria_dense_jungle
+					}
+					remove_province_modifier = lustria_dense_jungle
+					add_province_modifier = { name = lustria_medium_jungle duration = -1 }
+				}
+				if = {
+					limit = {
+						has_province_modifier = lustria_oppressive_jungle
+					}
+					remove_province_modifier = lustria_oppressive_jungle
+					add_province_modifier = { name = lustria_dense_jungle duration = -1 }
+				}
+			}
+		}
+	}
+}
+
+#202: Get sick due to the jungle
+character_event = {
+	id = lizardman.202
+	desc = lizardman202desc
+	picture = "GFX_evt_lustria_jungle"
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		location = {
+			has_province_modifier = lustria_jungle
+		}
+	}
+	
+	weight_multiplier = {
+		days = 1
+		modifier = {
+			factor = 1.5
+			location = { has_province_modifier = lustria_medium_jungle }
+		}
+		modifier = {
+			factor = 2
+			location = { has_province_modifier = lustria_dense_jungle }
+		}
+		modifier = {
+			factor = 3
+			location = { has_province_modifier = lustria_oppressive_jungle }
+		}
+		modifier = {
+			factor = 0.9
+			health = 2
+		}
+		modifier = {
+			factor = 0.9
+			health = 3
+		}
+		modifier = {
+			factor = 0.9
+			health = 4
+		}				
+		modifier = {
+			factor = 0.9
+			health = 5
+		}				
+		modifier = {
+			factor = 0.9
+			health = 6
+		}				
+		modifier = {
+			factor = 0.9
+			health = 7
+		}				
+		modifier = {
+			factor = 0.9
+			health = 8
+		}				
+		modifier = {
+			factor = 0.9
+			health = 9
+		}								
+		modifier = {
+			factor = 0.9
+			health = 10
+		}
+		modifier = {
+			factor = 3
+			trait = ill
+		}
+		modifier = {
+			factor = 5
+			OR = {
+				ROOT = { trait = has_green_pox }
+				ROOT = { trait = has_red_pox }
+				ROOT = { trait = has_tomb_rot }
+				ROOT = { trait = has_bone_auge }
+				ROOT = { trait = has_rattlelung }
+				ROOT = { trait = leper }
+				ROOT = { trait = syphilitic }
+				ROOT = { trait = pneumonic }
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				trait = creature_skink
+				trait = creature_saurus
+			}
+		}
+		modifier = {
+			factor = 0.1
+			trait = creature_slann
+		}
+				
+	}
+	
+	option = {
+		name = OK
+		random_list = {
+			85 = {
+				if = {
+					limit = {
+						NOT = {
+							ROOT = { trait = ill }
+						}
+					}
+					ROOT = {
+						add_trait = ill
+					}
+				}
+				if = {
+					limit = {
+						ROOT = {
+							trait = ill
+						}
+					}
+					random_list = {
+						10 = { ROOT = { add_trait = has_green_pox } }
+						10 = { ROOT = { add_trait = has_red_pox } }
+						10 = { ROOT = { add_trait = has_tomb_rot } }
+						10 = { ROOT = { add_trait = has_bone_auge } }
+						10 = { ROOT = { add_trait = has_rattlelung } }
+					}
+					if = { #Notify liege and family
+						limit = {
+							independent = no
+						}
+						liege = {
+							character_event = { id = lizardman.203 }
+						}
+					}
+				}
+			}
+			5 = {
+				modifier = {
+					factor = 2
+					ROOT = {
+						trait = ill
+					}
+				}				
+				modifier = {
+					factor = 5
+					OR = {
+						ROOT = { trait = has_green_pox }
+						ROOT = { trait = has_red_pox }
+						ROOT = { trait = has_tomb_rot }
+						ROOT = { trait = has_bone_auge }
+						ROOT = { trait = has_rattlelung }
+						ROOT = { trait = leper }
+						ROOT = { trait = syphilitic }
+						ROOT = { trait = pneumonic }
+					}
+				}
+				death = { death_reason = death_trait }				
+				if = { #Notify liege and family
+					limit = {
+						ROOT = { is_ruler = no }
+					}
+					liege = {
+						character_event = { id = lizardman.204 }
+					}
+				}
+				# any_close_relative = {
+					# character_event = { id = lizardman.204 }
+				# }
+			}
+		}
+	}
+}
+
+#203: liege notified of courtier getting sick due to jungle
+character_event = {
+	id = lizardman.203
+	desc = lizardman203desc
+	picture = "GFX_evt_lustria_jungle"
+	
+	notification = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		always = yes
+	}
+	
+	option = {
+		name = OK
+	}
+}
+
+#204: liege notified of courtier dying due to sickness from jungle
+character_event = {
+	id = lizardman.204
+	desc = lizardman204desc
+	picture = "GFX_evt_lustria_jungle"
+	
+	notification = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		always = yes
+	}
+	
+	option = {
+		name = OK
+	}
+}
+#205: Attacked by jungle beast
+character_event = {
+	id = lizardman.205
+	desc = lizardman205desc
+	picture = "GFX_evt_lustria_dinosaur"
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_province_modifier = lustria_jungle
+	}	
+	
+	weight_multiplier = {
+		days = 1
+		modifier = {
+			factor = 1.5
+			has_province_modifier = lustria_medium_jungle
+		}
+		modifier = {
+			factor = 2
+			has_province_modifier = lustria_dense_jungle
+		}
+		modifier = {
+			factor = 3
+			has_province_modifier = lustria_oppressive_jungle
+		}
+	}
+	
+	option = {
+		name = OK
+		create_random_soldier = {
+			random_traits = yes			
+			dynasty = none
+			religion = old_ones
+			culture = ROOT #Creature gets native name #Creatures: Razorbacks, Cold Ones, Terradons, Stegadon, Sauropod, Thunder Lizards, Carnosaur
+			female = no
+			age = 30
+		}
+		#scope to character we created and make him send us a duel invite event - so we can't run away!
+		new_character = {
+			random_list = {
+				10 = { give_nickname = nick_the_Razorback change_martial = 5 }
+				10 = { give_nickname = nick_the_Cold_One change_martial = 6 }
+				10 = { give_nickname = nick_the_Terradon change_martial = 7 }
+				10 = { give_nickname = nick_the_Stegadon change_martial = 8 }
+				10 = { give_nickname = nick_the_Sauropod change_martial = 9 }
+				10 = { give_nickname = nick_the_Thunder_Lizard change_martial = 10 }
+				10 = { give_nickname = nick_the_Carnosaur change_martial = 15 }
+			}
+			add_trait = brave
+			character_event = {id = lizardman.207 days = 1}
+		}
+	}
+}
+
+#207: Creature challenges us to a duel
+
+character_event = {
+	id = lizardman.207
+	desc = lizardman207desc		
+	picture = "GFX_evt_lustria_dinosaur"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = OK
+		FROM = {
+			character_event = {id = duelengine.1 days = 1}
+		}
+		ROOT = {
+			character_event = { id = lizardman.208 months = 1 }#Kill off the creature to avoid shenanigans.
+		}
+	}
+}
+
+#208: Kill creature, no matter the outcome of the duel
+
+character_event = {
+	id = lizardman.208
+	desc = lizardman208desc		
+	picture = "GFX_evt_lustria_dinosaur"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = OK
+		ROOT = {
+			death = { death_reason = death_execution }
+		}
+	}
+}
+		
+	
+#20X: Village disappears in jungle
+
+#250: Manually add the modifier on startup because the game is stupid
+province_event = {
+	id = lizardman.250
+	desc = lizardman250desc	
+	picture = "GFX_evt_lustria_jungle"
+	
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			province_id = 1754			
+			province_id = 1811			
+			province_id = 1812			
+			province_id = 1814			
+			province_id = 1639			
+			province_id = 1762			
+			province_id = 1635			
+			province_id = 1815			
+			province_id = 1766			
+			province_id = 1763			
+			province_id = 1734			
+			province_id = 1709			
+			province_id = 1775			
+			province_id = 1780			
+			province_id = 1772			
+			province_id = 1773			
+			province_id = 1776			
+			province_id = 1712			
+			province_id = 1710			
+			province_id = 1711			
+			province_id = 1759			
+			province_id = 1790			
+			province_id = 1791			
+			province_id = 1789			
+			province_id = 1793			
+			province_id = 1794			
+			province_id = 1809			
+			province_id = 1807			
+			province_id = 1743			
+			province_id = 1699			
+			province_id = 1719			
+			province_id = 1757			
+			province_id = 1689			
+			province_id = 1732			
+			province_id = 1740			
+			province_id = 1797			
+			province_id = 1741			
+			province_id = 1746			
+			province_id = 1728			
+			province_id = 1774			
+			province_id = 1738			
+			province_id = 1778			
+			province_id = 1756			
+			province_id = 1805			
+			province_id = 1802			
+			province_id = 1810			
+			province_id = 1777			
+			province_id = 1779			
+			province_id = 1783			
+			province_id = 1727			
+			province_id = 1786			
+			province_id = 1788			
+			province_id = 1748			
+			province_id = 1813			
+			province_id = 1787			
+			province_id = 1722			
+			province_id = 1717			
+			province_id = 1705			
+			province_id = 1708			
+			province_id = 1781			
+			province_id = 1770			
+			province_id = 1771			
+			province_id = 1753			
+			province_id = 1816			
+			province_id = 1764			
+			province_id = 1765			
+			province_id = 1691			
+			province_id = 1716			
+			province_id = 1707			
+			province_id = 1739			
+			province_id = 1692			
+			province_id = 1638			
+			province_id = 1647			
+			province_id = 1755			
+			province_id = 1799			
+			province_id = 1804			
+			province_id = 1817			
+			province_id = 1760			
+			province_id = 1803			
+			province_id = 1806			
+			province_id = 1808			
+			province_id = 1758			
+			province_id = 1798			
+			province_id = 1792			
+			province_id = 1795			
+			province_id = 1796			
+			province_id = 1761			
+			province_id = 1733			
+			province_id = 1744			
+			province_id = 1731			
+			province_id = 1767			
+			province_id = 1800			
+			province_id = 1801			
+			province_id = 1713			
+			province_id = 1735			
+			province_id = 1751			
+			province_id = 1704			
+			province_id = 1715			
+			province_id = 1714			
+			province_id = 1768			
+			province_id = 1684			
+			province_id = 1685			
+			province_id = 1690			
+			province_id = 1747
+			province_id = 1698			
+			province_id = 1718			
+			province_id = 1752			
+			province_id = 1686			
+			province_id = 1721			
+			province_id = 1702			
+			province_id = 1720			
+			province_id = 1729			
+			province_id = 1687			
+			province_id = 1785			
+			province_id = 1782			
+			province_id = 1784			
+			province_id = 1750			
+			province_id = 1706			
+			province_id = 1866			
+			province_id = 1742			
+			province_id = 1749			
+			province_id = 1703			
+			province_id = 1769			
+			province_id = 1701			
+			province_id = 1695			
+			province_id = 1723			
+			province_id = 1694			
+			province_id = 1696			
+			province_id = 1745			
+			province_id = 1693			
+			province_id = 1697			
+			province_id = 1724			
+			province_id = 1700			
+			province_id = 1642			
+			province_id = 1636			
+			province_id = 1637			
+			province_id = 1643			
+			province_id = 1634			
+			province_id = 1640			
+			province_id = 1641			
+			province_id = 1644			
+			province_id = 1645			
+			province_id = 1646
+		}
+	}
+	
+	option = {
+		name = OK
+		add_province_modifier = { name = lustria_jungle duration = -1 }
+		if = {
+			limit = {
+				holder_scope = {
+					any_demesne_province = {
+						or = {
+							province_id = 1754			
+							province_id = 1811			
+							province_id = 1812			
+							province_id = 1814			
+							province_id = 1639			
+							province_id = 1762			
+							province_id = 1635			
+							province_id = 1815			
+							province_id = 1766			
+							province_id = 1763			
+							province_id = 1734			
+							province_id = 1709			
+							province_id = 1775			
+							province_id = 1780			
+							province_id = 1772			
+							province_id = 1773			
+							province_id = 1776			
+							province_id = 1712			
+							province_id = 1710			
+							province_id = 1711			
+							province_id = 1759			
+							province_id = 1790			
+							province_id = 1791			
+							province_id = 1789			
+							province_id = 1793			
+							province_id = 1794			
+							province_id = 1809			
+							province_id = 1807			
+							province_id = 1743			
+							province_id = 1699			
+							province_id = 1719			
+							province_id = 1757			
+							province_id = 1689			
+							province_id = 1732			
+							province_id = 1740			
+							province_id = 1797			
+							province_id = 1741			
+							province_id = 1746			
+							province_id = 1728			
+							province_id = 1774			
+							province_id = 1738			
+							province_id = 1778			
+							province_id = 1756			
+							province_id = 1805			
+							province_id = 1802			
+							province_id = 1810			
+							province_id = 1777			
+							province_id = 1779			
+							province_id = 1783			
+							province_id = 1727			
+							province_id = 1786			
+							province_id = 1788			
+							province_id = 1748			
+							province_id = 1813			
+							province_id = 1787			
+							province_id = 1722			
+							province_id = 1717			
+							province_id = 1705			
+							province_id = 1708			
+							province_id = 1781			
+							province_id = 1770			
+							province_id = 1771			
+							province_id = 1753			
+							province_id = 1816			
+							province_id = 1764			
+							province_id = 1765			
+							province_id = 1691			
+							province_id = 1716			
+							province_id = 1707			
+							province_id = 1739			
+							province_id = 1692			
+							province_id = 1638			
+							province_id = 1647			
+							province_id = 1755			
+							province_id = 1799			
+							province_id = 1804			
+							province_id = 1817			
+							province_id = 1760			
+							province_id = 1803			
+							province_id = 1806			
+							province_id = 1808			
+							province_id = 1758			
+							province_id = 1798			
+							province_id = 1792			
+							province_id = 1795			
+							province_id = 1796			
+							province_id = 1761			
+							province_id = 1733			
+							province_id = 1744			
+							province_id = 1731			
+							province_id = 1767			
+							province_id = 1800			
+							province_id = 1801			
+							province_id = 1713			
+							province_id = 1735			
+							province_id = 1751			
+							province_id = 1704			
+							province_id = 1715			
+							province_id = 1714			
+							province_id = 1768			
+							province_id = 1684			
+							province_id = 1685			
+							province_id = 1690			
+							province_id = 1747
+							province_id = 1698			
+							province_id = 1718			
+							province_id = 1752			
+							province_id = 1686			
+							province_id = 1721			
+							province_id = 1702			
+							province_id = 1720			
+							province_id = 1729			
+							province_id = 1687			
+							province_id = 1785			
+							province_id = 1782			
+							province_id = 1784			
+							province_id = 1750			
+							province_id = 1706			
+							province_id = 1866			
+							province_id = 1742			
+							province_id = 1749			
+							province_id = 1703			
+							province_id = 1769			
+							province_id = 1701			
+							province_id = 1695			
+							province_id = 1723			
+							province_id = 1694			
+							province_id = 1696			
+							province_id = 1745			
+							province_id = 1693			
+							province_id = 1697			
+							province_id = 1724			
+							province_id = 1700			
+							province_id = 1642			
+							province_id = 1636			
+							province_id = 1637			
+							province_id = 1643			
+							province_id = 1634			
+							province_id = 1640			
+							province_id = 1641			
+							province_id = 1644			
+							province_id = 1645			
+							province_id = 1646
+						}
+						NOT = { has_province_modifier = lustria_jungle }
+					}
+				}
+			}
+			holder_scope = {
+				random_demesne_province = {
+					limit = {
+						or = {
+							province_id = 1754			
+							province_id = 1811			
+							province_id = 1812			
+							province_id = 1814			
+							province_id = 1639			
+							province_id = 1762			
+							province_id = 1635			
+							province_id = 1815			
+							province_id = 1766			
+							province_id = 1763			
+							province_id = 1734			
+							province_id = 1709			
+							province_id = 1775			
+							province_id = 1780			
+							province_id = 1772			
+							province_id = 1773			
+							province_id = 1776			
+							province_id = 1712			
+							province_id = 1710			
+							province_id = 1711			
+							province_id = 1759			
+							province_id = 1790			
+							province_id = 1791			
+							province_id = 1789			
+							province_id = 1793			
+							province_id = 1794			
+							province_id = 1809			
+							province_id = 1807			
+							province_id = 1743			
+							province_id = 1699			
+							province_id = 1719			
+							province_id = 1757			
+							province_id = 1689			
+							province_id = 1732			
+							province_id = 1740			
+							province_id = 1797			
+							province_id = 1741			
+							province_id = 1746			
+							province_id = 1728			
+							province_id = 1774			
+							province_id = 1738			
+							province_id = 1778			
+							province_id = 1756			
+							province_id = 1805			
+							province_id = 1802			
+							province_id = 1810			
+							province_id = 1777			
+							province_id = 1779			
+							province_id = 1783			
+							province_id = 1727			
+							province_id = 1786			
+							province_id = 1788			
+							province_id = 1748			
+							province_id = 1813			
+							province_id = 1787			
+							province_id = 1722			
+							province_id = 1717			
+							province_id = 1705			
+							province_id = 1708			
+							province_id = 1781			
+							province_id = 1770			
+							province_id = 1771			
+							province_id = 1753			
+							province_id = 1816			
+							province_id = 1764			
+							province_id = 1765			
+							province_id = 1691			
+							province_id = 1716			
+							province_id = 1707			
+							province_id = 1739			
+							province_id = 1692			
+							province_id = 1638			
+							province_id = 1647			
+							province_id = 1755			
+							province_id = 1799			
+							province_id = 1804			
+							province_id = 1817			
+							province_id = 1760			
+							province_id = 1803			
+							province_id = 1806			
+							province_id = 1808			
+							province_id = 1758			
+							province_id = 1798			
+							province_id = 1792			
+							province_id = 1795			
+							province_id = 1796			
+							province_id = 1761			
+							province_id = 1733			
+							province_id = 1744			
+							province_id = 1731			
+							province_id = 1767			
+							province_id = 1800			
+							province_id = 1801			
+							province_id = 1713			
+							province_id = 1735			
+							province_id = 1751			
+							province_id = 1704			
+							province_id = 1715			
+							province_id = 1714			
+							province_id = 1768			
+							province_id = 1684			
+							province_id = 1685			
+							province_id = 1690			
+							province_id = 1747
+							province_id = 1698			
+							province_id = 1718			
+							province_id = 1752			
+							province_id = 1686			
+							province_id = 1721			
+							province_id = 1702			
+							province_id = 1720			
+							province_id = 1729			
+							province_id = 1687			
+							province_id = 1785			
+							province_id = 1782			
+							province_id = 1784			
+							province_id = 1750			
+							province_id = 1706			
+							province_id = 1866			
+							province_id = 1742			
+							province_id = 1749			
+							province_id = 1703			
+							province_id = 1769			
+							province_id = 1701			
+							province_id = 1695			
+							province_id = 1723			
+							province_id = 1694			
+							province_id = 1696			
+							province_id = 1745			
+							province_id = 1693			
+							province_id = 1697			
+							province_id = 1724			
+							province_id = 1700			
+							province_id = 1642			
+							province_id = 1636			
+							province_id = 1637			
+							province_id = 1643			
+							province_id = 1634			
+							province_id = 1640			
+							province_id = 1641			
+							province_id = 1644			
+							province_id = 1645			
+							province_id = 1646
+						}
+						NOT = { has_province_modifier = lustria_jungle }
+					}
+					province_event = { id = lizardman.250 }
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						has_province_modifier = lustria_light_jungle
+						has_province_modifier = lustria_medium_jungle
+						has_province_modifier = lustria_dense_jungle
+						has_province_modifier = lustria_oppressive_jungle
+					}
+				}
+			}
+			random_list = { #Make it so the initial jungle level is random
+				25 = {
+					modifier = {
+						factor = 3 #Kingdom level tier is more likely to have light jungle
+						is_capital = yes
+						holder_scope = {
+							higher_real_tier_than = DUKE
+						}
+					}
+					modifier = {
+						factor = 2 #Duke level is a bit more likely to have light jungle
+						is_capital = yes
+						holder_scope = {
+							real_tier = DUKE
+						}
+					}
+					modifier = {
+						factor = 1.5
+						is_capital = yes
+						holder_scope = {
+							real_tier = COUNT
+						}
+					}
+					modifier = {
+						factor = 3
+						OR = {
+							borders_major_river = yes
+							port = yes
+						}
+					}
+					add_province_modifier = { name = lustria_light_jungle duration = -1 }
+				}
+				25 = {
+					add_province_modifier = { name = lustria_medium_jungle duration = -1 }
+					modifier = {
+						factor = 2
+						OR = {
+							borders_major_river = yes
+							port = yes
+						}
+					}
+				}
+				25 = {
+					add_province_modifier = { name = lustria_dense_jungle duration = -1 }
+				}
+				25 = {
+					add_province_modifier = { name = lustria_oppressive_jungle duration = -1 }
+					modifier = {
+						factor = 0
+						OR = {
+							borders_major_river = yes
+							port = yes
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+# 251: Trigger 250 for held provinces
+character_event = {
+	id = lizardman.251
+	desc = lizardman251desc		
+	picture = "GFX_evt_lustria_jungle"
+	
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	only_rulers = yes
+	
+	trigger = {
+		is_ruler = yes
+	}
+	
+	option = {
+		name = OK
+		ROOT = {
+			random_demesne_province = {
+				limit = { NOT = { has_province_modifier = lustria_jungle } }
+				province_event = { id = lizardman.250 }
+			}
+		}
+	}
+}
+
+#260: Clear recent cutback flag
+character_event = {
+	id = lizardman.260	
+	picture = "GFX_evt_lustria_jungle"
+	
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = OK
+	}
+}
+
+#261: Choose whom you want to cut back your jungle
+
+character_event = {
+	id = lizardman.261
+	desc = lizardman261desc		
+	picture = "GFX_evt_lustria_jungle"
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		any_demesne_province = {
+			has_province_modifier = lustria_jungle
+			NOT = { has_province_flag = recent_cutback_jungle }
+			OR = { #Event should only trigger if there is a province where the jungle can be cut back
+				has_province_modifier = lustria_medium_jungle
+				has_province_modifier = lustria_dense_jungle
+				has_province_modifier = lustria_oppressive_jungle
+			}
+		}
+	}
+	
+	option = { #Do it yourself
+		name = lizardman261Adesc
+		trigger = {
+			ROOT = {
+				in_command = no
+			}
+		}
+		if = {
+			limit = { is_tribal = no }
+			wealth = -10
+		}
+		if = {
+			limit = { is_tribal = yes }
+			wealth = -2
+			prestige = -10
+		}
+		ROOT = {
+			character_event = { id = lizardman.262 }
+		}
+	}
+	
+	option = { #Send the steward
+		name = lizardman261Bdesc
+		trigger = {
+			ROOT = {
+				job_treasurer = {
+					character = yes
+					in_command = no
+				}
+			}
+		}
+		ROOT = {
+			job_treasurer = {
+				character_event = { id = lizardman.263 }
+			}
+		}
+		if = {
+			limit = { is_tribal = no }
+			wealth = -10
+		}
+		if = {
+			limit = { is_tribal = yes }
+			wealth = -2
+			prestige = -10
+		}
+	}
+	
+	option = { #Nevermind
+		name = lizardman261Cdesc
+	}
+}
+
+#262: Ping event to put the character who executes the cutting-back into FROM scope
+character_event = {
+	id = lizardman.262
+	desc = lizardman262desc		
+	picture = "GFX_evt_lustria_jungle"
+	
+	is_triggered_only = yes
+	
+	hide_window = yes
+	
+	option = {
+		name = OK
+		if = { #If the player is cutting back jungle, the steward's location determines which province is being cut back.
+			limit = {
+				ai = no
+			}
+			if = { #Determine whether the steward is in the player's domain. If not, abort and output an error event (refunding the costs!)
+				limit = {
+					job_treasurer = {
+						location = {
+							NOT = { has_province_flag = recent_cutback_jungle }
+							holder_scope = {
+								character = FROM
+							}
+						}
+					}
+				}
+				job_treasurer = {
+					location = {
+						province_event = { id = lizardman.264 }
+					}
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						job_treasurer = {
+							location = {
+								OR = {
+									has_province_flag = recent_cutback_jungle
+									holder_scope = {
+										character = FROM
+									}
+								}
+							}
+						}
+					}
+				}
+				ROOT = {
+					character_event = { id = lizardman.265 }
+				}
+			}					
+		}
+		if = { #If the ai is cutting back the jungle, simply select a random province in the ai's demesne
+			limit = {
+				ai = yes
+			}
+			random_demesne_province = {
+				limit = {
+					NOT = { has_province_flag = recent_cutback_jungle }
+					has_province_modifier = lustria_jungle
+					OR = {
+						has_province_modifier = lustria_medium_jungle
+						has_province_modifier = lustria_dense_jungle
+						has_province_modifier = lustria_oppressive_jungle
+					}
+					OR = { #cut back jungle in oppressive level provinces first
+						NOT = {
+							holder_scope = {
+								any_demesne_province = {
+									has_province_modifier = lustria_oppressive_jungle
+								}
+							}
+						}
+						has_province_modifier = lustria_oppressive_jungle
+					}
+					holder_scope = { #cut back in capital first
+						capital_scope = {
+							OR = {
+								NOT = {# Capital does not have bad jungle
+									OR = {
+										has_province_modifier = lustria_dense_jungle 
+										has_province_modifier = lustria_oppressive_jungle
+									}
+								}
+								province = PREVPREV #Province is itself capital
+							}
+						}
+					}								
+				}
+				province_event = { id = lizardman.264 }
+			}
+		}
+	}
+}
+
+#263: as 262, but for steward
+character_event = {
+	id = lizardman.263
+	desc = lizardman262desc	
+	picture = "GFX_evt_lustria_jungle"
+	
+	is_triggered_only = yes
+	
+	hide_window = yes
+	
+	option = {
+		name = OK
+		if = { #If the player is cutting back jungle, the steward's location determines which province is being cut back.
+			limit = {
+				ai = no
+			}
+			if = { #Determine whether the steward is in the player's demesne. If not, abort and output an error event (refunding the costs!)
+				limit = {
+					FROM = {
+						job_treasurer = {
+							location = {
+								holder_scope = {
+									character = FROM
+								}
+							}
+						}
+					}
+				}
+				job_treasurer = {
+					location = {
+						province_event = { id = lizardman.264 }
+					}
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						FROM = {
+							job_treasurer = {
+								location = {
+									holder_scope = {
+										character = FROM
+									}
+								}
+							}
+						}
+					}
+				}
+				ROOT = {
+					character_event = { id = lizardman.265 }
+				}
+			}					
+		}
+		if = { #If the ai is cutting back the jungle, simply select a random province in the ai's demesne
+			limit = {
+				ai = yes
+			}
+			random_demesne_province = {
+				limit = {
+					has_province_modifier = lustria_jungle
+					OR = {
+						has_province_modifier = lustria_medium_jungle
+						has_province_modifier = lustria_dense_jungle
+						has_province_modifier = lustria_oppressive_jungle
+					}
+					OR = { #cut back jungle in oppressive level provinces first
+						NOT = {
+							holder_scope = {
+								any_demesne_province = {
+									has_province_modifier = lustria_oppressive_jungle
+								}
+							}
+						}
+						has_province_modifier = lustria_oppressive_jungle
+					}
+					holder_scope = { #cut back in capital first
+						capital_scope = {
+							OR = {
+								NOT = {# Capital does not have bad jungle
+									OR = {
+										has_province_modifier = lustria_dense_jungle 
+										has_province_modifier = lustria_oppressive_jungle
+									}
+								}
+								province = PREVPREV #Province is itself capital
+							}
+						}
+					}								
+				}
+				province_event = { id = lizardman.264 }
+			}
+		}
+	}
+}
+
+#264: Ping event for province
+province_event = {
+	id = lizardman.264
+	desc = lizardman264desc	
+	picture = "GFX_evt_lustria_jungle"
+	
+	# hide_window = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = OK
+		FROM = {
+			if = {
+				limit = {
+					#has_character_flag = recent_cutback_jungle #The liege is cutting back the jungle himself
+					character = FROMFROM
+				}
+				character_event = { id = lizardman.267 }
+			}
+			if = {
+				limit = {
+					# NOT = { has_character_flag = recent_cutback_jungle } #The steward is doing it
+					NOT = { character = FROMFROM }
+				}
+				character_event = { id = lizardman.266 }
+			}
+		}
+	}
+}
+				
+
+#265: Error for when steward of player cutting back jungle is not in his liege's demesne
+character_event = {
+	id = lizardman.265
+	desc = lizardman265desc	
+	picture = "GFX_evt_lustria_jungle"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = OK
+		clr_character_flag = recent_cutback_jungle		
+		if = {
+			limit = { is_tribal = no }
+			wealth = 10
+		}
+		if = {
+			limit = { is_tribal = yes }
+			wealth = 2
+			prestige = 10
+		}
+	}
+}
+
+#266: Event to resolve cutting back for the steward
+character_event = {
+	id = lizardman.266
+	desc = lizardman266desc	
+	picture = "GFX_evt_lustria_jungle"
+	
+	is_triggered_only = yes
+	
+	hide_window = yes
+	
+	immediate = {
+		FROM = {
+			set_province_flag = recent_cutback_jungle 
+			province_event = { id = lizardman.272 years = 2 }
+		}
+	}
+		
+	
+	option = {
+		name = OK
+		random_list = {
+			50 = {
+				modifier = {
+					factor = 1.1
+					stewardship = 2
+				}
+				modifier = {
+					factor = 1.1
+					stewardship = 3
+				}
+				modifier = {
+					factor = 1.1
+					stewardship = 4
+				}
+				modifier = {
+					factor = 1.1
+					stewardship = 5
+				}				
+				modifier = {
+					factor = 1.1
+					stewardship = 6
+				}
+				modifier = {
+					factor = 1.1
+					stewardship = 7
+				}
+				modifier = {
+					factor = 1.1
+					stewardship = 8
+				}
+				modifier = {
+					factor = 1.1
+					stewardship = 9
+				}
+				modifier = {
+					factor = 1.1
+					stewardship = 10
+				}
+				modifier = {
+					factor = 1.1
+					stewardship = 12
+				}
+				modifier = {
+					factor = 1.1
+					stewardship = 14
+				}
+				modifier = {
+					factor = 1.1
+					stewardship = 16
+				}
+				modifier = {
+					factor = 1.1
+					stewardship = 18
+				}
+				modifier = {
+					factor = 1.1
+					stewardship = 20
+				}
+				modifier = {
+					factor = 1.1
+					stewardship = 25
+				}
+				modifier = {
+					factor = 1.1
+					stewardship = 30
+				}
+				FROM = {
+					if = {
+						limit = { has_province_modifier = lustria_medium_jungle }
+						remove_province_modifier = lustria_medium_jungle
+						add_province_modifier = { name = lustria_light_jungle duration = -1 }
+					}
+					if = {
+						limit = { has_province_modifier = lustria_dense_jungle }
+						remove_province_modifier = lustria_dense_jungle
+						add_province_modifier = { name = lustria_medium_jungle duration = -1 }
+					}
+					if = {
+						limit = { has_province_modifier = lustria_oppressive_jungle }
+						remove_province_modifier = lustria_oppressive_jungle
+						add_province_modifier = { name = lustria_dense_jungle duration = -1 }
+					}
+				}
+				FROMFROMFROM = {
+					letter_event = { id = lizardman.268 }
+				}
+				ROOT = { character_event = { id = lizardman.270 } }
+			}
+			50 = {
+				FROMFROMFROM = {
+					letter_event = { id = lizardman.269 }
+				}
+				ROOT = { character_event = { id = lizardman.271 } }
+			}
+		}
+		random_list = {
+			95 = { }
+			5 = {					
+				modifier = {
+					factor = 1.5
+					FROM = { has_province_modifier = lustria_medium_jungle }
+				}
+				modifier = {
+					factor = 2
+					FROM = { has_province_modifier = lustria_dense_jungle }
+				}
+				modifier = {
+					factor = 3
+					FROM = { has_province_modifier = lustria_oppressive_jungle }
+				}
+				modifier = {
+					factor = 0.9
+					health = 2
+				}
+				modifier = {
+					factor = 0.9
+					health = 3
+				}
+				modifier = {
+					factor = 0.9
+					health = 4
+				}				
+				modifier = {
+					factor = 0.9
+					health = 5
+				}				
+				modifier = {
+					factor = 0.9
+					health = 6
+				}				
+				modifier = {
+					factor = 0.9
+					health = 7
+				}				
+				modifier = {
+					factor = 0.9
+					health = 8
+				}				
+				modifier = {
+					factor = 0.9
+					health = 9
+				}								
+				modifier = {
+					factor = 0.9
+					health = 10
+				}
+				modifier = {
+					factor = 3
+					ROOT = {
+						trait = ill
+					}
+				}
+				modifier = {
+					factor = 5
+					OR = {
+						ROOT = { trait = has_green_pox }
+						ROOT = { trait = has_red_pox }
+						ROOT = { trait = has_tomb_rot }
+						ROOT = { trait = has_bone_auge }
+						ROOT = { trait = has_rattlelung }
+						ROOT = { trait = leper }
+						ROOT = { trait = syphilitic }
+						ROOT = { trait = pneumonic }
+					}
+				}
+				modifier = {
+					factor = 0.5
+					ROOT = {
+						OR = {
+							trait = creature_skink
+							trait = creature_saurus
+						}
+					}
+				}
+				modifier = {
+					factor = 0.1
+					ROOT = {
+						trait = creature_slann
+					}
+				}
+				
+				if = {
+					limit = {
+						NOT = {
+							ROOT = { trait = ill }
+						}
+					}
+					ROOT = {
+						add_trait = ill
+					}
+				}
+				if = {
+					limit = {
+						ROOT = {
+							trait = ill
+						}
+					}
+					random_list = {
+						10 = { ROOT = { add_trait = has_green_pox } }
+						10 = { ROOT = { add_trait = has_red_pox } }
+						10 = { ROOT = { add_trait = has_tomb_rot } }
+						10 = { ROOT = { add_trait = has_bone_auge } }
+						10 = { ROOT = { add_trait = has_rattlelung } }
+					}
+					if = { #Notify liege and family
+						limit = {
+							independent = no
+						}
+						liege = {
+							character_event = { id = lizardman.203 }
+						}
+					}
+				}				
+			}
+		}
+	}
+}
+			
+
+#267: Event to resolve cutting back for the liege doing it himself
+character_event = {
+	id = lizardman.267
+	desc = lizardman266desc	
+	picture = "GFX_evt_lustria_jungle"
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		FROM = {
+			set_province_flag = recent_cutback_jungle 
+			province_event = { id = lizardman.272 years = 2 }
+		}
+	}
+	
+	option = {
+		name = OK
+		random_list = {
+			50 = {
+				modifier = {
+					factor = 1.1
+					ROOT = {
+					stewardship = 2
+					}
+				}
+				modifier = {
+					factor = 1.1
+					ROOT = {
+					stewardship = 3
+					}
+				}
+				modifier = {
+					factor = 1.1
+					ROOT = {
+					stewardship = 4
+					}
+				}
+				modifier = {
+					factor = 1.1
+					stewardship = 5
+				}				
+				modifier = {
+					factor = 1.1
+					stewardship = 6
+				}
+				modifier = {
+					factor = 1.1
+					stewardship = 7
+				}
+				modifier = {
+					factor = 1.1
+					stewardship = 8
+				}
+				modifier = {
+					factor = 1.1
+					stewardship = 9
+				}
+				modifier = {
+					factor = 1.1
+					stewardship = 10
+				}
+				modifier = {
+					factor = 1.1
+					stewardship = 12
+				}
+				modifier = {
+					factor = 1.1
+					stewardship = 14
+				}
+				modifier = {
+					factor = 1.1
+					stewardship = 16
+				}
+				modifier = {
+					factor = 1.1
+					stewardship = 18
+				}
+				modifier = {
+					factor = 1.1
+					stewardship = 20
+				}
+				modifier = {
+					factor = 1.1
+					stewardship = 25
+				}
+				modifier = {
+					factor = 1.1
+					stewardship = 30
+				}
+				FROM = {
+					if = {
+						limit = { has_province_modifier = lustria_medium_jungle }
+						remove_province_modifier = lustria_medium_jungle
+						add_province_modifier = { name = lustria_light_jungle duration = -1}
+					}
+					if = {
+						limit = { has_province_modifier = lustria_dense_jungle }
+						remove_province_modifier = lustria_dense_jungle
+						add_province_modifier = { name = lustria_medium_jungle duration = -1}
+					}
+					if = {
+						limit = { has_province_modifier = lustria_oppressive_jungle }
+						remove_province_modifier = lustria_oppressive_jungle
+						add_province_modifier = { name = lustria_dense_jungle duration = -1}
+					}
+				}				
+				ROOT = { character_event = { id = lizardman.270 } }
+			}
+			50 = {
+				ROOT = { character_event = { id = lizardman.271 } }
+			}
+		}
+		random_list = {
+			95 = { }
+			5 = {					
+				modifier = {
+					factor = 1.5
+					FROM = { has_province_modifier = lustria_medium_jungle }
+				}
+				modifier = {
+					factor = 2
+					FROM = { has_province_modifier = lustria_dense_jungle }
+				}
+				modifier = {
+					factor = 3
+					FROM = { has_province_modifier = lustria_oppressive_jungle }
+				}
+				modifier = {
+					factor = 0.9
+					health = 2
+				}
+				modifier = {
+					factor = 0.9
+					health = 3
+				}
+				modifier = {
+					factor = 0.9
+					health = 4
+				}				
+				modifier = {
+					factor = 0.9
+					health = 5
+				}				
+				modifier = {
+					factor = 0.9
+					health = 6
+				}				
+				modifier = {
+					factor = 0.9
+					health = 7
+				}				
+				modifier = {
+					factor = 0.9
+					health = 8
+				}				
+				modifier = {
+					factor = 0.9
+					health = 9
+				}								
+				modifier = {
+					factor = 0.9
+					health = 10
+				}
+				modifier = {
+					factor = 3
+					ROOT = {
+						trait = ill
+					}
+				}
+				modifier = {
+					factor = 5
+					OR = {
+						ROOT = { trait = has_green_pox }
+						ROOT = { trait = has_red_pox }
+						ROOT = { trait = has_tomb_rot }
+						ROOT = { trait = has_bone_auge }
+						ROOT = { trait = has_rattlelung }
+						ROOT = { trait = leper }
+						ROOT = { trait = syphilitic }
+						ROOT = { trait = pneumonic }
+					}
+				}
+				modifier = {
+					factor = 0.5
+					ROOT = {
+						OR = {
+							trait = creature_skink
+							trait = creature_saurus
+						}
+					}
+				}
+				modifier = {
+					factor = 0.1
+					ROOT = {
+						trait = creature_slann
+					}
+				}
+				character_event = { id = lizardman.273 }#Illness due to cutting back the jungle
+
+			}
+		}
+	}
+}
+
+#268: Liege is notified of success
+letter_event = {
+	id = lizardman.268
+	desc = lizardman268desc	
+	picture = "GFX_evt_lustria_jungle"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = OK
+	}
+}
+
+#269: Liege is notified of failure
+letter_event = {
+	id = lizardman.269
+	desc = lizardman269desc	
+	picture = "GFX_evt_lustria_jungle"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = OK
+	}
+}
+
+#270: Character learns of his own success
+character_event = {
+	id = lizardman.270
+	desc = lizardman270desc	
+	picture = "GFX_evt_lustria_jungle"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = OK
+	}
+}
+#271: Character learns of his own failure
+character_event = {
+	id = lizardman.271
+	desc = lizardman271desc	
+	picture = "GFX_evt_lustria_jungle"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = OK
+	}
+}
+
+#272: Clear recent_cutback flag
+province_event = {
+	id = lizardman.272
+	desc = lizardman271desc	
+	picture = "GFX_evt_lustria_jungle"
+	
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		clr_province_flag = recent_cutback_jungle
+	}
+	
+	option = {
+		name = OK
+	}
+}
+
+#273: Tell character he has become sick due to cutting back the jungle
+character_event = {
+	id = lizardman.273
+	desc = lizardman273desc
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = OK				
+		if = {
+			limit = {
+				NOT = {
+					ROOT = { trait = ill }
+				}
+			}
+			ROOT = {
+				add_trait = ill
+			}
+		}
+		if = {
+			limit = {
+				ROOT = {
+					trait = ill
+				}
+			}
+			random_list = {
+				10 = { ROOT = { add_trait = has_green_pox } }
+				10 = { ROOT = { add_trait = has_red_pox } }
+				10 = { ROOT = { add_trait = has_tomb_rot } }
+				10 = { ROOT = { add_trait = has_bone_auge } }
+				10 = { ROOT = { add_trait = has_rattlelung } }
+			}
+			if = { #Notify liege
+				limit = {
+					independent = no
+				}
+				liege = {
+					character_event = { id = lizardman.203 }
+				}
+			}
+		}
+	}
+}
+					
+
+#280: Spoils of the Lustrian jungle (lizardman only)
+character_event = {
+	id = lizardman.280
+	
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		culture = lizardman
+		any_demesne_province = {
+			has_province_modifier = lustria_jungle
+			OR = {
+				has_province_modifier = lustria_medium_jungle
+				has_province_modifier = lustria_dense_jungle
+				has_province_modifier = lustria_oppressive_jungle
+			}
+		}
+	}
+	
+	weight_multiplier = {
+		days = 1
+		modifier = {
+			factor = 1.5
+			any_demesne_province = {
+				has_province_modifier = lustria_dense_jungle
+			}
+		}
+		modifier = {
+			factor = 2
+			any_demesne_province = {
+				has_province_modifier = lustria_oppressive_jungle
+			}
+		}
+		modifier = {
+			factor = 1.5
+			realm_stewardship = 30
+		}
+	}
+				
+	
+	option = {
+		name = OK
+		random_list = {
+			25 = { #Plaques found
+				character_event = { id = lizardman.281 }
+			}
+			25 = { #Wild beasts tamed
+				character_event = { id = lizardman.282 }
+			}
+			25 = { #Valuable resources found
+				character_event = { id = lizardman.283 }
+			}
+		}
+	}
+}
+
+#Holy plaques found
+character_event = {
+	id = lizardman.281
+	desc = lizardman281desc
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = GodsBePraised
+		piety = 30
+	}
+}
+
+#Wild beasts tamed
+character_event = {
+	id = lizardman.282
+	desc = lizardman282desc
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = GodsBePraised
+		spawn_unit = {
+			owner = ROOT
+			province = ROOT
+			troops = {
+				light_cavalry = { 20 20 }
+			}
+		}
+	}
+}
+
+#Valuable resources found
+character_event = {
+	id = lizardman.283
+	desc = lizardman283desc
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = GodsBePraised
+		wealth = 15
+	}
+}
+
+#300: Events about rampaging beasts
+
+# 300: Rampaging beasts rise up (temporary rebel title created, with a leader and a war)
+# Triggered from "on_rebel_revolt"
+province_event = {
+	id = lizardman.300
+	desc = lizardman300desc
+	picture = "GFX_evt_lustria_dinosaur"
+	border = GFX_event_normal_frame_war
+	
+	is_triggered_only = yes
+
+	trigger = {
+		has_dlc = "The Old Gods"
+				
+		has_province_modifier = lustria_jungle
+		OR = {
+			has_province_modifier = lustria_medium_jungle
+			has_province_modifier = lustria_dense_jungle
+			has_province_modifier = lustria_oppressive_jungle
+		}
+		# Heretic revolts have prio
+		OR = {
+			is_heretic = no
+			owner = {
+				top_liege = {
+					NOT = { is_parent_religion = ROOT }
+				}
+			}
+		}
+		
+		# Religious revolts have prio
+		owner = {
+			top_liege = {
+				religion_group = ROOT
+			}
+		}
+		
+		# Nationalist revolts have prio
+		OR = {
+			owner = {
+				top_liege = {
+					culture = ROOT
+				}
+			}
+			kingdom = {
+				OR = {
+					has_holder = yes
+					NOT = { culture = ROOT }
+				}
+			}
+		}
+		
+		# NOT = { # Not if there is already an ongoing revolt
+			# owner = {
+				# top_liege = {
+					# war = yes
+					# any_war = {
+						# defender = { character = PREV }
+						# OR = {
+							# AND = {
+								# using_cb = peasant_revolt
+								# war_title = ROOT # The county
+							# }
+							# AND = {
+								# using_cb = heretic_revolt
+								# attacker = { religion = ROOT }
+							# }
+							# AND = {
+								# using_cb = religious_revolt
+								# attacker = { religion = ROOT }
+							# }
+						# }
+					# }
+				# }
+			# }
+		# }
+	}
+	
+	immediate = {
+		create_random_soldier = {
+			random_traits = yes			
+			dynasty = none
+			religion = old_ones
+			culture = ROOT #Creature gets native name #Creatures: Razorbacks, Cold Ones, Terradons, Stegadon, Sauropod, Thunder Lizards, Carnosaur
+			female = no
+			age = 30
+			attributes = {
+				martial = 5
+			}
+		}
+		new_character = {
+			random_list = {
+				10 = { give_nickname = nick_the_Razorback change_martial = 5 }
+				10 = { give_nickname = nick_the_Cold_One change_martial = 6 }
+				10 = { give_nickname = nick_the_Terradon change_martial = 7 }
+				10 = { give_nickname = nick_the_Stegadon change_martial = 8 }
+				10 = { give_nickname = nick_the_Sauropod change_martial = 9 }
+				10 = { give_nickname = nick_the_Thunder_Lizard change_martial = 10 }
+				10 = { give_nickname = nick_the_Carnosaur change_martial = 15 }
+			}
+			set_character_flag = rampage_revolter
+			
+			create_title = {
+				tier = DUKE
+				landless = yes
+				temporary = yes
+				rebel = yes
+				culture = THIS
+				name = "LUSTRIA_BEAST_RAMPAGE"
+				holder = THIS
+			}
+			
+			random_list = {
+				34 = {
+					spawn_unit = {
+						province = ROOT
+						home = ROOT
+						owner = THIS
+						leader = THIS
+						scaled_by_biggest_garrison = 1.0
+						troops = {
+							archers = { 4 4 }
+							light_cavalry = { 2 2 }
+							light_infantry = { 7 7 }
+						}
+						attrition = 1.0
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 30
+						trait = tough_soldier
+					}
+					new_character = {
+						random_list = {
+							10 = { give_nickname = nick_the_Razorback change_martial = 5 }
+							10 = { give_nickname = nick_the_Cold_One change_martial = 6 }
+							10 = { give_nickname = nick_the_Terradon change_martial = 7 }
+							10 = { give_nickname = nick_the_Stegadon change_martial = 8 }
+							10 = { give_nickname = nick_the_Sauropod change_martial = 9 }
+							10 = { give_nickname = nick_the_Thunder_Lizard change_martial = 10 }
+							10 = { give_nickname = nick_the_Carnosaur change_martial = 15 }
+						}
+						spawn_unit = {
+							province = ROOT
+							home = ROOT
+							owner = PREV
+							scaled_by_biggest_garrison = 1.0
+							troops = {
+								archers = { 4 4 }
+								light_cavalry = { 2 2 }
+								light_infantry = { 7 7 }
+							}
+							attrition = 1.0
+							disband_on_peace = yes
+						}
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 23
+						trait = tough_soldier
+					}
+					new_character = {
+						random_list = {
+							10 = { give_nickname = nick_the_Razorback change_martial = 5 }
+							10 = { give_nickname = nick_the_Cold_One change_martial = 6 }
+							10 = { give_nickname = nick_the_Terradon change_martial = 7 }
+							10 = { give_nickname = nick_the_Stegadon change_martial = 8 }
+							10 = { give_nickname = nick_the_Sauropod change_martial = 9 }
+							10 = { give_nickname = nick_the_Thunder_Lizard change_martial = 10 }
+							10 = { give_nickname = nick_the_Carnosaur change_martial = 15 }
+						}
+						spawn_unit = {
+							province = ROOT
+							home = ROOT
+							owner = PREV
+							scaled_by_biggest_garrison = 1.0
+							troops = {
+								archers = { 4 4 }
+								light_cavalry = { 2 2 }
+								light_infantry = { 7 7 }
+							}
+							attrition = 1.0
+							disband_on_peace = yes
+						}
+					}
+				}
+				33 = {
+					spawn_unit = {
+						province = ROOT
+						home = ROOT
+						owner = THIS
+						leader = THIS
+						scaled_by_biggest_garrison = 1.0
+						troops = {
+							archers = { 3 3 }
+							light_cavalry = { 1 1 }
+							light_infantry = { 9 9 }
+						}
+						attrition = 1.0
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 30
+						trait = tough_soldier
+					}
+					new_character = {
+						random_list = {
+							10 = { give_nickname = nick_the_Razorback change_martial = 5 }
+							10 = { give_nickname = nick_the_Cold_One change_martial = 6 }
+							10 = { give_nickname = nick_the_Terradon change_martial = 7 }
+							10 = { give_nickname = nick_the_Stegadon change_martial = 8 }
+							10 = { give_nickname = nick_the_Sauropod change_martial = 9 }
+							10 = { give_nickname = nick_the_Thunder_Lizard change_martial = 10 }
+							10 = { give_nickname = nick_the_Carnosaur change_martial = 15 }
+						}
+						spawn_unit = {
+							province = ROOT
+							home = ROOT
+							owner = PREV
+							scaled_by_biggest_garrison = 1.0
+							troops = {
+								archers = { 3 3 }
+								light_cavalry = { 1 1 }
+								light_infantry = { 9 9 }
+							}
+							attrition = 1.0
+							disband_on_peace = yes
+						}
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 23
+						trait = tough_soldier
+					}
+					new_character = {
+						random_list = {
+							10 = { give_nickname = nick_the_Razorback change_martial = 5 }
+							10 = { give_nickname = nick_the_Cold_One change_martial = 6 }
+							10 = { give_nickname = nick_the_Terradon change_martial = 7 }
+							10 = { give_nickname = nick_the_Stegadon change_martial = 8 }
+							10 = { give_nickname = nick_the_Sauropod change_martial = 9 }
+							10 = { give_nickname = nick_the_Thunder_Lizard change_martial = 10 }
+							10 = { give_nickname = nick_the_Carnosaur change_martial = 15 }
+						}
+						spawn_unit = {
+							province = ROOT
+							home = ROOT
+							owner = PREV
+							scaled_by_biggest_garrison = 1.0
+							troops = {
+								archers = { 3 3 }
+								light_cavalry = { 1 1 }
+								light_infantry = { 9 9 }
+							}
+							attrition = 1.0
+							disband_on_peace = yes
+						}
+					}
+				}
+				33 = {
+					spawn_unit = {
+						province = ROOT
+						home = ROOT
+						owner = THIS
+						leader = THIS
+						scaled_by_biggest_garrison = 1.0
+						troops = {
+							archers = { 3 3 }
+							light_infantry = { 10 10 }
+						}
+						attrition = 1.0
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 30
+						trait = peasant_leader
+					}
+					new_character = {
+						random_list = {
+							10 = { give_nickname = nick_the_Razorback change_martial = 5 }
+							10 = { give_nickname = nick_the_Cold_One change_martial = 6 }
+							10 = { give_nickname = nick_the_Terradon change_martial = 7 }
+							10 = { give_nickname = nick_the_Stegadon change_martial = 8 }
+							10 = { give_nickname = nick_the_Sauropod change_martial = 9 }
+							10 = { give_nickname = nick_the_Thunder_Lizard change_martial = 10 }
+							10 = { give_nickname = nick_the_Carnosaur change_martial = 15 }
+						}
+						spawn_unit = {
+							province = ROOT
+							home = ROOT
+							owner = PREV
+							scaled_by_biggest_garrison = 1.0
+							troops = {
+								archers = { 3 3 }
+								light_infantry = { 10 10 }
+							}
+							attrition = 1.0
+							disband_on_peace = yes
+						}
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 23
+						trait = tough_soldier
+					}
+					new_character = {
+						random_list = {
+							10 = { give_nickname = nick_the_Razorback change_martial = 5 }
+							10 = { give_nickname = nick_the_Cold_One change_martial = 6 }
+							10 = { give_nickname = nick_the_Terradon change_martial = 7 }
+							10 = { give_nickname = nick_the_Stegadon change_martial = 8 }
+							10 = { give_nickname = nick_the_Sauropod change_martial = 9 }
+							10 = { give_nickname = nick_the_Thunder_Lizard change_martial = 10 }
+							10 = { give_nickname = nick_the_Carnosaur change_martial = 15 }
+						}
+						spawn_unit = {
+							province = ROOT
+							home = ROOT
+							owner = PREV
+							scaled_by_biggest_garrison = 1.0
+							troops = {
+								archers = { 3 3 }
+								light_infantry = { 10 10 }
+							}
+							attrition = 1.0
+							disband_on_peace = yes
+						}
+					}
+				}
+			}
+			
+			# DoW on the province top liege
+			ROOT = {
+				owner = {
+					top_liege = {
+						reverse_war = {
+							target = PREVPREVPREV
+							casus_belli = lustrian_rampage
+							thirdparty_title = ROOT # The county
+						}
+					}
+				}
+			}
+		}
+		
+		owner = {
+			any_liege = { # Inform the lieges
+				character_event = {
+					id = lizardman.301
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_TOG_1060
+		trigger = {
+			owner = { religion_group = ROOT }
+		}
+	}
+	option = {
+		name = EVTOPTB_TOG_1060
+		trigger = {
+			owner = { NOT = { religion_group = ROOT	} }
+		}
+	}
+}
+
+character_event = {
+	id = lizardman.301
+	desc = lizardman301desc
+	picture = "GFX_evt_lustria_dinosaur"
+	border = GFX_event_normal_frame_war
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_TOG_1060
+	}
+}
+
+# Religious Rebels seize a holding. Fired from 'on_siege_over_winner'. Owner of the winning unit is ROOT. The taken Holding title is in FROM.
+character_event = {
+	id = lizardman.302 #TOG.1065
+	picture = "GFX_evt_lustria_dinosaur"
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	desc = OK
+	
+	trigger = {
+		has_character_flag = rampage_revolter
+		rebel = yes
+	}
+	
+	option = {
+		name = OK
+		FROM = {
+			if = {
+				limit = {
+					OR = {
+						NOT = { location = { has_province_modifier = lustria_jungle } }
+						location = { has_province_modifier = lustria_oppressive_jungle }
+					}
+				}
+				destroy_random_building = yes
+			}
+			location = {
+				if = {
+					limit = {	
+						FROM = { 
+							is_capital = yes # The capital holding
+						}
+						has_province_modifier = lustria_jungle
+						has_province_modifier = lustria_dense_jungle
+					}
+					add_province_modifier = {
+						name = lustria_oppressive_jungle
+						duration = -1
+					}
+					remove_province_modifier = lustria_dense_jungle
+				}
+				if = {
+					limit = {
+						FROM = { 
+							is_capital = yes # The capital holding
+						}
+						has_province_modifier = lustria_medium_jungle
+						has_province_modifier = lustria_jungle
+					}
+					add_province_modifier = {
+						name = lustria_dense_jungle
+						duration = -1
+					}
+					remove_province_modifier = lustria_medium_jungle
+				}
+				if = {
+					limit = {
+						FROM = { 
+							is_capital = yes # The capital holding
+						}
+						has_province_modifier = lustria_light_jungle
+						has_province_modifier = lustria_jungle
+					}
+					add_province_modifier = {
+						name = lustria_medium_jungle
+						duration = -1
+					}
+					remove_province_modifier = lustria_light_jungle
+				}
+				holder_scope = {
+					character_event = { id = lizardman.303 }
+				}
+			}
+		}
+	}
+}
+
+character_event = {
+	id = lizardman.303#TOG.1071
+	desc = lizardman303desc
+	picture = "GFX_evt_lustria_dinosaur"
+	border = GFX_event_normal_frame_war
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA_TOG_1070"
+	}
+}
+
+# Rebels kill a local character. Fired from 'on_siege_over_loc_chars'.
+# Siege winner unit owner in the 'new_character' scope, lost holding title in FROM, local character in ROOT.
+character_event = {
+	id = lizardman.304 #TOG.1190
+	desc = lizardman304desc
+	border = GFX_event_normal_frame_war
+	picture ="GFX_evt_lustria_dinosaur"
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		new_character = {
+			rebel = yes
+			has_character_flag = rampage_revolter
+		}
+	}
+	
+	weight_multiplier = {
+		days = 1
+		modifier = {
+			factor = 0.5
+			is_female = yes
+		}
+		modifier = {
+			factor = 0.5
+			is_adult = no
+		}
+	}
+	
+	immediate = {
+		any_liege = { # Inform the victim's lieges
+			character_event = {
+				id = lizardman.305
+			}
+		}
+		new_character = {
+			ROOT = {
+				death = {
+					death_reason = death_rabble
+					killer = PREV
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_TOG_1190
+	}
+}
+
+
+# Lieges informed
+character_event = {
+	id = lizardman.305 #TOG.1191
+	picture ="GFX_evt_lustria_dinosaur"
+	desc = lizardman305desc
+	border = GFX_event_normal_frame_war
+	
+	is_triggered_only = yes
+	
+	notification = yes
+	
+	ai = no
+	
+	option = {
+		name = EVTOPTA_TOG_1191
+	}
+}
+
+#400-499: Events dealing with Chameleon Skinks and other holy war stuff
+
+# 400: Return of the Chameleon Skinks
+narrative_event = {
+	id = lizardman.400
+	title = "lizardman400title"
+	desc = "lizardman400desc"
+	picture = "GFX_evt_crusaders"
+	border = "GFX_event_narrative_frame_religion"
+	
+	major = yes
+	only_playable = yes
+	only_men = yes
+	
+	trigger = {
+		religion = old_ones
+
+		is_heretic = no
+		
+		year = 2040
+		NOT = { is_title_active = d_chameleon_skinks }		
+		1 = {
+			check_variable = {
+				which = "doom_counter" value = 60 #The winds of chaos are strong
+			}
+		}
+	
+		
+	}
+	
+	mean_time_to_happen = {
+		months = 4
+	}
+	
+	immediate = {
+		activate_title = { title = d_chameleon_skinks status = yes }
+		create_random_soldier = {
+			dynasty = none
+			random_traits = yes
+			religion = ROOT
+			name = "Oxyotl"
+		}
+		new_character = {
+			add_trait = creature_skink
+			d_chameleon_skinks = {
+				grant_title = PREV
+			}
+			set_defacto_liege = THIS
+			wealth = 600
+		}
+		
+		religion_authority = {
+			modifier = religious_order_formed
+			years = 10
+		}
+	}
+	option = {
+		name = "GodsBePraised"
+		trigger = {
+			religion = ROOT
+		}
+	}
+}

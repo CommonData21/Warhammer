@@ -1,0 +1,88 @@
+spriteTypes = {
+	
+	#Asur Government
+	spriteType = {
+		name = "GFX_icon_highborn_government"
+		texturefile = "gfx\\interface\\government_icon_highborn.dds"
+	}
+	spriteType = 
+ 	{
+		name = "GFX_hints_highborn_government"
+		texturefile = "gfx\\interface\\hints_splashscreen_image_highborn.dds"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_charframe_150_highborn"
+		texturefile = "gfx\\interface\\charframe_150_highborn.dds"
+		noOfFrames = 6
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_charframe_100_highborn"
+		texturefile = "gfx\\interface\\charframe_100_highborn.dds"
+		noOfFrames = 6
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_charframe_75_highborn"
+		texturefile = "gfx\\interface\\charframe_75_highborn.dds"
+		noOfFrames = 6
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_charframe_50_highborn"
+		texturefile = "gfx\\interface\\charframe_50_highborn.dds"
+		noOfFrames = 6
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_charframe_34_highborn"
+		texturefile = "gfx\\interface\\charframe_34_highborn.dds"
+		noOfFrames = 6
+		allwaystransparent = yes
+	}
+
+	#Asrai Government
+	spriteType = {
+		name = "GFX_icon_eternal_court_government"
+		texturefile = "gfx\\interface\\charframe_rings\\government_icon_asraigov.dds"
+	}
+	spriteType = 
+ 	{
+		name = "GFX_hints_eternal_court_government"
+		texturefile = "gfx\\interface\\charframe_rings\\hints_splashscreen_image_asraigov.dds"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_charframe_150_asraigov"
+		texturefile = "gfx\\interface\\charframe_rings\\charframe_150_asraigov.dds"
+		noOfFrames = 6
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_charframe_100_asraigov"
+		texturefile = "gfx\\interface\\charframe_rings\\charframe_100_asraigov.dds"
+		noOfFrames = 6
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_charframe_75_asraigov"
+		texturefile = "gfx\\interface\\charframe_rings\\charframe_75_asraigov.dds"
+		noOfFrames = 6
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_charframe_50_asraigov"
+		texturefile = "gfx\\interface\\charframe_rings\\charframe_50_asraigov.dds"
+		noOfFrames = 6
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_charframe_34_asraigov"
+		texturefile = "gfx\\interface\\charframe_rings\\charframe_34_asraigov.dds"
+		noOfFrames = 6
+		allwaystransparent = yes
+	}
+
+
+}

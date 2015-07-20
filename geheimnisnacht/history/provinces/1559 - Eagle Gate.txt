@@ -1,0 +1,17 @@
+# c_eagle_gate
+
+# County Title
+title = c_eagle_gate
+
+# Settlements
+max_settlements = 3
+
+b_eagle_tor = castle
+#b_eridis_tor = city
+#b_hadroal = temple
+
+# Misc
+culture = ellyrian
+religion = cadai
+
+#History

@@ -1,0 +1,31 @@
+
+song = {
+	name = "saladinarrivesatjerusalem.ogg"
+	
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0 
+			NOT = {	religion_group = nehekharan_gods_group }
+			NOT = {	religion_group = ormazd_gods_group }
+			NOT = {	culture_group = arabyan_group }
+			NOT = {	culture_group = nehekharan_group }
+		}		
+	}
+}
+
+song = {
+	name = "thepersianarmy.ogg"
+	
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0 
+			NOT = {	religion_group = nehekharan_gods_group }
+			NOT = {	religion_group = ormazd_gods_group }
+			NOT = {	culture_group = arabyan_group }
+			NOT = {	culture_group = nehekharan_group }
+		}		
+	}
+}
+

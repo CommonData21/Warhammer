@@ -1,0 +1,17 @@
+# c_everwatch
+
+# County Title
+title = c_everwatch
+
+# Settlements
+max_settlements = 3
+
+b_everwatch_keep = castle
+#b_graela = city
+#b_ithica = temple
+
+# Misc
+culture = eatainian
+religion = cadai
+
+#History

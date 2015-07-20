@@ -1,0 +1,17 @@
+# c_salvation_isles
+
+# County Title
+title = c_salvation_isles
+
+# Settlements
+max_settlements = 3
+
+b_lost_light = castle
+#b_misil = city
+#b_mumuria = temple
+
+# Misc
+culture = nagarythi
+religion = cadai
+
+#History

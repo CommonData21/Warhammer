@@ -1,0 +1,23 @@
+# c_hoeth
+
+# County Title
+title = c_hoeth
+
+# Settlements
+max_settlements = 6
+
+b_tor_hoeth = castle
+b_elmfall = city
+b_anurions_manor = castle
+b_evermourn = castle
+#b_daxaen = city
+#b_limsoth = temple
+
+# Misc
+culture = sapherian
+religion = cadai
+
+#History
+1.1.1={ 
+b_tor_hoeth = ca_white_tower
+}

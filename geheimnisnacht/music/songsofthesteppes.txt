@@ -1,0 +1,59 @@
+# Three songs for the Steppe Nomads.
+
+song = {
+	name = "sandlightandmoonlight.ogg"
+	
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0 
+		is_tribal = no
+		NOT = { trait = creature_elf }
+  }  
+ }
+}
+
+song = {
+	name = "hurricanewasteland.ogg"
+	
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0 
+			NOT = {	religion_group = nehekharan_gods_group }
+			NOT = {	religion_group = ormazd_gods_group }
+			NOT = {	culture_group = arabyan_group }
+			NOT = {	culture_group = nehekharan_group }
+  }  
+ }
+}
+
+
+song = {
+	name = "cataramanmirage.ogg"
+	
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0 
+			NOT = {	culture_group = kurgan_group }
+			NOT = {	culture_group = hung_group }
+  }  
+ }
+}
+
+
+song = {
+	name = "steppesofthenomads.ogg"
+	
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0 
+			NOT = {	culture_group = kurgan_group }
+			NOT = {	culture_group = hung_group }
+			NOT = {	culture_group = beastman_group }
+  }  
+ }
+}
+

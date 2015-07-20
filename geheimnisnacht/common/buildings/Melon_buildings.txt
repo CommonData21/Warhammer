@@ -1,0 +1,269 @@
+##Dwarf unique buildings
+
+castle={
+	ca_slayer_keep = {
+		
+		desc = ca_slayer_keep_desc
+				
+			
+		gold_cost = 1000
+
+		build_time = 3000
+
+		fort_level = 9					
+		
+		heavy_infantry = 300
+		
+		tax_income = 3.00
+			
+		garrison_size = 1.00
+		
+		ai_creation_factor = 97
+		
+		potential = {
+			FROMFROM = { title = b_karak_kadrin } #
+		}		
+		
+		extra_tech_building_start = 0.2
+	
+		convert_to_tribal = tb_slayer_keep
+
+	}
+
+    ca_everpeak = {
+		
+		desc = ca_everpeak_desc	
+			
+			
+		gold_cost = 1000
+
+		build_time = 3000
+
+		fort_level = 15					
+		
+		heavy_infantry = 500	
+		
+		tax_income = 3.50
+		
+		garrison_size = 1.00
+		
+		ai_creation_factor = 97
+		
+		potential = {
+			FROMFROM = { title = b_everpeak } #
+		}		
+		
+		convert_to_tribal = tb_everpeak
+		
+		extra_tech_building_start = 0.2
+	
+	
+
+	}
+	
+	ca_zhufbar = {
+		
+		desc = ca_zhufbar_desc	
+			
+			
+		gold_cost = 1000
+
+		build_time = 3000
+				
+		fort_level = 6			
+				
+		gunpowder = 400 	
+		
+		tax_income = 2.00
+		
+		garrison_size = 1.00
+		
+		ai_creation_factor = 97
+		
+		potential = {
+			FROMFROM = { title = b_zhufbar } #
+		}		
+		
+		convert_to_tribal = tb_zhufbar
+		
+		extra_tech_building_start = 0.2
+	
+
+	}
+	
+	ca_barak_varr = {
+		
+		desc = ca_barak_varr_desc	
+			
+			
+		gold_cost = 1000
+
+		build_time = 3000
+				
+		fort_level = 8			
+						
+		tax_income = 5.00
+		
+		galleys = 45
+		
+		garrison_size = 1.00
+		
+		ai_creation_factor = 97
+		
+		potential = {
+			FROMFROM = { title = b_barak_varr } #
+		}
+		
+		convert_to_tribal = tb_barak_varr
+		
+		extra_tech_building_start = 0.2
+	
+
+	}
+	
+	ca_iron_peak = {
+		
+		desc = ca_iron_peak_desc	
+			
+			
+		gold_cost = 1000
+
+		build_time = 3000
+				
+		fort_level = 9		
+						
+		tax_income = 2.50
+		
+		garrison_size = 0.25
+		
+		ai_creation_factor = 97
+		
+		potential = {
+			FROMFROM = { title = b_karak_azul } #
+		}
+		
+		convert_to_tribal = tb_karak_azul
+		
+		extra_tech_building_start = 0.2
+	
+
+	}	
+	
+	ca_horn_hold = {
+		
+		desc = ca_horn_hold_desc	
+			
+			
+		gold_cost = 1000
+
+		build_time = 3000
+				
+		fort_level = 7		
+						
+		tax_income = 3.50
+		
+		garrison_size = 0.75
+		
+		ai_creation_factor = 97
+		
+		potential = {
+			FROMFROM = { title = b_karak_hirn } #
+		}
+		
+		convert_to_tribal = tb_karak_hirn
+		
+		extra_tech_building_start = 0.2
+	
+
+	}		
+	
+	ca_copper_mountain = {
+		
+		desc = ca_copper_mountain_desc	
+			
+			
+		gold_cost = 1000
+
+		build_time = 3000
+				
+		fort_level = 5		
+						
+		tax_income = 5.25
+		
+		garrison_size = 0.70
+		
+		ai_creation_factor = 97
+		
+		potential = {
+			FROMFROM = { title = b_karak_izor } #
+		}
+		
+		convert_to_tribal = tb_karak_hirn
+		
+		extra_tech_building_start = 0.2
+	
+
+	}			
+	
+	ca_karak_norn = {
+		
+		desc = ca_karak_norn_desc	
+			
+			
+		gold_cost = 1000
+
+		build_time = 3000
+				
+		fort_level = 4.50		
+						
+		tax_income = 1.25
+		
+		garrison_size = 0.80
+		
+		ai_creation_factor = 97
+		
+		potential = {
+			FROMFROM = { title = b_karak_norn } #
+		}
+		
+		convert_to_tribal = tb_karak_hirn
+		
+		extra_tech_building_start = 0.2
+	
+
+	}			
+	
+	
+##Elf unique buildings
+	
+	ca_white_lions_of_chrace = {
+		desc = ca_white_lions_of_chrace_desc
+		
+		fort_level = 2
+		gold_cost = 1000
+		build_time = 3000
+		heavy_infantry = 850
+		ai_creation_factor = 97
+		potential = {
+			FROMFROM = { title = b_tor_achare } #
+		}
+		garrison_size = 0.30
+		extra_tech_building_start = 0.2
+	}	
+	
+	ca_shadowlands = {
+		desc = ca_shadowlands_desc
+		
+		fort_level = 5
+		gold_cost = 1000
+		build_time = 3000
+		light_infantry = 700
+		archers = 350
+		ai_creation_factor = 97
+		potential = {
+			FROMFROM = { title = b_tor_anlec } #
+		}
+		garrison_size = 0.30
+		extra_tech_building_start = 0.2
+	}		
+}

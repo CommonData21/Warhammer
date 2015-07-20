@@ -1,0 +1,51 @@
+patron_tchar = {
+	icon = 78
+	learning = 1
+	intrigue = 1
+	martial = -1
+}
+
+patron_kharneth = {
+	icon = 78
+	learning = -1
+	martial = 2
+	monthly_character_prestige = 0.05
+}
+
+patron_nurgleth = {
+	icon = 78
+	vassal_opinion = 10
+	health = 0.5
+	intrigue = -1
+}
+
+patron_shornaal = {
+	icon = 78
+	vassal_opinion = -10
+	fertility = 0.2
+	intrigue = 1
+	monthly_character_prestige = 0.05
+}
+
+patron_ulric = {
+	icon = 78
+	martial = 2
+	health = 0.5
+	learning = -1
+}
+
+patron_ursun = {
+	icon = 78
+	vassal_opinion = 5
+	stewardship = 1
+	martial = 1
+	intrigue = -1
+}
+
+lustrian_artefact = {
+	icon = 45
+	learning = 4
+	general_opinion = 10
+	monthly_character_prestige = 0.05
+	monthly_character_wealth = 0.03
+}

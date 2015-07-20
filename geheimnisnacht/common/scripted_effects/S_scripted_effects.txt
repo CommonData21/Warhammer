@@ -1,0 +1,223 @@
+#	Example:
+# 
+#	example_effect = {
+#		treasury = 100
+#		prestige = 50
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		example_effect = yes
+#	}
+#
+# Naming convention:  xxxx_effect
+#
+
+root_makes_from_vampire_effect = {	FROM = { clr_character_flag = hidden_tzeentch_cultist3
+					clr_character_flag = hidden_tzeentch_cultist2
+					clr_character_flag = hidden_tzeentch_cultist
+					clr_character_flag = hidden_nurgle_cultist3
+					clr_character_flag = hidden_nurgle_cultist2
+					clr_character_flag = hidden_nurgle_cultist
+					clr_character_flag = hidden_khorne_cultist3
+					clr_character_flag = hidden_khorne_cultist2
+					clr_character_flag = hidden_khorne_cultist
+					clr_character_flag = hidden_slaanesh_cultist3
+					clr_character_flag = hidden_slaanesh_cultist2
+					clr_character_flag = hidden_slaanesh_cultist
+					clr_character_flag = hidden_undivided_cultist3
+					clr_character_flag = hidden_undivided_cultist2
+					clr_character_flag = hidden_undivided_cultist } 
+	if = {
+	limit = { OR = { trait = vampire_lahmian_visible
+			trait = vampire_lahmian_hidden }
+	}
+	FROM = { add_trait = vampire_lahmian_visible
+	set_graphical_culture = lahmian_vampire }
+	FROM = { religion = nagashi }
+	}
+	if = {
+	limit = { OR = { trait = vampire_carstein_visible
+			trait = vampire_carstein_hidden }
+	}
+	FROM = { add_trait = vampire_carstein_visible
+	set_graphical_culture = generic_vampire }
+	FROM = { religion = vampiric }
+	}	
+	if = {
+	limit = { OR = { trait = vampire_blood_visible
+			trait = vampire_blood_hidden }
+	}
+	FROM = { add_trait = vampire_blood_visible
+	set_graphical_culture = generic_vampire }
+	FROM = { religion = vampiric }
+	}		
+	if = {
+	limit = { OR = { trait = vampire_necrach_visible
+			trait = vampire_necrach_hidden }
+	}
+	FROM = { add_trait = vampire_necrach_visible
+	set_graphical_culture = generic_vampire }
+	FROM = { religion = vampiric }
+	}		
+	if = {
+	limit = { OR = { trait = vampire_jade_visible
+			trait = vampire_jade_hidden }
+	}
+	FROM = { add_trait = vampire_jade_visible
+	set_graphical_culture = generic_vampire }
+	FROM = { religion = vampiric }
+	}		
+	if = {
+	limit = { OR = { trait = vampire_mahtmasi_visible
+			trait = vampire_mahtmasi_hidden }
+	}
+	FROM = { add_trait = vampire_mahtmasi_visible
+	set_graphical_culture = generic_vampire }
+	FROM = { religion = vampiric }
+	}	
+	FROM = { remove_trait = old_1
+		remove_trait = old_2
+		remove_trait = old_3
+		remove_trait = old_4 }
+}
+
+from_makes_root_vampire_effect = {	clr_character_flag = hidden_tzeentch_cultist3
+					clr_character_flag = hidden_tzeentch_cultist2
+					clr_character_flag = hidden_tzeentch_cultist
+					clr_character_flag = hidden_nurgle_cultist3
+					clr_character_flag = hidden_nurgle_cultist2
+					clr_character_flag = hidden_nurgle_cultist
+					clr_character_flag = hidden_khorne_cultist3
+					clr_character_flag = hidden_khorne_cultist2
+					clr_character_flag = hidden_khorne_cultist
+					clr_character_flag = hidden_slaanesh_cultist3
+					clr_character_flag = hidden_slaanesh_cultist2
+					clr_character_flag = hidden_slaanesh_cultist
+					clr_character_flag = hidden_undivided_cultist3
+					clr_character_flag = hidden_undivided_cultist2
+					clr_character_flag = hidden_undivided_cultist
+	if = {
+	limit = { FROM = { OR = { trait = vampire_lahmian_visible
+			trait = vampire_lahmian_hidden } }
+	}
+	add_trait = vampire_lahmian_visible
+	set_graphical_culture = lahmian_vampire
+	religion = nagashi
+	}
+	if = {
+	limit = { FROM = { OR = { trait = vampire_carstein_visible
+			trait = vampire_carstein_hidden } }
+	}
+	add_trait = vampire_carstein_visible
+	set_graphical_culture = generic_vampire
+	religion = vampiric
+	}	
+	if = {
+	limit = { FROM = { OR = { trait = vampire_blood_visible
+			trait = vampire_blood_hidden } }
+	}
+	add_trait = vampire_blood_visible
+	set_graphical_culture = generic_vampire
+	religion = vampiric
+	}		
+	if = {
+	limit = { FROM = { OR = { trait = vampire_necrach_visible
+			trait = vampire_necrach_hidden } }
+	}
+	add_trait = vampire_necrach_visible
+	set_graphical_culture = generic_vampire
+	religion = vampiric
+	}		
+	if = {
+	limit = { FROM = { OR = { trait = vampire_jade_visible
+			trait = vampire_jade_hidden } }
+	}
+	add_trait = vampire_jade_visible
+	set_graphical_culture = generic_vampire
+	religion = vampiric
+	}		
+	if = {
+	limit = { FROM = { OR = { trait = vampire_mahtmasi_visible
+			trait = vampire_mahtmasi_hidden } }
+	}
+	add_trait = vampire_mahtmasi_visible
+	set_graphical_culture = generic_vampire
+	religion = vampiric
+	}	
+	remove_trait = old_1
+	remove_trait = old_2
+	remove_trait = old_3
+	remove_trait = old_4
+}
+
+fromfrom_makes_root_vampire_effect = {	clr_character_flag = hidden_tzeentch_cultist3
+					clr_character_flag = hidden_tzeentch_cultist2
+					clr_character_flag = hidden_tzeentch_cultist
+					clr_character_flag = hidden_nurgle_cultist3
+					clr_character_flag = hidden_nurgle_cultist2
+					clr_character_flag = hidden_nurgle_cultist
+					clr_character_flag = hidden_khorne_cultist3
+					clr_character_flag = hidden_khorne_cultist2
+					clr_character_flag = hidden_khorne_cultist
+					clr_character_flag = hidden_slaanesh_cultist3
+					clr_character_flag = hidden_slaanesh_cultist2
+					clr_character_flag = hidden_slaanesh_cultist
+					clr_character_flag = hidden_undivided_cultist3
+					clr_character_flag = hidden_undivided_cultist2
+					clr_character_flag = hidden_undivided_cultist
+	if = {
+	limit = { FROMFROM = { OR = { trait = vampire_lahmian_visible
+			trait = vampire_lahmian_hidden } }
+	}
+	add_trait = vampire_lahmian_visible
+	set_graphical_culture = lahmian_vampire
+	religion = nagashi
+	}
+	if = {
+	limit = { FROMFROM = { OR = { trait = vampire_carstein_visible
+			trait = vampire_carstein_hidden } }
+	}
+	add_trait = vampire_carstein_visible
+	set_graphical_culture = generic_vampire
+	religion = vampiric
+	}	
+	if = {
+	limit = { FROMFROM = { OR = { trait = vampire_blood_visible
+			trait = vampire_blood_hidden } }
+	}
+	add_trait = vampire_blood_visible
+	set_graphical_culture = generic_vampire
+	religion = vampiric
+	}		
+	if = {
+	limit = { FROMFROM = { OR = { trait = vampire_necrach_visible
+			trait = vampire_necrach_hidden } }
+	}
+	add_trait = vampire_necrach_visible
+	set_graphical_culture = generic_vampire
+	religion = vampiric
+	}		
+	if = {
+	limit = { FROMFROM = { OR = { trait = vampire_jade_visible
+			trait = vampire_jade_hidden } }
+	}
+	add_trait = vampire_jade_visible
+	set_graphical_culture = generic_vampire
+	religion = vampiric
+	}		
+	if = {
+	limit = { FROMFROM = { OR = { trait = vampire_mahtmasi_visible
+			trait = vampire_mahtmasi_hidden } }
+	}
+	add_trait = vampire_mahtmasi_visible
+	set_graphical_culture = generic_vampire
+	religion = vampiric
+	}
+	remove_trait = old_1
+	remove_trait = old_2
+	remove_trait = old_3
+	remove_trait = old_4	
+}

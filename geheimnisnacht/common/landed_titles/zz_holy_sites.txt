@@ -1,0 +1,2 @@
+### HOLY SITES NOT DEFINED HERE ARE DEFINDED IN PROVINCEDEF.XLS -> INTO 01_landed_titles.txt
+##Holy sites moved to landed_titles and added to provinceDef.xls, I'll add further holy sites here

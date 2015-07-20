@@ -1,0 +1,16 @@
+# c_nuakka
+
+# County Title
+title = c_nuakka
+
+# Settlements
+max_settlements = 2
+
+b_nuakka = tribal
+#b_quetyacaquiiuh = city
+
+# Misc
+culture = lizardman
+religion = old_ones
+terrain = jungle
+#History

@@ -1,0 +1,53 @@
+# namespace = beasts
+
+# character_event = {
+	# id = beasts.0
+	# title = SPELLCASTING
+	# desc = darkmagic0 #The spell has expired and the troops and flag are removed
+	# picture = "GFX_evt_miscast"
+	# hide_window = yes
+	
+	# is_triggered_only = yes
+	
+	# option = {
+	# name = OK
+	# clr_character_flag = cast_flock_of_doom
+	# disband_event_forces = flock_of_doom_troops
+	# }
+	
+	# }
+
+	
+# character_event = {
+	# id = beasts.1
+	# title = SPELLCASTING
+	# desc = darkmagic0 #The spell has expired and the troops and flag are removed
+	# picture = "GFX_evt_miscast"
+	# hide_window = yes
+	
+	# is_triggered_only = yes
+	
+	# option = {
+	# name = OK
+	# clr_character_flag = cast_amber_spear
+	# disband_event_forces = amber_spear_troops
+	# }
+	
+	# }
+	
+# character_event = {
+	# id = beasts.2
+	# title = SPELLCASTING
+	# desc = darkmagic0 #The spell has expired and the troops and flag are removed
+	# picture = "GFX_evt_miscast"
+	# hide_window = yes
+	
+	# is_triggered_only = yes
+	
+	# option = {
+	# name = OK
+	# clr_character_flag = cast_transformation_of_kadon
+	# disband_event_forces = transformation_of_kadon_troops
+	# }
+	
+	# }

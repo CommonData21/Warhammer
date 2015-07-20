@@ -1,0 +1,54 @@
+# namespace = ice
+
+# character_event = {
+	# id = ice.0
+	# title = SPELLCASTING
+	# desc = darkmagic0 #The spell has expired and the troops and flag are removed
+	# picture = "GFX_evt_miscast"
+	# hide_window = yes
+	
+	# is_triggered_only = yes
+	
+	# option = {
+	# name = OK
+	# clr_character_flag = cast_shardstorm
+	# disband_event_forces = shardstorm_troops
+	# }
+	
+	# }
+
+	
+# character_event = {
+	# id = ice.1
+	# title = SPELLCASTING
+	# desc = darkmagic0 #The spell has expired and the troops and flag are removed
+	# picture = "GFX_evt_miscast"
+	# hide_window = yes
+	
+	# is_triggered_only = yes
+	
+	# option = {
+	# name = OK
+	# clr_character_flag = cast_freezing_blast
+	# disband_event_forces = freezing_blast_troops
+	# }
+	
+	# }
+	
+# character_event = {
+	# id = ice.2
+	# title = SPELLCASTING
+	# desc = darkmagic0 #The spell has expired and the troops and flag are removed
+	# picture = "GFX_evt_miscast"
+	# hide_window = yes
+	
+	# is_triggered_only = yes
+	
+	# option = {
+	# name = OK
+	# clr_character_flag = cast_blizzard
+	# disband_event_forces = blizzard_troops
+	# }
+	
+	# }
+	

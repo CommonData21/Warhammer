@@ -1,0 +1,36 @@
+decisions = {
+
+hold_fertility_ritual ={
+is_high_prio = yes
+
+potential = {
+age = 16
+religion = amazon
+is_female = yes
+higher_tier_than = BARON
+}
+
+allow = {
+wealth = 25
+month = 4
+NOT = { month = 5 }
+NOT = { has_character_flag = holding_amazon_ritual }
+any_courtier = {
+		is_female = no
+		age = 16
+		prisoner = yes
+		}
+}
+
+effect = {
+ROOT = { character_event = { id = amazon.8 } }
+	}
+	
+	ai_will_do = {
+	factor = 5	
+	}
+	
+	}
+	
+	}
+	

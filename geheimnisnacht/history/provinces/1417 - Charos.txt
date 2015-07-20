@@ -1,0 +1,16 @@
+# c_charos
+
+# County Title
+title = c_charos
+
+# Settlements
+max_settlements = 2
+
+b_charos = castle
+b_clar_eather = temple
+
+# Misc
+culture = graefi
+religion = cytharai
+
+#History

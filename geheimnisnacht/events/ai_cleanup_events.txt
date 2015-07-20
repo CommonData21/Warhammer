@@ -1,0 +1,576 @@
+###########################################
+#by Silfae
+
+namespace = aicleanup
+
+# on death to pass an amazon barony to a randomly generated female
+character_event = {
+	id = aicleanup.001
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	trigger = { primary_title = { tier = BARON }
+			religion = amazon  }
+
+	immediate = {  random_list = { 25 = {
+					create_character = {
+							random_traits = yes
+							dynasty = NONE
+							religion = ROOT
+							culture = ROOT
+							female = yes
+							age = 20
+							}
+						}
+					25 = {
+					create_character = {
+							random_traits = yes
+							dynasty = RANDOM
+							religion = ROOT
+							culture = ROOT
+							female = yes
+							age = 30
+							}
+						}
+					25 = {
+					create_character = {
+							random_traits = yes
+							dynasty = RANDOM
+							religion = ROOT
+							culture = ROOT
+							female = yes
+							age = 40
+							}
+						}
+					25 = {
+					create_character = {
+							random_traits = yes
+							dynasty = NONE
+							religion = ROOT
+							culture = ROOT
+							female = yes
+							age = 50
+							}
+						}
+				}
+				new_character = {
+					character_event = { id = aicleanup.002 }
+					}
+		 }
+}
+
+# New character receives inheritance
+character_event = {
+	id = aicleanup.002
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = { FROM = { any_demesne_title = { grant_title = ROOT } } }
+}
+
+##################################################################
+
+#on death to pass Avelorn to the next Everqueen
+character_event = {
+	id = aicleanup.003
+	hide_window = yes
+	only_rulers = yes
+
+	is_triggered_only = yes
+	
+	trigger = { 	#	has_landed_title = k_avelorn
+			trait = everqueen
+			everqueen_heir = { is_alive = yes } 
+		}
+
+	immediate = { everqueen_heir = { character_event = { id = aicleanup.004 } }
+		 }
+}
+
+# Inheritance Everqueen
+character_event = {
+	id = aicleanup.004
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = { remove_trait = everqueen_heir
+			add_trait = everqueen
+			 set_character_flag = ai_flag_refuse_conversion 
+			FROM = { any_demesne_title = { grant_title = ROOT } } 
+			}
+}
+##################################################################
+
+### The Everqueen/Phoenix King traits
+
+# Everqueen Trait Lost
+character_event = {
+	id = aicleanup.005
+	hide_window = yes
+	
+	trigger = {
+		trait = everqueen
+		NOT = { has_landed_title = k_avelorn }
+		is_alive = yes
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		remove_trait = everqueen
+	}
+}
+# Phoenix King trait lost
+character_event = {
+	id = aicleanup.006
+	hide_window = yes
+	
+	trigger = {
+		trait = phoenix_king
+		NOT = { has_landed_title = e_ulthuan }
+		is_alive = yes
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		remove_trait = phoenix_king
+	}
+}
+# Gain old age traits
+character_event = {
+	id = aicleanup.007
+	hide_window = yes
+	min_age = 50
+
+	trigger = {
+		OR = { AND = { age = 50 
+				NOT = { trait = creature_dwarf
+					trait = creature_chaos_dwarf } } 
+			AND = { age = 200 
+				OR = { trait = creature_dwarf
+					trait = creature_chaos_dwarf } } 
+			}
+		NOT = { trait = elixir_of_eternal_youth }
+		NOT = { trait = vampire_lahmian_visible }
+		NOT = { trait = vampire_carstein_visible }
+		NOT = { trait = vampire_blood_visible }
+		NOT = { trait = vampire_strigoi_visible }
+		NOT = { trait = vampire_necrach_visible }
+		NOT = { trait = vampire_jade_visible }
+		NOT = { trait = vampire_mahtmasi_visible }
+
+		NOT = { trait = vampire_lahmian_hidden }
+		NOT = { trait = vampire_carstein_hidden }
+		NOT = { trait = vampire_blood_hidden }
+		NOT = { trait = vampire_strigoi_hidden }
+		NOT = { trait = vampire_necrach_hidden }
+		NOT = { trait = vampire_jade_hidden }
+		NOT = { trait = vampire_mahtmasi_hidden }
+
+		OR = { trait = creature_human
+			trait = creature_dwarf
+			trait = creature_skaven 
+			trait = creature_chaos_dwarf
+			trait = creature_halfling 			
+			}
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	immediate = {
+		if = { limit = { 
+		NOT = { trait = fair
+			trait = pretty
+			trait = beautiful } }
+			add_trait = old_1 }
+		if = { limit = { trait = fair }
+			add_trait = old_2 }
+		if = { limit = { trait = pretty }
+			add_trait = old_3 }
+		if = { limit = { trait = beautiful }
+			add_trait = old_4 }
+	}
+}
+
+
+#ROOT is the demander, FROM is the vassal
+character_event = {
+	id = aicleanup.008 
+	
+	is_triggered_only = yes
+	hide_window = yes
+	
+	immediate = {
+		FROM = {
+			character_event = { id = aicleanup.009 }
+		}
+	}
+}
+
+#ROOT is the vassal, FROM is the demander
+character_event = {
+	id = aicleanup.009
+	
+	is_triggered_only = yes
+	hide_window = yes
+	
+	immediate = {
+		# Fires for the vassal and each of his courtiers and vassals.
+		# Note: needs to fire for vassals/courtier before character
+		# FROMFROM is the demander. FROM is the vassal. ROOT is the character.
+		any_courtier = {
+			character_event = { id = 39700 }
+		}
+		any_vassal = {
+			character_event = { id = 39700 }
+		}
+		character_event = { id = 39700 }
+	}
+}
+
+#Spell failed
+character_event = {
+	id = aicleanup.010
+	desc = EVTDESCAaicleanup010
+	is_triggered_only = yes
+	
+	notification = yes
+
+	immediate = { prestige = -25 }
+	option = {	}
+}
+
+#Remove woodwalking
+character_event = {
+	id = aicleanup.011
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = { remove_trait = woodwalking }
+}
+
+#Prisoners grow weak in the dungeon
+character_event = {
+	id = aicleanup.012
+	desc = EVTDESCAaicleanup012
+	picture = "GFX_evt_into_the_dungeon"
+	border = GFX_event_normal_frame_intrigue
+
+	prisoner = yes
+	trigger = { 
+		NOT = { has_character_modifier = house_arrest }
+        	NOT = { culture_group = daemonic_group }
+
+		NOT = { trait = creature_nehekharan } 
+		NOT = { trait = creature_forestspirit } 
+		NOT = { trait = creature_treekin }
+
+		NOT = { trait = vampire_lahmian_visible }
+		NOT = { trait = vampire_carstein_visible }
+		NOT = { trait = vampire_blood_visible }
+		NOT = { trait = vampire_strigoi_visible }
+		NOT = { trait = vampire_necrach_visible }
+		NOT = { trait = vampire_jade_visible }
+		NOT = { trait = vampire_mahtmasi_visible }
+
+		NOT = { trait = vampire_lahmian_hidden }
+		NOT = { trait = vampire_carstein_hidden }
+		NOT = { trait = vampire_blood_hidden }
+		NOT = { trait = vampire_strigoi_hidden }
+		NOT = { trait = vampire_necrach_hidden }
+		NOT = { trait = vampire_jade_hidden }
+		NOT = { trait = vampire_mahtmasi_hidden }
+
+		 }
+
+	mean_time_to_happen = {
+		months = 60
+		modifier = {
+			factor = 0.5
+			has_character_modifier = the_oubliette
+		}
+		modifier = {
+			factor = 2.0
+			trait = strong
+		}
+		modifier = {
+			factor = 1.75
+			trait = tough
+		}
+		modifier = {
+			factor = 1.5
+			trait = hardy
+		}
+		modifier = {
+			factor = 0.85
+			trait = soft
+		}
+		modifier = {
+			factor = 0.75
+			trait = fragile
+		}
+		modifier = {
+			factor = 0.5
+			trait = weak
+		}
+		modifier = {
+			factor = 0.75
+			trait = dwarf
+		}
+		modifier = {
+			factor = 0.85
+			trait = hunchback
+		}
+		modifier = {
+			factor = 0.75
+			is_ill = yes
+		}
+		modifier = {
+			factor = 1.5
+			trait = creature_elf
+		}
+		modifier = {
+			factor = 1.75
+			trait = creature_dwarf
+		}
+		modifier = {
+			factor = 1.75
+			trait = creature_chaos_dwarf
+		}
+		modifier = {
+			factor = 0.75
+			trait = creature_halfling
+		}
+		modifier = {
+			factor = 5
+			trait = creature_orc
+		}
+		modifier = {
+			factor = 1.75
+			trait = creature_goblin
+		}
+		modifier = {
+			factor = 1.75
+			trait = creature_snotling
+		}
+		modifier = {
+			factor = 2.75
+			trait = creature_ogre
+		}
+		modifier = {
+			factor = 1.75
+			trait = creature_beastman
+		}
+		modifier = {
+			factor = 0.75
+			trait = orc_small
+		}
+		modifier = {
+			factor = 1.75
+			trait = orc_large
+		}
+		modifier = {
+			factor = 3.75
+			trait = orc_huge
+		}
+		modifier = {
+			factor = 0.75
+			trait = goblin_small
+		}
+		modifier = {
+			factor = 1.75
+			trait = goblin_large
+		}
+		modifier = {
+			factor = 3.75
+			trait = goblin_huge
+		}
+	}
+	option = { 
+		name = EVTOPTAaicleanup012
+		trigger = { trait = fat }
+		tooltip_info = fat
+		remove_trait = fat
+		}
+	option = { 
+		name = EVTOPTBaicleanup012
+		trigger = { NOT = { trait = fat } }
+		add_trait = undernourished
+		}
+}
+
+# Dwarf gains old gfx
+character_event = {
+	id = aicleanup.013
+	hide_window = yes
+	min_age = 200
+	max_age = 390
+
+	trigger = {
+		age = 200
+		OR = { trait = creature_dwarf
+			trait = creature_chaos_dwarf }
+		NOT = { graphical_culture = olddwarfgfx }
+		NOT = { graphical_culture = oldchaosdwarfgfx }
+
+		NOT = { trait = vampire_lahmian_visible }
+		NOT = { trait = vampire_carstein_visible }
+		NOT = { trait = vampire_blood_visible }
+		NOT = { trait = vampire_strigoi_visible }
+		NOT = { trait = vampire_necrach_visible }
+		NOT = { trait = vampire_jade_visible }
+		NOT = { trait = vampire_mahtmasi_visible }
+
+		NOT = { trait = vampire_lahmian_hidden }
+		NOT = { trait = vampire_carstein_hidden }
+		NOT = { trait = vampire_blood_hidden }
+		NOT = { trait = vampire_strigoi_hidden }
+		NOT = { trait = vampire_necrach_hidden }
+		NOT = { trait = vampire_jade_hidden }
+		NOT = { trait = vampire_mahtmasi_hidden }
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	immediate = {
+		if = { limit = { trait = creature_chaos_dwarf 
+				NOT = { trait = transgender } }
+			set_graphical_culture = dwarf_chaos_old 
+			break = yes }
+		if = { limit = { trait = creature_dwarf
+				NOT = { trait = transgender } }
+			set_graphical_culture = dwarf_old
+			break = yes }
+
+		if = { limit = { trait = creature_chaos_dwarf 
+					trait = transgender }
+			set_graphical_culture = oldchaosdwarfrev
+			break = yes }
+		if = { limit = { 	trait = creature_dwarf
+					trait = transgender }
+			set_graphical_culture = olddwarfrev
+			break = yes }
+	}
+}
+
+# On_birth, dwarf children should not be old already
+character_event = {
+	id = aicleanup.014
+	hide_window = yes
+	is_triggered_only = yes
+
+
+	trigger = {
+		OR = { trait = creature_chaos_dwarf 
+			trait = creature_dwarf  }
+		
+		OR = { graphical_culture = olddwarfgfx
+			graphical_culture = oldchaosdwarfgfx }
+	}
+	
+	immediate = {
+		if = { limit = { OR = { graphical_culture = olddwarfgfx
+					graphical_culture = olddwarfrevgfx } }
+			set_graphical_culture = dwarf_main
+			break = yes }
+		if = { limit = { OR = { graphical_culture = oldchaosdwarfgfx
+					graphical_culture = oldchaosdwarfrevgfx } }
+			set_graphical_culture = dwarf_chaos
+			break = yes }
+	}
+}
+
+# Remove patron if the norscan has changed religion
+character_event = {
+	id = aicleanup.015
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		
+		NOT = { religion_group = old_gods_group }
+		
+		OR = { has_character_modifier = patron_tchar
+			has_character_modifier = patron_kharneth
+			has_character_modifier = patron_nurgleth
+			has_character_modifier = patron_shornaal
+			has_character_modifier = patron_ulric
+			has_character_modifier = patron_ursun }
+	}
+	
+	immediate = {	remove_character_modifier = patron_tchar
+			remove_character_modifier = patron_kharneth
+			remove_character_modifier = patron_nurgleth
+			remove_character_modifier = patron_shornaal
+			remove_character_modifier = patron_ulric
+			remove_character_modifier = patron_ursun 
+	}
+}
+
+# On death of Master, free all pet_consorts and mage_apprentices
+character_event = {
+	id = aicleanup.016
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		OR = { any_friend = { trait = mage_apprentice } 
+			any_lover = { trait = pet_consort } 
+			any_consort = { trait = pet_consort } }
+	}
+	
+	immediate = {	any_friend = { remove_trait = mage_apprentice } 
+			any_lover = { remove_trait = pet_consort }
+			any_consort = { remove_trait = pet_consort }
+	}
+}
+# Set all Asur on start to proper government
+character_event = {
+	id = aicleanup.017
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {	is_ruler = yes
+			is_feudal = yes
+			trait = creature_elf
+			culture_group = asur_group 
+			NOT = { government = highborn_government }
+	}
+	
+	immediate = { set_government_type = highborn_government
+				any_demesne_title = { refill_holding_levy = yes }
+				liege = { any_demesne_title = { refill_holding_levy = yes } }
+				top_liege = { any_demesne_title = { refill_holding_levy = yes } }
+			 }
+}
+# Set all Asrai on start to proper government
+character_event = {
+	id = aicleanup.018
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {	is_ruler = yes
+			religion = asrai_cadai
+			OR = { trait = creature_elf
+				trait = creature_treekin 
+				trait = creature_forestspirit }
+				capital_scope = { empire = { title = e_athel_loren } }
+				NOT = { government = eternal_court_government }
+	}
+	
+	immediate = { set_government_type = eternal_court_government
+				any_demesne_title = { refill_holding_levy = yes }
+				liege = { any_demesne_title = { refill_holding_levy = yes } }
+				top_liege = { any_demesne_title = { refill_holding_levy = yes } }
+		 }
+}

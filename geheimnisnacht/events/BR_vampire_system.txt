@@ -1,0 +1,1814 @@
+namespace = vampire
+
+##traits that will make a vassal ask to be turned: cruel, impaler, cynical, ambitious##
+
+#A random subject is turned into a vampire
+	character_event = {
+    id = vampire.0
+    title = UNDEATH
+     picture = "GFX_evt_vampire_kiss"
+	desc = { text = EVTDESCVAMPIRE.0
+		trigger = { FROMFROM = { NOT = { any_friend = { character = ROOT } } } 
+				 FROMFROM = { NOT = { any_lover = { character = ROOT } } } 
+				 FROMFROM = { NOT = { any_spouse = { character = ROOT } } } 
+				} 
+		}
+	desc = { text = EVTDESCVAMPIREB.0
+		trigger = { FROMFROM = { any_friend = { character = ROOT } } 
+				} 
+		}
+	desc = { text = EVTDESCVAMPIREC.0
+		trigger = { FROMFROM = { any_lover = { character = ROOT } } 
+				} 
+		}
+	desc = { text = EVTDESCVAMPIRED.0
+		trigger = { FROMFROM = { any_spouse = { character = ROOT } } 
+				} 
+		}
+	
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = EVTOPTAvampire0
+	opinion = { modifier = opinion_sired_me
+		who = FROMFROM
+		months = 240000 }
+	FROMFROM = { character_event = { id = vampire.1 } }
+	#	if = { 
+	#		limit = { FROMFROM = { is_female = no } }
+	#		set_father = FROMFROM 
+	#		}
+	#	if = { 
+	#		limit = { FROMFROM = { is_female = yes } }
+	#		set_mother = FROMFROM 
+	#		}
+			ai_chance = { factor = 70
+				modifier = { factor = 0.1
+					NOT = { liege = { character = FROMFROM } }
+					 }
+				modifier = { factor = 0.75
+					NOT = { trait = content }
+					 }
+			modifier = {
+				factor = 1.5
+				ROOT = { opinion = { who = FROMFROM 
+						 value = 20 }
+					}
+				}
+			modifier = {
+				factor = 1.6
+				ROOT = { opinion = { who = FROMFROM 
+						value = 40 }
+					}
+				}
+			modifier = {
+				factor = 1.7
+				ROOT = { opinion = { who = FROMFROM 
+						value = 60 }
+					}
+				}
+			modifier = {
+				factor = 1.75
+				ROOT = { opinion = { who = FROMFROM 
+						value = 80 }
+					}
+				}
+			modifier = {
+				factor = 2
+				ROOT = { opinion = { who = FROMFROM 
+						value = 100 }
+					}
+				}
+			 }
+	}
+	option = { #Deny the fiend
+	name = EVTOPTBvampire0
+	trigger = { is_ruler = yes
+		NOT = { prisoner = yes } }
+	war = {
+		target = FROM
+		casus_belli = bid_for_independence
+		}
+	FROM = { character_event = { id = vampire.9 } }
+			ai_chance = { factor = 30
+				modifier = { factor = 1.85
+					higher_tier_than = COUNT
+					 }
+				modifier = { factor = 1.85
+					higher_tier_than = DUKE
+					 }
+				modifier = { factor = 1.5
+					NOT = { trait = ambitious }
+					 }
+				modifier = { factor = 1.75
+					NOT = { age = 50 }
+					 }
+				modifier = { factor = 0.75
+					trait = trusting
+					 }
+				modifier = { factor = 1.25
+					trait = paranoid
+					 }
+				modifier = { factor = 0.25
+					NOT = { religion = FROMFROM }
+					 }
+				modifier = { factor = 2.5
+					trait = has_nurgles_rot
+					 }
+				modifier = { factor = 2.5
+					trait = leper
+					 }
+				modifier = { factor = 5
+					trait = elixir_of_eternal_youth
+					 }
+				modifier = { factor = 0.01
+					any_lover = { character = FROMFROM }
+					 }
+				modifier = { factor = 10
+					any_rival = { character = FROMFROM }
+					 }
+				modifier = { factor = 0.5
+					any_friend = { character = FROMFROM }
+					 }
+				modifier = { factor = 0.75
+					any_spouse = { character = FROMFROM }
+					 }
+				 }
+	
+	 }
+	option = { #Try to escape
+	trigger = { is_ruler = no
+		NOT = { prisoner = yes } }
+	name = EVTOPTCvampire0
+	hidden_tooltip = {
+	random_list = { 50 = { banish = yes
+				FROMFROM = { character_event = { id = vampire.5 } } #escapes
+				
+				modifier = { factor = 1.95
+					trait = genius
+					 }
+				modifier = { factor = 1.85
+					trait = brilliant
+					 }
+				modifier = { factor = 1.75
+					trait = quick
+					 }
+				modifier = { factor = 1.65
+					trait = smart
+					 }
+				modifier = { factor = 1.5
+					trait = bright
+					 }
+				modifier = { factor = 0.95
+					trait = dim
+					 }
+				modifier = { factor = 0.85
+					trait = dumb
+					 }
+				modifier = { factor = 0.75
+					trait = slow
+					 }
+				modifier = { factor = 0.65
+					trait = idiot
+					 }
+				modifier = { factor = 0.5
+					trait = imbecile
+					 }
+				modifier = { factor = 1.75
+					trait = strong
+					 }
+				modifier = { factor = 1.65
+					trait = tough
+					 }
+				modifier = { factor = 1.5
+					trait = hardy
+					 }
+				modifier = { factor = 0.95
+					trait = weak
+					 }
+				modifier = { factor = 0.85
+					trait = soft
+					 }
+				modifier = { factor = 0.75
+					trait = fragile
+					 }
+
+				modifier = { factor = 0.5
+					FROM = { trait = genius }
+					 }
+				modifier = { factor = 0.65
+					FROM = { trait = brilliant }
+					 }
+				modifier = { factor = 0.75
+					FROM = { trait = quick }
+					 }
+				modifier = { factor = 0.85
+					FROM = { trait = smart }
+					 }
+				modifier = { factor = 0.95
+					FROM = { trait = bright }
+					 }
+				modifier = { factor = 1.25
+					FROM = { trait = dim }
+					 }
+				modifier = { factor = 1.35
+					FROM = { trait = dumb }
+					 }
+				modifier = { factor = 1.45
+					FROM = { trait = slow }
+					 }
+				modifier = { factor = 1.5
+					FROM = { trait = idiot }
+					 }
+				modifier = { factor = 1.75
+					FROM = { trait = imbecile }
+					 }
+				modifier = { factor = 0.65
+					FROM = { trait = strong }
+					 }
+				modifier = { factor = 0.75
+					FROM = { trait = tough }
+					 }
+				modifier = { factor = 0.85
+					FROM = { trait = hardy }
+					 }
+				modifier = { factor = 1.25
+					FROM = { trait = weak }
+					 }
+				modifier = { factor = 1.45
+					FROM = { trait = soft }
+					 }
+				modifier = { factor = 1.5
+					FROM = { trait = fragile }
+					 }
+				 } 
+			50 = { FROMFROM = { character_event = { id = vampire.1 } } #gets turned
+				
+				#	if = { 	limit = { FROMFROM = { is_female = no } }
+				#		set_father = FROMFROM 
+				#		}
+				#	if = { limit = { FROMFROM = { is_female = yes } }
+				#		set_mother = FROMFROM 
+				#		}
+				} 
+			}
+		} #closeshiddentooltip
+			ai_chance = { factor = 30
+				modifier = { factor = 1.75
+					NOT = { trait = ambitious }
+					 }
+				modifier = { factor = 1.95
+					NOT = { age = 50 }
+					 }
+				modifier = { factor = 5
+					trait = elixir_of_eternal_youth
+					 }
+				modifier = { factor = 0.01
+					any_lover = { character = FROMFROM }
+					 }
+				modifier = { factor = 10
+					any_rival = { character = FROMFROM }
+					 }
+				modifier = { factor = 0.5
+					any_friend = { character = FROMFROM }
+					 }
+				modifier = { factor = 0.75
+					any_spouse = { character = FROMFROM }
+					 }
+				modifier = { factor = 0.75
+					trait = trusting
+					 }
+				modifier = { factor = 1.25
+					trait = paranoid
+					 }
+				modifier = { factor = 0.25
+					NOT = { religion = FROMFROM }
+					 }
+				modifier = { factor = 2.5
+					trait = has_nurgles_rot
+					 }
+				modifier = { factor = 2.5
+					trait = leper
+					 }
+				 }
+	}
+}
+	
+	
+#A subject is turned into a vampire
+	character_event = {
+    id = vampire.1
+    title = UNDEATH
+    desc = EVTDESCVAMPIRE.1 # This courtier has been turned into a loyal vampire minion now.
+    picture = "GFX_evt_vampire_kiss"
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = EXCELLENT
+	hidden_tooltip = { FROM = { clr_character_flag = hidden_tzeentch_cultist3
+					clr_character_flag = hidden_tzeentch_cultist2
+					clr_character_flag = hidden_tzeentch_cultist
+					clr_character_flag = hidden_nurgle_cultist3
+					clr_character_flag = hidden_nurgle_cultist2
+					clr_character_flag = hidden_nurgle_cultist
+					clr_character_flag = hidden_khorne_cultist3
+					clr_character_flag = hidden_khorne_cultist2
+					clr_character_flag = hidden_khorne_cultist
+					clr_character_flag = hidden_slaanesh_cultist3
+					clr_character_flag = hidden_slaanesh_cultist2
+					clr_character_flag = hidden_slaanesh_cultist
+					clr_character_flag = hidden_undivided_cultist3
+					clr_character_flag = hidden_undivided_cultist2
+					clr_character_flag = hidden_undivided_cultist } }
+if = {
+    limit = {
+    trait = vampire_lahmian_visible
+    }
+    FROM = { add_trait = vampire_lahmian_visible }
+    FROM = { religion = vampiric }
+    FROM = { set_graphical_culture = lahmian_vampire }
+    }
+    if = {
+    limit = {
+    trait = vampire_carstein_visible
+    }
+    FROM = { add_trait = vampire_carstein_visible }
+    FROM = { religion = vampiric }
+    FROM = { set_graphical_culture = generic_vampire }
+    } 
+    if = {
+    limit = {
+    trait = vampire_blood_visible
+    }
+    FROM = { add_trait = vampire_blood_visible }
+    FROM = { religion = vampiric }
+    FROM = { set_graphical_culture = generic_vampire }
+    }     
+    if = {
+    limit = {
+    trait = vampire_necrach_visible
+    }
+    FROM = { add_trait = vampire_necrach_visible }
+    FROM = { religion = vampiric }
+    FROM = { set_graphical_culture = generic_vampire }
+    }     
+    if = {
+    limit = {
+    trait = vampire_jade_visible
+    }
+    FROM = { add_trait = vampire_jade_visible }
+    FROM = { religion = vampiric }
+    FROM = { set_graphical_culture = generic_vampire }
+    }     
+    if = {
+    limit = {
+    trait = vampire_mahtmasi_visible
+    }
+    FROM = { add_trait = vampire_mahtmasi_visible }
+    FROM = { religion = vampiric }
+    FROM = { set_graphical_culture = generic_vampire }
+    }     
+    recalc_succession = yes
+    }
+}
+	
+	##Now for the AI vampire turning events##
+	
+	#If a realm character has very high stats in one of the four, he will be turned (15+} if the vampire does not have certain anti-turning traits##
+	#character_event = {
+    #id = vampire.2
+   # title = WORTHY_CANDIDATE
+  #  desc = EVTDESCVAMPIRE.2 # A character in your realm is particularly skilled, and might make a worthy recipient of the dark gift.
+ #   picture = "GFX_evt_vampire_kiss"
+#	
+#	is_triggered_only = yes
+#	
+#	trigger = {
+#	independent = yes
+#	OR = {
+#		trait = vampire_lahmian_visible
+#		trait = vampire_carstein_visible
+#		trait = vampire_blood_visible
+#		trait = vampire_strigoi_visible
+#		trait = vampire_necrach_visible 
+#		trait = vampire_jade_visible
+#		trait = vampire_mahtmasi_visible
+#		}
+#	NOT = { num_of_children = 12 }
+#	AND = {
+#	NOT = { trait = just }
+#	NOT = { trait = paranoid }
+#	NOT = { trait = envious }
+#	}
+#	NOT = { has_character_flag = vampire2 }
+#	any_realm_character = {
+#	OR = {
+#	martial = 15
+#	intrigue = 15
+#	stewardship = 15
+#	diplomacy = 15
+#	}
+#	AND = {
+#		trait = creature_human
+#		NOT = { trait = vampire_lahmian_visible }
+#		NOT = { trait = vampire_carstein_visible }
+#		NOT = { trait = vampire_blood_visible }
+#		NOT = { trait = vampire_strigoi_visible }
+#		NOT = { trait = vampire_necrach_visible }
+#		NOT = { trait = vampire_jade_visible }
+#		NOT = { trait = vampire_mahtmasi_visible }
+#		}
+#	}
+#	}
+#	
+#	option = {
+#	name = EVTOPTVAMPIRE.2.a # Yes, send an invitation to my court...
+#	random_realm_character = {
+#	limit = {
+#	OR = {
+#	martial = 15
+#	intrigue = 15
+#	stewardship = 15
+#	diplomacy = 15
+#	}
+#	AND = {
+#		age = 16
+#		trait = creature_human
+#		NOT = { trait = vampire_lahmian_visible }
+#		NOT = { trait = vampire_carstein_visible }
+#		NOT = { trait = vampire_blood_visible }
+#		NOT = { trait = vampire_strigoi_visible }
+#		NOT = { trait = vampire_necrach_visible }
+#		NOT = { trait = vampire_jade_visible }
+#		NOT = { trait = vampire_mahtmasi_visible }
+#		}
+#	}
+#	character_event = { id = vampire.3 days = 7 }
+#	}
+#	}
+#	
+#	option = {
+#	name = EVTOPTVAMPIRE.2.b # No, do not bother me with this again.
+#	trigger = { ai = no }
+#	set_character_flag = vampire2
+#	}
+#	
+#	}
+#	
+#	#the highly skilled character gets an invitation to the court##
+#	character_event = {
+    #id = vampire.3
+   # title = YOU_ARE_SUMMONED
+  #  desc = EVTDESCVAMPIRE.3 # You are summoned to a vampire lord's court. The way the invitation arrived, with no explanation, makes you pretty certain that you are going to be turned into a vampire if you go... it has happened before to others...
+ #   picture = "GFX_evt_vampire_kiss"
+#	
+#	is_triggered_only = yes
+#	
+#	option = {
+#	name = ILL_GO_I_HAVE_NO_CHOICE
+#	FROM = { character_event = { id = vampire.4 days = 7 } }
+#	}
+#	
+#	option = {
+#	name = NEVER_I_MUST_FLEE
+#	trigger = {
+#	is_landed = no
+#	OR = {
+#	trait = craven
+#	trait = shy
+#	trait = kind
+#	trait = just
+#	}
+#	}
+#	banish = yes
+#	FROM = { character_event = { id = vampire.5 days = 7 } }
+#	}
+#	
+#	}
+#	
+#	#the highly skilled character gets an invitation to the court##
+#	character_event = {
+#    id = vampire.4
+   # title = THE_DARK_GIFT
+  #  desc = EVTDESCVAMPIRE.4 # Your guest arrives. It is time to bestow the dark gift!
+ #   picture = "GFX_evt_carstein"
+#	
+#	is_triggered_only = yes
+#	
+#	option = {
+#	name = EVTOPTVAMPIRE.4.a # First death, then eternal life, my new minion...
+#	if = { 
+#			limit = { is_female = no  }
+#			FROM = { set_father = ROOT }
+#			}
+#	if = { 
+#			limit = { is_female = yes } 
+#			FROM = { set_mother = ROOT }
+#			}
+#	if = {
+#	limit = {
+#	trait = vampire_lahmian_visible
+#	}
+#	FROM = { add_trait = vampire_lahmian_visible }
+#	FROM = { religion = vampiric }
+#	}
+#	if = {
+#	limit = {
+#	trait = vampire_carstein_visible
+#	}
+#	FROM = { add_trait = vampire_carstein_visible }
+#	FROM = { religion = vampiric }
+#	}	
+#	if = {
+#	limit = {
+#	trait = vampire_blood_visible
+#	}
+#	FROM = { add_trait = vampire_blood_visible }
+#	FROM = { religion = vampiric }
+#	}		
+#	if = {
+#	limit = {
+#	trait = vampire_necrach_visible
+#	}
+#	FROM = { add_trait = vampire_necrach_visible }
+#	FROM = { religion = vampiric }
+#	}		
+#	if = {
+#	limit = {
+#	trait = vampire_jade_visible
+#	}
+#	FROM = { add_trait = vampire_jade_visible }
+#	FROM = { religion = vampiric }
+#	}		
+#	if = {
+#	limit = {
+#	trait = vampire_mahtmasi_visible
+#	}
+#	FROM = { add_trait = vampire_mahtmasi_visible }
+#	FROM = { religion = vampiric }
+#	}		
+#	recalc_succession = yes
+#	}	
+#}
+	
+#The Character fled the realm
+character_event = {
+	id = vampire.5
+	title = THE_DARK_GIFT
+	desc = EVTDESCVAMPIRE.5 # Word reaches you that your intended recipient for the dark gift has fled your realm, rather than become a vampire.
+	picture = "GFX_evt_vampire_kiss"
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = FAITHLESS_COWARD
+	}
+}
+	
+#If a realm lord, duke or above is not a vampire, they will be turned if the vampire ruler has certain traits that make him turn people##
+#character_event = {
+ #   id = vampire.6
+  #  title = CONSOLIDATING_YOUR_RULE
+   # desc = EVTDESCVAMPIRE.6 # It is often safest to have your highest ranked vassals become vampires themselves, so that they know that their fortunes are tied to your own success. Do you want to start turning your most powerful vassals?
+    #picture = "GFX_evt_vampire_kiss"
+	
+#	is_triggered_only = yes
+#	
+#	trigger = {
+#	independent = yes
+#	OR = {
+#	trait = vampire_lahmian_visible
+#	trait = vampire_carstein_visible
+#	trait = vampire_blood_visible
+#	trait = vampire_strigoi_visible
+#	trait = vampire_necrach_visible
+#	trait = vampire_jade_visible
+#	trait = vampire_mahtmasi_visible
+#		}
+#	AND = {
+#	NOT = { trait = just }
+#	NOT = { trait = paranoid }
+#	NOT = { trait = envious }
+#	}
+#	NOT = { has_character_flag = vampire6 }
+#	any_vassal = {
+#	OR = {
+#	tier = DUKE
+#	tier = KING
+#	}
+#	AND = {
+#		trait = creature_human
+#		NOT = { trait = vampire_lahmian_visible }
+#		NOT = { trait = vampire_carstein_visible }
+#		NOT = { trait = vampire_blood_visible }
+#		NOT = { trait = vampire_strigoi_visible }
+#		NOT = { trait = vampire_necrach_visible }
+#		NOT = { trait = vampire_jade_visible }
+#		NOT = { trait = vampire_mahtmasi_visible }
+#		}
+#	}
+#	}
+#	
+#	
+#	option = {
+#	name = EVTOPTVAMPIRE.2.a # Yes, send an invitation to my court...
+#	any_realm_lord = {
+#	limit = {
+#	OR = {
+#	tier = DUKE
+#	tier = KING
+#	}
+#	AND = {
+#		age = 16
+#		trait = creature_human
+#		NOT = { trait = vampire_lahmian_visible }
+#		NOT = { trait = vampire_carstein_visible }
+#		NOT = { trait = vampire_blood_visible }
+#		NOT = { trait = vampire_strigoi_visible }
+#		NOT = { trait = vampire_necrach_visible }
+#		NOT = { trait = vampire_jade_visible }
+#		NOT = { trait = vampire_mahtmasi_visible }
+#		}
+#	}
+#	character_event = { id = vampire.7 days = 7 }
+#	}
+#	}
+#	
+#	option = {
+#	name = EVTOPTVAMPIRE.2.b # No, do not bother me with this again.
+#	trigger = { ai = no }
+#	set_character_flag = vampire6
+#	}
+#	
+#	}
+#	
+#	#the duke+ tier vassal gets an invitation to the court##
+#	character_event = {
+ #   id = vampire.7
+  #  title = YOU_ARE_SUMMONED
+   # desc = EVTDESCVAMPIRE.7 # You are summoned to your vampire liege's court. The way the invitation arrived, with no explanation, makes you pretty certain that you are going to be turned into a vampire if you go... it has happened before to others...
+    #picture = "GFX_evt_vampire_kiss"
+#	
+#	is_triggered_only = yes
+#	
+#	option = {
+#	name = ILL_GO_I_HAVE_NO_CHOICE
+#	trigger = {
+#	OR = {
+#	ai = no 
+#	AND = {	
+#	NOT = { trait = craven }
+#	NOT = { trait = shy }
+#	NOT = { trait = kind }
+#	NOT = { trait = just }
+#	}
+#	}
+#	}
+#	FROM = { character_event = { id = vampire.8 days = 7 } }
+#	}
+#	
+#	option = {
+#	name = EVTOPTVAMPIRE.7.b # Never! I will fight for my life!
+#	trigger = {
+#	prisoner = no
+#	OR = {
+#	trait = craven
+#	trait = shy
+#	trait = kind
+#	trait = just
+#	ai = no
+#	}
+#	}
+#	war = {
+#		target = FROM
+#		casus_belli = bid_for_independence
+#		}
+#	FROM = { character_event = { id = vampire.9 } }
+#	}
+#	
+#	}
+#	
+#	#theduke + character gets an invitation to the court##
+#	character_event = {
+ #   id = vampire.8
+  #  title = THE_DARK_GIFT
+   # desc = EVTDESCVAMPIRE.4 # Your guest arrives. It is time to bestow the dark gift!
+    #picture = "GFX_evt_vampire_kiss"
+	
+#	is_triggered_only = yes
+#	
+#	option = {
+#	name = EVTOPTVAMPIRE.4.a # First death, then eternal life, my new minion...
+#	if = {
+#	limit = {
+#	trait = vampire_lahmian_visible
+#	}
+#	FROM = { add_trait = vampire_lahmian_visible }
+#	FROM = { religion = vampiric }
+#	}
+#	if = {
+#	limit = {
+#	trait = vampire_carstein_visible
+##	}
+#	FROM = { add_trait = vampire_carstein_visible }
+#	FROM = { religion = vampiric }
+#	}	
+#	if = {
+#	limit = {
+#	trait = vampire_blood_visible
+#	}
+#	FROM = { add_trait = vampire_blood_visible }
+#	FROM = { religion = vampiric }
+#	}		
+#	if = {
+#	limit = {
+#	trait = vampire_necrach_visible
+#	}
+#	FROM = { add_trait = vampire_necrach_visible }
+#	FROM = { religion = vampiric }
+#	}		
+#	if = {
+#	limit = {
+#	trait = vampire_jade_visible
+#	}
+#	FROM = { add_trait = vampire_jade_visible }
+#	FROM = { religion = vampiric }
+#	}		
+#	if = {
+#	limit = {
+#	trait = vampire_mahtmasi_visible
+#	}
+#	FROM = { add_trait = vampire_mahtmasi_visible }
+#	FROM = { religion = vampiric }
+#	}		
+#	}
+#	
+#	}	
+#	
+
+#Vassal rejects gift and declares war
+	character_event = {
+    id = vampire.9
+    title = THE_DARK_GIFT
+    desc = EVTDESCVAMPIRE.9 # Your vassal has refused your invitation, sending word: 'I will fight to the death, rather than be submitted to your eternal curse!' 
+    picture = "GFX_evt_vampire_kiss"
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = EVTOPTVAMPIRE.9.a # So be it! You will serve me in death then!
+	}
+}
+
+
+#	##some vassals will ask to be given the dark gift depending on traits##
+#	character_event = {
+#	id = vampire.10
+#	title = THE_DARK_GIFT
+#	desc = EVTDESCVAMPIRE.10 # Your liege is a vampire, so why should you have to suffer and die as a mortal? Why not just join the ruling caste fully, and embrace the darkness in return for life eternal? 
+#	picture = "GFX_evt_carstein"
+#	
+#	is_triggered_only = yes
+#	
+#	trigger = {
+#	liege = {
+#		trait = vampire_lahmian_visible
+#		trait = vampire_carstein_visible
+#		trait = vampire_blood_visible
+#		trait = vampire_strigoi_visible
+#		trait = vampire_necrach_visible
+#		trait = vampire_jade_visible
+#		trait = vampire_mahtmasi_visible
+#	}
+#	AND = {
+#		trait = creature_human
+#		NOT = { trait = vampire_lahmian_visible }
+#		NOT = { trait = vampire_carstein_visible }
+#		NOT = { trait = vampire_blood_visible }
+#		NOT = { trait = vampire_strigoi_visible }
+#		NOT = { trait = vampire_necrach_visible }
+#		NOT = { trait = vampire_jade_visible }
+###		NOT = { trait = vampire_mahtmasi_visible }
+#		}
+#	OR = {
+#		trait = cruel
+#		trait = impaler
+#		trait = cynical
+#		trait = ambitious
+#		}
+#	OR = {
+#		tier = COUNT
+#		tier = DUKE
+#		tier = KING
+#		}
+#	NOT = { has_character_flag = vampire10 }
+#		}
+#		
+#		option = {
+#		name = YES_I_SHALL_ASK_MY_LIEGE
+#		liege = { character_event = { id = vampire.11 days = 7 } }
+#		}
+#		
+#		option = {
+#		name = NO_I_PREFER_LIFE_TO_UNDEATH
+#		trigger = { ai = no }
+#		set_character_flag = vampire10
+#		}
+#	
+#	}
+#	
+#
+	
+#A vassal asked to become a vampire
+character_event = {
+	id = vampire.11
+	title = THE_DARK_GIFT
+     				# One of your vassals has asked you for the dark gift, and swears eternal fealty if you would but grant this heartfelt desire.
+	desc = { text = EVTDESCVAMPIREA.11
+		trigger = { FROM = { NOT = { any_friend = { character = ROOT } } } 
+				 FROM = { NOT = { any_lover = { character = ROOT } } } 
+				FROM = { NOT = { any_spouse = { character = ROOT } } } 
+				} 
+		}
+	desc = { text = EVTDESCVAMPIREB.11
+		trigger = { FROM = { any_friend = { character = ROOT } } 
+				} 
+		}
+	desc = { text = EVTDESCVAMPIREC.11
+		trigger = { FROM = { any_lover = { character = ROOT } } 
+				} 
+		}
+	desc = { text = EVTDESCVAMPIRED.11
+		trigger = { FROM = { any_spouse = { character = ROOT } } 
+				} 
+		}
+	picture = "GFX_evt_vampire_kiss"
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = EVTOPTVAMPIRE.4.a # First death, then eternal life, my new minion...
+
+	if = {
+	limit = {
+	trait = vampire_lahmian_visible
+	}
+	FROM = { add_trait = vampire_lahmian_visible }
+	FROM = { religion = vampiric }
+	}
+	if = {
+	limit = {
+	trait = vampire_carstein_visible
+	}
+	FROM = { add_trait = vampire_carstein_visible }
+	FROM = { religion = vampiric }
+	}	
+	if = {
+	limit = {
+	trait = vampire_blood_visible
+	}
+	FROM = { add_trait = vampire_blood_visible }
+	FROM = { religion = vampiric }
+	}		
+	if = {
+	limit = {
+	trait = vampire_necrach_visible
+	}
+	FROM = { add_trait = vampire_necrach_visible }
+	FROM = { religion = vampiric }
+	}		
+	if = {
+	limit = {
+	trait = vampire_jade_visible
+	}
+	FROM = { add_trait = vampire_jade_visible }
+	FROM = { religion = vampiric }
+	}		
+	if = {
+	limit = {
+	trait = vampire_mahtmasi_visible
+	}
+	FROM = { add_trait = vampire_mahtmasi_visible }
+	FROM = { religion = vampiric }
+	}
+	FROM = { character_event = { id = vampire.12 } }
+	ai_chance = { factor = 40 } 
+	}
+	
+	option = {
+	name = NO_THAT_ONE_IS_NOT_WORTHY
+	trigger = { OR = {
+			ai = no 
+			OR = {
+				FROM = { NOT = { martial = 12 } }
+				FROM = { NOT = { intrigue = 12 } }
+				FROM = { NOT = { stewardship = 12 } }
+				FROM = { NOT = { diplomacy = 12 } }
+				}
+			}
+		}
+	FROM = { character_event = { id = vampire.13 } }
+	ai_chance = { factor = 60 } 
+	}	
+}
+	
+#the asker is told his request is approved, he is now a vampire.##
+character_event = {
+	id = vampire.12
+	title = THE_DARK_GIFT
+	desc = { text = EVTDESCVAMPIREA.12
+		trigger = { FROM = { NOT = { any_friend = { character = ROOT } } } 
+				 FROM = { NOT = { any_lover = { character = ROOT } } } 
+				FROM = { NOT = { any_spouse = { character = ROOT } } } 
+				} 
+		}
+	desc = { text = EVTDESCVAMPIREB.12
+		trigger = { FROM = { any_friend = { character = ROOT } } 
+				} 
+		}
+	desc = { text = EVTDESCVAMPIREC.12
+		trigger = { FROM = { any_lover = { character = ROOT } } 
+				} 
+		}
+	desc = { text = EVTDESCVAMPIRED.12
+		trigger = { FROM = { any_spouse = { character = ROOT } } 
+				} 
+		}
+			# Your Liege bestows the dark gift upon you, and bids you serve faithfully until the end of your days.
+	picture = "GFX_evt_vampire_kiss"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = I_LIVE_FOREVER	
+	opinion = { modifier = opinion_sired_me
+		who = FROM
+		months = 240000 }
+		if = { limit = { NOT = { any_lover = { character = FROM } } }
+				add_friend = FROM }
+	}
+}
+	
+#the asker is told his request is denied due to low stats##
+character_event = {
+    id = vampire.13
+    title = CRUELLY_REJECTED
+    desc = EVTDESCVAMPIRE.13 # Your liege refuses your request, saying that you are just not vampire-material. Your skills are lacking, and you are too thoroughly unimpressive to join the illustrious ranks of the vampire aristocracy.
+    picture = "GFX_evt_vampire_kiss"
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = OUCH
+	set_character_flag = vampire10
+	random = { chance = 15
+		modifier = { factor = 0
+				FROM = { num_of_children = 10 } }
+		add_rival = FROM }
+	}
+}
+	
+	##Now for the event where you can turn a vampire heir into your own dynasty - players only via decision, AI will use another mechanic##
+#character_event = {
+#    id = vampire.14
+   # title = A_VAMPIRE_HEIR
+  #  desc = EVTDESCVAMPIRE.14 # You can make a vampire part of your own dynasty by giving him or her the minor title 'Vampire Heir Target' and then click on the event option below. Remember to remove the minor title after you have used it.
+ #   picture = "GFX_evt_vampire_kiss"
+#	
+#	is_triggered_only = yes
+#		
+#	option = {
+#	name = EVTOPTVAMPIRE.14.a # Make this vampire part of my dynasty.
+#	any_realm_character = {
+#	limit = {
+#	has_minor_title = minor_title_vampire_heir
+#	OR = {
+#		trait = vampire_lahmian_visible
+#		trait = vampire_carstein_visible
+#		trait = vampire_blood_visible
+#		trait = vampire_strigoi_visible
+#		trait = vampire_necrach_visible
+#		trait = vampire_jade_visible
+#		trait = vampire_mahtmasi_visible
+#			}
+#	}
+#	character_event = { id = vampire.15 days = 7 }
+#	}
+#	}	
+#}
+	
+character_event = {
+    id = vampire.15
+    title = A_GREAT_HONOR
+    desc = EVTDESCVAMPIRE.15 # Your liege has decided to formally welcome you into his dynasty.
+    picture = "GFX_evt_blood_calice"
+	
+	is_triggered_only = yes
+		
+	option = {
+	name = I_WELCOME_THIS_GREAT_HONOR
+	FROMFROM = { character_event = { id = vampire.150006 } }
+	prestige = 200
+	if = {
+	limit = { FROMFROM = { is_female = no } }
+	dynasty = FROMFROM
+	set_father = FROMFROM
+	}
+	if = {
+	limit = { FROMFROM = { is_female = yes } }
+		dynasty = FROMFROM
+		set_mother = FROMFROM
+		}
+	FROMFROM = { recalc_succession = yes }
+	opinion = { modifier = opinion_v_adopted_me 
+		who = FROMFROM
+		months = 240000 }
+	ai_chance = { factor = 60
+			modifier = { factor = 1.25
+					is_ruler = yes
+					lower_tier_than = FROMFROM
+			 }
+			modifier = { factor = 1.75
+					is_ruler = no
+			 }
+			modifier = {
+				factor = 1.5
+				ROOT = { any_lover = { religion = FROMFROM 
+							character = FROMFROM } }
+			}
+			modifier = {
+				factor = 1.25
+				ROOT = { any_spouse = { religion = FROMFROM 
+							character = FROMFROM } }
+			}
+			modifier = {
+				factor = 1.5
+				ROOT = { opinion = { who = FROMFROM 
+						 value = 20 }
+					}
+				}
+			modifier = {
+				factor = 1.6
+				ROOT = { opinion = { who = FROMFROM 
+						value = 40 }
+					}
+				}
+			modifier = {
+				factor = 1.7
+				ROOT = { opinion = { who = FROMFROM 
+						value = 60 }
+					}
+				}
+			modifier = {
+				factor = 1.75
+				ROOT = { opinion = { who = FROMFROM 
+						value = 80 }
+					}
+				}
+			modifier = {
+				factor = 1.85
+				ROOT = { opinion = { who = FROMFROM 
+						value = 100 }
+					}
+				}
+		}
+	}
+	option = {
+	name = EVTOPTBVAMPIRE15
+	FROMFROM = { character_event = { id = vampire.150001 } }
+	ai_chance = { factor = 40
+			modifier = { factor = 1.75
+					is_ruler = yes
+					higher_tier_than = FROMFROM
+			 }
+			modifier = { factor = 1.25
+					is_ruler = yes
+			 }
+			modifier = { factor = 1.5
+					prestige = 1000
+			 }
+			modifier = {
+				factor = 1.95
+				ROOT = { any_rival = { religion = FROMFROM 
+							character = FROMFROM } }
+			}
+		}
+	}
+}
+	
+character_event = {
+    id = vampire.150001 
+    title = A_GREAT_HONOR
+    desc = EVTDESCVAMPIRE150001
+    picture = "GFX_evt_blood_calice"
+	
+	is_triggered_only = yes
+		
+	option = {
+	name = EVTOPTAVAMPIRE150001
+	prestige = -100
+	opinion = { modifier = opinion_v_rejected_adoption 
+		who = FROM
+		months = 360 }
+	FROM = { reverse_opinion = { modifier = opinion_v_rejected_adoption 
+		who = ROOT
+		months = 360 } }
+	}
+}
+
+#Fledgling asks to be admitted in the coven himself
+character_event = {
+    id = vampire.150002
+    title = A_GREAT_HONOR
+    desc = EVTDESCVAMPIRE.150002
+    picture = "GFX_evt_blood_calice"
+	
+	is_triggered_only = yes
+		
+	option = {
+	name = EVTOPTAVAMPIRE150002
+	FROMFROM = { character_event = { id = vampire.150005 } }
+	ai_chance = { factor = 60
+			modifier = { factor = 1.75
+					is_ruler = no
+			 }
+			modifier = { factor = 1.75
+					NOT = { num_of_children = 5 }
+			 }
+			modifier = { factor = 2
+					NOT = { num_of_children = 1 }
+			 }
+			modifier = {
+				factor = 1.5
+				ROOT = { any_lover = { religion = FROMFROM 
+							character = FROMFROM } }
+			}
+			modifier = {
+				factor = 1.25
+				ROOT = { any_spouse = { religion = FROMFROM 
+							character = FROMFROM } }
+			}
+			modifier = {
+				factor = 1.5
+				ROOT = { opinion = { who = FROMFROM 
+						 value = 20 }
+					}
+				}
+			modifier = {
+				factor = 1.6
+				ROOT = { opinion = { who = FROMFROM 
+						value = 40 }
+					}
+				}
+			modifier = {
+				factor = 1.7
+				ROOT = { opinion = { who = FROMFROM 
+						value = 60 }
+					}
+				}
+			modifier = {
+				factor = 1.75
+				ROOT = { opinion = { who = FROMFROM 
+						value = 80 }
+					}
+				}
+			modifier = {
+				factor = 1.85
+				ROOT = { opinion = { who = FROMFROM 
+						value = 100 }
+					}
+				}
+		}
+	}
+	option = {
+	name = EVTOPTBVAMPIRE150002
+	FROMFROM = { character_event = { id = vampire.150003 } }
+	ai_chance = { factor = 40
+			modifier = { factor = 1.75
+					num_of_children = 2
+			 }
+			modifier = { factor = 1.75
+					num_of_children = 5
+			 }
+			modifier = { factor = 2
+					num_of_children = 10
+			 }
+			modifier = { factor = 1.25
+					trait = paranoid
+			 }
+			modifier = {
+				factor = 1.95
+				ROOT = { any_rival = { religion = FROMFROM 
+							character = FROMFROM } }
+			}
+		}
+	}
+	option = {
+	name = EVTOPTCVAMPIRE150002
+	trigger = { ai = no }
+	FROMFROM = { character_event = { id = vampire.150004 } }
+	}
+}
+
+character_event = {
+    id = vampire.150003 
+    title = A_GREAT_HONOR
+    desc = EVTDESCVAMPIRE150003
+    picture = "GFX_evt_blood_calice"
+	
+	is_triggered_only = yes
+		
+	option = {
+	name = EVTOPTAVAMPIRE150003 
+	opinion = { modifier = opinion_v_rejected_adoption 
+		who = FROM
+		months = 360 }
+	}
+}
+
+character_event = {
+    id = vampire.150004 
+    title = A_GREAT_HONOR
+    desc = EVTDESCVAMPIRE150004
+    picture = "GFX_evt_blood_calice"
+	
+	is_triggered_only = yes
+		
+	option = {
+	name = EVTOPTAVAMPIRE150004
+	opinion = { modifier = opinion_v_rejected_adoption 
+		who = FROM
+		months = 36000 }
+	}
+}
+
+character_event = {
+    id = vampire.150005
+    title = A_GREAT_HONOR
+    desc = EVTDESCVAMPIRE150005
+    picture = "GFX_evt_blood_calice"
+	
+	is_triggered_only = yes
+		
+	option = {
+	name = EVTOPTAVAMPIRE150005
+	prestige = 200
+	if = {
+	limit = { FROM = { is_female = no } }
+	dynasty = FROM 
+	set_father = FROM 
+	}
+	if = {
+	limit = { FROM = { is_female = yes } }
+		dynasty = FROM 
+		set_mother = FROM 
+		}
+	FROM = { recalc_succession = yes }
+	opinion = { modifier = opinion_v_adopted_me 
+		who = FROM 
+		months = 240000 }
+	}
+}
+
+character_event = {
+    id = vampire.150006
+    title = A_GREAT_HONOR
+    desc = EVTDESCVAMPIRE150006
+    picture = "GFX_evt_blood_calice"
+	
+	is_triggered_only = yes
+		
+	option = {
+	name = EVTOPTAVAMPIRE150006
+	}
+}
+	
+##AI Vampire Counts##
+#	character_event = {
+  #  id = vampire.20
+ #   title = THE_DARK_GIFT
+#    desc = EVTDESCVAMPIRE.16 # You are a powerful ruler, it is time to make some heirs of your dynasty. You will scour the land for worthy candidates and then turn them and call them children. ##no description needed really, this is ai only##
+#   picture = "GFX_evt_vampire_kiss"
+#	
+#	is_triggered_only = yes
+#	
+#	trigger = {
+#	ai = yes
+###	tier = COUNT
+#	NOT = { num_of_children = 1 }
+#	OR = {
+#		trait = vampire_carstein_visible
+#		trait = vampire_blood_visible
+#		trait = vampire_strigoi_visible
+#		trait = vampire_necrach_visible
+#		trait = vampire_jade_visible
+#		trait = vampire_mahtmasi_visible
+#		}
+#		}
+#		
+#		
+#		option = {
+#		name = THIS_ONE_SEEMS_PROMISING
+#		random_list = {
+#		50 = {
+#		create_random_soldier = {
+  #          random_traits = yes
+ #           dynasty = ROOT
+#			culture = ROOT
+#			religion = ROOT
+ #           female = no
+#			age = 25
+  #          }
+ #           new_character = {
+#			change_martial = 5
+#			change_intrigue = 5
+#			if = { 
+#			limit = { is_female = no }
+#			set_father = ROOT
+#			}
+#			if = { 
+#			limit = { is_female = yes }
+#			set_mother = ROOT
+#			}
+ #           if = {
+#				limit = { ROOT = { trait = vampire_lahmian_visible } }
+#				add_trait = vampire_lahmian_visible
+#				}
+#			if = {
+#				limit = { ROOT = { trait = vampire_carstein_visible } }
+#				add_trait = vampire_carstein_visible
+#				}	
+##			if = {
+#				limit = { ROOT = { trait = vampire_blood_visible } }
+##				add_trait = vampire_blood_visible
+#				}					
+#			if = {
+#				limit = { ROOT = { trait = vampire_strigoi_visible } }
+#				add_trait = vampire_strigoi_visible
+#				}	
+#			if = {
+#				limit = { ROOT = { trait = vampire_necrach_visible } }
+#				add_trait = vampire_necrach_visible
+#				}	
+#			if = {
+#				limit = { ROOT = { trait = vampire_jade_visible } }
+#				add_trait = vampire_jade_visible
+#				}				
+#			if = {
+#				limit = { ROOT = { trait = vampire_mahtmasi_visible } }
+#				add_trait = vampire_mahtmasi_visible
+#				}				
+#				}
+#		}
+#	50 = {
+#		create_random_intriguer = {
+  #          random_traits = yes
+ #           dynasty = ROOT
+#			culture = ROOT
+#			religion = ROOT
+ #           female = yes
+#			age = 25
+  #          }
+ #           new_character = {
+#			change_martial = 5
+#			change_intrigue = 5
+#			if = { 
+#			limit = { is_female = no }
+#			set_father = ROOT
+#			}
+#			if = { 
+#			limit = { is_female = yes }
+#			set_mother = ROOT
+#			}
+ #           if = {
+#				limit = { ROOT = { trait = vampire_lahmian_visible } }
+#				add_trait = vampire_lahmian_visible
+#				}
+#			if = {
+#				limit = { ROOT = { trait = vampire_carstein_visible } }
+#				add_trait = vampire_carstein_visible
+#				}	
+#			if = {
+#				limit = { ROOT = { trait = vampire_blood_visible } }
+#				add_trait = vampire_blood_visible
+#				}					
+#			if = {
+#				limit = { ROOT = { trait = vampire_strigoi_visible } }
+#				add_trait = vampire_strigoi_visible
+#				}	
+#			if = {
+#				limit = { ROOT = { trait = vampire_necrach_visible } }
+#				add_trait = vampire_necrach_visible
+#				}	
+#			if = {
+#				limit = { ROOT = { trait = vampire_jade_visible } }
+#				add_trait = vampire_jade_visible
+#				}				
+#			if = {
+#				limit = { ROOT = { trait = vampire_mahtmasi_visible } }
+#				add_trait = vampire_mahtmasi_visible
+#				}				
+#				}
+#		}
+#	}
+#	recalc_succession = yes
+#	}		
+#}
+	
+#Vampire rivalry goes here
+#Here's how I'd set it up:
+# Base MTTH of 250 years.
+# MTTH would be reduced for every title rank, stat higher than their parent, high prestige, negative opinion, and ambitious
+# With opposite factors increasing the MTTH
+
+character_event = {
+    id = vampire.21 #rivalry w/  vampire father 
+    desc = EVTDESCVAMPIRE.21 # 
+    picture = "GFX_evt_vampire_kiss"
+	age = 16
+	capable_only = yes
+	
+	trigger = {
+			OR = {
+				trait = vampire_carstein_visible
+				trait = vampire_blood_visible
+				trait = vampire_strigoi_visible
+				trait = vampire_necrach_visible
+				trait = vampire_jade_visible
+				trait = vampire_mahtmasi_visible
+			}
+			father = {
+				OR = {
+					trait = vampire_carstein_visible
+					trait = vampire_blood_visible
+					trait = vampire_strigoi_visible
+					trait = vampire_necrach_visible
+					trait = vampire_jade_visible
+					trait = vampire_mahtmasi_visible
+				}
+				NOT = { is_rival = ROOT }
+				NOT = { is_lover = ROOT }
+				NOT = { is_friend = ROOT }
+			}
+	}
+	mean_time_to_happen = {
+		years = 250
+		
+		#Rank
+		modifier = {
+			factor = 0.8
+			primary_title = { higher_real_tier_than = baron } 
+		}
+		modifier = {
+			factor = 0.8
+			primary_title = { higher_real_tier_than = count } 
+		}
+		modifier = {
+			factor = 0.8
+			primary_title = { higher_real_tier_than = duke } 
+		}
+		modifier = {
+			factor = 0.8
+			primary_title = { higher_real_tier_than = king } 
+		}
+		#Prestige
+		modifier = {
+			factor = 0.8
+			prestige = 250 
+		}
+		modifier = {
+			factor = 0.8
+			prestige = 500 
+		}
+		modifier = {
+			factor = 0.8
+			prestige = 750 
+		}
+		modifier = {
+			factor = 0.8
+			prestige = 1000 
+		}
+		#Traits
+		modifier = {
+			factor = 0.5
+			trait = ambitious 
+		}
+		modifier = {
+			factor = 0.75
+			trait = vampire_carstein_visible 
+		}
+		#Stats
+		modifier = {
+			factor = 0.75
+			father = {
+				NOT = { martial = ROOT }
+			}
+		}
+		modifier = {
+			factor = 0.75
+			father = {
+				NOT = { diplomacy = ROOT }
+			}
+		}
+		modifier = {
+			factor = 0.75
+			father = {
+				NOT = { stewardship = ROOT }
+			}
+		}
+		modifier = {
+			factor = 0.75
+			father = {
+				NOT = { intrigue = ROOT }
+			}
+		}
+		modifier = {
+			factor = 0.75
+			father = {
+				NOT = { learning = ROOT }
+			}
+		}
+		modifier = {
+			factor = 1.25
+			father = { martial = ROOT }
+		}
+		modifier = {
+			factor = 1.25
+			father = { diplomacy = ROOT }
+		}
+		modifier = {
+			factor = 1.25
+			father = { stewardship = ROOT }
+		}
+		modifier = {
+			factor = 1.25
+			father = { intrigue = ROOT }
+		}
+		modifier = {
+			factor = 1.25
+			father = { learning = ROOT }
+		}
+		#Opinion
+		modifier = {
+			factor = 0.75
+			opinion = { who = father value = -100 }
+		}
+		modifier = {
+			factor = 0.75
+			opinion = { who = father value = -75 }
+		}
+		modifier = {
+			factor = 0.75
+			opinion = { who = father value = -50 }
+		}
+		modifier = {
+			factor = 0.75
+			opinion = { who = father value = -25 }
+		}
+		modifier = {
+			factor = 1.25
+			opinion = { who = father value = 25 }
+		}
+		modifier = {
+			factor = 1.25
+			opinion = { who = father value = 50 }			
+		}
+		modifier = {
+			factor = 1.25
+			opinion = { who = father value = 75 }
+		}
+		modifier = {
+			factor = 1.25
+			opinion = { who = father value = 100 }
+		}
+	}
+	option = {
+		name = OK
+		father = {
+			add_rival = ROOT
+		}
+	}
+}
+
+character_event = {
+    id = vampire.22 #rivalry w/  mother mother 
+    desc = EVTDESCVAMPIRE.22 # 
+    picture = "GFX_evt_vampire_kiss"
+	age = 16
+	capable_only = yes
+	
+	trigger = {
+			OR = {
+				trait = vampire_carstein_visible
+				trait = vampire_blood_visible
+				trait = vampire_strigoi_visible
+				trait = vampire_necrach_visible
+				trait = vampire_jade_visible
+				trait = vampire_mahtmasi_visible
+			}
+			mother = {
+				OR = {
+					trait = vampire_carstein_visible
+					trait = vampire_blood_visible
+					trait = vampire_strigoi_visible
+					trait = vampire_necrach_visible
+					trait = vampire_jade_visible
+					trait = vampire_mahtmasi_visible
+				}
+				NOT = { is_rival = ROOT }
+				NOT = { is_lover = ROOT }
+				NOT = { is_friend = ROOT }
+			}
+	}
+	mean_time_to_happen = {
+		years = 250
+		
+		#Rank
+		modifier = {
+			factor = 0.8
+			primary_title = { higher_real_tier_than = baron } 
+		}
+		modifier = {
+			factor = 0.8
+			primary_title = { higher_real_tier_than = count } 
+		}
+		modifier = {
+			factor = 0.8
+			primary_title = { higher_real_tier_than = duke } 
+		}
+		modifier = {
+			factor = 0.8
+			primary_title = { higher_real_tier_than = king } 
+		}
+		#Prestige
+		modifier = {
+			factor = 0.8
+			prestige = 250 
+		}
+		modifier = {
+			factor = 0.8
+			prestige = 500 
+		}
+		modifier = {
+			factor = 0.8
+			prestige = 750 
+		}
+		modifier = {
+			factor = 0.8
+			prestige = 1000 
+		}
+		#Traits
+		modifier = {
+			factor = 0.5
+			trait = ambitious 
+		}
+		modifier = {
+			factor = 0.75
+			trait = vampire_carstein_visible 
+		}
+		#Stats
+		modifier = {
+			factor = 0.75
+			mother = {
+				NOT = { martial = ROOT }
+			}
+		}
+		modifier = {
+			factor = 0.75
+			mother = {
+				NOT = { diplomacy = ROOT }
+			}
+		}
+		modifier = {
+			factor = 0.75
+			mother = {
+				NOT = { stewardship = ROOT }
+			}
+		}
+		modifier = {
+			factor = 0.75
+			mother = {
+				NOT = { intrigue = ROOT }
+			}
+		}
+		modifier = {
+			factor = 0.75
+			mother = {
+				NOT = { learning = ROOT }
+			}
+		}
+		modifier = {
+			factor = 1.25
+			mother = { martial = ROOT }
+		}
+		modifier = {
+			factor = 1.25
+			mother = { diplomacy = ROOT }
+		}
+		modifier = {
+			factor = 1.25
+			mother = { stewardship = ROOT }
+		}
+		modifier = {
+			factor = 1.25
+			mother = { intrigue = ROOT }
+		}
+		modifier = {
+			factor = 1.25
+			mother = { learning = ROOT }
+		}
+		#Opinion
+		modifier = {
+			factor = 0.75
+			opinion = { who = mother value = -100 }
+		}
+		modifier = {
+			factor = 0.75
+			opinion = { who = mother value = -75 }
+		}
+		modifier = {
+			factor = 0.75
+			opinion = { who = mother value = -50 }
+		}
+		modifier = {
+			factor = 0.75
+			opinion = { who = mother value = -25 }
+		}
+		modifier = {
+			factor = 1.25
+			opinion = { who = mother value = 25 }
+		}
+		modifier = {
+			factor = 1.25
+			opinion = { who = mother value = 50 }			
+		}
+		modifier = {
+			factor = 1.25
+			opinion = { who = mother value = 75 }
+		}
+		modifier = {
+			factor = 1.25
+			opinion = { who = mother value = 100 }
+		}
+	}
+	option = {
+		name = OK
+		mother = {
+			add_rival = ROOT
+		}
+	}
+}
+
+#vampires after age 65 get the vampy portraits#
+	character_event = {
+    id = vampire.23
+    desc = EVTDESCVAMPIRE.16 #hidden, doesnt matter
+    picture = "GFX_evt_vampire_kiss"
+	hide_window = yes
+	min_age = 49
+	
+	is_triggered_only = yes
+	
+	trigger = {
+	age = 49
+	trait = creature_human
+	OR = {
+		trait = vampire_carstein_visible
+		trait = vampire_blood_visible
+		trait = vampire_strigoi_visible
+		trait = vampire_necrach_visible
+		trait = vampire_jade_visible
+		trait = vampire_mahtmasi_visible
+		trait = vampire_lahmian_visible
+		}
+	NOT = { has_character_flag = vampire_gfx }
+		}
+		
+	option = {
+	name = OK
+	set_character_flag = vampire_gfx
+	if = {
+	limit = {
+	OR = {
+		trait = vampire_carstein_visible
+		trait = vampire_blood_visible
+		trait = vampire_strigoi_visible
+		trait = vampire_necrach_visible
+		trait = vampire_jade_visible
+		trait = vampire_mahtmasi_visible
+		}
+	}
+	set_graphical_culture = generic_vampire
+	}
+	if = {
+	limit = {
+	trait = vampire_lahmian_visible
+	}
+	set_graphical_culture = lahmian_vampire
+	}
+}
+
+}	
+	

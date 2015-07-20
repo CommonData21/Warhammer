@@ -1,0 +1,53 @@
+# namespace = life
+
+# character_event = {
+	# id = life.0
+	# title = SPELLCASTING
+	# desc = darkmagic0 #The spell has expired and the troops and flag are removed
+	# picture = "GFX_evt_miscast"
+	# hide_window = yes
+	
+	# is_triggered_only = yes
+	
+	# option = {
+	# name = OK
+	# clr_character_flag = cast_awakening_of_the_wood
+	# disband_event_forces = awakening_of_the_wood_troops
+	# }
+	
+	# }
+
+	
+# character_event = {
+	# id = life.1
+	# title = SPELLCASTING
+	# desc = darkmagic0 #The spell has expired and the troops and flag are removed
+	# picture = "GFX_evt_miscast"
+	# hide_window = yes
+	
+	# is_triggered_only = yes
+	
+	# option = {
+	# name = OK
+	# clr_character_flag = cast_shield_of_thorns
+	# disband_event_forces = shield_of_thorns_troops
+	# }
+	
+	# }
+	
+# character_event = {
+	# id = life.2
+	# title = SPELLCASTING
+	# desc = darkmagic0 #The spell has expired and the troops and flag are removed
+	# picture = "GFX_evt_miscast"
+	# hide_window = yes
+	
+	# is_triggered_only = yes
+	
+	# option = {
+	# name = OK
+	# clr_character_flag = cast_the_dwellers_below
+	# disband_event_forces = the_dwellers_below_troops
+	# }
+	
+	# }

@@ -1,0 +1,40 @@
+#Bloodlines or other special character traits, starting for Asur. Will need events to apply. WIP
+
+#Finubar
+
+finubar={
+immortal = yes
+cached = yes
+random = no
+general_opinion = 20
+martial = 2
+diplomacy = 2
+stewardship = 1
+monthly_character_prestige = 0.5
+  command_modifier = {
+	morale_defence = 0.1
+	morale_offence = 0.1
+	}
+customizer = no
+}
+
+#Blood of Aenarion
+blood_of_aenarion = {
+cached = yes
+random = no
+customizer = no
+monthly_character_prestige = 0.5
+general_opinion = 10
+}
+
+#Blood of Caledor Dragontamer
+
+#Blood of Thyriol
+
+#Blood of Alith Anar
+
+
+
+
+
+

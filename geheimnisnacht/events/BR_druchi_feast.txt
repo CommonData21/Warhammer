@@ -1,0 +1,4180 @@
+###################################
+#
+# Events for Feasts
+#
+# Id 72000 - 72999 is reserved
+#
+# Fired from on actions
+#
+###################################
+#
+# Designed by Johan Andersson
+# Written by Sara Wendel-Örtqvist
+
+###################################
+#Events before the Feast
+###################################
+
+namespace = druchifeast
+### A troop of wandering jongleurs/PIT FIGHTERS seek your patronage ###
+character_event = {
+	id = druchifeast.1
+	desc = EVTDESCDRUCHIFEAST.1 # A band of wandering pit fighters asks if you'd like to hire them for your feast. They offer to put on a bloody demonstration for the evening, going up against any challengers - beasts or slaves - that you can find.
+	picture = "GFX_evt_carriage"
+
+	prisoner = no
+	only_rulers = yes
+	capable_only = yes
+
+	trigger = {
+		war = no
+		has_character_modifier = holding_large_druchi_feast
+		NOT = {
+			has_character_flag = sent_invitations
+		}
+		NOT = {
+			has_character_flag = host_druchi_feast_started
+		}
+		NOT = {
+			has_character_flag = feast_jongleur
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 2
+
+		modifier = {
+			factor = 6
+			primary_title = { tier = COUNT }
+		}
+		modifier = {
+			factor = 3
+			primary_title = { tier = DUKE }
+		}
+		modifier = {
+			factor = 3
+			has_character_flag = feast_musicians
+		}
+		modifier = {
+			factor = 3
+			has_character_flag = feast_minstrel
+		}
+		modifier = {
+			factor = 3
+			has_character_flag = feast_fireeaters
+		}
+		modifier = {
+			factor = 3
+			has_character_flag = feast_conjurer
+		}
+		modifier = {
+			factor = 3
+			has_character_flag = feast_acrobats
+		}
+		modifier = {
+			factor = 3
+			has_character_flag = feast_dancers
+		}
+	}
+
+	option = {
+		name = EVTOPTDRUCHIFEAST.1.a # Certainly. That sounds entertaining!
+		ai_chance = {
+			factor = 5
+
+			modifier = {
+				factor = 0.1
+				NOT = {
+					treasury = 30
+				}
+			}
+			modifier = {
+				factor = 30
+				treasury = 30
+			}
+		}
+		treasury = -10
+		set_character_flag = feast_jongleur
+	}
+	option = {
+		name = EVTOPTDRUCHIFEAST.1.b # No, I won't waste money on such things.
+		ai_chance = {
+			factor = 5
+
+			modifier = {
+				factor = 30
+				NOT = {
+					treasury = 30
+				}
+			}
+			modifier = {
+				factor = 0.1
+				treasury = 30
+			}
+		}
+		prestige = -10
+	}
+}
+
+#A travelling minstrel/DARK SINGER seeks your patronage
+character_event = {
+	id = druchifeast.2
+	desc = EVTDESCDRUCHIFEAST.2 # A traveling dark singer of Khaine offers to bless your feast with songs of bloody murder and war. Do you wish to hire her?
+	picture = "GFX_evt_carriage"
+
+	prisoner = no
+	only_rulers = yes
+	capable_only = yes
+
+	trigger = {
+		war = no
+		has_character_modifier = holding_large_druchi_feast
+		NOT = {
+			has_character_flag = sent_invitations
+		}
+		NOT = {
+			has_character_flag = host_druchi_feast_started
+		}
+		NOT = {
+			has_character_flag = feast_minstrel
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 1
+
+		modifier = {
+			factor = 6
+			primary_title = { tier = COUNT }
+		}
+		modifier = {
+			factor = 3
+			primary_title = { tier = DUKE }
+		}
+		modifier = {
+			factor = 3
+			has_character_flag = feast_musicians
+		}
+		modifier = {
+			factor = 3
+			has_character_flag = feast_jongleur
+		}
+		modifier = {
+			factor = 3
+			has_character_flag = feast_fireeaters
+		}
+		modifier = {
+			factor = 3
+			has_character_flag = feast_conjurer
+		}
+		modifier = {
+			factor = 3
+			has_character_flag = feast_acrobats
+		}
+		modifier = {
+			factor = 3
+			has_character_flag = feast_dancers
+		}
+	}
+
+	option = {
+		name = EVTOPTDRUCHIFEAST.2.a # Of course - dark singers are always welcome here.
+		ai_chance = {
+			factor = 5
+
+			modifier = {
+				factor = 0.1
+				NOT = {
+					treasury = 30
+				}
+			}
+			modifier = {
+				factor = 30
+				treasury = 30
+			}
+		}
+		set_character_flag = feast_minstrel
+		treasury = -10
+	}
+	option = {
+		name = NO_MAYBE_NEXT_YEAR
+		ai_chance = {
+			factor = 5
+
+			modifier = {
+				factor = 30
+				NOT = {
+					treasury = 30
+				}
+			}
+			modifier = {
+				factor = 0.1
+				treasury = 30
+			}
+		}
+		prestige = -10
+	}
+}
+
+#Musicians/BEASTMASTERS seek your patronage
+character_event = {
+	id = druchifeast.3
+	desc = EVTDESCDRUCHIFEAST.3 # A beastmaster and his retinue arrive, offering to entertain your guests with glorious slaughter as his beasts are pitted against slaves, courtiers you dislike, or other beasts.
+	picture = "GFX_evt_carriage"
+
+	only_rulers = yes
+	capable_only = yes
+	prisoner = no
+
+	trigger = {
+		war = no
+		has_character_modifier = holding_large_druchi_feast
+		NOT = {
+			has_character_flag = sent_invitations
+		}
+		NOT = {
+			has_character_flag = host_druchi_feast_started
+		}
+		NOT = {
+			has_character_flag = feast_musicians
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 1
+
+		modifier = {
+			factor = 6
+			primary_title = { tier = COUNT }
+		}
+		modifier = {
+			factor = 3
+			primary_title = { tier = DUKE }
+		}
+		modifier = {
+			factor = 3
+			has_character_flag = feast_minstrel
+		}
+		modifier = {
+			factor = 3
+			has_character_flag = feast_jongleur
+		}
+		modifier = {
+			factor = 3
+			has_character_flag = feast_fireeaters
+		}
+		modifier = {
+			factor = 3
+			has_character_flag = feast_conjurer
+		}
+		modifier = {
+			factor = 3
+			has_character_flag = feast_acrobats
+		}
+		modifier = {
+			factor = 3
+			has_character_flag = feast_dancers
+		}
+	}
+
+	option = {
+		name = SOUNDS_GREAT # Sounds great!
+		ai_chance = {
+			factor = 5
+
+			modifier = {
+				factor = 0.1
+				NOT = {
+					treasury = 30
+				}
+			}
+			modifier = {
+				factor = 30
+				treasury = 30
+			}
+		}
+		set_character_flag = feast_musicians
+		treasury = -10
+	}
+	option = {
+		name = EVTOPTDRUCHIFEAST.3.b # No, this will just be a simple gathering!
+		ai_chance = {
+			factor = 5
+
+			modifier = {
+				factor = 30
+				NOT = {
+					treasury = 30
+				}
+			}
+			modifier = {
+				factor = 0.1
+				treasury = 30
+			}
+		}
+		prestige = -10
+	}
+}
+
+#Food Preparations
+character_event = {
+	id = druchifeast.4
+	desc = EVTDESCDRUCHIFEAST.4 # It's time to decide what you will serve your guests at the feast.
+	picture = "GFX_evt_hunt"
+
+	only_rulers = yes
+	capable_only = yes
+	prisoner = no
+
+
+	trigger = {
+		war = no
+		has_character_modifier = holding_large_druchi_feast
+		NOT = {
+			has_character_flag = lavishly_food
+		}
+		NOT = {
+			has_character_flag = medium_food
+		}
+		NOT = {
+			has_character_flag = low_food
+		}
+	}
+	
+	mean_time_to_happen = {
+	days = 7
+	}
+
+	option = {
+		name = EVTOPTDRUCHIFEAST.4.a # Human hearts, and only the finest wines! #Spend lavishly on food
+		trigger = { NOT = { trait = temperate } }
+		ai_chance = {
+
+			factor = 30
+
+			modifier = {
+				factor = 0.5
+				trait = greedy
+			}
+			modifier = {
+				factor = 3
+				trait = gluttonous
+			}
+			modifier = {
+				factor = 0.1
+				trait = temperate
+			}
+			modifier = {
+				factor = 2
+				primary_title = { higher_tier_than = DUKE }
+			}
+		}
+		set_character_flag = lavishly_food
+		treasury = -20
+		prestige = 10
+		hidden_tooltip = {
+			character_event = {
+				id = 72010
+				days = 2
+				random = 5
+			}
+		}
+	}
+	option = {
+		name = EVTOPTDRUCHIFEAST.4.b # Regular fare will suffice - venison, cheese, and wine. #Spend medium on food
+		ai_chance = {
+			factor = 30
+
+			modifier = {
+				factor = 0.5
+				NOT = { trait = greedy }
+			}
+			modifier = {
+				factor = 2
+				NOT = { trait = gluttonous }
+			}
+			modifier = {
+				factor = 2
+				primary_title = { tier = DUKE }
+			}
+		}
+		set_character_flag = medium_food
+		treasury = -10
+		hidden_tooltip = {
+			character_event = {
+				id = 72010
+				days = 2
+				random = 5
+			}
+		}
+
+	}
+	option = {
+		name = EVTOPTDRUCHIFEAST.4.c # Fish, bread, and ale will suffice! #Spend low on food
+		trigger = { NOT = { trait = gluttonous } }
+		ai_chance = {
+			factor = 30
+
+			modifier = {
+				factor = 2.5
+				trait = greedy
+			}
+			modifier = {
+				factor = 0.1
+				trait = gluttonous
+			}
+			modifier = {
+				factor = 2
+				primary_title = { tier = COUNT }
+			}
+		}
+		set_character_flag = low_food
+		treasury = -5
+		prestige = -5
+		hidden_tooltip = {
+			character_event = {
+				id = 72010
+				days = 2
+				random = 5
+			}
+		}
+
+	}
+}
+
+#Castle problems
+character_event = {
+	id = druchifeast.5
+	desc = "EVTDESC72004"
+	picture = GFX_evt_castle_construction
+
+	only_rulers = yes
+	capable_only = yes
+	prisoner = no
+
+	trigger = {
+		war = no
+		has_character_modifier = holding_large_druchi_feast
+		NOT = {
+			has_character_flag = castle_problems
+		}
+		NOT = {
+			has_character_flag = sent_invitations
+		}
+		any_courtier = {
+			has_job_title = job_treasurer
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 12
+	}
+
+	option = {
+		name = "EVTOPTA72004"
+		set_character_flag = castle_problems
+		scaled_wealth = -0.2
+	}
+}
+
+#Send Marshal to deal with Highway Robber Band
+character_event = {
+	id = druchifeast.6
+	desc = EVTDESCDRUCHIFEAST.6 # A band of outlaws is troubling your demesne, these should be cleared out so your highborn guests are assured safe travels to your feast.
+	picture = "GFX_evt_large_army"
+
+	only_rulers = yes
+	capable_only = yes
+	prisoner = no
+
+	trigger = {
+		war = no
+		has_character_modifier = holding_large_druchi_feast
+		NOT = {
+			has_character_flag = sent_invitations
+		}
+		any_courtier = {
+			has_job_title = job_marshal
+		}
+		location = {
+			has_province_modifier = highway_robber_band
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 1
+
+	}
+
+	option = {
+		name = "EVTOPTA72005"
+		job_marshal = {
+			random_list = {
+				5 = {
+					if ={
+	limit = {
+		trait = carstein_ring
+	}
+	character_event = {
+		id = carstein.13 days = 1
+	}
+	break = yes
+}
+
+
+		if = {
+ limit = {
+ trait = khemri_tomb_king }
+
+			character_event = {
+ id = snehekharan.1 days = 1 }
+	
+			break = yes 
+}
+		death = { death_reason = death_rabble }
+				}
+				50 = {
+					ROOT = {
+						location = {
+							remove_province_modifier = highway_robber_band
+						}
+					}
+				}
+				45 = {
+				}
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB72005"
+		prestige = -10
+	}
+}
+
+#Fire-eaters/SACRIFICIAL ELF SLAVES seek your patronage
+character_event = {
+	id = druchifeast.7
+	desc = EVTDESCDRUCHIFEAST.7 # A slave trader offers to sell you some prisoners from Ulthuan so that they can be sacrificed before the feast and grant Khaine's blessing to your endeavors.
+	picture = "GFX_evt_beheading"
+
+	only_rulers = yes
+	capable_only = yes
+	prisoner = no
+
+	trigger = {
+		war = no
+		has_character_modifier = holding_large_druchi_feast
+		NOT = {
+			has_character_flag = sent_invitations
+		}
+		NOT = {
+			has_character_flag = host_druchi_feast_started
+		}
+		NOT = {
+			has_character_flag = feast_fireeaters
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 1
+
+		modifier = {
+			factor = 6
+			primary_title = { tier = COUNT }
+		}
+		modifier = {
+			factor = 3
+			primary_title = { tier = DUKE }
+		}
+		modifier = {
+			factor = 3
+			has_character_flag = feast_minstrel
+		}
+		modifier = {
+			factor = 3
+			has_character_flag = feast_jongleur
+		}
+		modifier = {
+			factor = 3
+			has_character_flag = feast_musicians
+		}
+		modifier = {
+			factor = 3
+			has_character_flag = feast_conjurer
+		}
+		modifier = {
+			factor = 3
+			has_character_flag = feast_acrobats
+		}
+		modifier = {
+			factor = 3
+			has_character_flag = feast_dancers
+		}
+	}
+
+	option = {
+		name = SOUNDS_LIKE_A_GREAT_IDEA # Sounds like a great idea!
+		ai_chance = {
+			factor = 5
+
+			modifier = {
+				factor = 0.1
+				NOT = {
+					treasury = 30
+				}
+			}
+			modifier = {
+				factor = 20
+				treasury = 30
+			}
+		}
+		set_character_flag = feast_fireeaters
+		treasury = -10
+	}
+	option = {
+		name = NO_THE_COST
+		ai_chance = {
+			factor = 5
+
+			modifier = {
+				factor = 20
+				NOT = {
+					treasury = 30
+				}
+			}
+			modifier = {
+				factor = 0.1
+				treasury = 30
+			}
+		}
+		prestige = -10
+	}
+}
+
+#A Conjurer/HALFLING JUGGLERS seeks your patronage
+character_event = {
+	id = druchifeast.8
+	desc = EVTDESCDRUCHIFEAST.8 # A slave trader offers to send you a group of halfling jongleur slaves; it will be most amusing he assures you. They juggle while stones are thrown at them, and only the last halfling to remain juggling is spared from ritual execution.
+	picture = "GFX_evt_carriage"
+
+	only_rulers = yes
+	capable_only = yes
+	prisoner = no
+
+	trigger = {
+		war = no
+		has_character_modifier = holding_large_druchi_feast
+		NOT = {
+			has_character_flag = sent_invitations
+		}
+		NOT = {
+			has_character_flag = host_druchi_feast_started
+		}
+		NOT = {
+			has_character_flag = feast_conjurer
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 1
+
+		modifier = {
+			factor = 4
+			primary_title = { tier = COUNT }
+		}
+		modifier = {
+			factor = 3
+			primary_title = { tier = DUKE }
+		}
+		modifier = {
+			factor = 3
+			has_character_flag = feast_minstrel
+		}
+		modifier = {
+			factor = 3
+			has_character_flag = feast_jongleur
+		}
+		modifier = {
+			factor = 3
+			has_character_flag = feast_musicians
+		}
+		modifier = {
+			factor = 3
+			has_character_flag = feast_fireeaters
+		}
+		modifier = {
+			factor = 3
+			has_character_flag = feast_conjurer
+		}
+		modifier = {
+			factor = 3
+			has_character_flag = feast_acrobats
+		}
+	}
+
+	option = {
+		name = EVTOPTDRUCHIFEAST.8.a # Hah! I have to have this at my feast...
+		ai_chance = {
+			factor = 5
+
+			modifier = {
+				factor = 0.1
+				NOT = {
+					treasury = 30
+				}
+			}
+			modifier = {
+				factor = 20
+				treasury = 30
+			}
+		}
+		set_character_flag = feast_conjurer
+		treasury = -10
+	}
+	option = {
+		name = EVTOPTDRUCHIFEAST.8.b # Funny, but no - we'll have to make do without them.
+		ai_chance = {
+			factor = 5
+
+			modifier = {
+				factor = 20
+				NOT = {
+					treasury = 30
+				}
+			}
+			modifier = {
+				factor = 0.1
+				treasury = 30
+			}
+		}
+		prestige = -10
+	}
+}
+
+#Hunt for boars for winter feast
+character_event = {
+	id = druchifeast.9
+	desc = "EVTDESC72008"
+	picture = GFX_evt_hunt
+
+	prisoner = no
+	capable_only = yes
+
+	trigger = {
+		war = no
+		has_character_modifier = holding_large_druchi_feast
+		NOT = {
+			has_character_flag = sent_invitations
+		}
+		NOT = {
+			has_character_flag = feast_boar_hunt
+		}
+		NOT = {
+			has_character_flag = host_druchi_feast_started
+		}
+		any_courtier = {
+			has_job_title = job_marshal
+		}
+	}
+
+	immediate = {
+		set_character_flag = feast_boar_hunt
+	}
+
+	mean_time_to_happen = {
+		days = 80
+		modifier = {
+			factor = 0.5
+			trait = hunter
+		}
+	}
+
+	option = {
+		name = "EVTOPTA72008"
+		job_marshal = {
+			prestige = 10
+			opinion = {
+				modifier = opinion_flattered
+				who = ROOT
+				years = 10
+			}
+			random_list = {
+				80 = { }
+				10 = { change_martial = 1 }
+				7 = {
+					add_trait = wounded
+					hidden_tooltip = { character_event = { id = 38280 } }
+				}
+				2 = {
+					add_trait = maimed
+					hidden_tooltip = { character_event = { id = 38281 } }
+				}
+				1 = {
+					if ={
+	limit = {
+		trait = carstein_ring
+	}
+	character_event = {
+		id = carstein.13 days = 1
+	}
+	break = yes
+}
+			
+		if = {
+ limit = {
+ trait = khemri_tomb_king }
+
+			character_event = {
+ id = snehekharan.1 days = 1 }
+	
+			break = yes 
+}
+			
+death = { death_reason = death_accident }
+				}
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB72008"
+		trigger = {
+			any_child = {
+				age = 14
+				is_female = no
+				is_abroad = no
+				prisoner = no
+				liege = { character = ROOT }
+				NOT = { health_traits = 1 }
+				is_alive = yes
+			}
+		}
+		random_child = {
+			limit = {
+				age = 14
+				is_female = no
+				is_abroad = no
+				prisoner = no
+				liege = { character = ROOT }
+				NOT = { health_traits = 1 }
+				is_alive = yes
+			}
+			prestige = 10
+			opinion = {
+				modifier = opinion_flattered
+				who = ROOT
+				years = 10
+			}
+			random_list = {
+				80 = { }
+				10 = { change_martial = 1 }
+				7 = {
+					add_trait = wounded
+					hidden_tooltip = { character_event = { id = 38280 } }
+				}
+				2 = {
+					add_trait = maimed
+					hidden_tooltip = { character_event = { id = 38281 } }
+				}
+				1 = {
+					if ={
+	limit = {
+		trait = carstein_ring
+	}
+	character_event = {
+		id = carstein.13 days = 1
+	}
+	break = yes
+}
+
+	
+		if = {
+ limit = {
+ trait = khemri_tomb_king }
+
+			character_event = {
+ id = snehekharan.1 days = 1 }
+	
+			break = yes 
+}
+					death = { death_reason = death_accident }
+				}
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTC72008"
+		trigger = {
+			age = 14
+			is_female = no
+			NOT = { health_traits = 1 }
+			NOT = { trait = craven }
+		}
+		prestige = 10
+		random_list = {
+			80 = { }
+			10 = { change_martial = 1 }
+			7 = {
+				add_trait = wounded
+				hidden_tooltip = { character_event = { id = 38280 } }
+			}
+			2 = {
+				add_trait = maimed
+				hidden_tooltip = { character_event = { id = 38281 } }
+			}
+			1 = {
+				if ={
+	limit = {
+		trait = carstein_ring
+	}
+	character_event = {
+		id = carstein.13 days = 1
+	}
+	break = yes
+}
+		
+		if = {
+ limit = {
+ trait = khemri_tomb_king }
+
+			character_event = {
+ id = snehekharan.1 days = 1 }
+	
+			break = yes 
+}
+			
+death = { death_reason = death_accident }
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTD72008"
+	}
+}
+
+#Acrobats/Dancers seek your patronage
+character_event = {
+	id = druchifeast.12
+	desc = EVTDESCDRUCHIFEAST.12 # A group of sword dancers arrive, asking for your patronage. They will entertain your guests with their dazzling displays of skill and will fight in a mock battle for your aumusement.
+	picture = "GFX_evt_carriage"
+
+	only_rulers = yes
+	capable_only = yes
+	prisoner = no
+
+	trigger = {
+		war = no
+		has_character_modifier = holding_large_druchi_feast
+		NOT = {
+			has_character_flag = sent_invitations
+		}
+		NOT = {
+			has_character_flag = host_druchi_feast_started
+		}
+		NOT = {
+			has_character_flag = feast_acrobats
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 1
+
+		modifier = {
+			factor = 4
+			primary_title = { tier = COUNT }
+		}
+		modifier = {
+			factor = 3
+			primary_title = { tier = DUKE }
+		}
+		modifier = {
+			factor = 3
+			has_character_flag = feast_minstrel
+		}
+		modifier = {
+			factor = 3
+			has_character_flag = feast_jongleur
+		}
+		modifier = {
+			factor = 3
+			has_character_flag = feast_musicians
+		}
+		modifier = {
+			factor = 3
+			has_character_flag = feast_fireeaters
+		}
+		modifier = {
+			factor = 3
+			has_character_flag = feast_conjurer
+		}
+		modifier = {
+			factor = 3
+			has_character_flag = feast_acrobats
+		}
+	}
+
+	option = {
+		name = HIRE_THEM # Hire them!
+		ai_chance = {
+			factor = 5
+
+			modifier = {
+				factor = 0.1
+				NOT = {
+					treasury = 30
+				}
+			}
+			modifier = {
+				factor = 20
+				treasury = 30
+			}
+		}
+		set_character_flag = feast_acrobats
+		treasury = -10
+	}
+	option = {
+		name = EVTOPTDRUCHIFEAST.12.b # No, that's not bloody enough for me.
+		ai_chance = {
+			factor = 5
+
+			modifier = {
+				factor = 20
+				NOT = {
+					treasury = 30
+				}
+			}
+			modifier = {
+				factor = 0.1
+				treasury = 30
+			}
+		}
+		prestige = -10
+	}
+}
+
+###################################
+#Invitations to Feast
+###################################
+
+#Send invites
+character_event = {
+	id = druchifeast.13
+	desc = EVTDESCDRUCHIFEAST.13 # It is time to send out the invitations to your vassals for the feast.
+	picture = "GFX_evt_large_army"
+
+
+	only_rulers = yes
+	capable_only = yes
+	prisoner = no
+
+	trigger = {
+		war = no
+		has_character_modifier = holding_large_druchi_feast
+		OR = {
+			has_character_flag = lavishly_food
+			has_character_flag = medium_food
+			has_character_flag = low_food
+		}
+		NOT = {
+			has_character_flag = sent_invitations
+		}
+	}
+	
+	mean_time_to_happen = {
+	days = 60
+	}
+	
+	option = {
+		name = EVTOPTDRUCHIFEAST.13.a # Send swift riders immediately.
+		set_character_flag = sent_invitations
+		any_vassal = {
+			limit = {
+				prisoner = no
+				NOT = { trait = incapable }
+				NOT = { has_character_modifier = holding_large_druchi_feast }
+				war = no
+				is_adult = yes
+			}
+			letter_event = {
+				id = druchifeast.14
+				days = 1
+				random = 2
+				tooltip = "EVTTOOLTIP72011"
+			}
+		}
+	}
+}
+
+#Vassal is invited to the feast
+letter_event = {
+	id = druchifeast.14
+	desc = EVTDESCDRUCHIFEAST.14 # Your liege invites you to a great feast. Will you attend?
+	picture = "GFX_evt_large_army"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA72011" #Travel to the feast
+		ai_chance = {
+			factor = 1
+			modifier  = {
+				factor = 0.1
+				ai = yes
+				trait = in_hiding
+			}
+			modifier = {
+				factor = 2
+				opinion = { who = from value = -40 }
+			}
+			modifier  = {
+				factor = 2
+				opinion = { who = from value = -20 }
+			}
+		}
+		set_character_flag = coming_to_feast
+		if = {
+			limit = { trait = in_hiding	}
+			remove_trait = in_hiding
+			clr_character_flag = do_not_disturb
+			add_character_modifier = {
+				name = went_out_of_hiding_timer
+				duration = 180
+				hidden = yes
+			}
+			hidden_tooltip = { character_event = { id = CM.6400 } } # Notify plotters and family
+		}
+	}
+	option = {
+		name = "EVTOPTB72011" #Refuse
+		ai_chance = {
+			factor = 1
+			modifier  = {
+				factor = 0
+				opinion = { who = from value = 0 }
+				NOT = { trait = in_hiding }
+			}
+			modifier  = {
+				factor = 2
+				NOT = { opinion = { who = from value = -60 } }
+			}
+			modifier  = {
+				factor = 2
+				NOT = { opinion = { who = from value = -80 } }
+			}
+		}
+		FROM = {
+			letter_event = {
+				id = druchifeast.15
+				days = 1
+				random = 2
+				tooltip = "EVTTOOLTIPdruchifeast.15"
+			}
+		}
+	}
+}
+
+#Vassal refused to come to the feast
+letter_event = {
+	id = druchifeast.15
+	desc = EVTDESCDRUCHIFEAST.15 # Dread Liege, unfortunately I am not able to come to your feast. Matters of greater importance require that I stay home and attend to these affairs.
+	picture = "GFX_evt_large_army"
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTDRUCHIFEAST.15.a # Insolent cur! It was not a request...
+		opinion = {
+			modifier = opinion_dislike
+			who = FROM
+			years = 10
+		}
+	}
+}
+
+###################################
+#Events during feast
+###################################
+
+#The guests have arrived
+character_event = {
+	id = druchifeast.16
+	desc = EVTDESCDRUCHIFEAST.16 # Your guests finally arrive with their heavily armed retinues, and they renew their vows of fealty and obedience as they kneel before your throne. Now for the entertainment!
+	picture = "GFX_evt_large_army"
+
+	only_rulers = yes
+	capable_only = yes
+	prisoner = no
+
+	trigger = {
+		war = no
+		has_character_modifier = holding_large_druchi_feast
+		has_character_flag = sent_invitations
+		NOT = {
+			has_character_flag = host_druchi_feast_started
+		}
+		any_vassal = {
+			NOT = {
+				has_character_flag = guest_druchi_feast_started
+			}
+			had_character_flag = {
+				flag = coming_to_feast
+				days = 5
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+
+	option = {
+		name = LET_THE_FESTIVITIES_BEGIN # Let the festivities begin!
+		set_character_flag = host_druchi_feast_started
+		any_vassal = {
+			limit = {
+				has_character_flag =  coming_to_feast
+			}
+			character_event = {
+				id = druchifeast.17
+			}
+		}
+	}
+}
+
+#Welcome to the feast!
+character_event = {
+	id = druchifeast.17
+	desc = EVTDESCDRUCHIFEAST.17 # Your liege welcomes you, and you renew your vows of fealty and obedience before the dread throne. Hopefully the entertainment and food will be good this year, and you will have your fill of both wine and blood!
+	picture = "GFX_evt_large_army"
+
+	is_triggered_only = yes
+
+	option = {
+		name = I_WONDER_WHO_WILL_DIE_FIRST # I wonder who will die first?
+		set_character_flag = guest_druchi_feast_started
+	}
+}
+
+#Lavish Food
+character_event = {
+	id = druchifeast.18
+	desc = EVTDESCDRUCHIFEAST.18 # The food is spectacular; slow roasted human hearts, exquisite wine from Tilean orchards, and a lavish display of all other food types plundered from around the known world. Delicious!
+	picture = "GFX_evt_large_army"
+
+	only_rulers = yes
+	capable_only = yes
+	prisoner = no
+
+	trigger = {
+		war = no
+		has_character_flag = guest_druchi_feast_started
+		any_liege = {
+			NOT = {
+				had_character_flag = {
+					flag = host_druchi_feast_started
+					days = 30
+				}
+			}
+			NOT = {
+				has_character_modifier = complain_food_timer
+			}
+			NOT = {
+				has_character_modifier = compliment_food_timer
+			}
+			has_character_flag = host_druchi_feast_started
+			has_character_modifier = holding_large_druchi_feast
+			has_character_flag = lavishly_food
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 180
+
+		modifier = {
+			factor = 0.5
+			liege = { trait = gluttonous }
+		}
+		modifier = {
+			factor = 2
+			liege = { num_of_vassals = 10 }
+		}
+		modifier = {
+			factor = 2
+			liege = { num_of_vassals = 20 }
+		}
+		modifier = {
+			factor = 2
+			liege = { num_of_vassals = 30 }
+		}
+		modifier = {
+			factor = 2
+			liege = { num_of_vassals = 40 }
+		}
+		modifier = {
+			factor = 2
+			liege = { num_of_vassals = 50 }
+		}
+		modifier = {
+			factor = 2
+			liege = { num_of_vassals = 60 }
+		}
+		modifier = {
+			factor = 2
+			liege = { num_of_vassals = 70 }
+		}
+		modifier = {
+			factor = 2
+			liege = { num_of_vassals = 80 }
+		}
+		modifier = {
+			factor = 2
+			liege = { num_of_vassals = 90 }
+		}
+		modifier = {
+			factor = 2
+			liege = { num_of_vassals = 100 }
+		}
+	}
+
+	option = {
+		name = I_SALUTE_YOU_DREAD_LIEGE # I salute you, dread liege! #Approve publicly
+		trigger = {
+			NOT = { trait = temperate }
+		}
+		ai_chance = {
+			factor = 40
+
+			modifier = {
+				factor = 5
+				trait = gluttonous
+			}
+		}
+		any_liege = {
+			limit = {
+				has_character_flag = host_druchi_feast_started
+				has_character_modifier = holding_large_druchi_feast
+				has_character_flag = lavishly_food
+			}
+			hidden_tooltip = {
+				add_character_modifier = {
+					name = compliment_food_timer
+					duration = 14
+					hidden = yes
+				}
+			}
+			character_event = {
+				id = druchifeast.19
+			}
+		}
+	}
+	option = {
+		name = EVTOPTDRUCHIFEAST.18.b # Actually, this wine is one degree too warm! #Disapprove
+		trigger = {
+			NOT = { trait = gluttonous }
+		}
+		ai_chance = {
+			factor = 20
+
+			modifier = {
+				factor = 5
+				trait = temperate
+			}
+		}
+		any_liege = {
+			limit = {
+				has_character_flag = host_druchi_feast_started
+				has_character_modifier = holding_large_druchi_feast
+				has_character_flag = lavishly_food
+			}
+			hidden_tooltip = {
+				add_character_modifier = {
+					name = complain_food_timer
+					duration = 14
+					hidden = yes
+				}
+			}
+			character_event = {
+				id = druchifeast.20
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTC72020"
+		prestige = -10
+	}
+}
+
+#Medium Food
+character_event = {
+	id = druchifeast.21
+	desc = EVTDESCDRUCHIFEAST.21 # The food is alright, and there is plenty of it and more than enough wine. While not the best feast table ever, there is not much to complain about.
+	picture = "GFX_evt_large_army"
+
+	only_rulers = yes
+	capable_only = yes
+	prisoner = no
+
+	trigger = {
+		war = no
+		has_character_flag = guest_druchi_feast_started
+		any_liege = {
+			NOT = {
+				had_character_flag = {
+					flag = host_druchi_feast_started
+					days = 30
+				}
+			}
+			NOT = {
+				has_character_modifier = complain_food_timer
+			}
+			NOT = {
+				has_character_modifier = compliment_food_timer
+			}
+			has_character_flag = host_druchi_feast_started
+			has_character_modifier = holding_large_druchi_feast
+			has_character_flag = medium_food
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 180
+
+		modifier = {
+			factor = 2
+			liege = { num_of_vassals = 10 }
+		}
+		modifier = {
+			factor = 2
+			liege = { num_of_vassals = 20 }
+		}
+		modifier = {
+			factor = 2
+			liege = { num_of_vassals = 30 }
+		}
+		modifier = {
+			factor = 2
+			liege = { num_of_vassals = 40 }
+		}
+		modifier = {
+			factor = 2
+			liege = { num_of_vassals = 50 }
+		}
+		modifier = {
+			factor = 2
+			liege = { num_of_vassals = 60 }
+		}
+		modifier = {
+			factor = 2
+			liege = { num_of_vassals = 70 }
+		}
+		modifier = {
+			factor = 2
+			liege = { num_of_vassals = 80 }
+		}
+		modifier = {
+			factor = 2
+			liege = { num_of_vassals = 90 }
+		}
+		modifier = {
+			factor = 2
+			liege = { num_of_vassals = 100 }
+		}
+	}
+
+	option = {
+		name = EVTOPTDRUCHIFEAST.21.a # You have set a fine table, dread liege! #Approve publicly
+		any_liege = {
+			limit = {
+				has_character_flag = host_druchi_feast_started
+				has_character_modifier = holding_large_druchi_feast
+				has_character_flag = medium_food
+			}
+			hidden_tooltip = {
+				add_character_modifier = {
+					name = compliment_food_timer
+					duration = 14
+					hidden = yes
+				}
+			}
+			character_event = {
+				id = druchifeast.19
+			}
+		}
+	}
+	option = {
+		name = EVTOPTDRUCHIFEAST.21.b # I eat better at home than this! #Disapprove
+		any_liege = {
+			limit = {
+				has_character_flag = host_druchi_feast_started
+				has_character_modifier = holding_large_druchi_feast
+				has_character_flag = medium_food
+			}
+
+			hidden_tooltip = {
+				add_character_modifier = {
+					name = complain_food_timer
+					duration = 14
+					hidden = yes
+				}
+			}
+			character_event = {
+				id = druchifeast.20
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTC72021"
+		prestige = -10
+	}
+}
+
+#Low Food
+character_event = {
+	id = druchifeast.22
+	desc = EVTDESCDRUCHIFEAST.22 # The food is - to put it mildly - not that impressive. Fish, bread, ale, cheap wine... but perhaps it's best not to comment on it.
+	picture = "GFX_evt_large_army"
+
+	only_rulers = yes
+	capable_only = yes
+	prisoner = no
+
+	trigger = {
+		war = no
+		has_character_flag = guest_druchi_feast_started
+		any_liege = {
+			NOT = {
+				had_character_flag = {
+					flag = host_druchi_feast_started
+					days = 30
+				}
+			}
+			NOT = {
+				has_character_modifier = complain_food_timer
+			}
+			NOT = {
+				has_character_modifier = compliment_food_timer
+			}
+			has_character_flag = host_druchi_feast_started
+			has_character_modifier = holding_large_druchi_feast
+			has_character_flag = low_food
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 180
+
+		modifier = {
+			factor = 0.5
+			liege = { trait = temperate }
+		}
+		modifier = {
+			factor = 2
+			liege = { num_of_vassals = 10 }
+		}
+		modifier = {
+			factor = 2
+			liege = { num_of_vassals = 20 }
+		}
+		modifier = {
+			factor = 2
+			liege = { num_of_vassals = 30 }
+		}
+		modifier = {
+			factor = 2
+			liege = { num_of_vassals = 40 }
+		}
+		modifier = {
+			factor = 2
+			liege = { num_of_vassals = 50 }
+		}
+		modifier = {
+			factor = 2
+			liege = { num_of_vassals = 60 }
+		}
+		modifier = {
+			factor = 2
+			liege = { num_of_vassals = 70 }
+		}
+		modifier = {
+			factor = 2
+			liege = { num_of_vassals = 80 }
+		}
+		modifier = {
+			factor = 2
+			liege = { num_of_vassals = 90 }
+		}
+		modifier = {
+			factor = 2
+			liege = { num_of_vassals = 100 }
+		}
+	}
+
+	option = {
+		name = EVTOPTDRUCHIFEAST.22.a # *lie* Thank you for this feast, dread liege! #Approve publicly
+		trigger = {
+			NOT = { trait = gluttonous }
+		}
+		ai_chance = {
+			factor = 20
+
+			modifier = {
+				factor = 5
+				trait = temperate
+			}
+		}
+		any_liege = {
+			limit = {
+				has_character_flag = host_druchi_feast_started
+				has_character_modifier = holding_large_druchi_feast
+				has_character_flag = low_food
+			}
+			hidden_tooltip = {
+				add_character_modifier = {
+					name = compliment_food_timer
+					duration = 14
+					hidden = yes
+				}
+			}
+			character_event = {
+				id = druchifeast.19
+			}
+		}
+	}
+	option = {
+		name = EVTOPTDRUCHIFEAST.22.b # Damnit, I can't eat this slave food! #Disapprove
+		trigger = {
+			NOT = { trait = temperate }
+		}
+		ai_chance = {
+			factor = 40
+
+			modifier = {
+				factor = 5
+				trait = gluttonous
+			}
+		}
+		any_liege = {
+			limit = {
+				has_character_flag = host_druchi_feast_started
+				has_character_modifier = holding_large_druchi_feast
+				has_character_flag = low_food
+			}
+			hidden_tooltip = {
+				add_character_modifier = {
+					name = complain_food_timer
+					duration = 14
+					hidden = yes
+				}
+			}
+			character_event = {
+				id = druchifeast.20
+			}
+		}
+	}
+	option = {
+		name = I_DARE_NOT_SPEAK_OUT
+		prestige = -10
+	}
+}
+
+#Liege is glad you liked the food at the feast
+character_event = {
+	id = druchifeast.19
+	desc = EVTDESCDRUCHIFEAST.19 # One of your vassals loudly praises the bounty of your table and the fineness of your drinks.
+	picture = "GFX_evt_large_army"
+
+	is_triggered_only = yes
+
+	option = {
+		name = WELL_SAID # Well said!
+		opinion = {
+			modifier = opinion_happy
+			who = FROM
+			years = 10
+		}
+		reverse_opinion = {
+			modifier = opinion_approves
+			who = FROM
+			years = 10
+		}
+	}
+}
+
+#Liege dislikes you complaining about the food at the feast
+character_event = {
+	id = druchifeast.20
+	desc = EVTDESCDRUCHIFEAST.20 # You overhear one of your vassals complaining about the food to those around him. Why, the gall, the insolence!
+	picture = "GFX_evt_large_army"
+
+	is_triggered_only = yes
+
+	option = {
+		name = THAT_WAS_ILL_SAID # That was ill said...
+		opinion = {
+			modifier = opinion_irritated
+			who = FROM
+			years = 10
+		}
+		reverse_opinion = {
+			modifier = opinion_disapprove
+			who = FROM
+			years = 10
+		}
+	}
+}
+
+#Late night talk: First person
+character_event = {
+	id = druchifeast.23
+	desc = EVTDESCDRUCHIFEAST.23 # Late at night, you speak to one of your guests and find that this is an amazing individual. You talk late into the night, plotting together and coming up with ways to achieve both your goals...
+	picture = "GFX_evt_large_army"
+
+	capable_only = yes
+	prisoner = no
+
+	trigger = {
+		is_adult = yes
+		war = no
+		NOT = { num_of_friends = 3 }
+		has_character_flag = guest_druchi_feast_started
+		any_realm_character = {
+			same_liege = ROOT
+			liege = {
+				NOT = {
+					had_character_flag = {
+						flag = host_druchi_feast_started
+						days = 30
+					}
+				}
+				has_character_flag = host_druchi_feast_started
+				has_character_modifier = holding_large_druchi_feast
+			}
+			is_adult = yes
+			NOT = { num_of_friends = 3 }
+			has_character_flag = guest_druchi_feast_started
+			NOT = {
+				character = ROOT
+				any_claim = {
+					holder_scope = {
+						character = ROOT
+					}
+				}
+				ROOT = {
+					any_claim = {
+						holder_scope = {
+							character = PREVPREV
+						}
+					}
+				}
+			}
+			NOT = {
+				has_opinion_modifier = {
+					who = ROOT
+					modifier = opinion_friend
+				}
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 200
+
+		modifier = {
+			factor = 0.5
+			trait = gregarious
+		}
+		modifier = {
+			factor = 0.5
+			trait = trusting
+		}
+		modifier = {
+			factor = 2
+			trait = shy
+		}
+		modifier = {
+			factor = 2
+			trait = paranoid
+		}
+	}
+
+	option = {
+		name = EVTOPTDRUCHIFEAST.23.a # I have made a new ally tonight!
+		random_realm_character = {
+			limit = {
+				same_liege = ROOT
+				liege = {
+					has_character_flag = host_druchi_feast_started
+					has_character_modifier = holding_large_druchi_feast
+				}
+				is_adult = yes
+				NOT = { num_of_friends = 3 }
+				has_character_flag = guest_druchi_feast_started
+				NOT = {
+					character = ROOT
+					any_claim = {
+						holder_scope = {
+							character = ROOT
+						}
+					}
+					ROOT = {
+						any_claim = {
+							holder_scope = {
+								character = PREVPREV
+							}
+						}
+					}
+				}
+				NOT = {
+					has_opinion_modifier = {
+						who = ROOT
+						modifier = opinion_friend
+					}
+				}
+			}
+			opinion = {
+				modifier = opinion_friend
+				who = ROOT
+				years = 100
+			}
+			character_event = {
+				id = druchifeast.24
+			}
+		}
+	}
+}
+
+#Late night talk: Second person
+character_event = {
+	id = druchifeast.24
+	desc = EVTDESCDRUCHIFEAST.24 # You end up spending half the night talking to this person, and find that you have much in common and can help each other in achieving common goals.
+	picture = "GFX_evt_large_army"
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTDRUCHIFEAST.23.a # I have made a new ally tonight!
+		FROM = {
+			opinion = {
+				modifier = opinion_friend
+				who = ROOT
+				years = 100
+			}
+		}
+	}
+}
+
+
+#Duel: Start
+character_event = {
+	id = druchifeast.25
+	desc = "EVTDESC72030"
+	picture = GFX_evt_melee
+
+	only_men = yes
+	capable_only = yes
+	prisoner = no
+
+	trigger = {
+		is_adult = yes
+		war = no
+		has_character_flag = guest_druchi_feast_started
+		NOT = {
+			trait = wounded
+		}
+		NOT = {
+			trait = maimed
+		}
+		martial = 9
+		OR = {
+			trait = duelist
+			trait = brave
+			trait = wroth
+			trait = cruel
+		}
+		NOT = {
+			trait = craven
+		}
+		any_liege = {
+			NOT = {
+				had_character_flag = {
+					flag = host_druchi_feast_started
+					days = 30
+				}
+			}
+			war = no
+			has_character_modifier = holding_large_druchi_feast
+			has_character_flag = host_druchi_feast_started
+			NOT = {
+				has_character_flag = druchi_feast_duel
+			}
+			any_vassal = {
+				is_adult = yes
+				is_female = no
+				has_character_flag = guest_druchi_feast_started
+				NOT = {
+					character = ROOT
+				}
+				NOT = {
+					reverse_opinion = { who = ROOT value = -50 }
+				}
+				NOT = {
+					opinion = { who = ROOT value = -50 }
+				}
+				NOT = {
+					trait = wounded
+				}
+				NOT = {
+					trait = maimed
+				}
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 200
+
+		modifier = {
+			factor = 0.5
+			trait = brave
+		}
+
+		modifier = {
+			factor = 2
+			liege = { num_of_vassals = 10 }
+		}
+		modifier = {
+			factor = 2
+			liege = { num_of_vassals = 20 }
+		}
+		modifier = {
+			factor = 2
+			liege = { num_of_vassals = 30 }
+		}
+		modifier = {
+			factor = 2
+			liege = { num_of_vassals = 40 }
+		}
+		modifier = {
+			factor = 2
+			liege = { num_of_vassals = 50 }
+		}
+		modifier = {
+			factor = 2
+			liege = { num_of_vassals = 60 }
+		}
+		modifier = {
+			factor = 2
+			liege = { num_of_vassals = 70 }
+		}
+		modifier = {
+			factor = 2
+			liege = { num_of_vassals = 80 }
+		}
+		modifier = {
+			factor = 2
+			liege = { num_of_vassals = 90 }
+		}
+		modifier = {
+			factor = 2
+			liege = { num_of_vassals = 100 }
+		}
+	}
+
+	option = {
+		name = "EVTOPTA72030"
+		any_liege = {
+			limit = {
+				has_character_flag = host_druchi_feast_started
+				has_character_modifier = holding_large_druchi_feast
+			}
+			set_character_flag = druchi_feast_duel
+			random_vassal = {
+				limit = {
+					is_adult = yes
+					is_female = no
+					has_character_flag = guest_druchi_feast_started
+					NOT = {
+						character = ROOT
+					}
+					NOT = {
+						reverse_opinion = { who = ROOT value = -50 }
+					}
+					NOT = {
+						opinion = { who = ROOT value = -50 }
+					}
+					NOT = {
+						trait = wounded
+					}
+					NOT = {
+						trait = maimed
+					}
+				}
+				character_event = {
+					id = druchifeast.26
+					tooltip = "EVTTOOLTIP72031"
+				}
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB72030" #Decline
+		prestige = -10
+	}
+}
+
+#Duel: Accept or Decline
+character_event = {
+	id = druchifeast.26
+	desc = "EVTDESC72031"
+	picture = GFX_evt_melee
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA72031" #Accept
+		random_list = {
+			35 = {
+				add_trait = wounded
+				hidden_tooltip = {
+					FROM = {
+						set_character_flag = wounded_opponent
+						character_event = {
+							id = druchifeast.28
+						}
+					}
+				}
+			}
+			35 = {
+				add_trait = maimed
+				hidden_tooltip = {
+					FROM = {
+						set_character_flag = maimed_opponent
+						character_event = {
+							id = druchifeast.28
+						}
+					}
+				}
+			}
+			10 = {
+				if ={
+	limit = {
+		trait = carstein_ring
+	}
+	character_event = {
+		id = carstein.13 days = 1
+	}
+	break = yes
+}
+			
+		if = {
+ limit = {
+ trait = khemri_tomb_king }
+
+			character_event = {
+ id = snehekharan.1 days = 1 }
+	
+			break = yes 
+}
+				
+death = { death_reason = death_duel }
+				hidden_tooltip = {
+					FROM = {
+						set_character_flag = killed_opponent
+						character_event = {
+							id = druchifeast.29
+						}
+					}
+				}
+			}
+			20 = {
+				any_liege = {
+					limit = {
+						has_character_flag = host_druchi_feast_started
+						has_character_modifier = holding_large_druchi_feast
+					}
+					character_event = {
+						id = druchifeast.30
+						tooltip = "EVTTOOLTIP72034"
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB72031" #Decline
+		prestige = -10
+	}
+}
+
+#Duel: Opponent is killed/maimed/wounded/nothing
+character_event = {
+	id = druchifeast.28
+	desc = "EVTDESC72032"
+	picture = GFX_evt_melee
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA72032"
+		trigger = {
+			has_character_flag = wounded_opponent
+		}
+		random_list = {
+			10 = {
+				if ={
+	limit = {
+		trait = carstein_ring
+	}
+	character_event = {
+		id = carstein.13 days = 1
+	}
+	break = yes
+}
+
+		
+		if = {
+ limit = {
+ trait = khemri_tomb_king }
+
+			character_event = {
+ id = snehekharan.1 days = 1 }
+	
+			break = yes 
+}
+			death = { death_reason = death_duel }
+				hidden_tooltip = {
+					FROM = {
+						set_character_flag = killed_opponent
+						character_event = {
+							id = druchifeast.29
+							tooltip = "EVTTOOLTIP72033"
+						}
+					}
+				}
+			}
+			20 = {
+				add_trait = maimed
+				hidden_tooltip = {
+					FROM = {
+						set_character_flag = maimed_opponent
+						character_event = {
+							id = druchifeast.29
+							tooltip = "EVTTOOLTIP72033"
+						}
+					}
+				}
+			}
+			30 = {
+				add_trait = wounded
+				hidden_tooltip = {
+					FROM = {
+						set_character_flag = wounded_opponent
+						character_event = {
+							id = druchifeast.29
+							tooltip = "EVTTOOLTIP72033"
+						}
+					}
+				}
+			}
+			40 = {
+				any_liege = {
+					limit = {
+						has_character_flag = host_druchi_feast_started
+						has_character_modifier = holding_large_druchi_feast
+					}
+					character_event = {
+						id = druchifeast.30
+						tooltip = "EVTTOOLTIP72034"
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "EVTOPTB72032"
+		trigger = {
+			has_character_flag = maimed_opponent
+		}
+		random_list = {
+			1 = {
+				if ={
+	limit = {
+		trait = carstein_ring
+	}
+	character_event = {
+		id = carstein.13 days = 1
+	}
+	break = yes
+}
+	
+		if = {
+ limit = {
+ trait = khemri_tomb_king }
+
+			character_event = {
+ id = snehekharan.1 days = 1 }
+	
+			break = yes 
+}
+			
+death = { death_reason = death_duel }
+				FROM = {
+					set_character_flag = killed_opponent
+					character_event = {
+						id = druchifeast.29
+						tooltip = "EVTTOOLTIP72033"
+					}
+				}
+			}
+			10 = {
+				add_trait = maimed
+				FROM = {
+					set_character_flag = maimed_opponent
+					character_event = {
+						id = druchifeast.29
+						tooltip = "EVTTOOLTIP72033"
+					}
+				}
+			}
+			19 = {
+				add_trait = wounded
+				FROM = {
+					set_character_flag = wounded_opponent
+					character_event = {
+						id = druchifeast.29
+						tooltip = "EVTTOOLTIP72033"
+					}
+				}
+			}
+			70 = {
+				any_liege = {
+					limit = {
+						has_character_flag = host_druchi_feast_started
+						has_character_modifier = holding_large_druchi_feast
+					}
+					character_event = {
+						id = druchifeast.30
+						tooltip = "EVTTOOLTIP72034"
+					}
+				}
+			}
+		}
+	}
+}
+
+#Duel
+character_event = {
+	id = druchifeast.29
+	desc = "EVTDESC72033"
+	picture = GFX_evt_melee
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA72033"
+		trigger = {
+			has_character_flag = wounded_opponent
+		}
+		FROM = {
+			clr_character_flag = wounded_opponent
+			clr_character_flag = maimed_opponent
+		}
+		any_liege = {
+			limit = {
+				has_character_flag = host_druchi_feast_started
+				has_character_modifier = holding_large_druchi_feast
+			}
+			character_event = {
+				id = 72036
+				tooltip = "EVTTOOLTIP72036"
+			}
+		}
+		clr_character_flag = wounded_opponent
+		change_martial = 1
+	}
+
+	option = {
+		name = "EVTOPTB72033"
+		trigger = {
+			has_character_flag = maimed_opponent
+		}
+		FROM = {
+			clr_character_flag = wounded_opponent
+			clr_character_flag = maimed_opponent
+		}
+		any_liege = {
+			limit = {
+				has_character_flag = host_druchi_feast_started
+				has_character_modifier = holding_large_druchi_feast
+			}
+			character_event = {
+				id = 72037
+				tooltip = "EVTTOOLTIP72037"
+			}
+		}
+		clr_character_flag = maimed_opponent
+		change_martial = 2
+	}
+
+	option = {
+		name = "EVTOPTC72033"
+		trigger = {
+			has_character_flag = killed_opponent
+		}
+		clr_character_flag = killed_opponent
+		change_martial = 3
+		any_liege = {
+			limit = {
+				has_character_flag = host_druchi_feast_started
+				has_character_modifier = holding_large_druchi_feast
+			}
+			character_event = {
+				id = 72035
+				tooltip = "EVTTOOLTIP72035"
+			}
+		}
+	}
+}
+
+#Duel: The End
+character_event = {
+	id = druchifeast.30
+	desc = "EVTDESC72034"
+	picture = GFX_evt_melee
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA72034"
+		opinion = {
+			modifier = opinion_dislike
+			who = FROM
+			years = 10
+		}
+		FROM = {
+			FROM = {
+				reverse_opinion = {
+					modifier = opinion_dislike
+					who = Root
+					years = 10
+				}
+			}
+		}
+	}
+}
+
+##deleted remaining duel events, as they can be used from vanilla duel feast file##
+
+#Friendly with another guest's spouse
+character_event = {
+	id = druchifeast.50
+	desc = "EVTDESC72040"
+	picture = "GFX_evt_large_army"
+
+	max_age = 60
+	prisoner = no
+	only_rulers = yes
+	capable_only = yes
+
+	trigger = {
+		is_adult = yes
+		war = no
+		has_character_flag = guest_druchi_feast_started
+		is_married = yes
+		fertility = 0.4
+		any_realm_character = {
+			same_liege = ROOT
+			liege = {
+				NOT = {
+					had_character_flag = {
+						flag = host_druchi_feast_started
+						days = 30
+					}
+				}
+				war = no
+				has_character_flag = host_druchi_feast_started
+				has_character_modifier = holding_large_druchi_feast
+			}
+			NOT = { character = ROOT }
+			has_character_flag = guest_druchi_feast_started
+			spouse = {
+				prisoner = no
+				is_adult = yes
+				is_pregnant = no
+				is_alive = yes
+				is_abroad = no
+				NOT = {
+					trait = celibate
+				}
+				NOT = { trait = eunuch }
+				NOT = {
+					age = 30
+				}
+				opinion = { who = ROOT value = 20 }
+				NOT = { is_close_relative = root }
+
+				OR = {
+					AND = {
+						is_female = yes
+						is_pregnant = no
+						ROOT = {
+							is_female = no
+						}
+					}
+					AND = {
+						is_female = no
+						ROOT = {
+							is_female = yes
+							is_pregnant = no
+						}
+					}
+				}
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 240
+
+		modifier = {
+			factor = 0.25
+			trait = lustful
+		}
+		modifier = {
+			factor = 0.5
+			trait = hedonist
+		}
+		modifier = {
+			factor = 10
+			trait = chaste
+		}
+
+		modifier = {
+			factor = 2
+			liege = { num_of_vassals = 10 }
+		}
+		modifier = {
+			factor = 2
+			liege = { num_of_vassals = 20 }
+		}
+		modifier = {
+			factor = 2
+			liege = { num_of_vassals = 30 }
+		}
+		modifier = {
+			factor = 2
+			liege = { num_of_vassals = 40 }
+		}
+		modifier = {
+			factor = 2
+			liege = { num_of_vassals = 50 }
+		}
+		modifier = {
+			factor = 2
+			liege = { num_of_vassals = 60 }
+		}
+		modifier = {
+			factor = 2
+			liege = { num_of_vassals = 70 }
+		}
+		modifier = {
+			factor = 2
+			liege = { num_of_vassals = 80 }
+		}
+		modifier = {
+			factor = 2
+			liege = { num_of_vassals = 90 }
+		}
+		modifier = {
+			factor = 2
+			liege = { num_of_vassals = 100 }
+		}
+	}
+
+	option = {
+		name = "EVTOPTA72040"
+		prestige = -5
+	}
+
+	option = {
+		name = "EVTOPTB72040"
+		random_realm_character = {
+			limit = {
+				same_liege = ROOT
+				liege = {
+					has_character_flag = host_druchi_feast_started
+					has_character_modifier = holding_large_druchi_feast
+				}
+				NOT = { character = ROOT }
+				has_character_flag = guest_druchi_feast_started
+				spouse = {
+					prisoner = no
+					is_adult = yes
+					is_pregnant = no
+					is_alive = yes
+					is_abroad = no
+					NOT = {
+						trait = celibate
+					}
+					NOT = { trait = eunuch }
+					NOT = {
+						age = 30
+					}
+					opinion = { who = ROOT value = 20 }
+					NOT = { is_close_relative = root }
+					OR = {
+						AND = {
+							is_female = yes
+							is_pregnant = no
+							ROOT = {
+								is_female = no
+							}
+						}
+						AND = {
+							is_female = no
+							ROOT = {
+								is_female = yes
+								is_pregnant = no
+							}
+						}
+					}
+				}
+			}
+			spouse = {
+				character_event = {
+					id = druchifeast.51
+					tooltip = "EVTTOOLTIP72041"
+				}
+			}
+		}
+	}
+}
+
+#Spouse answers the 'invitation'
+character_event = {
+	id = druchifeast.51
+	desc = "EVTDESC72041d"
+	picture = GFX_evt_lovers
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA72041"
+		trigger = {
+			is_female = yes
+		}
+		random = {
+			chance = 25
+
+			FROM = {
+				impregnate = ROOT
+				character_event = {
+					id = druchifeast.52
+					days = 60
+					tooltip = "EVTTOOLTIP72042"
+				}
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB72041"
+		trigger = {
+			is_female = no
+		}
+		random = {
+			chance = 25
+
+			impregnate = FROM
+			character_event = {
+				id = druchifeast.52
+				days = 60
+				tooltip = "EVTTOOLTIP72042"
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTC72041"
+		piety = 5
+	}
+}
+
+#Their night together resulted in a child
+character_event = {
+	id = druchifeast.52
+	desc = "EVTDESC72042"
+	picture = GFX_evt_pregnancy
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA72042"
+		FROM = {
+			spouse = {
+				opinion = {
+					modifier = opinion_cuckolded
+					who = ROOT
+					years = 100
+				}
+			}
+		}
+	}
+}
+
+#Drink too much wine: become drunkard or insult host
+character_event = {
+	id = druchifeast.53
+	desc = "EVTDESC72045"
+	picture = "GFX_evt_large_army"
+
+	prisoner = no
+	capable_only = yes
+
+	trigger = {
+		is_adult = yes
+		war = no
+		has_character_flag = guest_druchi_feast_started
+		NOT = {
+			trait = drunkard
+		}
+		any_liege = {
+			NOT = {
+				had_character_flag = {
+					flag = host_druchi_feast_started
+					days = 30
+				}
+			}
+			war = no
+			has_character_flag = host_druchi_feast_started
+			has_character_modifier = holding_large_druchi_feast
+			NOT = {
+				has_character_flag = feast_drunkard_guest
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 240
+
+		modifier = {
+			factor = 0.5
+			any_liege = {
+				any_claim = {
+					holder_scope = {
+						same_realm = ROOT
+					}
+				}
+			}
+		}
+
+		modifier = {
+			factor = 2
+			liege = { num_of_vassals = 10 }
+		}
+		modifier = {
+			factor = 2
+			liege = { num_of_vassals = 20 }
+		}
+		modifier = {
+			factor = 2
+			liege = { num_of_vassals = 30 }
+		}
+		modifier = {
+			factor = 2
+			liege = { num_of_vassals = 40 }
+		}
+		modifier = {
+			factor = 2
+			liege = { num_of_vassals = 50 }
+		}
+		modifier = {
+			factor = 2
+			liege = { num_of_vassals = 60 }
+		}
+		modifier = {
+			factor = 2
+			liege = { num_of_vassals = 70 }
+		}
+		modifier = {
+			factor = 2
+			liege = { num_of_vassals = 80 }
+		}
+		modifier = {
+			factor = 2
+			liege = { num_of_vassals = 90 }
+		}
+		modifier = {
+			factor = 2
+			liege = { num_of_vassals = 100 }
+		}
+	}
+
+	option = {
+		name = "EVTOPTA72045"
+		random = {
+			chance = 25
+
+			add_trait = drunkard
+			hidden_tooltip = {
+				character_event = {
+					id = 38286 #Notify Drunkard
+				}
+			}
+			any_liege = {
+				limit = {
+					has_character_flag = host_druchi_feast_started
+					has_character_modifier = holding_large_druchi_feast
+				}
+				set_character_flag = feast_drunkard_guest
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB72045"
+		any_liege = {
+			limit = {
+				has_character_flag = host_druchi_feast_started
+				has_character_modifier = holding_large_druchi_feast
+			}
+			set_character_flag = feast_drunkard_guest
+			character_event = {
+				id = druchifeast.54
+				tooltip = "EVTTOOLTIP72052"
+			}
+		}
+	}
+}
+
+#Liege is insulted when guest refuses more wine
+character_event = {
+	id = druchifeast.54
+	desc = "EVTDESC72052"
+	picture = GFX_evt_drunk
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA72052"
+		opinion = {
+			modifier = opinion_insulted
+			who = FROM
+			years = 10
+		}
+	}
+}
+
+#Drink too much wine: Embarass yourself
+character_event = {
+	id = druchifeast.55
+	desc = "EVTDESC72046"
+	picture = "GFX_evt_large_army"
+
+	prisoner = no
+	capable_only = yes
+
+	trigger = {
+		is_adult = yes
+		war = no
+		has_character_flag = guest_druchi_feast_started
+		trait = drunkard
+		any_liege = {
+			NOT = {
+				had_character_flag = {
+					flag = host_druchi_feast_started
+					days = 30
+				}
+			}
+			war = no
+			has_character_flag = host_druchi_feast_started
+			has_character_modifier = holding_large_druchi_feast
+			NOT = {
+				has_character_flag = feast_drunkard_guest
+			}
+			any_courtier = {
+				has_job_title = job_treasurer
+				NOT = {
+					trait = drunkard
+				}
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 60
+	}
+
+	option = {
+		name = "EVTOPTA72046"
+		any_liege = {
+			limit = {
+				has_character_flag = host_druchi_feast_started
+				has_character_modifier = holding_large_druchi_feast
+				has_character_flag = lavishly_food
+			}
+			set_character_flag = feast_drunkard_guest
+			character_event = {
+				id = druchifeast.56
+				tooltip = "EVTTOOLTIP72047"
+			}
+			random_courtier = {
+				limit = {
+					has_job_title = job_treasurer
+					NOT = {
+						trait = drunkard
+					}
+				}
+				opinion = {
+					modifier = opinion_dislike
+					who = ROOT
+					years = 10
+				}
+			}
+		}
+	}
+}
+
+#Host is not happy about drunkard falling asleep
+character_event = {
+	id = druchifeast.56
+	desc = "EVTDESC72047"
+	picture = GFX_evt_drunk
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA72047"
+		opinion = {
+			modifier = opinion_disgusted
+			who = FROM
+			years = 10
+		}
+	}
+}
+
+#Drink too much wine: Fall asleep
+character_event = {
+	id = druchifeast.57
+	desc = "EVTDESC72048"
+	picture = "GFX_evt_large_army"
+
+	prisoner = no
+	capable_only = yes
+
+	trigger = {
+		is_adult = yes
+		war = no
+		has_character_flag = guest_druchi_feast_started
+		trait = drunkard
+		any_liege = {
+			NOT = {
+				had_character_flag = {
+					flag = host_druchi_feast_started
+					days = 30
+				}
+			}
+			war = no
+			has_character_flag = host_druchi_feast_started
+			has_character_modifier = holding_large_druchi_feast
+			NOT = {
+				has_character_flag = feast_drunkard_guest
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 60
+
+		modifier = {
+			factor = 2
+			liege = { num_of_vassals = 10 }
+		}
+		modifier = {
+			factor = 2
+			liege = { num_of_vassals = 20 }
+		}
+		modifier = {
+			factor = 2
+			liege = { num_of_vassals = 30 }
+		}
+		modifier = {
+			factor = 2
+			liege = { num_of_vassals = 40 }
+		}
+		modifier = {
+			factor = 2
+			liege = { num_of_vassals = 50 }
+		}
+		modifier = {
+			factor = 2
+			liege = { num_of_vassals = 60 }
+		}
+		modifier = {
+			factor = 2
+			liege = { num_of_vassals = 70 }
+		}
+		modifier = {
+			factor = 2
+			liege = { num_of_vassals = 80 }
+		}
+		modifier = {
+			factor = 2
+			liege = { num_of_vassals = 90 }
+		}
+		modifier = {
+			factor = 2
+			liege = { num_of_vassals = 100 }
+		}
+	}
+
+	option = {
+		name = "EVTOPTA72048"
+		prestige = -10
+		any_liege = {
+			limit = {
+				has_character_flag = host_druchi_feast_started
+				has_character_modifier = holding_large_druchi_feast
+				has_character_flag = lavishly_food
+			}
+			set_character_flag = feast_drunkard_guest
+			character_event = {
+				id = druchifeast.58
+				tooltip = "EVTTOOLTIP72049"
+			}
+		}
+	}
+}
+
+#Host is not happy about drunkard falling asleep
+character_event = {
+	id = druchifeast.58
+	desc = "EVTDESC72049"
+	picture = GFX_evt_drunk
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA72049"
+		opinion = {
+			modifier = opinion_disgusted
+			who = FROM
+			years = 10
+		}
+	}
+}
+
+#Highway Robber Band: Guest Complains
+character_event = {
+	id = druchifeast.59
+	desc = "EVTDESC72050"
+	picture = GFX_evt_bandits
+
+	prisoner = no
+	capable_only = yes
+
+	trigger = {
+		war = no
+		has_character_flag = guest_druchi_feast_started
+		any_liege = {
+			NOT = {
+				had_character_flag = {
+					flag = host_druchi_feast_started
+					days = 30
+				}
+			}
+			war = no
+			has_character_flag = host_druchi_feast_started
+			has_character_modifier = holding_large_druchi_feast
+			location = {
+				has_province_modifier = highway_robber_band
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 60
+
+		modifier = {
+			factor = 2
+			liege = { num_of_vassals = 10 }
+		}
+		modifier = {
+			factor = 2
+			liege = { num_of_vassals = 20 }
+		}
+		modifier = {
+			factor = 2
+			liege = { num_of_vassals = 30 }
+		}
+		modifier = {
+			factor = 2
+			liege = { num_of_vassals = 40 }
+		}
+		modifier = {
+			factor = 2
+			liege = { num_of_vassals = 50 }
+		}
+		modifier = {
+			factor = 2
+			liege = { num_of_vassals = 60 }
+		}
+		modifier = {
+			factor = 2
+			liege = { num_of_vassals = 70 }
+		}
+		modifier = {
+			factor = 2
+			liege = { num_of_vassals = 80 }
+		}
+		modifier = {
+			factor = 2
+			liege = { num_of_vassals = 90 }
+		}
+		modifier = {
+			factor = 2
+			liege = { num_of_vassals = 100 }
+		}
+	}
+
+	option = {
+		name = "EVTOPTA72050"
+		any_liege = {
+			limit = {
+				has_character_flag = host_druchi_feast_started
+				has_character_modifier = holding_large_druchi_feast
+				location = {
+					has_province_modifier = highway_robber_band
+				}
+			}
+			character_event = {
+				id = druchifeast.60
+				tooltip = "EVTTOOLTIP72051"
+			}
+		}
+	}
+}
+
+#Highway Robber Band: The End
+character_event = {
+	id = druchifeast.60
+	desc = "EVTDESC72051"
+	picture = GFX_evt_bandits
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA72051"
+		FROM = {
+			opinion = {
+				modifier = opinion_dislike
+				who = ROOT
+				years = 10
+			}
+		}
+	}
+}
+
+
+#Jongleurs/PIT FIGHTERS entertain the guests
+character_event = {
+	id = druchifeast.31
+	desc = EVTDESCDRUCHIFEAST.31 # The pit fighters you hire put on a spectacular show, defeating both slaves and beasts put against them, and blood flows for the glory of Khaine!
+	picture = "GFX_evt_large_army"
+
+	only_rulers = yes
+	prisoner = no
+	capable_only = yes
+
+	trigger = {
+		war = no
+		has_character_flag = host_druchi_feast_started
+		has_character_modifier = holding_large_druchi_feast
+		has_character_flag = feast_jongleur
+		NOT = {
+			had_character_flag = {
+				flag = host_druchi_feast_started
+				days = 30
+			}
+		}
+		any_vassal = {
+			war = no
+			has_character_flag = guest_druchi_feast_started
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 10
+	}
+
+	option = {
+		name = WELL_FOUGHT # Well fought!
+		prestige = 10
+		if = {
+			limit = {
+				NOT = {
+					trait = gregarious
+				}
+				NOT = {
+					num_of_traits = 5
+				}
+			}
+			random = {
+				chance = 25
+
+				add_trait = gregarious
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					trait = charitable
+				}
+				NOT = {
+					num_of_traits = 5
+				}
+			}
+			random = {
+				chance = 25
+
+				add_trait = charitable
+			}
+		}
+		random_vassal = {
+			limit = {
+				has_character_flag = guest_druchi_feast_started
+			}
+			character_event = {
+				id = druchifeast.32
+			}
+		}
+	}
+}
+
+#Visitor likes jongleurs
+character_event = {
+	id = druchifeast.32
+	desc = EVTDESCDRUCHIFEAST.32 # The pit fighters your liege hired for the feast put on a spectacular show - never have you seen such skill in the pits, they cut through both slaves and beasts like true professionals!
+	picture = "GFX_evt_large_army"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA72064"
+		opinion = {
+			modifier = opinion_approves
+			who = FROM
+			years = 10
+		}
+	}
+}
+
+#Minstrel/DARK SINGER entertain the guests
+character_event = {
+	id = druchifeast.33
+	desc = EVTDESCDRUCHIFEAST.33 # The Dark Singer begins her song, and the halls are filled with glorious lyrics extolling the bloody slaughter of Khaine. Your cold heart almost begins to warm as the music makes you think of endless slaughter and eternal glory...
+	picture = "GFX_evt_large_army"
+
+	only_rulers = yes
+	prisoner = no
+	capable_only = yes
+
+	trigger = {
+		war = no
+		has_character_flag = host_druchi_feast_started
+		has_character_modifier = holding_large_druchi_feast
+		has_character_flag = feast_minstrel
+		NOT = {
+			had_character_flag = {
+				flag = host_druchi_feast_started
+				days = 30
+			}
+		}
+		any_vassal = {
+			war = no
+			has_character_flag = guest_druchi_feast_started
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 10
+	}
+
+	option = {
+		name = BRAVAH # Bra-vah!
+		if = {
+			limit = {
+				NOT = {
+					trait = gregarious
+				}
+				NOT = {
+					num_of_traits = 5
+				}
+			}
+			random = {
+				chance = 25
+
+				add_trait = gregarious
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					trait = charitable
+				}
+				NOT = {
+					num_of_traits = 5
+				}
+			}
+			random = {
+				chance = 25
+
+				add_trait = charitable
+			}
+		}
+		prestige = 10
+		random_vassal = {
+			limit = {
+				has_character_flag = guest_druchi_feast_started
+			}
+			character_event = {
+				id = druchifeast.34
+				tooltip = "EVTTOOLTIP72066"
+			}
+		}
+	}
+}
+
+#Visitor likes minstrel
+character_event = {
+	id = druchifeast.34
+	desc = EVTDESCDRUCHIFEAST.34 # The Dark Singer your host has hired begins her song, and the halls are filled with glorious lyrics extolling the bloody slaughter of Khaine. It stirs our dark soul, the haunting beauty of her song...
+	picture = "GFX_evt_large_army"
+
+	is_triggered_only = yes
+
+	option = {
+		name = BRAVAH # Bra-vah!
+		opinion = {
+			modifier = opinion_approves
+			who = FROM
+			years = 10
+		}
+	}
+}
+
+#Musicians/BEASTMASTER entertain the guests
+character_event = {
+	id = druchifeast.35
+	desc = EVTDESCDRUCHIFEAST.35 # The Beast Master you hired puts on an excellent show - monstrous beasts of all sorts fight for your amusement and several novel killing techniques are demonstrated!
+	picture = "GFX_evt_large_army"
+
+	only_rulers = yes
+	prisoner = no
+	capable_only = yes
+
+	trigger = {
+		war = no
+		has_character_flag = host_druchi_feast_started
+		has_character_modifier = holding_large_druchi_feast
+		has_character_flag = feast_musicians
+		NOT = {
+			had_character_flag = {
+				flag = host_druchi_feast_started
+				days = 30
+			}
+		}
+		any_vassal = {
+			war = no
+			has_character_flag = guest_druchi_feast_started
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 10
+	}
+
+	option = {
+		name = MORE_WE_WANT_MORE # More - we want more!
+		if = {
+			limit = {
+				NOT = {
+					trait = cruel
+				}
+				NOT = {
+					num_of_traits = 5
+				}
+			}
+			random = {
+				chance = 25
+
+				add_trait = cruel
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					trait = impaler
+				}
+				NOT = {
+					num_of_traits = 5
+				}
+			}
+			random = {
+				chance = 25
+
+				add_trait = impaler
+			}
+		}
+		prestige = 10
+		random_vassal = {
+			limit = {
+				has_character_flag = guest_druchi_feast_started
+			}
+			character_event = {
+				id = druchifeast.36
+			}
+		}
+	}
+}
+
+#Visitor likes musicians/BEASTMASTER
+character_event = {
+	id = druchifeast.36
+	desc = EVTDESCDRUCHIFEAST.36 # The Beast Master your host has hired puts on an excellent show - monstrous beasts of all sorts fight for your amusement and several novel killing techniques are demonstrated!
+	picture = "GFX_evt_large_army"
+
+	is_triggered_only = yes
+
+	option = {
+		name = WELL_DONE_MY_LIEGE # Well done my liege!
+		opinion = {
+			modifier = opinion_approves
+			who = FROM
+			years = 10
+		}
+	}
+}
+
+#Fire-eaters/SACRIFICIAL ELF SLAVES entertain the guests
+character_event = {
+	id = druchifeast.37
+	desc = EVTDESCDRUCHIFEAST.37 # Finally the Asur prisoners you bought are presented to your guests. To great cheering, they are cruelly tortured and executed. Glory to Naggaroth!
+	picture = "GFX_evt_beheading"
+
+	only_rulers = yes
+	prisoner = no
+	capable_only = yes
+
+	trigger = {
+		war = no
+		has_character_flag = host_druchi_feast_started
+		has_character_modifier = holding_large_druchi_feast
+		has_character_flag = feast_fireeaters
+		NOT = {
+			had_character_flag = {
+				flag = host_druchi_feast_started
+				days = 30
+			}
+		}
+		any_vassal = {
+			war = no
+			has_character_flag = guest_druchi_feast_started
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 10
+	}
+
+	option = {
+		name = EVTOPTDRUCHIFEAST.37.a # I only wish there were 1000 of them!
+		if = {
+			limit = {
+				NOT = {
+					trait = cruel
+				}
+				NOT = {
+					num_of_traits = 10
+				}
+			}
+			random = {
+				chance = 25
+
+				add_trait = cruel
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					trait = impaler
+				}
+				NOT = {
+					num_of_traits = 10
+				}
+			}
+			random = {
+				chance = 25
+
+				add_trait = impaler
+			}
+		}
+		prestige = 10
+		random_vassal = {
+			limit = {
+				has_character_flag = guest_druchi_feast_started
+			}
+			character_event = {
+				id = druchifeast.38
+			}
+		}
+	}
+}
+
+#Visitor likes fire-eaters/ELF SLAVES
+character_event = {
+	id = druchifeast.38
+	desc = EVTDESCDRUCHIFEAST.38 # Finally the Asur prisoners your host has bought are presented to your guests. To great cheering, they are cruelly tortured and executed. Glory to Naggaroth!
+	picture = "GFX_evt_beheading"
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTDRUCHIFEAST.38.a # Spectacular display of torture!
+		opinion = {
+			modifier = opinion_approves
+			who = FROM
+			years = 10
+		}
+	}
+}
+
+#ConjurerHALFLING JUGGLERS entertain the guests
+character_event = {
+	id = druchifeast.39
+	desc = EVTDESCDRUCHIFEAST.39 # To roaring laughs, a group of halfling jugglers are brought out. Large stones are passed out to the guests - the last halfling to remain juggling wins his life, the rest will be cruelly tortured!
+	picture = "GFX_evt_large_army"
+
+	only_rulers = yes
+	prisoner = no
+	capable_only = yes
+
+	trigger = {
+		war = no
+		has_character_flag = host_druchi_feast_started
+		has_character_modifier = holding_large_druchi_feast
+		has_character_flag = feast_conjurer
+		NOT = {
+			had_character_flag = {
+				flag = host_druchi_feast_started
+				days = 30
+			}
+		}
+		any_vassal = {
+			war = no
+			has_character_flag = guest_druchi_feast_started
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 10
+	}
+
+	option = {
+		name = HAH_I_LOVE_THIS_GAME # HAH! I love this game!
+		if = {
+			limit = {
+				NOT = {
+					trait = cruel
+				}
+				NOT = {
+					num_of_traits = 10
+				}
+			}
+			random = {
+				chance = 25
+
+				add_trait = cruel
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					trait = impaler
+				}
+				NOT = {
+					num_of_traits = 10
+				}
+			}
+			random = {
+				chance = 25
+
+				add_trait = impaler
+			}
+		}
+		prestige = 10
+		random_vassal = {
+			limit = {
+				has_character_flag = guest_druchi_feast_started
+			}
+			character_event = {
+				id = druchifeast.40
+			}
+		}
+	}
+}
+
+#Visitor likes Conjurer
+character_event = {
+	id = druchifeast.40
+	desc = EVTDESCDRUCHIFEAST.40 # To roaring laughs, a group of halfling slave jugglers your liege has purchased are brought out. Large stones are passed out to the guests - the last halfling to remain juggling wins his life, the rest will be cruelly tortured!
+	picture = "GFX_evt_large_army"
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTDRUCHIFEAST.40.a # I haven't laughed so hard in ages!
+		opinion = {
+			modifier = opinion_approves
+			who = FROM
+			years = 10
+		}
+	}
+}
+
+#Friendly with another guest's spouse
+character_event = {
+	id = druchifeast.61
+	desc = "EVTDESC72075"
+	picture = "GFX_evt_large_army"
+
+	only_men = yes
+	max_age = 60
+	prisoner = no
+	only_rulers = yes
+	capable_only = yes
+
+	trigger = {
+		is_adult = yes
+		war = no
+		has_character_flag = host_druchi_feast_started
+		has_character_modifier = holding_large_druchi_feast
+		NOT = {
+			had_character_flag = {
+				flag = host_druchi_feast_started
+				days = 30
+			}
+		}
+		fertility = 0.4
+		any_vassal = {
+			war = no
+			has_character_flag = guest_druchi_feast_started
+			is_married = yes
+			spouse = {
+				is_adult = yes
+				NOT = { is_close_relative = root }
+				is_female = yes
+				is_pregnant = no
+				is_alive = yes
+				is_abroad = no
+				prisoner = no
+				NOT = {
+					age = 40
+				}
+				NOT = {
+					trait = celibate
+				}
+				NOT = { trait = eunuch }
+				NOT = {
+					trait = chaste
+				}
+				opinion = { who = ROOT value = 20 }
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 120
+
+		modifier = {
+			factor = 0.25
+			trait = lustful
+		}
+		modifier = {
+			factor = 0.5
+			trait = hedonist
+		}
+		modifier = {
+			factor = 10
+			trait = chaste
+		}
+	}
+
+	immediate = {
+		random_vassal = {
+			limit = {
+				is_adult = yes
+				not = { age = 30 }
+				has_character_flag = guest_druchi_feast_started
+				is_married = yes
+				is_female = yes
+				is_pregnant = no
+				NOT = {	trait = celibate }
+				NOT = {	trait = chaste	}
+				NOT = { trait = eunuch }
+				NOT = { is_close_relative = root }
+			}
+			set_character_flag = passionated_guest
+		}
+	}
+
+	option = {
+		name = "EVTOPTA72075"
+		prestige = -5
+	}
+
+	option = {
+		name = "EVTOPTB72075"
+		trigger = {
+			any_vassal = {
+				war = no
+				has_character_flag = guest_druchi_feast_started
+				is_married = yes
+				spouse = {
+					is_adult = yes
+					NOT = { is_close_relative = root }
+					is_female = yes
+					is_pregnant = no
+					is_alive = yes
+					is_abroad = no
+					prisoner = no
+					NOT = {
+						age = 40
+					}
+					NOT = {
+						trait = celibate
+					}
+					NOT = {
+						trait = chaste
+					}
+					NOT = { trait = eunuch }
+					opinion = { who = ROOT value = 20 }
+				}
+			}
+		}
+		random_vassal = {
+			limit = {
+				has_character_flag = guest_druchi_feast_started
+				is_married = yes
+				spouse = {
+					is_adult = yes
+					is_female = yes
+					is_pregnant = no
+					is_alive = yes
+					is_abroad = no
+					prisoner = no
+					NOT = { is_close_relative = root }
+					NOT = {
+						age = 40
+					}
+					NOT = {
+						trait = celibate
+					}
+					NOT = {
+						trait = chaste
+					}
+					NOT = { trait = eunuch }
+					opinion = { who = ROOT value = 20 }
+				}
+			}
+			spouse = {
+				character_event = {
+					id = druchifeast.41
+					tooltip = "EVTTOOLTIP72076"
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "EVTOPTB72075"
+		trigger = {
+			any_vassal = {
+				has_character_flag = passionated_guest
+			}
+		}
+		random_vassal = {
+			limit = {
+				has_character_flag = passionated_guest
+			}
+			character_event = {
+				id = druchifeast.41
+				tooltip = "EVTTOOLTIP72076"
+			}
+			clr_character_flag = passionated_guest
+		}
+	}
+}
+
+#Spouse answers the 'invitation'
+character_event = {
+	id = druchifeast.41
+	desc = "EVTDESC72076"
+	picture = GFX_evt_lovers
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA72076"
+		random = {
+			chance = 25
+
+			FROM = {
+				impregnate = ROOT
+				character_event = {
+					id = druchifeast.42
+					days = 60
+					tooltip = "EVTTOOLTIP72077"
+				}
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB72076"
+		piety = 2
+	}
+}
+
+#Their night together resulted in a child
+character_event = {
+	id = druchifeast.42
+	desc = "EVTDESC72077"
+	picture = GFX_evt_pregnancy
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA72077"
+		FROM = {
+			spouse = {
+				opinion = {
+					modifier = opinion_hate
+					who = ROOT
+					years = 100
+				}
+			}
+		}
+	}
+}
+
+
+#Host or Host's son "falls in love" with unmarried daughter of vassal
+character_event = {
+	id = druchifeast.43
+	desc = "EVTDESC72090"
+	picture = "GFX_evt_large_army"
+
+	only_men = yes
+	capable_only = yes
+	prisoner = no
+
+	trigger = {
+		OR = {
+			AND = {
+				is_betrothed = no
+				is_married = no
+			}
+			NOT = { trait = chaste }
+		}
+		has_lover = no
+		NOT = { trait = shy }
+		fertility = 0.4
+		OR = {
+			AND = {
+				NOT = {
+					num_of_children = 1
+				}
+				war = no
+				has_character_flag = host_druchi_feast_started
+				has_character_modifier = holding_large_druchi_feast
+				NOT = {
+					had_character_flag = {
+						flag = host_druchi_feast_started
+						days = 30
+					}
+				}
+			}
+			AND = {
+				is_adult = yes
+				NOT = {
+					age = 26
+				}
+				father = {
+					war = no
+					has_character_flag = host_druchi_feast_started
+					has_character_modifier = holding_large_druchi_feast
+					NOT = {
+						had_character_flag = {
+							flag = host_druchi_feast_started
+							days = 30
+						}
+					}
+				}
+			}
+		}
+		OR = {
+			father = {
+				any_vassal = {
+					has_character_flag = guest_druchi_feast_started
+					any_child = {
+						is_female = yes
+						is_married = no
+						is_betrothed = no
+						has_lover = no
+						NOT = { is_close_relative = root }
+						is_adult = yes
+						NOT = {
+							age = 26
+						}
+						is_abroad = no
+						opinion = { who = ROOT value = 20 }
+					}
+				}
+			}
+			any_vassal = {
+				has_character_flag = guest_druchi_feast_started
+				any_child = {
+					is_female = yes
+					is_married = no
+					is_betrothed = no
+					has_lover = no
+					fertility = 0.4
+					NOT = { is_close_relative = root }
+					is_adult = yes
+					NOT = {
+						age = 26
+					}
+					is_abroad = no
+					opinion = { who = ROOT value = 20 }
+				}
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 60
+
+		modifier = {
+			factor = 0.5
+			trait = gregarious
+		}
+
+		modifier = {
+			factor = 0.85
+			trait = trusting
+		}
+		modifier = {
+			factor = 10
+			trait = paranoid
+		}
+	}
+
+	option = {
+		name = "EVTOPTA72090" #Flirt
+		trigger = {
+			father = {
+				has_character_flag = host_druchi_feast_started
+				has_character_modifier = holding_large_druchi_feast
+			}
+		}
+		father = {
+			random_vassal = {
+				limit = {
+					has_character_flag = guest_druchi_feast_started
+				}
+				random_child = {
+					limit = {
+						is_female = yes
+						is_married = no
+						is_pregnant = no
+						is_betrothed = no
+						has_lover = no
+						fertility = 0.4
+						NOT = { is_close_relative = root }
+
+						is_adult = yes
+						NOT = {
+							age = 26
+						}
+						is_abroad = no
+						opinion = { who = ROOT value = 20 }
+					}
+					opinion = {
+						modifier = opinion_flattered
+						who = ROOT
+						years = 10
+					}
+					father = {
+						character_event = {
+							id = 72091
+							tooltip = "EVTTOOLTIP72091"
+						}
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "EVTOPTB72090" #Tumble
+		trigger = {
+			father = {
+				has_character_flag = host_druchi_feast_started
+				has_character_modifier = holding_large_druchi_feast
+			}
+		}
+		prestige = 15
+		father = {
+			random_vassal = {
+				limit = {
+					has_character_flag = guest_druchi_feast_started
+				}
+				random_child = {
+					limit = {
+						is_female = yes
+						is_married = no
+						is_betrothed = no
+						has_lover = no
+						fertility = 0.4
+						is_pregnant = no
+						NOT = {
+							family = ROOT
+						}
+						is_adult = yes
+						NOT = {
+							age = 26
+						}
+						is_abroad = no
+						opinion = { who = ROOT value = 20 }
+					}
+					random = {
+						chance = 25
+
+						impregnate = ROOT
+						set_character_flag = impregnated_by_root
+						ROOT = {
+							set_character_flag = impregnated_vassal_daughter
+						}
+					}
+					add_lover = ROOT
+					father = {
+						character_event = {
+							id = 72092
+							tooltip = "EVTTOOLTIP72092"
+						}
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTA72090" #Flirt
+		trigger = {
+			has_character_flag = host_druchi_feast_started
+			has_character_modifier = holding_large_druchi_feast
+			is_married = no
+		}
+		random_vassal = {
+			limit = {
+				has_character_flag = guest_druchi_feast_started
+			}
+			random_child = {
+				limit = {
+					is_female = yes
+					is_married = no
+					is_betrothed = no
+					has_lover = no
+					is_pregnant = no
+					fertility = 0.4
+					NOT = { is_close_relative = root }
+
+					is_adult = yes
+					NOT = {
+						age = 26
+					}
+					is_abroad = no
+					opinion = { who = ROOT value = 20 }
+				}
+				opinion = {
+					modifier = opinion_flattered
+					who = ROOT
+					years = 10
+				}
+			}
+			character_event = {
+				id = 72091
+				tooltip = "EVTTOOLTIP72091"
+			}
+		}
+	}
+
+	option = {
+		name = "EVTOPTB72090" #Tumble
+		trigger = {
+			has_character_flag = host_druchi_feast_started
+			has_character_modifier = holding_large_druchi_feast
+			is_married = no
+		}
+		prestige = 15
+		random_vassal = {
+			limit = {
+				has_character_flag = guest_druchi_feast_started
+			}
+			random_child = {
+				limit = {
+					is_female = yes
+					is_married = no
+					is_betrothed = no
+					has_lover = no
+					is_pregnant = no
+					fertility = 0.4
+					NOT = { is_close_relative = root }
+
+					is_adult = yes
+					NOT = {
+						age = 26
+					}
+					is_abroad = no
+					opinion = { who = ROOT value = 20 }
+				}
+				random = {
+					chance = 25
+
+					impregnate = ROOT
+					set_character_flag = impregnated_by_root
+					ROOT = {
+						set_character_flag = impregnated_vassal_daughter
+					}
+				}
+				add_lover = ROOT
+			}
+			character_event = {
+				id = 72092
+				tooltip = "EVTTOOLTIP72092"
+			}
+		}
+	}
+}
+
+#REST OF THESE EVENTS ARE IN VANILLA EVENT FILE##
+
+###################################
+#Events to end the Feast
+###################################
+
+#The feast has ended
+character_event = {
+	id = druchifeast.44
+	desc = "EVTDESC72110"
+	picture = "GFX_evt_large_army"
+
+	capable_only = yes
+	prisoner = no
+
+	trigger = {
+		had_character_flag = {
+			flag = host_druchi_feast_started
+			days = 30
+		}
+		has_character_modifier = holding_large_druchi_feast
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "EVTOPTA72110"
+		prestige = 10
+		remove_character_modifier = holding_large_druchi_feast
+		set_character_flag = recent_feast
+		clr_character_flag = sent_invitations
+		clr_character_flag = host_druchi_feast_started
+		clr_character_flag = feast_jongleur
+		clr_character_flag = feast_musicians
+		clr_character_flag = feast_minstrel
+		clr_character_flag = feast_fireeaters
+		clr_character_flag = feast_conjurer
+		clr_character_flag = lavishly_food
+		clr_character_flag = medium_food
+		clr_character_flag = low_food
+		clr_character_flag = castle_problems
+		clr_character_flag = feast_jester
+		clr_character_flag = feast_drunkard_guest
+		clr_character_flag = druchi_feast_duel
+		clr_character_flag = feast_boar_hunt
+		clr_character_flag = do_not_disturb
+
+		any_vassal = {
+			limit = {
+				has_character_flag = guest_druchi_feast_started
+			}
+			character_event = {
+				id = 72111
+				tooltip = "EVTTOOLTIP72111"
+			}
+			hidden_tooltip = {
+				remove_opinion = {
+					modifier = opinion_enjoyed_feast
+					who = ROOT
+				}
+			}
+			opinion = {
+				modifier = opinion_enjoyed_feast
+				who = ROOT
+				years = 2
+			}
+			clr_character_flag = coming_to_feast
+			clr_character_flag = guest_druchi_feast_started
+			clr_character_flag = wounded_opponent
+			clr_character_flag = maimed_opponent
+			clr_character_flag = killed_opponent
+		}
+	}
+}
+
+
+###########################################
+# Flag management                         #
+###########################################
+# Safety catch - clears character flags and modifiers
+character_event = {
+	id = druchifeast.48
+
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		remove_character_modifier = holding_large_druchi_feast
+		clr_character_flag = sent_invitations
+		clr_character_flag = host_druchi_feast_started
+		clr_character_flag = feast_jongleur
+		clr_character_flag = feast_musicians
+		clr_character_flag = feast_minstrel
+		clr_character_flag = feast_fireeaters
+		clr_character_flag = feast_conjurer
+		clr_character_flag = lavishly_food
+		clr_character_flag = medium_food
+		clr_character_flag = low_food
+		clr_character_flag = castle_problems
+		clr_character_flag = feast_jester 
+		clr_character_flag = feast_drunkard_guest
+		clr_character_flag = druchi_feast_duel
+		clr_character_flag = feast_boar_hunt
+		clr_character_flag = coming_to_feast
+		clr_character_flag = guest_druchi_feast_started
+		clr_character_flag = wounded_opponent
+		clr_character_flag = maimed_opponent
+		clr_character_flag = killed_opponent
+		clr_character_flag = do_not_disturb
+	}
+}
+

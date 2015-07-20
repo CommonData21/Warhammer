@@ -1,0 +1,457 @@
+decisions = {
+ask_liege_vampirization = {
+		potential = {
+			is_ruler = yes
+			higher_tier_than = BARON
+			independent = no
+			liege = { age = 16
+				OR = { trait = vampire_lahmian_visible
+					trait = vampire_carstein_visible
+					trait = vampire_blood_visible
+					trait = vampire_strigoi_visible
+					trait = vampire_necrach_visible
+					trait = vampire_jade_visible
+					trait = vampire_mahtmasi_visible } }
+			NOT = { trait = vampire_lahmian_visible }
+			NOT = { trait = vampire_carstein_visible }
+			NOT = { trait = vampire_blood_visible }
+			NOT = { trait = vampire_strigoi_visible }
+			NOT = { trait = vampire_necrach_visible }
+			NOT = { trait = vampire_jade_visible }
+			NOT = { trait = vampire_mahtmasi_visible }
+			NOT = { trait = vampire_lahmian_hidden }
+			NOT = { trait = vampire_carstein_hidden }
+			NOT = { trait = vampire_blood_hidden }
+			NOT = { trait = vampire_strigoi_hidden }
+			NOT = { trait = vampire_necrach_hidden }
+			NOT = { trait = vampire_jade_hidden }
+			NOT = { trait = vampire_mahtmasi_hidden }
+			trait = creature_human
+		}
+		
+		allow = {
+			prestige = 500
+			war = no
+			liege = { war = no } 
+			OR = { trait = ambitious
+				trait = lunatic_1
+				trait = lunatic_2
+				trait = lunatic_3 
+				liege = { any_lover = { religion = ROOT
+							character = ROOT } }
+					AND = { age = 60
+						OR = { trait = craven
+							trait = paranoid } } }
+		}
+		
+		effect = { prestige = -500
+			liege = { character_event = { id = vampire.11 } }
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = { factor = 0.001
+				NOT = { liege = { any_lover = { religion = ROOT
+							character = ROOT } } }
+					}
+			modifier = { factor = 0.01
+					trait = craven
+					}
+			modifier = { factor = 0.1
+					trait = shy
+					}
+			modifier = { factor = 10
+				liege = { any_spouse = { religion = ROOT
+							character = ROOT } }
+					}
+			modifier = { factor = 0.01
+				liege = { trait = just }
+					}
+			modifier = { factor = 0.01
+				liege = { trait = kind }
+					}
+			modifier = { factor = 0.1
+				liege = { trait = paranoid }
+					}
+			}
+	
+	}
+}
+targetted_decisions = {
+
+turn_courtier_into_vampire = {
+		filter = realm
+		ai_target_filter = realm
+
+		from_potential = {
+			is_ruler = yes		
+			OR = { trait = vampire_lahmian_visible
+				trait = vampire_carstein_visible
+				trait = vampire_blood_visible
+				trait = vampire_strigoi_visible
+				trait = vampire_necrach_visible
+				trait = vampire_jade_visible
+				trait = vampire_mahtmasi_visible }
+		}
+		
+		potential = {
+			OR = { host = { character = FROM }
+				guardian = { character = FROM }
+				any_spouse = { character = FROM }
+				any_lover = { character = FROM }
+				any_friend = { character = FROM } }
+			NOT = { trait = vampire_lahmian_visible }
+			NOT = { trait = vampire_carstein_visible }
+			NOT = { trait = vampire_blood_visible }
+			NOT = { trait = vampire_strigoi_visible }
+			NOT = { trait = vampire_necrach_visible }
+			NOT = { trait = vampire_jade_visible }
+			NOT = { trait = vampire_mahtmasi_visible }
+			trait = creature_human
+		}
+		
+		allow = {
+			age = 12
+		}
+		
+		effect = {
+			if = { limit = { age = 16 }
+				character_event = { id = vampire.0 } }
+			if = { limit = { NOT = { age = 16 } }
+				character_event = { id = svampires.8 } }
+		}
+		
+		
+		ai_will_do = {
+			factor = 1 
+			modifier = {
+				factor = 0.05
+				
+			} 
+			modifier = {
+				factor = 0.01
+				NOT = { diplomacy = 15 }
+				NOT = { martial = 15 }
+				NOT = { stewardship = 15 }
+				NOT = { intrigue = 15 }
+				NOT = { learning = 15 }
+			}
+			modifier = {
+				factor = 0
+				FROM = { trait = paranoid }
+			}
+			modifier = {
+				factor = 0
+				FROM = { trait = just }
+			}
+			modifier = {
+				factor = 0
+				FROM = { trait = kind }
+			}
+			modifier = {
+				factor = 0.5
+				FROM = { trait = shy }
+			}
+			modifier = {
+				factor = 1.5
+				FROM = { trait = gregarious }
+			}
+			modifier = {
+				factor = 0
+				FROM = { trait = envious }
+			}
+			modifier = {
+				factor = 2.5
+				 NOT = { FROM = { num_of_children = 1 } }
+			}
+			modifier = {
+				factor = 0.1
+				FROM = { num_of_children = 3 }
+			}
+			modifier = {
+				factor = 0
+				FROM = { num_of_children = 8 }
+			}
+			modifier = {
+				factor = 0.01
+				FROM = { war = yes }
+			}
+			modifier = {
+				factor = 0
+				FROM = { lower_tier_than = COUNT }
+			}
+			modifier = {
+				factor = 0.25
+				FROM = { higher_tier_than = ROOT }
+			}
+			modifier = {
+				factor = 0.1
+				FROM = { NOT = { religion = ROOT } }
+				higher_tier_than = COUNT
+			}
+			modifier = {
+				factor = 0.25
+				FROM = { NOT = { religion = ROOT } }
+				higher_tier_than = DUKE
+			}
+			modifier = {
+				factor = 3
+				FROM = { any_lover = { character = ROOT } }
+			}
+			modifier = {
+				factor = 2
+				FROM = { any_spouse = { character = ROOT } }
+			}
+			modifier = {
+				factor = 0
+				NOT = { age = 16 }
+				FROM = { NOT = { trait = lunatic_1 } }
+				FROM = { NOT = { trait = lunatic_2 } }
+				FROM = { NOT = { trait = lunatic_3 } }
+				mother = { NOT = { character = FROM } }
+				father = { NOT = { character = FROM } }
+			}
+		}
+	
+	}
+	makeavampireheir = {
+		filter = realm
+		ai_target_filter = realm
+		from_potential = {
+			OR = { trait = vampire_lahmian_visible
+				trait = vampire_carstein_visible
+				trait = vampire_blood_visible
+				trait = vampire_strigoi_visible
+				trait = vampire_necrach_visible
+				trait = vampire_jade_visible
+				trait = vampire_mahtmasi_visible }
+			}
+		potential = {
+			OR = { trait = vampire_lahmian_visible
+				trait = vampire_carstein_visible
+				trait = vampire_blood_visible
+				trait = vampire_strigoi_visible
+				trait = vampire_necrach_visible
+				trait = vampire_jade_visible
+				trait = vampire_mahtmasi_visible }
+			NOT = { dynasty = FROM }
+			OR = { host = { character = FROM }
+				any_spouse = { character = FROM }
+				father = { character = FROM }
+				mother = { character = FROM }
+				any_lover = { character = FROM } }
+			NOT = { higher_tier_than = FROM }
+			}
+		
+		allow = {
+			OR = { trait = vampire_lahmian_visible
+				trait = vampire_carstein_visible
+				trait = vampire_blood_visible
+				trait = vampire_strigoi_visible
+				trait = vampire_necrach_visible
+				trait = vampire_jade_visible
+				trait = vampire_mahtmasi_visible }
+			has_opinion_modifier = { modifier = opinion_sired_me
+								who = FROM }
+			FROM = { NOT = { has_opinion_modifier = { modifier = opinion_v_rejected_adoption
+								who = ROOT } } }
+		}		
+		
+		effect = { character_event = { id = vampire.15 } }
+		
+		ai_will_do = {
+			factor = 1 
+			modifier = {
+				factor = 0.05
+			} 
+			modifier = {
+				factor = 0.01
+				NOT = { diplomacy = 15 }
+				NOT = { martial = 15 }
+				NOT = { stewardship = 15 }
+				NOT = { intrigue = 15 }
+				NOT = { learning = 15 }
+			}
+			modifier = {
+				factor = 0
+				FROM = { trait = paranoid }
+			}
+			modifier = {
+				factor = 0
+				FROM = { trait = just }
+			}
+			modifier = {
+				factor = 0
+				FROM = { trait = kind }
+			}
+			modifier = {
+				factor = 0.5
+				FROM = { trait = shy }
+			}
+			modifier = {
+				factor = 1.5
+				FROM = { trait = gregarious }
+			}
+			modifier = {
+				factor = 0
+				FROM = { trait = envious }
+			}
+			modifier = {
+				factor = 2.5
+				 NOT = { FROM = { num_of_children = 1 } }
+			}
+			modifier = {
+				factor = 0.1
+				FROM = { num_of_children = 3 }
+			}
+			modifier = {
+				factor = 0
+				FROM = { num_of_children = 8 }
+			}
+			modifier = {
+				factor = 0.01
+				FROM = { war = yes }
+			}
+			modifier = {
+				factor = 0.1
+				FROM = { NOT = { religion = ROOT } }
+				higher_tier_than = COUNT
+			}
+			modifier = {
+				factor = 0.25
+				FROM = { NOT = { religion = ROOT } }
+				higher_tier_than = DUKE
+			}
+			modifier = {
+				factor = 3
+				FROM = { any_lover = { character = ROOT } }
+			}
+			modifier = {
+				factor = 2
+				FROM = { any_spouse = { character = ROOT } }
+			}
+		}
+	}
+	askvampliegedynasty = {
+		is_high_prio = yes
+		filter = realm
+		ai_target_filter = realm
+		from_potential = {
+			OR = { trait = vampire_lahmian_visible
+				trait = vampire_carstein_visible
+				trait = vampire_blood_visible
+				trait = vampire_strigoi_visible
+				trait = vampire_necrach_visible
+				trait = vampire_jade_visible
+				trait = vampire_mahtmasi_visible }
+			#	has_opinion_modifier = { modifier = opinion_sired_me
+			#				who = ROOT }	
+			}
+		potential = {		OR = { trait = vampire_lahmian_visible
+								trait = vampire_carstein_visible
+								trait = vampire_blood_visible
+								trait = vampire_strigoi_visible
+								trait = vampire_necrach_visible
+								trait = vampire_jade_visible
+								trait = vampire_mahtmasi_visible }
+							NOT = { trait = incapable }
+							NOT = { dynasty = FROM }
+							higher_tier_than = FROM
+			}
+		
+		allow = {
+			OR = { trait = vampire_lahmian_visible
+				trait = vampire_carstein_visible
+				trait = vampire_blood_visible
+				trait = vampire_strigoi_visible
+				trait = vampire_necrach_visible
+				trait = vampire_jade_visible
+				trait = vampire_mahtmasi_visible }
+				FROM = { NOT = { has_opinion_modifier = { modifier = opinion_v_rejected_adoption
+									who = ROOT } } }
+				FROM = { has_opinion_modifier = { modifier = opinion_sired_me
+									who = ROOT } }
+		}		
+		
+		effect = { 
+				character_event = { id = vampire.150002 }
+				 }
+		
+		ai_will_do = {
+			factor = 1 
+			modifier = {
+				factor = 0.05
+			} 
+			modifier = {
+				factor = 0.15
+				FROM = { NOT = { diplomacy = 15 }
+					NOT = { martial = 15 }
+					NOT = { stewardship = 15 }
+					NOT = { intrigue = 15 }
+					NOT = { learning = 15 }
+					NOT = { trait = proud } }
+			}
+			modifier = {
+				factor = 0.85
+				FROM = { trait = dim }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { trait = dumb }
+			}
+			modifier = {
+				factor = 0.65
+				FROM = { trait = slow }
+			}
+			modifier = {
+				factor = 0.5
+				FROM = { trait = idiot }
+			}
+			modifier = {
+				factor = 0.45
+				FROM = { trait = imbecile }
+			}
+			modifier = {
+				factor = 1.5
+				FROM = { trait = envious }
+			}
+			modifier = {
+				factor = 0.01
+				FROM = { trait = shy }
+			}
+			modifier = {
+				factor = 0.01
+				FROM = { trait = kind }
+			}
+			modifier = {
+				factor = 1.75
+				FROM = { trait = gregarious }
+			}
+			modifier = {
+				factor = 2.5
+				FROM = { trait = ambitious }
+			}
+			modifier = {
+				factor = 0.01
+				FROM = { trait = content }
+			}
+			modifier = {
+				factor = 2.5
+				FROM = { is_ruler = no }
+			}
+			modifier = {
+				factor = 1.75
+				FROM = { NOT = { prestige = 750 } }
+			}
+			modifier = {
+				factor = 3
+				any_lover = { character = FROM }
+			}
+			modifier = {
+				factor = 2
+				any_spouse = { character = FROM }
+			}
+		}
+	}
+
+}

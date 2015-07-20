@@ -1,0 +1,469 @@
+##SOME ARE COMMENTED OUT BECAUSE THEY ARE USED IN THE VANILLA FILES##
+
+#genius = {
+#	birth = 50
+#	inherit_chance = 1
+#
+#	opposites = {
+#		brilliant
+#		quick
+#		smart
+#		bright
+#		dim
+#		dumb
+#		slow
+#		idiot
+#		imbecile
+#	}
+#	diplomacy = 5
+#	intrigue = 5
+#	stewardship = 5
+#	martial = 5
+#
+#	ai_rationality = 30
+#
+#	vassal_opinion = 5
+#}
+
+rdfix = {
+	
+	diplomacy = -50
+	intrigue = -50
+	stewardship = -50
+	martial = -50
+	learning = -50
+
+}
+
+brilliant = {
+	birth = 50
+	inherit_chance = 1
+
+	opposites = {
+		genius
+		quick
+		smart
+		bright
+		dim
+		dumb
+		slow
+		idiot
+		imbecile
+	}
+	diplomacy = 4
+	intrigue = 4
+	stewardship = 4
+	martial = 4
+	learning = 4
+	customizer = no
+
+	ai_rationality = 20
+
+	vassal_opinion = 3
+}
+
+#quick = {
+#	birth = 50
+#	inherit_chance = 1
+#
+#	opposites = {
+#		genius
+#		brilliant
+#		smart
+#		bright
+#		dim
+#		dumb
+#		slow
+#		idiot
+#		imbecile
+#	}
+#	diplomacy = 3
+#	intrigue = 3
+#	stewardship = 3
+#	martial = 3
+#
+#	ai_rationality = 15
+#}
+
+smart = {
+	birth = 50
+	inherit_chance = 1
+
+	opposites = {
+		genius
+		brilliant
+		quick
+		bright
+		dim
+		dumb
+		slow
+		idiot
+		imbecile
+	}
+	diplomacy = 2
+	intrigue = 2
+	stewardship = 2
+	martial = 2
+	learning = 2
+	customizer = no
+
+	ai_rationality = 10
+}
+bright = {
+	birth = 50
+	inherit_chance = 1
+
+	opposites = {
+		genius
+		brilliant
+		quick
+		smart
+		dim
+		dumb
+		slow
+		idiot
+		imbecile
+	}
+	diplomacy = 1
+	intrigue = 1
+	stewardship = 1
+	martial = 1
+	learning = 1
+	customizer = no
+
+	ai_rationality = 5
+}
+#imbecile = {
+#	birth = 50
+#	inherit_chance = 1
+#
+#	opposites = {
+#		genius
+#		brilliant
+#		quick
+#		smart
+#		bright
+#		dim
+#		dumb
+#		slow
+#		idiot
+#	}
+#	diplomacy = -8
+#	intrigue = -8
+#	stewardship = -8
+#	martial = -8
+#
+#	ai_rationality = -30
+#
+#	vassal_opinion = -10
+#}
+
+idiot = {
+	birth = 50
+	inherit_chance = 1
+
+	opposites = {
+		genius
+		brilliant
+		quick
+		smart
+		bright
+		dim
+		dumb
+		slow
+		imbecile
+	}
+	diplomacy = -5
+	intrigue = -5
+	stewardship = -5
+	martial = -5
+	customizer = no
+
+	ai_rationality = -50
+
+	vassal_opinion = -5
+}
+
+#slow = {
+#	birth = 50
+#	inherit_chance = 1
+#
+#	opposites = {
+#		genius
+#		brilliant
+#		quick
+#		smart
+#		bright
+#		dim
+#		dumb
+#		idiot
+#		imbecile
+#	}
+#	diplomacy = -3
+#	intrigue = -3
+#	stewardship = -3
+#	martial = -3
+#
+#	ai_rationality = -15
+#}
+
+dumb = {
+	birth = 50
+	inherit_chance = 1
+
+	opposites = {
+		genius
+		brilliant
+		quick
+		smart
+		bright
+		dim
+		slow
+		idiot
+		imbecile
+	}
+	diplomacy = -2
+	intrigue = -2
+	stewardship = -2
+	martial = -2
+	customizer = no
+
+	ai_rationality = -10
+}
+dim = {
+	birth = 50
+	inherit_chance = 1
+
+	opposites = {
+		genius
+		brilliant
+		quick
+		smart
+		bright
+		dumb
+		slow
+		idiot
+		imbecile
+	}
+	diplomacy = -1
+	intrigue = -1
+	stewardship = -1
+	martial = -1
+	customizer = no
+
+	ai_rationality = -5
+}
+#strong = {
+#	birth = 100
+#	inherit_chance = 1
+#
+#	opposites = {
+#		tough
+#		hardy
+#		soft
+#		fragile
+#		weak
+#	}
+#	diplomacy = 1
+#	martial = 2
+#
+#	health = 1.5
+#	fertility = 0.1
+#
+#	sex_appeal_opinion = 10
+#	vassal_opinion = 10
+#}
+
+tough = {
+	birth = 100
+	inherit_chance = 1
+
+	opposites = {
+		strong
+		hardy
+		soft
+		fragile
+		weak
+	}
+	martial = 2
+
+	health = 1
+	fertility = 0.05
+customizer = no
+	sex_appeal_opinion = 10
+	vassal_opinion = 5
+}
+hardy = {
+	birth = 100
+	inherit_chance = 1
+
+	opposites = {
+		string
+		tough
+		soft
+		fragile
+		weak
+	}
+	martial = 1
+	customizer = no
+
+	health = 0.5
+
+	vassal_opinion = 5
+}
+#weak = {
+#	birth = 100
+#	inherit_chance = 1
+#	opposites = {
+#		strong
+#		tough
+#		hardy
+#		soft
+#		fragile
+#	}
+#	diplomacy = -1
+#	martial = -1
+#
+#	health = -1
+#	fertility = -0.05
+#
+#	sex_appeal_opinion = -10
+#	vassal_opinion = -10
+#}
+
+fragile = {
+	birth = 100
+	inherit_chance = 1
+
+	opposites = {
+		strong
+		tough
+		hardy
+		soft
+		weak
+	}
+	martial = -1
+	customizer = no
+
+	health = -1
+	fertility = -0.05
+
+	sex_appeal_opinion = -10
+	vassal_opinion = -5
+}
+soft = {
+	birth = 100
+	inherit_chance = 1
+
+	opposites = {
+		strong
+		tough
+		hardy
+		fragile
+		weak
+	}
+	martial = -1
+	customizer = no
+
+	health = -0.5
+
+	vassal_opinion = -5
+}
+#fair = {
+#	birth = 100
+#	inherit_chance = 1
+#
+#	opposites = {
+#		beautiful
+#		pretty
+#		plain
+#		ugly
+#		unsightly
+#	}
+#	diplomacy = 1
+#	sex_appeal_opinion = 10
+#}
+
+pretty = {
+	birth = 100
+	inherit_chance = 1
+
+	opposites = {
+		beautiful
+		fair
+		plain
+		ugly
+		unsightly
+		monstrous
+	}
+	diplomacy = 2
+	customizer = no
+	sex_appeal_opinion = 25
+	fertility = 0.05
+}
+beautiful = {
+	birth = 100
+	inherit_chance = 1
+
+	opposites = {
+		pretty
+		fair
+		plain
+		ugly
+		unsightly
+		monstrous
+	}
+	diplomacy = 3
+	customizer = no
+	sex_appeal_opinion = 40
+	fertility = 0.1
+}
+plain = {
+	birth = 100
+	inherit_chance = 1
+
+	opposites = {
+		beautiful
+		pretty
+		fair
+		ugly
+		unsightly
+		monstrous
+	}
+	sex_appeal_opinion = -10
+	customizer = no
+}
+#ugly = {
+#	birth = 100
+#	inherit_chance = 1
+#
+#	opposites = {
+#		beautiful
+#		pretty
+#		fair
+#		plain
+#		unsightly
+#	}
+#	diplomacy = -1
+#	sex_appeal_opinion = -50
+#	fertility = -0.05
+#}
+
+unsightly = {
+	birth = 100
+	inherit_chance = 1
+
+	opposites = {
+		beautiful
+		pretty
+		fair
+		plain
+		ugly
+		monstrous
+	}
+	customizer = no
+	diplomacy = -2
+	sex_appeal_opinion = -30
+	general_opinion = -3
+	fertility = -0.1
+}

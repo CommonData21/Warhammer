@@ -1,0 +1,16 @@
+# c_tianquizco
+
+# County Title
+title = c_tianquizco
+
+# Settlements
+max_settlements = 2
+
+b_tianquizco = tribal
+#b_miqui = city
+
+# Misc
+culture = lizardman
+religion = old_ones
+terrain = jungle
+#History

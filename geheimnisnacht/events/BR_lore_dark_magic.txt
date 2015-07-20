@@ -1,0 +1,54 @@
+# namespace = darkmagic
+
+# #doombolt
+# # character_event = {
+	# id = darkmagic.0
+	# title = SPELLCASTING
+	# desc = darkmagic0 #The spell has expired and the troops and flag are removed
+	# picture = "GFX_evt_miscast"
+	# hide_window = yes
+	
+	# is_triggered_only = yes
+	
+	# option = {
+	# name = OK
+	# clr_character_flag = cast_doombolt
+	# disband_event_forces = doom_bolt_troops
+	# }
+	
+	# }
+
+# #bladewind
+# character_event = {
+	# id = darkmagic.1
+	# title = SPELLCASTING
+	# desc = darkmagic0 #The spell has expired and the troops and flag are removed
+	# picture = "GFX_evt_miscast"
+	# hide_window = yes
+	
+	# is_triggered_only = yes
+	
+	# option = {
+	# name = OK
+	# clr_character_flag = cast_bladewind
+	# disband_event_forces = bladewind_troops
+	# }
+	
+	# }
+	
+# character_event = {
+	# id = darkmagic.2
+	# title = SPELLCASTING
+	# desc = darkmagic0 #The spell has expired and the troops and flag are removed
+	# picture = "GFX_evt_miscast"
+	# hide_window = yes
+	
+	# is_triggered_only = yes
+	
+	# option = {
+	# name = OK
+	# clr_character_flag = cast_arnizpals_black_horror
+	# disband_event_forces = arnizpals_black_horror_troops
+	# }
+	
+	# }

@@ -1,0 +1,15 @@
+# c_hyparis
+
+# County Title
+title = c_hyparis
+
+# Settlements
+max_settlements = 1
+
+b_hyparis = tribal
+
+# Misc
+culture = autarri
+religion = anath_raema
+
+#History

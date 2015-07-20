@@ -1,0 +1,161 @@
+castle={
+
+	ca_naggarond = {
+		desc = ca_naggarond_desc
+		
+		fort_level = 8
+		gold_cost = 1000
+		build_time = 3000
+		archers=50
+		pikemen=50
+		heavy_infantry=50
+		garrison_size = 0.50
+		tax_income = 2.5
+		ai_creation_factor = 97
+		local_revolt_risk = -0.05
+		
+		potential = {
+			FROMFROM = { title = b_naggarond } #
+		}
+
+		extra_tech_building_start = 0.2
+	}
+	
+	ca_ghrond = {
+		desc = ca_ghrond_desc
+		
+		fort_level = 6
+		gold_cost = 1000
+		build_time = 3000
+		archers=50
+		pikemen=50
+		heavy_infantry=50
+		garrison_size = 0.75
+		tax_income = 2.5
+		ai_creation_factor = 97
+		local_revolt_risk = -0.05
+		
+		potential = {
+			FROMFROM = { title = b_ghrond } #
+		}
+
+		extra_tech_building_start = 0.2
+	}
+	
+	ca_hag_graef = {
+		desc = ca_hag_graef_desc
+		
+		fort_level = 5
+		gold_cost = 1000
+		build_time = 3000
+		archers=50
+		pikemen=50
+		heavy_infantry=50
+		garrison_size = 0.75
+		tax_income = 5
+		ai_creation_factor = 97
+		local_revolt_risk = -0.05
+		
+		potential = {
+			FROMFROM = { title = b_hag_graef } #
+		}
+
+		extra_tech_building_start = 0.2
+	}
+	
+	ca_karond_kar = {
+		desc = ca_karond_kar_desc
+		
+		fort_level = 5
+		gold_cost = 1000
+		build_time = 3000
+		archers=50
+		pikemen=50
+		heavy_infantry=50
+		galleys = 100
+		garrison_size = 0.50
+		tax_income = 10
+		ai_creation_factor = 97
+		local_revolt_risk = -0.05
+		
+		potential = {
+			FROMFROM = { title = b_karond_kar } #
+		}
+
+		extra_tech_building_start = 0.2
+	}
+	
+	
+	ca_clar_karond = {
+		desc = ca_clar_karond_desc
+		
+		fort_level = 4
+		gold_cost = 1000
+		build_time = 3000
+		archers=50
+		pikemen=50
+		heavy_infantry=50
+		garrison_size = 0.25
+		tax_income = 5
+		ai_creation_factor = 97
+		local_revolt_risk = -0.05
+		
+		potential = {
+			FROMFROM = { title = b_clar_karond } #
+		}
+
+		extra_tech_building_start = 0.2
+	}
+	
+	ca_har_ganeth = {
+		desc = ca_har_ganeth_desc
+		
+		fort_level = 4
+		gold_cost = 1000
+		build_time = 3000
+		archers=50
+		pikemen=50
+		light_infantry=50
+		garrison_size = 0.25
+		tax_income = 5
+		ai_creation_factor = 97
+		local_revolt_risk = -0.05
+		
+		potential = {
+			FROMFROM = { title = b_har_ganeth } #
+		}
+
+		extra_tech_building_start = 0.2
+	}
+	
+	ca_watch_towers = {
+		desc = ca_watch_towers_desc
+		fort_level = 4
+		gold_cost = 100
+		build_time = 1000
+		garrison_size = 0.25
+		light_infantry=25
+		archers=25
+		ai_creation_factor = 100
+		local_revolt_risk = -0.05
+		
+		potential = { 
+		OR = {
+		province_id = 1343 
+		province_id = 1406
+		province_id = 1387 
+		province_id = 1388
+		province_id = 1389
+		province_id = 1390 
+		province_id = 1391
+		province_id = 1381
+		province_id = 1386
+		province_id = 1383
+		province_id = 1385
+		}
+		} 
+
+		extra_tech_building_start = 0.0
+	}
+	
+	}

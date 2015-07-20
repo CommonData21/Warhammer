@@ -1,0 +1,33 @@
+##############
+#Holy orders #
+##############
+#
+#Dwarf
+#
+#d_the_hammerers = {
+#color = { 0 135 0 }
+#color2 = { 167 193 0 }
+#	
+#graphical_culture = holygfx
+#	
+	#landless = no
+#	
+	#allow = {
+		#religion_group = dwarf_gods_group
+		#has_global_flag = hammerer_regiments_reformed
+	#}
+	
+	#religion = ancestor_gods
+	#culture = dwarf_main
+	
+	#title = "CAPTAIN"
+	#foa = "CAPTAIN_FOA"
+	
+	#holy_order = yes
+	
+	#primary = yes
+	
+	#monthly_income = 10
+	
+	#mercenary_type = d_the_hammerers_modifiers
+#}

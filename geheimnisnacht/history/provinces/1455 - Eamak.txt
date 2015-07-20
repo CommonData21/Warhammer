@@ -1,0 +1,16 @@
+# c_eamak
+
+# County Title
+title = c_eamak
+
+# Settlements
+max_settlements = 2
+
+b_eamak = castle
+b_eamak_hag = city
+
+# Misc
+culture = clari
+religion = cytharai
+
+#History

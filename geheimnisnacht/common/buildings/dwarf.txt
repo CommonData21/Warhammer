@@ -1,0 +1,138 @@
+castle = {
+	ca_mine_1 = {
+		desc = ca_mine_1_desc
+		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+		gold_cost = 100
+		build_time = 365
+		tax_income = 3
+		ai_creation_factor = 100
+		heavy_infantry = 40
+		extra_tech_building_start = 10.0 # Never get at start of game
+		potential = {
+			culture_group = dwarf_group
+			OR = {
+				terrain = mountain
+				terrain = mountain_pass
+				terrain = impassable_mountains
+			}
+		}
+	}
+	ca_mine_2 = {
+		desc = ca_mine_2_desc
+		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+		prerequisites = { ca_wall_1 }
+		upgrades_from = ca_mine_1
+		gold_cost = 120
+		build_time = 547
+		tax_income = 4
+		ai_creation_factor = 99
+		heavy_infantry = 40
+		extra_tech_building_start = 10.0 # Never get at start of game
+		potential = {
+			culture_group = dwarf_group
+			OR = {
+				terrain = mountain
+				terrain = mountain_pass
+				terrain = impassable_mountains
+			}
+		}
+	}
+	ca_mine_3 = {
+		desc = ca_mine_3_desc
+		trigger = { TECH_CASTLE_CONSTRUCTION = 1 }
+		prerequisites = { ca_wall_2 }
+		upgrades_from = ca_mine_2
+		gold_cost = 200
+		build_time = 730
+		tax_income = 5
+		ai_creation_factor = 98
+		heavy_infantry = 40
+		extra_tech_building_start = 10.0 # Never get at start of game
+		potential = {
+			culture_group = dwarf_group
+			OR = {
+				terrain = mountain
+				terrain = mountain_pass
+				terrain = impassable_mountains
+			}
+		}
+	}
+	ca_mine_4 = {
+		desc = ca_mine_4_desc
+		trigger = { TECH_CASTLE_CONSTRUCTION = 2 }
+		upgrades_from = ca_mine_3
+		gold_cost = 300
+		build_time = 1095
+		tax_income = 5
+		ai_creation_factor = 97
+		heavy_infantry = 40
+		extra_tech_building_start = 10.0 # Never get at start of game
+		potential = {
+			culture_group = dwarf_group
+			OR = {
+				terrain = mountain
+				terrain = mountain_pass
+				terrain = impassable_mountains
+			}
+		}
+	}
+	ca_mine_5 = {
+		desc = ca_mine_4_desc
+		trigger = { TECH_CASTLE_CONSTRUCTION = 3 }
+		upgrades_from = ca_mine_4
+		gold_cost = 400
+		build_time = 2190
+		tax_income = 5
+		ai_creation_factor = 96
+		heavy_infantry = 40
+		extra_tech_building_start = 10.0 # Never get at start of game
+		potential = {
+			culture_group = dwarf_group
+			OR = {
+				terrain = mountain
+				terrain = mountain_pass
+				terrain = impassable_mountains
+			}
+		}
+	}
+	ca_mine_6 = {
+		desc = ca_mine_5_desc
+		trigger = { TECH_CASTLE_CONSTRUCTION = 4 }
+		upgrades_from = ca_mine_5
+		gold_cost = 500
+		build_time = 2190
+		tax_income = 8
+		ai_creation_factor = 96
+		heavy_infantry = 40
+		extra_tech_building_start = 10.0 # Never get at start of game
+		potential = {
+			culture_group = dwarf_group
+			OR = {
+				terrain = mountain
+				terrain = mountain_pass
+				terrain = impassable_mountains
+			}
+		}
+	}
+	
+	ca_dwarfhold_1 = {
+		desc = ca_dwarfhold_1_desc
+		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+		gold_cost = 600
+		build_time = 2190
+		ai_creation_factor = 96
+		heavy_infantry = 30
+		fort_level = 3.0
+		garrison_size = 0.01
+		extra_tech_building_start = 0.0
+		potential = {
+			FROM = { culture_group = dwarf_group }
+			OR = {
+				terrain = mountain
+				terrain = mountain_pass
+				terrain = impassable_mountains
+			}
+		}
+	}
+	
+	}

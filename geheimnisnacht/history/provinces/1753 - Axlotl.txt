@@ -1,0 +1,17 @@
+# c_axlotl
+
+# County Title
+title = c_axlotl
+
+# Settlements
+max_settlements = 3
+
+b_axlotl = tribal
+#b_icnoyotl = city
+#b_pachal = temple
+
+# Misc
+culture = lizardman
+religion = old_ones
+terrain = jungle
+#History

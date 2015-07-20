@@ -1,0 +1,216 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+###General
+temple_baron;Priest;;;;;;;;;;;;;x
+temple_baron_female;Priestess;;;;;;;;;;;;;x
+temple_count;High Priest;;;;;;;;;;;;;x
+temple_count_female;High Priestess;;;;;;;;;;;;;x
+temple_duke;Patriarch;;;;;;;;;;;;;x
+temple_duke_female;Matriarch;;;;;;;;;;;;;x
+temple_king;Patriarch Superior;;;;;;;;;;;;;x
+temple_king_female;Matriarch Superior;;;;;;;;;;;;;x
+temple_emperor;High Patriarch;;;;;;;;;;;;;x
+temple_emperor_female;High Matriarch;;;;;;;;;;;;;x
+temple_barony;Temple;;;;;;;;;;;;;x
+temple_county;Grand Temple;;;;;;;;;;;;;x
+temple_duchy;Protectorate;;;;;;;;;;;;;x
+temple_kingdom;Grand Protectorate;;;;;;;;;;;;;x
+temple_empire;High Protectorate;;;;;;;;;;;;;x
+temple_barony_of;Temple of;;;;;;;;;;;;;x
+temple_county_of;Grand Temple of;;;;;;;;;;;;;x
+temple_duchy_of;Protectorate of;;;;;;;;;;;;;x
+temple_kingdom_of;Grand Protectorate of;;;;;;;;;;;;;x
+temple_empire_of;High Protectorate of;;;;;;;;;;;;;x
+job_spiritual;Court Priest;;;;;;;;;;;;;x
+job_spiritual_female;Court Priestess;;;;;;;;;;;;;x
+###Old World
+#Sigmarite
+temple_baron_sigmarite;Abbot;;;;;;;;;;;;;x
+temple_baron_female_sigmarite;Abbess;;;;;;;;;;;;;x
+temple_count_sigmarite;Lord Abbot;;;;;;;;;;;;;x
+temple_count_female_sigmarite;Lady Abbess;;;;;;;;;;;;;x
+temple_duke_sigmarite;Grand Lector;;;;;;;;;;;;;x
+temple_duke_female_sigmarite;Grand Lector;;;;;;;;;;;;;x
+temple_king_sigmarite;Prince-Lector;;;;;;;;;;;;;x
+temple_king_female_sigmarite;Princess-Lector;;;;;;;;;;;;;x
+temple_barony_of_sigmarite;Abbey of;;;;;;;;;;;;;x
+temple_county_of_sigmarite;Grand Abbey of;;;;;;;;;;;;;x
+temple_duchy_of_sigmarite;Grand Lectory of;;;;;;;;;;;;;x
+temple_kingdom_of_sigmarite;Prince-Lectory of;;;;;;;;;;;;;x
+#Grail
+temple_baron_grail;Elder;;;;;;;;;;;;;x
+temple_baron_female_grail;Elder;;;;;;;;;;;;;x
+temple_count_grail;High Elder;;;;;;;;;;;;;x
+temple_count_female_grail;High Elder;;;;;;;;;;;;;x
+temple_barony_of_grail;Chapel of;;;;;;;;;;;;;x
+temple_county_of_grail;Great Chapel of;;;;;;;;;;;;;x
+#Ulrican
+##Nothing unique
+#Taalite
+##Nothing unique
+#Myrmidian
+##Nothing unique
+#Shallyan
+##Nothing unique
+#Manannite
+##Nothing unique
+#Old Faith
+temple_baron_old_faith;Druid;;;;;;;;;;;;;x
+temple_baron_female_old_faith;Druidess;;;;;;;;;;;;;x
+temple_count_old_faith;Elder Druid;;;;;;;;;;;;;x
+temple_count_female_old_faith;Elder Druidess;;;;;;;;;;;;;x
+temple_duke_old_faith;Archdruid;;;;;;;;;;;;;x
+temple_duke_female_old_faith;Archdruidess;;;;;;;;;;;;;x
+temple_barony_of_old_faith;Sacred Grove of;;;;;;;;;;;;;x
+temple_county_of_old_faith;Sacred Woods of;;;;;;;;;;;;;x
+temple_duchy_of_old_faith;Sacred Forest of;;;;;;;;;;;;;x
+#Ursun
+##Nothing unique
+###Halfling Group
+temple_baron_halfling_gods_group;Hearth Brother;;;;;;;;;;;;;x
+temple_baron_female_halfling_gods_group;Hearth Sister;;;;;;;;;;;;;x
+temple_count_halfling_gods_group;Hearth Father;;;;;;;;;;;;;x
+temple_count_female_halfling_gods_group;Hearth Mother;;;;;;;;;;;;;x
+temple_duke_halfling_gods_group;Hearth Elder;;;;;;;;;;;;;x
+temple_duke_female_halfling_gods_group;Hearth Elder;;;;;;;;;;;;;x
+temple_king_halfling_gods_group;Prince-Elder;;;;;;;;;;;;;x
+temple_king_female_halfling_gods_group;Princess-Elder;;;;;;;;;;;;;x
+temple_emperor_halfling_gods_group;Lord Elder;;;;;;;;;;;;;x
+temple_emperor_female_halfling_gods_group;Lady Elder;;;;;;;;;;;;;x
+temple_barony_of_halfling_gods_group;Temple of;;;;;;;;;;;;;x
+temple_county_of_halfling_gods_group;Grand Temple of;;;;;;;;;;;;;x
+temple_duchy_of_halfling_gods_group;Protectorate of;;;;;;;;;;;;;x
+temple_kingdom_of_halfling_gods_group;Grand Protectorate of;;;;;;;;;;;;;x
+temple_empire_of_halfling_gods_group;High Protectorate of;;;;;;;;;;;;;x
+###Old Gods Group
+temple_baron_old_gods_group;Priest;;;;;;;;;;;;;x
+temple_baron_female_old_gods_group;Priestess;;;;;;;;;;;;;x
+temple_count_old_gods_group;High Priest;;;;;;;;;;;;;x
+temple_count_female_old_gods_group;High Priestess;;;;;;;;;;;;;x
+temple_duke_old_gods_group;Elder;;;;;;;;;;;;;x
+temple_duke_female_old_gods_group;Elder;;;;;;;;;;;;;x
+temple_king_old_gods_group;Prince-Elder;;;;;;;;;;;;;x
+temple_king_female_old_gods_group;Princess-Elder;;;;;;;;;;;;;x
+temple_emperor_old_gods_group;Lord Elder;;;;;;;;;;;;;x
+temple_emperor_female_old_gods_group;Lady Elder;;;;;;;;;;;;;x
+temple_barony_of_old_gods_group;Temple of;;;;;;;;;;;;;x
+temple_county_of_old_gods_group;Grand Temple of;;;;;;;;;;;;;x
+temple_duchy_of_old_gods_group;Protectorate of;;;;;;;;;;;;;x
+temple_kingdom_of_old_gods_group;Grand Protectorate of;;;;;;;;;;;;;x
+temple_empire_of_old_gods_group;High Protectorate of;;;;;;;;;;;;;x
+#Norscan
+temple_baron_norscan_gods;Goði;;;;;;;;;;;;;x
+temple_baron_female_norscan_gods;Goði;;;;;;;;;;;;;x
+temple_count_norscan_gods;Seiðr;;;;;;;;;;;;;x
+temple_count_female_norscan_gods;Seiðr;;;;;;;;;;;;;x
+temple_duke_norscan_gods;Fylkir;;;;;;;;;;;;;x
+temple_duke_female_norscan_gods;Fylkir;;;;;;;;;;;;;x
+temple_king_norscan_gods;Fylkir-King;;;;;;;;;;;;;x
+temple_king_female_norscan_gods;Fylkir-Queen;;;;;;;;;;;;;x
+temple_emperor_norscan_gods;High Fylkir-King;;;;;;;;;;;;;x
+temple_emperor_female_norscan_gods;High Fylkir-Queen;;;;;;;;;;;;;x
+temple_barony_of_norscan_gods;Temple of;;;;;;;;;;;;;x
+temple_county_of_norscan_gods;Grand Temple of;;;;;;;;;;;;;x
+temple_duchy_of_norscan_gods;Fylkirate of;;;;;;;;;;;;;x
+temple_kingdom_of_norscan_gods;Fylkirate Kingdom of;;;;;;;;;;;;;x
+temple_empire_of_norscan_gods;High Fylkirate Kingdom of;;;;;;;;;;;;;x
+#Stromfels
+#Temple
+temple_baron_stromfels;Wrecker;;;;;;;;;;;;;x
+temple_count_stromfels;High Wrecker;;;;;;;;;;;;;x
+temple_duke_stromfels;Master Wrecker;;;;;;;;;;;;;x
+temple_king_stromfels;Sharklord;;;;;;;;;;;;;x
+#Barony
+count_stromfels;Captain;;;;;;;;;;;;;x
+count_female_stromfels;Captain;;;;;;;;;;;;;x
+duke_stromfels;Pirate Lord;;;;;;;;;;;;;x
+duke_female_stromfels;Pirate Lady;;;;;;;;;;;;;x
+king_stromfels;Pirate Prince;;;;;;;;;;;;;x;
+king_female_stromfels;Pirate Princess;;;;;;;;;;;;;x;
+emperor_stromfels;Pirate King;;;;;;;;;;;;;x;
+emperor_female_stromfels;Pirate Queen;;;;;;;;;;;;;x;
+duchy_of_stromfels;Pirate Lordship of;;;;;;;;;;;;;x;
+kingdom_of_stromfels;Pirate Principality of;;;;;;;;;;;;;x;
+empire_of_stromfels;Pirate Kingdom of;;;;;;;;;;;;;x;
+#City
+city_king_stromfels;Pirate Prince;;;;;;;;;;;;;x;
+city_emperor_stromfels;Pirate King;;;;;;;;;;;;;x;
+city_kingdom_of_stromfels;Pirate Principality of;;;;;;;;;;;;;x;
+city_empire_of_stromfels;Pirate Kingdom of;;;;;;;;;;;;;x;
+###Dwarf Gods Group
+temple_baron_dwarf_gods_group;Lorekeeper;;;;;;;;;;;;;x
+temple_baron_female_dwarf_gods_group;Lorekeeper;;;;;;;;;;;;;x
+temple_count_dwarf_gods_group;High Lorekeeper;;;;;;;;;;;;;x
+temple_count_female_dwarf_gods_group;High Lorekeeper;;;;;;;;;;;;;x
+temple_duke_dwarf_gods_group;Elder-Thane;;;;;;;;;;;;;x
+temple_duke_female_dwarf_gods_group;Elder-Thaness;;;;;;;;;;;;;x
+temple_king_dwarf_gods_group;Elder-King;;;;;;;;;;;;;x
+temple_king_female_dwarf_gods_group;Elder-Queen;;;;;;;;;;;;;x
+temple_emperor_dwarf_gods_group;High Elder-King;;;;;;;;;;;;;x
+temple_emperor_female_dwarf_gods_group;High Elder-Queen;;;;;;;;;;;;;x
+temple_barony_of_dwarf_gods_group;Temple of;;;;;;;;;;;;;x
+temple_county_of_dwarf_gods_group;Temple-Hold of;;;;;;;;;;;;;x
+temple_duchy_of_dwarf_gods_group;Great Temple-Hold of;;;;;;;;;;;;;x
+temple_kingdom_of_dwarf_gods_group;Kingdom of;;;;;;;;;;;;;x
+temple_empire_of_dwarf_gods_group;High Kingdom of;;;;;;;;;;;;;x
+###Greenskin Gods Group
+temple_baron_greenskin_gods_group;Shaman;;;;;;;;;;;;;x
+temple_count_greenskin_gods_group;Chief Shaman;;;;;;;;;;;;;x
+temple_duke_greenskin_gods_group;Boss;;;;;;;;;;;;;x
+temple_king_greenskin_gods_group;Warboss;;;;;;;;;;;;;x
+temple_emperor_greenskin_gods_group;Warlord;;;;;;;;;;;;;x
+temple_barony_of_greenskin_gods_group;Odd Tribe of;;;;;;;;;;;;;x
+temple_county_of_greenskin_gods_group;Odd Clan of;;;;;;;;;;;;;x
+temple_duchy_of_greenskin_gods_group;Horde of;;;;;;;;;;;;;x
+temple_kingdom_of_greenskin_gods_group;Great Horde of;;;;;;;;;;;;;x
+temple_empire_of_greenskin_gods_group;Empire of;;;;;;;;;;;;;x
+temple_barony_greenskin_gods_group;Odd Tribe;;;;;;;;;;;;;x
+temple_county_greenskin_gods_group;Odd Clan;;;;;;;;;;;;;x
+temple_duchy_greenskin_gods_group;Horde;;;;;;;;;;;;;x
+temple_kingdom_greenskin_gods_group;Great Horde;;;;;;;;;;;;;x
+temple_empire_greenskin_gods_group;Empire;;;;;;;;;;;;;x
+###Beastman Group
+temple_baron_beastman_gods_group;Bray Shaman;;;;;;;;;;;;;x
+temple_count_beastman_gods_group;Great Bray Shaman;;;;;;;;;;;;;x
+temple_duke_beastman_gods_group;Braymaster;;;;;;;;;;;;;x
+temple_king_beastman_gods_group;Braylord;;;;;;;;;;;;;x
+temple_emperor_beastman_gods_group;Great Braylord;;;;;;;;;;;;;x
+temple_barony_of_beastman_gods_group;Brayherd of;;;;;;;;;;;;;x
+temple_county_of_beastman_gods_group;Bray Warherd of;;;;;;;;;;;;;x
+temple_duchy_of_beastman_gods_group;Bray Horde of;;;;;;;;;;;;;x
+temple_kingdom_of_beastman_gods_group;Bray Beastherd of;;;;;;;;;;;;;x
+temple_empire_of_beastman_gods_group;Empire of;;;;;;;;;;;;;x
+temple_barony_beastman_gods_group;Brayherd;;;;;;;;;;;;;x
+temple_county_beastman_gods_group;Bray Warherd;;;;;;;;;;;;;x
+temple_duchy_beastman_gods_group;Bray Horde;;;;;;;;;;;;;x
+temple_kingdom_beastman_gods_group;Bray Beastherd;;;;;;;;;;;;;x
+temple_empire_beastman_gods_group;Empire;;;;;;;;;;;;;x
+###Necromantic Group
+temple_baron_necromantic_group;Brother;;;;;;;;;;;;;x
+temple_baron_female_necromantic_group;Sister;;;;;;;;;;;;;x
+temple_count_necromantic_group;Father;;;;;;;;;;;;;x
+temple_count_female_necromantic_group;Mother;;;;;;;;;;;;;x
+temple_duke_necromantic_group;Prince;;;;;;;;;;;;;x
+temple_duke_female_necromantic_group;Princess;;;;;;;;;;;;;x
+temple_king_necromantic_group;King;;;;;;;;;;;;;x
+temple_king_female_necromantic_group;Queen;;;;;;;;;;;;;x
+temple_emperor_necromantic_group;High King;;;;;;;;;;;;;x
+temple_emperor_female_necromantic_group;High Queen;;;;;;;;;;;;;x
+temple_barony_of_necromantic_group;Sepulcher of;;;;;;;;;;;;;x
+temple_county_of_necromantic_group;Grand Sepulcher of;;;;;;;;;;;;;x
+temple_duchy_of_necromantic_group;Domain of;;;;;;;;;;;;;x
+temple_kingdom_of_necromantic_group;Kingdom of;;;;;;;;;;;;;x
+temple_empire_of_necromantic_group;High Kingdom of;;;;;;;;;;;;;x
+temple_barony_necromantic_group;Sepulcher;;;;;;;;;;;;;x
+temple_county_necromantic_group;Grand Sepucher;;;;;;;;;;;;;x
+temple_duchy_necromantic_group;Domain;;;;;;;;;;;;;x
+temple_kingdom_necromantic_group;Kingdom;;;;;;;;;;;;;x
+temple_empire_necromantic_group;High Kingdom;;;;;;;;;;;;;x
+###Nekeharan Group
+temple_baron_nehekharan_gods_group;Liche Priest;;;;;;;;;;;;;x
+temple_baron_female_nehekharan_gods_group;Liche Priestess;;;;;;;;;;;;;x
+temple_count_nehekharan_gods_group;Liche High Priest;;;;;;;;;;;;;x
+temple_count_female_nehekharan_gods_group;Liche High Priestess;;;;;;;;;;;;;x
+temple_duke_nehekharan_gods_group;Liche Grand Priest;;;;;;;;;;;;;x
+temple_duke_female_nehekharan_gods_group;Liche Grand Priestess;;;;;;;;;;;;;x
+temple_king_nehekharan_gods_group;Liche Priest-King;;;;;;;;;;;;;x
+temple_king_female_nehekharan_gods_group;Liche Priestess-Queen;;;;;;;;;;;;;x

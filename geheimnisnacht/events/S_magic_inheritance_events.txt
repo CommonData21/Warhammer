@@ -1,0 +1,1338 @@
+namespace = magicpotential
+#####################################
+#####################################
+
+
+# On Birth event to assign the character flag
+character_event = {
+	id = magicpotential.1
+	hide_window = yes
+	
+	trigger = { 	#Exceptions
+			NOT = { culture_group = beastman_group }
+			NOT = { culture_group = daemonic_group }
+			NOT = { culture_group = dwarf_group }
+			NOT = { culture_group = dwarf_chaos_group }
+			NOT = { culture_group = forest_group }
+			NOT = { culture_group = goblin_group }
+			NOT = { culture_group = halfling_group }
+			NOT = { culture_group = immortal_group }
+			NOT = { culture_group = lahmian_group }
+			NOT = { culture_group = lizardman_group }
+			NOT = { culture_group = nehekharan_group }
+			NOT = { culture_group = ogre_group }
+			NOT = { culture_group = orc_group }
+			NOT = { culture_group = skaven_group }
+			 }
+
+	is_triggered_only = yes 
+	
+	immediate= {
+
+		if = { limit = { NOT = { father_even_if_dead = { trait = magic_potential_4 } }
+				NOT = { father_even_if_dead = { trait = magic_potential_3 } }
+				NOT = { father_even_if_dead = { trait = magic_potential_2 } }
+				NOT = { father_even_if_dead = { trait = magic_potential_1 } }
+				NOT = { father_even_if_dead = { has_character_flag = recessive_mage } }
+				NOT = { father_even_if_dead = { has_character_flag = magic_potential_flag_1 } }
+				NOT = { father_even_if_dead = { has_character_flag = magic_potential_flag_2 } }
+				NOT = { father_even_if_dead = { has_character_flag = magic_potential_flag_3 } }
+				NOT = { father_even_if_dead = { has_character_flag = magic_potential_flag_4 } }
+				NOT = { mother_even_if_dead = { trait = magic_potential_4 } } 
+				NOT = { mother_even_if_dead = { trait = magic_potential_3 } } 
+				NOT = { mother_even_if_dead = { trait = magic_potential_2 } } 
+				NOT = { mother_even_if_dead = { trait = magic_potential_1 } }
+				NOT = { mother_even_if_dead = { has_character_flag = recessive_mage } }
+				NOT = { mother_even_if_dead = { has_character_flag = magic_potential_flag_1 } }
+				NOT = { mother_even_if_dead = { has_character_flag = magic_potential_flag_2 } }
+				NOT = { mother_even_if_dead = { has_character_flag = magic_potential_flag_3 } }
+				NOT = { mother_even_if_dead = { has_character_flag = magic_potential_flag_4 } } 
+				}
+				random_list = { 90 = { #Nope
+							modifier = {
+								factor = 0.5
+								religion = tzeentch
+								}
+							modifier = {
+								factor = 2
+								religion = khorne
+								}
+							 } 
+						10 = { #New magic bloodline
+							set_character_flag = magic_potential_flag_1
+							 } 
+					} #closesrandomlist
+			} #closesif
+
+		#Magic Bloodlines
+		if = { limit = { OR = { father_even_if_dead = { trait = magic_potential_4 } 
+					father_even_if_dead = { trait = magic_potential_3 } 
+					father_even_if_dead = { trait = magic_potential_2 } 
+					father_even_if_dead = { trait = magic_potential_1 }
+					father_even_if_dead = { has_character_flag = recessive_mage }
+					father_even_if_dead = { has_character_flag = magic_potential_flag_1 }
+					father_even_if_dead = { has_character_flag = magic_potential_flag_2 }
+					father_even_if_dead = { has_character_flag = magic_potential_flag_3 }
+					father_even_if_dead = { has_character_flag = magic_potential_flag_4 }
+					mother_even_if_dead = { trait = magic_potential_4 } 
+					mother_even_if_dead = { trait = magic_potential_3 } 
+					mother_even_if_dead = { trait = magic_potential_2 } 
+					mother_even_if_dead = { trait = magic_potential_1 }
+					mother_even_if_dead = { has_character_flag = recessive_mage }
+					mother_even_if_dead = { has_character_flag = magic_potential_flag_1 }
+					mother_even_if_dead = { has_character_flag = magic_potential_flag_2 }
+					mother_even_if_dead = { has_character_flag = magic_potential_flag_3 }
+					mother_even_if_dead = { has_character_flag = magic_potential_flag_4 } } }
+		random_list = { 30 = { #bad luck
+					modifier = {
+						factor = 0
+						father_even_if_dead = { trait = magic_potential_4 }
+						mother_even_if_dead = { trait = magic_potential_4 }
+						}
+					modifier = {
+						factor = 0.15
+						father_even_if_dead = { trait = magic_potential_4 }
+						}
+					modifier = {
+						factor = 0.15
+						mother_even_if_dead = { trait = magic_potential_4 }
+						}
+					modifier = {
+						factor = 0.25
+						father_even_if_dead = { trait = magic_potential_3 }
+						}
+					modifier = {
+						factor = 0.25
+						mother_even_if_dead = { trait = magic_potential_3 }
+						}
+					modifier = {
+						factor = 0.5
+						father_even_if_dead = { trait = magic_potential_2 }
+						}
+					modifier = {
+						factor = 0.5
+						mother_even_if_dead = { trait = magic_potential_2 }
+						}
+					modifier = {
+						factor = 0.75
+						father_even_if_dead = { trait = magic_potential_1 }
+						}
+					modifier = {
+						factor = 0.75
+						mother_even_if_dead = { trait = magic_potential_1 }
+						}
+
+					modifier = {
+						factor = 0
+						father_even_if_dead = { has_character_flag = magic_potential_flag_4 }
+						mother_even_if_dead = { has_character_flag = magic_potential_flag_4 }
+						}
+					modifier = {
+						factor = 0.25
+						father_even_if_dead = { has_character_flag = magic_potential_flag_4 }
+						}
+					modifier = {
+						factor = 0.25
+						mother_even_if_dead = { has_character_flag = magic_potential_flag_4 }
+						}
+					modifier = {
+						factor = 0.45
+						father_even_if_dead = { has_character_flag = magic_potential_flag_3 }
+						}
+					modifier = {
+						factor = 0.45
+						mother_even_if_dead = { has_character_flag = magic_potential_flag_3 }
+						}
+					modifier = {
+						factor = 0.75
+						father_even_if_dead = { has_character_flag = magic_potential_flag_2 }
+						}
+					modifier = {
+						factor = 0.75
+						mother_even_if_dead = { has_character_flag = magic_potential_flag_2 }
+						}
+					modifier = {
+						factor = 0.85
+						father_even_if_dead = { has_character_flag = magic_potential_flag_1 }
+						}
+					modifier = {
+						factor = 0.85
+						mother_even_if_dead = { has_character_flag = magic_potential_flag_1 }
+						}
+					modifier = {
+						factor = 0.25
+						father_even_if_dead = { has_character_modifier = magic_power_4 }
+						}
+					modifier = {
+						factor = 0.25
+						mother_even_if_dead = { has_character_modifier = magic_power_4 }
+						}
+					modifier = {
+						factor = 0.5
+						father_even_if_dead = { has_character_modifier = magic_power_3 }
+						}
+					modifier = {
+						factor = 0.5
+						mother_even_if_dead = { has_character_modifier = magic_power_3 }
+						}
+					modifier = {
+						factor = 0.75
+						father_even_if_dead = { has_character_modifier = magic_power_2 }
+						}
+					modifier = {
+						factor = 0.75
+						mother_even_if_dead = { has_character_modifier = magic_power_2 }
+						}
+					modifier = {
+						factor = 0.95
+						father_even_if_dead = { has_character_modifier = magic_power_1 }
+						}
+					modifier = {
+						factor = 0.95
+						mother_even_if_dead = { has_character_modifier = magic_power_1 }
+						}
+					modifier = {
+						factor = 0.5
+						father_even_if_dead = { has_character_flag = recessive_mage }
+						}
+					modifier = {
+						factor = 0.5
+						mother_even_if_dead = { has_character_flag = recessive_mage }
+						}
+					modifier = {
+						factor = 0.95
+						father_even_if_dead = { trait = creature_elf }
+						}
+					modifier = {
+						factor = 0.95
+						mother_even_if_dead = { trait = creature_elf }
+						}
+					modifier = {
+						factor = 0.95
+						religion = tzeentch
+						}
+					modifier = {
+						factor = 1.25
+						religion = khorne
+						}
+					set_character_flag = recessive_mage		#flag only used in the trigger of this event
+					 } 
+				35 = { 
+					modifier = {
+						factor = 1.25
+						father_even_if_dead = { trait = magic_potential_1 }
+						}
+					modifier = {
+						factor = 1.25
+						mother_even_if_dead = { trait = magic_potential_1 }
+						}
+					modifier = {
+						factor = 1.35
+						father_even_if_dead = { trait = magic_potential_2 }
+						}
+					modifier = {
+						factor = 1.35
+						mother_even_if_dead = { trait = magic_potential_2 }
+						}
+					modifier = {
+						factor = 1.5
+						father_even_if_dead = { trait = magic_potential_3 }
+						}
+					modifier = {
+						factor = 1.5
+						mother_even_if_dead = { trait = magic_potential_3 }
+						}
+					modifier = {
+						factor = 1.75
+						father_even_if_dead = { trait = magic_potential_4 }
+						}
+					modifier = {
+						factor = 1.75
+						mother_even_if_dead = { trait = magic_potential_4 }
+						}
+					modifier = {
+						factor = 0.75
+						father_even_if_dead = { NOT = { trait = magic_potential_1 } 
+									NOT = { trait = magic_potential_2 } 
+									NOT = { trait = magic_potential_3 } 
+									NOT = { trait = magic_potential_4 }
+									NOT = { has_character_flag = magic_potential_flag_1 }
+									NOT = { has_character_flag = magic_potential_flag_2 }
+									NOT = { has_character_flag = magic_potential_flag_3 }
+									NOT = { has_character_flag = magic_potential_flag_4 } }
+						}
+					modifier = {
+						factor = 0.75
+						mother_even_if_dead = { NOT = { trait = magic_potential_1 } 
+									NOT = { trait = magic_potential_2 } 
+									NOT = { trait = magic_potential_3 } 
+									NOT = { trait = magic_potential_4 }
+									NOT = { has_character_flag = magic_potential_flag_1 }
+									NOT = { has_character_flag = magic_potential_flag_2 }
+									NOT = { has_character_flag = magic_potential_flag_3 }
+									NOT = { has_character_flag = magic_potential_flag_4 } }
+						}
+					modifier = {
+						factor = 1.15
+						father_even_if_dead = { has_character_flag = magic_potential_flag_1 }
+						}
+					modifier = {
+						factor = 1.15
+						mother_even_if_dead = { has_character_flag = magic_potential_flag_1 }
+						}
+					modifier = {
+						factor = 1.25
+						father_even_if_dead = { has_character_flag = magic_potential_flag_2 }
+						}
+					modifier = {
+						factor = 1.25
+						mother_even_if_dead = { has_character_flag = magic_potential_flag_2 }
+						}
+					modifier = {
+						factor = 1.35
+						father_even_if_dead = { has_character_flag = magic_potential_flag_3 }
+						}
+					modifier = {
+						factor = 1.35
+						mother_even_if_dead = { has_character_flag = magic_potential_flag_3 }
+						}
+					modifier = {
+						factor = 1.5
+						father_even_if_dead = { has_character_flag = magic_potential_flag_4 }
+						}
+					modifier = {
+						factor = 1.5
+						mother_even_if_dead = { has_character_flag = magic_potential_flag_4 }
+						}
+					modifier = {
+						factor = 1.05
+						father_even_if_dead = { has_character_modifier = magic_power_1 }
+						}
+					modifier = {
+						factor = 1.05
+						mother_even_if_dead = { has_character_modifier = magic_power_1 }
+						}
+					modifier = {
+						factor = 1.15
+						father_even_if_dead = { has_character_modifier = magic_power_2 }
+						}
+					modifier = {
+						factor = 1.15
+						mother_even_if_dead = { has_character_modifier = magic_power_2 }
+						}
+					modifier = {
+						factor = 1.25
+						father_even_if_dead = { has_character_modifier = magic_power_3 }
+						}
+					modifier = {
+						factor = 1.25
+						mother_even_if_dead = { has_character_modifier = magic_power_3 }
+						}
+					modifier = {
+						factor = 1.35
+						father_even_if_dead = { has_character_modifier = magic_power_4 }
+						}
+					modifier = {
+						factor = 1.35
+						mother_even_if_dead = { has_character_modifier = magic_power_4 }
+						}
+					modifier = {
+						factor = 1.5
+						father_even_if_dead = { has_character_flag = recessive_mage }
+						}
+					modifier = {
+						factor = 1.5
+						mother_even_if_dead = { has_character_flag = recessive_mage }
+						}
+					set_character_flag = magic_potential_flag_1
+					}
+				25 = { 
+					modifier = {
+						factor = 1.5
+						father_even_if_dead = { trait = magic_potential_2 }
+						}
+					modifier = {
+						factor = 1.5
+						mother_even_if_dead = { trait = magic_potential_2 }
+						}
+					modifier = {
+						factor = 1.75
+						father_even_if_dead = { trait = magic_potential_3 }
+						}
+					modifier = {
+						factor = 1.75
+						mother_even_if_dead = { trait = magic_potential_3 }
+						}
+					modifier = {
+						factor = 1.95
+						father_even_if_dead = { trait = magic_potential_4 }
+						}
+					modifier = {
+						factor = 1.95
+						mother_even_if_dead = { trait = magic_potential_4 }
+						}
+					modifier = {
+						factor = 0.5
+						father_even_if_dead = { NOT = { trait = magic_potential_1 } 
+									NOT = { trait = magic_potential_2 } 
+									NOT = { trait = magic_potential_3 } 
+									NOT = { trait = magic_potential_4 }
+									NOT = { has_character_flag = magic_potential_flag_1 }
+									NOT = { has_character_flag = magic_potential_flag_2 }
+									NOT = { has_character_flag = magic_potential_flag_3 }
+									NOT = { has_character_flag = magic_potential_flag_4 } }
+						}
+					modifier = {
+						factor = 0.5
+						mother_even_if_dead = { NOT = { trait = magic_potential_1 } 
+									NOT = { trait = magic_potential_2 } 
+									NOT = { trait = magic_potential_3 } 
+									NOT = { trait = magic_potential_4 }
+									NOT = { has_character_flag = magic_potential_flag_1 }
+									NOT = { has_character_flag = magic_potential_flag_2 }
+									NOT = { has_character_flag = magic_potential_flag_3 }
+									NOT = { has_character_flag = magic_potential_flag_4 } }
+						}
+					modifier = {
+						factor = 1.35
+						father_even_if_dead = { has_character_flag = magic_potential_flag_2 }
+						}
+					modifier = {
+						factor = 1.35
+						mother_even_if_dead = { has_character_flag = magic_potential_flag_2 }
+						}
+					modifier = {
+						factor = 1.5
+						father_even_if_dead = { has_character_flag = magic_potential_flag_3 }
+						}
+					modifier = {
+						factor = 1.5
+						mother_even_if_dead = { has_character_flag = magic_potential_flag_3 }
+						}
+					modifier = {
+						factor = 1.75
+						father_even_if_dead = { has_character_flag = magic_potential_flag_4 }
+						}
+					modifier = {
+						factor = 1.75
+						mother_even_if_dead = { has_character_flag = magic_potential_flag_4 }
+						}
+					modifier = {
+						factor = 1.25
+						father_even_if_dead = { has_character_modifier = magic_power_2 }
+						}
+					modifier = {
+						factor = 1.25
+						mother_even_if_dead = { has_character_modifier = magic_power_2 }
+						}
+					modifier = {
+						factor = 1.35
+						father_even_if_dead = { has_character_modifier = magic_power_3 }
+						}
+					modifier = {
+						factor = 1.35
+						mother_even_if_dead = { has_character_modifier = magic_power_3 }
+						}
+					modifier = {
+						factor = 1.45
+						father_even_if_dead = { has_character_modifier = magic_power_4 }
+						}
+					modifier = {
+						factor = 1.45
+						mother_even_if_dead = { has_character_modifier = magic_power_4 }
+						}
+					set_character_flag = magic_potential_flag_2
+					}
+				10 = { 
+					modifier = {
+						factor = 2
+						father_even_if_dead = { trait = magic_potential_3 }
+						}
+					modifier = {
+						factor = 2
+						mother_even_if_dead = { trait = magic_potential_3 }
+						}
+					modifier = {
+						factor = 2.5
+						father_even_if_dead = { trait = magic_potential_4 }
+						}
+					modifier = {
+						factor = 2.5
+						mother_even_if_dead = { trait = magic_potential_4 }
+						}
+					modifier = {
+						factor = 0.25
+						father_even_if_dead = { NOT = { trait = magic_potential_1 } 
+									NOT = { trait = magic_potential_2 } 
+									NOT = { trait = magic_potential_3 } 
+									NOT = { trait = magic_potential_4 }
+									NOT = { has_character_flag = magic_potential_flag_1 }
+									NOT = { has_character_flag = magic_potential_flag_2 }
+									NOT = { has_character_flag = magic_potential_flag_3 }
+									NOT = { has_character_flag = magic_potential_flag_4 } }
+						}
+					modifier = {
+						factor = 0.25
+						mother_even_if_dead = { NOT = { trait = magic_potential_1 } 
+									NOT = { trait = magic_potential_2 } 
+									NOT = { trait = magic_potential_3 } 
+									NOT = { trait = magic_potential_4 }
+									NOT = { has_character_flag = magic_potential_flag_1 }
+									NOT = { has_character_flag = magic_potential_flag_2 }
+									NOT = { has_character_flag = magic_potential_flag_3 }
+									NOT = { has_character_flag = magic_potential_flag_4 } }
+						}
+					modifier = {
+						factor = 1.75
+						father_even_if_dead = { has_character_flag = magic_potential_flag_3 }
+						}
+					modifier = {
+						factor = 1.75
+						mother_even_if_dead = { has_character_flag = magic_potential_flag_3 }
+						}
+					modifier = {
+						factor = 2
+						father_even_if_dead = { has_character_flag = magic_potential_flag_4 }
+						}
+					modifier = {
+						factor = 2
+						mother_even_if_dead = { has_character_flag = magic_potential_flag_4 }
+						}
+					modifier = {
+						factor = 1.45
+						father_even_if_dead = { has_character_modifier = magic_power_3 }
+						}
+					modifier = {
+						factor = 1.45
+						mother_even_if_dead = { has_character_modifier = magic_power_3 }
+						}
+					modifier = {
+						factor = 1.5
+						father_even_if_dead = { has_character_modifier = magic_power_4 }
+						}
+					modifier = {
+						factor = 1.5
+						mother_even_if_dead = { has_character_modifier = magic_power_4 }
+						}
+					set_character_flag = magic_potential_flag_3 }
+				5 = { 
+					modifier = {
+						factor = 2.75
+						father_even_if_dead = { trait = magic_potential_4 }
+						}
+					modifier = {
+						factor = 2.75
+						mother_even_if_dead = { trait = magic_potential_4 }
+						}
+					modifier = {
+						factor = 0.15
+						father_even_if_dead = { NOT = { trait = magic_potential_1 } 
+									NOT = { trait = magic_potential_2 } 
+									NOT = { trait = magic_potential_3 } 
+									NOT = { trait = magic_potential_4 }
+									NOT = { has_character_flag = magic_potential_flag_1 }
+									NOT = { has_character_flag = magic_potential_flag_2 }
+									NOT = { has_character_flag = magic_potential_flag_3 }
+									NOT = { has_character_flag = magic_potential_flag_4 } }
+						}
+					modifier = {
+						factor = 0.15
+						mother_even_if_dead = { NOT = { trait = magic_potential_1 } 
+									NOT = { trait = magic_potential_2 } 
+									NOT = { trait = magic_potential_3 } 
+									NOT = { trait = magic_potential_4 }
+									NOT = { has_character_flag = magic_potential_flag_1 }
+									NOT = { has_character_flag = magic_potential_flag_2 }
+									NOT = { has_character_flag = magic_potential_flag_3 }
+									NOT = { has_character_flag = magic_potential_flag_4 } }
+						}
+					modifier = {
+						factor = 2.25
+						father_even_if_dead = { has_character_flag = magic_potential_flag_4 }
+						}
+					modifier = {
+						factor = 2.25
+						mother_even_if_dead = { has_character_flag = magic_potential_flag_4 }
+						}
+					modifier = {
+						factor = 1.65
+						father_even_if_dead = { has_character_modifier = magic_power_4 }
+						}
+					modifier = {
+						factor = 1.65
+						mother_even_if_dead = { has_character_modifier = magic_power_4 }
+						}
+					modifier = {
+						factor = 1.25
+						religion = tzeentch
+						}
+					set_character_flag = magic_potential_flag_4 }
+				} #closesrandomlist
+			 } #closesif
+	}
+}
+
+# Hidden event on_adulthood to determine if the character is discovered
+character_event = {
+	id = magicpotential.2
+	hide_window = yes
+	
+	capable_only = yes
+
+	trigger = { 	has_character_flag = magic_potential_flag_1
+			has_character_flag = magic_potential_flag_2
+			has_character_flag = magic_potential_flag_3
+			has_character_flag = magic_potential_flag_4
+			
+			 }
+	#add magic_powers modifiers above, mages should be more likely to produce magical offspring
+	is_triggered_only = yes
+	
+	immediate = {
+		random_list = { 	100 = { #no reason to hide
+						modifier = {
+							factor = 0
+							liege = { 
+								OR = {  religion = taalite 
+									religion = ulrican
+									religion = manannite 
+									religion = shallyan  
+									religion = myrmidian 
+									religion = grail
+									religion = sigmarite } 
+								}
+							}
+						modifier = {
+							factor = 0
+							is_female = no
+							top_liege = { 
+								trait = malekith
+								}
+							}
+						modifier = {
+							factor = 0
+							liege = { religion = ursun }
+							is_female = no
+							}
+						modifier = {
+							factor = 0.25
+							religion = khorne
+							}
+						character_event = { id = magicpotential.3 days = 120 random = 120 }
+						 } 
+					25 = { #has no liege, doesn't get discovered
+						modifier = {
+							factor = 0
+							independent = no
+							}
+						modifier = {
+							factor = 1.5
+							trait = craven
+							}
+						modifier = {
+							factor = 1.5
+							trait = shy
+							}
+						modifier = {
+							factor = 1.75
+							trait = paranoid
+							}
+						modifier = {
+							factor = 0.95
+							has_character_flag = magic_potential_flag_2
+							}
+						modifier = {
+							factor = 0.85
+							has_character_flag = magic_potential_flag_3
+							}
+						modifier = {
+							factor = 0.75
+							has_character_flag = magic_potential_flag_4
+							}
+						modifier = {
+							factor = 1.5
+							NOT = { trait = creature_elf }
+							}
+						character_event = { id = magicpotential.4 days = 120 random = 120 }
+						 } 
+					25 = { #has liege, doesn't get discovered
+						modifier = {
+							factor = 0
+							independent = yes
+							}
+						modifier = {
+							factor = 1.5
+							trait = craven
+							}
+						modifier = {
+							factor = 1.5
+							trait = shy
+							}
+						modifier = {
+							factor = 0.95
+							has_character_flag = magic_potential_flag_2
+							}
+						modifier = {
+							factor = 0.85
+							has_character_flag = magic_potential_flag_3
+							}
+						modifier = {
+							factor = 0.75
+							has_character_flag = magic_potential_flag_4
+							}
+						modifier = {
+							factor = 1.75
+							trait = paranoid
+							}
+						character_event = { id = magicpotential.5 days = 120 random = 120 }
+						 } 
+					25 = { #has liege, gets discovered
+						modifier = {
+							factor = 0
+							independent = yes
+							}
+						modifier = {
+							factor = 1.75
+							trait = gregarious
+							}
+						modifier = {
+							factor = 1.75
+							trait = trusting
+							}
+						modifier = {
+							factor = 1.5
+							trait = brave
+							}
+						modifier = {
+							factor = 0.75
+							liege = { trait = trusting }
+							}
+						modifier = {
+							factor = 0.5
+							liege = { trait = imbecile }
+							}
+						modifier = {
+							factor = 0.75
+							liege = { trait = idiot }
+							}
+						modifier = {
+							factor = 0.75
+							liege = { trait = slow }
+							}
+						modifier = {
+							factor = 0.75
+							liege = { trait = dim }
+							}
+						modifier = {
+							factor = 1.75
+							liege = { trait = bright }
+							}
+						modifier = {
+							factor = 1.75
+							liege = { trait = brilliant }
+							}
+						modifier = {
+							factor = 1.75
+							liege = { trait = quick }
+							}
+						modifier = {
+							factor = 2
+							liege = { trait = genius }
+							}
+						modifier = {
+							factor = 1.75
+							liege = { trait = deceitful }
+							}
+						modifier = {
+							factor = 1.75
+							liege = { trait = paranoid }
+							}
+						modifier = {
+							factor = 1.75
+							liege = { trait = creature_elf }
+							}
+						modifier = {
+							factor = 1.75
+							liege = { has_character_modifier = magic_power_1 }
+							}
+						modifier = {
+							factor = 2
+							liege = { has_character_modifier = magic_power_2 }
+							}
+						modifier = {
+							factor = 2.5
+							liege = { has_character_modifier = magic_power_3 }
+							}
+						modifier = {
+							factor = 2.75
+							liege = { has_character_modifier = magic_power_4 }
+							}
+						character_event = { id = magicpotential.6 days = 120 random = 120 }
+						 } 
+				}
+		
+	}
+	
+}
+
+#The youth has no reason to fear their gift - Safecheck event for any trait assignement
+character_event = {
+	id = magicpotential.3
+	desc = { text = EVTDESCmagicpotentialA3
+		trigger = { has_character_flag = magic_potential_flag_1 } }
+	desc = { text = EVTDESCmagicpotentialB3
+		trigger = { has_character_flag = magic_potential_flag_2 } }
+	desc = { text = EVTDESCmagicpotentialC3
+		trigger = { has_character_flag = magic_potential_flag_3 } }
+	desc = { text = EVTDESCmagicpotentialD3
+		trigger = { has_character_flag = magic_potential_flag_4 } }
+	picture = "GFX_evt_apprentice"
+
+	capable_only = yes
+	is_triggered_only = yes 
+
+	trigger = { 	has_character_flag = magic_potential_flag_1
+			has_character_flag = magic_potential_flag_2
+			has_character_flag = magic_potential_flag_3
+			has_character_flag = magic_potential_flag_4
+			
+			 }
+	
+	option = {
+		name = EVTOPTAmagicpotential3
+			if = { limit = { has_character_flag = magic_potential_flag_4 }
+				add_trait = magic_potential_4
+				clr_character_flag = magic_potential_flag_4 }
+			if = { limit = { has_character_flag = magic_potential_flag_3 }
+				add_trait = magic_potential_3
+				clr_character_flag = magic_potential_flag_3 }
+			if = { limit = { has_character_flag = magic_potential_flag_2 }
+				add_trait = magic_potential_2
+				clr_character_flag = magic_potential_flag_2 }
+			if = { limit = { has_character_flag = magic_potential_flag_1 }
+				add_trait = magic_potential_1
+				clr_character_flag = magic_potential_flag_1 }
+		hidden_tooltip = {
+			if = { limit = { independent = no }
+			liege = { character_event = { id = magicpotential.3005 } } }
+			}
+		}
+}
+
+#Notify the liege
+character_event = {
+	id = magicpotential.3005
+	desc = { text = EVTDESCmagicpotentialA3005
+		trigger = { FROM = { trait = magic_potential_1 } } }
+	desc = { text = EVTDESCmagicpotentialB3005
+		trigger = { FROM = { trait = magic_potential_2 } } }
+	desc = { text = EVTDESCmagicpotentialC3005
+		trigger = { FROM = { trait = magic_potential_3 } } }
+	desc = { text = EVTDESCmagicpotentialD3005
+		trigger = { FROM = { trait = magic_potential_4 } } }
+	picture = "GFX_evt_apprentice"
+	is_triggered_only = yes 
+	
+	option = {
+		name = EVTOPTAmagicpotential3005
+		}
+}
+
+#The youth fears for the gift and keeps it hidden
+character_event = {
+	id = magicpotential.4
+	desc = { text = EVTDESCmagicpotentialA4
+		trigger = { has_character_flag = magic_potential_flag_1 } }
+	desc = { text = EVTDESCmagicpotentialB4
+		trigger = { has_character_flag = magic_potential_flag_2 } }
+	desc = { text = EVTDESCmagicpotentialC4
+		trigger = { has_character_flag = magic_potential_flag_3 } }
+	desc = { text = EVTDESCmagicpotentialD4
+		trigger = { has_character_flag = magic_potential_flag_4 } }
+	picture = "GFX_evt_apprentice"
+
+	capable_only = yes
+	is_triggered_only = yes 
+
+	trigger = { 	has_character_flag = magic_potential_flag_1
+			has_character_flag = magic_potential_flag_2
+			has_character_flag = magic_potential_flag_3
+			has_character_flag = magic_potential_flag_4
+			
+			 }
+	
+	option = { 		#player doesn't care and wants to show off
+		name = EVTOPTBmagicpotential4
+		trigger = { ai = no }
+			if = { limit = { has_character_flag = magic_potential_flag_4 }
+				add_trait = magic_potential_4
+				clr_character_flag = magic_potential_flag_4 }
+			if = { limit = { has_character_flag = magic_potential_flag_3 }
+				add_trait = magic_potential_3
+				clr_character_flag = magic_potential_flag_3 }
+			if = { limit = { has_character_flag = magic_potential_flag_2 }
+				add_trait = magic_potential_2
+				clr_character_flag = magic_potential_flag_2 }
+			if = { limit = { has_character_flag = magic_potential_flag_1 }
+				add_trait = magic_potential_1
+				clr_character_flag = magic_potential_flag_1 }
+		hidden_tooltip = {
+			if = { limit = { independent = no }
+			liege = { character_event = { id = magicpotential.3005 } } }
+			}
+		ai_chance = { factor = 0 }
+		}
+	option = {
+		name = EVTOPTAmagicpotential4
+		ai_chance = { factor = 1 }
+		}
+}
+
+#The youth fears for the gift and keeps it hidden from the liege
+character_event = {
+	id = magicpotential.5
+	desc = { text = EVTDESCmagicpotentialA5
+		trigger = { has_character_flag = magic_potential_flag_1 } }
+	desc = { text = EVTDESCmagicpotentialB5
+		trigger = { has_character_flag = magic_potential_flag_2 } }
+	desc = { text = EVTDESCmagicpotentialC5
+		trigger = { has_character_flag = magic_potential_flag_3 } }
+	desc = { text = EVTDESCmagicpotentialD5
+		trigger = { has_character_flag = magic_potential_flag_4 } }
+	picture = "GFX_evt_apprentice"
+
+	capable_only = yes
+	is_triggered_only = yes 
+
+	trigger = { 	has_character_flag = magic_potential_flag_1
+			has_character_flag = magic_potential_flag_2
+			has_character_flag = magic_potential_flag_3
+			has_character_flag = magic_potential_flag_4
+			
+			 }
+	
+	option = {
+		name = EVTOPTAmagicpotential5
+		random = { chance = 20
+			add_trait = craven }
+		}
+}
+
+#The youth fears for the gift and the liege discovers it
+character_event = {
+	id = magicpotential.6
+	desc = { text = EVTDESCmagicpotentialA6
+		trigger = { has_character_flag = magic_potential_flag_1 } }
+	desc = { text = EVTDESCmagicpotentialB6
+		trigger = { has_character_flag = magic_potential_flag_2 } }
+	desc = { text = EVTDESCmagicpotentialC6
+		trigger = { has_character_flag = magic_potential_flag_3 } }
+	desc = { text = EVTDESCmagicpotentialD6
+		trigger = { has_character_flag = magic_potential_flag_4 } }
+	picture = "GFX_evt_apprentice"
+
+	capable_only = yes
+	is_triggered_only = yes 
+
+	trigger = { 	has_character_flag = magic_potential_flag_1
+			has_character_flag = magic_potential_flag_2
+			has_character_flag = magic_potential_flag_3
+			has_character_flag = magic_potential_flag_4
+			
+			 }
+	
+	option = {
+		name = EVTOPTAmagicpotential6
+			if = { limit = { has_character_flag = magic_potential_flag_4 }
+				add_trait = magic_potential_4
+				clr_character_flag = magic_potential_flag_4 }
+			if = { limit = { has_character_flag = magic_potential_flag_3 }
+				add_trait = magic_potential_3
+				clr_character_flag = magic_potential_flag_3 }
+			if = { limit = { has_character_flag = magic_potential_flag_2 }
+				add_trait = magic_potential_2
+				clr_character_flag = magic_potential_flag_2 }
+			if = { limit = { has_character_flag = magic_potential_flag_1 }
+				add_trait = magic_potential_1
+				clr_character_flag = magic_potential_flag_1 }
+		hidden_tooltip = {
+			liege = { character_event = { id = magicpotential.6005 } }
+			}
+		}
+}
+
+#The liege decides what to do
+character_event = {
+	id = magicpotential.6005
+	desc = { text = EVTDESCmagicpotentialA6005
+		trigger = { FROM = { trait = magic_potential_1 } } }
+	desc = { text = EVTDESCmagicpotentialB6005
+		trigger = { FROM = { trait = magic_potential_2 } } }
+	desc = { text = EVTDESCmagicpotentialC6005
+		trigger = { FROM = { trait = magic_potential_3 } } }
+	desc = { text = EVTDESCmagicpotentialD6005
+		trigger = { FROM = { trait = magic_potential_4 } } }
+	picture = "GFX_evt_apprentice"
+
+	is_triggered_only = yes 
+	
+	option = { #Burn!
+		name = EVTOPTAmagicpotential6005
+		trigger = { OR = {  religion = taalite 
+				religion = ulrican
+				religion = manannite 
+				religion = shallyan  
+				religion = myrmidian 
+				religion = grail
+				religion = sigmarite
+				AND = { religion = ursun
+					FROM = { is_female = no } } } } 
+			FROM = { death = { death_reason = death_execution
+					killer = ROOT } }
+		ai_chance = { factor = 50
+				modifier = {
+					factor = 0.75
+					FROM = { dynasty = ROOT }
+					}
+				modifier = {
+					factor = 0.5
+					FROM = { mother = { character = ROOT } }
+					}
+				modifier = {
+					factor = 0.5
+					FROM = { father = { character = ROOT } }
+					}
+				modifier = {
+					factor = 100
+					trait = malekith
+					}
+				 } 
+		}
+	option = { #Kill the chosen one!
+		name = EVTOPTCmagicpotential6005
+		trigger = { top_liege = { trait = malekith }
+			FROM = { is_female = no } } 
+			FROM = { death = { death_reason = death_execution
+					killer = ROOT } }
+		ai_chance = { factor = 50
+				modifier = {
+					factor = 0.75
+					FROM = { dynasty = ROOT }
+					}
+				modifier = {
+					factor = 0.5
+					FROM = { mother = { character = ROOT } }
+					}
+				modifier = {
+					factor = 0.5
+					FROM = { father = { character = ROOT } }
+					}
+				modifier = {
+					factor = 100
+					trait = malekith
+					}
+				 } 
+		}
+	option = {
+		name = EVTOPTBmagicpotential6005
+		change_variable = { which = suspicion value = 2 } 
+		any_vassal = { limit = { NOT= { religion = taalite }
+					NOT= { religion = ulrican }
+					NOT= { religion = manannite } 
+					NOT= { religion = shallyan }
+					NOT= { religion = myrmidian } 
+					NOT= { religion = grail }
+					NOT= { religion = sigmarite } 
+					}
+				opinion = { modifier = opinion_spared_witch 
+						who = ROOT }
+			 }
+		any_courtier = { limit = { NOT= { religion = taalite }
+					NOT= { religion = ulrican }
+					NOT= { religion = manannite } 
+					NOT= { religion = shallyan }
+					NOT= { religion = myrmidian } 
+					NOT= { religion = grail }
+					NOT= { religion = sigmarite } 
+					is_ruler = no
+					}
+				opinion = { modifier = opinion_spared_witch 
+						who = ROOT }
+			 }
+			FROM = { opinion = { modifier = opinion_protected_me
+						who = ROOT } }
+		ai_chance = { factor = 50
+				modifier = {
+					factor = 2
+					FROM = { any_spouse = { character = ROOT } }
+					}
+				modifier = {
+					factor = 2
+					FROM = { any_lover = { character = ROOT } }
+					}
+				modifier = {
+					factor = 2
+					FROM = { any_friend = { character = ROOT } }
+					}
+				modifier = {
+					factor = 0
+					FROM = { any_rival = { character = ROOT } }
+					}
+				 } 
+		}
+}
+
+
+##WITCH HUNTERS##
+### Now the Witch Hunter goes after actual mages##
+character_event = {
+		id = magicpotential.7
+		title = WITCH_HUNT			# Witch Hunt
+		desc = EVTDESCmagicpotential7
+		picture = "GFX_evt_beheading"
+		
+		capable_only = yes
+
+	    trigger = {
+	        age = 16
+	        trait = on_witch_hunt
+	    any_courtier = { NOT = { trait = in_hiding }
+				NOT = { trait = incapable }
+				NOT = { trait = khorne_demon }
+				NOT = { trait = nurgle_demon }
+				NOT = { trait = slaanesh_demon }
+				NOT = { trait = tzeentch_demon }
+				NOT = { trait = daemon_kdaai }
+				OR = { has_character_modifier = magic_power_1
+					has_character_modifier = magic_power_2
+					has_character_modifier = magic_power_3
+					has_character_modifier = magic_power_4
+					trait = magic_potential_1
+					trait = magic_potential_2
+					trait = magic_potential_3
+					trait = magic_potential_4 } }
+	    	}
+
+	    mean_time_to_happen = { months = 9 }
+
+	    option = { #confront the mage
+	        name = EVTOPTAmagicpotential7
+	        random_courtier = {
+	            limit = {
+	                    NOT = { trait = in_hiding }
+				NOT = { trait = incapable }
+				OR = { has_character_modifier = magic_power_1
+					has_character_modifier = magic_power_2
+					has_character_modifier = magic_power_3
+					has_character_modifier = magic_power_4
+					trait = magic_potential_1
+					trait = magic_potential_2
+					trait = magic_potential_3
+					trait = magic_potential_4 }
+	            }
+		character_event = { id = magicpotential.8 }
+	        }
+	    }
+
+}
+	
+#courtier is confronted#
+character_event = {
+    id = magicpotential.8
+    title = WITCH_HUNT
+    desc = EVTDESCmagicpotential8
+    picture = "GFX_evt_beheading"
+	
+	is_triggered_only = yes
+	
+	#If not independent, appeal to your liege##
+	option = {
+	name = EVTOPTAmagicpotential8
+	trigger = { independent = no }
+	liege = { character_event = { id = magicpotential.9 } }
+	}
+	
+	option = { #Banish Witch Hunter
+	name = EVTOPTBmagicpotential8
+	trigger = { independent = yes }
+	change_variable = { which = suspicion value = 2.0 } 
+	FROM = { banish = yes }
+	FROM = { remove_trait = on_witch_hunt }
+	}
+	
+	option = { #Imprison Witch Hunter
+	name = EVTOPTCmagicpotential8
+	trigger = { independent = yes }
+	change_variable = { which = suspicion value = 4.0 } 
+	FROM = { imprison = yes }
+	FROM = { remove_trait = on_witch_hunt }
+	}
+	
+	}
+	
+#liege is informed one of this courtiers is a suspected mage
+	character_event = {
+    id = magicpotential.9
+    title = WITCH_HUNT # Witch Hunt
+    desc = EVTDESCmagicpotential9
+    picture = "GFX_evt_beheading"
+	
+	is_triggered_only = yes		
+	
+	option = { #Burn it!
+	name = EVTOPTAmagicpotential9
+	trigger = {
+	OR = {
+	ai = no
+	trait = zealous
+	trait = paranoid
+	trait = arbitrary
+	trait = cruel
+	NOT = { ROOT = { opinion = { who = FROM value = 1 } } } 
+	}
+	}
+	change_variable = { which = suspicion value = -2.0 } 
+	FROM = { character_event = { id = witchhunter.25 } }
+	}
+	
+	option = { #Mercy
+	name = EVTOPTBmagicpotential9
+	trigger = {
+	OR = {
+	ai = no
+	ROOT = { opinion = { who = FROM value = 50 } }
+	}
+	}
+	change_variable = { which = suspicion value = 1.0 } 
+	FROM = { character_event = { id = witchhunter.27 } }
+	}
+	
+	option = { #Imprison
+	name = EVTOPTCmagicpotential9
+	change_variable = { which = suspicion value = -1.0 } 
+	FROM = { character_event = { id = witchhunter.26 } }
+	}
+}
+	
+##Mages or potential mages not hiding in Human lands are eventually exposed and put to the stake
+character_event = {
+    id = magicpotential.10
+    title = WITCH_WITCH
+    desc = EVTDESCmagicpotential10
+    picture = "GFX_evt_beheading"
+	capable_only = yes
+	min_age = 16
+	trigger = { independent = no
+			liege = { OR = { religion = taalite 
+					religion = ulrican
+					religion = manannite 
+					religion = shallyan  
+					religion = myrmidian 
+					religion = grail
+					religion = sigmarite
+					AND = { religion = ursun
+						ROOT = { is_female = no } } } }
+	
+				OR = { has_character_modifier = magic_power_1
+					has_character_modifier = magic_power_2
+					has_character_modifier = magic_power_3
+					has_character_modifier = magic_power_4
+					trait = magic_potential_1
+					trait = magic_potential_2
+					trait = magic_potential_3
+					trait = magic_potential_4 }
+		NOT = { trait = in_hiding }
+		NOT = { trait = khorne_demon }
+		NOT = { trait = nurgle_demon }
+		NOT = { trait = slaanesh_demon }
+		NOT = { trait = tzeentch_demon }
+		NOT = { trait = daemon_kdaai }
+	}
+	
+	mean_time_to_happen = { months = 120
+				modifier = {
+					factor = 3
+					trait = magic_potential_1
+					}
+				modifier = {
+					factor = 2
+					trait = magic_potential_2
+					}
+				modifier = {
+					factor = 1.75
+					trait = magic_potential_3
+					}
+				modifier = {
+					factor = 1.5
+					trait = magic_potential_4
+					}
+				modifier = {
+					factor = 1.25
+					has_character_modifier = magic_power_1
+					}
+				modifier = {
+					factor = 0.75
+					has_character_modifier = magic_power_2
+					}
+				modifier = {
+					factor = 0.5
+					has_character_modifier = magic_power_3
+					}
+				modifier = {
+					factor = 0.25
+					has_character_modifier = magic_power_4
+					}
+
+				 }
+	
+	option = {
+	name = EVTOPTAmagicpotential10
+	if = {
+ limit = { trait = carstein_ring
+ }
+
+		character_event = {
+ id = carstein.13 days = 1
+ }
+	
+		break = yes 
+}
+
+	if = {
+ limit = {
+ trait = khemri_tomb_king }
+
+		character_event = {
+ id = snehekharan.1 days = 1 }
+	
+		break = yes 
+}
+		death = { death_reason = death_execution }
+	if = { limit = { higher_tier_than = BARON }
+	any_realm_lord = {
+			limit = {  ai = no 
+			NOT = { has_character_flag = no_witch_notifications } }
+			character_event = { id = magicpotential.11 }
+			}
+		}
+	}
+}
+
+##PC rulers are informed if a fellow realm lord has been killed as a sorcerer##
+character_event = {
+    id = magicpotential.11
+    title = WITCH_WITCH
+    desc = EVTDESCmagicpotential11
+    picture = "GFX_evt_beheading"
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = EVTOPTAmagicpotential11
+	set_character_flag = no_witch_notifications
+	}
+	
+	option = {
+		name = EVTOPTBmagicpotential11
+	}
+}

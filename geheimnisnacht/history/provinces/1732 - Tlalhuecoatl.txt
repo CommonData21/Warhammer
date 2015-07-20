@@ -1,0 +1,16 @@
+# c_tlalhuecoatl
+
+# County Title
+title = c_tlalhuecoatl
+
+# Settlements
+max_settlements = 2
+
+b_tlalhuecoatl = tribal
+#b_tlachtlichi = city
+
+# Misc
+culture = lizardman
+religion = old_ones
+terrain = jungle
+#History

@@ -1,0 +1,227 @@
+ # Triggers are in Province scope. The From Scope contains the settlement holder (character)
+ # start trigger is in title scope.
+ 
+ #<tag> = {
+ #	desc = description used in the tooltip of the building
+ #	trigger = used for tech requirement of the building, set to 0 if no requirement so it can be build automatically on new games
+ #	gold_cost = cost to build the building
+ #	build_time = time to build, in days
+ #	
+ #	ai_creation_factor = weight that the AI uses to determine what building to build
+ #	extra_tech_building_start = when starting a new game this building will be pre-built if the province has higher tech than the requirement + this + random 0-1
+ 
+ castle = {
+	ca_Dwarf_smithy_1 = {
+		desc = ca_Dwarf_smithy_1_desc
+		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+		gold_cost = 100
+		build_time = 365
+		ai_creation_factor = 70
+		heavy_infantry = 5
+		heavy_infantry_defensive = 0.01
+		extra_tech_building_start = 0
+		potential = {
+			culture_group = dwarf_group
+		}
+	}
+	ca_Dwarf_smithy_2 = {
+		desc = ca_Dwarf_smithy_2_desc
+		trigger = { TECH_CASTLE_CONSTRUCTION = 2 }
+		upgrades_from = ca_Dwarf_smithy_1
+		gold_cost = 150
+		build_time = 730
+		heavy_infantry = 5
+		ai_creation_factor = 69
+		heavy_infantry_offensive = 0.02
+		extra_tech_building_start = 5.0
+		potential = {
+			culture_group = dwarf_group
+		}
+	}
+	ca_Dwarf_smithy_3 = {
+		desc = ca_Dwarf_smithy_3_desc
+		trigger = { TECH_CASTLE_CONSTRUCTION = 4 }
+		upgrades_from = ca_Dwarf_smithy_2
+		gold_cost = 400
+		build_time = 1095
+		heavy_infantry = 10
+		ai_creation_factor = 68
+		heavy_infantry_defensive = 0.05
+		extra_tech_building_start = 5.0
+		potential = {
+			culture_group = dwarf_group
+		}
+	}
+	ca_Dwarf_smithy_4 = {
+		desc = ca_Dwarf_smithy_4_desc
+		trigger = { TECH_CASTLE_CONSTRUCTION = 6 }
+		upgrades_from = ca_Dwarf_smithy_3
+		gold_cost = 500
+		build_time = 1460
+		heavy_infantry = 10
+		ai_creation_factor = 67
+		heavy_infantry_offensive = 0.07
+		extra_tech_building_start = 5.0
+		potential = {
+			culture_group = dwarf_group
+		}
+	}
+	ca_Dwarf_halls_1 = {
+		desc = ca_Dwarf_halls_1_desc
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 3
+			FROM = {
+				OR = {
+					trait = SJ_dwarf_mason
+					trait = SJ_dwarf_master_mason
+				}
+			}
+		}
+		gold_cost = 200
+		build_time = 912
+		ai_creation_factor = 60
+		tax_income = 1
+		heavy_infantry = 50
+		retinuesize = 20
+		fort_level = 0.50
+		heavy_infantry_morale = 0.10
+		extra_tech_building_start = 1.0
+		potential = {
+			culture_group = dwarf_group
+			OR = {
+				terrain = mountain
+				terrain = mountain_pass
+				terrain = impassable_mountains
+			}
+		}
+	}
+	ca_Dwarf_halls_2 = {
+		desc = ca_Dwarf_halls_2_desc
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 5
+			FROM = {
+				OR = {
+					trait = SJ_dwarf_mason
+					trait = SJ_dwarf_master_mason
+				}
+			}
+		}
+		upgrades_from = ca_Dwarf_halls_1
+		gold_cost = 300
+		build_time = 1095
+		ai_creation_factor = 59
+		tax_income = 1
+		heavy_infantry = 50
+		fort_level = 0.50
+		retinuesize = 30
+		heavy_infantry_morale = 0.05
+		extra_tech_building_start = 1.0
+		potential = {
+			culture_group = dwarf_group
+			OR = {
+				terrain = mountain
+				terrain = mountain_pass
+				terrain = impassable_mountains
+			}
+		}
+	}
+	ca_Dwarf_halls_3 = {
+		desc = ca_Dwarf_halls_3_desc
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 7
+			FROM = {
+				OR = {
+					trait = SJ_dwarf_mason
+					trait = SJ_dwarf_master_mason
+				}
+			}
+		}
+		upgrades_from = ca_Dwarf_halls_2
+		gold_cost = 800
+		build_time = 10950
+		ai_creation_factor = 58
+		heavy_infantry = 50
+		pikemen = 50
+		fort_level = 1.0
+		garrison_size = 0.10
+		retinuesize = 50
+		heavy_infantry_morale = 0.10
+		pikemen_morale = 0.10
+		tax_income = 2
+		extra_tech_building_start = 1.0
+		potential = {
+			culture_group = dwarf_group
+			OR = {
+				terrain = mountain
+				terrain = mountain_pass
+				terrain = impassable_mountains
+			}
+		}
+	}
+}
+
+city = {  #small
+	ct_Dwarf_brewery_1 = {
+		desc = ct_Dwarf_brewery_1_desc
+		trigger = { TECH_CITY_CONSTRUCTION = 1 }
+		gold_cost = 150
+		build_time = 365
+		tax_income = 2.50
+		ai_creation_factor = 90
+		add_number_to_name = no
+		extra_tech_building_start = 0.5
+		potential = {
+			culture_group = dwarf_group
+		}
+	} #medium
+	ct_Dwarf_brewery_2 = {
+		desc = ct_Dwarf_brewery_2_desc
+		trigger = { TECH_CITY_CONSTRUCTION = 3 }
+		prerequisites = { ct_wall_2 }
+		upgrades_from = ct_Dwarf_brewery_1
+		gold_cost = 200
+		build_time = 730
+		tax_income = 3.00
+		ai_creation_factor = 89
+		add_number_to_name = no
+		extra_tech_building_start = 0.5
+		potential = {
+			culture_group = dwarf_group
+		}
+	} #large
+	ct_Dwarf_brewery_3 = {
+		desc = ct_Dwarf_brewery_3_desc
+		trigger = { TECH_CITY_CONSTRUCTION = 5 }
+		prerequisites = { ct_wall_3 }
+		upgrades_from = ct_Dwarf_brewery_2
+		gold_cost = 300
+		build_time = 1460
+		tax_income = 3.50
+		heavy_infantry_morale = 0.05
+		pikemen_morale = 0.05
+		ai_creation_factor = 88
+		add_number_to_name = no
+		extra_tech_building_start = 0
+		potential = {
+			culture_group = dwarf_group
+		}
+	} #Very large
+	ct_Dwarf_brewery_4 = {
+		desc = ct_Dwarf_brewery_4_desc
+		trigger = { TECH_CITY_CONSTRUCTION = 7 }
+		prerequisites = { ct_wall_4 }
+		upgrades_from = ct_Dwarf_brewery_3
+		gold_cost = 500
+		build_time = 2555
+		tax_income = 4.00
+		heavy_infantry_morale = 0.10
+		pikemen_morale = 0.10
+		ai_creation_factor = 87
+		add_number_to_name = no
+		extra_tech_building_start = 0
+		potential = {
+			culture_group = dwarf_group
+		}
+	}
+}
+		

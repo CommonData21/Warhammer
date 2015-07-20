@@ -1,0 +1,312 @@
+
+# Steal the Carstien Ring
+plot_steal_carstein_ring = {
+	type = realm_characters_plus
+	
+	# Plotter scope
+	potential = {
+		prisoner = no
+		age = 16
+		NOT = { trait = incapable }
+		has_global_flag = carstein_ring_revealed
+	}
+	
+	# Target allow trigger for when players target a specific character in the GUI
+	
+	player_allow = { is_within_diplo_range = FROM }
+	
+	# Target character scope
+	allow = { trait = carstein_ring
+		is_within_diplo_range = FROM
+		}
+	
+	chance = {
+		factor = 2
+		
+		modifier = {
+			factor = 0.01
+			FROM = { trait = content }
+		}
+		
+		modifier = {
+			factor = 0.2
+			FROM = { pacifist = yes }
+		}
+		
+		modifier = {
+			factor = 2.0
+			FROM = {
+				trait = envious
+				OR = {
+			trait = vampire_lahmian_visible
+			trait = vampire_carstein_visible
+			trait = vampire_blood_visible
+			trait = vampire_strigoi_visible
+			trait = vampire_necrach_visible
+			trait = vampire_jade_visible
+			trait = vampire_mahtmasi_visible
+			trait = vampire_lahmian_hidden
+			trait = vampire_carstein_hidden
+			trait = vampire_blood_hidden
+			trait = vampire_strigoi_hidden
+			trait = vampire_necrach_hidden
+			trait = vampire_jade_hidden
+			trait = vampire_mahtmasi_hidden 
+				}
+			}
+		}
+		modifier = {
+			factor = 3.5
+			FROM = {
+				trait = ambitious
+				OR = {
+			trait = vampire_lahmian_visible
+			trait = vampire_carstein_visible
+			trait = vampire_blood_visible
+			trait = vampire_strigoi_visible
+			trait = vampire_necrach_visible
+			trait = vampire_jade_visible
+			trait = vampire_mahtmasi_visible
+			trait = vampire_lahmian_hidden
+			trait = vampire_carstein_hidden
+			trait = vampire_blood_hidden
+			trait = vampire_strigoi_hidden
+			trait = vampire_necrach_hidden
+			trait = vampire_jade_hidden
+			trait = vampire_mahtmasi_hidden 
+				}
+			}
+		}
+		modifier = {
+			factor = 3.0
+			FROM = {
+				any_rival = { character = ROOT }
+				OR = {
+			trait = vampire_lahmian_visible
+			trait = vampire_carstein_visible
+			trait = vampire_blood_visible
+			trait = vampire_strigoi_visible
+			trait = vampire_necrach_visible
+			trait = vampire_jade_visible
+			trait = vampire_mahtmasi_visible
+			trait = vampire_lahmian_hidden
+			trait = vampire_carstein_hidden
+			trait = vampire_blood_hidden
+			trait = vampire_strigoi_hidden
+			trait = vampire_necrach_hidden
+			trait = vampire_jade_hidden
+			trait = vampire_mahtmasi_hidden 
+				}
+			}
+		}
+		modifier = {
+			factor = 1.5
+			FROM = { any_war = { attacker = { character = ROOT } } }
+		}
+		modifier = {
+			factor = 2.5
+			FROM = { any_war = { defender = { character = ROOT } } }
+		}
+		modifier = {
+			factor = 2.0
+			FROM = { trait = deceitful
+				OR = {
+			trait = vampire_lahmian_visible
+			trait = vampire_carstein_visible
+			trait = vampire_blood_visible
+			trait = vampire_strigoi_visible
+			trait = vampire_necrach_visible
+			trait = vampire_jade_visible
+			trait = vampire_mahtmasi_visible
+			trait = vampire_lahmian_hidden
+			trait = vampire_carstein_hidden
+			trait = vampire_blood_hidden
+			trait = vampire_strigoi_hidden
+			trait = vampire_necrach_hidden
+			trait = vampire_jade_hidden
+			trait = vampire_mahtmasi_hidden 
+				}
+			 }
+		}
+		modifier = {
+			factor = 0
+			their_opinion = { who = FROM value = 25 }
+		}
+		modifier = {
+			factor = 0.001
+			FROM = { NOT = { religion_group = old_world_group } 
+				NOT = { trait = vampire_lahmian_visible }
+				NOT = { trait = vampire_carstein_visible }
+				NOT = { trait = vampire_blood_visible }
+				NOT = { trait = vampire_strigoi_visible }
+				NOT = { trait = vampire_necrach_visible }
+				NOT = { trait = vampire_jade_visible }
+				NOT = { trait = vampire_mahtmasi_visible }
+				NOT = { trait = vampire_lahmian_hidden }
+				NOT = { trait = vampire_carstein_hidden }
+				NOT = { trait = vampire_blood_hidden }
+				NOT = { trait = vampire_strigoi_hidden }
+				NOT = { trait = vampire_necrach_hidden }
+				NOT = { trait = vampire_jade_hidden }
+				NOT = { trait = vampire_mahtmasi_hidden } }
+		}
+		modifier = {
+			factor = 0
+			their_opinion = { who = FROM value = 0 }
+			FROM = { OR = {
+			trait = vampire_lahmian_visible
+			trait = vampire_carstein_visible
+			trait = vampire_blood_visible
+			trait = vampire_strigoi_visible
+			trait = vampire_necrach_visible
+			trait = vampire_jade_visible
+			trait = vampire_mahtmasi_visible
+			trait = vampire_lahmian_hidden
+			trait = vampire_carstein_hidden
+			trait = vampire_blood_hidden
+			trait = vampire_strigoi_hidden
+			trait = vampire_necrach_hidden
+			trait = vampire_jade_hidden
+			trait = vampire_mahtmasi_hidden 
+				}
+			 }
+			NOT = {
+				OR = {
+					FROM = { trait = envious }
+					FROM = { trait = deceitful }
+					FROM = { trait = ambitious }
+				}
+			}		
+		}
+		modifier = {
+			factor = 0
+			their_opinion = { who = FROM value = 0 }
+			FROM = { NOT = { trait = vampire_lahmian_visible }
+				NOT = { trait = vampire_carstein_visible }
+				NOT = { trait = vampire_blood_visible }
+				NOT = { trait = vampire_strigoi_visible }
+				NOT = { trait = vampire_necrach_visible }
+				NOT = { trait = vampire_jade_visible }
+				NOT = { trait = vampire_mahtmasi_visible }
+				NOT = { trait = vampire_lahmian_hidden }
+				NOT = { trait = vampire_carstein_hidden }
+				NOT = { trait = vampire_blood_hidden }
+				NOT = { trait = vampire_strigoi_hidden }
+				NOT = { trait = vampire_necrach_hidden }
+				NOT = { trait = vampire_jade_hidden }
+				NOT = { trait = vampire_mahtmasi_hidden }
+			 }
+			NOT = {
+				OR = {
+					FROM = { trait = zealous }
+					FROM = { trait = brave }
+					FROM = { trait = kind }
+				}
+			}		
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { their_opinion = { who = FROM value = -25 } }
+		}
+		modifier = {
+			factor = 2.0
+			NOT = { their_opinion = { who = FROM value = -50 } }
+		}
+		modifier = {
+			factor = 2.0
+			NOT = { their_opinion = { who = FROM value = -75 } }
+		}
+		modifier = {
+			# Subtle balance against nepotism: Kill off members of powerful dynasties
+			factor = 2.0
+			top_liege = {
+				higher_tier_than = COUNT
+				dynasty = ROOT
+				dynasty_realm_power = 0.25
+			}
+		}
+		modifier = {
+			# Subtle balance against nepotism: Kill off members of powerful dynasties
+			factor = 2.0
+			top_liege = {
+				higher_tier_than = COUNT
+				dynasty = ROOT
+				dynasty_realm_power = 0.4
+			}
+		}
+		modifier = {
+			# Subtle balance against nepotism: Kill off members of powerful dynasties
+			factor = 2.0
+			top_liege = {
+				higher_tier_than = COUNT
+				dynasty = ROOT
+				dynasty_realm_power = 0.6
+			}
+		}
+		
+		modifier = {
+			factor = 4.0
+			plot_target_char = {
+				sibling = FROM
+				ai = yes
+				top_liege = { character = father }
+			}
+			FROM = {
+				top_liege = { character = father }
+			}
+		}
+		modifier = {
+			factor = 2.0
+			plot_target_char = {
+				sibling = FROM
+				ai = yes
+				top_liege = { character = father }
+				is_landed = no
+			}
+			FROM = {
+				top_liege = { character = father }
+			}
+		}
+		modifier = {
+			factor = 1.25
+			check_variable = { which = carstein_death_count value = 1 }
+		}
+		modifier = {
+			factor = 1.25
+			check_variable = { which = carstein_death_count value = 2 }
+		}
+		modifier = {
+			factor = 1.25
+			check_variable = { which = carstein_death_count value = 3 }
+		}
+		modifier = {
+			factor = 1.5
+			check_variable = { which = carstein_death_count value = 4 }
+		}
+		modifier = {
+			factor = 1.75
+			check_variable = { which = carstein_death_count value = 5 }
+		}
+		modifier = {
+			factor = 1.75
+			realm_size = 100
+		}
+		modifier = {
+			factor = 1.75
+			realm_size = 150
+		}
+	}
+	
+	success = {
+		NOT = { trait = carstein_ring }
+	}
+	abort = {
+		OR = { is_alive = no
+			NOT = { trait = carstein_ring } }
+	}
+	abort_effect = {
+	}
+	effect = {
+	}
+}
+

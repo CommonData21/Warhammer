@@ -1,0 +1,745 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+awaken_servants;Awaken your Servants;;;;;;;;;;;;;x
+awaken_servants_desc;Though some rose with you, many of those who were your servants in life still remain buried in the tombs and under the sands of Nehekhara. You may awaken them, so that they serve in death as well, and help improve your realm...;;;;;;;;;;;;;x
+tomb_kings_awakened_province_1;Sparsely Awakened;;;;;;;;;;;;;x
+tomb_kings_awakened_province_1_desc;A handful of Nehekharan servants in this province have been awakened into unlife, barely supplementing the retainers of this province's lord.;;;;;;;;;;;;;x
+tomb_kings_awakened_province_2;Moderately Awakened;;;;;;;;;;;;;x
+tomb_kings_awakened_province_2_desc;A moderate number of Nehekharan servants in this province have been awakened, they now provide a large part of this province's labour force and military.;;;;;;;;;;;;;x
+tomb_kings_awakened_province_3;Completely Awakened;;;;;;;;;;;;;x
+tomb_kings_awakened_province_3_desc;This province now teems with a twisted facsimile of life, all of the Nehekharans in this land have been awakened into unlife, labouring and soldiering as they once did, greatly improving this province.;;;;;;;;;;;;x
+AWAKEN_MY_SERVANTS_OPT;Awaken, my servants!;;;;;;;;;;;;;x
+AWAKEN_MY_SERVANTS;With the preparations complete, your Liche Priests stand ready to begin the rituals that will awaken a new batch of servants in your province. Of course, this will cost you some prestige...;;;;;;;;;;;;;x
+NOT_NOW;Not now;;;;;;;;;;;;;x
+greenskin_power;Greenskin Control;;;;;;;;;;;;;x
+greenskin_power_desc;Greenskins don't have the same concept of "ruler" as the other races, instead the strong rule over the weak. That is the only Greenskin law.\n Each level of this law will be automatically passed to its next level at 100, 250, 500 and 1000 prestige for each respective level.\n The average time for the next level of the law to be enacted is 1 year, but it can be shortened with certain traits.;;;;;;;;;;;;;x
+greenskin_power_0;No Greenskin Control;;;;;;;;;;;;;x
+greenskin_power_0_desc;The Greenskins of this tribe don't respect your authority at all. Next level at 100.;;;;;;;;;;;;;x
+greenskin_power_1;Low Greenskin Control;;;;;;;;;;;;;x
+greenskin_power_1_desc;The Greenskins now grudgingly respect your authority. Next level at 250.;;;;;;;;;;;;;x
+greenskin_power_2;Medium Greenskin Control;;;;;;;;;;;;;x
+greenskin_power_2_desc;The Greenskins now somewhat respect your authority. Next level at 500.;;;;;;;;;;;;;x
+greenskin_power_3;High Greenskin Control;;;;;;;;;;;;;x
+greenskin_power_3_desc;The Greenskins now respect your authority. Next level at 1000.;;;;;;;;;;;;;x
+greenskin_power_4;Absolute Greenskin Control;;;;;;;;;;;;;x
+greenskin_power_4_desc;The Greenskins now completely respect your authority.;;;;;;;;;;;;;x
+orkyfy_provinces;Tribalize province capitals;;;;;;;;;;;;;x
+orkyfy_provinces_desc;Make this 'ere lands [Root.Culture.GetName] 'n propa!;;;;;;;;;;;;;x
+orkify_tooltip_1;Any holding in any of your demesne's province is not a Tribe;;;;;;;;;;;;;x
+orkify_tooltip_2;The capital holding of all the provinces in your demesne will be converted into a Tribal holding ( Except if it is a Temple ).\n This will enable you to use the "Make land Green" job action and colonize the province with Greenskins.;;;;;;;;;;;;;x
+tb_greenskin_camp_0;Tiny Greenskin Camp;;;;;;;;;;;;;x
+tb_greenskin_camp_1;Small Greenskin Camp;;;;;;;;;;;;;x
+tb_greenskin_camp_2;Medium Greenskin Camp;;;;;;;;;;;;;x
+tb_greenskin_camp_3;Large Greenskin Camp;;;;;;;;;;;;;x
+tb_greenskin_camp_4;Huge Greenskin Camp;;;;;;;;;;;;;x
+tb_greenskin_camp_desc;This is where the tribe's Greenskins live and, mostly, fight.;;;;;;;;;;;;;x
+tb_greenskin_palisades_0;Greenskin Palisades;;;;;;;;;;;;;x
+tb_greenskin_palisades_1;Greenskin Palisades;;;;;;;;;;;;;x
+tb_greenskin_palisades_2;Greenskin Palisades;;;;;;;;;;;;;x
+tb_greenskin_palisades_3;Greenskin Palisades;;;;;;;;;;;;;x
+tb_greenskin_palisades_4;Greenskin Palisades;;;;;;;;;;;;;x
+tb_greenskin_palisades_desc;Greenskin fortifications are like the Greenskins themselves, crude and unsubtle, but effective.;;;;;;;;;;;;;x
+tb_orc_boar_pit_0;Orc Boar Pit;;;;;;;;;;;;;x
+tb_orc_boar_pit_1;Orc Boar Pit;;;;;;;;;;;;;x
+tb_orc_boar_pit_2;Orc Boar Pit;;;;;;;;;;;;;x
+tb_orc_boar_pit_3;Orc Boar Pit;;;;;;;;;;;;;x
+tb_orc_boar_pit_4;Orc Boar Pit;;;;;;;;;;;;;x
+tb_orc_boar_pit_desc;The characteristic giant boars that the brutal Orcs use as mounts are bred here.;;;;;;;;;;;;;x
+tb_goblin_wolf_pit_0;Goblin Wolf Pit;;;;;;;;;;;;;x
+tb_goblin_wolf_pit_1;Goblin Wolf Pit;;;;;;;;;;;;;x
+tb_goblin_wolf_pit_2;Goblin Wolf Pit;;;;;;;;;;;;;x
+tb_goblin_wolf_pit_3;Goblin Wolf Pit;;;;;;;;;;;;;x
+tb_goblin_wolf_pit_4;Goblin Wolf Pit;;;;;;;;;;;;;x
+tb_goblin_wolf_pit_desc;The cunning Goblins breed and train their fast wolf mounts here. Giant Wolves and Trolls don't mix well with each other, and as such, you can only have either a Goblin Wolf Pit or a Troll Pen in a province, but not both.;;;;;;;;;;;;;x
+tb_black_orc_camp_0;Black Orc Camp;;;;;;;;;;;;;x
+tb_black_orc_camp_1;Black Orc Camp;;;;;;;;;;;;;x
+tb_black_orc_camp_2;Black Orc Camp;;;;;;;;;;;;;x
+tb_black_orc_camp_3;Black Orc Camp;;;;;;;;;;;;;x
+tb_black_orc_camp_4;Black Orc Camp;;;;;;;;;;;;;x
+tb_black_orc_camp_desc;The disciplined Black Orcs make their home here. Their imposing presence is enough to make the other Greenskins fight cohesively.;;;;;;;;;;;;;x
+tb_troll_pen_0;Troll Pen;;;;;;;;;;;;;x
+tb_troll_pen_1;Troll Pen;;;;;;;;;;;;;x
+tb_troll_pen_2;Troll Pen;;;;;;;;;;;;;x
+tb_troll_pen_3;Troll Pen;;;;;;;;;;;;;x
+tb_troll_pen_4;Troll Pen;;;;;;;;;;;;;x
+tb_troll_pen_desc;The lumbering and stupid Trolls commonly join Greenskin armies, attracted and goaded on by spears and bait. Trolls and Giant Wolves don't mix well with each other, and as such, you can only have either a Troll Pen or a Goblin Wolf Pit in a province, but not both.;;;;;;;;;;;;;x
+tb_night_goblin_camp_0;Night Goblin Caves;;;;;;;;;;;;;x
+tb_night_goblin_camp_1;Night Goblin Caves;;;;;;;;;;;;;x
+tb_night_goblin_camp_2;Night Goblin Caves;;;;;;;;;;;;;x
+tb_night_goblin_camp_3;Night Goblin Caves;;;;;;;;;;;;;x
+tb_night_goblin_camp_4;Night Goblin Caves;;;;;;;;;;;;;x
+tb_night_goblin_camp_desc;Here live the Night Goblins, a Goblin breed accustomed to live in the mountains and underground caves of the Old World. They make extensive use of squigs, small carnivorous creatures related to Greenskins, usually riding them into battle.;;;;;;;;;;;;;x
+tb_forest_goblin_camp_0;Forest Goblin Burrow;;;;;;;;;;;;;x
+tb_forest_goblin_camp_1;Forest Goblin Burrow;;;;;;;;;;;;;x
+tb_forest_goblin_camp_2;Forest Goblin Burrow;;;;;;;;;;;;;x
+tb_forest_goblin_camp_3;Forest Goblin Burrow;;;;;;;;;;;;;x
+tb_forest_goblin_camp_4;Forest Goblin Burrow;;;;;;;;;;;;;x
+tb_forest_goblin_camp_desc;The Forest Goblins make their home in the deepest forests of the Old World, as such, they have an affinity with archery and ambushes. Spiders are an important part of their culture, and the Forest Goblins ride the large, horse-sized variant into battle.;;;;;;;;;;;;;x
+tb_goblin_camp_0;Goblin Camp;;;;;;;;;;;;;x
+tb_goblin_camp_1;Goblin Camp;;;;;;;;;;;;;x
+tb_goblin_camp_2;Goblin Camp;;;;;;;;;;;;;x
+tb_goblin_camp_3;Goblin Camp;;;;;;;;;;;;;x
+tb_goblin_camp_4;Goblin Camp;;;;;;;;;;;;;x
+tb_goblin_camp_desc;The treacherous Goblins have their home here. Goblins are by nature craven creatures, as such, their main tactic consists of swarming their opponents with spears and arrows. They're not quality warriors though, and will flee at the slightest hint of defeat.;;;;;;;;;;;;;x
+impose_greenskin_law_change;Impose your rule;;;;;;;;;;;;;x
+impose_greenskin_law_change_desc;I am da [Root.GetTitle] of dis 'ere tribe, 'an you's do as I say!;;;;;;;;;;;;;x
+greenskin_law_change_tooltip_1;You can upgrade your Greenskin Control law level right now instead of waiting for it, but it will cost you that levels respective prestige requirement ( 100, 250, 500 or 1000 ).\n For trying to impose this change, a Greenskin of your same race and of higher stature will challenge you to a duel, if you lose or escape, the Greenskin Control law will return to its previous level;;;;;;;;;;;;;x
+greenskin_law_timer;Imposed Greenskin Law;;;;;;;;;;;;;x
+minimal_greenskin_population;Small Greenskin Population;;;;;;;;;;;;;x
+medium_greenskin_population;Greenskins occupying province §C<§ §Y1§! §C/§! §Z2§! §C>§!;;;;;;;;;;;;;x 
+medium_greenskin_population_desc;Hordes of Greenskins are occupying this province, transforming the land in their particular way.;;;;;;;;;;;;;x 
+large_greenskin_population;Greenskins occupying province §C<§! §Z2§! §C/§! §Z2§! §C>§!;;;;;;;;;;;;;x
+large_greenskin_population_desc;Hordes of Greenskins are occupying this province, transforming the land in their particular way.;;;;;;;;;;;;;x
+greenskin_population_bad;Greenskin Hideouts;;;;;;;;;;;;;x
+greenskin_population_bad_desc;While this province's Greenskin population is mostly leaderless and disorganized, they remain a threat, waiting in their hideouts for a chance to pillage and destroy nearby settlements. This Marshal of this province's ruler will eventually try to found an expedition to dislodge them.;;;;;;;;;;;;;x
+weak_warboss;Weak Boss;;;;;;;;;;;;;x
+weak_warboss_desc;This Greenskin has been deemed a weak leader by its peers, and must now face their animosity;;;;;;;;;;;;;x
+EVTDESCgreenskinlaws.110;Da boyz of the [Root.PrimaryTitle.GetName] tribe are starting to respect ya in a propa way!;;;;;;;;;;;;;x
+EVTOPTgreenskinlaws.110;’Ere we go! ’Ere we go! ’Ere we go!;;;;;;;;;;;;;x
+EVTDESCgreenskinlaws.120;Da boyz of the [Root.PrimaryTitle.GetName] tribe now respect ya in da propa way!;;;;;;;;;;;;;x
+EVTOPTgreenskinlaws.120;I’m da greenest, and I’m da meanest!;;;;;;;;;;;;;x
+EVTDESCgreenskinlaws.130;Da boyz of the [Root.PrimaryTitle.GetName] tribe now REALLY respect ya!;;;;;;;;;;;;;x
+EVTOPTgreenskinlaws.130;[Root.Culture.GetName]s [Root.Culture.GetName]s [Root.Culture.GetName]s [Root.Culture.GetName]s!;;;;;;;;;;;;;x
+EVTDESCgreenskinlaws.140;Da boyz of the [Root.PrimaryTitle.GetName] tribe think you’re da biggest, meaneast [Root.Culture.GetName] theres!.;;;;;;;;;;;;;
+EVTOPTgreenskinlaws.140;[Root.Religion.GetHighGodName] is wiv me!;;;;;;;;;;;;;x
+EVTDESCgreenskinlaws.111;Da boyz of the [Root.PrimaryTitle.GetName] tribe hav lost all da respect in ya !;;;;;;;;;;;;;x
+EVTOPTgreenskinlaws.111;Zog dem!;;;;;;;;;;;;;x
+EVTDESCgreenskinlaws.121;Da boyz of the [Root.PrimaryTitle.GetName] tribe hav lost da propa respect in ya, but still fear ya choppa!;;;;;;;;;;;;;x
+EVTDESCgreenskinlaws.131;Da boyz of the [Root.PrimaryTitle.GetName] no longer think you’s the baddest, but still respect ya in da propa way!;;;;;;;;;;;;;x
+EVTDESCgreenskinlaws.141;Da boyz of the [Root.PrimaryTitle.GetName] no longer think you’s the meanest, but still respect ya in da propa way!;;;;;;;;;;;;;x
+DR_greenskins.150.desc;Da boyz in [From.Location.GetName] are chantin' and plunderin' in yer name all da way frough. Dis land belongs to da [Root.Culture.GetName]s!;;;;;;;;;;;;x
+DR_greenskins.150.opta;Oi, boss...;;;;;;;;;;;;;x
+DR_greenskins.150.descB;Dis 'ere land of [Root.Location.GetName] has been made green by da boys! Now, all da fawmer 'oldings built by runtz are rebuilt in da propa way!;;;;;;;;;;;;x
+DR_greenskins.150.descC;Da boys 'ave found a droppin' in [Root.Location.GetName] wiv da face ov [Root.Religion.GetRandomGodName] in it! [Root.Religion.GetHighGodName] favaaahrs us!;;;;;;;;;;;;x
+DR_greenskins.151.desc;It seems that the province of [Root.GetName] was in the process of being "colonized" by the Greenskin races, in their particular way. We have managed to eliminate most of them, but some stragglers remain, and cause some trouble until they disperse.;;;;;;;;;;;;x
+DR_greenskins.151.opta;Damn these Greenskins!;;;;;;;;;;;;;x
+DR_greenskins.152.desc;You got thumped in the duel. None of the other boys listen to your orders any more.;;;;;;;;;;;;;x
+DR_greenskins.152.opta;Zog him!;;;;;;;;;;;;;x
+DR_greenskins155DESC;You have noticed that all the other boys are giving you mean looks. You have become a weak boss, and other, meaner and stronger Greenskins might want to replace you...;;;;;;;;;;;;;x
+DR_greenskins155OPTA;Zog dem!;;;;;;;;;;;;;x
+DR_greenskins158TITLE;Fall of [From.Kingdom.GetName];;;;;;;;;;;;;x
+DR_greenskins158DESC;The Greenskins are a quarrelsome race. If not under the leadership of a strong leader, one that leads them to further battles against other races, they will degenerate into infighting. The [From.Kingdom.GetFullName] has been under such a weak leader, and now pays the price.\n\nLeft unchecked, the bosses of the tribes that made up the horde of the [From.Kingdom.GetFullName] have degenerated into animosity and petty clan warfare.\n\nThe [From.Kingdom.GetFullName] has collapsed entirely.;;;;;;;;;;;;;x
+DR_greenskins160TITLE;Collaps of [From.Empire.GetName];;;;;;;;;;;;;x
+DR_greenskins160DESC;The Greenskins are a quarrelsome race. If not under the leadership of a strong leader, one that leads them to further battles against other races, they will degenerate into infighting. The [From.Empire.GetFullName] has been under such a weak leader, and now pays the price.\n\nLeft unchecked, the bosses of the tribes that made up the horde of the [From.Empire.GetFullName] have degenerated into animosity and petty clan warfare.\n\nThe [From.Empire.GetFullName] has collapsed entirely.;;;;;;;;;;;;;x
+DR_greenskins158OPTA;Hooray!;;;;;;;;;;;;;x
+DR_greenskins158OPTB;Runtz...;;;;;;;;;;;;;x
+orc_duchy_conquest;Greenskin Invasion;;;;;;;;;;x
+orc_duchy_conquest_desc;Greenskins can attack any neighbouring duchy even if it is held by fellow Greenskins, but only if they have the Medium Greenskin Power law or higher. To reflect their warlike ways, the truce cooldown period is only one year.;;;;;;;;;;x
+CB_NAME_ORC_DUCHY_CONQUEST;Greenskin Invasion of [Title.GetBaseName];;;;;;;;;;x
+WAR_NAME_ORC_DUCHY_CONQUEST;$ORDER$$FIRST_ADJ$ Greenskin Invasion of [Title.GetBaseName];;;;;;;;;;x
+GREENSKIN_HORDE;[Root.County.GetAdjective] Orc Horde;;;;;;;;;;;;;
+GOBLIN_HORDE;[Root.County.GetAdjective] Goblin Horde;;;;;;;;;;;;;
+FOREST_GOBLIN_HORDE;[Root.County.GetAdjective] Forest Goblin Horde;;;;;;;;;;;;;
+greenskin_uprising_desc;§Y$CLAIMANT$§! can wage war to take any land for his horde.;;;;;;;;;;;;;
+CB_NAME_GREENSKIN_UPRISING;Greenskin Uprising;;;;;;;;;;;;;
+WAR_NAME_GREENSKIN_UPRISING;$ORDER$$FIRST_ADJ$ Greenskin Uprising of $OTHER_TITLE$;;;;;;;;;;;;;
+EVTDESC_greenskin_uprising_revolt;A dangerous horde of Greenskins has reached [Root.GetName]! A strong Warboss has rallied all the Greenskins hiding in your lands, and some other coming from nearby places, with the aim of overcoming out defences, looting and pillaging the province!;;;;;;;;;;;;;;
+EVTOPTAgreenskin_uprising_revolt;Cursed creatures!;;;;;;;;;;;;;
+EVTDESC_greenskin_uprising_revolt_liege;A dangerous horde of Greenskins has reached [From.GetName]! A strong Warboss has rallied all the Greenskins hiding in your lands, and some other coming from nearby places, with the aim of overcoming out defences, looting and pillaging the province!;;;;;;;;;;;;;;
+EVTOPTAgreenskin_uprising_revolt_liege;Cursed creatures!;;;;;;;;;;;;;
+lore_waaagh;Lore of Da Waaagh;;;;;;;;;;;;;
+lore_waaagh_desc;The Greenskin don't channel the Winds of Magic like most other races, instead, their shamans draw power from the "Waaagh", a magic field generated unconsciously by all Greenskins. They can manifest this power in all kinds of powers, from strengthening their comrades in battle to summon the feet of their gods to crush their enemies.;;;;;;;;;;;;;
+WAAAGH_NAME;Waaagh! [Root.GetName];;;;;;;;;;;;;
+adopt_greenskin_heir_named;Take Greenskin into your clan;;;;;;;;;;x
+adopt_greenskin_heir;Take [Root.GetBestName] into your clan;;;;;;;;;;x
+adopt_greenskin_heir_desc;Dis ere boy [Root.GetBestName] wud make a nice adishun to da [From.GetOnlyDynastyName] clan.;;;;;;;;;;x
+TOOLTIPADOPTGREENSKIN;[Root.GetBestName] must not belong to any other clan.\n;;;;;;;;;;x
+unite_the_clans;Unite the [Root.Title.GetName] Clans;;;;;;;;;;x
+unite_the_clans_desc;Oi! I'z da biggest, baddest Warboss there'z!;;;;;;;;;;x
+form_waaagh_requirement_tooltip;You need to hold at least 2 king tier titles.\n;;;;;;;;;;x
+form_waaagh_info_tooltip;You will be given an Empire-tier titular version of your main King tier title.\n;;;;;;;;;;x
+form_waaagh_info_tooltip2;This will also give you the option to declare Waaaghs! on other King-tier and above, non-Greenskin characters.\n;;;;;;;;;;x
+declare_waaagh;Declare Waaagh! against [Root.GetBestName];;;;;;;;;;x
+declare_waaagh_desc;Declaring a WAAAGH! against a target gives you access to the "WAAAGH! Invasion" cb against any of the target's de-jure kingdoms.\n During 2 years, hordes of Greenskins will flock to your banner. Not declaring war within two years cancels the invasion and has a heavy Prestige cost. You can only declare WAAAGHs against realms adjacent to yours.;;;;;;;;;;x
+waaagh_succ_tip;You will gain all the de-jure, held titles under the target Kingdom, and execute their holder(s).\n All the provinces within the target de-jure Kingdom will be converted to your culture and religion, and their holdings converted to tribal holdings.;;;;;;;;;;x
+bash_heads;Bash [Root.GetBestName]'s head;;;;;;;;;;x
+bash_heads_desc;I'll show dis ere runt "weak Warboss"...;;;;;;;;;;x
+bash_runts;Stomp [Root.GetBestName];;;;;;;;;;x
+bash_runts_desc;We'z da [From.Culture.GetName], and we be bossed by no stinkin' [Root.Culture.GetName]! STOMP HIM!;;;;;;;;;;x
+weakwarbossremoved;You will challenge [Root.GetBestName] to a duel. If you win, the "Weak Warboss" modifier will be removed from you.;;;;;;;;;;x
+DR_greenskins161DESC;Da uvver boyz are startin' to laugh at ya, dey say you'z a weak git an' no longer a propa orc warboss...;;;;;;;;;;x
+DR_greenskins161OPTA;OI! I'll show dis runtz!;;;;;;;;;;x
+DR_greenskins204DESC;Da uvver boyz are startin' to laugh at ya, dey say you'z a squig-brain no longer a propa gobbo warboss...;;;;;;;;;;x
+DR_greenskins204OPTA;OI! I'll show dis runtz!;;;;;;;;;;x
+preparing_waaagh_invasion_opinion;Attempting to invade;;;;;;;;;;x
+preparing_waaagh_invasion_opinion_against_me;Attempting to invade me;;;;;;;;;;x
+preparing_waaagh_invasion;Preparing WAAAGH!;;;;;;;;;;x
+EVTDESC_greenskin_uprising_revolt3;A dangerous horde of Greenskins has reached [Root.GetName]! A strong Warboss has rallied all the Greenskins hiding in your lands, and some other coming from nearby places, with the aim of overcoming out defenses, looting and pillaging the province!;;;;;;;;;;;;;;
+EVTDESC_greenskin_uprising_revolt_greenskin;OI! Da boyz in [Root.GetName] are sayin' that you's no longer a propa Warboss and that da camp is theirs!;;;;;;;;;;;;;;
+EVTOPTAgreenskin_uprising_revolt_greenskin;I's gonna stomp dis runts!;;;;;;;;;;;;;
+waaagh_invasion;WAAAGH! on [Title.GetBaseName];;;;;;;;;;x
+waaagh_invasion_desc;Launches the WAAAGH! on the target kingdom. If the war is won, §Y$CLAIMANT$§! will get all the titles inside of it, the provinces conquered will be instantly converted to his culture and religion and their holdings will be converted to tribal ones.;;;;;;;;;;x
+CB_NAME_WAAAGH;WAAAGH! of [Title.GetBaseName];;;;;;;;;;x
+WAR_NAME_WAAAGH;WAAAGH! $CLAIMANT$;;;;;;;;;;x
+EVTDESCA_greenskins_waaagh_warning;News have reached you that [Root.GetTitledFirstName] has started preparing a great WAAAGH! against [From.Title.GetBaseName]. Hordes and hordes of barbaric Greenskins are already flocking under [From.GetHerHis] banner.;;;;;;;;;;;;;;
+EVTOPTA_greenskins_waaagh_warning;We must be prepared!.;;;;;;;;;;;;;;
+EVTDESCA_greenskins_waaagh_waited;You've waited for too long. Slowly, the Greenskins you've gathered for your great WAAAGH! have lost their interest and fallen into animosity and petty warfare, leaving you with no great horde to assault the lands of your enemy.;;;;;;;;;;;;;;
+EVTOPTA_greenskins_waaagh_waited;Zog 'em!.;;;;;;;;;;;;;;
+EVTDESCA_greenskins_waaagh_horde;A great horde of [Root.Culture.GetName]s has gathered under your WAAAGH! banner, they wait anxiously to pillage the lands of your enemies.;;;;;;;;;;;;;;
+EVTOPTA_greenskins_waaagh_horde;We's gonna stomp our enemees!;;;;;;;;;;;;;;
+EVTDESCA_greenskins_waaagh_horde_bigun;The boss of a lesser [Root.Culture.GetName] marauding horde has arrived at your camp, having heard of the great WAAAGH! you're organizing, he wishes to take part in it!;;;;;;;;;;;;;;
+EVTOPTA_greenskins_waaagh_horde_bigun;We's gonna crush 'em good and propa!;;;;;;;;;;;;;;
+EVTDESCA_greenskins_waaagh_horde_small;A small horde of [Root.Culture.GetName]s has gathered under your WAAAGH! banner, they wait anxiously to pillage the lands of your enemies.;;;;;;;;;;;;;;
+EVTOPTA_greenskins_waaagh_horde_small;We's da best!;;;;;;;;;;;;;;
+attempted_waaagh;Attempted WAAAGH!;;;;;;;;;;x
+purge_greenskins;Purge the Greenskins;;;;;;;;;;x
+purge_greenskins_desc;Purge the Greenskin pests in [Title.GetBaseName]!;;;;;;;;;;x
+CB_NAME_ORC_COUNTY_PURGE;Greenskin Extermination in [Title.GetBaseName];;;;;;;;;;x
+WAR_NAME_ORC_COUNTY_PURGE;$ORDER$$FIRST_ADJ$ Greenskin Extermination of [Title.GetBaseName];;;;;;;;;;x
+purge_greenskins_tooltip;The Greenskins in this province will be purged. It will convert to your religion and culture, and any tribal holdings will converted to those that correspond your government type, but some Greenskins will persist in the province for at least 10 years.\n;;;;;;;;;;x
+orc_county_conquest;Greenskin Invasion of [Title.GetBaseName];;;;;;;;;;x
+orc_county_conquest_desc;Greenskins can attack any neighbouring county even if it is held by fellow Greenskins. §Y$CLAIMANT$§! can also attack any bordering province and occupy them, as far as the boyz can manage.;;;;;;;;;;x
+CB_NAME_ORC_COUNTY_CONQUEST;Invasion of [Title.GetBaseName];;;;;;;;;;x
+WAR_NAME_ORC_COUNTY_CONQUEST;$ORDER$$FIRST_ADJ$ Greenskin Invasion of $OTHER_TITLE$;;;;;;;;;;x
+action_make_province_green;Make land Green;;;;;;;;;;;;;
+action_make_province_green_desc;Boyz, let's make dis lands ere green an propa!\n This councillor action will make a province with a Tribal capital eventually get "Greenskin Colonization" modifiers, which have 2 levels \n After level 2, the event will flip the provinces to [Root.Culture.GetName] culture and [Root.Religion.GetName] religion, and convert all the remaining non-Temple holdings into Tribal holdings;;;;;;;;;;;;;
+EVTDESC_greenskins_break_off_vassal;OI! Wot do you fink of da new boss, [Root.Liege.GetTitledFirstName]?;;;;;;;;;;;;;
+EVTOPTA_greenskins_break_off_vassal;Hez a [Root.Culture.GetName] boss, gud an propa!;;;;;;;;;;;;;
+EVTOPTB_greenskins_break_off_vassal;I fink hez a stoopid lil' git and a Snotling-hugga!;;;;;;;;;;;;;
+EVTDESC_greenskins_break_off_liege;[From.GetBestName] finks you'z no longer a propa boss, that he'z the new boss of [From.GetTitle];;;;;;;;;;;;;
+EVTOPTA_greenskins_break_off_liege;Oi! Who does he fink he'z!;;;;;;;;;;;;;
+EVTDESC_greenskins_liege_challenged;Da runt [From.GetFirstName] iz challenging you to a fight for da clan! Show him who'z da boss!.;;;;;;;;;;;;;;
+EVTOPTA_greenskins_liege_challenged;OI! I'M GONNA BASH YOUR HEAD!;;;;;;;;;;;;;;
+EVTDESC_greenskins_liege_challenger;Dat runty, squig-lover [From.Culture.GetName] you have fer a boss, says he'z gonna bash your head for dat! SHOW HIM!;;;;;;;;;;;;;;
+EVTOPTA_greenskins_liege_challenger;WAAAAAAGH!!;;;;;;;;;;;;;;
+duel_greenskin_liege_decision;Challenge da Boss;;;;;;;;;;;;;
+duel_greenskin_liege_decision_desc;[Root.Liege.GetTitledFirstName] is a stuntie-lover 'an a runt, and he's gonna get hes head smashed!;;;;;;;;;;;;;
+EVTDESC_orc_kills_orc;Da [Root.Culture.GetName]s only follow da biggest and meanest! You smashed [From.GetTitledFirstName] 'an da clan is now yours!;;;;;;;;;;;;;;
+EVTOPTA_orc_kills_orc;I'M DA GREATEST!;;;;;;;;;;;;;;
+EVTDESC_orc_kills_orc_liege;[From.GetFirstName] has smashed [FromFrom.GetTitledFirstName], one of yer bosses, in a fight and taken [From.GetHerHis] place as boss of da clan!;;;;;;;;;;;;;;
+EVTOPTA_orc_kills_orc_liege;Runts...;;;;;;;;;;;;;;
+gather_greenskin_army;Gather da boyz!;;;;;;;;;;;;;;
+gather_greenskin_army_desc;If there's some good scrap, yous can always count on da boyz fer fightin' on it...;;;;;;;;;;;;;;
+DR_greenskins.150.desc_liege;Oi boss, Da boyz in [From.Location.GetName] are chantin' and plunderin' in yer name all da way frough. Dis land belongs to da [Root.Culture.GetName]s!;;;;;;;;;;;;x
+DR_greenskins.150.opta_liege;I'm da greatest [Root.Culture.GetName] theres!;;;;;;;;;;;;;x
+DR_greenskins.150.descB_liege;Oi boss, dis 'ere land of [From.Location.GetName] has been made green by da boys! Now, all da fawmer 'oldings built by runtz are rebuilt in da propa way! Da boys are chantin' and plunderin' in yer name all frough da land!;;;;;;;;;;;;x
+DR_greenskins.150.descC_liege;Oi boss, while plunderin', da boys 'ave found a big droppin' in [From.Location.GetName] wiv da face ov [Root.Religion.GetRandomGodName] in it! [Root.Religion.GetHighGodName] favaaahrs you!;;;;;;;;;;;;x
+EVTDESCADR_greenskins_settle_boyz;A small band ov boyz 'as come to yer boss' camp at [Root.Location.GetName], 'opin' that you lead 'em to a propa scrap!;;;;;;;;;;;;x
+EVTDESCBDR_greenskins_settle_boyz;Dis 'ere land of [Root.Location.GetName] has been made green by da boys! Now, all da fawmer 'oldings built by runtz are rebuilt in da propa way! A small band ov boyz 'as come to yer camp, 'opin' what you lead 'em to a propa scrap!;;;;;;;;;;;;x
+EVTDESCCDR_greenskins_settle_boyz;A small band ov boyz 'as come to [Root.Location.GetName], 'opin' that da boss leads 'em to a propa scrap!!;;;;;;;;;;;;x
+EVTOPTA_greenskins_settle_boyz;Oi boss...;;;;;;;;;;;;;x
+EVTDESCADR_greenskins_settle_boyz_liege;Oi boss, a small band ov boyz 'as come to yer camp at [From.Location.GetName], 'opin' that you lead 'em to a propa scrap!;;;;;;;;;;;;x
+EVTDESCBDR_greenskins_settle_boyz_liege;Dis 'ere land of [From.Location.GetName] has been made green by da boys! Now, all da fawmer 'oldings built by runtz are rebuilt in da propa way! A small band ov boyz 'as come to yer camp, 'opin' what you lead 'em to a propa scrap!;;;;;;;;;;;;x
+EVTDESCCDR_greenskins_settle_boyz_liege;Oi boss, a small band ov boyz 'as come to [From.Location.GetName], 'opin' that you lead 'em to a propa scrap!!;;;;;;;;;;;;x
+EVTOPTA_greenskins_settle_boyz_liege;Come'ere, we'z gonna get really mean!;;;;;;;;;;;;;x
+EVTNAMEgreenskins_colonize;The province is colonized and your prestige auments!;;;;;;;;;;;;;x
+EVTNAMEgreenskins_colonize_boyz;The province is colonized and a small band of boyz arrives!;;;;;;;;;;;;;x
+EVTDESCADR_greenskins_cleansing_marshal;This province is infested by a massive Greenskin population. It is only right that your liege fund an expedition to cleanse it from these troublesome pest.;;;;;;;;;;;;;;
+EVTOPTA_greenskins_cleansing_marshal;I will plead for it at once.;;;;;;;;;;;;;;
+EVTDESCADR_greenskins_cleansing_marshal_liege;The land of [From.Location.GetName] is infested by a massive Greenskin population. Your subjects have pleaded many times for you to fund an expedition to exterminate them.;;;;;;;;;;;;;;
+EVTOPTA_greenskins_cleansing_marshal_liege;Sounds reasonable.;;;;;;;;;;;;;;
+EVTOPTB_greenskins_cleansing_marshal_liege;We cannot spare anything for this.;;;;;;;;;;;;;;
+EVTDESC_greenskins_cleansing_success;Your expedition did their job and exterminated every last one of the Greenskin pests still marauding in your land.;;;;;;;;;;;;;;
+EVTOPTA_greenskins_cleansing_success;Good.;;;;;;;;;;;;;;
+EVTDESC_greenskins_cleansing_failure;The expedition had catastrophic results: not only the Greenskins repelled your forces, the battle has stirred them into a bloodlust, and now, if they gain further momentum, they might band into a full horde.;;;;;;;;;;;;;;
+EVTOPTA_greenskins_cleansing_failure;We must be prepared!;;;;;;;;;;;;;;
+scattered_greenskins;Defeated Greenskins;;;;;;;;;;;;;
+scattered_greenskins_desc;This ruler has recently thwarted the attempts of a Greenskin horde to conquer their lands. The Greenskins will not dare to intrude intro this character's demesne for 5 years.;;;;;;;;;;;;;
+greenskinsnontribalmalus;Greenskins don't get levies or taxes fron any non-Tribal holding.;;;;;;;;;;;;;
+EVTOPTAORCSGROW2;WAAAAGH!;;;;;;;;;;;;;
+nick_blakhand;Blak Hand;;;;;;;;;;;;;
+choose_greenskin_branch;Greenskin god preference;;;;;;;;;;;;;
+choose_greenskin_branch_desc;Every Greenskin holds one of their twin gods, Gork and Mork, in higher esteem than the other, which usually causes constant arguments and conflict ( As does everything else for them ) over who's the strongest.;;;;;;;;;;;;;
+greenskin_gods_gork;Prefers Gork;;;;;;;;;;;;;
+greenskin_gods_gork_desc;This Greenskin thinks that Gork is the best of the twin gods, because he's cunningly brutal;;;;;;;;;;;;;
+greenskin_gods_mork;Prefers Mork;;;;;;;;;;;;;
+greenskin_gods_mork_desc;This Greenskin thinks that Mork is the best of the twin gods, because he's brutally cunning.;;;;;;;;;;;;;
+DR_greenskins.206.desc;So... who you fink iz da biggest, baddest god?;;;;;;;;;;;;x
+DR_greenskins.206.opta;Gork is best cuz hez cunnin' and brutal!;;;;;;;;;;;;;x
+DR_greenskins.206.optb;Mork is best cuz hez brutal and cunnin'!;;;;;;;;;;;;;x
+cleanse_greenskin_presence;Cleanse Greenskins Presence;;;;;;;;;;;;;
+cleanse_greenskin_presence_desc;The Greenskins have left destruction in their wake on this province. With a little founding you could call for an expedition to eliminate them entirely from the area.;;;;;;;;;;;;;
+hunting_beastmen;Hunting Greenskins;;;;;;;;;;;;;
+hunting_beastmen_desc;An attempt to exterminate the Greenskins of this province is ongoing.;;;;;;;;;;;;;
+###Estalia, Tilea and Sartosa;;;;;;;;;;x
+restore_eternal_empire;Restore Myrmidia's Empire;;;;;;;;;;x
+restore_eternal_empire_desc;In ancient times, the lands of Tilea and Estalia were united in a great empire, under the guidance of Myrmidia incarnate herself. A long time has passed since this, and now the Estalian Kings and Tilean Princes squabble over petty conflicts. A powerful ruler who controls both lands can, perhaps, end these conflicts and become the second incarnation of Myrmidia...;;;;;;;;;;x
+EVTTOOLTIPETERNALRESTORED;Myrmidia's Empire is restored!;;;;;;;;;;x
+EVTDESCDR_misc.1;Friends, [Root.Culture.GetName]s, countrymen, lend me your ears! After the miraculous recovery of territory lost centuries ago, the Myrmidia's Empire has been reborn! Tilea & Estalia have endured dark times. After the era of Myrmidia Incarnate, our lands were stormed by Greenskins, bandits, pretenders and northern barbarians, and territory after territory burned at their touch, but now a bright new age has dawned for all of civilization.\n\n[Root.GetTitledFirstName] has been crowned by the Última Águila as Myrmidia Incarnate at the great cathedral of Magritta, and now rules [Root.PrimaryTitle.GetName] as the second Incarnation of Myrmidia!;;;;;;;;;;x
+EVTNAMEDR_misc.1;Myrmidia's Empire;;;;;;;;;;x
+EVTOPTADR_misc.1;Myrmidia Invicta!;;;;;;;;;;x
+myrmidia_incarnate;Myrmidia Incarnate;;;;;;;;;;x
+myrmidia_incarnate_desc;This character has been recognized as Myrmidia Incarnate, and ruler of Her restored empire.;;;;;;;;;;x
+ca_tercio_barracks_1_desc;The Estalians are famed for their Tercio formations, where ranks of pikemen form an impenetrable wall of sharp steel points, supported by crossbowmen to the sides.;;;;;;;;;;x
+ca_tercio_barracks_1;Tercio Barracks;;;;;;;;;x
+ca_tercio_barracks_2;Tercio Barracks;;;;;;;;;x
+ca_tercio_barracks_3;Tercio Barracks;;;;;;;;;;x
+ca_tercio_barracks_4;Tercio Barracks;;;;;;;;;x
+ca_tercio_barracks_5;Tercio Barracks;;;;;;;;;x
+ca_tercio_barracks_6;Tercio Barracks;;;;;;;;x
+ca_estalian_genitores_1_desc;Influenced by both Estalian and Arabyan light cavalry traditions, Genitores shun heavy armour and lances in favour of light armour and spears. These well trained horsemen are fast and manoeuvrable in the battlefield.;;;;;;;;;;x
+ca_estalian_genitores_1;Genitores Stables;Grand enclos des cabelleros;Cabarello-Übungsplatz;;Zona de entrenamiento de caballeros;;;;;;;;;x
+ca_estalian_genitores_2;Genitores Stables;Grand enclos des cabelleros;Cabarello-Übungsplatz;;Zona de entrenamiento de caballeros;;;;;;;;;x
+ca_estalian_genitores_3;Genitores Stables;Grand enclos des cabelleros;Cabarello-Übungsplatz;;Zona de entrenamiento de caballeros;;;;;;;;;x
+ca_estalian_genitores_4;Genitores Stables;Grand enclos des cabelleros;Cabarello-Übungsplatz;;Zona de entrenamiento de caballeros;;;;;;;;;x
+ca_estalian_genitores_5;Genitores Stables;Grand enclos des cabelleros;Cabarello-Übungsplatz;;Zona de entrenamiento de caballeros;;;;;;;;;x
+ca_estalian_genitores_6;Genitores Stables;Grand enclos des cabelleros;Cabarello-Übungsplatz;;Zona de entrenamiento de caballeros;;;;;;;;;x
+ca_rodelero_barracks_1_desc;Armed with a metal buckler, light armour and double-edged, razor sharp swords, the Estalian Rodeleros form the front rank of the Tercio formations. Brave swordsmen, these aggressive men are recruited from among the numerous cut-throats, bandits and renegades that inhabit Estalia.;;;;;;;;;;x
+ca_rodelero_barracks_1;Rodelero Training Grounds;;;;;;;;;x
+ca_rodelero_barracks_2;Rodelero Training Grounds;;;;;;;;;x
+ca_rodelero_barracks_3;Rodelero Training Grounds;;;;;;;;;;x
+ca_rodelero_barracks_4;Rodelero Training Grounds;;;;;;;;;x
+ca_culture_estalian_group_1_desc;The elite guards of the Estalian rulers, the Royal Guard are among the best of the military, armed with some of the best equipment available, they are trained rigorously. As a sign of their position the Royal Guard are equipped with Estalian-made handguns, which are relatively rare.;;;;;;;;;;x
+ca_culture_tilean_1_desc;Well-disciplined Tilean "Condotteri" mercenaries, composed of pikemen and crossbowmen are raised here, specializing in the defense.;Les formations italiennes de piquiers sont entraînées ici. Spécialisées en défense, elles sont très disciplinées.;Die sehr disziplinierte, italienische Pike-Formation wird hier aufgezogen, die auf die Verteidigung spezialisiert ist.;;Las disciplinadas formaciones de picas italianas, especializadas en defensa, se educan aquí.;;;;;;;;;x
+ca_culture_myken_1_desc;The heavily-armored and drilled Myken Hoplites are trained here.;Les formations italiennes de piquiers sont entraînées ici. Spécialisées en défense, elles sont très disciplinées.;Die sehr disziplinierte, italienische Pike-Formation wird hier aufgezogen, die auf die Verteidigung spezialisiert ist.;;Las disciplinadas formaciones de picas italianas, especializadas en defensa, se educan aquí.;;;;;;;;;x
+ca_culture_estalian_group_1;Royal Guard Headquarters;Grand enclos des cabelleros;Cabarello-Übungsplatz;;Zona de entrenamiento de caballeros;;;;;;;;;x
+ca_culture_estalian_group_2;Royal Guard Headquarters;Grand enclos des cabelleros;Cabarello-Übungsplatz;;Zona de entrenamiento de caballeros;;;;;;;;;x
+ca_culture_estalian_group_3;Royal Guard Headquarters;Grand enclos des cabelleros;Cabarello-Übungsplatz;;Zona de entrenamiento de caballeros;;;;;;;;;x
+ca_culture_estalian_group_4;Royal Guard Headquarters;Grand enclos des cabelleros;Cabarello-Übungsplatz;;Zona de entrenamiento de caballeros;;;;;;;;;x
+ca_culture_tilean_1;Condotteri Training Ground;Camp des picchiere;Pikenier-Übungsplatz;;Zona de entrenamiento con lanza;;;;;;;;;x
+ca_culture_tilean_2;Condotteri Training Ground;Camp des picchiere;Pikenier-Übungsplatz;;Zona de entrenamiento con lanza;;;;;;;;;x
+ca_culture_tilean_3;Condotteri Training Ground;Camp des picchiere;Pikenier-Übungsplatz;;Zona de entrenamiento con lanza;;;;;;;;;x
+ca_culture_tilean_4;Condotteri Training Ground;Camp des picchiere;Pikenier-Übungsplatz;;Zona de entrenamiento con lanza;;;;;;;;;x
+ca_culture_myken_1;Hoplite Training Ground;Camp des picchiere;Pikenier-Übungsplatz;;Zona de entrenamiento con lanza;;;;;;;;;x
+ca_culture_myken_2;Hoplite Training Ground;Camp des picchiere;Pikenier-Übungsplatz;;Zona de entrenamiento con lanza;;;;;;;;;x
+ca_culture_myken_3;Hoplite Training Ground;Camp des picchiere;Pikenier-Übungsplatz;;Zona de entrenamiento con lanza;;;;;;;;;x
+ca_culture_myken_4;Hoplite Training Ground;Camp des picchiere;Pikenier-Übungsplatz;;Zona de entrenamiento con lanza;;;;;;;;;x
+###Chaos Dwarfs;;;;;;;;;;x
+d_cult_of_hashut;Priesthood of Hashut;;;;;;;;;;x
+d_cult_of_hashut_desc;Hashut Cult;;;;;;;;;;x
+ca_zharr_naggrund;Mingol Zharr-Naggrund;;;;;;;;;;;;;x
+ca_zharr_naggrund_desc;Mingol Zharr-Naggrund is the true capital of all Chaos Dwarfs. It is a great ziggurat-city made out of obsidian, equal parts fortress, factory and temple. Great factories, which run thanks to the waters of the River Ruin and the toil of thousands of slaves, forge all kinds of mass-produced armours and weapons, which are often sold all around the Dark Lands and beyond.;;;;;;;;;;;;;x
+ca_tower_gorgoth;Tower of Gorgoth;;;;;;;;;;x
+ca_tower_gorgoth_desc;The Tower of Gorgoth rests atop a plateau in a small volcanic mountain range in the southern region of the Dark Lands. Deep within the remains of the long extinct volcano Azgorh, the Dawi Zharr found there to be vast seams of precious minerals. Untold numbers of slaves have been brought here over the centuries, and the mines have developed into an extensive network.  A huge garrison of Chaos Dwarfs keeps vigilance over the tower and the surrounding area with rocket batteries aligned along the ramparts and towers of the citadel.;;;;;;;;;;x
+ca_black_fortress;The Black Fortress;;;;;;;;;;x
+ca_black_fortress_desc;Guardian of the south-eastern teaches of the Chaos Dwarf realm, the Black Fortress is a vast, jagged citadel stained black by the Volcanic fires of the rocky plateau on which it sits. Along with the Tower of Gorgoth, it vies for prominence and power as the second most important fortress-citadel of the Chaos Dwarfs beyond their heartland on the Zharrduk Plain. Unlike the Tower of Gorgoth, the purpose of the Black Fortress is as a purely military outpost, and is headquarters for the Legion of Azgorh. The legion is a mighty standing army which ranges across the desolation of the southern Dark Lands, escorts the far- flung slave caravans through the Howling Wastes and stands as a bulwark against frequent invasions of Ogres, Orcs and worse from the east.;;;;;;;;;;x
+chaos_dwarf_sorcerer;Chaos Dwarf Sorcerer;;;;;;;;;;x
+chaos_dwarf_sorcerer_desc;The Sorcerer-Prophets are the great masters of the Chaos Dwarf race, directing the labours of their slaves and the conquests of their armies, their sorcerous powers granted by the Bullfather, Hashut. Thanks to their dark patron, they have completely embraced the arts of magic, with a dire price. Since Dwarfs were never meant to practise magic, over time a Chaos Dwarf Sorcerer will gradually turn to stone, starting from their feet, until the entire body is consumed and they becomes a statue. This trait also gives access to spells from the Lore of Hashut.;;;;;;;;;;x
+great_taurus_mount;Great Taurus Mount;;;;;;;;;;x
+great_taurus_mount_desc;Mounted into battle by the Chaos Dwarfs, a Great Taurus is a terrible sight to behold. A gigantic winged bull, wreathed in infernal flames, it's temperament matching that of it's fell masters. Whoever dares to strike this beast will surely be engulfed by the flames that compose it's body.;;;;;;;;;;x
+lamassu_mount;Lammasu Mount;;;;;;;;;;x
+lamassu_mount_desc;Only the Sorcerer-Prophets of the Chaos Dwarfs may ride a Lammasu into battle. Similar to a Great Taurus, but with clawed forelimbs, an eerie face that resembles that of a Chaos Dwarf, and a cunning and vileness to match their masters'. Lammasu are impervious to magic, and some are even known to cast spells from the Lores of Fire and Shadow.;;;;;;;;;;x
+sacrifice_to_hashut;Sacrifice [Root.GetTitledFirstName] to Hashut;;;;;;;;;;;;x
+sacrifice_to_hashut_desc;Hashut will surely grant you His favour by sacrificing this lesser [Root.Culture.GetName] in His great furnaces...;;;;;;;;;;;;x
+chaos_dwarf_sell_into_slavery;Sell [Root.GetTitledFirstName] into Slavery;;;;;;;;;;;;x
+chaos_dwarf_sell_into_slavery_desc;You can sell [Root.GetTitledFirstName] in the slave markets of [From.Capital.GetName] for an appropriate sum...;;;;;;;;;;;;x
+chaos_dwarf_slaver_raid;Chaos Dwarf Slave Raid;;;;;;;;;;x
+chaos_dwarf_slaver_raid_desc;A Chaos Dwarf ruler can attack any neighbouring duchy with the objective of subjugating its populace and taking them into slavery. On the first siege won inside the enemy's demesne, you will get an choice to use the slaves to fill either your capital's factories or its slave levy. You also have a chance to imprison characters that are residing in that province. At the successive sieges, you will only get the chance to imprison characters.;;;;;;;;;;x
+CB_NAME_CHAOS_DWARF_SLAVER_RAID;Slave Raid in [Title.GetBaseName];;;;;;;;;;x
+WAR_NAME_CHAOS_DWARF_SLAVER_RAID;$ORDER$$FIRST_ADJ$ Slave Raid in [Title.GetBaseName];;;;;;;;;;x
+sold_into_slavery;Sold into slavery;;;;;;;;;;;;x
+sold_into_slavery_death;in slavery;;;;;;;;;;;;x
+nurgles_rot_death;of Nurgle's Rot;;;;;;;;;;;;x
+chaos_dwarf_petrification_1;Minor Sorcerer's Curse;;;;;;;;;;;;x
+chaos_dwarf_petrification_1_desc;This character is starting to suffer from the effects of the Sorcerer's Curse, an ailment that transforms all Dwarfs that try to cast magic into stone.;;;;;;;;;;;;x
+chaos_dwarf_petrification_2;Sorcerer's Curse;;;;;;;;;;;;x
+chaos_dwarf_petrification_2_desc;This character is suffering from the effects of the Sorcerer's Curse, an ailment that transforms all Dwarfs that try to cast magic into stone.;;;;;;;;;;;;x
+chaos_dwarf_petrification_2_death;petrified;;;;;;;;;;;;x
+become_chaos_dwarf_sorcerer;Become a Sorcerer-Prophet;;;;;;;;;;;;x
+become_chaos_dwarf_sorcerer_desc;Start the rituals to be granted the greatest gift from the Father of Darkness, mastery over the magic arts. Hashut is not a generous deity, and you'll need to offer Him a great number of sacrifices and start a great ceremony in hopes of being seen as worthy of this gift by the Bullfather...;;;;;;;;;;;;x
+EVTNAME_hashut_sac;A Sacrifice to Hashut;;;;;;;;;;;;x
+EVTDESC_hashut_sac;Your guards bring [From.GetTitledFirstName] up the stairs of the temple, towards to a great, brazen statue of Hashut at it's highest point, which has a pool of liquid, molten metal beneath it that acts as a furnace. As the temple's Bull Centaur places [From.GetHerHim] close to the furnace, you hear the mumblings of a [From.Religion.GetName] prayer to [From.Religion.GetHighGodName].\n\nThe Bull Centaur looks to you, his sturdy skin, blessed by Hashut, unaffected by the extreme heat that comes off the statue's furnace. With a nod from you, he will throw the sacrifice into the furnace...;;;;;;;;;;;;x
+EVTOPT_hashut_sac_dwarf;Mighty Hashut, we offer you this traitor pig, a servant of the Ancestor Gods!;;;;;;;;;;;;x
+EVTOPT_hashut_sac_minor;Mighty Hashut, we offer you a leader of the [From.Culture.GetName]s!;;;;;;;;;;;;x
+EVTOPT_hashut_sac_courtier;Mighty Hashut, accept this weak [From.Culture.GetName] as sacrifice!;;;;;;;;;;;;x
+EVTNAME_hashut_sacrifice_killed;A Sacrifice to Hashut;;;;;;;;;;;;x
+EVTDESC_hashut_sacrifice_killed;The monstrous Bull Centaur plunges you into the pool of molten metal. You scream in agony as your skin melts, and see nothing more...;;;;;;;;;;;;x
+ask_boon_hashut;Celebrate Grand Sacrifice;;;;;;;;;;;;x
+ask_boon_hashut_desc;Hashut, the Father of Darkness, is known to grant generous gifts to those who show Him proper respect and keep His furnaces flowing with sacrifices...;;;;;;;;;;;;x
+EVTDESC_hashut_boons;You enter [Root.Location.GetName]'s temple ritual room, and the acolytes prepare the altar for your audience with Lord Hashut by plunging a couple of slaves into the temple's furnace, as the ritual follows, you kneel and prostrate 3 times before a great statue of the Bullfather, glowing red-hot due to the burning coals inside it. Choking smoke inundates the chamber and you hear a booming, metallic voice, coming from all places in the room and none:\n"ASK FOR THY REWARD, MY SERVANT...";;;;;;;;;;;;x
+EVTOPT_hashut_bless_me;Great Hashut, grant me the Gift of Infernal Fire!;;;;;;;;;;;;x
+EVTOPT_hashut_bless_provinces_forges;Mighty Hashut, bless my lands with the Power of Molten Rock!;;;;;;;;;;;;x
+EVTOPT_hashut_centaur_bulls;Father Hashut, grant me the aid of your greatest servants, the Bull Centaurs!;;;;;;;;;;;;x
+recently_asked_hashut;Recently asked Hashut for a boon;;;;;;;;;;;;x
+hashut_blessing;Gift of Infernal Fire;;;;;;;;;;;;x
+hashut_blessing_desc;This character has been blessed with the Infernal Fire of Hashut. As a consequence his body is now stronger, and his mind more cunning.;;;;;;;;;;;;x
+hashut_province_blessing;Power of Molten Rock;;;;;;;;;;;;x
+hashut_province_blessing_desc;This province's forges and factories have been blessed with the Molten Rock of Hashut, and now can produce goods at a faster rate.;;;;;;;;;;;;x
+EVTDESC_chaos_dwarf_sorcerer;As you enter the ritual chamber, at the tip of [Root.Location.GetName]'s greatest ziggurat-temple, you notice that the acolytes have prepared everything for your great ceremony of ascension into a Sorcerer-Prophet of Hashut. A hundred slaves, the best specimens from your pits, have been brought as offerings to the Bullfather.\nOne by one, all the slaves are dropped into the fiery pools of molten metal underneath the effigy of Hashut by the temple's Bull Centaurs. The acolytes, enthralled, start singing dirges to Hashut:\n"O Bullfather, this sacrifice which we now slay upon Your altar!\nRejoice, drink of its slave blood and feast on its slave flesh!\nMay Your fire and smoke be content to offer naught but power!"\n\nYou move towards the altar before the brazen idol, and raise your hands...;;;;;;;;;;;;x
+EVTOPT_hashut_grant_me;"ALL FOR HASHUT!";;;;;;;;;;;;x
+EVTDESC_chaos_dwarf_sorcerer_succeed;As the cavernous sound of the acolytes' dirges wanes, a chocking cloud of ash and smoke fills the room. A powerful voice resonates from the brazen idol's head:\n"LET THIS BE A TESTAMENT OF HASHUT'S MIGHT, THIS SERVANT HAS NOW BEEN GRANTED POWER TO SUBJUGATE THE WINDS OF MAGIC IN MY NAME!"\n All Chaos Dwarfs in the room prostrate before these words, and you follow example. You feel a new power stirring inside you...;;;;;;;;;;;;x
+EVTOPT_praise_hashut;Praise Hashut!;;;;;;;;;;;;x
+EVTDESC_chaos_dwarf_sorcerer_fail;As the cavernous sound of the acolytes' dirges wanes, a chocking cloud of ash and smoke fills the room... you a strange sensation in goes through your body. Is this Hashut's greatest gift? As you search yourself for any changes, you notice that your feet don't move any more... they have turned into stones. As the curse quickly creeps through the rest of your body, you can only hear a booming, metalling laughter before you're fully entrapped into stone...;;;;;;;;;;;;x
+EVTOPT_so_close_chaosdwarf;I was so... close...;;;;;;;;;;;;x
+CDSRITUALSUCCEEDS;The ritual succeeds!;;;;;;;;;;;;x
+CDSRITUALFAILS;The ritual fails!;;;;;;;;;;;;x
+EVTDESCAsorcererscurse;You have noticed that as of late, your feet and hands, starting from your toes and fingers, have started to petrify into black stone. It is clear, the dreaded Sorcerer's Curse is starting to affect you. You're still able to move independently, but you've clearly lost mobility, and your servants start to think you as weak...;;;;;;;;;;;;x
+EVTDESCBsorcererscurse;The Sorcerer's Curse has almost completely claimed your body. You the entirety of your lower body has petrified into black stone, and you can barely move your arms. Though you can still talk and think with clarity, it's obvious to everyone that you're no longer fit to rule, and many of your servants see you as weak...;;;;;;;;;;;;x
+EVTDESCCsorcererscurse;As your head is completely petrified into black stone you compose a stern expression, knowing that your body will become a testament to Hashut's power, littering the highways to Zharr-Naggrund next to the petrified bodies of the other Sorcerer-Prophets.;;;;;;;;;;;;x
+EVTOTPAsorcererscurse;Curses!;;;;;;;;;;;;x
+EVTOTPBsorcererscurse;Hashut's balls!;;;;;;;;;;;;x
+EVTOTPCsorcererscurse;I go to the Bullfather...;;;;;;;;;;;;x
+EVTDESCAchaosdwarf_slave_raid;The province of [From.GetName] has been raided and burned to the ground by our great hosts, its pathetic inhabitants subjugated before the might of [Root.PrimaryTitle.GetName] and Father Hashut. Where shall we send our new slaves?;;;;;;;;;;;;;;;;;;;;;;;;;;x
+EVTOTPAchaosdwarf_slave_raid;They shall be sent to toil in [Root.Capital.GetName]'s great factories!;;;;;;;;;;;;x
+EVTOTPBchaosdwarf_slave_raid;These wretches shall be part of [Root.PrimaryTitle.GetName]'s hosts!;;;;;;;;;;;;x
+EVTOTPDchaosdwarf_slave_raid;This scum is only worthy as sacrifice! Throw them into Hashut's furnaces!;;;;;;;;;;;;x
+slaves_sacrificed_hashut;Slaves Motivated;;;;;;;;;;;;x
+slaves_sacrificed_hashut_desc;The slaves of this province have witnessed what becomes of those who fail the Dawi Zharr, and are working hard to avoid being offered to the fires of Hashut.;;;;;;;;;;;;x
+EVTDESCAchaosdwarf_slave_building_capital;The Chaos Dwarf slave buildings ( Chaos Dwarf Factory and Slave Levy ) can only be present in your capital holding. If you have any of these buildings in a non-capital province, they will be destroyed and a level of the respective building will be added to your capital.;;;;;;;;;;;;x
+EVTTOOLTIPFACTORYCAPITAL;A level of Chaos Dwarf Factory will be added to [Root.Capital.GetName];;;;;;;;;;;;x
+EVTTOOLTIPSLEVYCAPITAL;A level of Slave Levy will be added to [Root.Capital.GetName];;;;;;;;;;;;x
+EVTDESC_chaos_dwarf_sell_slave;You bring [From.GetTitledFirstName] to [Root.Capital.GetName]'s slave markets in order to be sold to the highest bidder. [From.GetFirstName] will be sold into slavery and will be functionally dead.\nThe higher the base stats of the slave, the more gold you'll get for selling [From.GetHerHim]...;;;;;;;;;;;;x
+EVTOPT_chaos_dwarf_sell_slave;I'm sure this one will sell nicely...;;;;;;;;;;;;x
+EVTDESC_chaos_dwarf_sell_slave;Your wretched master, [From.GetTitledFirstName], has decided to finally sell you in the slave markets of [From.Capital.GetName]. You know that being sold into slavery by the Chaos Dwarfs is a sentence of death... and so you can only curse your fate.;;;;;;;;;;;;x
+EVTOPT_CD_curse_master;Curse you, [From.GetTitledFirstName]!;;;;;;;;;;;;x
+opinion_sold_slavery_family_member;Sold family member into slavery;;;;;;;;;;;;x
+buy_from_chaos_dwarfs;Buy armaments from [Root.GetTitledFirstName];;;;;;;;;;;;x
+buy_from_chaos_dwarfs_desc;The Chaos Dwarfs are known to trade the armaments they produce on their factories with the Chaos worshippers of the Northern Wastes and the Greenskins, in exchange for gold or slaves.\n You'll get the choice to buy either weapons and armours for your warriors, or a contingent of Doomcannons from [Root.GetTitledFirstName].;;;;;;;;;;;;x
+recently_brought_from_chaos_dwarfs;Recently bought from Chaos Dwarfs;;;;;;;;;;;;x
+recently_brought_from_chaos_dwarfs_desc;This character has recently bought armaments from the Chaos Dwarfs, and can't buy again until 10 years have passed;;;;;;;;;;;;x
+recently_sold_chaos_dwarfs;Recently sold armaments.;;;;;;;;;;;;x
+recently_sold_chaos_dwarfs_desc;This Chaos Dwarf has recently sold armaments, and can't sell again until 5 years have passed;;;;;;;;;;;;x
+chaos_dwarf_weapons;Chaos Dwarf Armament;;;;;;;;;;;;x
+chaos_dwarf_weapons_desc;The warriors of this province are armed with the best equipment from the factories and forges of the Dawi Zharr.;;;;;;;;;;;;x
+EVTDESC_chaos_dwarf_buy_stuff;You have decided to buy armaments from the Chaos Dwarfs of [From.PrimaryTitle.GetName]. [From.GetTitledFirstName] receives you at the gates of [From.Capital.GetName]: "Welcome to Mighty [From.PrimaryTitle.GetName], [Root.Culture.GetName]! Which grand creation of the Dawi Zharr do you wish to purchase?";;;;;;;;;;;;x
+EVTOTPA_chaos_dwarf_buy_weapons;I wish to buy Chaos weapons and armours for my warriors!;;;;;;;;;;;;x
+EVTOTPB_chaos_dwarf_buy_hellcannons;A regiment of mighty Doomcannons!;;;;;;;;;;;;x
+EVTOTPB_chaos_dwarf_buy_stuff;I will buy nothing from you squat weaklings!;;;;;;;;;;;;x
+EVTDESCchaos_dwarf_buy_weapons;[From.GetTitledFirstName], a [From.Culture.GetName] from [From.PrimaryTitle.GetName] has come to [Root.Capital.GetName] seeking to purchase Chaos armours and weapons from our factories to arm [Root.GetHerHis] warriors.;;;;;;;;;;;;x
+EVTDESCchaos_dwarf_buy_hellcannons;[From.GetTitledFirstName], a [From.Culture.GetName] from [From.PrimaryTitle.GetName] has come to [Root.Capital.GetName] seeking to purchase a regiment of mighty Doomcanon infernal engines from our factories.;;;;;;;;;;;;x
+EVTOTPA_chaos_dwarf_sell_weapons;Very well! Get those armaments ready!;;;;;;;;;;;;x
+EVTOTPA_chaos_dwarf_sell_hellcannons;Very well! Get those Doomcannons ready!;;;;;;;;;;;;x
+EVTOTPB_chaos_dwarf_sell_nothing;No! I won't sell anything to a filthy [From.Culture.GetName]!;;;;;;;;;;;;x
+EVTDESC_chaos_dwarf_payment;Now that you've decided what to purchase from [From.Capital.GetName]'s factories, you have to pay the price for it. The Chaos Dwarfs accept payments in gold or slaves. If you wish to pay in slaves, you'll need to either give them slaves from your own pits or some inhabitants of your capital province.;;;;;;;;;;;;x
+EVTOTPA_chaos_dwarf_payment_money;I will pay in gold!;;;;;;;;;;;;x
+EVTOTPA_chaos_dwarf_payment_slaves;I will pay in slaves from my own pits!;;;;;;;;;;;;x
+EVTOPTB_chaos_dwarf_wont_pay;That's incredibly expensive. Maybe next time.;;;;;;;;;;;;x
+EVTOTPA_chaos_dwarf_payment_own_slaves;The people of [Root.Capital.GetName] shall be my payment!;;;;;;;;;;;;x
+EVTDESC_chaos_dwarf_payment_made_money;[From.GetTitledFirstName] has decided to pay in gold. While it isn't a payment as good as slaves would have been, it's still good enough.;;;;;;;;;;;;x
+EVTDESC_chaos_dwarf_payment_made_slaves;[From.GetTitledFirstName] has decided to pay you in slaves from [From.GetHerHis] pits. The slaves appear to be weary, having been taken from many lands and races, but are still in good condition to work in our factories or serve in our hosts.;;;;;;;;;;;;x
+EVTDESC_chaos_dwarf_payment_made_own_slaves;Amusingly enough, [From.PrimaryTitle.GetName] has decided to chain [From.GetHerHis] own people in [From.Capital.GetName] and send them to you as slaves! The [From.Culture.GetName] slaves appear to be in a decent condition, enough to work in our factories or serve in our hosts!;;;;;;;;;;;;x
+EVTOTPA_chaos_dwarf_payment_made_money;It is enough indeed.;;;;;;;;;;;;x
+EVTOTPA_chaos_dwarf_payment_made_slaves;A thousand slaves for our toil!;;;;;;;;;;;;x
+EVTOTPA_chaos_dwarf_payment_made_own_slaves;A thousand slaves for our toil!;;;;;;;;;;;;x
+EVTDESC_chaos_dwarf_hellcannons_arrived;Finally, the detachment of Doomcannons that you brought from [From.GetTitledFirstName] has arrived at [Root.Capital.GetName]! Mighty infernal engines of terrible destructive power, the Doomcannons are accompanied by a small regiment of Chaos Dwarf Hellforge Guards, to ensure that the demons trapped inside the engines don't turn them against their masters.;;;;;;;;;;;;x
+EVTDESC_chaos_dwarf_weapons_arrived;The Chaos weapons and armour you brought from [From.GetTitledFirstName] have finally arrived at [Root.Capital.GetName]! Your warriors are starting to arm themselves with these powerful items... their strength will surely be incremented a thousandfold!.;;;;;;;;;;;;x
+EVTOTPA_chaos_dwarf_artillery_arrived;Mighty devices indeed!;;;;;;;;;;;;x
+EVTOTPA_chaos_dwarf_weapons_arrived;We will be unstoppable!;;;;;;;;;;;;x
+EVTOTPAchaosdwarf_send_slaves_to_building;New, fresh slaves have arrived at [Root.Capital.GetName]. Where shall we send them to work?;;;;;;;;;;;;x
+hellcannon_arrives_capital;A regiment of Doomcannons arrives in [Root.Capital.GetName];;;;;;;;;;;;x
+get_taurus_mount;Tame a Great Taurus;;;;;;;;;;;;;x
+get_taurus_mount_desc;I will soar on wings of fire and smoke!;;;;;;;;;;;;;x
+get_lamassu_mount;Bargain with a Lammasu;;;;;;;;;;;;;x
+get_lamassu_mount_desc;A cunning beast, the Lammasu may only be mounted by those chosen by Hashut!;;;;;;;;;;;;;x
+EVTDESC_chaos_dwarf_great_taurus;Most of the Great Tauruses in the plains of Zharrduk come from the breeding pens under the temple of Hashut in Zharr-Naggrund. While most of the beasts there are fully grown, it takes time for the Chaos Dwarf Sorcerers to attune the beast's binding enchantments to a new rider. These rituals will be completed in 5 years.;;;;;;;;;;;;;x
+EVTDESCB_chaos_dwarf_great_taurus;Outside of the plains of Zharrduk, the Great Tauruses can only be found in their natural habitats, inside the calderas of active volcanoes. You have managed to convince one of the Bull Centaurs guarding [From.Capital.GetName]'s temple to snatch a young calf from one of the nearby volcanoes. The beast will be fully grown and magically bound in 5 years.;;;;;;;;;;;;;x
+EVTOPTA_chaos_dwarf_great_taurus;Excellent;;;;;;;;;;;;;x
+EVTDESC_chaos_dwarf_great_taurus_trained;Finally, the Great Taurus is tamed, the magical beast's binding enchantments fully attuned so that it obeys your will completely. The Great Tauruses are considered by the Chaos Dwarfs to be the living images of Hashut, great, winged bulls surrounded by a wreathing aura of infernal flame.;;;;;;;;;;;;;x
+EVTOPTA_chaos_dwarf_great_taurus_trained;On wings of fire and smoke I soar!;;;;;;;;;;;;;x
+EVTDESC_chaos_dwarf_lamassu;Only the Sorcerer-Prophets of Hashut have the magical prowess to master a Lammasu as their mount. But these beasts cannot be binded by magic alone, like the Great Tauruses. Lammasus are cunning, intelligent beasts, and must as well be bargained within order to be completely mastered, for not even the Dawi Zharr would dare mount a Lammasu without pacting with it before. The process to find, convince and master a Lammasu will take 5 years.;;;;;;;;;;;;;x
+EVTOPTA_chaos_dwarf_lamassu;Excellent;;;;;;;;;;;;;x
+EVTDESC_chaos_dwarf_lamassu_trained;Finally, the Lammasu has been brought down to your service, through equal parts of deceit and magical skill. The Lammasus are beasts of insidious cunning, resembling Great Tauruses in it's bovine body, leathery wings and back quarters, but with clawed forelimbs and an eerie bearded, and horned face, resembling a Chaos Dwarf in many ways.;;;;;;;;;;;;;x
+EVTOPTA_chaos_dwarf_lamassu_trained;Hashut favours me!;;;;;;;;;;;;;x
+ca_chaos_dwarf_barracks_1;Chaos Dwarf Barracks;;;;;;;;;;;;;x
+ca_chaos_dwarf_barracks_2;Chaos Dwarf Barracks;;;;;;;;;;;;;x
+ca_chaos_dwarf_barracks_3;Chaos Dwarf Barracks;;;;;;;;;;;;;x
+ca_chaos_dwarf_barracks_4;Chaos Dwarf Barracks;;;;;;;;;;;;;x
+ca_chaos_dwarf_barracks_5;Chaos Dwarf Barracks;;;;;;;;;;;;;x
+ca_chaos_dwarf_barracks_6;Chaos Dwarf Barracks;;;;;;;;;;;;;x
+ca_chaos_dwarf_barracks_1_desc;This is where the Chaos Dwarf warriors and blunderbuss units get trained and equipped with the best weapons from the Dawi Zharr forge factories.;;;;;;;;;;;;;x
+ca_hobgoblin_tents_1;Hobgoblin Tents;;;;;;;;;;;;;x
+ca_hobgoblin_tents_2;Hobgoblin Tents;;;;;;;;;;;;;x
+ca_hobgoblin_tents_3;Hobgoblin Tents;;;;;;;;;;;;;x
+ca_hobgoblin_tents_4;Hobgoblin Tents;;;;;;;;;;;;;x
+ca_hobgoblin_tents_5;Hobgoblin Tents;;;;;;;;;;;;;x
+ca_hobgoblin_tents_6;Hobgoblin Tents;;;;;;;;;;;;;x
+ca_hobgoblin_tents_1_desc;The most favoured out of all the servants of the Chaos Dwarfs, the Hobgoblins from the eastern steppes are adept at riding the giant wolves the prowl their native lands. They will usually follow Dawi Zharr armies on their campaigns of slave raiding, and herd their slaves afterwards as overseers.;;;;;;;;;;;;;x
+ca_chaos_dwarf_factory_1;Small Chaos Dwarf Factory;;;;;;;;;;;;x
+ca_chaos_dwarf_factory_2;Medium Chaos Dwarf Factory;;;;;;;;;;;;x
+ca_chaos_dwarf_factory_3;Large Chaos Dwarf Factory;;;;;;;;;;;;x
+ca_chaos_dwarf_factory_4;Huge Chaos Dwarf Factory;;;;;;;;;;;;x
+ca_chaos_dwarf_factory_desc;Thanks to their industrialized mining operations, Chaos Dwarfs have the resources to build huge factories in which thousands of slave labour produce standardised equipment. Through these methods, they churn out hundreds of suits of armour, weapons and infernal engines, which in turn the Chaos Dwarfs sell to those who can pay their prices, usually their neighbours in the Chaos Wastes.;;;;;;;;;;;;x
+ca_chaos_dwarf_slave_levy_1;Small Slave Levy;;;;;;;;;;;;x
+ca_chaos_dwarf_slave_levy_2;Medium Slave Levy;;;;;;;;;;;;x
+ca_chaos_dwarf_slave_levy_3;Large Slave Levy;;;;;;;;;;;;x
+ca_chaos_dwarf_slave_levy_4;Huge Slave Levy;;;;;;;;;;;;x
+ca_chaos_dwarf_slave_levy_desc;The Chaos Dwarfs often use masses of Human, Dwarf, Elf and Greenskin slaves as part of their armies as well, driven forward to battle by whipping overseers, simply to expend the foe's ammunition and clog up his battle line with bodies, with death their only real objective. Their dreaded masters keep these poor wretches intentionally ineffective and poorly equipped, so that they don't eventually turn against them.;;;;;;;;;;;;x
+ct_chaos_dwarf_factory_1;Small Chaos Dwarf Factory;;;;;;;;;;;;x
+ct_chaos_dwarf_factory_2;Medium Chaos Dwarf Factory;;;;;;;;;;;;x
+ct_chaos_dwarf_factory_3;Large Chaos Dwarf Factory;;;;;;;;;;;;x
+ct_chaos_dwarf_factory_4;Huge Chaos Dwarf Factory;;;;;;;;;;;;x
+ct_chaos_dwarf_factory_desc;Thanks to their industrialized mining operations, Chaos Dwarfs have the resources to build huge factories in which thousands of slave labour produce standardised equipment. Through these methods, they churn out hundreds of suits of armour, weapons and infernal engines, which in turn the Chaos Dwarfs sell to those who can pay their prices, usually their neighbours in the Chaos Wastes.;;;;;;;;;;;;x
+ct_chaos_dwarf_slave_levy_1;Small Slave Levy;;;;;;;;;;;;x
+ct_chaos_dwarf_slave_levy_2;Medium Slave Levy;;;;;;;;;;;;x
+ct_chaos_dwarf_slave_levy_3;Large Slave Levy;;;;;;;;;;;;x
+ct_chaos_dwarf_slave_levy_4;Huge Slave Levy;;;;;;;;;;;;x
+ct_chaos_dwarf_slave_levy_desc;The Chaos Dwarfs often use masses of Human, Dwarf, Elf and Greenskin slaves as part of their armies as well, driven forward to battle by whipping overseers, simply to expend the foe's ammunition and clog up his battle line with bodies, with death their only real objective. Their dreaded masters keep these poor wretches intentionally ineffective and poorly equipped, so that they don't eventually turn against them.;;;;;;;;;;;;x
+tp_chaos_dwarf_factory_1;Small Chaos Dwarf Factory;;;;;;;;;;;;x
+tp_chaos_dwarf_factory_2;Medium Chaos Dwarf Factory;;;;;;;;;;;;x
+tp_chaos_dwarf_factory_3;Large Chaos Dwarf Factory;;;;;;;;;;;;x
+tp_chaos_dwarf_factory_4;Huge Chaos Dwarf Factory;;;;;;;;;;;;x
+tp_chaos_dwarf_factory_desc;Thanks to their industrialized mining operations, Chaos Dwarfs have the resources to build huge factories in which thousands of slave labour produce standardised equipment. Through these methods, they churn out hundreds of suits of armour, weapons and infernal engines, which in turn the Chaos Dwarfs sell to those who can pay their prices, usually their neighbours in the Chaos Wastes.;;;;;;;;;;;;x
+tp_chaos_dwarf_slave_levy_1;Small Slave Levy;;;;;;;;;;;;x
+tp_chaos_dwarf_slave_levy_2;Medium Slave Levy;;;;;;;;;;;;x
+tp_chaos_dwarf_slave_levy_3;Large Slave Levy;;;;;;;;;;;;x
+tp_chaos_dwarf_slave_levy_4;Huge Slave Levy;;;;;;;;;;;;x
+tp_chaos_dwarf_slave_levy_desc;The Chaos Dwarfs often use masses of Human, Dwarf, Elf and Greenskin slaves as part of their armies as well, driven forward to battle by whipping overseers, simply to expend the foe's ammunition and clog up his battle line with bodies, with death their only real objective. Their dreaded masters keep these poor wretches intentionally ineffective and poorly equipped, so that they don't eventually turn against them.;;;;;;;;;;;;x
+fp_hobgoblin_tents_1_desc;The most favoured out of all the servants of the Chaos Dwarfs, the Hobgoblins from the eastern steppes are adept at riding the giant wolves the prowl their native lands. They will usually follow Dawi Zharr armies on their campaigns of slave raiding, and herd their slaves afterwards as overseers.;;;;;;;;;;;;;x
+fp_chaos_dwarf_factory_1;Small Chaos Dwarf Factory;;;;;;;;;;;;x
+fp_chaos_dwarf_factory_2;Medium Chaos Dwarf Factory;;;;;;;;;;;;x
+fp_chaos_dwarf_factory_3;Large Chaos Dwarf Factory;;;;;;;;;;;;x
+fp_chaos_dwarf_factory_4;Huge Chaos Dwarf Factory;;;;;;;;;;;;x
+fp_chaos_dwarf_factory_desc;Thanks to their industrialized mining operations, Chaos Dwarfs have the resources to build huge factories in which thousands of slave labour produce standardised equipment. Through these methods, they churn out hundreds of suits of armour, weapons and infernal engines, which in turn the Chaos Dwarfs sell to those who can pay their prices, usually their neighbours in the Chaos Wastes.;;;;;;;;;;;;x
+fp_chaos_dwarf_slave_levy_1;Small Slave Levy;;;;;;;;;;;;x
+fp_chaos_dwarf_slave_levy_2;Medium Slave Levy;;;;;;;;;;;;x
+fp_chaos_dwarf_slave_levy_3;Large Slave Levy;;;;;;;;;;;;x
+fp_chaos_dwarf_slave_levy_4;Huge Slave Levy;;;;;;;;;;;;x
+fp_chaos_dwarf_slave_levy_desc;The Chaos Dwarfs often use masses of Human, Dwarf, Elf and Greenskin slaves as part of their armies as well, driven forward to battle by whipping overseers, simply to expend the foe's ammunition and clog up his battle line with bodies, with death their only real objective. Their dreaded masters keep these poor wretches intentionally ineffective and poorly equipped, so that they don't eventually turn against them.;;;;;;;;;;;;x
+chaossubjugationnot;Worshippers of Chaos Undivided, Khorne, Nurgle, Tzeentch and Slaanesh can use this only against these same religions. Worshippers of Hashut may only subjugate worshippers of Hashut.;;;;;;;;;;;;x
+province_slave_raid_chaos_dwarf;Slaves taken by Chaos Dwarfs;;;;;;;;;;;;x
+province_slave_raid_chaos_dwarf_desc;A host of Chaos Dwarfs has laid waste to this province and taken most of its population as slaves.;;;;;;;;;;;;x
+province_devastated_chaos_dwarf;Devastated by Chaos Dwarfs;;;;;;;;;;;;x
+province_devastated_chaos_dwarf_desc;A host of Chaos Dwarfs has laid waste to this province.;;;;;;;;;;;;x
+courtierstakenasslaves;Some courtiers residing in [From.GetName] will be taken as slaves;;;;;;;;;;;;x
+EVTOTPCchaosdwarf_slave_raid;Take them as slaves, and burn this land!;;;;;;;;;;;;x
+EVTDESCBchaosdwarf_slave_raid;The province of [From.GetName] has been raided and burned to the ground by our great hosts. Most of your overseers are on their way to [Root.Capital.GetName], herding the slaves you previously captured in another assault, but your personal entourage can still herd a small quantity of them...;;;;;;;;;;;;x
+sell_stuff_chaos_dwarfs;Sell armaments to [Root.GetTitledFirstName];;;;;;;;;;;;x
+sell_stuff_chaos_dwarfs_desc;The Chaos Dwarfs are known to trade the armaments they produce on their factories with the Chaos worshippers of the Northern Wastes and the Greenskins, in exchange for gold or slaves.\n [Root.GetTitledFirstName] will get the choice to buy either weapons and armours for your warriors, or a contingent of Doomcannons from us.;;;;;;;;;;;;x
+courtierssacrificed;Some courtiers residing in [From.GetName] will be sacrificed to Hashut.;;;;;;;;;;;;x
+must_sacrifice_hashut;Hasn't made Sacrifices;;;;;;;;;;;;x
+must_sacrifice_hashut_desc;This character has committed sacrilege against the Father of Darkness by forgoing to feed any sacrifices to the furnaces of Hashut for too long. An offering must be made to the Bullfather soon, or this character will face the disdain of its peers.;;;;;;;;;;;;x
+hashut_curse;Hashut's Scorn;;;;;;;;;;;;x
+hashut_curse_desc;This character has earned the ire of Hashut by providing an unworthy sacrifice.;;;;;;;;;;;;x
+EVTDESC_chaos_dwarf_must_sacrifice;For too long have the furnaces at [Root.Capital.GetName] remained silent and devoid of any kind of offering. You have gone 4 years without a proper sacrifice to Hashut. The Father of Darkness does not look kindly upon those who fail to pay Him tribute...;;;;;;;;;;;;x
+EVTOPTC_chaos_dwarf_must_sacrifice;I'm sure the Bullfather doesn't mind...;;;;;;;;;;;;x
+grand_sacrifice_hashut;Celebrate a Grand Sacrifice;;;;;;;;;;;;x
+grand_sacrifice_hashut_desc;Raise the icon. Load the furnaces. The Father of Darkness will have His spoils today, that we may be blessed tomorrow...;;;;;;;;;;;;x
+EVTDESC_hashut_great_sacrifice;The acolytes of Hashut have prepared the furnaces at the top of [Root.Capital.GetName]'s ziggurat for your grand sacrifice ceremony by chanting the sacred dirges. Now is the time, to offer the souls of slaves and wretches to the Bullfather, so that our Lord Hashut may feast on them.\n\nThe temple's Bull Centaurs look to you with anticipation, ready to retrieve the next sacrifice at your command...;;;;;;;;;;;;x
+EVTOPTA_hashut_great_sacrifice;Herd in slaves from the factories!;;;;;;;;;;;;x
+EVTOPTB_hashut_great_sacrifice;Bring the wretches that form our slave levies!;;;;;;;;;;;;x
+EVTOPTC_hashut_great_sacrifice;Our prisoners shall have the honour to become sacrifice!;;;;;;;;;;;;x
+EVTOPTD_hashut_great_sacrifice;I've changed my mind! Hashut doesn't deserve any gifts!;;;;;;;;;;;;x
+EVTDESC_hashut_great_sacrifice_prisoner;Your watch gleefully as the Bull Centaurs drag [From.GetTitledFirstName] up the stairs of the ziggurat, towards the great, brazen statue of Hashut, a pool of molten metal beneath it acts as it's furnace. As the Bull Centaur places [From.GetHerHim] close to the furnace, you hear the mumblings of a prayer to [From.Religion.GetHighGodName].\n\n[From.GetFirstName] tries to keep a stoic composure... but it soon fades into agony as [From.GetSheHe] is submerged into the molten metal...;;;;;;;;;;;;x
+EVTDESC_hashut_great_sacrifice_character_blessing;As the last of the sacririce's lamentations echo through the chamber... you feel that your body is now strong as a Bull Centaur's and your mind is quick as a Daemon's... certainly, you have been blessed by the Bullfather!;;;;;;;;;;;;x
+EVTDESC_hashut_great_sacrifice_province_blessing;As the last of the sacririce's lamentations echo through the chamber... you don't notice any changes, at first, but when you step out of the Zigurrat's ceremonal changer you notice that your whole land has been covered in a thick, red smoke which seems to be unnaturally empowering your forges and slaves, certainly [Root.Capital.GetName] has been blessed by the Bullfather!;;;;;;;;;;;;x
+EVTDESC_hashut_great_sacrifice_bull_centaurs_join;As the last of the sacririce's lamentations echo through the chamber... you don't see any changes, at first, but when you step out of the Zigurrat's ceremonal changer you notice that a small regiment of Bull Centaurs is waiting at it's feet, willing to serve you! Clearly, this is Father Hashut's providence gracing us!;;;;;;;;;;;;x
+EVTDESC_hashut_great_sacrifice_hashut_angry;As the last of the sacririce's lamentations echo through the chamber... you notice a cloud of red smoke forming in front of you, in a wink, it quickly files towards you and forces itself down your throat, making you pass out... when you awake, you're informed by the temple's Acolytes that you must have somehow earned Hashut's wrath, and indeed, you feel much weaker...;;;;;;;;;;;;x
+EVTOPT_hashut_great_sacrifice_hashut_angry;Curses!;;;;;;;;;;;;x
+EVTDESC_hashut_great_sacrifice_slaves;Your watch gleefully as the Bull Centaurs herd in masses of slaves up the stairs of the ziggurat, towards the great, brazen statue of Hashut, a pool of molten metal beneath it acts as it's furnace. As the Bull Centaur places them close to the furnace, you hear multiple mumbles and whimpers coming from the wretches.\n\nThey're pushed one by one into the pool of molten metal, their anguished laments forming a wonderful choir...;;;;;;;;;;;;x
+EVTOPT_hashut_great_sacrifice_slaves;Mighty Hashut! Accept the slave blood and slave flesh we offer thee!;;;;;;;;;;;;x
+nochaosdwarfsacrifice;Note that Chaos Dwarfs or Nehekharan Tomb Kings aren't a valid prisoner sacrifice!;;;;;;;;;;;;x
+EVTDESC_CD_factory_decays;The slave population in [Root.Capital.GetName]'s factories has recently declined due to chocking smoke, factory accidents, famine and general mismanagement;;;;;;;;;;;;x
+EVTOPT_CD_factory_decays;Hashut's cock! Well, we'll have to get more slaves...;;;;;;;;;;;;x
+EVTDESC_CD_slave_levy_decays;The population in [Root.Capital.GetName]'s slave barracks has recently declined due to chocking smoke, incompetent hobgoblin overseers, famine and general mismanagement;;;;;;;;;;;;x
+EVTOPT_CD_slave_levy_decays;Hashut's cock! Well, we'll have to get more slaves...;;;;;;;;;;;;x
+EVTDESCDR_chaos_dwarf.41;The Bullfather is pleased with your offering. As your sacrifice dissolves into the molten metal pit, you hear a booming voice coming from the brazen idol's head...offering you gifts;;;;;;;;;;;;;;
+EVTOPTADR_chaos_dwarf.41;Grant me some of your fiery K'daai servants, to sear my enemies!;;;;;;;;;;;;;;
+EVTOPTBDR_chaos_dwarf.41;Mighty Hashut, bless me with your strength!;;;;;;;;;;;;;;
+EVTOPTCDR_chaos_dwarf.41;Great Hashut, touch my lands with your fire!;;;;;;;;;;;;;;
+EVTOPTDDR_chaos_dwarf.41;Bullfather, grant me greater dominion over the Winds!;;;;;;;;;;;;;;
+EVTDESCDR_chaos_dwarf.42;The Bullfather must be pleased with you, for after your sacrifice dissolves into the molten pit, a daemonic creature of fire and steel surges from it, pledging itself to your service;;;;;;;;;;;;;;
+EVTOPTADR_chaos_dwarf.42;Bend to my will, daemon!;;;;;;;;;;;;;;
+EVTDESCDR_chaos_dwarf43;As your sacrifice sinks into the molten metal, you hear a bellowing in the outside. Hashut has sent you a Great Taurus, one of his most favoured creatures!;;;;;;;;;;;;;;
+EVTOPTADR_chaos_dwarf43;I will soar on wings of fire!;;;;;;;;;;;;;;
+EVTDESCDR_chaos_dwarf44;The Bullfather is pleased. You watch as the molten metal takes into different shapes and forms... showing images of yourself surrounded by power and riches!;;;;;;;;;;;;;;
+EVTOPTADR_chaos_dwarf44;It will all be mine!;;;;;;;;;;;;;;
+EVTDESCDR_chaos_dwarf45;As the sacrifice sinks into the molten pit you hear the booming voice of Hashut in your head, praising you... His greatest son!;;;;;;;;;;;;;;
+EVTOPTADR_chaos_dwarf45;All will bow before me!;;;;;;;;;;;;;;
+EVTDESCDR_chaos_dwarf46;After the sacrifice sinks into the molten metal pit, you receive visions of yourself... a crown of fire is on your brows, burning... burning, until naught but ash remains...;;;;;;;;;;;;;;
+EVTOPTADR_chaos_dwarf46;Why? What is the meaning of this?!;;;;;;;;;;;;;;
+EVTDESCDR_chaos_dwarf47;As the sacrifice sinks into the molten pit you get closer to it, in order to receive your gift... when suddenly a gush of molten metal sprays you in the face;;;;;;;;;;;;;;
+EVTOPTADR_chaos_dwarf47;AAAAGH!!;;;;;;;;;;;;;;
+EVTDESCDR_chaos_dwarf48;At last the sacrifice dissolves into the molten pit of metal... and the ritual room is filled with a most dire silence. It seems that the Bullfather has ignored your offering!;;;;;;;;;;;;;;
+EVTOPTADR_chaos_dwarf48;Hashut's balls!;;;;;;;;;;;;;;
+EVTDESCDR_chaos_dwarf49;Praise Mighty Hashut! After all the sacrifices and absolute servitude, the Bullfather has finally granted you His greatest of gifts: dominion over the Winds of Magic! Soon the whole world will be under your yoke, for now, you're one of the great, magnificent masters of the Dawi Zharr, a Sorcerer-Prophet!;;;;;;;;;;;;;;
+EVTOPTADR_chaos_dwarf49;ALL FOR HASHUT!;;;;;;;;;;;;;;
+daemon_kdaai;K'daai;;;;;;;;;;;;;
+hashut_kdaai;Hashuti K'daai;;;;;;;;;;;;;
+hashut_kdaai_desc;The K’daai Zharr - Scions of Fire - are Hashut's servants. Forged from the raging blood and metal of the Bullfather's sacrifice pits, the K'daai are half-daemon and half-raging fire, an elemental force of destruction few mortals can hope to survive.;;;;;;;;;;;;
+hashut_demon;Daemon of Hashut;;;;;;;;;;;;;
+hashut_demon_desc;Though Hashut has fewer daemons aligned to him than the greater Chaos gods, they're still powerful entities, made to enslave and destroy all those who oppose him.;;;;;;;;;;;;;
+EVTDESCDR_chaos_dwarf_kdaai_summoned;The K'daai slowly takes form before you, a creature of magma and iron, half-daemon and half-raging fire. The circle holds and the daemon is yours to command.;;;;;;;;;;;;;;
+EVTOPTADR_chaos_dwarf_kdaai_summoned;I am your Master now.;;;;;;;;;;;;;;
+EVTDESCDR_chaos_dwarf_kdaai_summoned_else;Your ritual for [From.GetFirstName] was a success. You've managed to bind a searing K'daai to [From.GetHerHim].;;;;;;;;;;;;;;
+EVTOPTADR_chaos_dwarf_kdaai_summoned_else;Excellent.;;;;;;;;;;;;;;
+RET_bull_centaurs;Bull Centaurs;;;;;;;;;;;;;;
+RET_infernalguard;Infernal Guard;;;;;;;;;;;;;;
+RET_fireglaives;Infernal Guard with Fireglaives;;;;;;;;;;;;;;
+RET_earthshaker;Earthshaker Cannons;;;;;;;;;;;;;;
+###Dwarfs;;;;;;;;;;x
+dwarven_reconquest;Dwarf Reconquest;;;;;;;;;;;;x
+dwarven_reconquest_desc;Dwarf rulers can declare reconquest wars to reclaim counties that are not held by Dwarfs or Norse Dwarfs, and are either inside de-jure Karaz Ankor and Drak Ankor or mountains held by Greenskins or Skaven.;;;;;;;;;;;;x
+CB_NAME_DWARF_COUNTY_RECONQUEST;Reconquest of [Title.GetBaseName];;;;;;;;;;x
+WAR_NAME_DWARF_COUNTY_RECONQUEST;$ORDER$$FIRST_ADJ$ Reconquest of [Title.GetBaseName];;;;;;;;;;x
+###Misc stuff;;;;;;;;;;x
+notalreadycastingspells;Not already casting spells;;;;;;;;;;;;x
+cast_battle_magic;Cast magic on the battlefield;;;;;;;;;;;;x
+cast_battle_magic_desc;You may choose and cast a damaging spell from any of your Lores you have learned.;;;;;;;;;;;;x
+EVTOPTcant_cast_more_spells;I can't cast any more spells of this lore until 30 days have passed.;;;;;;;;;;;;x
+tribalize_provinces;Settle the Tribes;;;;;;;;;;;;x
+tribalize_provinces_desc;I can choose to settle the people of my tribe into these foreign lands.;;;;;;;;;;;;x
+serveundivided;Serve the Dark Gods;;;;;;;;;;;;;x
+serveundivided_desc;Oh infinite masters, let me serve you until the end of time!;;;;;;;;;;;;;x
+tribalize_tooltip_1;There are non-tribal provinces with empty holdings.;;;;;;;;;;;;;x;
+tribalize_tooltip_2;Members from your tribe will occupy feudal provinces.;;;;;;;;;;;;;x;
+employ_soldier;Recruit a Soldier;;;;;;;;;;;;;x;
+employ_soldier_desc;Persuade a young warrior to fight for your cause.;;;;;;;;;;;;;x;
+obj_win_war_title;Win a War;;;;;;;;;;;;;x
+obj_win_war_desc;[This.GetTitledFirstName] would like to win a war.;;;;;;;;;;;;;x
+DR_obj_win_war;§Y[This.GetTitledFirstName]§! wins a war.;;;;;;;;;;;;;x
+tb_khypris;Khypris;;;;;;;;;x
+tb_khypris_desc;Khypris (formerly the Capital of the vast Khyprian Empire) is one of the original Kingdoms of the Borderlands, once reaching to the tip of the Black Mountains and comprising of the three provinces of the Northlands, the Heartland and the Westland’s. While the age of the khyprote empire is long gone, the city still remains a wondrous site on the region, and heavily controls trade in the region.;;;;;;;;;x
+tb_argalis;Argalis;;;;;;;;;x
+tb_argalis_desc;The City-State of Argalis has had a long and chequered history, first built by the High Elves and named Tor Ancor around -3419. It then fell during the war of vengeance in -1974 when a Dwarf army marched on it following the death of Prince Snorri Halfhand (in a duel with Caledor the 2nd). Only a small colony, the Elves abandoned Tor Ancor to its fate and it was razed to the ground soon after by the vengeful Dwarves. The city lay in ruins until human tribesmen willingly built on the ruins of the former Elf colony in -1125 – seeking to make their mark as the dominant tribe in the region. Unfortunately this tribe attracted the attention of a Vampire – whose bloodline would later be traced to the Von Carstein’s.;;;;;;;;;x
+tb_akendorf;Akendorf;;;;;;;;;x
+tb_akendorf_desc;Akendorf has an electoral-monarchy system in which leaders are voted into power, Akendorf's nobles run an electoral monarchy system. They have economy centred on timber, woodcarvings, they hunt wild boars in the forests which is an eagerly sought after commodity for the furs and meat.;;;;;;;;;x
+tb_arnalos;Arnalos;;;;;;;;;x
+tb_arnalos_desc;Arnalos straddles along the river Limnalia, having been founded as a High Elven colony many centuries ago, but abandon and then resettled by Humans, only to have the Vampire counts take control of the region for some time. The city has recovered to an extent, and exerts control over some of the many trade routes to and from the Vaults.;;;;;;;;;x
+tb_aldium;Aldium;;;;;;;;;x
+tb_aldium_desc;Aldium is a popular destination for Dogs-of-War and would-be mercenaries, but recent evidence suggests that it used to be an old Dwarf hold, why it was forgotten is unknown.;;;;;;;;;x
+tb_domatburg;Domatburg;;;;;;;;;x
+tb_domatburg_desc;The closest human settlement to Karak Thorinkin and the only major one actually found within the mountain ranges themselves. The Thorinkin maintain a fortress (Khazad Thufill) near to Domatburg helping guard passes through the mountains and the trade road that links the town and the hold together. Relations between the two peoples are very strong with the Thorinkin actually constructing Domatburg’s defences and providing support for the humans against Grobbi that infest the area. The relationship was strong enough that an area between Domatburg and Khazad Thufill was chosen by King Druegar Stromnisson as the site for the Holds new Brewery.;;;;;;;;;x
+tb_fatandira;Fatandira;;;;;;;;;x
+tb_fatandira_desc;Fatandira is a member of the Northern Confederacy City-States – Fatanbad is their sister City State. Due to it's close proximity to Greenskins and the Stygian woods, the population and thus power of the city has declined recently.;;;;;;;;;x
+tb_myrmidens;Myrmidens;;;;;;;;;x
+tb_myrmidens_desc;Myrmidens was founded by settlers from Luccinni in Tilea and named in honour of the goddess Myrmidia, it is one of the largest realms of the Borderlands and a traditional naval enemy of Achaes, and keeps the Sartosian pirates and Greenskin raiders away from Tilea.;;;;;;;;;x
+tb_slayer_keep;Slayer Keep;;;;;;;;;x,,,,
+tb_slayer_keep_desc; Karak Kadrin, otherwise known as "Slayer Keep", is a mighty Dwarf hold that has guarded the one of the few major passes through World's Edge Mountains, the peak pass. For countless centuries this hold has guarded the lands of Kislev and the Empire to west against greenskin threats and worse. The hold is home to the Shrine of Grimnir and is a sacred place for all would-be Slayers. The hold also has a long history of Slayer Kings who have passed down their slayer oath through generations.;;;;;;;;;x,
+tb_everpeak;Everpeak;;;;;;;;;x,,,,
+tb_everpeak_desc; Everpeak, Karaz-a-Karak in the language of the Dwarfs, is the ancient capital of the Dwarf empire, the "Pinnacle of Mountains", the "Most Enduring". It is the oldest and most glorious holds of the mountain folk and inside its halls is the greatest concentration of wealth in the world. Visitors have been awestruck at the magnificent beauty of the place. The most important hold politically and religiously in Dwarf culture, Karaz-a-Karak boasts of the mightiest army, greatest runesmiths and largest population out of all the Dwarf realms. It is from here that the High Kings rule and where the sacred "Great Book of Grudges" and the "Book of Remembering" are kept. It has endured countless ages against all manner of foes but it has never fallen and will endure until the end of time.;;;;;;;;;x
+tb_zhufbar;Zhufbar;;;;;;;;;x,,,,
+tb_zhufbar_desc; Zhufbar, known as the "Torrent-Gate" in Khazalid, is a dwarf hold built nestled in a deep chasm under the lake called Black Water. A huge waterfall that falls high above the city provides the necessary power for the numerous Dwarf machines that have been constructed here. The city is the principle shrine for the Engineers Guild and is a center of every kind of industry. It was here that the famed Gromril metal, which was mined from nearby Karak Varn, was smelted and forged into many famous Dwarfen artefacts.;;;;;;;;;x,,
+tb_barak_varr;Barak Varr;;;;;;;;;x,,,,
+tb_barak_varr_desc; Barak Varr is a unique Dwarf hold in that it is the only Dwarf seaport in the world and houses the whole Dwarf fleet. Located at the easternmost point of the Black Gulf, the hold is built in a vast water filled cavern, carved into a cliffside which provides a natural defence for the harbour. The mighty Ironclad ships of the Dwarfs as well as numerous merchant vessels from all over the world can be found here as well, sailing in and out of the vast cavern. This hold is among the most friendly to non-Dwarfs and in turn has great revenue from trade.;;;;;;;;;x,,
+###Imperial Religions;;;;;;;;;;x
+THEOGONACY;The Theogonacy;;;;;;;;;;;;;x
+NEXT_GRAND_THEOGONIST;Successor;;;;;;;;;;;;;x
+title_lector;Lector;;;;;;;;;;;;;x
+best_candidate_title_lector;My best candidate;;;;;;;;;;;;;x
+best_candidate_title_lector_tooltip;Of all the Sigmarite priests in my realm, this one is the likeliest to enter the Theogonacy;;;;;;;;;;;;;x
+expected_next_title_lector;Expected next Lector;;;;;;;;;;;;;x
+expected_next_title_lector_tooltip;This priest is to become a Lector of the Theogonacy, once a position becomes available;;;;;;;;;;;;;x
+SHOW_COLLEGE_OF_CARDINALS;Religious Head Electors;;;;;;;;;;;;;x
+POPE_VOTE_SCORE;§YReligious Head Suitability: $SCORE$§!;;;;;;;;;;;;;x
+CANDIDATE_SCORE;§YCandidate Appointment Score§!;;;;;;;;;;;;;x
+EVTTITLE_DR_imperial_religion_unification;The [Root.Religion.GetName] Faith Triumphant;;;;;;;;;;;;;x
+EVTDESCA_DR_imperial_religion_unification;In 1359 IC, Countess Ottilia of Talabecland refused to recognize the elected Emperor, the count of Stirland, on the grounds that the election had been a sham, rigged by the Cult of Sigmar. She crowned herself Empress with the support of the cult of Ulric, declaring Sigmar a false god. This action completely split apart the already fractured Imperial faiths, with each of the large cults (Sigmar, Ulric and Taal) supporting a different Imperial claimant. [Root.GetTitledFirstName] has finally imposed the supremacy of the [Root.Religion.GetName]s as the Imperial state cult, and declared all other imperial faiths as heresies.;;;;;;;;;;;;;x
+EVTOPTA_DR_imperial_religion_unification;Praise [Root.Religion.GetHighGodName]!;;;;;;;;;;;;;x
+EVTTITLE_DR_imperial_religion_unification_conversion;The [From.Religion.GetName] Faith Triumphant;;;;;;;;;;;;;x
+EVTDESC_DR_imperial_religion_unification_conversion;In 1359 IC, Countess Ottilia of Talabecland refused to recognize the elected Emperor, the count of Stirland, on the grounds that the election had been a sham, rigged by the Cult of Sigmar. She crowned herself Empress with the support of the cult of Ulric, declaring Sigmar a false god. This action completely split apart the already fractured Imperial faiths, with each of the large cults (Sigmar, Ulric and Taal) supporting a different Imperial claimant. [Root.GetTitledFirstName] has finally imposed the supremacy of the [Root.Religion.GetName]s as the Imperial state cult, and declared all other imperial faiths as heresies.;;;;;;;;;;;;;x
+EVTOPTA_DR_imperial_religion_unification;Praise [From.Religion.GetHighGodName]!;;;;;;;;;;;;;x
+mend_imperial_schism;Unify the Imperial faiths;;;;;;;;;;;;;x
+mend_imperial_schism_desc;Unify Imperial religion under the [Root.Religion.GetName] banner!;;;;;;;;;;;;;x
+faith_triumphant;Unified Imperial Faiths;;;;;;;;;;;;;x
+###Bretonnia;;;;;;;;;;x
+DR_bretonnia_son_dies_battle_knight_errant;Several former Knight Errants have recently returned home after completing their questing duties, and they bring news most grave. Your child, [From.GetTitledFirstName], was killed by a group of beastmen during an extremely dangerous mission in southern Bretonnia. They assure you that [From.GetSheHe] faced the foul beasts with bravery and tried [From.GetHerHis] best before [From.GetSheHe] was killed by their overwhelming number.;;;;;;;;;;;;;x
+DR_bretonnia_son_dies_battle_knight_errant_opt;My son... he died a hero...;;;;;;;;;;;;;x
+DR_bretonnia_son_returns_ambitious_knight_errant;[From.GetTitledFirstName] has returned from his quest as Knight Errant as a changed being. [From.GetSheHe] is more ambitious and more knowledgeable in matters of war. It seems the time spent as a Knight Errant did [From.GetHerHim] good.;;;;;;;;;;;;;x
+DR_bretonnia_son_returns_ambitious_knight_errant_opt;Did you bring any riches home with you?;;;;;;;;;;;;;x
+DR_bretonnia_son_returns_drunk_knight_errant;After many years in service, [From.GetTitledFirstName] has finally finshed his duties as a as Knight Errant and returned home. Your child is a changed being, however. [From.GetSheHe] now spends whole afternoons drinking, and stinks of ale, no longer listening to your fatherly advices.;;;;;;;;;;;;;x
+DR_bretonnia_son_returns_drunk_knight_errant_opt;I knew something bad was going to happen!;;;;;;;;;;;;;x
+DR_bretonnia_son_returns_better_knight_errant;[From.GetTitledFirstName] has finally returned home after a long and successful journey as Knight Errant! [From.GetSheHe] learned much from his battles against the enemies of the Lady and Bretonnia, alongside fellow knights!.;;;;;;;;;;;;;x
+DR_bretonnia_son_returns_better_knight_errant_opt;Tell me about your missions!;;;;;;;;;;;;;x
+DR_bretonnia_son_returns_drunkard_knight_errant;After many years in service, [From.GetTitledFirstName] has finally left the Fighter's Guild and returned home. Your child is a changed being, however. [From.GetSheHe] stinks of .;;;;;;;;;;;;;x
+DR_bretonnia_son_returns_drunkard_knight_errant_opt;I knew something bad was going to happen!;;;;;;;;;;;;;x
+DR_bretonnia_son_returns_depressed_knight_errant;[From.GetTitledFirstName] has returned from his duties as a Knight Errant, but [From.GetSheHe] refuses to speak of [From.GetHerHis] experiences during them. You know [From.GetSheHe] took part in several battles and killed uncountable bandits, beastmen and orcs, but instead of reveling in the glory of [From.GetHerHis] accomplishments, [From.GetFirstName] is plagued by nightmares and jumps at sudden sounds.;;;;;;;;;;;;;x
+DR_bretonnia_son_returns_depressed_knight_errant_opt;Strange...;Étrange...;Seltsam...;;Extraño...;;;;;;;;;x
+DR_bretonnia_son_returns_experienced_knight_errant;A mysterious knight clad in strange armour approaches your throne, and before [From.GetSheHe] can be contained, the strange warrior relieves your guard of [From.GetHerHis] spear in a swift, fluid motion and tosses it aside. Other guards hurry forward, but you raise your hand to stop them. The stranger is [From.GetTitledFirstName], at last returned from his duties as Knight Errant!;;;;;;;;;;;;;x
+DR_bretonnia_son_returns_experienced_knight_errant_opt;[From.GetFirstName]! You've... changed!;;;;;;;;;;;;;x
+DR_bretonnia_son_returns_lowborn_wife_knight_errant;[From.GetTitledFirstName] has come back from his duties as Knight Errant, but [From.GetSheHe] is not alone. [From.GetSheHe] has saved a nobleborn lady during his quests and brought her with him. Though of a lesser noble bloodline, this woman seems to be of a perfect breed, a nice addition to our lineage!;;;;;;;;;;;;;x
+DR_bretonnia_son_returns_lowborn_wife_knight_errant_opt;To each [From.GetHerHis] own;;;;;;;;;;;;;x
+DR_bretonnia_son_returns_with_gold_knight_errant;[From.GetTitledFirstName] has at last returned from his Errantry Tour with a carriage filled with the spoils of [From.GetHerHis] quests! Apparently being a Knight Errant is very profitable business. Your child insists on sharing these riches with you, [From.GetHerHis] loving father.;;;;;;;;;;;;;x
+DR_bretonnia_son_returns_with_gold_knight_errant_opt;[From.GetFirstName], you make me proud!;;;;;;;;;;;;;x
+DR_bretonnia_son_returns_wounded_knight_errant;A frail, robed character is led into your throne room, and your guards explain that [From.GetSheHe] just arrived on a carriage. The character would only speak your name over and over again, and so [From.GetSheHe] was brought to you. To your horror, you recognize [From.GetHerHim] at last as [From.GetTitledFirstName]!;;;;;;;;;;;;;x
+DR_bretonnia_son_returns_wounded_knight_errant_opt;My son, what has happened to you!?;;;;;;;;;;;;;x
+DR_bretonnia_son_wants_knight_errant;Your child, [From.GetTitledFirstName], has decided to set out on an Errantry Tour in order to prove [From.GetHerHis] his honour as a true Bretonnian! Although [From.GetSheHe] will no doubt gain both glory and valuable battle experience as a Knight Errant, there will be many dangerous quests that could well cost [From.GetHerHis] life.;;;;;;;;;;;;;x
+DR_bretonnia_son_wants_knight_errant_accept;Go forth, son, for the Lady!;;;;;;;;;;;;;x
+DR_bretonnia_son_wants_knight_errant_deny;I will not allow it!;;;;;;;;;;;;;x
+DR_bretonnia_become_knight_siege;The camp was attacked last night. It seems the besieged are growing desperate with their tactics. Most of the men were caught by surprise but not you... you were not only ready to fight, but rallied some men around you and excelled during in combat. A deed worthy of a Knight of the Realm!;Le camp a été attaqué la nuit dernière, lors d'une sortie désespérée des assiégés. De nombreux hommes furent pris par surprise, mais pas vous... vous étiez non seulement prêt à vous battre, mais vous avez également rallié quelques hommes autour de vous et avez excellé durant la bataille. Un chevalier offre de vous oindre sur le champ !;;;El campamento fue atacado ayer por la noche en una salida desesperada de los sitiados. La mayoría de los hombres fueron cogidos por sorpresa, pero no tú... No sólo estabas presto a luchar, formaste con algunos hombres a tu alrededor y sobresaliste durante la batalla. ¡Uno de los caballeros se ofreció a ungirte en el acto!;;;;;;;;;x
+DR_bretonnia_become_knight_battle;The enemy is flanking! You rallied some men around you and organized a great counter-charge, breaking the flanking enemies. A deed worthy of a Knight of the Realm!;L'ennemi a tenté de vous prendre par les flancs. Vous avez rallié de nombreux hommes et avez excellé durant les combats. Un chevalier offre de vous oindre sur le champ !;;;¡Nos flanquean! Tras reunir a algunos hombres a tu alrededor y destacar durante los combates, uno de los caballeros se ofrece a ungirte en el acto!;;;;;;;;;x
+EVTOPTADR_bretonnia_become_knight;Finally, some recognition of my abilities. For the Lady and the King!;Enfin un peu de reconnaissance pour mes capacités, je serai un fameux chevalier !;;;¡Al fin un reconocimiento de mis capacidades, seré un caballero famoso!;;;;;;;;;x
+EVTOPTCDR_bretonnia_become_knight;May the Lady guide my path!;;;;;;;;;;x
+tntch;Believed in Me;FRENCH;GERMAN;;SPANISH;;;;;;;;;x;
+DR_bretonnia_tournament1011T;The Finals;FRENCH;GERMAN;;SPANISH;;;;;;;;;x;
+DR_bretonnia_tournament1011;You were able to make it into the finals. Although, the tournament and its ups and downs, you feel ready to win the whole thing!;FRENCH;GERMAN;;SPANISH;;;;;;;;;x;
+DR_bretonnia_tournament1011A;I will be victorious!;FRENCH;GERMAN;;SPANISH;;;;;;;;;x;
+DR_bretonnia_tournament1012;You were able to make it into the finals. The tournament favourite [From.GetTitledFirstName] made it into the finals as expected. All eyes will be fixated on you and the monster they call [From.GetFirstNameWithNick].;FRENCH;GERMAN;;SPANISH;;;;;;;;;x;
+DR_bretonnia_tournament1012A;Time to fight fate.;FRENCH;GERMAN;;SPANISH;;;;;;;;;x;
+DR_bretonnia_tournament1100;You see an opening in [From.GetTitledFirstName]'s defence. Your steed roars has it winds up to unleash all hell on [From.GetTitledFirstName].;FRENCH;GERMAN;;SPANISH;;;;;;;;;x;
+DR_bretonnia_tournament1100A;Reckless Charge;FRENCH;GERMAN;;SPANISH;;;;;;;;;x;
+DR_bretonnia_tournament1100B;Strategic Jab;FRENCH;GERMAN;;SPANISH;;;;;;;;;x;
+DR_bretonnia_tournament1100C;Go for the Horse;FRENCH;GERMAN;;SPANISH;;;;;;;;;x;
+DR_bretonnia_tournament1100;[From.GetTitledFirstName] dodged your strike and rushed in from the side. [From.GetTitledFirstName] managed to strike you with a swift and powerful blow.;FRENCH;GERMAN;;SPANISH;;;;;;;;;x;
+DR_bretonnia_tournament1100A;I am hit.;FRENCH;GERMAN;;SPANISH;;;;;;;;;x;
+DR_bretonnia_tournament1100B;That bastard managed to cut me.;FRENCH;GERMAN;;SPANISH;;;;;;;;;x;
+DR_bretonnia_tournament1100C;I have been knocked off my horse.;FRENCH;GERMAN;;SPANISH;;;;;;;;;x;
+tnt_counter_attack;Your opponent charges back at you.;FRENCH;GERMAN;;SPANISH;;;;;;;;;x;
+tnt_final;Final clash that will determine the winner;FRENCH;GERMAN;;SPANISH;;;;;;;;;x;
+DR_bretonnia_tournament1300;[From.GetTitledFirstName] stops [From.GetHerHis] might stallion. You and [From.GetTitledFirstName] glare at each other for a good second. You both know that the next clash will be the determine the victor. Your horse's hooves glide through the sand and your grip tightens.\n\nFor sixty days, you and the greatest warriors of [TopLiege.Root.PrimaryTitle.GetFullName] have been giving your all in the arena. Every melee you have won will mean nothing, if you were to fall right now. This one final clash will determine your position in the history books.\n\nOne on one, the stage is set, this is your moment.;FRENCH;GERMAN;;SPANISH;;;;;;;;;x;
+DR_bretonnia_tournament1300A;The glory will be mine!;FRENCH;GERMAN;;SPANISH;;;;;;;;;x;
+DR_bretonnia_tournament1300T;Final Showdown;FRENCH;GERMAN;;SPANISH;;;;;;;;;x;
+DR_bretonnia_tournament1013;It is time for the finals! Who will win the tournament?\n\n\n[FromFrom.GetTitledFirstName], the overwhelming crowd favourite?\nOr [From.GetTitledFirstName], the underdog who have been absolutely killing in the melee.\n\nPlace your bets now! Cheer for your champion! And please hold on to your hats!\n\n\nLet the Finals Commence!;FRENCH;GERMAN;;SPANISH;;;;;;;;;x;
+DR_bretonnia_tournament1013A;Bet on the favourite, [FromFrom.GetFirstNameWithNick];FRENCH;GERMAN;;SPANISH;;;;;;;;;x;
+DR_bretonnia_tournament1013B;Bet on the underdog, [From.GetFirstNameWithNick];FRENCH;GERMAN;;SPANISH;;;;;;;;;x;
+DR_bretonnia_tournament1013C;Cheer for [FromFrom.GetFirstNameWithNick]!;FRENCH;GERMAN;;SPANISH;;;;;;;;;x;
+DR_bretonnia_tournament1013D;Cheer for [From.GetFirstNameWithNick]!;FRENCH;GERMAN;;SPANISH;;;;;;;;;x;
+DR_bretonnia_tournament1013E;Just cheer on!;FRENCH;GERMAN;;SPANISH;;;;;;;;;x;
+DR_bretonnia_tournament1014T;The Results;FRENCH;GERMAN;;SPANISH;;;;;;;;;x;
+DR_bretonnia_tournament1014;The final match was undoubtedly enjoyable and adding a little gambling to the mix made brought it to another level.;FRENCH;GERMAN;;SPANISH;;;;;;;;;x;
+DR_bretonnia_tournament1014A;Money!;FRENCH;GERMAN;;SPANISH;;;;;;;;;x;
+DR_bretonnia_tournament1014B;I am a great gambler.;FRENCH;GERMAN;;SPANISH;;;;;;;;;x;
+DR_bretonnia_tournament1014C;Maybe I will win some money next time.;FRENCH;GERMAN;;SPANISH;;;;;;;;;x;
+tntmr;Cheered On;FRENCH;GERMAN;;SPANISH;;;;;;;;;x;
+tntmr_desc;The crowd is cheering for this character to win the finals.;FRENCH;GERMAN;;SPANISH;;;;;;;;;x;
+EVTDESC70034;[From.GetTitledName] has been crowned the winner of the grand tournament.;FRENCH;GERMAN;;SPANISH;;;;;;;;;x;
+EVTDESC70035;[From.GetTitledName]'s bravery won [From.GetHerHim] second place in the grand tournament.;FRENCH;GERMAN;;SPANISH;;;;;;;;;x;
+tournament_winner;Tournament Winner;FRENCH;GERMAN;;SPANISH;;;;;;;;;x,,,, ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+tournament_winner_desc;This character has won a prestigious tournament.;FRENCH;GERMAN;;SPANISH;;;;;;;;;x,,,, ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+tournament_holder;Tournament Holder;FRENCH;GERMAN;;SPANISH;;;;;;;;;x,,,, ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+tournament_holder_desc;This character loves tournaments and loves organising one even more.;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+on_errantry_quest;Questing as Knight Errant;;;;;;;;;;;;;x
+on_errantry_quest_desc;This character is performing the duties of a Knight Errant, questing away from court to become a proper Bretonnian Knight.;;;;;;;;;;;;;x
+on_knight_quest;On Knight Quest;;;;;;;;;;;;;x;
+on_knight_quest_desc;This character is currently on a knightly quest, scouring the land for evil to ride down with lance and sword.;;;;;;;;;;;;;x;
+on_grail_quest;On Grail Quest;;;;;;;;;;;;;x;
+on_grail_quest_desc;This knight has undertaken the quest for the Grail, seeking the Lady's favour so that he may drink from the blessed cup and be granted long life and proof of his righteousness.;;;;;;;;;;;;;x;
+bretonnian_knight_errant;Bretonnian Knight Errant;;;;;;;;;;;;;x;
+title_sir_bretonnian;Sir;;;;;;;;;;;;;x
+title_lady_knight_bretonnian;Damoiselle;;;;;;;;;;;;;x
+bretonnian_knight;Bretonnian Knight;;;;;;;;;;;;;x;
+bretonnian_knight_desc;The Knights of the Realm make up the bulk of Bretonnian nobility. Those nobles who have successfully completed their Errantry Tour are named Knights, stalwart defenders of Bretonnia and upholders of the Lady's virtues.;;;;;;;;;;;;;x;
+grail_knight;Grail Knight;;;;;;;;;;;;;x;
+grail_knight_desc;Grail Knights are the epitome of the Bretonnian nobility, having successfully quested for the Grail and been granted the Lady's favour. They are amongst the finest warriors in the world, and are blessed with many powers including long life.;;;;;;;;;;;;;x;
+VIRTUE;Virtue;;;;;;;;;;;;;x
+STAT_PIETY_VIRTUE;Virtue;;;;;;;;;;;;;x
+MONTHLY_PIETY_VIRTUE;Monthly Virtue Increase;;;;;;;;;;;;;x
+STAT_PIETY_DESC_VIRTUE;Virtue is respected by the Bretonnian nobility and the Grail Damsels. Lady of the Lake worshippers with high Virtue will enjoy several bonuses to their troops, while those with negative Virtue will suffer maluses. Like Prestige, it is added to your score on the death of a ruler.;;;;;;;;;;;;;x
+negative_bretonnian_virtue;Negative Virtue;;;;;;;;;;;;;x
+negative_bretonnian_virtue_desc;A Bretonnian ruler lacking Virtue will find that their realm is harder to control, as nobles and peasants alike chafe under the rule of wicked and vile sovereigns. This modifier will be removed when the character reaches a positive Virtue value.;;;;;;;;;;;;;x
+bretonnian_virtue;Positive Virtue;;;;;;;;;;;;;x
+bretonnian_virtue_desc;To Bretonnian nobility, Virtue and Chivalry are all. A ruler with positive Virtue will find that every soldier in their armies, nobleborn or peasant, will fight with greater fervour at the sight of a virtuous leader. These bonuses will increment as your Virtue does, up to 2000 virtue.;;;;;;;;;;;;;x
+bretonnian_virtue_1;Positive Virtue;;;;;;;;;;;;;x
+bretonnian_virtue_1_desc;To Bretonnian nobility, Virtue and Chivalry are all. A ruler with positive Virtue will find that every soldier in their armies, nobleborn or peasant, will fight with greater fervour at the sight of a virtuous leader. These bonuses will increment as your Virtue does, up to 2000 virtue.;;;;;;;;;;;;;x
+bretonnian_virtue_2;Positive Virtue;;;;;;;;;;;;;x
+bretonnian_virtue_2_desc;To Bretonnian nobility, Virtue and Chivalry are all. A ruler with positive Virtue will find that every soldier in their armies, nobleborn or peasant, will fight with greater fervour at the sight of a virtuous leader. These bonuses will increment as your Virtue does, up to 2000 virtue.;;;;;;;;;;;;;x
+bretonnian_virtue_3;Positive Virtue;;;;;;;;;;;;;x
+bretonnian_virtue_3_desc;To Bretonnian nobility, Virtue and Chivalry are all. A ruler with positive Virtue will find that every soldier in their armies, nobleborn or peasant, will fight with greater fervour at the sight of a virtuous leader. These bonuses will increment as your Virtue does, up to 2000 virtue.;;;;;;;;;;;;;x
+bretonnian_virtue_4;Positive Virtue;;;;;;;;;;;;;x
+bretonnian_virtue_4_desc;To Bretonnian nobility, Virtue and Chivalry are all. A ruler with positive Virtue will find that every soldier in their armies, nobleborn or peasant, will fight with greater fervour at the sight of a virtuous leader. These bonuses will increment as your Virtue does, up to 2000 virtue.;;;;;;;;;;;;;x
+bretonnian_virtue_5;Positive Virtue;;;;;;;;;;;;;x
+bretonnian_virtue_5_desc;To Bretonnian nobility, Virtue and Chivalry are all. A ruler with positive Virtue will find that every soldier in their armies, nobleborn or peasant, will fight with greater fervour at the sight of a virtuous leader. These bonuses will increment as your Virtue does, up to 2000 virtue.;;;;;;;;;;;;;x
+bretonnian_virtue_6;Positive Virtue;;;;;;;;;;;;;x
+bretonnian_virtue_6_desc;To Bretonnian nobility, Virtue and Chivalry are all. A ruler with positive Virtue will find that every soldier in their armies, nobleborn or peasant, will fight with greater fervour at the sight of a virtuous leader. These bonuses will increment as your Virtue does, up to 2000 virtue.;;;;;;;;;;;;;x
+bretonnian_virtue_7;Positive Virtue;;;;;;;;;;;;;x
+bretonnian_virtue_7_desc;To Bretonnian nobility, Virtue and Chivalry are all. A ruler with positive Virtue will find that every soldier in their armies, nobleborn or peasant, will fight with greater fervour at the sight of a virtuous leader. These bonuses will increment as your Virtue does, up to 2000 virtue.;;;;;;;;;;;;;x
+bretonnian_virtue_8;Positive Virtue;;;;;;;;;;;;;x
+bretonnian_virtue_8_desc;To Bretonnian nobility, Virtue and Chivalry are all. A ruler with positive Virtue will find that every soldier in their armies, nobleborn or peasant, will fight with greater fervour at the sight of a virtuous leader. These bonuses will increment as your Virtue does, up to 2000 virtue.;;;;;;;;;;;;;x
+bretonnian_virtue_9;Positive Virtue;;;;;;;;;;;;;x
+bretonnian_virtue_9_desc;To Bretonnian nobility, Virtue and Chivalry are all. A ruler with positive Virtue will find that every soldier in their armies, nobleborn or peasant, will fight with greater fervour at the sight of a virtuous leader. These bonuses will increment as your Virtue does, up to 2000 virtue.;;;;;;;;;;;;;x
+bretonnian_virtue_10;Positive Virtue;;;;;;;;;;;;;x
+bretonnian_virtue_10_desc;To Bretonnian nobility, Virtue and Chivalry are all. A ruler with positive Virtue will find that every soldier in their armies, nobleborn or peasant, will fight with greater fervour at the sight of a virtuous leader. These bonuses will increment as your Virtue does, up to 2000 virtue.;;;;;;;;;;;;;x
+bretonnian_virtue_11;Positive Virtue;;;;;;;;;;;;;x
+bretonnian_virtue_11_desc;To Bretonnian nobility, Virtue and Chivalry are all. A ruler with positive Virtue will find that every soldier in their armies, nobleborn or peasant, will fight with greater fervour at the sight of a virtuous leader. These bonuses will increment as your Virtue does, up to 2000 virtue.;;;;;;;;;;;;;x
+bretonnian_virtue_12;Positive Virtue;;;;;;;;;;;;;x
+bretonnian_virtue_12_desc;To Bretonnian nobility, Virtue and Chivalry are all. A ruler with positive Virtue will find that every soldier in their armies, nobleborn or peasant, will fight with greater fervour at the sight of a virtuous leader. These bonuses will increment as your Virtue does, up to 2000 virtue.;;;;;;;;;;;;;x
+bretonnian_virtue_13;Positive Virtue;;;;;;;;;;;;;x
+bretonnian_virtue_13_desc;To Bretonnian nobility, Virtue and Chivalry are all. A ruler with positive Virtue will find that every soldier in their armies, nobleborn or peasant, will fight with greater fervour at the sight of a virtuous leader. These bonuses will increment as your Virtue does, up to 2000 virtue.;;;;;;;;;;;;;x
+bretonnian_virtue_14;Positive Virtue;;;;;;;;;;;;;x
+bretonnian_virtue_14_desc;To Bretonnian nobility, Virtue and Chivalry are all. A ruler with positive Virtue will find that every soldier in their armies, nobleborn or peasant, will fight with greater fervour at the sight of a virtuous leader. These bonuses will increment as your Virtue does, up to 2000 virtue.;;;;;;;;;;;;;x
+bretonnian_virtue_15;Positive Virtue;;;;;;;;;;;;;x
+bretonnian_virtue_15_desc;To Bretonnian nobility, Virtue and Chivalry are all. A ruler with positive Virtue will find that every soldier in their armies, nobleborn or peasant, will fight with greater fervour at the sight of a virtuous leader. These bonuses will increment as your Virtue does, up to 2000 virtue.;;;;;;;;;;;;;x
+bretonnian_virtue_16;Positive Virtue;;;;;;;;;;;;;x
+bretonnian_virtue_16_desc;To Bretonnian nobility, Virtue and Chivalry are all. A ruler with positive Virtue will find that every soldier in their armies, nobleborn or peasant, will fight with greater fervour at the sight of a virtuous leader. These bonuses will increment as your Virtue does, up to 2000 virtue.;;;;;;;;;;;;;x
+bretonnian_virtue_17;Positive Virtue;;;;;;;;;;;;;x
+bretonnian_virtue_17_desc;To Bretonnian nobility, Virtue and Chivalry are all. A ruler with positive Virtue will find that every soldier in their armies, nobleborn or peasant, will fight with greater fervour at the sight of a virtuous leader. These bonuses will increment as your Virtue does, up to 2000 virtue.;;;;;;;;;;;;;x
+bretonnian_virtue_18;Positive Virtue;;;;;;;;;;;;;x
+bretonnian_virtue_18_desc;To Bretonnian nobility, Virtue and Chivalry are all. A ruler with positive Virtue will find that every soldier in their armies, nobleborn or peasant, will fight with greater fervour at the sight of a virtuous leader. These bonuses will increment as your Virtue does, up to 2000 virtue.;;;;;;;;;;;;;x
+bretonnian_virtue_19;Positive Virtue;;;;;;;;;;;;;x
+bretonnian_virtue_19_desc;To Bretonnian nobility, Virtue and Chivalry are all. A ruler with positive Virtue will find that every soldier in their armies, nobleborn or peasant, will fight with greater fervour at the sight of a virtuous leader. These bonuses will increment as your Virtue does, up to 2000 virtue.;;;;;;;;;;;;;x
+bretonnian_virtue_20;Positive Virtue;;;;;;;;;;;;;x
+bretonnian_virtue_20_desc;To Bretonnian nobility, Virtue and Chivalry are all. A ruler with positive Virtue will find that every soldier in their armies, nobleborn or peasant, will fight with greater fervour at the sight of a virtuous leader. These bonuses will increment as your Virtue does, up to 2000 virtue.;;;;;;;;;;;;;x
+###Misc;;;;;;;;;;x
+RETTYPE_CUL_ARABY;Arabyan Camelry;;;;;;;;;;;;;x
+RETTYPE_CUL_BAJAYI;Bayaji Jungle Ambushers;;;;;;;;;;;;;x	º1
+RETTYPE_CUL_WASAI;Wasai Spirit Warriors;;;;;;;;;;;;;x
+RETTYPE_CUL_STRIGOS;Strigany Caravan Guard;;;;;;;;;;;;;x
+RETTYPE_CUL_ASRAI;Asrai Deepwood Scouts;;;;;;;;;;;;;x

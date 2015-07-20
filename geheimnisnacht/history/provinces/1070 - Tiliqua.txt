@@ -1,0 +1,16 @@
+# c_tiliqua
+
+# County Title
+title = c_tiliqua
+
+# Settlements
+max_settlements = 2
+
+b_tiliqua = tribal
+#b_morras = city
+
+# Misc
+culture = lizardman_lost
+religion = old_ones
+
+#History

@@ -1,0 +1,17 @@
+# c_tamaka
+
+# County Title
+title = c_tamaka
+
+# Settlements
+max_settlements = 3
+
+b_tamaka = castle
+#b_bassalaba = city
+#b_bura = temple
+
+# Misc
+culture = bayaji
+religion = ormazd
+
+#History

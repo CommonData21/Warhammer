@@ -1,0 +1,817 @@
+##################################################################################################
+# scriptable and usable for event-system below.
+##################################################################################################
+#
+# ICONS:
+#
+# Good 			<=> 		Bad
+#
+#  1 - Martial 				- 19
+#  2 - Learning 			- 20
+#  3 - Diplomacy 			- 21
+#  4 - Stewardship 			- 22
+#  5 - Intrigue 			- 23
+#  6 - Money 				- 24
+#  7 - Prestige 			- 25
+#  8 - Piety 				- 26
+#  9 - Titles 				- 27
+# 10 - Council 				- 28 
+# 11 - Laws 				- 29
+# 12 - Tech 				- 30 
+# 13 - Military 			- 31
+# 14 - Plots 				- 32
+# 15 - Messages 			- 33
+# 16 - Diplomatic actions 	- 34
+# 17 - Church 				- 35
+# 18 - Characters 			- 36
+# 37 - Prison 				- 38
+# 39 - Love 				- 40
+# 41 - Skull/Calice Green
+# 42 - Skull/Calice red
+# 43 - Hindu Green
+# 44 - Hindu Red
+# 45 - White Rune
+# 46 - Orange Arrow
+# 47 - Purple Rune
+# 48 - Red Rune
+# 49 - Yellow Rune
+# 50 - Blue Rune
+# 51 - White Arrow
+# 52 - Green Rune
+# 53 - Ice Heart
+# 54 - Chaos Black 
+# 55 - Magic Power I
+# 56 - Magic Power II
+# 57 - Magic Power III
+# 58 - Magic Power IV
+# 59 - Chaos green
+# 60 - Chaos red
+# 61 - Undead green
+# 62 - Undead red
+# 63 - Orc green
+# 64 - Orc red 
+# 65 - Ulthuan fert. 0
+# 66 - Ulthuan fert. I
+# 67 - Ulthuan fert. II
+# 68 - Ulthuan fert. III
+# 69 - Ulthuan fert. IV
+# 70 - Jungle 0
+# 71 - Jungle I
+# 72 - Jungle II
+# 73 - Jungle III
+# 74 - Jungle IV
+# 75 - Dwarf Rune - Red
+# 76 - Dwarf Head
+# 77 - Herdstone
+# 78 - Norscan rune - Green
+# 79 - Norscan rune - Red
+# 80 - Dwarf Rune - Red
+# 81 - Heartless
+# 82 - Mute Mask
+# 83 - Smile
+# 84 - Fake Mage
+# 85 - Evil Helmet
+# 86 - Evil Eye
+# 87 - Khaine Rune
+# 88 - Ball and Chain - Green 
+# 89 - Ball and Chain - Red 
+
+##########################################################
+# Province Modifiers
+##########################################################
+
+# Marks province as traget of chaos incrusion 
+ravaged_by_chaos = {
+	local_tax_modifier = -0.4
+	levy_size = -0.4
+	local_build_time_modifier = 0.33
+	local_build_cost_modifier = 0.33
+	disease_defence = -0.1
+	icon = 60
+}
+# Prevents chaos host recruiting from the recently conquered province
+resistance = {
+	supply_limit = -5
+	levy_size = -0.8
+	local_revolt_risk = 0.2
+	local_tax_modifier = -0.6
+	local_build_time_modifier = 0.5
+	local_build_cost_modifier = 0.5
+	icon = 60
+}
+
+depopulated = {
+	supply_limit = -10
+	levy_size = -0.75
+	local_tax_modifier = -0.5
+	local_build_time_modifier = 0.75
+	local_build_cost_modifier = 0.75
+	icon = 62
+}
+
+dead_raised = {
+	icon = 61
+}
+
+ulthuan = {
+icon = 65
+}
+
+ulthuan_lightly_depopulated = {
+	levy_size = -0.20
+	local_tax_modifier = -0.2
+	icon = 66
+}
+
+ulthuan_moderately_depopulated = {
+	levy_size = -0.50
+	local_tax_modifier = -0.5
+	icon = 67
+}
+
+ulthuan_heavily_depopulated = {
+	levy_size = -0.75
+	local_tax_modifier = -0.75
+	icon = 68
+}
+
+ulthuan_severely_depopulated = {
+	levy_size = -0.90
+	local_tax_modifier = -0.90
+    light_cavalry_defensive = 0.5
+	light_cavalry_offensive = 1.0
+    knights_defensive = 1.0
+	knights_offensive = 1.0
+    horse_archers_defensive = 0.5
+    pikemen_defensive = 1.0
+    archers_defensive = 1.0 
+	archers_offensive = 2.0
+    light_infantry_defensive = 0.5 
+    heavy_infantry_defensive = 1.0
+    land_organisation = 0.5
+    land_morale = 0.8
+	icon = 69
+}
+
+lahmian_presence = {
+	local_tax_modifier = -0.20
+   local_revolt_risk = 0.05
+	icon = 24
+}
+
+#Lustrian Jungle
+
+lustria_jungle = {
+	icon = 70
+}
+
+lustria_light_jungle = {
+	icon = 71
+	levy_size = -0.1
+	local_tax_modifier = -0.05
+}
+
+lustria_medium_jungle = {
+	icon = 72
+	levy_size = -0.2
+	local_tax_modifier = -0.1
+	local_revolt_risk = 0.05
+}
+
+lustria_dense_jungle = {
+	icon = 73
+	levy_size = -0.4
+	local_tax_modifier = -0.2
+	local_revolt_risk = 0.1
+}
+
+lustria_oppressive_jungle = {
+	icon = 74
+	levy_size = -0.6
+	local_tax_modifier = -0.4
+	local_revolt_risk = 0.15
+}
+
+##########################################################
+# Character modifiers
+##########################################################
+called_for_help_chaos = {
+	monthly_character_prestige = -0.03
+        icon = 59
+}
+
+state_troops_given = {
+liege_opinion = 10
+retinuesize_perc = -3.0
+icon = 13
+}
+
+##########################################################
+# DUEL MODIFIERS
+##########################################################
+battlefield_fight = {
+	monthly_character_prestige = 0.01
+	icon = 1
+}
+
+##########################################################
+# BR MODIFIERS
+##########################################################
+
+nurgle_province_disease = {
+	city_tax_modifier = -0.4
+	castle_tax_modifier = -0.4
+	temple_tax_modifier = -0.4
+	local_build_time_modifier = 0.2
+	local_build_cost_modifier = 0.2
+	castle_levy_size = -0.4
+	city_levy_size = -0.4
+	temple_levy_size = -0.4
+	icon = 62
+}
+
+beastmen_unrest = {
+	local_revolt_risk = 0.30
+	city_tax_modifier = -0.2
+	castle_tax_modifier = -0.2
+	temple_tax_modifier = -0.2
+	icon = 60
+}
+
+warpdust_traces = {
+	local_revolt_risk = 0.10
+	city_tax_modifier = -0.1
+	castle_tax_modifier = -0.1
+	temple_tax_modifier = -0.1
+	icon = 60
+}
+
+slaanesh_hedonism = {
+	city_tax_modifier = -0.7
+	castle_tax_modifier = -0.7
+	temple_tax_modifier = -0.7
+	local_build_time_modifier = 0.2
+	local_build_cost_modifier = 0.2
+	icon = 60
+}
+
+witch_hunter_purge_in_progress = {
+	local_revolt_risk = 0.10
+	icon = 59
+}
+
+dwarf_slaves = {
+	local_build_time_modifier = -0.3
+	local_build_cost_modifier = -0.3
+	icon = 88
+}
+
+human_slaves = {
+	local_build_time_modifier = -0.2
+	local_build_cost_modifier = -0.2
+	icon = 88
+}
+
+elf_slaves = {
+	local_build_time_modifier = -0.1
+	local_build_cost_modifier = -0.1
+	city_tax_modifier = 0.2
+	castle_tax_modifier = 0.2
+	temple_tax_modifier = 0.2
+	icon = 88
+}
+
+holding_large_druchi_feast = {
+	monthly_character_prestige = 0.05
+	icon = 7
+}
+
+slaves_taken = {
+	city_tax_modifier = -0.2
+	local_build_time_modifier = 0.2
+	local_build_cost_modifier = 0.2
+	icon = 89
+}
+warpstone_meteor = {
+	local_tax_modifier = -0.5
+	local_revolt_risk = 0.5
+	supply_limit = -0.5
+	disease_defence = -0.5
+	icon = 26
+}
+warpstone = {
+	health = -2
+	icon = 26
+}
+
+donated_to_ulthuan = {
+	icon = 4
+	monthly_character_prestige = 0.01
+}
+
+forced_policy_ulthuan = {
+	icon = 22
+	monthly_character_prestige = -0.01
+}
+
+recent_debate_timer = {
+	icon = 3
+}
+declined_prestige_debate_timer = {
+	icon = 3
+}
+recent_debate_victory = {
+	icon = 3
+	monthly_character_prestige = 0.01
+}
+
+refused_debate_result = {
+	icon = 21
+	diplomacy = -5
+	monthly_character_prestige = -0.01
+}
+horny_harem_mod = {
+	monthly_character_prestige = -0.1
+	icon = 39
+	fertility = 0.25
+}
+
+tomb_kings_awakened_province_1 = {
+	levy_size = 0.1
+	garrison_size = 1
+	local_tax_modifier = 0.15
+	icon = 26
+}
+
+tomb_kings_awakened_province_2 = {
+	levy_size = 0.2
+	garrison_size = 2
+	local_tax_modifier = 0.3
+	icon = 26
+}
+
+tomb_kings_awakened_province_3 = {
+	levy_size = 0.3
+	garrison_size = 3
+	local_tax_modifier = 0.45
+	icon = 26
+}
+
+large_greenskin_population = {
+icon = 63
+}
+
+medium_greenskin_population = {
+icon = 63
+}
+
+minimal_greenskin_population = {
+icon = 63
+}
+
+greenskin_population_bad = {
+	local_tax_modifier = -0.5
+	local_revolt_risk = 0.5
+	supply_limit = -0.5
+	disease_defence = -0.5
+	icon = 64
+}
+
+scattered_greenskins = {
+	icon = 63
+	monthly_character_prestige = 0.01
+	monthly_character_piety = 0.05
+}
+
+weak_warboss = {	
+	icon = 64
+	vassal_opinion = -50
+}
+
+greenskin_law_timer = {
+icon = 63
+}
+
+recently_asked_hashut = {
+	icon = 80
+}
+
+preparing_waaagh_invasion = {
+	icon = 31
+	monthly_character_prestige = 0.1
+}
+
+attempted_waaagh = {
+	icon = 31
+	levy_size = -0.3
+	local_tax_modifier = -0.45
+}
+
+hashut_blessing = {
+	monthly_character_piety = 0.5
+	martial = 3
+	stewardship = 3
+	church_opinion = 10
+	
+	icon = 75
+}
+
+hashut_curse = {
+	monthly_character_piety = -0.25
+	martial = -2
+	stewardship = -3
+	monthly_character_wealth = -0.25
+	same_religion_opinion = -10
+	
+	icon = 80
+}
+
+
+hashut_province_blessing = {
+	temple_tax_modifier = 0.2
+	city_tax_modifier = 0.2
+	castle_tax_modifier = 0.2
+	
+	icon = 75
+}
+
+province_slave_raid_chaos_dwarf = {
+	supply_limit = -3
+	local_tax_modifier = -0.75
+	garrison_size = -0.25
+	fort_level = -4
+	local_build_time_modifier = 15
+	local_build_cost_modifier = 2
+	icon = 89
+}
+
+slaves_sacrificed_hashut = {
+	castle_tax_modifier = 0.2
+	city_tax_modifier = 0.2
+	local_build_time_modifier = -0.2
+	local_build_cost_modifier = -0.2
+	
+	icon = 75
+}
+
+must_sacrifice_hashut = {
+	vassal_opinion = -30
+	church_opinion = -50
+	monthly_character_piety = -0.5
+	
+	icon = 80
+}
+
+province_devastated_chaos_dwarf = {
+	local_tax_modifier = -0.20
+	levy_size = -0.2
+	garrison_size = -0.1
+	icon = 29
+}
+
+chaos_dwarf_weapons = {
+	light_infantry_defensive = 0.3
+	archers_defensive = 0.3
+	pikemen_defensive = 0.3
+	heavy_infantry_defensive = 0.3
+	light_cavalry_defensive = 0.3
+	knights_defensive = 0.3
+	horse_archers_defensive = 0.3
+	light_infantry_offensive = 0.3
+	archers_offensive = 0.3
+	pikemen_offensive = 0.3
+	heavy_infantry_offensive = 0.3
+	light_cavalry_offensive = 0.3
+	knights_offensive = 0.3
+	horse_archers_offensive = 0.3
+	
+	icon = 29
+}
+
+recently_brought_from_chaos_dwarfs = {
+	icon = 29
+}
+	
+
+preparing_ulthuan_invasion = {
+		icon = 31
+	local_tax_modifier = -0.10
+}
+
+attempted_ulthuan_invasion = {
+		icon = 31
+	levy_size = -0.3
+	garrison_size = -2
+	local_tax_modifier = -0.45
+}
+
+recently_employed_druchiiservices = {
+		icon = 34
+	local_tax_modifier = -0.01
+}
+athel_loren_winter = {
+		icon = 53
+		land_morale = -0.75
+		light_infantry_defensive = -0.75
+		heavy_infantry_defensive = -0.75
+}
+
+apprenticeship_refused = {
+		icon = 20
+	monthly_character_prestige = -0.01
+}
+
+province_scourged = {
+	levy_reinforce_rate = -0.5
+	local_tax_modifier = -0.5
+	local_build_time_modifier = 20
+	local_build_cost_modifier = 2
+	levy_size = -0.15
+	garrison_size = -0.1
+	icon = 19
+}
+
+scattered_beastmen = {
+		icon = 59
+	monthly_character_prestige = 0.01
+	monthly_character_piety = 0.05
+}
+
+beastmen_scourging_1 = {
+		icon = 54
+	monthly_character_prestige = 0.01
+	monthly_character_piety = 0.05
+	local_build_time_modifier = 5
+	local_build_cost_modifier = 1.5
+	levy_reinforce_rate = -0.15
+	local_tax_modifier = -0.15
+	levy_size = -0.05
+	garrison_size = -0.025
+}
+
+beastmen_scourging_2 = {
+		icon = 54
+	monthly_character_prestige = 0.015
+	monthly_character_piety = 0.07
+	local_build_time_modifier = 10
+	local_build_cost_modifier = 1.5
+	levy_reinforce_rate = -0.25
+	local_tax_modifier = -0.25
+	levy_size = -0.075
+	garrison_size = -0.05
+}
+
+beastmen_scourging_3 = {
+		icon = 54
+	monthly_character_prestige = 0.02
+	monthly_character_piety = 0.1
+	local_build_time_modifier = 15
+	local_build_cost_modifier = 1.75
+	levy_reinforce_rate = -0.45
+	local_tax_modifier = -0.45
+	levy_size = -0.1
+	garrison_size = -0.075
+}
+
+beastman_herdstone = {
+		icon = 77
+	local_build_time_modifier = 20
+	local_build_cost_modifier = 2.5
+	levy_reinforce_rate = -0.5
+	local_tax_modifier = -0.5
+	levy_size = -0.1
+	garrison_size = -0.075
+	disease_defence = -0.01
+	local_revolt_risk = 0.15
+}
+
+incapacitated_tomb_king = {
+		icon = 62
+	levy_reinforce_rate = -2
+	levy_size = -2
+	garrison_size = -2
+}
+
+rising_tomb_king = {
+		icon = 61
+	levy_reinforce_rate = 10000
+}
+
+nehekharan_curse = {
+		icon = 62
+	local_build_time_modifier = 1.25
+	local_build_cost_modifier = 1.5
+	levy_reinforce_rate = -0.25
+	local_tax_modifier = -0.25
+	levy_size = -0.05
+	garrison_size = -0.075
+	disease_defence = -0.1
+	local_revolt_risk = -0.15
+}
+
+nomad_unrest = {
+	local_revolt_risk = 0.15
+	city_tax_modifier = -0.15
+	castle_tax_modifier = -0.15
+	temple_tax_modifier = -0.15
+	icon = 29
+}
+
+nomad_presence = {
+	local_revolt_risk = 0.01
+	city_tax_modifier = -0.015
+	castle_tax_modifier = -0.015
+	temple_tax_modifier = -0.015
+	garrison_size = 0.075
+	levy_size = 0.025
+	icon = 11
+}
+
+scared_subjects = {
+	local_revolt_risk = 0.01
+	icon = 62
+}
+
+friendly_undead = {
+	local_revolt_risk = -0.01
+	icon = 61
+}
+
+nurgles_blessing = {
+	health = 100
+	icon = 1
+}
+
+blind_virtue = {
+	icon = 81
+	learning = -2
+	martial = 2
+}
+
+fake_mage = {
+	icon = 84
+	learning = 2
+	intrigue = -2
+}
+
+despairing_laughter = {
+	icon = 83
+	stewardship = -2
+	intrigue = 2
+}
+
+unfeeling = {
+	icon = 82
+	diplomacy = -2
+	martial = 2
+}
+
+bloodthirsty = {
+	icon = 85
+	diplomacy = -3
+	martial = 3
+	general_opinion = -15
+}
+
+god_delusion = {
+	icon = 86
+	diplomacy = -3
+	intrigue = 3
+	general_opinion = -15
+}
+
+bloodthirsty_rampage = {
+		icon = 85
+	monthly_character_prestige = -0.01
+	local_build_time_modifier = 0.05
+	local_build_cost_modifier = 0.025
+	levy_reinforce_rate = -0.02
+	local_tax_modifier = -0.02
+}
+
+reversed_gravity = {
+		icon = 86
+	land_morale = 2.0
+	levy_reinforce_rate = -0.05
+	local_tax_modifier = -0.02
+}
+
+warphole_epicentre = {
+		icon = 86
+	land_morale = -5.0
+	local_tax_modifier = -5
+	local_build_time_modifier = 5
+	local_build_cost_modifier = 5
+	levy_reinforce_rate = -5
+	garrison_size = -5
+	levy_size = -5
+}
+
+necromantic_power_1 = {
+	icon = 61
+	general_opinion = -15
+}
+necromantic_power_2 = {
+	icon = 61
+	general_opinion = -20
+}
+necromantic_power_3 = {
+	icon = 61
+	general_opinion = -35
+}
+necromantic_power_4 = {
+	icon = 61
+	general_opinion = -50
+}
+necromantic_power_5 = {
+	icon = 61
+	general_opinion = -75
+}
+
+province_tainted_1 = {
+	icon = 62 
+	land_morale = -0.01
+	garrison_size = -0.02
+	levy_size = -0.02
+}
+province_tainted_2 = {
+	icon = 62 
+	land_morale = -0.02
+	garrison_size = -0.05
+	levy_size = -0.05
+}
+province_tainted_3 = {
+	icon = 62 
+	land_morale = -0.05
+	garrison_size = -0.25
+	levy_size = -0.25
+}
+province_tainted_4 = {
+	icon = 62 
+	land_morale = -0.1
+	garrison_size = -0.5
+	levy_size = -0.5
+}
+province_tainted_5 = {
+	icon = 62 
+	land_morale = -0.15
+	garrison_size = -0.75
+	levy_size = -0.75
+}
+
+ghoul_unrest = {
+	icon = 62 
+	local_revolt_risk = 0.01
+	city_tax_modifier = -0.015
+	castle_tax_modifier = -0.015
+	temple_tax_modifier = -0.015
+}
+
+#weak_leader = {	
+#	icon = 79
+#	local_tax_modifier = -0.1
+#	levy_size = -0.05
+#	monthly_character_prestige = -0.015
+#	land_morale = -0.2
+#   levy_reinforce_rate = -0.05
+#   local_revolt_risk = 0.1
+#}
+#
+#disrespected_leader = {	
+#	icon = 79
+#	levy_size = -0.03
+#	local_tax_modifier = -0.05
+#	monthly_character_prestige = -0.01
+#	land_morale = -0.1
+#   levy_reinforce_rate = -0.03
+#   local_revolt_risk = 0.05
+#}
+#
+#respected_leader = {	
+#	icon = 78
+#	local_tax_modifier = 0.05
+#	levy_size = 0.03
+#	monthly_character_prestige = 0.01
+#	land_morale = 0.1
+#   levy_reinforce_rate = 0.03
+#   local_revolt_risk = -0.05
+#}
+#
+#strong_leader = {	
+#	icon = 78
+#	levy_size = 0.05
+#	local_tax_modifier = 0.1
+#	monthly_character_prestige = 0.015
+#	land_morale = 0.2
+#   levy_reinforce_rate = 0.05
+#   local_revolt_risk = -0.1
+#}
+
+recently_sold_chaos_dwarfs = {
+	icon = 29
+}
+
+tntmr = {
+	icon = 1
+	combat_rating = 3
+}

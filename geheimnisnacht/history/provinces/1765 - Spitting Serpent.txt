@@ -1,0 +1,15 @@
+# c_spitting_serpent
+
+# County Title
+title = c_spitting_serpent
+
+# Settlements
+max_settlements = 1
+
+b_caquiyaotl = tribal
+
+# Misc
+culture = lizardman
+religion = old_ones
+terrain = jungle
+#History

@@ -1,0 +1,35 @@
+decisions = {
+
+claim_the_throne ={
+
+potential = {
+age = 16
+culture_group = imperial_group
+higher_tier_than = COUNT
+has_character_flag = imperial_hero
+NOT = { has_character_flag = claimed_empire }
+NOT = { has_global_flag = united_empire }
+}
+
+allow = {
+age = 16
+culture_group = imperial_group
+higher_tier_than = BARON
+AND = {
+prestige = 2000
+piety = 2000
+diplomacy = 12
+}
+}
+
+effect = {
+ROOT = { character_event = { id = unification.0 } }
+	}
+	
+	ai_will_do = {
+	factor = 1	
+	}
+	
+	}
+	
+	}

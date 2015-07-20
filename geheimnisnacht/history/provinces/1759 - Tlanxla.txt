@@ -1,0 +1,17 @@
+# c_tlanxla
+
+# County Title
+title = c_tlanxla
+
+# Settlements
+max_settlements = 3
+
+b_tlanxla = tribal
+#b_paliint = city
+#b_chato = temple
+
+# Misc
+culture = lizardman
+religion = old_ones
+terrain = jungle
+#History

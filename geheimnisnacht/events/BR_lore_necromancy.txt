@@ -1,0 +1,57 @@
+# namespace = necromancy
+
+# #soulblight
+# character_event = {
+	# id = necromancy.0
+	# title = SPELLCASTING
+	# desc = darkmagic0 #The spell has expired and the troops and flag are removed
+	# picture = "GFX_evt_miscast"
+	# hide_window = yes
+	
+	# is_triggered_only = yes
+	
+	# option = {
+	# name = OK
+	# clr_character_flag = cast_soulblight
+	# disband_event_forces = soulblight_troops
+	# }
+	
+	# }
+
+# #doom_and_darkness
+# character_event = {
+	# id = necromancy.1
+	# title = SPELLCASTING
+	# desc = darkmagic0 #The spell has expired and the troops and flag are removed
+	# picture = "GFX_evt_miscast"
+	# hide_window = yes
+	
+	# is_triggered_only = yes
+	
+	# option = {
+	# name = OK
+	# clr_character_flag = cast_doom_and_darkness
+	# disband_event_forces = doom_and_darkness_troops
+	# }
+	
+	# }
+	
+# #purple sun of xereus
+# character_event = {
+	# id = necromancy.2
+	# title = SPELLCASTING
+	# desc = darkmagic0 #The spell has expired and the troops and flag are removed
+	# picture = "GFX_evt_miscast"
+	# hide_window = yes
+	
+	# is_triggered_only = yes
+	
+	# option = {
+	# name = OK
+	# clr_character_flag = cast_purple_sun_of_xereus
+	# disband_event_forces = purple_sun_of_xereus_troops
+	# }
+	
+	# }
+	
+# #Summon Undead done directly from the decision using piety to summon#

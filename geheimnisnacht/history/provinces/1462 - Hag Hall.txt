@@ -1,0 +1,16 @@
+# c_hag_hall
+
+# County Title
+title = c_hag_hall
+
+# Settlements
+max_settlements = 2
+
+b_hag_hall = castle
+b_kylon = temple
+
+# Misc
+culture = ghrondari
+religion = anath_raema
+
+#History

@@ -1,0 +1,225 @@
+# Magic potential
+# 
+# magic potential is hidden and is semi randomly generated
+# on birth, there are 3 flags responsible for it
+#  magic_potential_1
+#  magic_potential_2 
+#  magic_potential_3
+#
+# no magic potential is marked by no magic potential
+#
+# Magic Education traits
+magic_power_adept = {
+     #education = yes
+        potential = { trait = creature_human }
+	opposites = {
+		magic_power_lord
+		magic_power_archmaster
+		magic_power_magister
+	}
+        learning = 2
+	random = no
+	customizer = no
+}
+magic_power_magister = {
+    #education = yes
+        potential = { trait = creature_human }
+	opposites = {
+		magic_power_adept
+		magic_power_archmaster
+		magic_power_lord
+	}
+        learning = 4
+	combat_rating = 2
+	monthly_character_prestige = 0.2
+	random = no
+	customizer = no
+}
+magic_power_lord = {
+    #education = yes
+	opposites = {
+		magic_power_adept
+		magic_power_archmaster
+		magic_power_magister
+	}
+	monthly_character_prestige = 0.4
+	immortal = yes
+        learning = 4
+	combat_rating = 2
+	random = no
+	customizer = no
+		
+}
+magic_power_archmaster = {
+    #education = yes
+	opposites = {
+	magic_power_adept
+	magic_power_lord
+	magic_power_magister
+	}
+	immortal = yes
+        learning = 5
+	combat_rating = 2
+	monthly_character_prestige = 0.6
+	random = no
+	customizer = no
+}
+# Non-Imperial magics
+lore_ice = {
+        command_modifier = {
+		winter_combat = 0.2
+		morale_offence = 0.1
+        }
+	random = no
+	customizer = no
+}
+#Winds of Magic (most common lores)
+lore_fire = {
+	command_modifier = {
+		morale_offence = 0.1
+	}
+	random = no
+	customizer = no
+}
+lore_beasts = {
+	command_modifier = {
+		morale_offence = 0.1
+	}
+	random = no
+	customizer = no
+}
+lore_metal = {
+	command_modifier = {
+		morale_offence = 0.1
+	}
+	random = no
+	customizer = no
+}
+lore_light = {
+        command_modifier = {
+		religious_enemy = 0.2
+		morale_defence = 0.2
+		defence = 0.1
+		speed = 0.05
+        }
+	random = no
+	customizer = no
+}
+lore_life = {
+        command_modifier = {
+		morale_defence = 0.2
+		defence = 0.1
+        }
+	random = no
+	customizer = no
+}
+
+lore_heavens = {
+        command_modifier = {
+		morale_defence = 0.2
+		defence = 0.1
+        }
+	random = no
+	customizer = no
+}
+
+lore_death = {
+	random = no
+	customizer = no
+	command_modifier = {
+		morale_offence = 0.1
+	}
+}
+lore_shadows = {
+	random = no
+	customizer = no
+	command_modifier = {
+		morale_offence = 0.1
+	}
+}
+# High elven magic
+lore_high_magic = {
+command_modifier = {
+		religious_enemy = 0.3
+		morale_defence = 0.3
+		defence = 0.1
+        }
+	combat_rating = 1
+	random = no
+	customizer = no
+}
+#Lores of Chaos
+lore_dark_magic = {
+	command_modifier = {
+		morale_offence = 0.3
+	}
+	combat_rating = 1
+	random = no
+	customizer = no
+}
+lore_nurgle = {
+	random = no
+	customizer = no
+		command_modifier = {
+		morale_defence = 0.3
+	}
+	combat_rating = 1
+}
+lore_slaanesh = {
+	command_modifier = {
+		flank = 0.1
+		retreat = 0.1
+	}
+	combat_rating = 1
+	sex_appeal_opinion = 20 #Because Slaanesh
+	random = no
+	customizer = no
+}
+lore_tzeentch = {
+	random = no
+	command_modifier = {
+		random = 0.4
+	}
+	combat_rating = 1
+	random = no
+	customizer = no
+}
+#Other Dark
+lore_necromancy = {
+	command_modifier = {
+		morale_offence = 0.1
+		speed = 0.05
+	}
+	random = no
+	customizer = no
+}
+
+lore_waaagh = {
+	command_modifier = {
+		morale_offence = 0.1
+		speed = 0.05
+	}
+	random = no
+	customizer = no
+}
+	
+##Studying magic##
+
+studying_magic={
+	customizer = no
+random = no
+pilgrimage = yes
+}
+
+##Crafting Magic Item##
+
+crafting_magic_item = {
+	customizer = no
+random = no
+pilgrimage = yes
+diplomacy = -10
+intrigue = -10
+martial = -10
+	combat_rating = -10
+stewardship = -10
+}

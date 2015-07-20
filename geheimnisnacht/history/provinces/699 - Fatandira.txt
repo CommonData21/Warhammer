@@ -1,0 +1,21 @@
+# c_fatandira
+
+# County Title
+title = c_fatandira
+
+# Settlements
+max_settlements = 4
+
+b_fatandira = castle
+b_fatanbad = city
+#b_jabroni = temple
+#b_vitrolle = castle
+
+# Misc
+culture = marcheur
+religion = grail
+
+#History
+1.1.1={ 
+b_fatandira = ca_fatandira
+}

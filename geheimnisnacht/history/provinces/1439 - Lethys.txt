@@ -1,0 +1,15 @@
+# c_lethys
+
+# County Title
+title = c_lethys
+
+# Settlements
+max_settlements = 1
+
+b_tosirath = tribal
+
+# Misc
+culture = autarri
+religion = anath_raema
+
+#History

@@ -1,0 +1,59 @@
+Here's a list of all potential bugs and the date reported. Please mark any bugs you fix or update if you can't find/reproduce
+
+
+***3/13 - Malekith is unselectable from starting screen -BR fixed
+***3/13 - Slaaneshi cultist event keeps refireing -BR FIXED
+***3/13 - "chaos invasion on kura" will end inconclusively after being started -BR Fixed by removing it entirely. It was only meant for Everchosen, but it's clearly not working as designed and I don't know how to fix Piotrek's CBs
+***3/13 - Chaos tribals are getting greenskin events -BR Note, I highly doubt it and would need to see screenshots
+***3/13 - Sickly infant trait not removed properly -BR note, vanilla issue, I haven't touched those events at least
+***3/13 - Concubines section not always shown on family tab of characters (druchii) -BR note, doubtful its a Warhammer issue
+***3/13 - Can marry some potentially going to be a druchii sorceres ending the marraige -BR Note, Not a bug, I'd say. Sorceresses are all brides Malekith officially
+***3/13 - localization of druchii raiding events is messed up -BR Fixed
+***3/13 - amazons are marrying lizardmen... -BR fixed
+***3/13 - camel training grounds in Araby don't provide units -BR fixed
+***3/13 - malekith still invading the chaos wastes at the start... -BR not a bug, more like a gameplay issue
+***3/13 - Children and spouses randomly becoming rivals with no notification -BR Not a bug, if it's for Dark Elves. It s event darkelf.33/15 - Everchosen can try to become everchosen after already getting it
+***3/15 - Culture buildings not changing on ruler change (intentional?) -BR Note, yes, it's determined by province culture, not ruler culture
+***3/15 - Some orc provinces in lustria/naggaroth are unplayable - BR Note, yeah, they don't have characters yet
+***3/15 - Undead can get diseases. incapable (!!!) - DarkReborn note: Should be fixed, though some additional events might need to be "hunted down"
+***3/15 - Orc raiders can get Druchii raiding events, or Orcs getting slaves are unable to sell them -BR Fixed, greenskins and chaos can now sell slaves too and use the slavery menu
+***3/15 - Fortress can give up instantly (?) -BR Note, would need more details on this
+***3/15 - Can get orc fungus events when not orc -BR Fixed
+***3/15 - No lizardmen in the dragon isles - DarkReborn: fixed and given lizardman holders
+***3/15 - Tomb rot too common -BR Fixed
+***3/15 - Greenskin title localization is only for feudal, not tribal titles - DarkReborn: fixed
+***3/15 - the White Tower is unbuilt and can never be built -BR Note, it's built in my version... 
+***3/15 - craft item and train mount lack _desc in the decision menu -Mashi fixed
+***3/15 - the Elven emperor has no clergy vassals and so can't have all 5 council member -BR Note, just hire a holy man courtier, easy fix
+***3/15 - Ulthuan can institute non-agnatic succession causing bugs for everqueen events -BR Note, fixed by Silfae
+***3/15 - Orc heir spanwing keeps occuring -BR fixed
+***3/16 - Doom counter event spams too often -BR Fixed, put "hide_window = yes" in it, so it ll now jsut run quietly behind the scenes
+***3/16 - Barak Varr needs to be set as a republic again with the Republic of the Ironsides League title -Fixed by Darkreborn
+***3/16 - Dwarf holds need to spawn in mountain_pass terrain as well -Darkreborn Fixed
+***3/16 - Knightly orders buildings can be built by anyone, not just imperials -BR Fixed
+***3/16 - Too many people are becoming level 3 cultists, and summoning demon armies -BR Note, so far reduced frequency, and set demon armies to not be inherited
+
+3/16 - When playing as Von Carstein, clicking a courtier's 'ring' to marry icon does nothing but bring up unselectable wives/husbands. If you select using right click and 'arrang marriage' game crashes.
+
+***3/16 - Can't become mage as a druchii male, even if Malekith and Morathi are dead -Not a bug, more like a missing feature, like so many other things
+*** 3/17 - Between Brachland and Kon3/2igstein and Leedleton-there's now a county called PROV2330 -Shade says this is a feature, not a bug
+***3/17 - the "Show courtiers that can be turned" doesn't work and display nothing -BR works for me, just scroll down and you'll see all the courtiers in the list
+
+3/17 - North-west ocean zone and is buggy. Lets druchii republic build trade post in otherwise landlocked province in lustria
+
+***3/18 - Ambition ID-code and desc bugged and showing a list of options, no idea what they are. -BR Fixed
+***3/18 - can't appoint a court chaplian, or "shaman" while playing a nurglite warlord. -BR Note, works for me, just hire a holy man courtier
+***3/19 - imperials have access to subjugation war -BR Note, can't replicate. Against whom do they have this CB?
+
+3/19 - a lot of dwaves start start with 0 technology
+
+***3/19 - Character has been making a magical item for the past 100 years -BR Note, What magic item? I can't see any problem in the codes
+***3/19 - Bretonnia still has 'Imperial Knightly Order stables' or some such as a building - DarkReborn note: Impossible, unless the province is of any Imperial Culture and it's holder Bretonnian, much like in vanilla it's possible to have war elephants if you are Arab and hold an Indian province.
+***3/19 - Ottilia mover her capital from Talabheim to Torpin in first months of game -Shadeoses fixed
+***3/19 - Something destroys the Talabecland kingdom title for Ottilia around months 10 or 11 of year 2011 *BR Fixed
+***3/19 - Merc force sizes are enormous, likely due to the start date change. -BR Fixed
+***3/21 - Some of my Khornate vessel still have -100 opinion of me because I am a heretic (may happen because I convert them after they have an event) -BR Should be fixed now, within a year after converting to chaos, the suspected/confirmed heretic opinion malus of -100 will be removed
+***3/21 - Not sure if this is bug or not, I still have witch hunter event after I openly worship the dark god. -BR Note, probably a witch hunter was already there. No new witch hunters will start investigating though
+***3/21 - Everchosen gets spammed with events about magic users in his realm -BR Fixed, you can now choose "Do not bother me with this again"
+***3/24 - chaplain asked character to convert to the Sigmarite religion even though already Simgmarite -BR Note, not a bug, this is what happens when there are no heresies associated with a religion. It's a vanilla issue
+***5/1 - Dwarfen rulers with no money get spammed with the kill greenskins in a province ( and then turn the province into ROOT:s culture and religion ), losing thousands of prestige.

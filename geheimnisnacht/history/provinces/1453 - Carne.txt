@@ -1,0 +1,16 @@
+# c_carne
+
+# County Title
+title = c_carne
+
+# Settlements
+max_settlements = 2
+
+b_hag_las = castle
+b_thurinwethil = city
+
+# Misc
+culture = clari
+religion = cytharai
+
+#History

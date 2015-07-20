@@ -1,0 +1,105 @@
+#Magic Engine stuff
+decisions = {
+
+cast_battle_magic = {
+	is_high_prio = yes
+
+		potential = {
+			# age = 16
+			ai = no
+			NOT = { has_character_flag = casting_battle_magic }
+			OR = {
+				trait = lore_dark_magic
+				trait = lore_high_magic
+				trait = lore_necromancy
+				trait = lore_ice
+				trait = lore_fire
+				trait = lore_light
+				trait = lore_beasts
+				trait = lore_metal
+				trait = lore_life
+				trait = lore_heavens
+				trait = lore_death
+				trait = lore_waaagh
+				trait = greenskin_shaman
+				trait = lore_nurgle
+				trait = lore_tzeentch
+				trait = lore_slaanesh
+				trait = chaos_dwarf_sorcerer
+			}
+			OR = {
+				has_character_modifier = magic_power_1
+				has_character_modifier = magic_power_2
+				has_character_modifier = magic_power_3
+				has_character_modifier = magic_power_4
+			}
+		}
+
+			allow = {
+				age = 16
+				#war = yes
+				OR = { in_command = yes
+					siege = { is_attacker = yes } }
+				custom_tooltip = {
+					text = notalreadycastingspells
+					hidden_tooltip = {
+						NOT = { has_character_flag = casting_battle_magic }
+					}
+				}
+				OR = {
+					any_current_enemy = {
+							at_location = ROOT
+							in_command = yes
+					}
+					
+						any_current_enemy = {
+							any_vassal = {
+							at_location = ROOT
+							in_command = yes
+							}
+						}
+						any_current_enemy = {
+							any_vassal = {
+								any_vassal = {
+									at_location = ROOT
+									in_command = yes
+								}
+							}
+						}
+						any_current_enemy = {
+							any_vassal = {
+								any_vassal = {
+									any_vassal = {
+										at_location = ROOT
+										in_command = yes
+									}
+								}
+							}
+						}
+						any_current_enemy = {
+							any_vassal = {
+								any_vassal = {
+									any_vassal = {
+										any_vassal = {
+											at_location = ROOT
+											in_command = yes
+										}
+									}
+								}
+							}
+						}
+				}
+			}
+
+		effect = {
+			set_character_flag = casting_battle_magic
+			character_event = { id = magicengine.12 } 
+	
+		}
+				
+		ai_will_do = {
+			factor = 0
+		}
+			
+	}
+}

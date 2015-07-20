@@ -1,0 +1,445 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+#CHAOS/NORSCAN
+tb_chaos_knights_1;Chaos Knight Stable;;;;;;;;;;;;;x
+tb_chaos_knights_2;Chaos Knight Stable;;;;;;;;;;;;;x
+tb_chaos_knights_3;Chaos Knight Stable;;;;;;;;;;;;;x
+tb_chaos_knights_4;Chaos Knight Stable;;;;;;;;;;;;;x
+tb_chaos_knights_desc;Chaos Knights are a sight to behold, mutants, madmen, and freaks, they fear no enemy, for they have their gods watchful eyes upon them, thundering down fields and ruthlessly trampling anything that gets in their way.;;;;;;;;;;;;;x
+tb_chaossteppe_stable_1;Marauder Muster;;;;;;;;;;;;;x
+tb_chaossteppe_stable_2;Marauder Muster;;;;;;;;;;;;;x
+tb_chaossteppe_stable_3;Marauder Muster;;;;;;;;;;;;;x
+tb_chaossteppe_stable_4;Marauder Muster;;;;;;;;;;;;;x
+tb_chaossteppe_stable_desc;Here are where the Chaos marauders gather, having spent their entire lives on the saddle, they are fearsome horsemen and terrible foes.;;;;;;;;;;;;;x
+tb_steppechaos_barracks_1;Chaos Steppe Barracks;;;;;;;;;;;;;x
+tb_steppechaos_barracks_2;Chaos Steppe Barracks;;;;;;;;;;;;;x
+tb_steppechaos_barracks_3;Chaos Steppe Barracks;;;;;;;;;;;;;x
+tb_steppechaos_barracks_4;Chaos Steppe Barracks;;;;;;;;;;;;;x
+tb_steppechaos_barracks_desc;The chaos wastes are constantly changing, sometimes on the whims of the dark gods, and so the tribes of the north must be ready to move south to survive. These warriors are hardened by the cold north wind, and are fast on their horses, running down anybody that would run from them.Kurgan Mustering Grounds;;;;;;;;;;;;;x
+tb_steppekurgan_militia_1;Kurgan Freehold;;;;;;;;;;;;;x
+tb_steppekurgan_militia_2;Kurgan Freehold;;;;;;;;;;;;;x
+tb_steppekurgan_militia_3;Kurgan Freehold;;;;;;;;;;;;;x
+tb_steppekurgan_militia_4;Kurgan Freehold;;;;;;;;;;;;;x
+tb_steppekurgan_militia_desc;While the Hung steppe requires horsemanship to survive, Kurgan lands are more rough, less flat, and full of forests, making horse combat less all-consuming, but that doesn't mean these troops are anything but fodder.;;;;;;;;;;;;;x
+tb_steppehung_militia_1;Hung Muster;;;;;;;;;;;;;x
+tb_steppehung_militia_2;Hung Muster;;;;;;;;;;;;;x
+tb_steppehung_militia_3;Hung Muster;;;;;;;;;;;;;x
+tb_steppehung_militia_4;Hung Muster;;;;;;;;;;;;;x
+tb_steppehung_militia_desc;In steppe society, horses are everything, a status symbol, these troops are peasants, unable to afford a horse and thrust into battle as ranged support or meat for the grinder.;;;;;;;;;;;;;x
+tb_steppe_hold_1;Tiny Village;;;;;;;;;;;;;x
+tb_steppe_hold_2;Small Village;;;;;;;;;;;;;x
+tb_steppe_hold_3;Large Village;;;;;;;;;;;;;x
+tb_steppe_hold_4;Huge Village;;;;;;;;;;;;;x
+tb_steppe_hold_desc;Due to the nature of the Chaos Wastes, tribes must be mobile in order to avoid being swallowed whole by the unpredictable tears in reality. Simple, yet effective, these yurts are where the rulers of the northmen dwell.;;;;;;;;;;;;;x
+tb_trollpens_1;Tiny War Mammoth Pens;;;;;;;;;;;;;x
+tb_trollpens_2;Small War Mammoth Pens;;;;;;;;;;;;;x
+tb_trollpens_3;Large War Mammoth Pens;;;;;;;;;;;;;x
+tb_trollpens_desc;Giant Mammoths prowl the frozen tundras of Norsca and the Chaos Wastes, these great animals are living mountains, covered in fur and tusks. The tribesmen living in these zones often capture young Mammoth calves to train them for war, and ride these fearsome creatures into battle, outfitted with ramshackle towers at their backs.;;;;;;;;;;;;;x
+ca_monster_hold_1;Tiny War Mammoth Pens;;;;;;;;;;;;;x
+ca_monster_hold_2;Small War Mammoth Pens;;;;;;;;;;;;;x
+ca_monster_hold_3;Medium War Mammoth Pens;;;;;;;;;;;;;x
+ca_monster_hold_4;Large War Mammoth Pens;;;;;;;;;;;;;x
+ca_monster_hold_desc;Giant Mammoths prowl the frozen tundras of Norsca and the Chaos Wastes, these great animals are living mountains, covered in fur and tusks. The tribesmen living in these zones often capture young Mammoth calves to train them for war, and ride these fearsome creatures into battle, outfitted with ramshackle towers at their backs.;;;;;;;;;;;;;x
+ca_culture_norscan_1;Oathsworn Hold;;;;;;;;;;;;;x
+ca_culture_norscan_2;Large Oathsworn Hold;;;;;;;;;;;;;x
+ca_culture_norscan_3;Oathsworn Palace;;;;;;;;;;;;;x
+ca_culture_norscan_4;Great Oathsworn Palace;;;;;;;;;;;;;x
+ca_culture_norscan_desc;Here are where the Norse Oathsworn reside, not far from their lord's hold, clad in heavy armour and extravagant furs, ever eager for blood and battle.;;;;;;;;;;;;;x
+ca_norscan_barracks_1;Small Levy Freemen Muster;;;;;;;;;;;;;x
+ca_norscan_barracks_2;Large Freemen Muster;;;;;;;;;;;;;x
+ca_norscan_barracks_3;Small Warrior Mustering Grounds;;;;;;;;;;;;;x
+ca_norscan_barracks_4;Large Warrior Muster;;;;;;;;;;;;;x
+ca_norscan_barracks_5;Warrior Gathering Grounds;;;;;;;;;;;;;x
+ca_norscan_barracks_6;Warrior Tribunal;;;;;;;;;;;;;x
+ca_norscan_barracks_1_desc;While the soft Men of the south are begrudgingly raised in feudal fashion in service of their lord, freemen gather here in their own accord, seeking fame, adventure, or even favour from the gods.;;;;;;;;;;;;;x
+ca_norscan_champions_1;Huskarl Barracks;;;;;;;;;;;;;x
+ca_norscan_champions_2;Elite Huskarl Hold;;;;;;;;;;;;;x
+ca_norscan_champions_3;Elder Huskarl Keep;;;;;;;;;;;;;x
+ca_norscan_champions_4;Lord Huskarl Hold;;;;;;;;;;;;;x
+ca_norscan_champions_5;Great Huskarl Hold;;;;;;;;;;;;;x
+ca_norscan_champions_6;Huskarl Tribunal;;;;;;;;;;;;;x
+ca_norscan_champions_1_desc;It's a hard life in the cold north, having to fight all your life only to die a nobody, but these men have risen beyond that, and now serve their lord proudly and boldly, for they know that failure means death with dishonor.;;;;;;;;;;;;;x
+ca_norscan_stables_1;Tiny Marauder Stable;;;;;;;;;;;;;x
+ca_norscan_stables_2;Small Marauder Stable;;;;;;;;;;;;;x
+ca_norscan_stables_3;Medium Marauder Stable;;;;;;;;;;;;;x
+ca_norscan_stables_4;Large Marauder Stable;;;;;;;;;;;;;x
+ca_norscan_stables_5;Huge Marauder Stable;;;;;;;;;;;;;x
+ca_norscan_stables_6;Exhalted Marauder Stable;;;;;;;;;;;;;x
+ca_norscan_stables_1_desc;Norscans are not known to field cavalry, instead relying upon mercenaries from their more northerly brethren to fill the gaps.;;;;;;;;;;;;;x
+ca_norscan_reavers_1;Reaver Shipmaker;;;;;;;;;;;;;x
+ca_norscan_reavers_2;Reaver Shipyard;;;;;;;;;;;;;x
+ca_norscan_reavers_3;Reaver Dockyard;;;;;;;;;;;;;x
+ca_norscan_reavers_4;Reaver Drydock;;;;;;;;;;;;;x
+ca_norscan_reavers_1_desc;Fabled Norscan Reavers gather here, returning from long ventures to distant lands, full of loot and various goods, Pillaged or Traded.;;;;;;;;;;;;;x
+ca_norscan_hold_1;Norscan Hold;;;;;;;;;;;;;x
+ca_norscan_hold_1_desc;A small Norscan hold, houses nothing more than the hold's lord, his family and court, and a garrison.;;;;;;;;;;;;;x
+ca_norscan_hold_2;Large Norscan Hold;;;;;;;;;;;;;x
+ca_norscan_hold_2_desc;A much larger hold, this is the beginning of a great Norscan stronghold, and can field a larger garrison and hold more people.;;;;;;;;;;;;;x
+ca_norscan_hold_3;Norscan Keep;;;;;;;;;;;;;x
+ca_norscan_hold_3_desc;Norscan Keeps are what the Imperials would begin to consider a start for civilisation, towering over much of the village that has formed around it.;;;;;;;;;;;;;x
+ca_norscan_hold_4;Large Norscan Keep;;;;;;;;;;;;;x
+ca_norscan_hold_4_desc;A larger Variant of the original keep, this can easily house a Lord, his court, his extended relatives, and still have enough space for loot.;;;;;;;;;;;;;x
+ca_norscan_hold_5;Norscan Castle;;;;;;;;;;;;;x
+ca_norscan_hold_5_desc;The Norscan Castle is the ultimate expression of Norscan power in the region, full of soldiery, minor nobles, and enough food to last for months, once a Hold of this scale is constructed, it will be hard to dislodge them from their Castle.;;;;;;;;;;;;;x
+ca_norscan_hold_6;Norscan Stronghold;;;;;;;;;;;;;x
+ca_norscan_hold_6_desc;The Norscan Stronghold is a sight to behold, built of stone and metal, it would take a generous amount of soldiers to storm and successfully capture this castle.;;;;;;;;;;;;;x
+tb_berserk_1;Small Berserker Mustering Grounds;;;;;;;;;;;;;x
+tb_berserk_2;Medium Berserker Mustering Grounds;;;;;;;;;;;;;x
+tb_berserk_3;Large Berserker Mustering Grounds;;;;;;;;;;;;;x
+tb_berserk_4;Great Berserker Mustering Grounds;;;;;;;;;;;;;x
+tb_berserk_desc;Steel and iron-clad warriors gather here, preparing for their next battle in the name of their dark gods.;;;;;;;;;;;;;x
+tb_norscan_shipyard_desc;Built with steady, experienced hands, and the finest timber from the region, able to go toe-to-toe with even Arabyian corsairs, Norse ships are rightly feared.;;;;;;;;;;;;;x
+ca_norscan_shipyard_1;Norscan Shipyard;;;;;;;;;;;;;x
+ca_norscan_shipyard_2;Norscan Shipyard;;;;;;;;;;;;;x
+ca_norscan_shipyard_3;Norscan Shipyard;;;;;;;;;;;;;x
+ca_norscan_shipyard_4;Norscan Shipyard;;;;;;;;;;;;;x
+tb_noblestable_1;Small Noble Camp;;;;;;;;;;;;;x
+tb_noblestable_2;Medium Noble Camp;;;;;;;;;;;;;x
+tb_noblestable_3;Large Noble Camp;;;;;;;;;;;;;x
+tb_noblestable_4;Exalted Noble Camp;;;;;;;;;;;;;x
+tb_noblestable_desc;Here is where the Chaos Waste's finest soldiers are bred, trained, and readied for war, clad in the finest armour, armed to the teeth and ready to die for their gods, these noblemen are a fearsome sight to behold;;;;;;;;;;;;;x
+#
+ca_dwarf_keep_1;Dwarf Settlement;;;;;;;;;;;;;x
+ca_dwarf_keep_1_desc;Dwarf stone and Dwarf arms guard the heart of the fortress.;;;;;;;;;;;;;x
+ca_dwarf_keep_2;Dwarf Settlement;;;;;;;;;;;;;x
+ca_dwarf_keep_3;Dwarf Settlement;;;;;;;;;;;;;x
+ca_dwarf_keep_4;Dwarf Settlement;;;;;;;;;;;;;x
+ca_dwarf_keep_5;Dwarf Settlement;;;;;;;;;;;;;x
+ca_dwarf_fort_1;Dwarf Stronghold;;;;;;;;;;;;;x
+ca_dwarf_fort_1_desc;Dwarf stone and Dwarf arms guard the heart of the fortress.;;;;;;;;;;;;;x
+ca_dwarf_fort_2;Dwarf Stronghold;;;;;;;;;;;;;x
+ca_dwarf_fort_3;Dwarf Stronghold;;;;;;;;;;;;;x
+ca_dwarf_fort_4;Dwarf Stronghold;;;;;;;;;;;;;x
+ca_dwarf_fort_5;Dwarf Stronghold;;;;;;;;;;;;;x
+ca_dwarf_barracks_1;Dwarf Fortifications;;;;;;;;;;;;;x
+ca_dwarf_barracks_1_desc;A strong bulwark against the outside world provides the first line of Dwarf defences.;;;;;;;;;;;;;x
+ca_dwarf_barracks_2;Dwarf Fortifications;;;;;;;;;;;;;x
+ca_dwarf_barracks_3;Dwarf Fortifications;;;;;;;;;;;;;x
+ca_dwarf_barracks_4;Dwarf Fortifications;;;;;;;;;;;;;x
+ca_dwarf_barracks_5;Dwarf Fortifications;;;;;;;;;;;;;x
+ca_dwarf_cannon_1;Dwarf Cannon Foundry;;;;;;;;;;;;;x
+ca_dwarf_cannon_1_desc;Great smelting furnaces and casting moulds allow for the production of the legendary Dwarf cannons.;;;;;;;;;;;;;x
+ca_dwarf_cannon_2;Dwarf Cannon Foundry;;;;;;;;;;;;;x
+ca_dwarf_cannon_3;Dwarf Cannon Foundry;;;;;;;;;;;;;x
+ca_dwarf_cannon_4;Dwarf Cannon Foundry;;;;;;;;;;;;;x
+ca_dwarf_cannon_5;Dwarf Cannon Foundry;;;;;;;;;;;;;x
+ca_dwarf_workshop_1;Dwarf Workshops;;;;;;;;;;;;;x
+ca_dwarf_workshop_1_desc;A manufacturing centre attracts artisans and merchants.;;;;;;;;;;;;;x
+ca_dwarf_workshop_2;Dwarf Workshops;;;;;;;;;;;;;x
+ca_dwarf_workshop_3;Dwarf Workshops;;;;;;;;;;;;;x
+ca_dwarf_workshop_4;Dwarf Workshops;;;;;;;;;;;;;x
+ca_dwarf_workshop_5;Dwarf Workshops;;;;;;;;;;;;;x
+ca_dwarf_mine_1;Dwarf Mines;;;;;;;;;;;;;x
+ca_dwarf_mine_1_desc;Exploratory mine shafts provide small amounts of valuable metal ores and stone.;;;;;;;;;;;;;x
+ca_dwarf_mine_2;Dwarf Mines;;;;;;;;;;;;;x
+ca_dwarf_mine_3;Dwarf Mines;;;;;;;;;;;;;x
+ca_dwarf_mine_4;Dwarf Mines;;;;;;;;;;;;;x
+ca_dwarf_mine_5;Dwarf Mines;;;;;;;;;;;;;x
+ca_dwarf_missile_1;Dwarf Missile Range;;;;;;;;;;;;;x
+ca_dwarf_missile_1_desc;Quarrellers practice their aim at this small range.;;;;;;;;;;;;;x
+ca_dwarf_missile_2;Dwarf Missile Range;;;;;;;;;;;;;x
+ca_dwarf_missile_3;Dwarf Missile Range;;;;;;;;;;;;;x
+ca_dwarf_missile_4;Dwarf Missile Range;;;;;;;;;;;;;x
+ca_dwarf_missile_5;Dwarf Missile Range;;;;;;;;;;;;;x
+ca_dwarf_temple_1;Ancestor Shrine;;;;;;;;;;;;;x
+ca_dwarf_temple_1_desc;A shrine to the ancestors is a necessity for any Dwarf hold.;;;;;;;;;;;;;x
+ca_dwarf_temple_2;Ancestor Shrine;;;;;;;;;;;;;x
+ca_dwarf_temple_3;Ancestor Shrine;;;;;;;;;;;;;x
+ca_dwarf_temple_4;Ancestor Shrine;;;;;;;;;;;;;x
+ca_dwarf_temple_5;Ancestor Shrine;;;;;;;;;;;;;x
+ca_human_farmlands_1;Farmlands;;;;;;;;;;;;;x
+ca_human_farmlands_1_desc;The lands around the hold are suitable for sprawling farms, interspersed with villages and manors.;;;;;;;;;;;;;x
+ca_human_farmlands_2;Farmlands;;;;;;;;;;;;;x
+ca_human_farmlands_3;Farmlands;;;;;;;;;;;;;x
+ca_human_farmlands_4;Farmlands;;;;;;;;;;;;;x
+ca_human_farmlands_5;Farmlands;;;;;;;;;;;;;x
+ca_human_desert_1;Desert Villages;;;;;;;;;;;;;x
+ca_human_desert_1_desc;The hot, dry lands are hard to work, but those with the right techniques can prosper.;;;;;;;;;;;;;x
+ca_human_desert_2;Desert Villages;;;;;;;;;;;;;x
+ca_human_desert_3;Desert Villages;;;;;;;;;;;;;x
+ca_human_desert_4;Desert Villages;;;;;;;;;;;;;x
+ca_human_desert_5;Desert Villages;;;;;;;;;;;;;x
+ca_human_arctic_1;Arctic Villages;;;;;;;;;;;;;x
+ca_human_arctic_1_desc;The cold, fierce lands of the north bring hard winters and short summers, but breed equally tough people.;;;;;;;;;;;;;x
+ca_human_arctic_2;Arctic Villages;;;;;;;;;;;;;x
+ca_human_arctic_3;Arctic Villages;;;;;;;;;;;;;x
+ca_human_arctic_4;Arctic Villages;;;;;;;;;;;;;x
+ca_human_arctic_5;Arctic Villages;;;;;;;;;;;;;x
+ca_human_forest_1;Forest Villages;;;;;;;;;;;;;x
+ca_human_forest_1_desc;The forbidding woodlands are not as safe as one would like, but logging, hunting and farming can be very productive.;;;;;;;;;;;;;x
+ca_human_forest_2;Forest Villages;;;;;;;;;;;;;x
+ca_human_forest_3;Forest Villages;;;;;;;;;;;;;x
+ca_human_forest_4;Forest Villages;;;;;;;;;;;;;x
+ca_human_forest_5;Forest Villages;;;;;;;;;;;;;x
+ca_human_mines_1;Mines;;;;;;;;;;;;;x
+ca_human_mines_1_desc;The rocky heights and cliffs make for good defensive terrain, and naturally lead to mining and quarrying. Although not nearly as effective as Dwarf techniques, a good amount of ores, gemstones and fine building stone can be extracted.;;;;;;;;;;;;;x
+ca_human_mines_2;Mines;;;;;;;;;;;;;x
+ca_human_mines_3;Mines;;;;;;;;;;;;;x
+ca_human_mines_4;Mines;;;;;;;;;;;;;x
+ca_human_mines_5;Mines;;;;;;;;;;;;;x
+ca_human_city_1;City;;;;;;;;;;;;;x
+ca_human_city_1_desc;This great city has densely packed streets and sprawling satellite communities.;;;;;;;;;;;;;x
+ca_human_city_2;City;;;;;;;;;;;;;x
+ca_human_city_3;City;;;;;;;;;;;;;x
+ca_human_city_4;City;;;;;;;;;;;;;x
+ca_human_city_5;City;;;;;;;;;;;;;x
+ca_human_steppe_1;Steppe Pastures;;;;;;;;;;;;;x
+ca_human_steppe_1_desc;The wide, open lands make for poor crops, but great numbers of horses and ponies can be raised for industry or war.;;;;;;;;;;;;;x
+ca_human_steppe_2;Steppe Pastures;;;;;;;;;;;;;x
+ca_human_steppe_3;Steppe Pastures;;;;;;;;;;;;;x
+ca_human_steppe_4;Steppe Pastures;;;;;;;;;;;;;x
+ca_human_steppe_5;Steppe Pastures;;;;;;;;;;;;;x
+ca_human_castletown_1;Castle Town;;;;;;;;;;;;;x
+ca_human_castletown_1_desc;A small town is allowed to form around the castle, encompassed by curtain walls. The increased population and sprawl makes the castle harder to hold in a siege, but the settlement provides additional tax income and levies.;;;;;;;;;;;;;x
+ca_human_port_1;Port;;;;;;;;;;;;;x
+ca_human_port_1_desc;A port suitable for docking a great many ships is built, allowing for greater trade and the transport of troops.;;;;;;;;;;;;;x
+ca_human_port_2;Port;;;;;;;;;;;;;x
+ca_human_port_3;Port;;;;;;;;;;;;;x
+ca_human_port_4;Port;;;;;;;;;;;;;x
+ca_human_port_5;Port;;;;;;;;;;;;;x
+ca_human_keep_1;Castle Keep;;;;;;;;;;;;;x
+ca_human_keep_1_desc;Strong stone keeps protected by towers and walls are used by most Human civilisations in the world.;;;;;;;;;;;;;x
+ca_human_keep_2;Castle Keep;;;;;;;;;;;;;x
+ca_human_keep_3;Castle Keep;;;;;;;;;;;;;x
+ca_human_keep_4;Castle Keep;;;;;;;;;;;;;x
+ca_human_keep_5;Castle Keep;;;;;;;;;;;;;x
+ca_human_fort_1;Fortifications;;;;;;;;;;;;;x
+ca_human_fort_1_desc;The castle is dedicated to resisting attacks with strong walls and a solid garrison.;;;;;;;;;;;;;x
+ca_steppe_keep_1;Steppe Stronghold;;;;;;;;;;;;;x
+ca_steppe_keep_1_desc;A large house for the lord and his servants, protected by an small wall and a great many loyal warriors.;;;;;;;;;;;;;x
+ca_steppe_fort_1;Light Fortifications;;;;;;;;;;;;;x
+ca_steppe_fort_1_desc;The hold is reinforced to resist attack.;;;;;;;;;;;;;x
+ca_steppe_encampments_1;Encampments;;;;;;;;;;;;;x
+ca_steppe_encampments_1_desc;Small villages are encouraged to be built around the main holding.;;;;;;;;;;;;;x
+ca_halfling_barracks_1;Halfling Barracks;;;;;;;;;;;;;x
+ca_halfling_barracks_1_desc;Halflings rarely go to war, but preparations are made nonetheless. The sheriff's office is also used to store weapons, house fighters, and train militia.;;;;;;;;;;;;;x
+ca_halfling_barracks_2;Halfling Barracks;;;;;;;;;;;;;x
+ca_halfling_barracks_3;Halfling Barracks;;;;;;;;;;;;;x
+ca_halfling_barracks_4;Halfling Barracks;;;;;;;;;;;;;x
+ca_halfling_barracks_5;Halfling Barracks;;;;;;;;;;;;;x
+ca_halfling_militia_1;Halfling Militia;;;;;;;;;;;;;x
+ca_halfling_militia_1_desc;Even if there aren't any dedicated fighters about, one can always find Halflings ready to defend their homes.;;;;;;;;;;;;;x
+ca_halfling_vigilant_1;Vigilant Guard;;;;;;;;;;;;;x
+ca_halfling_vigilant_1_desc;Sharp-eyed Halflings are recruited and trained as scouts and guards. Specialising in archery, some brave Halflings also learn to ride ponies into battle, called Hobilars.;;;;;;;;;;;;;x
+ca_halfling_great_1;Great Militia;;;;;;;;;;;;;x
+ca_halfling_great_1_desc;Rather than forcing Halflings into long, brunchless days of training, it is possible to simply drag as many as possible from their homes at the time of crisis. The effect of a great many angry, hungry Halflings defending their dinners are not to be underestimated.;;;;;;;;;;;;;x
+# EMPIRE BUILDINGS
+building_imperial_army;The settlement was chosen as rally point for Imperial Army.;;;;;;;;;;;;;x
+ca_imperial_army_1;Imperial Army;;;;;;;;;;;;;x
+ca_imperial_army_2;Imperial Army;;;;;;;;;;;;;x
+ca_imperial_army_3;Imperial Army;;;;;;;;;;;;;x
+ca_imperial_army_4;Imperial Army;;;;;;;;;;;;;x
+ca_imperial_army_5;Imperial Army;;;;;;;;;;;;;x
+ca_imperial_army_6;Imperial Army;;;;;;;;;;;;;x
+ca_imperial_army_7;Imperial Army;;;;;;;;;;;;;x
+ca_imperial_army_8;Imperial Army;;;;;;;;;;;;;x
+ca_imperial_army_9;Imperial Army;;;;;;;;;;;;;x
+ca_imperial_army_10;Imperial Army;;;;;;;;;;;;;x
+#
+ca_imperial_barracks_1_desc;A garrison of household troops helps protect the castle and fight in the field. Proper Imperial fashion tends to favour a strong army of infantry, with supporting artillery and cavalry.;;;;;;;;;;;;;x
+ca_imperial_barracks_1;Small Imperial Barracks;;;;;;;;;;;;;x
+ca_imperial_barracks_2;Medium Imperial Barracks;;;;;;;;;;;;;x
+ca_imperial_barracks_3;Large Imperial Barracks;;;;;;;;;;;;;x
+ca_imperial_barracks_4;Minor Imperial Barracks;;;;;;;;;;;;;x
+ca_imperial_barracks_5;Major Imperial Barracks;;;;;;;;;;;;;x
+ca_imperial_barracks_6;Main Imperial Barracks;;;;;;;;;;;;;x
+ca_imperial_stable_1_desc;There are stables of a knightly order in this settlement. Orders both secular and religious provide Imperial army with armoured knights.;;;;;;;;;;;;;x
+ca_imperial_stable_1;Small Knightly Order Stables;;;;;;;;;;;;;x
+ca_imperial_stable_2;Medium Knightly Order Stables;;;;;;;;;;;;;x
+ca_imperial_stable_3;Large Knightly Order Stables;;;;;;;;;;;;;x
+ca_imperial_stable_4;Minor Knightly Order Seat;;;;;;;;;;;;;x
+ca_imperial_stable_5;Major Knightly Order Seat;;;;;;;;;;;;;x
+ca_imperial_stable_6;Main Knightly Order Seat;;;;;;;;;;;;;x
+# City
+ct_imperial_barracks_1_desc;A garrison of household troops helps protect the castle and fight in the field. Proper Imperial fashion tends to favour a strong army of infantry, with supporting artillery and cavalry.;;;;;;;;;;;;;x
+ct_imperial_barracks_1;Small Imperial Barracks;;;;;;;;;;;;;x
+ct_imperial_barracks_2;Medium Imperial Barracks;;;;;;;;;;;;;x
+ct_imperial_barracks_3;Large Imperial Barracks;;;;;;;;;;;;;x
+ct_imperial_barracks_4;Minor Imperial Barracks;;;;;;;;;;;;;x
+ct_imperial_barracks_5;Major Imperial Barracks;;;;;;;;;;;;;x
+ct_imperial_barracks_6;Main Imperial Barracks;;;;;;;;;;;;;x
+#
+ca_imperial_militia_1_desc;In the absence of proper infrastructure or trustworthy vassals, it can be necessary to levy the peasantry into service. Although poor in combat, it is better than nothing.;;;;;;;;;;;;;x
+#ca_imperial_free_1;Free Company;;;;;;;;;;;;;x
+ca_imperial_free_1_desc;The local levy are combined with sellswords and adventurers, creating a cheap yet effective army that can be raised at a moments notice. The high proportion of 'former' bandits, pirates, and criminals means that the levies possess some skill and courage.;;;;;;;;;;;;;x
+ca_imperial_state_1_desc;Core of any Empire army consists of professional soldiers which are trained and quartered for the service of their lord. Each Elector Count is expected to provide a Imperial Army with troops. Lower rank nobles posses limited amount of professional troops.;;;;;;;;;;;;;x
+ca_imperial_state_1;Army Headquaters;;;;;;;;;;;;;x
+ca_imperial_state_2;Army Headquaters;;;;;;;;;;;;;x
+#
+# BRETONNIA
+ca_bretonnian_barracks_1;Knightly Service;;;;;;;;;;;;;x
+ca_bretonnian_barracks_1_desc;In exchange for generous landed estates and legal privileges, the minor nobility are required to volunteer their swords and lances when called upon. In addition to the typical peasant levy, a significant number of knights and squires form the core of the army, unmatched in training and equipment.;;;;;;;;;;;;;x
+ca_bretonnian_militia_1;Tenement Conscription;;;;;;;;;;;;;x
+ca_bretonnian_militia_1_desc;The peasants form the vast bulk of the army. While the majority are simply herded enmasse to the battle with whatever weapons they can find, the best and most trustworthy are provided with some training and equipment. Mounted yeomen are deployed as scouts and skirmishers, while stubborn men-at-arms are sent to anchor the infantry in place.;;;;;;;;;;;;;x
+ca_shallya_temple_1;Temple of Shallya;;;;;;;;;;;;;x
+ca_shallya_temple_1_desc;Across the Old World, the most commonly accepted deity is Shallya, mother of mercy. In harsh conditions and without a majority faith, a strong Shallyan presence strengthens the community.;;;;;;;;;;;;;x
+ca_oldworld_temples_1;Temples;;;;;;;;;;;;;x
+ca_oldworld_temples_1_desc;In any sizeable community, there will be a number of competing faiths, usually in the same area. Although spiritual matters are usually outside the domain of the lord, it is always worth encouraging their worthwhile endeavours and reining in the less so.;;;;;;;;;;;;;x
+ca_oldworld_temples_2;Temples;;;;;;;;;;;;;x
+ca_oldworld_temples_3;Temples;;;;;;;;;;;;;x
+ca_oldworld_temples_4;Temples;;;;;;;;;;;;;x
+ca_oldworld_temples_5;Temples;;;;;;;;;;;;;x
+ca_oldworld_chapter_1;Chapter House;;;;;;;;;;;;;x
+ca_oldworld_chapter_1_desc;A chapter house for knightly orders is opened. While most orders keep their own premises, itinerant knights, adventurers and penniless crusaders will find the basic services quite welcome.;;;;;;;;;;;;;x
+ca_oldworld_reliquiary_1;Reliquary;;;;;;;;;;;;;x
+ca_oldworld_reliquiary_1_desc;A grand mausoleum for storing the remains and artifacts of the famous dead is built, creating a kind of possessive fervour among the resident zealots and attracting a number of pilgrims.;;;;;;;;;;;;;x
+ca_sigmar_temple_1;Temple of Sigmar;;;;;;;;;;;;;x
+ca_sigmar_temple_1_desc;A great temple devoted to the veneration of Sigmar is built.;;;;;;;;;;;;;x
+ca_sigmar_temple_2;Temple of Sigmar;;;;;;;;;;;;;x
+ca_sigmar_temple_3;Temple of Sigmar;;;;;;;;;;;;;x
+ca_sigmar_temple_4;Temple of Sigmar;;;;;;;;;;;;;x
+ca_sigmar_temple_5;Temple of Sigmar;;;;;;;;;;;;;x
+ca_estalian_barracks_1;Tercio Barracks;;;;;;;;;;;;;x
+ca_estalian_barracks_1_desc;.;;;;;;;;;;;;;x
+ca_estalian_militia_1;Cabarello Grounds;;;;;;;;;;;;;x
+ca_estalian_militia_1_desc;.;;;;;;;;;;;;;x
+ca_tilean_barracks_1;Elite Guard;;;;;;;;;;;;;x
+ca_tilean_barracks_1_desc;.;;;;;;;;;;;;;x
+ca_tilean_militia_1;Merchant Militia;;;;;;;;;;;;;x
+ca_tilean_militia_1_desc;.;;;;;;;;;;;;;x
+ca_sartosan_barracks_1;Sartosan Guard;;;;;;;;;;;;;x
+ca_sartosan_barracks_1_desc;.;;;;;;;;;;;;;x
+ca_sartosan_militia_1;Sartosan Militia;;;;;;;;;;;;;x
+ca_sartosan_militia_1_desc;.;;;;;;;;;;;;;x
+ca_kurgan_barracks_1;Court Riders;;;;;;;;;;;;;x
+ca_kurgan_barracks_1_desc;.;;;;;;;;;;;;;x
+ca_kurgan_militia_1;Skirmisher Camps;;;;;;;;;;;;;x
+ca_kurgan_militia_1_desc;.;;;;;;;;;;;;;x
+ca_hung_barracks_1;Hung Retinue;;;;;;;;;;;;;x
+ca_hung_barracks_1_desc;.;;;;;;;;;;;;;x
+ca_hung_militia_1;Raider Camps;;;;;;;;;;;;;x
+ca_hung_militia_1_desc;.;;;;;;;;;;;;;x
+ca_arabyan_barracks_1;Arabyan Stables;;;;;;;;;;;;;x
+ca_arabyan_barracks_1_desc;.;;;;;;;;;;;;;x
+ca_arabyan_militia_1;Common Levy;;;;;;;;;;;;;x
+ca_arabyan_militia_1_desc;.;;;;;;;;;;;;;x
+ca_oldworld_library_1;Library;;;;;;;;;;;;;x
+ca_oldworld_library_1_desc;A small collection of books are kept in the castle for the enjoyment of the family and their esteemed guests. They are mostly historical and theological in nature, although there are some purely fictional works and essays on practical subjects.;;;;;;;;;;;;;x
+ca_oldworld_library_2;Library;;;;;;;;;;;;;x
+ca_oldworld_library_2_desc;The library is enhanced by the presence of a dedicated scribe. This fellow spends all his time copying texts with exact accuracy, which are then sold or exchanged for other books.;;;;;;;;;;;;;x
+ca_oldworld_library_3;Library;;;;;;;;;;;;;x
+ca_oldworld_library_3_desc;The library has grown in musty size, presenting a impressive body of knowledge and risk of fire. A number of rare and valuable works have been obtained at great cost, protected by a small team of clerks and scribes.;;;;;;;;;;;;;x
+ca_oldworld_library_4;Library;;;;;;;;;;;;;x
+ca_oldworld_library_4_desc;Scholars now occasionally request access to the library, seeking to use your resources for their research. One can find a text on almost any subject, provided you can get directions!;;;;;;;;;;;;;x
+ca_oldworld_library_5;Library;;;;;;;;;;;;;x
+ca_oldworld_library_5_desc;The library is an impressive edifice of civilisation. There are more books than anyone could read in a lifetime, and there are rumours of a lost colony of scribes that inhabit the dark recesses at the back.;;;;;;;;;;;;;x
+ca_oldworld_workshops_1;Workshops;;;;;;;;;;;;;x
+ca_oldworld_workshops_1_desc;The courtyard and outbuildings are dominated by various workshops and warehouses. The castle is kept well-stocked with provisions, and the resident specialists keep the garrison's equipment in fine condition.;;;;;;;;;;;;;x
+ca_chaos_temple_1;Shrine of Chaos;;;;;;;;;;;;;x
+ca_chaos_temple_1_desc;A twisted shrine to Chaos. The masses come to venerate the Dark Gods and receive their blessings.;;;;;;;;;;;;;x
+ca_chaos_temple_2;Shrine of Chaos;;;;;;;;;;;;;x
+ca_chaos_temple_2_desc;.;;;;;;;;;;;;;x
+ca_chaos_temple_3;Shrine of Chaos;;;;;;;;;;;;;x
+ca_chaos_temple_3_desc;.;;;;;;;;;;;;;x
+ca_chaos_temple_4;Shrine of Chaos;;;;;;;;;;;;;x
+ca_chaos_temple_4_desc;.;;;;;;;;;;;;;x
+ca_chaos_temple_5;Shrine of Chaos;;;;;;;;;;;;;x
+ca_chaos_temple_5_desc;.;;;;;;;;;;;;;x
+ca_slaanesh_temple_1;Den of Excess;;;;;;;;;;;;;x
+ca_slaanesh_temple_1_desc;.;;;;;;;;;;;;;x
+ca_slaanesh_temple_2;Den of Excess;;;;;;;;;;;;;x
+ca_slaanesh_temple_2_desc;.;;;;;;;;;;;;;x
+ca_slaanesh_temple_3;Den of Excess;;;;;;;;;;;;;x
+ca_slaanesh_temple_3_desc;.;;;;;;;;;;;;;x
+ca_slaanesh_temple_4;Den of Excess;;;;;;;;;;;;;x
+ca_slaanesh_temple_4_desc;.;;;;;;;;;;;;;x
+ca_slaanesh_temple_5;Den of Excess;;;;;;;;;;;;;x
+ca_slaanesh_temple_5_desc;.;;;;;;;;;;;;;x
+ca_khorne_temple_1;Blood Ring;;;;;;;;;;;;;x
+ca_khorne_temple_1_desc;.;;;;;;;;;;;;;x
+ca_khorne_temple_2;Blood Ring;;;;;;;;;;;;;x
+ca_khorne_temple_2_desc;.;;;;;;;;;;;;;x
+ca_khorne_temple_3;Blood Ring;;;;;;;;;;;;;x
+ca_khorne_temple_3_desc;.;;;;;;;;;;;;;x
+ca_khorne_temple_4;Blood Ring;;;;;;;;;;;;;x
+ca_khorne_temple_4_desc;.;;;;;;;;;;;;;x
+ca_khorne_temple_5;Blood Ring;;;;;;;;;;;;;x
+ca_khorne_temple_5_desc;.;;;;;;;;;;;;;x
+ca_tzeentch_temple_1;Sorcerer Cabal;;;;;;;;;;;;;x
+ca_tzeentch_temple_1_desc;.;;;;;;;;;;;;;x
+ca_tzeentch_temple_2;Sorcerer Cabal;;;;;;;;;;;;;x
+ca_tzeentch_temple_2_desc;.;;;;;;;;;;;;;x
+ca_tzeentch_temple_3;Sorcerer Cabal;;;;;;;;;;;;;x
+ca_tzeentch_temple_3_desc;.;;;;;;;;;;;;;x
+ca_tzeentch_temple_4;Sorcerer Cabal;;;;;;;;;;;;;x
+ca_tzeentch_temple_4_desc;.;;;;;;;;;;;;;x
+ca_tzeentch_temple_5;Sorcerer Cabal;;;;;;;;;;;;;x
+ca_tzeentch_temple_5_desc;.;;;;;;;;;;;;;x
+ca_nurgle_temple_1;Plague Cult;;;;;;;;;;;;;x
+ca_nurgle_temple_1_desc;.;;;;;;;;;;;;;x
+ca_nurgle_temple_2;Plague Cult;;;;;;;;;;;;;x
+ca_nurgle_temple_3;Plague Cult;;;;;;;;;;;;;x
+ca_nurgle_temple_4;Plague Cult;;;;;;;;;;;;;x
+ca_nurgle_temple_5;Plague Cult;;;;;;;;;;;;;x
+ca_sigmarite_temple_1;Temple of Sigmar;;;;;;;;;;;;;x
+ca_sigmarite_temple_1_desc;The keep gains a shrine to Sigmar, patron of the Mankind and the Empire. The appearance of an observant and pious liege is enough to inspire some minor moral improvements in the locals.;;;;;;;;;;;;;x
+ca_sigmarite_temple_2;Temple of Sigmar;;;;;;;;;;;;;x
+ca_sigmarite_temple_3;Temple of Sigmar;;;;;;;;;;;;;x
+ca_sigmarite_temple_4;Temple of Sigmar;;;;;;;;;;;;;x
+ca_sigmarite_temple_5;Temple of Sigmar;;;;;;;;;;;;;x
+ca_grail_temple_1;Grail Hold;;;;;;;;;;;;;x
+ca_grail_temple_1_desc;Wandering knights and pilgrims are lodged here, if only to prevent them from being a nuisance elsewhere. When battle is called, they eagerly join the greater host for a chance to gain glory and honour.;;;;;;;;;;;;;x
+ca_grail_temple_2;Grail Hold;;;;;;;;;;;;;x
+ca_grail_temple_3;Grail Hold;;;;;;;;;;;;;x
+ca_grail_temple_4;Grail Hold;;;;;;;;;;;;;x
+ca_grail_temple_5;Grail Hold;;;;;;;;;;;;;x
+ca_oldworldgods_keep_1;Temple of Shallya;;;;;;;;;;;;;x
+ca_oldworldgods_keep_1_desc;A temple of Shallya provides some mercy.;;;;;;;;;;;;;x
+ca_oldworldgods_keep_2;Temple of Shallya;;;;;;;;;;;;;x
+ca_oldworldgods_keep_3;Temple of Shallya;;;;;;;;;;;;;x
+ca_oldworldgods_keep_4;Temple of Shallya;;;;;;;;;;;;;x
+ca_oldworldgods_keep_5;Temple of Shallya;;;;;;;;;;;;;x
+#
+#
+# PIETRKO  BUILDINGS
+# Kurgans/Hung nomad buildings replacement
+tb_market_town_1_kurgan_group;Slave Trader;;;;;;;;;;;;;x
+tb_market_town_2_kurgan_group;Slave Camp;;;;;;;;;;;;;x
+tb_market_town_3_kurgan_group;Slave Market;;;;;;;;;;;;;x
+tb_market_town_4_kurgan_group;Great Slave Market;;;;;;;;;;;;;x
+tb_market_town_1_desc_kurgan_group;A slave trader is present in the settlement.;;;;;;;;;;;;;x
+tb_market_town_2_desc_kurgan_group;A slaver camp has formed around tribe seat, buying and selling slaves.;;;;;;;;;;;;;x
+tb_market_town_3_desc_kurgan_group;A slave market has formed around tribe seat, buying and selling slaves.;;;;;;;;;;;;;x
+tb_market_town_4_desc_kurgan_group;A Great Slave market  has formed around tribe seat, buying and selling slaves.;;;;;;;;;;;;;x
+# steppe for
+#ca_wall_steppe_q_1;Scouting Outposts;;;;;;;;;;;;;x
+#ca_wall_steppe_q_2;Scouting Outposts;;;;;;;;;;;;;x
+#ca_wall_steppe_q_3;Scouting Outposts;;;;;;;;;;;;;x
+#ca_wall_steppe_q_desc;Tribe keeps a number of scouting parties patrolling their territory looking for the danger.;;;;;;;;;;;;;x
+# Norscans
+tb_norscan_shipyard_1;Norscan Shipyard;;;;;;;;;;;;;x
+tb_norscan_shipyard_2;Norscan Shipyard;;;;;;;;;;;;;x
+tb_norscan_shipyard_3;Norscan Shipyard;;;;;;;;;;;;;x
+tb_norscan_shipyard_4;Norscan Shipyard;;;;;;;;;;;;;x
+# Kislevites
+ca_kislevite_barracks_1;Kossar Barracks;;;;;;;;;;;;;x
+ca_kislevite_barracks_2;Kossar Barracks;;;;;;;;;;;;;x
+ca_kislevite_barracks_3;Kossar Barracks;;;;;;;;;;;;;x
+ca_kislevite_barracks_4;Kossar Barracks;;;;;;;;;;;;;x
+ca_kislevite_barracks_5;Kossar Barracks;;;;;;;;;;;;;x
+ca_kislevite_barracks_6;Kossar Barracks;;;;;;;;;;;;;x
+ca_kislevite_barracks_desc;A Barracks for kossar pulks recruited from nearby stanitsas.;;;;;;;;;;;;;x
+# gospodar style
+ca_gospodar_military;Gospodar Influences;;;;;;;;;;;;;x
+ca_gospodar_military_desc;The neighbouring stanitsas hold ancient traditions of Gospodar tribes and fight from horseback as winged lancers.;;;;;;;;;;;;;x
+ca_kislevite_stable_1;Winged Lancers Rally Place;;;;;;;;;;;;;x
+ca_kislevite_stable_2;Winged Lancers Rally Place;;;;;;;;;;;;;x
+ca_kislevite_stable_3;Winged Lancers Rally Place;;;;;;;;;;;;;x
+ca_kislevite_stable_4;Winged Lancers Rally Place;;;;;;;;;;;;;x
+ca_kislevite_stable_5;Winged Lancers Rally Place;;;;;;;;;;;;;x
+ca_kislevite_stable_6;Winged Lancers Rally Place;;;;;;;;;;;;;x
+ca_kislevite_stable_desc;The people of the neighbouring stanitsas provides this castle with rotas of winged lancers.;;;;;;;;;;;;;x
+# ungol
+ca_ungol_military;Ungol Influences;;;;;;;;;;;;;x
+ca_ungol_military_desc;The Ungol influences in neighbouring stanitsas are strong. The people here tend to fight in Ungol style as horse archers.;;;;;;;;;;;;;x
+ca_ungol_stable_1;Horse Archers Rally Point;;;;;;;;;;;;;x
+ca_ungol_stable_2;Horse Archers Rally Point;;;;;;;;;;;;;x
+ca_ungol_stable_3;Horse Archers Rally Point;;;;;;;;;;;;;x
+ca_ungol_stable_4;Horse Archers Rally Point;;;;;;;;;;;;;x
+ca_ungol_stable_5;Horse Archers Rally Point;;;;;;;;;;;;;x
+ca_ungol_stable_6;Horse Archers Rally Point;;;;;;;;;;;;;x
+ca_ungol_stable_desc;The people of the neighbouring stanitsas provides this castle with bands of Horse Archers.;;;;;;;;;;;;;x
+#
+# EVENT BUILDINGS
+#
+eb_ice_walls;Ice Walls;;;;;;;;;;;;;x
+eb_ice_walls_desc;Magical walls made of solid ice were raised in this settlement. They provide additional defence and are a visible proof of the power of the Ice Magic.;;;;;;;;;;;;;x

@@ -1,0 +1,73 @@
+# 4 Songs exclusively for the Norse
+
+song = {
+	name = "thecityofbirka.ogg"
+	
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0 
+			NOT = {	religion_group = old_gods_group }
+			NOT = {	culture_group = norscan_group }
+			NOT = {	culture_group = kurgan_group }
+		}
+		modifier = {
+			factor = 0 
+			religion = hashut
+		}		
+	}
+}
+
+song = {
+	name = "thor.ogg"
+	
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			NOT = {	religion_group = old_gods_group }
+			NOT = {	culture_group = norscan_group }
+			NOT = {	culture_group = kurgan_group }
+		}	
+		modifier = {
+			factor = 0 
+			religion = hashut
+		}	
+	}
+}
+
+song = {
+	name = "wearenorse.ogg"
+	
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			NOT = {	religion_group = old_gods_group }
+			NOT = {	culture_group = norscan_group }
+			NOT = {	culture_group = kurgan_group }
+		}	
+		modifier = {
+			factor = 0 
+			religion = hashut
+		}	
+	}
+}
+
+song = {
+	name = "wilderness.ogg"
+	
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			NOT = {	religion_group = old_gods_group }
+			NOT = {	culture_group = norscan_group }
+			NOT = {	culture_group = kurgan_group }
+		}	
+		modifier = {
+			factor = 0 
+			religion = hashut
+		}	
+	}
+}

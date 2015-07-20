@@ -1,0 +1,17 @@
+# c_vaul_khar
+
+# County Title
+title = c_vaul_khar
+
+# Settlements
+max_settlements = 3
+
+b_vaul_khar = tribal
+#b_ungoliath = city
+#b_gallaem = temple
+
+# Misc
+culture = autarri
+religion = anath_raema
+
+#History

@@ -1,0 +1,17 @@
+# c_asaria
+
+# County Title
+title = c_asaria
+
+# Settlements
+max_settlements = 3
+
+b_asaria = castle
+#b_tiragard = city
+#b_cylane = temple
+
+# Misc
+culture = eatainian
+religion = cadai
+
+#History

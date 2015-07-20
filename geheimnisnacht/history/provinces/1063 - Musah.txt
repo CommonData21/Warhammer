@@ -1,0 +1,17 @@
+# c_musah
+
+# County Title
+title = c_musah
+
+# Settlements
+max_settlements = 3
+
+b_medhal = castle
+b_buran = city
+#b_tuot = temple
+
+# Misc
+culture = wasai
+religion = akghan
+
+#History

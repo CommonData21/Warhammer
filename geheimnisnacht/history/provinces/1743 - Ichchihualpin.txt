@@ -1,0 +1,16 @@
+# c_ichchihualpin
+
+# County Title
+title = c_ichchihualpin
+
+# Settlements
+max_settlements = 2
+
+b_ichchihualpin = tribal
+#b_catlcal = city
+
+# Misc
+culture = lizardman
+religion = old_ones
+terrain = jungle
+#History

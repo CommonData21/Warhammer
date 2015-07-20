@@ -1,0 +1,16 @@
+# c_hasayh
+
+# County Title
+title = c_hasayh
+
+# Settlements
+max_settlements = 2
+
+b_khoub = castle
+b_aodagas = city
+
+# Misc
+culture = wasai
+religion = akghan
+
+#History

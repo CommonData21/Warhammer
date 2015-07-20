@@ -1,0 +1,275 @@
+castle={
+	ca_argalis = {
+		
+		desc = ca_argalis_desc
+				
+			
+		gold_cost = 1000
+
+		build_time = 3000
+
+		fort_level = 6					
+		
+		pikemen = 200
+		archers = 100
+		gunpowder = 50
+		galleys = 20
+		
+		tax_income = 8.00
+			
+		garrison_size = 0.5
+		
+		ai_creation_factor = 97
+		
+		potential = {
+			FROMFROM = { title = b_argalis } #
+		}	
+		
+		extra_tech_building_start = 0.2
+		
+		convert_to_tribal = tb_argalis
+	}
+	ca_akendorf = {
+		
+		desc = ca_akendorf_desc
+				
+			
+		gold_cost = 1000
+
+		build_time = 3000
+
+		fort_level = 5					
+		
+		pikemen = 200
+		archers = 100
+		light_cavalry = 100
+		
+		tax_income = 4.00
+			
+		garrison_size = 0.5
+		
+		ai_creation_factor = 97
+		
+		potential = {
+			FROMFROM = { title = b_akendorf } #
+		}	
+		
+		convert_to_tribal = tb_akendorf
+		
+		extra_tech_building_start = 0.2
+	}
+	ca_arnalos = {
+		
+		desc = ca_arnalos_desc
+				
+			
+		gold_cost = 1000
+
+		build_time = 3000
+
+		fort_level = 5					
+		
+		pikemen = 250
+		archers = 200
+		
+		tax_income = 3.00
+			
+		garrison_size = 0.5
+		
+		ai_creation_factor = 97
+		
+		potential = {
+			FROMFROM = { title = b_arnalos } #
+		}
+		
+		convert_to_tribal = tb_arnalos
+		
+		extra_tech_building_start = 0.2
+	}
+	ca_aldium = {
+		
+		desc = ca_aldium_desc
+				
+			
+		gold_cost = 1000
+
+		build_time = 3000
+
+		fort_level = 4					
+		
+		pikemen = 150
+		archers = 100
+		
+		tax_income = 3.00
+			
+		garrison_size = 0.3
+		
+		ai_creation_factor = 97
+		
+		potential = {
+			FROMFROM = { title = b_aldium } #
+		}
+		
+		convert_to_tribal = tb_aldium
+		
+		extra_tech_building_start = 0.2
+	}
+	
+	ca_domatburg = {
+		
+		desc = ca_domatburg_desc
+				
+			
+		gold_cost = 1000
+
+		build_time = 3000
+
+		fort_level = 5					
+		
+		pikemen = 150
+		archers = 150
+		heavy_infantry = 200
+		
+		tax_income = 5.00
+			
+		garrison_size = 0.5
+		
+		ai_creation_factor = 97
+		
+		potential = {
+			FROMFROM = { title = b_domatburg } #
+		}
+		
+		convert_to_tribal = tb_domatburg
+		
+		extra_tech_building_start = 0.2
+	}
+	
+	ca_fatandira = {
+		
+		desc = ca_fatandira_desc
+				
+			
+		gold_cost = 1000
+
+		build_time = 3000
+
+		fort_level = 2					
+		
+		gunpowder = 35
+		light_cavalry = 150
+		
+		tax_income = 3.00
+			
+		garrison_size = 0.2
+		
+		ai_creation_factor = 97
+		
+		potential = {
+			FROMFROM = { title = b_fatandira } #
+		}
+		
+		convert_to_tribal = tb_fatandira
+		
+		extra_tech_building_start = 0.2
+	}
+	
+	ca_khypris = {
+		
+		desc = ca_khypris_desc
+				
+			
+		gold_cost = 1000
+
+		build_time = 3000
+
+		fort_level = 9					
+		
+		pikemen = 150
+		archers = 150
+		light_infantry = 250
+		light_cavalry = 50
+		knights = 50
+		galleys = 20
+		
+		tax_income = 8.00
+			
+		garrison_size = 1.00
+		
+		ai_creation_factor = 97
+		
+		potential = {
+			FROMFROM = { title = b_khypris } #
+		}
+		
+		convert_to_tribal = tb_khypris
+		
+		extra_tech_building_start = 0.2
+	}
+	
+	ca_myrmidens = {
+		
+		desc = ca_myrmidens_desc
+				
+			
+		gold_cost = 1000
+
+		build_time = 3000
+
+		fort_level = 6					
+		
+		gunpowder = 50
+		pikemen = 100
+		light_infantry = 100
+		light_cavalry = 50
+		galleys = 35
+		
+		tax_income = 5.00
+			
+		garrison_size = 0.6
+		
+		ai_creation_factor = 97
+		
+		potential = {
+			FROMFROM = { title = b_heraclaia } #
+		}
+		
+		convert_to_tribal = tb_myrmidens
+		
+		extra_tech_building_start = 0.2
+	}
+}
+tribal = {
+		tb_khypris = {
+		
+		desc = ca_khypris_desc
+				
+			
+		gold_cost = 1000
+
+		build_time = 3000
+
+		fort_level = 9					
+		
+		pikemen = 75
+		archers = 75
+		light_infantry = 125
+		light_cavalry = 15
+		knights = 10
+		galleys = 8
+		
+		tax_income = 9.00
+			
+		garrison_size = 0.5
+		
+		ai_creation_factor = 97
+		
+		potential = {
+			FROMFROM = { title = b_khypris } #
+		}
+		
+		convert_to_castle = ca_khypris
+		
+		extra_tech_building_start = 0.2
+	}
+}

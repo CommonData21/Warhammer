@@ -1,0 +1,9 @@
+mutation_minor = {
+	customizer = no
+}
+mutation_major = {
+	customizer = no
+}
+mutation_massive = {
+	customizer = no
+}

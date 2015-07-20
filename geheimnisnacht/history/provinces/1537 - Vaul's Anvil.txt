@@ -1,0 +1,17 @@
+# c_vauls_anvil
+
+# County Title
+title = c_vauls_anvil
+
+# Settlements
+max_settlements = 3
+
+b_vauls_forge = castle
+b_firemarch = castle
+b_cinderblade = castle
+
+# Misc
+culture = caledori
+religion = cadai
+
+#History

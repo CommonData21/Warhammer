@@ -1,0 +1,753 @@
+namespace = nurglecultist
+
+#Cultist Menu - Nurgle#
+character_event = {
+id = nurglecultist.1
+    desc = EVTDESCNURGLECULTIST.1 # Nurgle, the Maggot Lord, demands that you do his bidding. What service shall you render the Plaguefather? Once you've completed your task, you  will need to wait 1000 days before undertaking another, so as to not arouse suspicion. 
+    picture = "GFX_evt_nurgle"
+    min_age = 16
+    capable_only = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = EVTOPTNURGLECULTIST.1.a # I will donate to our cult's coffers.
+	trigger = { wealth = 100 }
+	set_character_flag = cultist_cooldown
+	wealth = -100
+	random_playable_ruler = { 
+	limit = { has_character_flag = hidden_nurgle_cultist3 }
+	wealth = 100
+	character_event = { id = nurglecultist.3 }
+	}
+	change_variable = { which = nurglefavor value = 2 }  
+	character_event = { id = nurglecultist.2 days = 1000 }	
+	299 = {  change_variable = { which = nurglecultpower value = 1 } }
+	}
+	
+	option = { 
+	name = EVTOPTNURGLECULTIST.1.b # What would it take to host a Putrid Feast?
+	trigger = { 
+	NOT = { num_of_prisoners = 7 }
+	}
+	character_event = { id = nurglecultist.6 }
+	}
+	
+	option = {
+	name = EVTOPTNURGLECULTIST.1.c # Prepare to initiate the Putrid Feast!
+	trigger = { 
+	num_of_prisoners = 7
+	higher_tier_than = BARON
+	has_character_flag = hidden_cultist_nurgle3
+	NOT = { has_character_flag = hosting_nurgle_rite }
+	}
+	set_character_flag = cultist_cooldown
+	character_event = { id = nurglecultist.7 }
+	character_event = { id = nurglecultist.2 days = 1000 }	
+	}
+	
+	option = {
+	name = nurglecultist1A #How do I summon a demonic host and wreak havoc on the world?
+	trigger = {
+	AND = {
+	age = 16
+	NOT = { has_character_flag = hidden_cultist_nurgle3 }
+	}
+	}	
+	character_event = { id = nurglecultist.13 }
+	}
+	
+	option = {
+	name = nurglecultist1B #Openly turn to chaos, and summon a demonic host!
+	trigger = {
+	AND = {
+	prisoner = no
+	age = 16
+	has_character_flag = hidden_cultist_nurgle3
+	NOT = { has_character_flag = summonednurglehost }
+	higher_tier_than = BARON
+	OR = {
+	trait = ambitious
+	trait = lunatic_3
+	trait = lunatic_2
+	trait = lunatic_1
+	trait = zealous
+	ai = no
+	}
+	}
+	}
+	character_event = { id = nurglecultist.14 }
+	}
+	
+	option = { 
+	name = EVTOPTNURGLECULTIST.1.d # Show more choices / Close Menu
+	}
+	
+	}
+	
+character_event = {
+id = nurglecultist.2
+    desc = EVTDESCNURGLECULTIST.2 # It has been some time since you've performed your last service for grandfather Nurgle. It should be safe to undertake another service for him without arousing too much suspicion...
+    picture = "GFX_evt_nurgle"
+    min_age = 16
+    capable_only = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = EXCELLENT
+	clr_character_flag = cultist_cooldown
+	}
+	
+	}
+
+#a random playable ruler that is level 3 cultist gets the donation#
+character_event = {
+id = nurglecultist.3
+    desc = EVTDESCNURGLECULTIST.3 # A fellow servant of Nurgle has given you some money in recognition of all the plagues you've shared in the Maggot Lord's name. Use these funds bring Papa Nurgle even greater glory! 
+    picture = "GFX_evt_nurgle"
+    min_age = 16
+    capable_only = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = EXCELLENT
+	}
+	
+	}	
+	
+##Now for the events where you get promoted inside the cult##
+character_event = {
+id = nurglecultist.4
+    desc = EVTDESCNURGLECULTIST.4 # Your service to the Plaguefather has been recognized by others in his service. You are no longer a mere Acolyte, but a Magus in the cult of Nurgle. Congratulations! 
+    picture = "GFX_evt_nurgle"
+    min_age = 16
+    capable_only = yes
+	
+	trigger = {
+	check_variable = { which = nurglefavor value = 5 }
+	NOT = { has_character_flag = hidden_cultist_nurgle2 }
+	}
+	
+	mean_time_to_happen = {
+	days = 30
+	}
+	
+	option = {
+	name = I_LIVE_TO_SERVE
+	clr_character_flag = hidden_cultist_nurgle
+	set_character_flag = hidden_cultist_nurgle2
+	}
+	
+	}
+	
+character_event = {
+id = nurglecultist.5
+    desc = EVTDESCNURGLECULTIST.5 # You have reached even higher into the cults hierarchy, and you are now considered a High-Magus of Nurgle. Congratulations! 
+    picture = "GFX_evt_nurgle"
+    min_age = 16
+    capable_only = yes
+	
+	trigger = {
+	check_variable = { which = nurglefavor value = 10 }
+	NOT = { has_character_flag = hidden_cultist_nurgle3 }
+	}
+	
+	mean_time_to_happen = {
+	days = 30
+	}
+	
+	option = {
+	name = I_LIVE_TO_SERVE
+	clr_character_flag = hidden_cultist_nurgle2
+	set_character_flag = hidden_cultist_nurgle3
+	}
+	
+	}
+	
+character_event = {
+id = nurglecultist.6
+    desc = EVTDESCNURGLECULTIST.6 # The ritual of the Putrid Feast requires that you be a High-Magus of Nurgle and have seven prisoners of noble blood ready for sacrifice. Once the rite is completed, the winds of chaos will be strengthened and you will be granted the Maggot Lord's favour. 
+    picture = "GFX_evt_cultist"
+    min_age = 16
+    capable_only = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = I_SEE # I see.
+	}
+	
+	}
+	
+character_event = {
+id = nurglecultist.7
+    desc = EVTDESCNURGLECULTIST.7 # You are a a High-Magus of Nurgle and have seven prisoners of noble blood in your dungeons, which means you have everything you need to host a Putrid Feast. Shall we gather other servants of the P{laguefather so we can perform this ritual?? 
+    picture = "GFX_evt_cultist"
+    min_age = 16
+    capable_only = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = NATURALLY # Naturally!
+	set_character_flag = hosting_nurgle_rite
+	change_variable = { which = suspicion value = 2 } 
+	any_playable_ruler = {
+	limit = {
+	age = 15
+	culture_group = ROOT
+	OR = {
+	has_character_flag = hidden_cultist_nurgle
+	has_character_flag = hidden_cultist_nurgle2
+	has_character_flag = hidden_cultist_nurgle3	
+	}
+	}
+	character_event = { id = nurglecultist.8 days = 7 }
+	}
+	}
+
+	
+	option = {
+	name = NO_NOT_RIGHT_NOW
+	}
+	
+	
+	}
+character_event = {
+id = nurglecultist.8
+    desc = EVTDESCNURGLECULTIST.8 # [From.GetBestName], a High-Magus of Nurgle, has invited you to take part in a Putrid Feast! By ritually devouring seven highborn prisoners, the winds of chaos will grow stronger, and all in attendance will gain favour with the Plaguelord. 
+    picture = "GFX_evt_cultist"
+    min_age = 16
+    capable_only = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = CERTAINLY_I_SHALL_ATTEND # Certainly I shall attend!
+	set_character_flag = attending_nurgle_rite
+	change_variable = { which = suspicion value = 2 } 
+	FROM = { character_event = { id = nurglecultist.9 } }
+	}
+	
+	option = {
+	name = NO_IM_EHH_BUSY
+	change_variable = { which = nurglefavor value = -2 }
+	}
+	
+	}
+	
+character_event = {
+id = nurglecultist.9
+    desc = EVTDESCNURGLECULTIST.9 # I will gladly attend your Putrid Feast. It can only bring us closer to Grandfather Nurgle! 
+    picture = "GFX_evt_cultist"
+    min_age = 16
+    capable_only = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = EXCELLENT
+	}
+	
+	}
+	
+##Grand Rite begins for host##
+character_event = {
+id = nurglecultist.10
+    desc = EVTDESCNURGLECULTIST.10 # At a grand gala in a secure location, you begin the Putrid Feast. Your prisoners are brought forth, and to the cheers of the crowd, their rotting and diseased flesh is devoured by all in attendance while the prisoners are still alive. Nurgle will be pleased today! 
+    picture = "GFX_evt_cultist"
+    min_age = 16
+    capable_only = yes
+	
+	trigger = { 
+	age = 16
+	has_character_flag = hosting_nurgle_rite
+	}
+	
+	mean_time_to_happen = {
+	days = 30
+	}
+	
+	option = {
+	name = FLESH_FOR_GRANDFATHER_NURGLE # Flesh for Grandfather Nurgle!
+	1 = { change_variable = { which = "doom_counter" value = 5 } }
+	clr_character_flag = hosting_nurgle_rite
+	change_variable = { which = nurglefavor value = 2 }
+ 		random_list = {
+			25 = { 
+				modifier = { factor = 2.5
+						stewardship = 40
+						}
+				 }
+			25 = { change_stewardship = 2 }
+			25 = { change_stewardship = 3 }
+			25 = { change_stewardship = 4
+			character_event = { id = mutation.1 }
+				}
+			}
+	any_courtier= {
+		limit = { prisoner = yes }
+		character_event = { id = nurglecultist.11 }
+		}
+	}
+	
+}
+	
+	#prisoner is informed#
+	character_event = {
+    id = nurglecultist.11
+    title = CULTIST_SACRIFICE # Cultist Sacrifice!
+    desc = EVTDESCNURGLECULTIST.11 # After days of being kept in conditions which caused your flesh to rot and being forcibly infected with horrible diseases, you are finally dragged from your cells up to a great feasthall. You soon realize you are surrounded by cultists of the Ruinous Powers and you will be the main course. You can only scream with terror as you are eaten alive!
+    picture = "GFX_evt_cultist"
+
+	is_triggered_only = yes	
+	
+	option = {
+	name = NOOOOOO # Noooooo!
+			if ={
+	limit = {
+		trait = carstein_ring
+	}
+	character_event = {
+		id = carstein.13 days = 1
+	}
+	break = yes
+}
+
+		if = {
+ limit = {
+ trait = khemri_tomb_king }
+
+			character_event = {
+ id = snehekharan.1 days = 1 }
+	
+			break = yes 
+}
+		
+death = {
+				death_reason = death_executed
+			}
+		}
+		
+		}
+		
+	##Grand Rite begins for guests##
+character_event = {
+id = nurglecultist.12
+    desc = EVTDESCNURGLECULTIST.10 # At a grand gala in a secure location, the Putrid Feast begins. The prisoners are brought forth, and to the cheers of the crowd, their rotting and diseased flesh is devoured by all in attendance while the prisoners are still alive. Nurgle will be pleased today!
+    picture = "GFX_evt_cultist"
+    min_age = 16
+    capable_only = yes
+	
+	trigger = { 
+	age = 16
+	has_character_flag = attending_nurgle_rite
+	}
+	
+	mean_time_to_happen = {
+	days = 30
+	}
+	
+	option = {
+	name = FLESH_FOR_GRANDFATHER_NURGLE # Flesh for grandfather nurgle!
+	clr_character_flag = attending_nurgle_rite
+	change_variable = { which = nurglefavor value = 1 } 
+		random_list = {
+			25 = { 
+				modifier = { factor = 2.5
+						stewardship = 40
+						}
+				 }
+			25 = { change_stewardship = 2 }
+			25 = { change_stewardship = 3 }
+			25 = { change_stewardship = 4
+			character_event = { id = mutation.1 }
+				}
+			}
+	}
+}
+	
+character_event = {
+id = nurglecultist.13
+    desc = nurglecultist13desc # To be worthy of the Grandfather Nurle's attentions, the winds of chaos must be strong and you must be a be a level 3 cultist. Hold a grand rite or donate to the cult's coffers, and in time, he will bless you with his power and send armies to aid you.
+    picture = "GFX_evt_nurgle"
+    min_age = 16
+    capable_only = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = OK
+	}
+	
+	}
+	
+character_event = {
+id = nurglecultist.14
+    desc = nurglecultist14desc # Do you wish to openly serve Nurgle, and enact a ritual that will open a portal to the realm of chaos? Be warned: There is no going back from this choice, once made...
+    picture = "GFX_evt_nurgle"
+    min_age = 16
+    capable_only = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = nurglecultist14A #FLESH FOR THE PLAGUE LORD!
+	set_character_flag = summonednurglehost
+	religion = nurgle
+		hidden_tooltip = {  1 = { change_variable = { which = "doom_counter" value = 1 } }
+				if = { limit = { NOT = { check_variable = { which = "khorne_favor" value = 1 } }
+					 NOT = { check_variable = { which = "slaanesh_favor" value = 1 } }
+					 NOT = { check_variable = { which = "tzeentch_favor" value = 1 } } } 
+					change_variable = { which = "nurgle_favor" value = 1 } }
+
+				if = { limit = { OR = { check_variable = { which = "khorne_favor" value = 1 }
+							check_variable = { which = "slaanesh_favor" value = 1 }
+							check_variable = { which = "tzeentch_favor" value = 1 } } } 
+					change_variable = { which = "khorne_favor" value = -2 }
+					change_variable = { which = "slaanesh_favor" value = -2 }
+					change_variable = { which = "tzeentch_favor" value = -2 } } }
+	if = {
+		limit = {
+			top_liege = {
+				NOT = { religion = nurgle }
+			}
+		}
+		top_liege = {
+			ROOT = {
+				set_defacto_liege = PREV
+			}
+		}
+		liege = {
+			reverse_war = {
+				target = ROOT
+				casus_belli = cultist_bid_for_independence
+			}
+		}
+	}
+	prestige = 500
+	piety = 500
+	any_playable_ruler = {
+	limit = {
+	OR = {
+	culture_group = ROOT
+	same_realm = ROOT
+	}
+	}
+	character_event = { id = nurglecultist.15 days = 7 }
+	}
+	if = {
+	limit = { 
+	NOT = { 1 = { check_variable = { which = "doom_counter" value = 30 } } } 
+	}
+create_random_soldier = {
+			random_traits = no
+			dynasty = RANDOM
+			culture = plaguebearer_nurgle
+			religion = nurgle
+			age = 777
+			attributes = {
+				martial = 15
+				diplomacy = 4
+				stewardship = 5
+				intrigue = 10
+				learning = 3
+			}
+			health = 6
+			fertility = 0.7
+			trait = brilliant_strategist
+			trait = wroth
+			trait = lunatic_3
+			trait = hedonist
+			trait = cruel
+			trait = zealous
+			trait = nurgle_demon
+			trait = nurgle_plaguebearer
+		}
+		new_character = {
+		set_character_flag = host_demon_commander
+		add_friend = ROOT	#familiar mechanics
+		location = {
+			ROOT = {
+			spawn_unit = {
+			cannot_inherit = yes
+			province = PREV
+				troops =
+				{
+					daemonic_host = { 2500 2500 }
+					daemonic_host = { 1500 1500 }
+					daemonic_host = { 1500 1500 }
+				}
+			}
+		}
+		}
+		}	
+	}
+if = {
+	limit = { 
+	AND = {
+	1 = { check_variable = { which = "doom_counter" value = 30 } }
+	NOT = { 1 = { check_variable = { which = "doom_counter" value = 60 } } } 
+	}
+	}
+create_random_soldier = {
+			random_traits = no
+			dynasty = RANDOM
+			culture = plaguebearer_nurgle
+			religion = nurgle
+			age = 777
+			attributes = {
+				martial = 15
+				diplomacy = 4
+				stewardship = 5
+				intrigue = 10
+				learning = 3
+			}
+			health = 6
+			fertility = 0.7
+			trait = brilliant_strategist
+			trait = wroth
+			trait = lunatic_3
+			trait = hedonist
+			trait = cruel
+			trait = zealous
+			trait = nurgle_demon
+			trait = nurgle_plaguebearer
+		}
+		new_character = {
+		set_character_flag = host_demon_commander
+		add_friend = ROOT	#familiar mechanics
+		location = {
+			ROOT = {
+			spawn_unit = {
+			cannot_inherit = yes
+			province = PREV
+				troops =
+				{
+					daemonic_host = { 4500 4500 }
+					daemonic_host = { 2000 2000 }
+					daemonic_host = { 3000 3000 }
+				}
+			}
+		}
+		}
+		}
+	}
+	if = {
+	limit = { 
+	AND = {
+	1 = { check_variable = { which = "doom_counter" value = 60 } }
+	NOT = { 1 = { check_variable = { which = "doom_counter" value = 90 } } } 
+	}
+	}
+create_random_soldier = {
+			random_traits = no
+			dynasty = RANDOM
+			culture = plaguebearer_nurgle
+			religion = nurgle
+			age = 777
+			attributes = {
+				martial = 15
+				diplomacy = 4
+				stewardship = 5
+				intrigue = 10
+				learning = 3
+			}
+			health = 6
+			fertility = 0.7
+			trait = brilliant_strategist
+			trait = wroth
+			trait = lunatic_3
+			trait = hedonist
+			trait = cruel
+			trait = zealous
+			trait = nurgle_demon
+			trait = nurgle_plaguebearer
+		}
+		new_character = {
+		set_character_flag = host_demon_commander
+		add_friend = ROOT	#familiar mechanics
+		location = {
+			ROOT = {
+			spawn_unit = {
+			cannot_inherit = yes
+			province = PREV
+				troops =
+				{
+					daemonic_host = { 5000 5000 }
+					daemonic_host = { 3000 3000 }
+					daemonic_host = { 3000 3000 }
+				}
+			}
+		}
+		}
+		}
+	}
+	if = {
+	limit = { 
+	AND = {
+	1 = { check_variable = { which = "doom_counter" value = 90 } }
+	}
+	}
+create_random_soldier = {
+			random_traits = no
+			dynasty = RANDOM
+			culture = plaguebearer_nurgle
+			religion = nurgle
+			age = 777
+			attributes = {
+				martial = 15
+				diplomacy = 4
+				stewardship = 5
+				intrigue = 10
+				learning = 3
+			}
+			health = 6
+			fertility = 0.7
+			trait = brilliant_strategist
+			trait = wroth
+			trait = lunatic_3
+			trait = hedonist
+			trait = cruel
+			trait = zealous
+			trait = nurgle_demon
+			trait = nurgle_plaguebearer
+		}
+		new_character = {
+		set_character_flag = host_demon_commander
+		add_friend = ROOT	#familiar mechanics
+		location = {
+			ROOT = {
+			spawn_unit = {
+			cannot_inherit = yes
+			province = PREV
+				troops =
+				{
+					daemonic_host = { 7500 7500 }
+					daemonic_host = { 2000 2000 }
+					daemonic_host = { 3000 3000 }
+					daemonic_host = { 2000 2000 }
+					daemonic_host = { 3000 3000 }
+				}
+			}
+		}
+		}
+		}
+	}
+	}
+	
+	option = {
+	name = khornecultist14B #No, now is not the opportune time...
+	trigger = { ai = no }
+	}
+	
+	}
+	
+character_event = {
+id = nurglecultist.15
+    desc = EVTDESCKHORNECULTIST.15 # This ruler has been a secret servant of the Ruinous Powers for some time now, and has finally proclaimed his allegiance. He has summoned a demonic army and is preparing to wage a war of conquest!
+    picture = "GFX_evt_nurgle"
+    min_age = 16
+    capable_only = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = {
+				NOT = {	
+					has_character_flag = hidden_cultist_nurgle
+					has_character_flag = hidden_cultist_nurgle2 
+					has_character_flag = hidden_cultist_nurgle3
+					has_character_flag = hidden_cultist_undivided
+					has_character_flag = hidden_cultist_undivided2
+					has_character_flag = hidden_cultist_undivided3
+					religion = chaos
+					religion = nurgle
+				}
+			}
+			opinion = {
+				who = FROM
+				modifier = opinion_confirmed_heretic
+				months = 240
+			}
+			FROM = {
+				father = {
+					reverse_opinion = {
+						who = ROOT
+						modifier = opinion_family_of_confirmed_heretic
+						months = 240
+					}
+				}
+				mother = {
+					reverse_opinion = {
+						who = ROOT
+						modifier = opinion_family_of_confirmed_heretic
+						months = 240
+					}
+				}
+				any_sibling = {					
+					reverse_opinion = {
+						who = ROOT
+						modifier = opinion_family_of_confirmed_heretic
+						months = 240
+					}
+				}
+				any_child = {
+					reverse_opinion = {
+						who = ROOT
+						modifier = opinion_family_of_confirmed_heretic
+						months = 240
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = khornecultist15A #By the gods... !
+		ai_chance =  { factor = 1
+				modifier = { factor = 0
+					OR =  { has_character_flag = hidden_cultist_nurgle
+						has_character_flag = hidden_cultist_nurgle2 
+						has_character_flag = hidden_cultist_nurgle3
+						has_character_flag = hidden_cultist_undivided
+						has_character_flag = hidden_cultist_undivided2
+						has_character_flag = hidden_cultist_undivided3 } 
+					 }
+				 }
+	}
+	option = {
+		name = khornecultist15B #It shall be my time as well!
+		trigger = { prisoner = no
+			 FROM = { liege_before_war = { ROOT = { liege = { character = PREVPREV } } } }
+			independent = no
+			liege = { opinion = { modifier = opinion_confirmed_heretic 
+					 	who = ROOT
+						years = 150 } }
+			OR = {		has_character_flag = hidden_cultist_nurgle
+					has_character_flag = hidden_cultist_nurgle2 
+					has_character_flag = hidden_cultist_nurgle3
+					has_character_flag = hidden_cultist_undivided
+					has_character_flag = hidden_cultist_undivided2
+					has_character_flag = hidden_cultist_undivided3
+					religion = nurgle
+					religion = chaos }
+			 } 
+				if = { limit = { OR = {		has_character_flag = hidden_cultist_nurgle
+								has_character_flag = hidden_cultist_nurgle2 
+								has_character_flag = hidden_cultist_nurgle3 } }
+					religion = nurgle }
+				if = { limit = { OR = {		has_character_flag = hidden_cultist_undivided
+								has_character_flag = hidden_cultist_undivided2 
+								has_character_flag = hidden_cultist_undivided3 } }
+					religion = chaos }
+				set_defacto_liege = FROM
+				set_character_flag = independent_joining_flag 
+				join_defender_wars = FROM
+				join_attacker_wars = FROM
+		ai_chance =  { factor = 1 }
+	}
+}

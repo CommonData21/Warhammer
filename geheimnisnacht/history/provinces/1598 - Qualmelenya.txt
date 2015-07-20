@@ -1,0 +1,17 @@
+# c_qualmelenya
+
+# County Title
+title = c_qualmelenya
+
+# Settlements
+max_settlements = 3
+
+b_qualmelenya = castle
+#b_werelden = city
+#b_blackwall = temple
+
+# Misc
+culture = sapherian
+religion = cadai
+
+#History

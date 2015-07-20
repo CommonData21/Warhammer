@@ -1,0 +1,49 @@
+#decisions = {
+#
+#seektobecomechosen = {
+#
+#potential = {
+# ROOT = {
+ #  AND = {
+#    religion_group = chaos_gods_group
+#	NOT = { religion = hashut }
+#	NOT = { trait = creature_beastman }
+#	}
+ # }
+#}
+#allow = {
+#prestige = 500
+#NOT = { trait = craven }
+#NOT = { trait = content }
+#}
+#
+#effect = {
+#ROOT = { character_event = { id = chosen.0 } }
+#	}
+#	
+#	ai_will_do = {
+#	factor = 1
+ #           
+#	modifier = {
+ #           factor = 0
+  #          num_of_children = 0
+   #         }	
+			
+#	modifier = {
+ #           factor = 0
+  #          NOT = { age = 35 }
+   #         }	
+#	modifier = {
+ #           factor = 0.5
+  #          trait = brave
+#			trait = ambitious
+#			trait = zealous
+ #           }	
+#	modifier = {
+ #           factor = 0.25
+  #          trait = proud
+#			trait = lunatic_3
+ #           }	
+#	}
+ # }	
+#}

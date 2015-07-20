@@ -1,0 +1,1092 @@
+# There is no bitrh = 10000 as with randomly generated character this doesn't work
+# we need event to give racial traits basing on culture
+# 
+creature_human = {
+	potential = {
+		OR = {
+			culture_group = amazon_group
+			culture_group = arabyan_group
+			culture_group = bretonnian_group
+			culture_group = estalian_group
+			culture_group = hung_group
+			culture_group = immortal_group
+			culture_group = imperial_group
+			culture_group = kislevite_group
+			culture_group = kurgan_group
+			culture_group = norscan_group
+			culture_group = orient_group
+			culture_group = sanguine_group
+			culture_group = sartosan_group
+			culture_group = tilean_group
+			culture_group = lahmian_group
+		}
+	}
+	inherit_chance = 100
+
+	opposites = {
+		creature_orc               
+		creature_elf
+   		creature_goblin
+  	    	creature_snotling
+		creature_nehekharan                
+		creature_skink  
+		creature_skaven
+		creature_ogre
+		creature_beastman 
+		creature_chaosspawn
+	}
+
+	same_opinion = 10
+	opposite_opinion = -10
+	ruler_designer_cost = 0
+	customizer = no
+}
+
+creature_elf = {
+	
+#	potential = {
+#		OR = {
+#			graphical_culture = asraigfx
+#			graphical_culture = asurgfx
+#			graphical_culture = druchiigfx
+#		}
+#	}
+	inherit_chance = 100
+	# elves are more powerful than other beings
+	health = 25
+	immortal = yes
+	learning = 2
+	diplomacy = 2
+	martial = 2
+	intrigue = 1
+	stewardship = 1
+	combat_rating = 1
+	ruler_designer_cost = 0
+	customizer = no
+	
+	# dwarfs don't like them very much
+	opposites = {
+		creature_dwarf
+		creature_beastman 
+                creature_chaos_dwarf
+		creature_orc
+	}
+	command_modifier = {
+		speed = 0.01
+	}
+
+        # racism mechanics
+	same_opinion = 15
+	opposite_opinion = -15
+
+	male_insult = INSULT_POINTYEARS
+	female_insult = INSULT_POINTYEARS
+	male_insult_adj = INSULT_POINTYEARED
+	female_insult_adj = INSULT_POINTYEARED
+}
+
+creature_dwarf = {
+	
+	potential = {
+		culture_group = dwarf_group
+	}
+	inherit_chance = 100
+	immortal = yes
+
+	# dwarfs are good engineers and warriors 
+	stewardship = 1
+	learning = 1
+	martial = 1
+	health = 25
+	customizer = no
+	ruler_designer_cost = 0
+
+	# racism	
+	same_opinion = 10
+
+	# special hatred
+	opposites = {
+		creature_chaos_dwarf
+		creature_goblin
+		creature_snotling
+		creature_orc
+		creature_skaven
+		creature_beastman 
+		creature_chaosspawn
+	}
+	command_modifier = {
+		speed = -0.1
+	}
+	opposite_opinion = -100
+	ai_greed = 50
+	ai_honor = 100
+	
+	male_insult = INSULT_STUMP
+	female_insult = INSULT_STUMP
+	male_insult_adj = INSULT_DIMINUITIVE
+	female_insult_adj = INSULT_DIMINUITIVE
+}
+
+creature_chaos_dwarf = {
+	
+	potential = {
+		culture_group = dwarf_chaos_group
+	}
+
+	inherit_chance = 100
+	immortal = yes
+
+	# dwarfs are good engineers and warriors 
+	stewardship = 1
+	learning = 1
+	martial = 1
+	intrigue = 1
+	health = 25
+	combat_rating = 1
+	customizer = no
+	ruler_designer_cost = 0
+	
+        opposites = {
+		creature_dwarf
+	}
+	command_modifier = {
+		speed = -0.1
+	}
+
+	# racism	
+	same_opinion = 20
+	opposite_opinion = -20
+	male_insult = INSULT_STUMP
+	female_insult = INSULT_STUMP
+	male_insult_adj = INSULT_DIMINUITIVE
+	female_insult_adj = INSULT_DIMINUITIVE
+}
+
+creature_halfling = {
+	
+	potential = {
+		culture_group = halfling_group
+	}
+	inherit_chance = 100
+
+	# halflings peaceful creatures 
+	stewardship = 1
+	martial = -1
+	combat_rating = -2
+	customizer = no
+	ruler_designer_cost = 0
+
+	# racism	
+	same_opinion = 10
+	opposite_opinion = -10
+	male_insult = INSULT_IMP
+	female_insult = INSULT_IMP
+	male_insult_adj = INSULT_HALFSIZED
+	female_insult_adj = INSULT_HALFSIZED
+
+}
+
+creature_orc = {
+	
+	potential = {
+		culture_group = orc_group
+		is_female = no
+	}
+
+	immortal = yes
+	inherit_chance = 100
+	fertility = -10.0
+	cannot_marry = yes
+	customizer = no
+	ruler_designer_cost = 0
+
+	# orcs are stupid brutes
+	learning = -3
+	diplomacy = -2
+	stewardship = -2
+	intrigue = -2
+	health = 1
+	combat_rating = 2
+
+	# racism	
+	same_opinion = 40	#orcs hate each other and are hated by everyone
+	opposite_opinion = -50
+
+	# reflects personality
+	ai_rationality = -50
+	ai_honor = -20
+	ai_zeal = 20
+
+	# 
+	vassal_opinion = -20
+
+	male_insult = INSULT_BRUTE
+	female_insult = INSULT_BRUTE
+	male_insult_adj = INSULT_SAVAGE
+	female_insult_adj = INSULT_SAVAGE
+}
+
+creature_goblin = {
+	potential = {
+		culture_group = goblin_group
+		is_female = no
+	}
+	
+	inherit_chance = 100
+
+	# goblins aren't the brightest either 
+	learning = -2
+	diplomacy = -2
+	stewardship = -1
+	martial = -2
+	combat_rating = -2
+	customizer = no
+	ruler_designer_cost = 0
+
+	# racism	
+	same_opinion = 40	#goblins hate each other and are hated by everyone
+	opposite_opinion = -50
+	
+	ai_rationality = -50
+	ai_honor = -30
+	ai_zeal = 20
+
+	immortal = yes
+	fertility = -10.0
+	cannot_marry = yes
+	
+	vassal_opinion = -10
+	male_insult = INSULT_BRUTE
+	female_insult = INSULT_BRUTE
+	male_insult_adj = INSULT_SAVAGE
+	female_insult_adj = INSULT_SAVAGE
+}
+
+creature_snotling = {
+	potential = {
+		OR = {
+			culture_group = goblin_group
+			culture_group = orc_group
+		}
+		is_female = yes
+	}
+	inherit_chance = 100
+	
+		
+	# basically animals 
+	learning = -4
+	diplomacy = -3
+	stewardship = -3
+	intrigue = -1
+	martial = -2
+	combat_rating = -2
+	customizer = no
+
+	# racism	
+	same_opinion = 30
+	opposite_opinion = -30
+	
+	# to reflect personality
+	ai_rationality = -10
+	ai_honor = -20
+
+	immortal = yes
+	fertility = -10.0
+
+	# the are used to be females
+	cannot_marry = yes
+	cannot_inherit = yes
+	male_insult = INSULT_BRUTE
+	female_insult = INSULT_BRUTE
+	male_insult_adj = INSULT_INSIGNIFICANT
+	female_insult_adj = INSULT_INSIGNIFICANT
+}
+
+creature_nehekharan = {
+	potential = {
+		culture_group = nehekharan_group
+	}
+	
+	inherit_chance = 100
+	health = 100
+	immortal = yes
+	customizer = no
+	ruler_designer_cost = 0
+
+	# racism	
+	opposite_opinion = -20
+
+	fertility = -50.0
+	male_insult = INSULT_ABOMINATION
+	female_insult = INSULT_ABOMINATION
+	male_insult_adj = INSULT_ROTTEN
+	female_insult_adj = INSULT_ROTTEN
+	
+}
+
+creature_skink = {
+	
+	potential = {
+		culture_group = lizardman_group
+	}
+	inherit_chance = 100
+	fertility = -10.0
+	customizer = no
+	ruler_designer_cost = 0
+	
+	# racism	
+	same_opinion = 20
+	opposite_opinion = -20
+
+	cannot_marry = yes
+	male_insult = INSULT_MONSTER
+	female_insult = INSULT_MONSTER
+	male_insult_adj = INSULT_COLDBLOODED
+	female_insult_adj = INSULT_COLDBLOODED
+}
+
+creature_skaven = {
+	potential = {
+		culture_group = skaven_group
+	}
+	
+	inherit_chance = 100
+	fertility = -10.0
+	customizer = no
+	ruler_designer_cost = 0
+
+	# racism	
+	same_opinion = 40
+	opposite_opinion = -50
+
+	# raats!
+	ai_honor = -20
+
+	cannot_marry = yes
+	vassal_opinion = -30
+	male_insult = INSULT_RATLING
+	female_insult = INSULT_RATLING
+	male_insult_adj = INSULT_SNIVELING
+	female_insult_adj = INSULT_SNIVELING
+}
+
+creature_ogre = {
+	inherit_chance = 100
+	potential = {
+		culture_group = ogre_group
+	}
+	
+	#
+	diplomacy = -2
+	learning = -2
+	intrigue = -2
+	stewardship = -2
+	health = 1
+	combat_rating = 2
+	customizer = no
+	ruler_designer_cost = 0
+	
+	# racism	
+	same_opinion = 20
+	opposite_opinion = -30
+
+	fertility = -0.15
+	male_insult = INSULT_BRUTE
+	female_insult = INSULT_BRUTE
+	male_insult_adj = INSULT_SAVAGE
+	female_insult_adj = INSULT_SAVAGE
+}
+
+creature_pig = {
+	
+	inherit_chance = 100
+	random = no 
+	same_opinion = 10
+	general_opinion = -10
+ 	customizer = no
+	fertility = -10.0
+	incapacitating = yes
+
+	male_insult = INSULT_FATPIG
+	female_insult = INSULT_SOW
+	male_insult_adj = INSULT_BLOATED
+	female_insult_adj = INSULT_BLOATED
+
+	male_compliment = COMPL_MAGNIFICENT
+	female_compliment = COMPL_MAGNIFICENT
+	male_compliment_adj = COMPL_MAGNIFICENT
+	female_compliment_adj = COMPL_MAGNIFICENT
+}
+
+creature_toad = {
+	
+	inherit_chance = 100
+	random = no 
+	same_opinion = 10
+	general_opinion = -20
+ 	customizer = no
+	fertility = -10.0
+	incapacitating = yes
+}
+
+creature_beastman = {
+	inherit_chance = 100
+
+	opposites = {
+		creature_dwarf
+		creature_orc               
+		creature_elf
+      		creature_goblin
+      	 	creature_snotling
+		creature_nehekharan                
+		creature_skink  
+		creature_skaven
+		creature_ogre
+		creature_chaos_dwarf 
+		creature_chaosspawn
+	}
+
+	opposite_opinion = -100
+	ambition_opinion = -15 
+	ruler_designer_cost = 0
+
+	fertility = 0.5
+
+	martial = 1
+	combat_rating = 4
+	diplomacy = -5
+	intrigue = -2
+	stewardship = -3
+	learning = -5
+	customizer = no
+
+	male_insult = INSULT_BRUTE
+	female_insult = INSULT_BRUTE
+	male_insult_adj = INSULT_SAVAGE
+	female_insult_adj = INSULT_SAVAGE
+
+	ai_greed = 100
+	ai_ambition = 100
+	ai_rationality = -100 
+	ai_honor = -100
+}
+
+creature_forestspirit = {
+	potential = {
+			culture_group = forest_group
+	}
+	inherit_chance = 100
+
+	opposites = {              
+		creature_elf 
+		creature_treekin
+	}
+
+	martial = 5
+	combat_rating = 9
+	diplomacy = 3
+	intrigue = 3
+	stewardship = 3
+	learning = 5
+	customizer = no
+
+	same_opinion = 30
+	opposite_opinion = 10
+	cannot_marry = yes
+	cannot_inherit = yes
+
+	health = 100
+	immortal = yes
+	fertility = -50.0
+
+	male_insult = INSULT_ABOMINATION
+	female_insult = INSULT_ABOMINATION
+	male_insult_adj = INSULT_ROTTEN
+	female_insult_adj = INSULT_ROTTEN
+
+	ai_zeal = 30
+	ai_rationality = -50 
+}
+
+creature_treekin = {
+	opposites = {              
+		creature_elf
+		creature_forestspirit
+	}
+
+	martial = 3
+	combat_rating = 6
+	diplomacy = -2
+	intrigue = -3
+	stewardship = -3
+	learning = -2
+
+	same_opinion = 30
+	opposite_opinion = 10
+	cannot_marry = yes
+	cannot_inherit = yes
+	customizer = no
+
+	immortal = yes
+	fertility = -50.0
+
+	male_insult = INSULT_ABOMINATION
+	female_insult = INSULT_ABOMINATION
+	male_insult_adj = INSULT_ROTTEN
+	female_insult_adj = INSULT_ROTTEN
+
+	ai_zeal = 30
+	ai_rationality = -50 
+}
+
+creature_chaosspawn = {
+	inherit_chance = 100
+
+	opposites = {
+		creature_dwarf
+		creature_orc               
+		creature_elf
+      		creature_goblin
+      	 	creature_snotling
+		creature_nehekharan                
+		creature_skink  
+		creature_skaven
+		creature_ogre
+		creature_chaos_dwarf
+		creature_beastman 
+	}
+
+	opposite_opinion = -100
+	same_opinion = -100
+
+	fertility = -50.0
+	
+	cannot_marry = yes
+	martial = 1
+	combat_rating = 8
+	diplomacy = -50
+	intrigue = -50
+	stewardship = -50
+	learning = -50
+	customizer = no
+
+	male_insult = INSULT_ABOMINATION
+	female_insult = INSULT_ABOMINATION
+	male_insult_adj = INSULT_SAVAGE
+	female_insult_adj = INSULT_SAVAGE
+
+	ai_ambition = 100
+	ai_rationality = -200 
+	ai_honor = -100
+}
+#Greenskins
+
+orc_small = {
+	leader = no
+
+	intrigue = 6
+	martial = 1 
+	diplomacy = 2 
+	combat_rating = 1
+
+	liege_opinion = -60
+	vassal_opinion = 30
+	
+	opposites = {
+		orc_average
+		orc_large
+		orc_huge
+	}	
+	
+	ai_ambition = -40
+	ai_zeal = -30
+	customizer = no
+}
+
+orc_average = {
+	leader = no
+	
+	intrigue = 3
+	martial = 3 
+	diplomacy = 4
+	combat_rating = 4  
+	
+	liege_opinion = -80
+	vassal_opinion = 50
+	
+	opposites = {
+		orc_small
+		orc_large
+		orc_huge
+	}
+	
+	ai_ambition = -20
+	ai_zeal = -10
+	customizer = no
+}
+
+orc_large = {
+	leader = no
+
+	intrigue = 0
+	martial = 5 
+	diplomacy = 6 
+	combat_rating = 6
+	
+	liege_opinion = -100
+	vassal_opinion = 70
+	
+	opposites = {
+		orc_small
+		orc_average
+		orc_huge
+	}
+	
+	ai_ambition = 20
+	ai_zeal = 20
+	customizer = no
+}
+
+orc_huge = {
+	leader = no
+
+	intrigue = -3
+	martial = 7
+	diplomacy = 8 
+	combat_rating = 9
+	
+	liege_opinion = -120
+	vassal_opinion = 90
+	
+	opposites = {
+		orc_small
+		orc_average
+		orc_large
+	}
+	
+	ai_ambition = 50
+	ai_zeal = 50
+	customizer = no
+}
+
+goblin_small = {
+	leader = no
+
+	intrigue = 12
+	martial = -1 
+	diplomacy = -2 
+	combat_rating = -2
+
+	liege_opinion = -20
+	vassal_opinion = 0
+	
+	opposites = {
+		goblin_average
+		goblin_large
+		goblin_huge
+	}
+	
+	ai_ambition = -40
+	ai_zeal = -30
+	customizer = no
+}
+
+goblin_average = {
+	leader = no
+	
+	intrigue = 9
+	
+	liege_opinion = -40
+	vassal_opinion = 10
+	
+	opposites = {
+		goblin_small
+		goblin_large
+		goblin_huge
+	}
+	
+	ai_ambition = -20
+	ai_zeal = -10
+	customizer = no
+}
+
+goblin_large = {
+	leader = no
+	
+	intrigue = 6
+	martial = 1 
+	diplomacy = 2
+	combat_rating = 1
+	
+	liege_opinion = -60
+	vassal_opinion = 30
+	
+	opposites = {
+		goblin_small
+		goblin_average
+		goblin_huge
+	}
+	
+	ai_ambition = 20
+	ai_zeal = 20
+	customizer = no
+}
+
+goblin_huge = {
+	leader = no
+	intrigue = 3
+	martial = 4 
+	diplomacy = 4
+	combat_rating = 3 
+	
+	liege_opinion = -80
+	vassal_opinion = 50
+	
+	opposites = {
+		goblin_small
+		goblin_average
+		goblin_large
+	}
+	
+	ai_ambition = 50
+	ai_zeal = 50
+	customizer = no
+}
+
+#Vampires every vampire trait should have religious = yes modifier 
+
+vampire_lahmian_visible = {
+
+	sex_appeal_opinion = 25
+	same_opinion = 85
+	same_religion_opinion = 100
+	general_opinion = -100
+	monthly_character_piety = 0.25
+	monthly_character_prestige = 0.5
+	fertility = -10.0
+	health = 100
+	immortal = yes
+	ai_zeal = 30
+	ai_honor = -30
+	ai_ambition = 30
+	customizer = no
+	
+	opposites = {
+		vampire_carstein_visible
+		vampire_blood_visible
+		vampire_strigoi_visible
+		vampire_necrach_visible
+		vampire_jade_visible
+		vampire_mahtmasi_visible
+	}
+	male_insult = INSULT_FIEND
+	female_insult = INSULT_FIEND
+	male_insult_adj = INSULT_BLOODSUCKING
+	female_insult_adj = INSULT_BLOODSUCKING
+}
+
+vampire_carstein_visible = {
+
+	sex_appeal_opinion = 20
+	same_opinion = 75
+	same_religion_opinion = 100
+	general_opinion = -100
+	monthly_character_piety = 0.25
+	monthly_character_prestige = 0.5
+	fertility = -10.0
+	health = 100
+	immortal = yes
+	ai_zeal = 30
+	ai_honor = -30
+	ai_ambition = 30
+	customizer = no
+	opposites = {
+		vampire_lahmian_visible
+		vampire_blood_visible
+		vampire_strigoi_visible
+		vampire_necrach_visible
+		vampire_jade_visible
+		vampire_mahtmasi_visible
+	}
+	male_insult = INSULT_FIEND
+	female_insult = INSULT_FIEND
+	male_insult_adj = INSULT_BLOODSUCKING
+	female_insult_adj = INSULT_BLOODSUCKING
+
+}
+
+vampire_blood_visible = {
+
+	same_opinion = 90
+	same_religion_opinion = 100
+	general_opinion = -100
+	monthly_character_piety = 0.25
+	monthly_character_prestige = 0.5
+	fertility = -10.0
+	health = 100
+	immortal = yes
+	ai_zeal = 30
+	ai_honor = 30
+	ai_ambition = -30
+	customizer = no
+	opposites = {
+		vampire_lahmian_visible
+		vampire_carstein_visible
+		vampire_strigoi_visible
+		vampire_necrach_visible
+		vampire_jade_visible
+		vampire_mahtmasi_visible
+	}
+	male_insult = INSULT_FIEND
+	female_insult = INSULT_FIEND
+	male_insult_adj = INSULT_BLOODSUCKING
+	female_insult_adj = INSULT_BLOODSUCKING
+	
+}
+
+vampire_strigoi_visible = {
+
+	diplomacy = -5
+	martial = 5
+	stewardship = -5
+	intrigue = 5
+	learning = -5
+	same_opinion = 65
+	same_religion_opinion = 50
+	general_opinion = -100
+	monthly_character_piety = 5
+	fertility = -10.0
+	health = 100
+	immortal = yes
+	ai_zeal = 30
+	ai_honor = -30
+	ai_ambition = 30
+	ai_rationality = -100
+	customizer = no
+	opposites = {
+		vampire_lahmian_visible
+		vampire_carstein_visible
+		vampire_blood_visible
+		vampire_necrach_visible
+		vampire_jade_visible
+		vampire_mahtmasi_visible
+	}
+	male_insult = INSULT_FIEND
+	female_insult = INSULT_FIEND
+	male_insult_adj = INSULT_BLOODSUCKING
+	female_insult_adj = INSULT_BLOODSUCKING
+}
+
+vampire_necrach_visible = {
+
+	diplomacy = -5
+	martial = 5
+	stewardship = -5
+	intrigue = 5
+	learning = -5
+	same_opinion = 110
+	same_religion_opinion = 50
+	general_opinion = -100
+	monthly_character_piety = 5
+	fertility = -10.0
+	health = 100
+	immortal = yes
+	ai_zeal = 30
+	ai_honor = -30
+	ai_ambition = 30
+	ai_rationality = -100
+	customizer = no
+	opposites = {
+		vampire_lahmian_visible
+		vampire_carstein_visible
+		vampire_blood_visible
+		vampire_strigoi_visible
+		vampire_jade_visible
+		vampire_mahtmasi_visible
+	}
+	male_insult = INSULT_FIEND
+	female_insult = INSULT_FIEND
+	male_insult_adj = INSULT_BLOODSUCKING
+	female_insult_adj = INSULT_BLOODSUCKING
+}
+
+vampire_jade_visible = {
+
+	same_opinion = 75
+	same_religion_opinion = 50
+	general_opinion = -100
+	monthly_character_piety = 5
+	fertility = -10.0
+	health = 100
+	immortal = yes
+	ai_zeal = 30
+	ai_honor = -30
+	ai_ambition = 30
+	ai_rationality = -100
+	customizer = no
+	opposites = {
+		vampire_lahmian_visible
+		vampire_carstein_visible
+		vampire_blood_visible
+		vampire_strigoi_visible
+		vampire_necrach_visible
+		vampire_mahtmasi_visible
+	}
+	male_insult = INSULT_FIEND
+	female_insult = INSULT_FIEND
+	male_insult_adj = INSULT_BLOODSUCKING
+	female_insult_adj = INSULT_BLOODSUCKING
+}
+
+vampire_mahtmasi_visible = {
+
+	same_opinion = 75
+	same_religion_opinion = 50
+	general_opinion = -100
+	monthly_character_piety = 5
+	fertility = -10.0
+	health = 100
+	immortal = yes
+	ai_zeal = 30
+	ai_honor = -30
+	ai_ambition = 30
+	ai_rationality = -100 
+	customizer = no
+	opposites = {
+		vampire_lahmian_visible
+		vampire_carstein_visible
+		vampire_blood_visible
+		vampire_strigoi_visible
+		vampire_necrach_visible
+		vampire_jade_visible
+	}
+	male_insult = INSULT_FIEND
+	female_insult = INSULT_FIEND
+	male_insult_adj = INSULT_BLOODSUCKING
+	female_insult_adj = INSULT_BLOODSUCKING
+}
+
+# Special chars (i don't know why bother with that kind of traits)
+# is there not enough regular traits to presonalize person?
+
+special_char_nefereta = {
+
+	monthly_character_piety = 5
+	fertility = -10.0
+	health = 100
+	immortal = yes
+	ai_zeal = 30
+	ai_honor = -50
+	ai_ambition = 30
+	ai_rationality = 100 
+	customizer = no
+}
+
+special_char_vashanesh = {
+
+	monthly_character_piety = 5
+	fertility = -10.0
+	health = 100
+	immortal = yes
+	ai_zeal = 30
+	ai_honor = -50
+	ai_ambition = 30
+	ai_rationality = 100 
+	customizer = no
+}
+
+special_char_abhorash = {
+
+	monthly_character_piety = 5
+	fertility = -10.0
+	health = 100
+	immortal = yes
+	ai_zeal = 30
+	ai_honor = -50
+	ai_ambition = 30
+	ai_rationality = 100 
+	customizer = no
+}
+
+special_char_ushoran = {
+
+	monthly_character_piety = 5
+	fertility = -10.0
+	health = 100
+	immortal = yes
+	ai_zeal = 30
+	ai_honor = -50
+	ai_ambition = 30
+	ai_rationality = 100 
+	customizer = no
+}
+
+special_char_wsoran = {
+
+	monthly_character_piety = 5
+	fertility = -10.0
+	health = 100
+	immortal = yes
+	ai_zeal = 30
+	ai_honor = -50
+	ai_ambition = 30
+	ai_rationality = 100 
+	customizer = no
+}
+
+special_char_harakhate = {
+
+	monthly_character_piety = 5
+	fertility = -10.0
+	health = 100
+	immortal = yes
+	ai_zeal = 30
+	ai_honor = -50
+	ai_ambition = 30
+	ai_rationality = 100 
+	customizer = no
+}
+
+special_char_maatmases = {
+
+	monthly_character_piety = 5
+	fertility = -10.0
+	health = 100
+	immortal = yes
+	ai_zeal = 30
+	ai_honor = -50
+	ai_ambition = 30
+	ai_rationality = 100 
+	customizer = no
+}
+
+special_char_red_duke = {
+
+	monthly_character_piety = 5
+	fertility = -10.0
+	health = 100
+	immortal = yes
+	cannot_marry = yes
+	ai_zeal = 30
+	ai_honor = -50
+	ai_ambition = 30
+	ai_rationality = -50 
+	customizer = no
+}
+
+special_char_nagash = {	
+	opposites = {
+			king_settra
+		}
+
+	monthly_character_piety = 5
+	fertility = -10.0
+	health = 100
+	immortal = yes
+	cannot_marry = yes
+	ai_zeal = 30
+	ai_honor = -50
+	ai_ambition = 30
+	ai_rationality = 50 
+	customizer = no
+}

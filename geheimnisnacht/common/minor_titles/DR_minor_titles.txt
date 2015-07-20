@@ -1,0 +1,44 @@
+title_sir_bretonnian = {
+	dignity = 0.25
+	grant_limit = 100
+	show_as_title = yes
+	revoke_allowed = no
+	
+	allowed_to_hold = {
+		OR = {
+			trait = bretonnian_knight
+			trait = grail_knight
+		}
+		is_female = no
+	 }
+	allowed_to_grant = {
+		always = no
+	 }
+	
+	gain_effect = { }
+	lose_effect = { }
+
+	message = no
+}
+title_lady_knight_bretonnian = {
+	dignity = 0.25
+	grant_limit = 100
+	show_as_title = yes
+	revoke_allowed = no
+	
+	allowed_to_hold = {
+		OR = {
+			trait = bretonnian_knight
+			trait = grail_knight
+		}
+		is_female = yes
+	 }
+	allowed_to_grant = {
+		always = no
+	 }
+	
+	gain_effect = { }
+	lose_effect = { }
+
+	message = no
+}

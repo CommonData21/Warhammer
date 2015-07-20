@@ -1,0 +1,17 @@
+# c_tor_saroir
+
+# County Title
+title = c_tor_saroir
+
+# Settlements
+max_settlements = 3
+
+b_tor_saroir = castle
+#b_cey_ornaith = city
+#b_clearwood = temple
+
+# Misc
+culture = avelorni
+religion = cadai
+
+#History

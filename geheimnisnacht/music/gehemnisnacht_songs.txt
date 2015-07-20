@@ -1,0 +1,103 @@
+
+song = {
+	name = "gehemnisnachtmaintitles.ogg"
+	
+	chance = {
+		factor = 2
+		}
+}
+
+
+
+song = {
+	name = "gehemnisnachtchaosone.ogg"
+	
+	chance = {
+		factor = 2		
+	}
+}
+
+#Diego's additions
+
+song = {
+	name = "atthegatesofbabylonaraby.ogg"
+	
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0 
+			NOT = {	religion_group = ormazd_gods_group }
+			NOT = {	culture_group = arabyan_group }
+		}	
+	}
+}
+
+song = {
+	name = "horustombkings.ogg"
+	
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0 
+			NOT = {	religion_group = nehekharan_gods_group }
+			NOT = {	culture_group = nehekharan_group }
+		}		
+	}
+}
+
+song = {
+	name = "kaiserwalzerempire.ogg"
+	
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0 
+			NOT = {	has_landed_title = e_the_empire }
+			NOT = { top_liege = { has_landed_title = e_the_empire } }
+		}		
+	}
+}
+
+song = {
+	name = "ominousrevelationsarabychaos.ogg"
+	
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0 
+			NOT = {	religion_group = ormazd_gods_group }
+			NOT = {	culture_group = arabyan_group }
+			NOT = {	religion_group = nehekharan_gods_group }
+			NOT = {	culture_group = nehekharan_group }
+			NOT = {	culture_group = lahmian_group }
+		}		
+	}
+}
+
+song = {
+	name = "sonsofavalonbretonnia.ogg"
+	
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0 
+			NOT = {	culture_group = bretonnian_group }
+			NOT = {	religion = grail }
+			NOT = {	religion = false_grail }
+			NOT = {	religion = asrai_cadai }
+			NOT = {	culture_group = asrai_group }
+		}		
+	}
+}
+song = {
+	name = "victoriarmpire2.ogg"
+	
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0 
+			NOT = {	has_landed_title = e_the_empire }
+			NOT = { top_liege = { has_landed_title = e_the_empire } }
+		}		
+	}
+}

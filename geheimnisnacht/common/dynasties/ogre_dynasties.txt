@@ -1,0 +1,631 @@
+###ÄNSI
+
+93000 = {  name = "Angry Belly" culture = ogre_main }
+93001 = {  name = "Blackrock" culture = ogre_main }
+93002 = {  name = "Beast Tooth" culture = ogre_main }
+93003 = {  name = "Fatblood" culture = ogre_main }
+93004 = {  name = "Boulderhead" culture = ogre_main }
+93005 = {  name = "Flesh Greeder" culture = ogre_main }
+93006 = {  name = "Coppermaw" culture = ogre_main }
+93007 = {  name = "Cracked Sky" culture = ogre_main }
+93008 = {  name = "Copper Belly" culture = ogre_main }
+93009 = {  name = "Black Tooth" culture = ogre_main }
+93010 = {  name = "Eyesplitter" culture = ogre_main }
+93011 = {  name = "Beastkin" culture = ogre_main }
+93012 = {  name = "Blademaw" culture = ogre_main }
+93013 = {  name = "Giantcrusher" culture = ogre_main }
+93014 = {  name = "Gaping Mouth" culture = ogre_main }
+93015 = {  name = "Beastman" culture = ogre_main }
+93016 = {  name = "Fire Eater" culture = ogre_main }
+93017 = {  name = "Feastgrinder" culture = ogre_main }
+93018 = {  name = "Gristle" culture = ogre_main }
+93019 = {  name = "Ironhoard" culture = ogre_main }
+93020 = {  name = "Meatfist" culture = ogre_main }
+93021 = {  name = "Gore Mountain" culture = ogre_main }
+93022 = {  name = "Ice Gut" culture = ogre_main }
+93023 = {  name = "Maul" culture = ogre_main }
+93024 = {  name = "Greatgut" culture = ogre_main }
+93025 = {  name = "Gore Pit" culture = ogre_main }
+93026 = {  name = "Loudbull" culture = ogre_main }
+93027 = {  name = "Goldslave" culture = ogre_main }
+93028 = {  name = "Goldgut" culture = ogre_main }
+93029 = {  name = "Mastergrinder" culture = ogre_main }
+93030 = {  name = "Mangrinder" culture = ogre_main }
+93031 = {  name = "Rockbreaker" culture = ogre_main }
+93032 = {  name = "Loose Tooth" culture = ogre_main }
+93033 = {  name = "Kinripper" culture = ogre_main }
+93034 = {  name = "Mouthcrusher" culture = ogre_main }
+93035 = {  name = "Slave Maker" culture = ogre_main }
+93036 = {  name = "Toothgobbler" culture = ogre_main }
+93037 = {  name = "Rockbiter" culture = ogre_main }
+93038 = {  name = "Slavegrinder" culture = ogre_main }
+93039 = {  name = "Troll Eater" culture = ogre_main }
+93040 = {  name = "Skullcruncher" culture = ogre_main }
+93041 = {  name = "Stonesplitter" culture = ogre_main }
+93042 = {  name = "Slavechomper" culture = ogre_main }
+93043 = {  name = "Treeclub" culture = ogre_main }
+93044 = {  name = "Treemaul" culture = ogre_main }
+93045 = {  name = "Toothbreaker" culture = ogre_main }
+93046 = {  name = "Thunderbelly" culture = ogre_main }
+93047 = {  name = "Toothcracker" culture = ogre_main }
+93048 = {  name = "Thunderbull" culture = ogre_main }
+93049 = {  name = "Beasteye" culture = ogre_main }
+93050 = {  name = "Bonebreaker" culture = ogre_main }
+93051 = {  name = "Gore Eater" culture = ogre_main }
+93052 = {  name = "Hammerfist" culture = ogre_main }
+93053 = {  name = "Ironspawn" culture = ogre_main }
+93054 = {  name = "Mawfeeder" culture = ogre_main }
+93055 = {  name = "Red Hand" culture = ogre_main }
+93056 = {  name = "Spawngorger" culture = ogre_main }
+93057 = {  name = "Blade Hills" culture = ogre_main }
+93058 = {  name = "Fatbrain" culture = ogre_main }
+93059 = {  name = "Firegut" culture = ogre_main }
+93060 = {  name = "Howling Belly" culture = ogre_main }
+93061 = {  name = "Mountainbreaker" culture = ogre_main }
+93062 = {  name = "Spawnmaster" culture = ogre_main }
+93063 = {  name = "Tuskmaw" culture = ogre_main }
+93064 = {  name = "Bloodeye" culture = ogre_main }
+93065 = {  name = "Fatgut" culture = ogre_main }
+93066 = {  name = "Gutgobbler" culture = ogre_main }
+93067 = {  name = "Ironblood" culture = ogre_main }
+93068 = {  name = "Mountainseeker" culture = ogre_main }
+93069 = {  name = "Stonebreaker" culture = ogre_main }
+93070 = {  name = "Angry Mouth" culture = ogre_main }
+93071 = {  name = "Angry Mountain" culture = ogre_main }
+93072 = {  name = "Blood Drinker" culture = ogre_main }
+93073 = {  name = "Badbone" culture = ogre_main }
+93074 = {  name = "Coppertooth" culture = ogre_main }
+93075 = {  name = "Badspawn" culture = ogre_main }
+93076 = {  name = "Angry Giant" culture = ogre_main }
+93077 = {  name = "Chompermouth" culture = ogre_main }
+93078 = {  name = "Badstone" culture = ogre_main }
+93079 = {  name = "Carrion Lords" culture = ogre_main }
+93080 = {  name = "Fire Mouth" culture = ogre_main }
+93081 = {  name = "Bloodfist" culture = ogre_main }
+93082 = {  name = "Bonegrinder" culture = ogre_main }
+93083 = {  name = "Fistsplitter" culture = ogre_main }
+93084 = {  name = "Bloodtooth" culture = ogre_main }
+93085 = {  name = "Bloodgruel" culture = ogre_main }
+93086 = {  name = "Goblin Eater" culture = ogre_main }
+93087 = {  name = "Giantgrinder" culture = ogre_main }
+93088 = {  name = "Gutmaster" culture = ogre_main }
+93089 = {  name = "Fistgrinder" culture = ogre_main }
+93090 = {  name = "Fistbreaker" culture = ogre_main }
+93091 = {  name = "Grogbelly" culture = ogre_main }
+93092 = {  name = "Ironskin" culture = ogre_main }
+93093 = {  name = "Mountainbiter" culture = ogre_main }
+93094 = {  name = "Gruelmaster" culture = ogre_main }
+93095 = {  name = "Ironcracker" culture = ogre_main }
+93096 = {  name = "Maweater" culture = ogre_main }
+93097 = {  name = "Gristlemouth" culture = ogre_main }
+93098 = {  name = "Grindermouth" culture = ogre_main }
+93099 = {  name = "Mountain Breaker" culture = ogre_main }
+93100 = {  name = "Mighty Fist" culture = ogre_main }
+93101 = {  name = "Goldspawn" culture = ogre_main }
+93102 = {  name = "Mawcrusher" culture = ogre_main }
+93103 = {  name = "Mawbiter" culture = ogre_main }
+93104 = {  name = "Rockhead" culture = ogre_main }
+93105 = {  name = "Stone Fist" culture = ogre_main }
+93106 = {  name = "Mawgrinder" culture = ogre_main }
+93107 = {  name = "Ship Eater" culture = ogre_main }
+93108 = {  name = "Stonegobbler" culture = ogre_main }
+93109 = {  name = "Oilgut" culture = ogre_main }
+93110 = {  name = "Slavegorger" culture = ogre_main }
+93111 = {  name = "Treehammer" culture = ogre_main }
+93112 = {  name = "Stonechomper" culture = ogre_main }
+93113 = {  name = "Mawmaster" culture = ogre_main }
+93114 = {  name = "Yhetee Eater" culture = ogre_main }
+93115 = {  name = "Wallcruncher" culture = ogre_main }
+93116 = {  name = "Wallbreaker" culture = ogre_main }
+93117 = {  name = "World Eater" culture = ogre_main }
+93118 = {  name = "Wallcracker" culture = ogre_main }
+93119 = {  name = "Bloodbrain" culture = ogre_main }
+93120 = {  name = "Bullchomper" culture = ogre_main }
+93121 = {  name = "Fatbiter" culture = ogre_main }
+93122 = {  name = "Ironfist" culture = ogre_main }
+93123 = {  name = "Maneater" culture = ogre_main }
+93124 = {  name = "Mountainlord" culture = ogre_main }
+93125 = {  name = "Skinbiter" culture = ogre_main }
+93126 = {  name = "Thug Eater" culture = ogre_main }
+93127 = {  name = "Bonecruncher" culture = ogre_main }
+93128 = {  name = "Bulleater" culture = ogre_main }
+93129 = {  name = "Goldeye" culture = ogre_main }
+93130 = {  name = "Ironmaw" culture = ogre_main }
+93131 = {  name = "Rock Breaker" culture = ogre_main }
+93132 = {  name = "Skinchomper" culture = ogre_main }
+93133 = {  name = "Wallgrinder" culture = ogre_main }
+93134 = {  name = "Bonesplitter" culture = ogre_main }
+93135 = {  name = "Gaping Maw" culture = ogre_main }
+93136 = {  name = "Goldskin" culture = ogre_main }
+93137 = {  name = "Ironstone" culture = ogre_main }
+93138 = {  name = "Rockgobbler" culture = ogre_main }
+93139 = {  name = "Titan Breaker" culture = ogre_main }
+93140 = {  name = "Black Belly" culture = ogre_main }
+93141 = {  name = "Beastbrain" culture = ogre_main }
+93142 = {  name = "Bonelord" culture = ogre_main }
+93143 = {  name = "Black Mouth" culture = ogre_main }
+93144 = {  name = "Beastbone" culture = ogre_main }
+93145 = {  name = "Blade Valley" culture = ogre_main }
+93146 = {  name = "Bone-Eater" culture = ogre_main }
+93147 = {  name = "Ear Eater" culture = ogre_main }
+93148 = {  name = "Bladefist" culture = ogre_main }
+93149 = {  name = "Dust Eater" culture = ogre_main }
+93150 = {  name = "Gold Eater" culture = ogre_main }
+93151 = {  name = "Boulderbelly" culture = ogre_main }
+93152 = {  name = "Eyeplucker" culture = ogre_main }
+93153 = {  name = "Goldmountain" culture = ogre_main }
+93154 = {  name = "Braingrinder" culture = ogre_main }
+93155 = {  name = "Boulderclub" culture = ogre_main }
+93156 = {  name = "Gorgermouth" culture = ogre_main }
+93157 = {  name = "Gore Hill" culture = ogre_main }
+93158 = {  name = "Bloodwall" culture = ogre_main }
+93159 = {  name = "Goldmaw" culture = ogre_main }
+93160 = {  name = "Goldgruel" culture = ogre_main }
+93161 = {  name = "Hoard Mountain" culture = ogre_main }
+93162 = {  name = "Manbreaker" culture = ogre_main }
+93163 = {  name = "Red Mountain" culture = ogre_main }
+93164 = {  name = "Gutgrinder" culture = ogre_main }
+93165 = {  name = "Kincrusher" culture = ogre_main }
+93166 = {  name = "Mountaingrinder" culture = ogre_main }
+93167 = {  name = "Hill Eater" culture = ogre_main }
+93168 = {  name = "Gutlord" culture = ogre_main }
+93169 = {  name = "Meatbutcher" culture = ogre_main }
+93170 = {  name = "Gruelgorger" culture = ogre_main }
+93171 = {  name = "Grog Gut" culture = ogre_main }
+93172 = {  name = "Mountaingorger" culture = ogre_main }
+93173 = {  name = "Mountaincracker" culture = ogre_main }
+93174 = {  name = "Skulleater" culture = ogre_main }
+93175 = {  name = "Mawsplitter" culture = ogre_main }
+93176 = {  name = "Mountainsplitter" culture = ogre_main }
+93177 = {  name = "Slave Eater" culture = ogre_main }
+93178 = {  name = "Toothcrusher" culture = ogre_main }
+93179 = {  name = "Sabreskin" culture = ogre_main }
+93180 = {  name = "Stonecrusher" culture = ogre_main }
+93181 = {  name = "Skinsplitter" culture = ogre_main }
+93182 = {  name = "Titan Eaters" culture = ogre_main }
+93183 = {  name = "Mouthcracker" culture = ogre_main }
+93184 = {  name = "Slaveseeker" culture = ogre_main }
+93185 = {  name = "Orc Eater" culture = ogre_main }
+93186 = {  name = "Spawnbiter" culture = ogre_main }
+93187 = {  name = "Warmaul" culture = ogre_main }
+93188 = {  name = "Widegut" culture = ogre_main }
+93189 = {  name = "Boneripper" culture = ogre_main }
+93190 = {  name = "Deadmaw" culture = ogre_main }
+93191 = {  name = "Firebelcher" culture = ogre_main }
+93192 = {  name = "Gore Belly" culture = ogre_main }
+93193 = {  name = "Meathook" culture = ogre_main }
+93194 = {  name = "Rockcrusher" culture = ogre_main }
+93195 = {  name = "Slave-Eater" culture = ogre_main }
+93196 = {  name = "Tusk" culture = ogre_main }
+93197 = {  name = "Beastfat" culture = ogre_main }
+93198 = {  name = "Deadwind" culture = ogre_main }
+93199 = {  name = "Greaseguts" culture = ogre_main }
+93200 = {  name = "Loudmaster" culture = ogre_main }
+93201 = {  name = "Mawgobbler" culture = ogre_main }
+93202 = {  name = "Slavebiter" culture = ogre_main }
+93203 = {  name = "Angry Bull" culture = ogre_main }
+93204 = {  name = "Coalbelly" culture = ogre_main }
+93205 = {  name = "Eyebiter" culture = ogre_main }
+93206 = {  name = "Gristleguts" culture = ogre_main }
+93207 = {  name = "Mangorger" culture = ogre_main }
+93208 = {  name = "Skullchomper" culture = ogre_main }
+93209 = {  name = "Slaveripper" culture = ogre_main }
+93210 = {  name = "Angry Maw" culture = ogre_main }
+93211 = {  name = "Bloodbone" culture = ogre_main }
+93212 = {  name = "Badgruel" culture = ogre_main }
+93213 = {  name = "Angry Fist" culture = ogre_main }
+93214 = {  name = "Blood Guzzler" culture = ogre_main }
+93215 = {  name = "Bonegobbler" culture = ogre_main }
+93216 = {  name = "Brainsplitter" culture = ogre_main }
+93217 = {  name = "Feastchomper" culture = ogre_main }
+93218 = {  name = "Bone Eater" culture = ogre_main }
+93219 = {  name = "Fatripper" culture = ogre_main }
+93220 = {  name = "Grease" culture = ogre_main }
+93221 = {  name = "Carrion Eater" culture = ogre_main }
+93222 = {  name = "Fire Belly" culture = ogre_main }
+93223 = {  name = "Gristlefist" culture = ogre_main }
+93224 = {  name = "Dead Mountain" culture = ogre_main }
+93225 = {  name = "Copper Gut" culture = ogre_main }
+93226 = {  name = "Goldwall" culture = ogre_main }
+93227 = {  name = "Bullgrinder" culture = ogre_main }
+93228 = {  name = "Brainplucker" culture = ogre_main }
+93229 = {  name = "Gristle Eater" culture = ogre_main }
+93230 = {  name = "Greatbelly" culture = ogre_main }
+93231 = {  name = "Irongut" culture = ogre_main }
+93232 = {  name = "Goldtooth" culture = ogre_main }
+93233 = {  name = "Goldskull" culture = ogre_main }
+93234 = {  name = "Ice Eater" culture = ogre_main }
+93235 = {  name = "Masterchomper" culture = ogre_main }
+93236 = {  name = "Rockcruncher" culture = ogre_main }
+93237 = {  name = "Ironchomper" culture = ogre_main }
+93238 = {  name = "Lifetaker" culture = ogre_main }
+93239 = {  name = "Ogrik" culture = ogre_main }
+93240 = {  name = "Hugegut" culture = ogre_main }
+93241 = {  name = "Hoard" culture = ogre_main }
+93242 = {  name = "Rockcracker" culture = ogre_main }
+93243 = {  name = "Rockbelly" culture = ogre_main }
+93244 = {  name = "Gruelgrinder" culture = ogre_main }
+93245 = {  name = "Mouthsplitter" culture = ogre_main }
+93246 = {  name = "Rockgorger" culture = ogre_main }
+93247 = {  name = "Stone Eater" culture = ogre_main }
+93248 = {  name = "Red Gore" culture = ogre_main }
+93249 = {  name = "Skullsplitter" culture = ogre_main }
+93250 = {  name = "Toothcruncher" culture = ogre_main }
+93251 = {  name = "Slavelord" culture = ogre_main }
+93252 = {  name = "Oilmouth" culture = ogre_main }
+93253 = {  name = "Rockgut" culture = ogre_main }
+93254 = {  name = "Stonelord" culture = ogre_main }
+93255 = {  name = "Ship Breaker" culture = ogre_main }
+93256 = {  name = "Stoneseeker" culture = ogre_main }
+93257 = {  name = "Thunderbone" culture = ogre_main }
+93258 = {  name = "Angry Bite" culture = ogre_main }
+93259 = {  name = "Coal Eater" culture = ogre_main }
+93260 = {  name = "Fatgorger" culture = ogre_main }
+93261 = {  name = "Goldbelly" culture = ogre_main }
+93262 = {  name = "Gruelchomper" culture = ogre_main }
+93263 = {  name = "Ironeater" culture = ogre_main }
+93264 = {  name = "Skullbiter" culture = ogre_main }
+93265 = {  name = "Stonebiter" culture = ogre_main }
+93266 = {  name = "Thundermaw" culture = ogre_main }
+93267 = {  name = "Bloodbull" culture = ogre_main }
+93268 = {  name = "Fatgrinder" culture = ogre_main }
+93269 = {  name = "Guteater" culture = ogre_main }
+93270 = {  name = "Ironbiter" culture = ogre_main }
+93271 = {  name = "Mountainmaster" culture = ogre_main }
+93272 = {  name = "Stoneblood" culture = ogre_main }
+93273 = {  name = "Ash Maw" culture = ogre_main }
+93274 = {  name = "Bloodskull" culture = ogre_main }
+93275 = {  name = "Feastgorger" culture = ogre_main }
+93276 = {  name = "Head Eater" culture = ogre_main }
+93277 = {  name = "Mighty Bull" culture = ogre_main }
+93278 = {  name = "Oilbelly" culture = ogre_main }
+93279 = {  name = "Stonehead" culture = ogre_main }
+93280 = {  name = "Badgut" culture = ogre_main }
+93281 = {  name = "Boneplucker" culture = ogre_main }
+93282 = {  name = "Blackstone" culture = ogre_main }
+93283 = {  name = "Beast Eater" culture = ogre_main }
+93284 = {  name = "Bonemaster" culture = ogre_main }
+93285 = {  name = "Badbrain" culture = ogre_main }
+93286 = {  name = "Deadbelly" culture = ogre_main }
+93287 = {  name = "Gianteater" culture = ogre_main }
+93288 = {  name = "Bonegorger" culture = ogre_main }
+93289 = {  name = "Giantchomper" culture = ogre_main }
+93290 = {  name = "Gutchomper" culture = ogre_main }
+93291 = {  name = "Copper Eater" culture = ogre_main }
+93292 = {  name = "Gobblermouth" culture = ogre_main }
+93293 = {  name = "Gutsplitter" culture = ogre_main }
+93294 = {  name = "Eyegrinder" culture = ogre_main }
+93295 = {  name = "Fistgorger" culture = ogre_main }
+93296 = {  name = "Gruelbiter" culture = ogre_main }
+93297 = {  name = "Death Gut" culture = ogre_main }
+93298 = {  name = "Dead Rift" culture = ogre_main }
+93299 = {  name = "Gutseeker" culture = ogre_main }
+93300 = {  name = "Gutgorger" culture = ogre_main }
+93301 = {  name = "Butcher" culture = ogre_main }
+93302 = {  name = "Gruelbeast" culture = ogre_main }
+93303 = {  name = "Gristlehook" culture = ogre_main }
+93304 = {  name = "Ironseeker" culture = ogre_main }
+93305 = {  name = "Mountain Beast" culture = ogre_main }
+93306 = {  name = "Skragglegut" culture = ogre_main }
+93307 = {  name = "Irongrinder" culture = ogre_main }
+93308 = {  name = "Mawcruncher" culture = ogre_main }
+93309 = {  name = "Rockseeker" culture = ogre_main }
+93310 = {  name = "Ironmouth" culture = ogre_main }
+93311 = {  name = "Irongut" culture = ogre_main }
+93312 = {  name = "Red Gut" culture = ogre_main }
+93313 = {  name = "Ironbreaker" culture = ogre_main }
+93314 = {  name = "Ice Belly" culture = ogre_main }
+93315 = {  name = "Rockmaster" culture = ogre_main }
+93316 = {  name = "Skullcracker" culture = ogre_main }
+93317 = {  name = "Ironbull" culture = ogre_main }
+93318 = {  name = "Silver Eater" culture = ogre_main }
+93319 = {  name = "Spawnseeker" culture = ogre_main }
+93320 = {  name = "Kinsplitter" culture = ogre_main }
+93321 = {  name = "Stonegorger" culture = ogre_main }
+93322 = {  name = "Sea Drinker" culture = ogre_main }
+93323 = {  name = "Skullcrusher" culture = ogre_main }
+93324 = {  name = "Toothripper" culture = ogre_main }
+93325 = {  name = "Sky Eater" culture = ogre_main }
+93326 = {  name = "Torch Eater" culture = ogre_main }
+93327 = {  name = "Wallchomper" culture = ogre_main }
+93328 = {  name = "Ash Eater" culture = ogre_main }
+93329 = {  name = "Beastspawn" culture = ogre_main }
+93330 = {  name = "Gaping Belly" culture = ogre_main }
+93331 = {  name = "Greasebelly" culture = ogre_main }
+93332 = {  name = "Hookmaw" culture = ogre_main }
+93333 = {  name = "Kingorger" culture = ogre_main }
+93334 = {  name = "Meateater" culture = ogre_main }
+93335 = {  name = "Thundermouth" culture = ogre_main }
+93336 = {  name = "Wallgorger" culture = ogre_main }
+93337 = {  name = "Boneseeker" culture = ogre_main }
+93338 = {  name = "Gaping Gut" culture = ogre_main }
+93339 = {  name = "Goldrock" culture = ogre_main }
+93340 = {  name = "Ironsplitter" culture = ogre_main }
+93341 = {  name = "Rockeater" culture = ogre_main }
+93342 = {  name = "Thundertooth" culture = ogre_main }
+93343 = {  name = "Black Maw" culture = ogre_main }
+93344 = {  name = "Braingobbler" culture = ogre_main }
+93345 = {  name = "Giantgorger" culture = ogre_main }
+93346 = {  name = "Irongobbler" culture = ogre_main }
+93347 = {  name = "Kinlord" culture = ogre_main }
+93348 = {  name = "Sabre Eater" culture = ogre_main }
+93349 = {  name = "Toothplucker" culture = ogre_main }
+93350 = {  name = "Blade Gut" culture = ogre_main }
+93351 = {  name = "Coal Belly" culture = ogre_main }
+93352 = {  name = "Beastskull" culture = ogre_main }
+93353 = {  name = "Bladespire" culture = ogre_main }
+93354 = {  name = "Bonebreaker" culture = ogre_main }
+93355 = {  name = "Beastmaster" culture = ogre_main }
+93356 = {  name = "Fatfeast" culture = ogre_main }
+93357 = {  name = "Gore Bringer" culture = ogre_main }
+93358 = {  name = "Brainripper" culture = ogre_main }
+93359 = {  name = "Bonebiter" culture = ogre_main }
+93360 = {  name = "Bloodspawn" culture = ogre_main }
+93361 = {  name = "Doomgut" culture = ogre_main }
+93362 = {  name = "Gorehook" culture = ogre_main }
+93363 = {  name = "Ironeater" culture = ogre_main }
+93364 = {  name = "Fatcrusher" culture = ogre_main }
+93365 = {  name = "Goldmaster" culture = ogre_main }
+93366 = {  name = "Hoardmaster" culture = ogre_main }
+93367 = {  name = "Fatlord" culture = ogre_main }
+93368 = {  name = "Fateater" culture = ogre_main }
+93369 = {  name = "Gutbreaker" culture = ogre_main }
+93370 = {  name = "Eyegobbler" culture = ogre_main }
+93371 = {  name = "Doombelly" culture = ogre_main }
+93372 = {  name = "Hoardgut" culture = ogre_main }
+93373 = {  name = "Hill Breaker" culture = ogre_main }
+93374 = {  name = "Manblood" culture = ogre_main }
+93375 = {  name = "Gutbiter" culture = ogre_main }
+93376 = {  name = "Gruelgobbler" culture = ogre_main }
+93377 = {  name = "Kinchomper" culture = ogre_main }
+93378 = {  name = "Mountaingobbler" culture = ogre_main }
+93379 = {  name = "Skullgrinder" culture = ogre_main }
+93380 = {  name = "Lazargh" culture = ogre_main }
+93381 = {  name = "Mawseeker" culture = ogre_main }
+93382 = {  name = "Silver Gut" culture = ogre_main }
+93383 = {  name = "Ironwall" culture = ogre_main }
+93384 = {  name = "Ironrock" culture = ogre_main }
+93385 = {  name = "Skullgorger" culture = ogre_main }
+93386 = {  name = "Kinseeker" culture = ogre_main }
+93387 = {  name = "Kinbreaker" culture = ogre_main }
+93388 = {  name = "Slave Master" culture = ogre_main }
+93389 = {  name = "Mawlord" culture = ogre_main }
+93390 = {  name = "Mawchomper" culture = ogre_main }
+93391 = {  name = "Tootheater" culture = ogre_main }
+93392 = {  name = "Skulltaker" culture = ogre_main }
+93393 = {  name = "Thundergut" culture = ogre_main }
+93394 = {  name = "Skingorger" culture = ogre_main }
+93395 = {  name = "Stone Breaker" culture = ogre_main }
+93396 = {  name = "Widemaw" culture = ogre_main }
+93397 = {  name = "Spawnbreaker" culture = ogre_main }
+93398 = {  name = "Black Blade" culture = ogre_main }
+93399 = {  name = "Bloodmouth" culture = ogre_main }
+93400 = {  name = "Chompertooth" culture = ogre_main }
+93401 = {  name = "Gutcrusher" culture = ogre_main }
+93402 = {  name = "Ironmaster" culture = ogre_main }
+93403 = {  name = "Mauler" culture = ogre_main }
+93404 = {  name = "Oil Drinker" culture = ogre_main }
+93405 = {  name = "Skragglebelly" culture = ogre_main }
+93406 = {  name = "Angry Brain" culture = ogre_main }
+93407 = {  name = "Coal Gut" culture = ogre_main }
+93408 = {  name = "Eye-Eater" culture = ogre_main }
+93409 = {  name = "Gristlegrinder" culture = ogre_main }
+93410 = {  name = "Mangobbler" culture = ogre_main }
+93411 = {  name = "Skullbreaker" culture = ogre_main }
+93412 = {  name = "Slaver" culture = ogre_main }
+93413 = {  name = "Badrock" culture = ogre_main }
+93414 = {  name = "Crushridge" culture = ogre_main }
+93415 = {  name = "Gore Gut" culture = ogre_main }
+93416 = {  name = "Gruelfat" culture = ogre_main }
+93417 = {  name = "Mawbeast" culture = ogre_main }
+93418 = {  name = "Skullseeker" culture = ogre_main }
+93419 = {  name = "Thunder Guts" culture = ogre_main }
+93420 = {  name = "Bonechomper" culture = ogre_main }
+93421 = {  name = "Angry Eye" culture = ogre_main }
+93422 = {  name = "Bloodmaw" culture = ogre_main }
+93423 = {  name = "Bonegut" culture = ogre_main }
+93424 = {  name = "Bullbreaker" culture = ogre_main }
+93425 = {  name = "Black Pit" culture = ogre_main }
+93426 = {  name = "Beastskin" culture = ogre_main }
+93427 = {  name = "Beastgut" culture = ogre_main }
+93428 = {  name = "Dead Valley" culture = ogre_main }
+93429 = {  name = "Bulgers" culture = ogre_main }
+93430 = {  name = "Braingorger" culture = ogre_main }
+93431 = {  name = "Fatmouth" culture = ogre_main }
+93432 = {  name = "Castle Breaker" culture = ogre_main }
+93433 = {  name = "Bullgorger" culture = ogre_main }
+93434 = {  name = "Feastseeker" culture = ogre_main }
+93435 = {  name = "Gristle Belly" culture = ogre_main }
+93436 = {  name = "Ironlord" culture = ogre_main }
+93437 = {  name = "Fistgobbler" culture = ogre_main }
+93438 = {  name = "Goldtooth" culture = ogre_main }
+93439 = {  name = "Iron Beast" culture = ogre_main }
+93440 = {  name = "Feastlord" culture = ogre_main }
+93441 = {  name = "Fatmaster" culture = ogre_main }
+93442 = {  name = "Ironkin" culture = ogre_main }
+93443 = {  name = "Irongorger" culture = ogre_main }
+93444 = {  name = "Eyegorger" culture = ogre_main }
+93445 = {  name = "Ice Spewer" culture = ogre_main }
+93446 = {  name = "Howling Maw" culture = ogre_main }
+93447 = {  name = "Mansplitter" culture = ogre_main }
+93448 = {  name = "Rockchomper" culture = ogre_main }
+93449 = {  name = "Spawngrinder" culture = ogre_main }
+93450 = {  name = "Man Eater" culture = ogre_main }
+93451 = {  name = "Mouthripper" culture = ogre_main }
+93452 = {  name = "Slave Taker" culture = ogre_main }
+93453 = {  name = "Manripper" culture = ogre_main }
+93454 = {  name = "Manbiter" culture = ogre_main }
+93455 = {  name = "Skrag" culture = ogre_main }
+93456 = {  name = "Mawbreaker" culture = ogre_main }
+93457 = {  name = "Manseeker" culture = ogre_main }
+93458 = {  name = "Stone-Eater" culture = ogre_main }
+93459 = {  name = "Mouthbreaker" culture = ogre_main }
+93460 = {  name = "Mountaincrusher" culture = ogre_main }
+93461 = {  name = "Thundermaster" culture = ogre_main }
+93462 = {  name = "Spawnchomper" culture = ogre_main }
+93463 = {  name = "Wallcrusher" culture = ogre_main }
+93464 = {  name = "Slavecrusher" culture = ogre_main }
+93465 = {  name = "World Breaker" culture = ogre_main }
+93466 = {  name = "Skingrinder" culture = ogre_main }
+93467 = {  name = "Stonespire" culture = ogre_main }
+93468 = {  name = "Badmaw" culture = ogre_main }
+93469 = {  name = "Braincruncher" culture = ogre_main }
+93470 = {  name = "Elf Eater" culture = ogre_main }
+93471 = {  name = "Flesh Eater" culture = ogre_main }
+93472 = {  name = "Loudkin" culture = ogre_main }
+93473 = {  name = "Mountainblood" culture = ogre_main }
+93474 = {  name = "Rocksplitter" culture = ogre_main }
+93475 = {  name = "Slavemaster" culture = ogre_main }
+93476 = {  name = "Ash Gut" culture = ogre_main }
+93477 = {  name = "Bloodskin" culture = ogre_main }
+93478 = {  name = "Feastgobbler" culture = ogre_main }
+93479 = {  name = "Head Buster" culture = ogre_main }
+93480 = {  name = "Meatmaw" culture = ogre_main }
+93481 = {  name = "Oil Eater" culture = ogre_main }
+93482 = {  name = "Stonegut" culture = ogre_main }
+93483 = {  name = "Blade Mountain" culture = ogre_main }
+93484 = {  name = "Fatbull" culture = ogre_main }
+93485 = {  name = "Firemaul" culture = ogre_main }
+93486 = {  name = "Howling Gut" culture = ogre_main }
+93487 = {  name = "Mountainchomper" culture = ogre_main }
+93488 = {  name = "Spawnripper" culture = ogre_main }
+93489 = {  name = "Wallbiter" culture = ogre_main }
+93490 = {  name = "Angry Gut" culture = ogre_main }
+93491 = {  name = "Badeye" culture = ogre_main }
+93492 = {  name = "Brainchomper" culture = ogre_main }
+93493 = {  name = "Beastmouth" culture = ogre_main }
+93494 = {  name = "Deadgut" culture = ogre_main }
+93495 = {  name = "Bloodgut" culture = ogre_main }
+93496 = {  name = "Bloodmaster" culture = ogre_main }
+93497 = {  name = "Bloodfeast" culture = ogre_main }
+93498 = {  name = "Fateye" culture = ogre_main }
+93499 = {  name = "Deadfist" culture = ogre_main }
+93500 = {  name = "Dead Hill" culture = ogre_main }
+93501 = {  name = "Giantbreaker" culture = ogre_main }
+93502 = {  name = "Dwarf Eater" culture = ogre_main }
+93503 = {  name = "Death Eater" culture = ogre_main }
+93504 = {  name = "Giantseeker" culture = ogre_main }
+93505 = {  name = "Gutripper" culture = ogre_main }
+93506 = {  name = "Loudgut" culture = ogre_main }
+93507 = {  name = "Ghost Eater" culture = ogre_main }
+93508 = {  name = "Gruel-Lord" culture = ogre_main }
+93509 = {  name = "Ironskull" culture = ogre_main }
+93510 = {  name = "Giantlord" culture = ogre_main }
+93511 = {  name = "Giantblood" culture = ogre_main }
+93512 = {  name = "Ironcrusher" culture = ogre_main }
+93513 = {  name = "Fistcracker" culture = ogre_main }
+93514 = {  name = "Feastmaster" culture = ogre_main }
+93515 = {  name = "Ironskin" culture = ogre_main }
+93516 = {  name = "Ironmountain" culture = ogre_main }
+93517 = {  name = "Mighty Mouth" culture = ogre_main }
+93518 = {  name = "Ironcruncher" culture = ogre_main }
+93519 = {  name = "Ironbone" culture = ogre_main }
+93520 = {  name = "Mawcracker" culture = ogre_main }
+93521 = {  name = "Rocklord" culture = ogre_main }
+93522 = {  name = "Stonebelly" culture = ogre_main }
+93523 = {  name = "Mawripper" culture = ogre_main }
+93524 = {  name = "Red Fist" culture = ogre_main }
+93525 = {  name = "Slavelord" culture = ogre_main }
+93526 = {  name = "Mountaincruncher" culture = ogre_main }
+93527 = {  name = "Mighty Maw" culture = ogre_main }
+93528 = {  name = "Spawngobbler" culture = ogre_main }
+93529 = {  name = "Rockgrinder" culture = ogre_main }
+93530 = {  name = "Rockblood" culture = ogre_main }
+93531 = {  name = "Wallgobbler" culture = ogre_main }
+93532 = {  name = "Spirestone" culture = ogre_main }
+93533 = {  name = "Spawneater" culture = ogre_main }
+93534 = {  name = "Stonecracker" culture = ogre_main }
+93535 = {  name = "Thunderkin" culture = ogre_main }
+93536 = {  name = "Slavegobbler" culture = ogre_main }
+93537 = {  name = "Tree Eater" culture = ogre_main }
+93538 = {  name = "Blade Hands" culture = ogre_main }
+93539 = {  name = "Crusherfist" culture = ogre_main }
+93540 = {  name = "Feasteater" culture = ogre_main }
+93541 = {  name = "Goldmouth" culture = ogre_main }
+93542 = {  name = "Gutbuster" culture = ogre_main }
+93543 = {  name = "Redstone" culture = ogre_main }
+93544 = {  name = "Skullplucker" culture = ogre_main }
+93545 = {  name = "Stonegullet" culture = ogre_main }
+93546 = {  name = "Black Gut" culture = ogre_main }
+93547 = {  name = "Braineater" culture = ogre_main }
+93548 = {  name = "Giantgobbler" culture = ogre_main }
+93549 = {  name = "Irongiant" culture = ogre_main }
+93550 = {  name = "Kingrinder" culture = ogre_main }
+93551 = {  name = "Roundgut" culture = ogre_main }
+93552 = {  name = "Toothgrinder" culture = ogre_main }
+93553 = {  name = "Bonecrusher" culture = ogre_main }
+93554 = {  name = "Bullgobbler" culture = ogre_main }
+93555 = {  name = "Goldfist" culture = ogre_main }
+93556 = {  name = "Ironmaw" culture = ogre_main }
+93557 = {  name = "Rock Eater" culture = ogre_main }
+93558 = {  name = "Skineater" culture = ogre_main }
+93559 = {  name = "Wallsplitter" culture = ogre_main }
+93560 = {  name = "Badfist" culture = ogre_main }
+93561 = {  name = "Blackheart" culture = ogre_main }
+93562 = {  name = "Crush" culture = ogre_main }
+93563 = {  name = "Bloodkin" culture = ogre_main }
+93564 = {  name = "Fatgobbler" culture = ogre_main }
+93565 = {  name = "Bouldergut" culture = ogre_main }
+93566 = {  name = "Brainbiter" culture = ogre_main }
+93567 = {  name = "Boulder Eater" culture = ogre_main }
+93568 = {  name = "Badbull" culture = ogre_main }
+93569 = {  name = "Fatfist" culture = ogre_main }
+93570 = {  name = "Fatchomper" culture = ogre_main }
+93571 = {  name = "Badtooth" culture = ogre_main }
+93572 = {  name = "Fatseeker" culture = ogre_main }
+93573 = {  name = "Fatkin" culture = ogre_main }
+93574 = {  name = "Gore Plain" culture = ogre_main }
+93575 = {  name = "Eyeripper" culture = ogre_main }
+93576 = {  name = "Eyechomper" culture = ogre_main }
+93577 = {  name = "Goldhoard" culture = ogre_main }
+93578 = {  name = "Hoardgrin" culture = ogre_main }
+93579 = {  name = "Mancrusher" culture = ogre_main }
+93580 = {  name = "Goldstone" culture = ogre_main }
+93581 = {  name = "Gruelseeker" culture = ogre_main }
+93582 = {  name = "Kingobbler" culture = ogre_main }
+93583 = {  name = "Goldgut" culture = ogre_main }
+93584 = {  name = "Giantmaster" culture = ogre_main }
+93585 = {  name = "Manchomper" culture = ogre_main }
+93586 = {  name = "Loudmouth" culture = ogre_main }
+93587 = {  name = "Fisteater" culture = ogre_main }
+93588 = {  name = "Kineater" culture = ogre_main }
+93589 = {  name = "Irontooth" culture = ogre_main }
+93590 = {  name = "Mountaineater" culture = ogre_main }
+93591 = {  name = "Skullgobbler" culture = ogre_main }
+93592 = {  name = "Thundermountain" culture = ogre_main }
+93593 = {  name = "Mighty Gut" culture = ogre_main }
+93594 = {  name = "Silver Belly" culture = ogre_main }
+93595 = {  name = "Stonegrinder" culture = ogre_main }
+93596 = {  name = "Red Boulder" culture = ogre_main }
+93597 = {  name = "Skinripper" culture = ogre_main }
+93598 = {  name = "Thug" culture = ogre_main }
+93599 = {  name = "Skinplucker" culture = ogre_main }
+93600 = {  name = "Spawncrusher" culture = ogre_main }
+93601 = {  name = "Skingobbler" culture = ogre_main }
+93602 = {  name = "Stonesplinter" culture = ogre_main }
+93603 = {  name = "Swamp Eater" culture = ogre_main }
+93604 = {  name = "Thunderfist" culture = ogre_main }
+93605 = {  name = "Walleater" culture = ogre_main }
+93606 = {  name = "Stonecruncher" culture = ogre_main }
+93607 = {  name = "Wide Mouth" culture = ogre_main }
+93608 = {  name = "Bonecracker" culture = ogre_main }
+93609 = {  name = "Fatbone" culture = ogre_main }
+93610 = {  name = "Giantfat" culture = ogre_main }
+93611 = {  name = "Gristlegore" culture = ogre_main }
+93612 = {  name = "Ironbelly" culture = ogre_main }
+93613 = {  name = "Loudfeast" culture = ogre_main }
+93614 = {  name = "Spawnlord" culture = ogre_main }
+93615 = {  name = "Toothgorger" culture = ogre_main }
+93616 = {  name = "Badmouth" culture = ogre_main }
+93617 = {  name = "Crushfist" culture = ogre_main }
+93618 = {  name = "Gore Fist" culture = ogre_main }
+93619 = {  name = "Grueleater" culture = ogre_main }
+93620 = {  name = "Maw" culture = ogre_main }
+93621 = {  name = "Skullripper" culture = ogre_main }
+93622 = {  name = "Thunder Eater" culture = ogre_main }
+93623 = {  name = "Beastfist" culture = ogre_main }
+93624 = {  name = "Death Belly" culture = ogre_main }
+93625 = {  name = "Greasetooth" culture = ogre_main }
+93626 = {  name = "Loudmaw" culture = ogre_main }
+93627 = {  name = "Mawgorger" culture = ogre_main }
+93628 = {  name = "Slavebreaker" culture = ogre_main }

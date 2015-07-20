@@ -1,0 +1,16 @@
+# c_zeno
+
+# County Title
+title = c_zeno
+
+# Settlements
+max_settlements = 2
+
+b_iqus = tribal
+#b_neosep = city
+
+# Misc
+culture = lizardman_lost
+religion = old_ones
+
+#History

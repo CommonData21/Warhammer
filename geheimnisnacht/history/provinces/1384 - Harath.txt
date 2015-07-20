@@ -1,0 +1,16 @@
+# c_harath
+
+# County Title
+title = c_harath
+
+# Settlements
+max_settlements = 2
+
+b_harath = tribal
+#b_morgarth = city
+
+# Misc
+culture = autarri
+religion = anath_raema
+
+#History

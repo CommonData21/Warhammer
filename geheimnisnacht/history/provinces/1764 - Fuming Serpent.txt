@@ -1,0 +1,17 @@
+# c_fuming_serpent
+
+# County Title
+title = c_fuming_serpent
+
+# Settlements
+max_settlements = 3
+
+b_lical = tribal
+#b_poma = city
+#b_nalyaotlcae = temple
+
+# Misc
+culture = lizardman
+religion = old_ones
+terrain = jungle
+#History

@@ -1,0 +1,26 @@
+# 2 Songs exclusively for the Abrahamic Religions
+
+song = {
+	name = "andthelordsaid.ogg"
+	
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0 
+			NOT = {	trait = creature_elf }
+		}		
+	}
+}
+
+song = {
+	name = "goforthoutofthycountry.ogg"
+	
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			NOT = {	trait = creature_elf }
+		}		
+	}
+}
+

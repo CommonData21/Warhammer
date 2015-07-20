@@ -1,0 +1,17 @@
+# c_mirelen
+
+# County Title
+title = c_mirelen
+
+# Settlements
+max_settlements = 3
+
+b_mirelen = castle
+#b_tiranica = city
+#b_evermoon = temple
+
+# Misc
+culture = nagarythi
+religion = cadai
+
+#History

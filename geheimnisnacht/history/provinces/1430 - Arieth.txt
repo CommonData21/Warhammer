@@ -1,0 +1,19 @@
+# c_arieth
+
+# County Title
+title = c_arieth
+
+# Settlements
+max_settlements = 3
+
+b_arieth = castle
+b_turnos = city
+b_klouth = city
+
+# Misc
+culture = karondi
+religion = cytharai
+
+#History
+
+1.1.2010 = { trade_post = b_cethlan }

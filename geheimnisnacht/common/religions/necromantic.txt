@@ -1,0 +1,61 @@
+necromantic_group = {
+	has_coa_on_barony_only = yes
+	graphical_culture = westerngfx
+	playable = yes
+
+	vampiric = {
+		graphical_culture = westerngfx
+
+		icon = 15
+		color = { 0.6 0.1 0.1 }
+		
+		high_god_name = GOD_THE_BLOOD
+		
+		god_names = {
+			GOD_THE_BLOOD GOD_WSORAN GOD_ABHORASH GOD_USHORAN GOD_VASHANESH
+		}
+		
+		evil_god_names = {
+			GOD_THE_GODS GOD_THE_DARK_GODS
+		}
+		
+		crusade_name = "HOLY_WAR"
+		scripture_name = THE_BLOOD
+		priest_title = ACOLYTE
+		
+		priests_can_marry = yes
+		allow_rivermovement = no
+		female_temple_holders = yes
+		max_consorts = 3
+		feminist = yes
+		can_hold_temples = yes
+	}
+
+	nagashi = {
+		graphical_culture = indiangfx
+
+		icon = 44
+		color = { 0.1 0.1 0.1 }
+		
+		high_god_name = GOD_NAGASH
+		
+		god_names = {
+			GOD_NAGASH GOD_NEFERATA 
+		}
+		
+		evil_god_names = {
+			GOD_THE_GODS GOD_THE_DARK_GODS
+		}
+		
+		crusade_name = "HOLY_WAR"
+		scripture_name = THE_LIBER_MORTIS
+		priest_title = ACOLYTE
+		
+		priests_can_marry = yes
+		allow_rivermovement = no
+		female_temple_holders = yes
+		max_consorts = 3
+		feminist = yes
+		can_hold_temples = yes
+	}
+}

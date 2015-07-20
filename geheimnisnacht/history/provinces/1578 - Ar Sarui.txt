@@ -1,0 +1,17 @@
+# c_ar_sarui
+
+# County Title
+title = c_ar_sarui
+
+# Settlements
+max_settlements = 3
+
+b_ar_sarui = castle
+#b_stone_of_eclesion = city
+#b_oaths_end = temple
+
+# Misc
+culture = nagarythi
+religion = cadai
+
+#History

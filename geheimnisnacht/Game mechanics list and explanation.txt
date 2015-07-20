@@ -1,0 +1,75 @@
+Game mechanics list
+
+	What is this?
+		Well, the meaning of this is to inform both those who are playing the mod but also the developers behind it about the HUGE amount of game mechanics that exists in this mod. If we don't know what we are developing then we will not be able to create a mod that makes sense. We don't want to end up with 5 different ways to learns magic and then no other event chains were you can learn any other profession or skill after all!
+	
+	What should be in here?
+		- Nearly all decisions that end up in something significant, a decision that trades gold for piety   should not be here
+		- Most event chains that are not purely flavour and which does not change the characters life significantly. These event chains should also be common and appear often for the characters within that scope
+		- most significant traits which may lead into something larger
+		- significant game mechanics which you won't understand immediately
+		- no character history as long as it is not shown through events or decisions
+		- no title history or province info either
+		- nothing that already exists in vanilla Crusader Kings II
+		- NO FLAVOR EVENTS HERE!!!
+	
+	This is meant to be used by everyone so if you want to add something go ahead!
+	
+	layout:
+		everything is divided in different categories depending on whether it is for a certain race or culture and there may be subcategories, f.ex there may be a bretonnian subcategory under human. If you want to add a new category just add one.
+		To add something begin with writing <name_of_thing_added> = { under the category that is should be in. Then write 1 or two sentences explaining what it is about. f.ex
+			"This allows you to get a magical staff which you can use in battle."
+		If it is a more significant game mechanic it may be advisable to use even more sentences. I personally recommend only writing down your own added game mechanics as you are probably the one who knows what you have done best. Everything should be written in the scope which the "mechanic" originates from. F.ex if you join a chaos cult as a human then this should still be written under the "human" category.
+		Don't forget to write who the author is!
+		If it is something which can be added inot other mechanics f.ex the duel engine so should some way of activating it be added.f.ex the name of the event which you can then trigger.
+		Also write the condition for it to activate. If it is an event chain, describe the conditions for the first event.
+		
+LIST = {
+
+	all = {
+		
+		magic = {
+		
+		
+	human = {
+	
+	vampire = {
+		
+		lahmian = {
+		
+		sylvanian = {
+	
+	elves = {
+		
+		dark elves = {
+		
+		wood elves = {
+		
+		high elves = {
+	
+	dwarfen = {
+	
+		norse dwarf = {
+		
+		"main" dwarf = {
+			
+			dwarfen masonry = {
+				Allows you to learn masonry through a large number of events taking you all the way from a beginner to a master mason! It is activated through a decision.
+				Author = StoneWolf
+	
+	lizardmen = {
+	
+	beastmen = {
+	
+	chaos dwarf = {
+	
+	orc = {
+	
+	goblin = {
+	
+	all other chaos related = {
+	
+		demons = {
+	
+	
+	

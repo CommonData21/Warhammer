@@ -1,0 +1,16 @@
+# c_matlal
+
+# County Title
+title = c_matlal
+
+# Settlements
+max_settlements = 2
+
+b_matlal = tribal
+#b_tlanextli = city
+
+# Misc
+culture = lizardman
+religion = old_ones
+terrain = jungle
+#History

@@ -1,0 +1,82 @@
+bookmark =
+{
+	name = "BM_FATE_OF_ENGLAND"
+	desc = "BM_VAMPIRE_DESC"
+	date = 2010.7.1
+	
+	character = 350000 #Graf Vlad von Carstein
+	character = 600000 #Empress Magritta van der Maacht
+	character = 700000 #Empress Ottilia Untermensch
+	character = 900000 #Emperor Siegfried Holzkrug
+	character = 400000 #Emperor Mannfred Todbringer
+}
+
+bookmark =
+{
+	name = "BM_RISE_OF_THE_HANSA"
+	desc = "BM_CHAOS_DESC"
+	date = 2010.7.1
+	
+	character = 1550000 #Tzarina Tetyana Gospodar
+}
+
+bookmark =
+{
+	name = "BM_100_YEARS_WAR"
+	desc = "BM_ANCIENTS_DESC"
+	date = 2010.7.1
+	
+	character = 95001 #Bel-Hathor the Mage
+	character = 95010 #Finubar the Seafarer
+	character = 90000 #Malekith the Witch King
+	character = 90300 #Morathi the Hag
+}
+
+#bookmark =
+#{
+#	name = "BM_WINTER_WAR"
+#	desc = "BM_WINTER_WAR_DESC"
+#	date = 2132.1.1
+#}
+#
+#bookmark =
+#{
+#	name = "BM_GREAT_WAR_AGAINST_CHAOS"
+#	desc = "BM_GREAT_WAR_AGAINST_CHAOS_DESC"
+#	date = 2301.9.15
+#}
+#
+#bookmark =
+#{
+#	name = "BM_MAGNUS_THE_PIOUS"
+#	desc = "BM_MAGNUS_THE_PIOUS_DESC"
+#	date = 2304.12.5
+#	
+#	character = 950027 #Emperor Magnus von Bildhofen
+#}
+#
+#bookmark =
+#{
+#	name = "BM_NORTHERN_MERCANTILE_SOCIETY"
+#	desc = "BM_NORTHERN_MERCANTILE_SOCIETY_DESC"
+#	date = 2462.5.22
+#	
+#	character = 800087 #Jens-Peter of the Society
+#	character = 600150 #Maarten of Marienburg
+#}
+#
+#bookmark =
+#{
+#	name = "BM_STORM_OF_CHAOS"
+#	desc = "BM_STORM_OF_CHAOS_DESC"
+#	date = 2521.4.9
+#	
+#	character = 900043 #Emperor Karl-Franz Holswig-Schleistein
+#}
+#
+#bookmark =
+#{
+#	name = "BM_THE_END"
+#	desc = "BM_THE_END_DESC"
+#	date = 2610.7.1
+#}

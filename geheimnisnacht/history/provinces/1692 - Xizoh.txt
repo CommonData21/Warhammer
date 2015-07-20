@@ -1,0 +1,16 @@
+# c_xizoh
+
+# County Title
+title = c_xizoh
+
+# Settlements
+max_settlements = 2
+
+b_xizoh = tribal
+#b_coeatltotlteotl = city
+
+# Misc
+culture = lizardman
+religion = old_ones
+terrain = jungle
+#History

@@ -1,0 +1,53 @@
+# namespace = waaagh
+
+# character_event = {
+	# id = waaagh.0
+	# title = SPELLCASTING
+	# desc = darkmagic0 #The spell has expired and the troops and flag are removed
+	# picture = "GFX_evt_miscast"
+	# hide_window = yes
+	
+	# is_triggered_only = yes
+	
+	# option = {
+	# name = OK
+	# clr_character_flag = cast_gaze_of_gork
+	# disband_event_forces = gaze_of_gork_troops
+	# }
+	
+	# }
+
+	
+# character_event = {
+	# id = waaagh.1
+	# title = SPELLCASTING
+	# desc = darkmagic0 #The spell has expired and the troops and flag are removed
+	# picture = "GFX_evt_miscast"
+	# hide_window = yes
+	
+	# is_triggered_only = yes
+	
+	# option = {
+	# name = OK
+	# clr_character_flag = cast_foot_of_gork
+	# disband_event_forces = foot_of_gork_troops
+	# }
+	
+	# }
+	
+# character_event = {
+	# id = waaagh.2
+	# title = SPELLCASTING
+	# desc = darkmagic0 #The spell has expired and the troops and flag are removed
+	# picture = "GFX_evt_miscast"
+	# hide_window = yes
+	
+	# is_triggered_only = yes
+	
+	# option = {
+	# name = OK
+	# clr_character_flag = cast_mork_wants_ya
+	# disband_event_forces = mork_wants_ya_troops
+	# }
+	
+	# }

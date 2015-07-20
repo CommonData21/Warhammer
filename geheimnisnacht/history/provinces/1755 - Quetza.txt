@@ -1,0 +1,17 @@
+# c_quetza
+
+# County Title
+title = c_quetza
+
+# Settlements
+max_settlements = 3
+
+b_quetza = tribal
+#b_cuito = city
+#b_bahii = temple
+
+# Misc
+culture = lizardman
+religion = old_ones
+terrain = jungle
+#History

@@ -1,0 +1,510 @@
+targetted_decisions = {
+	help_colony = {
+		ai_target_filter = court	#active only for players
+		
+		from_potential = {
+			is_ruler = yes
+			higher_tier_than = COUNT
+			ai = no
+			trait = creature_elf
+			trait = interventionist_elf
+		}
+		potential = {
+			trait = creature_elf
+			religion_group = cadai_group
+			NOT = { capital_scope = { empire = { title = e_ulthuan } } }	
+			NOT = { any_consort = { character = FROM } }
+		}
+		allow = {
+			ROOT = { war = yes 
+				any_war = { OR = { defender = { NOT = { trait = creature_elf
+									religion_group = cadai_group } } 
+ 						attacker = { NOT = { trait = creature_elf 
+									religion_group = cadai_group } } #Ulthuan will never answer to help against other Asur
+						} 
+					}
+				}
+		}
+		effect = {
+			ROOT = { character_event = { id = asur.45 } }
+			FROM = {  join_defender_wars = ROOT
+				join_attacker_wars = ROOT }
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	asur_debate_decision = {
+		filter = realm
+		ai_target_filter = realm
+	
+		from_potential = {
+			age = 16
+			NOT = { is_liege_of = ROOT }	#Too easy
+			NOT = { trait = incapable }
+			is_ruler = yes
+			OR = { trait = isolationist_elf
+				trait = interventionist_elf }
+			prisoner = no
+			OR = {
+				ai = no
+				higher_tier_than = COUNT
+			}
+		}
+		
+		potential = {
+			age = 16
+			NOT = { character = FROM }
+			NOT = { trait = incapable }
+			prisoner = no
+			OR = { trait = isolationist_elf
+				trait = interventionist_elf }
+			
+			OR = {
+				AND = { FROM = { trait = isolationist_elf }
+					trait = interventionist_elf }
+				AND = { FROM = { trait = interventionist_elf }
+					trait = isolationist_elf }
+				}
+		}
+		
+	allow = {
+		FROM = { NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_fled_debate } } }
+		FROM = { prestige = 50
+			piety = 10 }
+				custom_tooltip = {
+				text = debate_tooltip_fought_before
+				hidden_tooltip = {
+					NOT = { has_opinion_modifier = { who = FROM modifier = opinion_fought_debate } }
+					FROM = { NOT = { has_character_modifier = recent_debate_timer } }
+					FROM= { NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_fought_debate } } }
+					}
+				}
+			hidden_tooltip = {
+				hidden_tooltip = {
+					ROOT = { NOT = { has_character_flag = do_not_disturb }
+						NOT = { war = yes }
+						}
+					NOT = { has_character_flag = do_not_disturb }
+					NOT = { war = yes }
+					}
+			}
+			custom_tooltip = {
+				text = debate_tooltip_recent_debate
+				hidden_tooltip = {
+					FROM = { NOT = { has_character_modifier = recent_debate_victory } }
+					NOT = { has_character_modifier = recent_debate_timer }
+					}
+				}
+	}
+	
+	effect = {
+			FROM = {
+				add_character_modifier = {
+					modifier = recent_debate_timer
+					duration = 365
+					hidden = yes
+					}
+				}
+			hidden_tooltip = {
+					character_event = { id = asurdebate.11000 }
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_character_modifier = declined_prestige_debate_timer
+			}
+			modifier = {
+				factor = 0.5
+			}
+			#the Opponent's traits
+			modifier = {
+				factor = 0.75
+				trait = quick
+			}
+			modifier = {
+				factor = 0.75
+				trait = bright
+			}
+			modifier = {
+				factor = 0.75
+				trait = brilliant
+			}
+			modifier = {
+				factor = 0.75
+				trait = genius
+			}
+			modifier = {
+				factor = 0.75
+				trait = gregarious
+			}
+			modifier = {
+				factor = 0.75
+				trait = patient
+			}
+			modifier = {
+				factor = 0.75
+				diplomacy = 20
+			}
+			modifier = {
+				factor = 1.5
+				trait = shy
+			}
+			modifier = {
+				factor = 1.5
+				trait = wroth
+			}
+			modifier = {
+				factor = 1.5
+				trait = slow
+			}
+			modifier = {
+				factor = 2
+				trait = imbecile
+			}
+			modifier = {
+				factor = 1.25
+				trait = isolationist_elf
+			}
+
+			#the Challengers traits
+			modifier = {
+				factor = 1.5
+				FROM = { trait = quick }
+			}
+			modifier = {
+				factor = 1.5
+				FROM = { trait = bright }
+			}
+			modifier = {
+				factor = 1.5
+				FROM = { trait = brilliant }
+			}
+			modifier = {
+				factor = 1.5
+				FROM = { trait = genius }
+			}
+			modifier = {
+				factor = 1.5
+				FROM = { trait = patient }
+			}
+			modifier = {
+				factor = 1.5
+				FROM = { trait = gregarious }
+			}
+			modifier = {
+				factor = 1.5
+				FROM = { diplomacy = 20 }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { trait = shy }
+			}
+			modifier = {
+				factor = 0.85
+				FROM = { religion = cult_of_pleasure }
+			}
+			modifier = {
+				factor = 1.5
+				FROM = { NOT = { religion = ROOT } }
+			}
+			modifier = {
+				factor = 4
+				FROM = { NOT = { opinion = { who = ROOT
+						 value = -100 } } }
+				}
+			modifier = {
+				factor = 2
+				FROM = { NOT = { opinion = { who = ROOT
+						 value = -80 } } }
+				}
+			modifier = {
+				factor = 1.5
+				FROM = { NOT = { opinion = { who = ROOT
+						 value = -60 } } }
+				}
+			modifier = {
+				factor = 2
+				FROM = { NOT = { opinion = { who = ROOT
+						 value = -40 } } }
+				}
+			modifier = {
+				factor = 1.5
+				FROM = { NOT = { opinion = { who = ROOT
+						 value = -20 } } }
+				}
+			modifier = {
+				factor = 1.5
+				FROM = { NOT = { opinion = { who = ROOT
+						 value = 0 } } }
+				}
+			modifier = {
+				factor = 0.75
+				FROM = { opinion = { who = ROOT
+						 value = 20 }
+					}
+				}
+			modifier = {
+				factor = 0.5
+				FROM = { opinion = { who = ROOT
+						value = 40 }
+					}
+				}
+			modifier = {
+				factor = 0.25
+				FROM = { opinion = { who = ROOT
+						value = 60 }
+					}
+				}
+			modifier = {
+				factor = 0.25
+				FROM = { opinion = { who = ROOT
+						value = 80 }
+					}
+				}
+			modifier = {
+				factor = 0.1
+				FROM = { opinion = { who = ROOT
+						value = 100 }
+					}
+				}
+
+		} #closesaiwilldo
+	} #closedecision
+
+	send_asur_apprentice = {
+		filter = court
+		ai_target_filter = court
+		from_potential = { 
+			religion_group = cadai_group
+			NOT = { religion = asrai_cadai }
+			trait = creature_elf 
+			higher_tier_than = BARON
+		}
+		potential = {
+				religion_group = cadai_group
+				prisoner = no
+				trait = creature_elf
+				age = 6
+				NOT = { religion = asrai_cadai }
+				NOT = { trait = asur_mage }
+				NOT = { trait = mage_apprentice }
+				NOT = { trait = incapable }
+		}
+		
+		allow = {
+				c_hoeth = { holder_scope = { religion_group = cadai_group
+								top_liege = { has_landed_title = e_ulthuan } } }
+				e_ulthuan = { holder_scope = { religion_group = cadai_group } }
+			is_landed = no
+			OR = { AND = { NOT = { age = 12 }
+					FROM = { wealth = 450
+						 capital_scope = { empire = { title = e_ulthuan } } } } 
+				AND = { age = 12
+					FROM = { wealth = 750 }
+						 capital_scope = { empire = { title = e_ulthuan } } } 
+				AND = { NOT = { age = 12 }
+					FROM = { wealth = 850
+						NOT = { capital_scope = { empire = { title = e_ulthuan } } } } } 
+				AND = { age = 12
+					FROM = { wealth = 1250 }
+						NOT = { capital_scope = { empire = { title = e_ulthuan } } } } 
+				} 
+		}
+		
+		effect = {
+			if = { limit = { age = 12
+					FROM = { capital_scope = { empire = { title = e_ulthuan } } } } 
+				FROM = { wealth = -750 } } 
+			if = { limit = { NOT = { age = 12 }
+					FROM = { capital_scope = { empire = { title = e_ulthuan } } } } 
+				FROM = { wealth = -450 } } 
+			if = { limit = { age = 12
+					FROM = { NOT = { capital_scope = { empire = { title = e_ulthuan } } } } } 
+				FROM = { wealth = -1250 } } 
+			if = { limit = { NOT = { age = 12 }
+					FROM = { NOT = { capital_scope = { empire = { title = e_ulthuan } } } } } 
+				FROM = { wealth = -850 } } 
+				hidden_tooltip = { 
+						if = { limit = { FROM = { trait = creature_elf
+									is_female = no } 
+									e_naggaroth = { holder_scope  = { trait = malekith } } } 
+								e_naggaroth = { holder_scope  = { opinion = { modifier = opinion_sorcerous_rival
+														who = FROM } } }
+							} 
+						} 
+			character_event = { id = highelfmagic.2 } 
+		}
+		
+		revoke_allowed = { always = yes }
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { dynasty = FROM }
+			}
+			modifier = {
+				factor = 0
+				NOT = { father = { character = FROM } }
+				NOT = { mother = { character = FROM } }
+			}
+			modifier = {
+				factor = 50
+				OR = { father = { character = FROM }
+					mother = { character = FROM } }
+			}
+			modifier = {
+				factor = 1.35
+				trait = quick
+			}
+			modifier = {
+				factor = 1.25
+				trait = bright
+			}
+			modifier = {
+				factor = 1.45
+				trait = smart
+			}
+			modifier = {
+				factor = 1.5
+				trait = quick
+			}
+			modifier = {
+				factor = 1.75
+				trait = brilliant
+			}
+			modifier = {
+				factor = 1.95
+				trait = genius
+			}
+			modifier = {
+				factor = 0.85
+				trait = dim
+			}
+			modifier = {
+				factor = 0.75
+				trait = dumb
+			}
+			modifier = {
+				factor = 0.65
+				trait = slow
+			}
+			modifier = {
+				factor = 0.5
+				trait = idiot
+			}
+			modifier = {
+				factor = 0.45
+				trait = imbecile
+			}
+			modifier = {
+				factor = 1.25
+				trait = gregarious
+			}
+			modifier = {
+				factor = 1.25
+				trait = ambitious
+			}
+			modifier = {
+				factor = 1.5
+				trait = diligent
+			}
+			modifier = {
+				factor = 1.15
+				trait = patient
+			}
+			modifier = {
+				factor = 0.75
+				trait = slothful
+			}
+			modifier = {
+				factor = 0.001
+				age = 16
+			}
+			modifier = {
+				factor = 0
+				age = 16 
+				NOT = { trait = magic_potential_1 }
+				NOT = { trait = magic_potential_2 }
+				NOT = { trait = magic_potential_3 }
+				NOT = { trait = magic_potential_4 }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { NOT = { religion = ROOT } }
+			}
+			modifier = {
+				factor = 0.25
+				FROM = { NOT = { opinion = { who = ROOT
+						 value = -100 } } }
+				}
+			modifier = {
+				factor = 0.75
+				FROM = { NOT = { opinion = { who = ROOT
+						 value = -80 } } }
+				}
+			modifier = {
+				factor = 0.75
+				FROM = { NOT = { opinion = { who = ROOT
+						 value = -60 } } }
+				}
+			modifier = {
+				factor = 0.75
+				FROM = { NOT = { opinion = { who = ROOT
+						 value = -40 } } }
+				}
+			modifier = {
+				factor = 0.75
+				FROM = { NOT = { opinion = { who = ROOT
+						 value = -20 } } }
+				}
+			modifier = {
+				factor = 0.75
+				FROM = { NOT = { opinion = { who = ROOT
+						 value = 0 } } }
+				}
+			modifier = {
+				factor = 1.25
+				FROM = { opinion = { who = ROOT
+						 value = 20 }
+					}
+				}
+			modifier = {
+				factor = 1.25
+				FROM = { opinion = { who = ROOT
+						value = 40 }
+					}
+				}
+			modifier = {
+				factor = 1.5
+				FROM = { opinion = { who = ROOT
+						value = 60 }
+					}
+				}
+			modifier = {
+				factor = 1.5
+				FROM = { opinion = { who = ROOT
+						value = 80 }
+					}
+				}
+			modifier = {
+				factor = 1.5
+				FROM = { opinion = { who = ROOT
+						value = 100 }
+					}
+				}
+
+		} #closesaiwilldo
+
+	}
+
+
+}
+

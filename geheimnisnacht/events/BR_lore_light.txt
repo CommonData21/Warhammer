@@ -1,0 +1,21 @@
+# namespace = light
+
+# character_event = {
+	# id = light.0
+	# title = SPELLCASTING
+	# desc = darkmagic0 #The spell has expired and the troops and flag are removed
+	# picture = "GFX_evt_miscast"
+	# hide_window = yes
+	
+	# is_triggered_only = yes
+	
+	# option = {
+	# name = OK
+	# clr_character_flag = cast_shems_burning_gaze
+	# disband_event_forces = shems_burning_gaze_troops
+	# }
+	
+	# }
+
+# #lore of light only seems to have one direct damage spell##
+

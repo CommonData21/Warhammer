@@ -1,0 +1,17 @@
+# c_ganaina
+
+# County Title
+title = c_ganaina
+
+# Settlements
+max_settlements = 3
+
+b_ganaina = tribal
+b_miahuayah = city
+b_macolnol = temple
+
+# Misc
+culture = amazon_main
+religion = amazon
+terrain = jungle
+#History

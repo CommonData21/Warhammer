@@ -1,0 +1,4666 @@
+# decisions = {
+
+# ###LORE DARK MAGIC###
+
+# cast_doombolt = {
+# is_high_prio = yes
+
+# potential = {
+# age = 16
+# NOT = { has_character_flag = cast_doombolt } ##there is a 30 day cool down for spells##
+# trait = lore_dark_magic
+# OR = {
+# has_character_modifier = magic_power_1
+# has_character_modifier = magic_power_2
+# has_character_modifier = magic_power_3
+# has_character_modifier = magic_power_4
+# }
+# OR = {
+				# any_current_enemy = {
+						# at_location = ROOT
+						# in_command = yes
+				# }
+				
+					# any_current_enemy = {
+						# any_vassal = {
+						# at_location = ROOT
+						# in_command = yes
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# at_location = ROOT
+								# in_command = yes
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# at_location = ROOT
+									# in_command = yes
+								# }
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# any_vassal = {
+										# at_location = ROOT
+										# in_command = yes
+									# }
+								# }
+							# }
+						# }
+					# }
+			# }
+# }
+
+# allow = {
+# age = 16
+# NOT = { has_character_flag = cast_doombolt } ##there is a 30 day cool down for spells##
+# trait = lore_dark_magic
+# OR = {
+# has_character_modifier = magic_power_1
+# has_character_modifier = magic_power_2
+# has_character_modifier = magic_power_3
+# has_character_modifier = magic_power_4
+# }
+# OR = {
+				# any_current_enemy = {
+						# at_location = ROOT
+						# in_command = yes
+				# }
+				
+					# any_current_enemy = {
+						# any_vassal = {
+						# at_location = ROOT
+						# in_command = yes
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# at_location = ROOT
+								# in_command = yes
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# at_location = ROOT
+									# in_command = yes
+								# }
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# any_vassal = {
+										# at_location = ROOT
+										# in_command = yes
+									# }
+								# }
+							# }
+						# }
+					# }
+			# }
+# }
+
+# effect = {
+# ROOT = { 
+# set_character_flag = cast_doombolt
+# character_event = { id = darkmagic.0 days = 30 } 
+# location = {
+			# ROOT = {
+				# spawn_unit = {
+					# province = PREV
+					# troops = {
+						# magical_spells = {
+							# 25 25
+						# }
+					# }
+					# earmark = doom_bolt_troops
+				# }
+			# }
+		# }
+
+# }
+	# }
+	
+	# ai_will_do = {
+	# factor = 0
+	# }
+	
+	# }
+
+# cast_bladewind = {
+# is_high_prio = yes
+
+# potential = {
+# age = 16
+# NOT = { has_character_flag = cast_bladewind } ##there is a 30 day cool down for spells##
+# trait = lore_dark_magic
+# OR = {
+# has_character_modifier = magic_power_2
+# has_character_modifier = magic_power_3
+# has_character_modifier = magic_power_4
+# }
+# OR = {
+				# any_current_enemy = {
+						# at_location = ROOT
+						# in_command = yes
+				# }
+				
+					# any_current_enemy = {
+						# any_vassal = {
+						# at_location = ROOT
+						# in_command = yes
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# at_location = ROOT
+								# in_command = yes
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# at_location = ROOT
+									# in_command = yes
+								# }
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# any_vassal = {
+										# at_location = ROOT
+										# in_command = yes
+									# }
+								# }
+							# }
+						# }
+					# }
+			# }
+# }
+
+# allow = {
+# age = 16
+# NOT = { has_character_flag = cast_bladewind } ##there is a 30 day cool down for spells##
+# trait = lore_dark_magic
+# OR = {
+# has_character_modifier = magic_power_2
+# has_character_modifier = magic_power_3
+# has_character_modifier = magic_power_4
+# }
+# OR = {
+				# any_current_enemy = {
+						# at_location = ROOT
+						# in_command = yes
+				# }
+				
+					# any_current_enemy = {
+						# any_vassal = {
+						# at_location = ROOT
+						# in_command = yes
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# at_location = ROOT
+								# in_command = yes
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# at_location = ROOT
+									# in_command = yes
+								# }
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# any_vassal = {
+										# at_location = ROOT
+										# in_command = yes
+									# }
+								# }
+							# }
+						# }
+					# }
+			# }
+# }
+
+# effect = {
+# ROOT = { 
+# set_character_flag = cast_bladewind
+# character_event = { id = darkmagic.1 days = 30 } 
+# location = {
+			# ROOT = {
+				# spawn_unit = {
+					# province = PREV
+					# troops = {
+						# magical_spells = {
+							# 75 75
+						# }
+					# }
+					# earmark = bladewind_troops
+				# }
+			# }
+		# }
+
+# }
+	# }
+	
+	# ai_will_do = {
+	# factor = 1000
+	# }
+	
+	# }
+	
+# cast_arnizpals_black_horror = { 
+# is_high_prio = yes
+
+# potential = {
+# age = 16
+# NOT = { has_character_flag = cast_arnizpals_black_horror } ##there is a 30 day cool down for spells##
+# trait = lore_dark_magic
+# has_character_modifier = magic_power_4
+# OR = {
+				# any_current_enemy = {
+						# at_location = ROOT
+						# in_command = yes
+				# }
+				
+					# any_current_enemy = {
+						# any_vassal = {
+						# at_location = ROOT
+						# in_command = yes
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# at_location = ROOT
+								# in_command = yes
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# at_location = ROOT
+									# in_command = yes
+								# }
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# any_vassal = {
+										# at_location = ROOT
+										# in_command = yes
+									# }
+								# }
+							# }
+						# }
+					# }
+			# }
+# }
+
+# allow = {
+# age = 16
+# NOT = { has_character_flag = cast_arnizpals_black_horror } ##there is a 30 day cool down for spells##
+# trait = lore_dark_magic
+# has_character_modifier = magic_power_4
+# OR = {
+				# any_current_enemy = {
+						# at_location = ROOT
+						# in_command = yes
+				# }
+				
+					# any_current_enemy = {
+						# any_vassal = {
+						# at_location = ROOT
+						# in_command = yes
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# at_location = ROOT
+								# in_command = yes
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# at_location = ROOT
+									# in_command = yes
+								# }
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# any_vassal = {
+										# at_location = ROOT
+										# in_command = yes
+									# }
+								# }
+							# }
+						# }
+					# }
+			# }
+# }
+
+# effect = {
+# ROOT = { 
+# character_event = { id = darkmagic.2 days = 30 } 
+# set_character_flag = cast_arnizpals_black_horror
+# location = {
+			# ROOT = {
+				# spawn_unit = {
+					# province = PREV
+					# troops = {
+						# magical_spells = {
+							# 125 125
+						# }
+					# }
+					# earmark = arnizpals_black_horror_troops
+				# }
+			# }
+		# }
+
+# }
+	# }
+	
+	# ai_will_do = {
+	# factor = 1000
+	# }
+	
+	# }
+	
+	
+# ##HIGH MAGIC##
+
+# cast_soulquench = {
+# is_high_prio = yes
+
+# potential = {
+# age = 16
+# NOT = { has_character_flag = cast_soulquench } ##there is a 30 day cool down for spells##
+# trait = lore_high_magic
+# OR = {
+# has_character_modifier = magic_power_1
+# has_character_modifier = magic_power_2
+# has_character_modifier = magic_power_3
+# has_character_modifier = magic_power_4
+# }
+# OR = {
+				# any_current_enemy = {
+						# at_location = ROOT
+						# in_command = yes
+				# }
+				
+					# any_current_enemy = {
+						# any_vassal = {
+						# at_location = ROOT
+						# in_command = yes
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# at_location = ROOT
+								# in_command = yes
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# at_location = ROOT
+									# in_command = yes
+								# }
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# any_vassal = {
+										# at_location = ROOT
+										# in_command = yes
+									# }
+								# }
+							# }
+						# }
+					# }
+			# }
+# }
+
+# allow = {
+# age = 16
+# NOT = { has_character_flag = cast_soulquench } ##there is a 30 day cool down for spells##
+# trait = lore_high_magic
+# OR = {
+# has_character_modifier = magic_power_1
+# has_character_modifier = magic_power_2
+# has_character_modifier = magic_power_3
+# has_character_modifier = magic_power_4
+# }
+# OR = {
+				# any_current_enemy = {
+						# at_location = ROOT
+						# in_command = yes
+				# }
+				
+					# any_current_enemy = {
+						# any_vassal = {
+						# at_location = ROOT
+						# in_command = yes
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# at_location = ROOT
+								# in_command = yes
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# at_location = ROOT
+									# in_command = yes
+								# }
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# any_vassal = {
+										# at_location = ROOT
+										# in_command = yes
+									# }
+								# }
+							# }
+						# }
+					# }
+			# }
+# }
+
+# effect = {
+# ROOT = { 
+# set_character_flag = cast_soulquench
+# character_event = { id = highmagic.0 days = 30 } 
+# location = {
+			# ROOT = {
+				# spawn_unit = {
+					# province = PREV
+					# troops = {
+						# magical_spells = {
+							# 25 25
+						# }
+					# }
+					# earmark = soulquench_troops
+				# }
+			# }
+		# }
+
+# }
+	# }
+	
+	# ai_will_do = {
+	# factor = 1000
+	# }
+	
+	# }
+
+# cast_fieryconvocation = {
+# is_high_prio = yes
+
+# potential = {
+# age = 16
+# NOT = { has_character_flag = cast_fieryconvocation } ##there is a 30 day cool down for spells##
+# trait = lore_high_magic
+# OR = {
+# has_character_modifier = magic_power_2
+# has_character_modifier = magic_power_3
+# has_character_modifier = magic_power_4
+# }
+# OR = {
+				# any_current_enemy = {
+						# at_location = ROOT
+						# in_command = yes
+				# }
+				
+					# any_current_enemy = {
+						# any_vassal = {
+						# at_location = ROOT
+						# in_command = yes
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# at_location = ROOT
+								# in_command = yes
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# at_location = ROOT
+									# in_command = yes
+								# }
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# any_vassal = {
+										# at_location = ROOT
+										# in_command = yes
+									# }
+								# }
+							# }
+						# }
+					# }
+			# }
+# }
+
+# allow = {
+# age = 16
+# NOT = { has_character_flag = cast_fieryconvocation } ##there is a 30 day cool down for spells##
+# trait = lore_high_magic
+# OR = {
+# has_character_modifier = magic_power_2
+# has_character_modifier = magic_power_3
+# has_character_modifier = magic_power_4
+# }
+# OR = {
+				# any_current_enemy = {
+						# at_location = ROOT
+						# in_command = yes
+				# }
+				
+					# any_current_enemy = {
+						# any_vassal = {
+						# at_location = ROOT
+						# in_command = yes
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# at_location = ROOT
+								# in_command = yes
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# at_location = ROOT
+									# in_command = yes
+								# }
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# any_vassal = {
+										# at_location = ROOT
+										# in_command = yes
+									# }
+								# }
+							# }
+						# }
+					# }
+			# }
+# }
+
+# effect = {
+# ROOT = { 
+# set_character_flag = cast_fieryconvocation
+# character_event = { id = highmagic.1 days = 30 } 
+# location = {
+			# ROOT = {
+				# spawn_unit = {
+					# province = PREV
+					# troops = {
+						# magical_spells = {
+							# 75 75
+						# }
+					# }
+					# earmark = fieryconvocation_troops
+				# }
+			# }
+		# }
+
+# }
+	# }
+	
+	# ai_will_do = {
+	# factor = 1000
+	# }
+	
+	# }
+	
+# cast_tempest = { 
+# is_high_prio = yes
+
+# potential = {
+# age = 16
+# NOT = { has_character_flag = cast_tempest } ##there is a 30 day cool down for spells##
+# trait = lore_high_magic
+# has_character_modifier = magic_power_4
+# OR = {
+				# any_current_enemy = {
+						# at_location = ROOT
+						# in_command = yes
+				# }
+				
+					# any_current_enemy = {
+						# any_vassal = {
+						# at_location = ROOT
+						# in_command = yes
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# at_location = ROOT
+								# in_command = yes
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# at_location = ROOT
+									# in_command = yes
+								# }
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# any_vassal = {
+										# at_location = ROOT
+										# in_command = yes
+									# }
+								# }
+							# }
+						# }
+					# }
+			# }
+# }
+
+# allow = {
+# age = 16
+# NOT = { has_character_flag = cast_tempest } ##there is a 30 day cool down for spells##
+# trait = lore_high_magic
+# has_character_modifier = magic_power_4
+# OR = {
+				# any_current_enemy = {
+						# at_location = ROOT
+						# in_command = yes
+				# }
+				
+					# any_current_enemy = {
+						# any_vassal = {
+						# at_location = ROOT
+						# in_command = yes
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# at_location = ROOT
+								# in_command = yes
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# at_location = ROOT
+									# in_command = yes
+								# }
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# any_vassal = {
+										# at_location = ROOT
+										# in_command = yes
+									# }
+								# }
+							# }
+						# }
+					# }
+			# }
+# }
+
+# effect = {
+# ROOT = { 
+# character_event = { id = highmagic.2 days = 30 } 
+# set_character_flag = cast_tempest
+# location = {
+			# ROOT = {
+				# spawn_unit = {
+					# province = PREV
+					# troops = {
+						# magical_spells = {
+							# 125 125
+						# }
+					# }
+					# earmark = tempest_troops
+				# }
+			# }
+		# }
+
+# }
+	# }
+	
+	# ai_will_do = {
+	# factor = 1000
+	# }
+	
+	# }
+	
+# ##NECROMANCY##
+
+# cast_soulblight = {
+# is_high_prio = yes
+
+# potential = {
+# age = 16
+# NOT = { has_character_flag = cast_soulblight } ##there is a 30 day cool down for spells##
+# trait = lore_necromancy
+# OR = {
+# has_character_modifier = magic_power_1
+# has_character_modifier = magic_power_2
+# has_character_modifier = magic_power_3
+# has_character_modifier = magic_power_4
+# }
+# OR = {
+				# any_current_enemy = {
+						# at_location = ROOT
+						# in_command = yes
+				# }
+				
+					# any_current_enemy = {
+						# any_vassal = {
+						# at_location = ROOT
+						# in_command = yes
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# at_location = ROOT
+								# in_command = yes
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# at_location = ROOT
+									# in_command = yes
+								# }
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# any_vassal = {
+										# at_location = ROOT
+										# in_command = yes
+									# }
+								# }
+							# }
+						# }
+					# }
+			# }
+# }
+
+# allow = {
+# age = 16
+# NOT = { has_character_flag = cast_soulblight } ##there is a 30 day cool down for spells##
+# trait = lore_necromancy
+# OR = {
+# has_character_modifier = magic_power_1
+# has_character_modifier = magic_power_2
+# has_character_modifier = magic_power_3
+# has_character_modifier = magic_power_4
+# }
+# OR = {
+				# any_current_enemy = {
+						# at_location = ROOT
+						# in_command = yes
+				# }
+				
+					# any_current_enemy = {
+						# any_vassal = {
+						# at_location = ROOT
+						# in_command = yes
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# at_location = ROOT
+								# in_command = yes
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# at_location = ROOT
+									# in_command = yes
+								# }
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# any_vassal = {
+										# at_location = ROOT
+										# in_command = yes
+									# }
+								# }
+							# }
+						# }
+					# }
+			# }
+# }
+
+# effect = {
+# ROOT = { 
+# set_character_flag = cast_soulblight
+# character_event = { id = necromancy.0 days = 30 } 
+# location = {
+			# ROOT = {
+				# spawn_unit = {
+					# province = PREV
+					# troops = {
+						# magical_spells = {
+							# 20 20
+						# }
+					# }
+					# earmark = soulblight_troops
+				# }
+			# }
+		# }
+
+# }
+	# }
+	
+	# ai_will_do = {
+	# factor = 1000
+	# }
+	
+	# }
+
+# cast_doom_and_darkness = {
+# is_high_prio = yes
+
+# potential = {
+# age = 16
+# NOT = { has_character_flag = cast_doom_and_darkness } ##there is a 30 day cool down for spells##
+# trait = lore_necromancy
+# OR = {
+# has_character_modifier = magic_power_2
+# has_character_modifier = magic_power_3
+# has_character_modifier = magic_power_4
+# }
+# OR = {
+				# any_current_enemy = {
+						# at_location = ROOT
+						# in_command = yes
+				# }
+				
+					# any_current_enemy = {
+						# any_vassal = {
+						# at_location = ROOT
+						# in_command = yes
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# at_location = ROOT
+								# in_command = yes
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# at_location = ROOT
+									# in_command = yes
+								# }
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# any_vassal = {
+										# at_location = ROOT
+										# in_command = yes
+									# }
+								# }
+							# }
+						# }
+					# }
+			# }
+# }
+
+# allow = {
+# age = 16
+# NOT = { has_character_flag = cast_doom_and_darkness } ##there is a 30 day cool down for spells##
+# trait = lore_necromancy
+# OR = {
+# has_character_modifier = magic_power_2
+# has_character_modifier = magic_power_3
+# has_character_modifier = magic_power_4
+# }
+# OR = {
+				# any_current_enemy = {
+						# at_location = ROOT
+						# in_command = yes
+				# }
+				
+					# any_current_enemy = {
+						# any_vassal = {
+						# at_location = ROOT
+						# in_command = yes
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# at_location = ROOT
+								# in_command = yes
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# at_location = ROOT
+									# in_command = yes
+								# }
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# any_vassal = {
+										# at_location = ROOT
+										# in_command = yes
+									# }
+								# }
+							# }
+						# }
+					# }
+			# }
+# }
+
+# effect = {
+# ROOT = { 
+# set_character_flag = cast_doom_and_darkness
+# character_event = { id = necromancy.1 days = 30 } 
+# location = {
+			# ROOT = {
+				# spawn_unit = {
+					# province = PREV
+					# troops = {
+						# magical_spells = {
+							# 40 40
+						# }
+					# }
+					# earmark = doom_and_darkness_troops
+				# }
+			# }
+		# }
+
+# }
+	# }
+	
+	# ai_will_do = {
+	# factor = 1000
+	# }
+	
+	# }
+	
+# cast_purple_sun_of_xereus = { 
+# is_high_prio = yes
+
+# potential = {
+# age = 16
+# NOT = { has_character_flag = cast_purple_sun_of_xereus } ##there is a 30 day cool down for spells##
+# trait = lore_necromancy
+# has_character_modifier = magic_power_4
+# OR = {
+				# any_current_enemy = {
+						# at_location = ROOT
+						# in_command = yes
+				# }
+				
+					# any_current_enemy = {
+						# any_vassal = {
+						# at_location = ROOT
+						# in_command = yes
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# at_location = ROOT
+								# in_command = yes
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# at_location = ROOT
+									# in_command = yes
+								# }
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# any_vassal = {
+										# at_location = ROOT
+										# in_command = yes
+									# }
+								# }
+							# }
+						# }
+					# }
+			# }
+# }
+
+# allow = {
+# age = 16
+# NOT = { has_character_flag = cast_purple_sun_of_xereus } ##there is a 30 day cool down for spells##
+# trait = lore_necromancy
+# has_character_modifier = magic_power_4
+# OR = {
+				# any_current_enemy = {
+						# at_location = ROOT
+						# in_command = yes
+				# }
+				
+					# any_current_enemy = {
+						# any_vassal = {
+						# at_location = ROOT
+						# in_command = yes
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# at_location = ROOT
+								# in_command = yes
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# at_location = ROOT
+									# in_command = yes
+								# }
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# any_vassal = {
+										# at_location = ROOT
+										# in_command = yes
+									# }
+								# }
+							# }
+						# }
+					# }
+			# }
+# }
+
+# effect = {
+# ROOT = { 
+# character_event = { id = necromancy.2 days = 30 } 
+# set_character_flag = cast_purple_sun_of_xereus
+# location = {
+			# ROOT = {
+				# spawn_unit = {
+					# province = PREV
+					# troops = {
+						# magical_spells = {
+							# 60 60
+						# }
+					# }
+					# earmark = purple_sun_of_xereus_troops
+				# }
+			# }
+		# }
+
+# }
+	# }
+	
+	# ai_will_do = {
+	# factor = 1000
+	# }
+	
+	# }
+	
+# #LORE ICE MAGIC#
+
+# cast_shardstorm = {
+# is_high_prio = yes
+
+# potential = {
+# age = 16
+# NOT = { has_character_flag = cast_shardstorm } ##there is a 30 day cool down for spells##
+# trait = lore_ice
+# OR = {
+# has_character_modifier = magic_power_1
+# has_character_modifier = magic_power_2
+# has_character_modifier = magic_power_3
+# has_character_modifier = magic_power_4
+# }
+# OR = {
+				# any_current_enemy = {
+						# at_location = ROOT
+						# in_command = yes
+				# }
+				
+					# any_current_enemy = {
+						# any_vassal = {
+						# at_location = ROOT
+						# in_command = yes
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# at_location = ROOT
+								# in_command = yes
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# at_location = ROOT
+									# in_command = yes
+								# }
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# any_vassal = {
+										# at_location = ROOT
+										# in_command = yes
+									# }
+								# }
+							# }
+						# }
+					# }
+			# }
+# }
+
+# allow = {
+# age = 16
+# NOT = { has_character_flag = cast_shardstorm } ##there is a 30 day cool down for spells##
+# trait = lore_ice
+# OR = {
+# has_character_modifier = magic_power_1
+# has_character_modifier = magic_power_2
+# has_character_modifier = magic_power_3
+# has_character_modifier = magic_power_4
+# }
+# OR = {
+				# any_current_enemy = {
+						# at_location = ROOT
+						# in_command = yes
+				# }
+				
+					# any_current_enemy = {
+						# any_vassal = {
+						# at_location = ROOT
+						# in_command = yes
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# at_location = ROOT
+								# in_command = yes
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# at_location = ROOT
+									# in_command = yes
+								# }
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# any_vassal = {
+										# at_location = ROOT
+										# in_command = yes
+									# }
+								# }
+							# }
+						# }
+					# }
+			# }
+# }
+
+# effect = {
+# ROOT = { 
+# set_character_flag = cast_shardstorm
+# character_event = { id = ice.0 days = 30 } 
+# location = {
+			# ROOT = {
+				# spawn_unit = {
+					# province = PREV
+					# troops = {
+						# magical_spells = {
+							# 20 20
+						# }
+					# }
+					# earmark = shardstorm_troops
+				# }
+			# }
+		# }
+
+# }
+	# }
+	
+	# ai_will_do = {
+	# factor = 1000
+	# }
+	
+	# }
+
+# cast_freezing_blast = {
+# is_high_prio = yes
+
+# potential = {
+# age = 16
+# NOT = { has_character_flag = cast_freezing_blast } ##there is a 30 day cool down for spells##
+# trait = lore_ice
+# OR = {
+# has_character_modifier = magic_power_2
+# has_character_modifier = magic_power_3
+# has_character_modifier = magic_power_4
+# }
+# OR = {
+				# any_current_enemy = {
+						# at_location = ROOT
+						# in_command = yes
+				# }
+				
+					# any_current_enemy = {
+						# any_vassal = {
+						# at_location = ROOT
+						# in_command = yes
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# at_location = ROOT
+								# in_command = yes
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# at_location = ROOT
+									# in_command = yes
+								# }
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# any_vassal = {
+										# at_location = ROOT
+										# in_command = yes
+									# }
+								# }
+							# }
+						# }
+					# }
+			# }
+# }
+
+# allow = {
+# age = 16
+# NOT = { has_character_flag = cast_freezing_blast } ##there is a 30 day cool down for spells##
+# trait = lore_ice
+# OR = {
+# has_character_modifier = magic_power_2
+# has_character_modifier = magic_power_3
+# has_character_modifier = magic_power_4
+# }
+# OR = {
+				# any_current_enemy = {
+						# at_location = ROOT
+						# in_command = yes
+				# }
+				
+					# any_current_enemy = {
+						# any_vassal = {
+						# at_location = ROOT
+						# in_command = yes
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# at_location = ROOT
+								# in_command = yes
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# at_location = ROOT
+									# in_command = yes
+								# }
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# any_vassal = {
+										# at_location = ROOT
+										# in_command = yes
+									# }
+								# }
+							# }
+						# }
+					# }
+			# }
+# }
+
+# effect = {
+# ROOT = { 
+# set_character_flag = cast_freezing_blast
+# character_event = { id = ice.1 days = 30 } 
+# location = {
+			# ROOT = {
+				# spawn_unit = {
+					# province = PREV
+					# troops = {
+						# magical_spells = {
+							# 40 40
+						# }
+					# }
+					# earmark = freezing_blast_troops
+				# }
+			# }
+		# }
+
+# }
+	# }
+	
+	# ai_will_do = {
+	# factor = 1000
+	# }
+	
+	# }
+	
+# cast_blizzard = { 
+# is_high_prio = yes
+
+# potential = {
+# age = 16
+# NOT = { has_character_flag = cast_blizzard } ##there is a 30 day cool down for spells##
+# trait = lore_ice
+# has_character_modifier = magic_power_4
+# OR = {
+				# any_current_enemy = {
+						# at_location = ROOT
+						# in_command = yes
+				# }
+				
+					# any_current_enemy = {
+						# any_vassal = {
+						# at_location = ROOT
+						# in_command = yes
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# at_location = ROOT
+								# in_command = yes
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# at_location = ROOT
+									# in_command = yes
+								# }
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# any_vassal = {
+										# at_location = ROOT
+										# in_command = yes
+									# }
+								# }
+							# }
+						# }
+					# }
+			# }
+# }
+
+# allow = {
+# age = 16
+# NOT = { has_character_flag = cast_blizzard } ##there is a 30 day cool down for spells##
+# trait = lore_ice
+# has_character_modifier = magic_power_4
+# OR = {
+				# any_current_enemy = {
+						# at_location = ROOT
+						# in_command = yes
+				# }
+				
+					# any_current_enemy = {
+						# any_vassal = {
+						# at_location = ROOT
+						# in_command = yes
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# at_location = ROOT
+								# in_command = yes
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# at_location = ROOT
+									# in_command = yes
+								# }
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# any_vassal = {
+										# at_location = ROOT
+										# in_command = yes
+									# }
+								# }
+							# }
+						# }
+					# }
+			# }
+# }
+
+# effect = {
+# ROOT = { 
+# character_event = { id = ice.2 days = 30 } 
+# set_character_flag = cast_blizzard
+# location = {
+			# ROOT = {
+				# spawn_unit = {
+					# province = PREV
+					# troops = {
+						# magical_spells = {
+							# 60 60
+						# }
+					# }
+					# earmark = blizzard_troops
+				# }
+			# }
+		# }
+
+# }
+	# }
+	
+	# ai_will_do = {
+	# factor = 1000
+	# }
+	
+	# }
+	
+# ##LORE FIRE MAGIC##
+
+# cast_fireball = {
+# is_high_prio = yes
+
+# potential = {
+# age = 16
+# NOT = { has_character_flag = cast_fireball } ##there is a 30 day cool down for spells##
+# trait = lore_fire
+# OR = {
+# has_character_modifier = magic_power_1
+# has_character_modifier = magic_power_2
+# has_character_modifier = magic_power_3
+# has_character_modifier = magic_power_4
+# }
+# OR = {
+				# any_current_enemy = {
+						# at_location = ROOT
+						# in_command = yes
+				# }
+				
+					# any_current_enemy = {
+						# any_vassal = {
+						# at_location = ROOT
+						# in_command = yes
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# at_location = ROOT
+								# in_command = yes
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# at_location = ROOT
+									# in_command = yes
+								# }
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# any_vassal = {
+										# at_location = ROOT
+										# in_command = yes
+									# }
+								# }
+							# }
+						# }
+					# }
+			# }
+# }
+
+# allow = {
+# age = 16
+# NOT = { has_character_flag = cast_fireball } ##there is a 30 day cool down for spells##
+# trait = lore_fire
+# OR = {
+# has_character_modifier = magic_power_1
+# has_character_modifier = magic_power_2
+# has_character_modifier = magic_power_3
+# has_character_modifier = magic_power_4
+# }
+# OR = {
+				# any_current_enemy = {
+						# at_location = ROOT
+						# in_command = yes
+				# }
+				
+					# any_current_enemy = {
+						# any_vassal = {
+						# at_location = ROOT
+						# in_command = yes
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# at_location = ROOT
+								# in_command = yes
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# at_location = ROOT
+									# in_command = yes
+								# }
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# any_vassal = {
+										# at_location = ROOT
+										# in_command = yes
+									# }
+								# }
+							# }
+						# }
+					# }
+			# }
+# }
+
+# effect = {
+# ROOT = { 
+# set_character_flag = cast_fireball
+# character_event = { id = fire.0 days = 30 } 
+# location = {
+			# ROOT = {
+				# spawn_unit = {
+					# province = PREV
+					# troops = {
+						# magical_spells = {
+							# 20 20
+						# }
+					# }
+					# earmark = fireball_troops
+				# }
+			# }
+		# }
+
+# }
+	# }
+	
+	# ai_will_do = {
+	# factor = 1000
+	# }
+	
+	# }
+
+# cast_piercing_bolts_of_burning = {
+# is_high_prio = yes
+
+# potential = {
+# age = 16
+# NOT = { has_character_flag = cast_piercing_bolts_of_burning } ##there is a 30 day cool down for spells##
+# trait = lore_fire
+# OR = {
+# has_character_modifier = magic_power_2
+# has_character_modifier = magic_power_3
+# has_character_modifier = magic_power_4
+# }
+# OR = {
+				# any_current_enemy = {
+						# at_location = ROOT
+						# in_command = yes
+				# }
+				
+					# any_current_enemy = {
+						# any_vassal = {
+						# at_location = ROOT
+						# in_command = yes
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# at_location = ROOT
+								# in_command = yes
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# at_location = ROOT
+									# in_command = yes
+								# }
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# any_vassal = {
+										# at_location = ROOT
+										# in_command = yes
+									# }
+								# }
+							# }
+						# }
+					# }
+			# }
+# }
+
+# allow = {
+# age = 16
+# NOT = { has_character_flag = cast_piercing_bolts_of_burning } ##there is a 30 day cool down for spells##
+# trait = lore_fire
+# OR = {
+# has_character_modifier = magic_power_2
+# has_character_modifier = magic_power_3
+# has_character_modifier = magic_power_4
+# }
+# OR = {
+				# any_current_enemy = {
+						# at_location = ROOT
+						# in_command = yes
+				# }
+				
+					# any_current_enemy = {
+						# any_vassal = {
+						# at_location = ROOT
+						# in_command = yes
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# at_location = ROOT
+								# in_command = yes
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# at_location = ROOT
+									# in_command = yes
+								# }
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# any_vassal = {
+										# at_location = ROOT
+										# in_command = yes
+									# }
+								# }
+							# }
+						# }
+					# }
+			# }
+# }
+
+# effect = {
+# ROOT = { 
+# set_character_flag = cast_piercing_bolts_of_burning
+# character_event = { id = fire.1 days = 30 } 
+# location = {
+			# ROOT = {
+				# spawn_unit = {
+					# province = PREV
+					# troops = {
+						# magical_spells = {
+							# 40 40
+						# }
+					# }
+					# earmark = piercing_bolts_of_burning_troops
+				# }
+			# }
+		# }
+
+# }
+	# }
+	
+	# ai_will_do = {
+	# factor = 1000
+	# }
+	
+	# }
+	
+# cast_flame_storm = { 
+# is_high_prio = yes
+
+# potential = {
+# age = 16
+# NOT = { has_character_flag = cast_flame_storm } ##there is a 30 day cool down for spells##
+# trait = lore_fire
+# has_character_modifier = magic_power_4
+# OR = {
+				# any_current_enemy = {
+						# at_location = ROOT
+						# in_command = yes
+				# }
+				
+					# any_current_enemy = {
+						# any_vassal = {
+						# at_location = ROOT
+						# in_command = yes
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# at_location = ROOT
+								# in_command = yes
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# at_location = ROOT
+									# in_command = yes
+								# }
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# any_vassal = {
+										# at_location = ROOT
+										# in_command = yes
+									# }
+								# }
+							# }
+						# }
+					# }
+			# }
+# }
+
+# allow = {
+# age = 16
+# NOT = { has_character_flag = cast_flame_storm } ##there is a 30 day cool down for spells##
+# trait = lore_fire
+# has_character_modifier = magic_power_4
+# OR = {
+				# any_current_enemy = {
+						# at_location = ROOT
+						# in_command = yes
+				# }
+				
+					# any_current_enemy = {
+						# any_vassal = {
+						# at_location = ROOT
+						# in_command = yes
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# at_location = ROOT
+								# in_command = yes
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# at_location = ROOT
+									# in_command = yes
+								# }
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# any_vassal = {
+										# at_location = ROOT
+										# in_command = yes
+									# }
+								# }
+							# }
+						# }
+					# }
+			# }
+# }
+
+# effect = {
+# ROOT = { 
+# character_event = { id = fire.2 days = 30 } 
+# set_character_flag = cast_flame_storm
+# location = {
+			# ROOT = {
+				# spawn_unit = {
+					# province = PREV
+					# troops = {
+						# magical_spells = {
+							# 60 60
+						# }
+					# }
+					# earmark = flame_storm_troops
+				# }
+			# }
+		# }
+
+# }
+	# }
+	
+	# ai_will_do = {
+	# factor = 1000
+	# }
+	
+	# }
+
+	
+# ##LORE LIGHT MAGIC##
+# cast_shems_burning_gaze = {
+# is_high_prio = yes
+
+# potential = {
+# age = 16
+# NOT = { has_character_flag = cast_shems_burning_gaze } ##there is a 30 day cool down for spells##
+# trait = lore_light
+# OR = {
+# has_character_modifier = magic_power_1
+# has_character_modifier = magic_power_2
+# has_character_modifier = magic_power_3
+# has_character_modifier = magic_power_4
+# }
+# OR = {
+				# any_current_enemy = {
+						# at_location = ROOT
+						# in_command = yes
+				# }
+				
+					# any_current_enemy = {
+						# any_vassal = {
+						# at_location = ROOT
+						# in_command = yes
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# at_location = ROOT
+								# in_command = yes
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# at_location = ROOT
+									# in_command = yes
+								# }
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# any_vassal = {
+										# at_location = ROOT
+										# in_command = yes
+									# }
+								# }
+							# }
+						# }
+					# }
+			# }
+# }
+
+# allow = {
+# age = 16
+# NOT = { has_character_flag = cast_shems_burning_gaze } ##there is a 30 day cool down for spells##
+# trait = lore_light
+# OR = {
+# has_character_modifier = magic_power_1
+# has_character_modifier = magic_power_2
+# has_character_modifier = magic_power_3
+# has_character_modifier = magic_power_4
+# }
+# OR = {
+				# any_current_enemy = {
+						# at_location = ROOT
+						# in_command = yes
+				# }
+				
+					# any_current_enemy = {
+						# any_vassal = {
+						# at_location = ROOT
+						# in_command = yes
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# at_location = ROOT
+								# in_command = yes
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# at_location = ROOT
+									# in_command = yes
+								# }
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# any_vassal = {
+										# at_location = ROOT
+										# in_command = yes
+									# }
+								# }
+							# }
+						# }
+					# }
+			# }
+# }
+
+# effect = {
+# ROOT = { 
+# set_character_flag = cast_shems_burning_gaze
+# character_event = { id = light.0 days = 30 } 
+# location = {
+			# ROOT = {
+				# spawn_unit = {
+					# province = PREV
+					# troops = {
+						# magical_spells = {
+							# 30 30
+						# }
+					# }
+					# earmark = shems_burning_gaze_troops
+				# }
+			# }
+		# }
+
+# }
+	# }
+	
+	# ai_will_do = {
+	# factor = 1000
+	# }
+	
+	# }
+
+# ##LORE BEAST MAGIC##
+
+
+# cast_flock_of_doom = {
+# is_high_prio = yes
+
+# potential = {
+# age = 16
+# NOT = { has_character_flag = cast_flock_of_doom } ##there is a 30 day cool down for spells##
+# trait = lore_beasts
+# OR = {
+# has_character_modifier = magic_power_1
+# has_character_modifier = magic_power_2
+# has_character_modifier = magic_power_3
+# has_character_modifier = magic_power_4
+# }
+# OR = {
+				# any_current_enemy = {
+						# at_location = ROOT
+						# in_command = yes
+				# }
+				
+					# any_current_enemy = {
+						# any_vassal = {
+						# at_location = ROOT
+						# in_command = yes
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# at_location = ROOT
+								# in_command = yes
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# at_location = ROOT
+									# in_command = yes
+								# }
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# any_vassal = {
+										# at_location = ROOT
+										# in_command = yes
+									# }
+								# }
+							# }
+						# }
+					# }
+			# }
+# }
+
+# allow = {
+# age = 16
+# NOT = { has_character_flag = cast_flock_of_doom } ##there is a 30 day cool down for spells##
+# trait = lore_beasts
+# OR = {
+# has_character_modifier = magic_power_1
+# has_character_modifier = magic_power_2
+# has_character_modifier = magic_power_3
+# has_character_modifier = magic_power_4
+# }
+# OR = {
+				# any_current_enemy = {
+						# at_location = ROOT
+						# in_command = yes
+				# }
+				
+					# any_current_enemy = {
+						# any_vassal = {
+						# at_location = ROOT
+						# in_command = yes
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# at_location = ROOT
+								# in_command = yes
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# at_location = ROOT
+									# in_command = yes
+								# }
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# any_vassal = {
+										# at_location = ROOT
+										# in_command = yes
+									# }
+								# }
+							# }
+						# }
+					# }
+			# }
+# }
+
+# effect = {
+# ROOT = { 
+# set_character_flag = cast_flock_of_doom
+# character_event = { id = beasts.0 days = 30 } 
+# location = {
+			# ROOT = {
+				# spawn_unit = {
+					# province = PREV
+					# troops = {
+						# magical_spells = {
+							# 20 20
+						# }
+					# }
+					# earmark = flock_of_doom_troops
+				# }
+			# }
+		# }
+
+# }
+	# }
+	
+	# ai_will_do = {
+	# factor = 1000
+	# }
+	
+	# }
+
+# cast_amber_spear = {
+# is_high_prio = yes
+
+# potential = {
+# age = 16
+# NOT = { has_character_flag = cast_amber_spear } ##there is a 30 day cool down for spells##
+# trait = lore_beasts
+# OR = {
+# has_character_modifier = magic_power_2
+# has_character_modifier = magic_power_3
+# has_character_modifier = magic_power_4
+# }
+# OR = {
+				# any_current_enemy = {
+						# at_location = ROOT
+						# in_command = yes
+				# }
+				
+					# any_current_enemy = {
+						# any_vassal = {
+						# at_location = ROOT
+						# in_command = yes
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# at_location = ROOT
+								# in_command = yes
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# at_location = ROOT
+									# in_command = yes
+								# }
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# any_vassal = {
+										# at_location = ROOT
+										# in_command = yes
+									# }
+								# }
+							# }
+						# }
+					# }
+			# }
+# }
+
+# allow = {
+# age = 16
+# NOT = { has_character_flag = cast_amber_spear } ##there is a 30 day cool down for spells##
+# trait = lore_beasts
+# OR = {
+# has_character_modifier = magic_power_2
+# has_character_modifier = magic_power_3
+# has_character_modifier = magic_power_4
+# }
+# OR = {
+				# any_current_enemy = {
+						# at_location = ROOT
+						# in_command = yes
+				# }
+				
+					# any_current_enemy = {
+						# any_vassal = {
+						# at_location = ROOT
+						# in_command = yes
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# at_location = ROOT
+								# in_command = yes
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# at_location = ROOT
+									# in_command = yes
+								# }
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# any_vassal = {
+										# at_location = ROOT
+										# in_command = yes
+									# }
+								# }
+							# }
+						# }
+					# }
+			# }
+# }
+
+# effect = {
+# ROOT = { 
+# set_character_flag = cast_amber_spear
+# character_event = { id = beasts.1 days = 30 } 
+# location = {
+			# ROOT = {
+				# spawn_unit = {
+					# province = PREV
+					# troops = {
+						# magical_spells = {
+							# 40 40
+						# }
+					# }
+					# earmark = amber_spear_troops
+				# }
+			# }
+		# }
+
+# }
+	# }
+	
+	# ai_will_do = {
+	# factor = 1000
+	# }
+	
+	# }
+	
+# cast_transformation_of_kadon = { 
+# is_high_prio = yes
+
+# potential = {
+# age = 16
+# NOT = { has_character_flag = cast_transformation_of_kadon } ##there is a 30 day cool down for spells##
+# trait = lore_beasts
+# has_character_modifier = magic_power_4
+# OR = {
+				# any_current_enemy = {
+						# at_location = ROOT
+						# in_command = yes
+				# }
+				
+					# any_current_enemy = {
+						# any_vassal = {
+						# at_location = ROOT
+						# in_command = yes
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# at_location = ROOT
+								# in_command = yes
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# at_location = ROOT
+									# in_command = yes
+								# }
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# any_vassal = {
+										# at_location = ROOT
+										# in_command = yes
+									# }
+								# }
+							# }
+						# }
+					# }
+			# }
+# }
+
+# allow = {
+# age = 16
+# NOT = { has_character_flag = cast_transformation_of_kadon } ##there is a 30 day cool down for spells##
+# trait = lore_beasts
+# has_character_modifier = magic_power_4
+# OR = {
+				# any_current_enemy = {
+						# at_location = ROOT
+						# in_command = yes
+				# }
+				
+					# any_current_enemy = {
+						# any_vassal = {
+						# at_location = ROOT
+						# in_command = yes
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# at_location = ROOT
+								# in_command = yes
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# at_location = ROOT
+									# in_command = yes
+								# }
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# any_vassal = {
+										# at_location = ROOT
+										# in_command = yes
+									# }
+								# }
+							# }
+						# }
+					# }
+			# }
+# }
+
+# effect = {
+# ROOT = { 
+# character_event = { id = beasts.2 days = 30 } 
+# set_character_flag = cast_transformation_of_kadon
+# location = {
+			# ROOT = {
+				# spawn_unit = {
+					# province = PREV
+					# troops = {
+						# magical_spells = {
+							# 60 60
+						# }
+					# }
+					# earmark = transformation_of_kadon_troops
+				# }
+			# }
+		# }
+
+# }
+	# }
+	
+	# ai_will_do = {
+	# factor = 1000
+	# }
+	
+	# }
+
+# ##LORE METAL MAGIC##
+
+# cast_searing_doom = {
+# is_high_prio = yes
+
+# potential = {
+# age = 16
+# NOT = { has_character_flag = cast_searing_doom } ##there is a 30 day cool down for spells##
+# trait = lore_metal
+# OR = {
+# has_character_modifier = magic_power_1
+# has_character_modifier = magic_power_2
+# has_character_modifier = magic_power_3
+# has_character_modifier = magic_power_4
+# }
+# OR = {
+				# any_current_enemy = {
+						# at_location = ROOT
+						# in_command = yes
+				# }
+				
+					# any_current_enemy = {
+						# any_vassal = {
+						# at_location = ROOT
+						# in_command = yes
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# at_location = ROOT
+								# in_command = yes
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# at_location = ROOT
+									# in_command = yes
+								# }
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# any_vassal = {
+										# at_location = ROOT
+										# in_command = yes
+									# }
+								# }
+							# }
+						# }
+					# }
+			# }
+# }
+
+# allow = {
+# age = 16
+# NOT = { has_character_flag = cast_searing_doom } ##there is a 30 day cool down for spells##
+# trait = lore_metal
+# OR = {
+# has_character_modifier = magic_power_1
+# has_character_modifier = magic_power_2
+# has_character_modifier = magic_power_3
+# has_character_modifier = magic_power_4
+# }
+# OR = {
+				# any_current_enemy = {
+						# at_location = ROOT
+						# in_command = yes
+				# }
+				
+					# any_current_enemy = {
+						# any_vassal = {
+						# at_location = ROOT
+						# in_command = yes
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# at_location = ROOT
+								# in_command = yes
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# at_location = ROOT
+									# in_command = yes
+								# }
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# any_vassal = {
+										# at_location = ROOT
+										# in_command = yes
+									# }
+								# }
+							# }
+						# }
+					# }
+			# }
+# }
+
+# effect = {
+# ROOT = { 
+# set_character_flag = cast_searing_doom
+# character_event = { id = metal.0 days = 30 } 
+# location = {
+			# ROOT = {
+				# spawn_unit = {
+					# province = PREV
+					# troops = {
+						# magical_spells = {
+							# 20 20
+						# }
+					# }
+					# earmark = searing_doom_troops
+				# }
+			# }
+		# }
+
+# }
+	# }
+	
+	# ai_will_do = {
+	# factor = 1000
+	# }
+	
+	# }
+
+# cast_gehennas_golden_hounds = {
+# is_high_prio = yes
+
+# potential = {
+# age = 16
+# NOT = { has_character_flag = cast_gehennas_golden_hounds } ##there is a 30 day cool down for spells##
+# trait = lore_metal
+# OR = {
+# has_character_modifier = magic_power_2
+# has_character_modifier = magic_power_3
+# has_character_modifier = magic_power_4
+# }
+# OR = {
+				# any_current_enemy = {
+						# at_location = ROOT
+						# in_command = yes
+				# }
+				
+					# any_current_enemy = {
+						# any_vassal = {
+						# at_location = ROOT
+						# in_command = yes
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# at_location = ROOT
+								# in_command = yes
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# at_location = ROOT
+									# in_command = yes
+								# }
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# any_vassal = {
+										# at_location = ROOT
+										# in_command = yes
+									# }
+								# }
+							# }
+						# }
+					# }
+			# }
+# }
+
+# allow = {
+# age = 16
+# NOT = { has_character_flag = cast_gehennas_golden_hounds } ##there is a 30 day cool down for spells##
+# trait = lore_metal
+# OR = {
+# has_character_modifier = magic_power_2
+# has_character_modifier = magic_power_3
+# has_character_modifier = magic_power_4
+# }
+# OR = {
+				# any_current_enemy = {
+						# at_location = ROOT
+						# in_command = yes
+				# }
+				
+					# any_current_enemy = {
+						# any_vassal = {
+						# at_location = ROOT
+						# in_command = yes
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# at_location = ROOT
+								# in_command = yes
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# at_location = ROOT
+									# in_command = yes
+								# }
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# any_vassal = {
+										# at_location = ROOT
+										# in_command = yes
+									# }
+								# }
+							# }
+						# }
+					# }
+			# }
+# }
+
+# effect = {
+# ROOT = { 
+# set_character_flag = cast_gehennas_golden_hounds
+# character_event = { id = metal.1 days = 30 } 
+# location = {
+			# ROOT = {
+				# spawn_unit = {
+					# province = PREV
+					# troops = {
+						# magical_spells = {
+							# 40 40
+						# }
+					# }
+					# earmark = gehennas_golden_hounds_troops
+				# }
+			# }
+		# }
+
+# }
+	# }
+	
+	# ai_will_do = {
+	# factor = 1000
+	# }
+	
+	# }
+	
+# cast_final_transmutation = { 
+# is_high_prio = yes
+
+# potential = {
+# age = 16
+# NOT = { has_character_flag = cast_final_transmutation } ##there is a 30 day cool down for spells##
+# trait = lore_metal
+# has_character_modifier = magic_power_4
+# OR = {
+				# any_current_enemy = {
+						# at_location = ROOT
+						# in_command = yes
+				# }
+				
+					# any_current_enemy = {
+						# any_vassal = {
+						# at_location = ROOT
+						# in_command = yes
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# at_location = ROOT
+								# in_command = yes
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# at_location = ROOT
+									# in_command = yes
+								# }
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# any_vassal = {
+										# at_location = ROOT
+										# in_command = yes
+									# }
+								# }
+							# }
+						# }
+					# }
+			# }
+# }
+
+# allow = {
+# age = 16
+# NOT = { has_character_flag = cast_final_transmutation } ##there is a 30 day cool down for spells##
+# trait = lore_metal
+# has_character_modifier = magic_power_4
+# OR = {
+				# any_current_enemy = {
+						# at_location = ROOT
+						# in_command = yes
+				# }
+				
+					# any_current_enemy = {
+						# any_vassal = {
+						# at_location = ROOT
+						# in_command = yes
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# at_location = ROOT
+								# in_command = yes
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# at_location = ROOT
+									# in_command = yes
+								# }
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# any_vassal = {
+										# at_location = ROOT
+										# in_command = yes
+									# }
+								# }
+							# }
+						# }
+					# }
+			# }
+# }
+
+# effect = {
+# ROOT = { 
+# character_event = { id = metal.2 days = 30 } 
+# set_character_flag = cast_final_transmutation
+# location = {
+			# ROOT = {
+				# spawn_unit = {
+					# province = PREV
+					# troops = {
+						# magical_spells = {
+							# 60 60
+						# }
+					# }
+					# earmark = final_transmutation_troops
+				# }
+			# }
+		# }
+
+# }
+	# }
+	
+	# ai_will_do = {
+	# factor = 1000
+	# }
+	
+	# }
+
+
+# ##LORE LIFE MAGIC##
+
+# cast_awakening_of_the_wood = {
+# is_high_prio = yes
+
+# potential = {
+# age = 16
+# NOT = { has_character_flag = cast_awakening_of_the_wood } ##there is a 30 day cool down for spells##
+# trait = lore_life
+# OR = {
+# has_character_modifier = magic_power_1
+# has_character_modifier = magic_power_2
+# has_character_modifier = magic_power_3
+# has_character_modifier = magic_power_4
+# }
+# OR = {
+				# any_current_enemy = {
+						# at_location = ROOT
+						# in_command = yes
+				# }
+				
+					# any_current_enemy = {
+						# any_vassal = {
+						# at_location = ROOT
+						# in_command = yes
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# at_location = ROOT
+								# in_command = yes
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# at_location = ROOT
+									# in_command = yes
+								# }
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# any_vassal = {
+										# at_location = ROOT
+										# in_command = yes
+									# }
+								# }
+							# }
+						# }
+					# }
+			# }
+# }
+
+# allow = {
+# age = 16
+# NOT = { has_character_flag = cast_awakening_of_the_wood } ##there is a 30 day cool down for spells##
+# trait = lore_life
+# OR = {
+# has_character_modifier = magic_power_1
+# has_character_modifier = magic_power_2
+# has_character_modifier = magic_power_3
+# has_character_modifier = magic_power_4
+# }
+# OR = {
+				# any_current_enemy = {
+						# at_location = ROOT
+						# in_command = yes
+				# }
+				
+					# any_current_enemy = {
+						# any_vassal = {
+						# at_location = ROOT
+						# in_command = yes
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# at_location = ROOT
+								# in_command = yes
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# at_location = ROOT
+									# in_command = yes
+								# }
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# any_vassal = {
+										# at_location = ROOT
+										# in_command = yes
+									# }
+								# }
+							# }
+						# }
+					# }
+			# }
+# }
+
+# effect = {
+# ROOT = { 
+# set_character_flag = cast_awakening_of_the_wood
+# character_event = { id = life.0 days = 30 } 
+# location = {
+			# ROOT = {
+				# spawn_unit = {
+					# province = PREV
+					# troops = {
+						# magical_spells = {
+							# 20 20
+						# }
+					# }
+					# earmark = awakening_of_the_wood_troops
+				# }
+			# }
+		# }
+
+# }
+	# }
+	
+	# ai_will_do = {
+	# factor = 1000
+	# }
+	
+	# }
+
+# cast_shield_of_thorns = {
+# is_high_prio = yes
+
+# potential = {
+# age = 16
+# NOT = { has_character_flag = cast_shield_of_thorns } ##there is a 30 day cool down for spells##
+# trait = lore_life
+# OR = {
+# has_character_modifier = magic_power_2
+# has_character_modifier = magic_power_3
+# has_character_modifier = magic_power_4
+# }
+# OR = {
+				# any_current_enemy = {
+						# at_location = ROOT
+						# in_command = yes
+				# }
+				
+					# any_current_enemy = {
+						# any_vassal = {
+						# at_location = ROOT
+						# in_command = yes
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# at_location = ROOT
+								# in_command = yes
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# at_location = ROOT
+									# in_command = yes
+								# }
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# any_vassal = {
+										# at_location = ROOT
+										# in_command = yes
+									# }
+								# }
+							# }
+						# }
+					# }
+			# }
+# }
+
+# allow = {
+# age = 16
+# NOT = { has_character_flag = cast_shield_of_thorns } ##there is a 30 day cool down for spells##
+# trait = lore_life
+# OR = {
+# has_character_modifier = magic_power_2
+# has_character_modifier = magic_power_3
+# has_character_modifier = magic_power_4
+# }
+# OR = {
+				# any_current_enemy = {
+						# at_location = ROOT
+						# in_command = yes
+				# }
+				
+					# any_current_enemy = {
+						# any_vassal = {
+						# at_location = ROOT
+						# in_command = yes
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# at_location = ROOT
+								# in_command = yes
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# at_location = ROOT
+									# in_command = yes
+								# }
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# any_vassal = {
+										# at_location = ROOT
+										# in_command = yes
+									# }
+								# }
+							# }
+						# }
+					# }
+			# }
+# }
+
+# effect = {
+# ROOT = { 
+# set_character_flag = cast_shield_of_thorns
+# character_event = { id = life.1 days = 30 } 
+# location = {
+			# ROOT = {
+				# spawn_unit = {
+					# province = PREV
+					# troops = {
+						# magical_spells = {
+							# 40 40
+						# }
+					# }
+					# earmark = shield_of_thorns_troops
+				# }
+			# }
+		# }
+
+# }
+	# }
+	
+	# ai_will_do = {
+	# factor = 1000
+	# }
+	
+	# }
+	
+# cast_the_dwellers_below = { 
+# is_high_prio = yes
+
+# potential = {
+# age = 16
+# NOT = { has_character_flag = cast_the_dwellers_below } ##there is a 30 day cool down for spells##
+# trait = lore_life
+# has_character_modifier = magic_power_4
+# OR = {
+				# any_current_enemy = {
+						# at_location = ROOT
+						# in_command = yes
+				# }
+				
+					# any_current_enemy = {
+						# any_vassal = {
+						# at_location = ROOT
+						# in_command = yes
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# at_location = ROOT
+								# in_command = yes
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# at_location = ROOT
+									# in_command = yes
+								# }
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# any_vassal = {
+										# at_location = ROOT
+										# in_command = yes
+									# }
+								# }
+							# }
+						# }
+					# }
+			# }
+# }
+
+# allow = {
+# age = 16
+# NOT = { has_character_flag = cast_the_dwellers_below } ##there is a 30 day cool down for spells##
+# trait = lore_life
+# has_character_modifier = magic_power_4
+# OR = {
+				# any_current_enemy = {
+						# at_location = ROOT
+						# in_command = yes
+				# }
+				
+					# any_current_enemy = {
+						# any_vassal = {
+						# at_location = ROOT
+						# in_command = yes
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# at_location = ROOT
+								# in_command = yes
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# at_location = ROOT
+									# in_command = yes
+								# }
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# any_vassal = {
+										# at_location = ROOT
+										# in_command = yes
+									# }
+								# }
+							# }
+						# }
+					# }
+			# }
+# }
+
+# effect = {
+# ROOT = { 
+# character_event = { id = life.2 days = 30 } 
+# set_character_flag = cast_the_dwellers_below
+# location = {
+			# ROOT = {
+				# spawn_unit = {
+					# province = PREV
+					# troops = {
+						# magical_spells = {
+							# 60 60
+						# }
+					# }
+					# earmark = the_dwellers_below_troops
+				# }
+			# }
+		# }
+
+# }
+	# }
+	
+	# ai_will_do = {
+	# factor = 1000
+	# }
+	
+	# }
+	
+	
+# ##LORE HEAVENS MAGIC##
+
+# cast_iceshard_blizzard = {
+# is_high_prio = yes
+
+# potential = {
+# age = 16
+# NOT = { has_character_flag = cast_iceshard_blizzard } ##there is a 30 day cool down for spells##
+# trait = lore_heavens
+# OR = {
+# has_character_modifier = magic_power_1
+# has_character_modifier = magic_power_2
+# has_character_modifier = magic_power_3
+# has_character_modifier = magic_power_4
+# }
+# OR = {
+				# any_current_enemy = {
+						# at_location = ROOT
+						# in_command = yes
+				# }
+				
+					# any_current_enemy = {
+						# any_vassal = {
+						# at_location = ROOT
+						# in_command = yes
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# at_location = ROOT
+								# in_command = yes
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# at_location = ROOT
+									# in_command = yes
+								# }
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# any_vassal = {
+										# at_location = ROOT
+										# in_command = yes
+									# }
+								# }
+							# }
+						# }
+					# }
+			# }
+# }
+
+# allow = {
+# age = 16
+# NOT = { has_character_flag = cast_iceshard_blizzard } ##there is a 30 day cool down for spells##
+# trait = lore_heavens
+# OR = {
+# has_character_modifier = magic_power_1
+# has_character_modifier = magic_power_2
+# has_character_modifier = magic_power_3
+# has_character_modifier = magic_power_4
+# }
+# OR = {
+				# any_current_enemy = {
+						# at_location = ROOT
+						# in_command = yes
+				# }
+				
+					# any_current_enemy = {
+						# any_vassal = {
+						# at_location = ROOT
+						# in_command = yes
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# at_location = ROOT
+								# in_command = yes
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# at_location = ROOT
+									# in_command = yes
+								# }
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# any_vassal = {
+										# at_location = ROOT
+										# in_command = yes
+									# }
+								# }
+							# }
+						# }
+					# }
+			# }
+# }
+
+# effect = {
+# ROOT = { 
+# set_character_flag = cast_iceshard_blizzard
+# character_event = { id = heavens.0 days = 30 } 
+# location = {
+			# ROOT = {
+				# spawn_unit = {
+					# province = PREV
+					# troops = {
+						# magical_spells = {
+							# 20 20
+						# }
+					# }
+					# earmark = iceshard_blizzard_troops
+				# }
+			# }
+		# }
+
+# }
+	# }
+	
+	# ai_will_do = {
+	# factor = 1000
+	# }
+	
+	# }
+
+# cast_urannons_thunderbolt = {
+# is_high_prio = yes
+
+# potential = {
+# age = 16
+# NOT = { has_character_flag = cast_urannons_thunderbolt } ##there is a 30 day cool down for spells##
+# trait = lore_heavens
+# OR = {
+# has_character_modifier = magic_power_2
+# has_character_modifier = magic_power_3
+# has_character_modifier = magic_power_4
+# }
+# OR = {
+				# any_current_enemy = {
+						# at_location = ROOT
+						# in_command = yes
+				# }
+				
+					# any_current_enemy = {
+						# any_vassal = {
+						# at_location = ROOT
+						# in_command = yes
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# at_location = ROOT
+								# in_command = yes
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# at_location = ROOT
+									# in_command = yes
+								# }
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# any_vassal = {
+										# at_location = ROOT
+										# in_command = yes
+									# }
+								# }
+							# }
+						# }
+					# }
+			# }
+# }
+
+# allow = {
+# age = 16
+# NOT = { has_character_flag = cast_urannons_thunderbolt } ##there is a 30 day cool down for spells##
+# trait = lore_heavens
+# OR = {
+# has_character_modifier = magic_power_2
+# has_character_modifier = magic_power_3
+# has_character_modifier = magic_power_4
+# }
+# OR = {
+				# any_current_enemy = {
+						# at_location = ROOT
+						# in_command = yes
+				# }
+				
+					# any_current_enemy = {
+						# any_vassal = {
+						# at_location = ROOT
+						# in_command = yes
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# at_location = ROOT
+								# in_command = yes
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# at_location = ROOT
+									# in_command = yes
+								# }
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# any_vassal = {
+										# at_location = ROOT
+										# in_command = yes
+									# }
+								# }
+							# }
+						# }
+					# }
+			# }
+# }
+
+# effect = {
+# ROOT = { 
+# set_character_flag = cast_urannons_thunderbolt
+# character_event = { id = heavens.1 days = 30 } 
+# location = {
+			# ROOT = {
+				# spawn_unit = {
+					# province = PREV
+					# troops = {
+						# magical_spells = {
+							# 40 40
+						# }
+					# }
+					# earmark = urannons_thunderbolt_troops
+				# }
+			# }
+		# }
+
+# }
+	# }
+	
+	# ai_will_do = {
+	# factor = 1000
+	# }
+	
+	# }
+	
+# cast_chain_lightning = { 
+# is_high_prio = yes
+
+# potential = {
+# age = 16
+# NOT = { has_character_flag = cast_chain_lightning } ##there is a 30 day cool down for spells##
+# trait = lore_heavens
+# has_character_modifier = magic_power_4
+# OR = {
+				# any_current_enemy = {
+						# at_location = ROOT
+						# in_command = yes
+				# }
+				
+					# any_current_enemy = {
+						# any_vassal = {
+						# at_location = ROOT
+						# in_command = yes
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# at_location = ROOT
+								# in_command = yes
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# at_location = ROOT
+									# in_command = yes
+								# }
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# any_vassal = {
+										# at_location = ROOT
+										# in_command = yes
+									# }
+								# }
+							# }
+						# }
+					# }
+			# }
+# }
+
+# allow = {
+# age = 16
+# NOT = { has_character_flag = cast_chain_lightning } ##there is a 30 day cool down for spells##
+# trait = lore_heavens
+# has_character_modifier = magic_power_4
+# OR = {
+				# any_current_enemy = {
+						# at_location = ROOT
+						# in_command = yes
+				# }
+				
+					# any_current_enemy = {
+						# any_vassal = {
+						# at_location = ROOT
+						# in_command = yes
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# at_location = ROOT
+								# in_command = yes
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# at_location = ROOT
+									# in_command = yes
+								# }
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# any_vassal = {
+										# at_location = ROOT
+										# in_command = yes
+									# }
+								# }
+							# }
+						# }
+					# }
+			# }
+# }
+
+# effect = {
+# ROOT = { 
+# character_event = { id = heavens.2 days = 30 } 
+# set_character_flag = cast_chain_lightning
+# location = {
+			# ROOT = {
+				# spawn_unit = {
+					# province = PREV
+					# troops = {
+						# magical_spells = {
+							# 60 60
+						# }
+					# }
+					# earmark = chain_lightning_troops
+				# }
+			# }
+		# }
+
+# }
+	# }
+	
+	# ai_will_do = {
+	# factor = 1000
+	# }
+	
+	# }
+
+# ##LORE DEATH MAGIC##
+
+# cast_spirit_leech = {
+# is_high_prio = yes
+
+# potential = {
+# age = 16
+# NOT = { has_character_flag = cast_spirit_leech } ##there is a 30 day cool down for spells##
+# trait = lore_death
+# OR = {
+# has_character_modifier = magic_power_1
+# has_character_modifier = magic_power_2
+# has_character_modifier = magic_power_3
+# has_character_modifier = magic_power_4
+# }
+# OR = {
+				# any_current_enemy = {
+						# at_location = ROOT
+						# in_command = yes
+				# }
+				
+					# any_current_enemy = {
+						# any_vassal = {
+						# at_location = ROOT
+						# in_command = yes
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# at_location = ROOT
+								# in_command = yes
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# at_location = ROOT
+									# in_command = yes
+								# }
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# any_vassal = {
+										# at_location = ROOT
+										# in_command = yes
+									# }
+								# }
+							# }
+						# }
+					# }
+			# }
+# }
+
+# allow = {
+# age = 16
+# NOT = { has_character_flag = cast_spirit_leech } ##there is a 30 day cool down for spells##
+# trait = lore_death
+# OR = {
+# has_character_modifier = magic_power_1
+# has_character_modifier = magic_power_2
+# has_character_modifier = magic_power_3
+# has_character_modifier = magic_power_4
+# }
+# OR = {
+				# any_current_enemy = {
+						# at_location = ROOT
+						# in_command = yes
+				# }
+				
+					# any_current_enemy = {
+						# any_vassal = {
+						# at_location = ROOT
+						# in_command = yes
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# at_location = ROOT
+								# in_command = yes
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# at_location = ROOT
+									# in_command = yes
+								# }
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# any_vassal = {
+										# at_location = ROOT
+										# in_command = yes
+									# }
+								# }
+							# }
+						# }
+					# }
+			# }
+# }
+
+# effect = {
+# ROOT = { 
+# set_character_flag = cast_spirit_leech
+# character_event = { id = death.0 days = 30 } 
+# location = {
+			# ROOT = {
+				# spawn_unit = {
+					# province = PREV
+					# troops = {
+						# magical_spells = {
+							# 20 20
+						# }
+					# }
+					# earmark = spirit_leech_troops
+				# }
+			# }
+		# }
+
+# }
+	# }
+	
+	# ai_will_do = {
+	# factor = 1000
+	# }
+	
+	# }
+
+# cast_doom_and_darkness2 = {
+# is_high_prio = yes
+
+# potential = {
+# age = 16
+# NOT = { has_character_flag = cast_doom_and_darkness } ##there is a 30 day cool down for spells##
+# trait = lore_death
+# OR = {
+# has_character_modifier = magic_power_2
+# has_character_modifier = magic_power_3
+# has_character_modifier = magic_power_4
+# }
+# OR = {
+				# any_current_enemy = {
+						# at_location = ROOT
+						# in_command = yes
+				# }
+				
+					# any_current_enemy = {
+						# any_vassal = {
+						# at_location = ROOT
+						# in_command = yes
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# at_location = ROOT
+								# in_command = yes
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# at_location = ROOT
+									# in_command = yes
+								# }
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# any_vassal = {
+										# at_location = ROOT
+										# in_command = yes
+									# }
+								# }
+							# }
+						# }
+					# }
+			# }
+# }
+
+# allow = {
+# age = 16
+# NOT = { has_character_flag = cast_doom_and_darkness } ##there is a 30 day cool down for spells##
+# trait = lore_death
+# OR = {
+# has_character_modifier = magic_power_2
+# has_character_modifier = magic_power_3
+# has_character_modifier = magic_power_4
+# }
+# OR = {
+				# any_current_enemy = {
+						# at_location = ROOT
+						# in_command = yes
+				# }
+				
+					# any_current_enemy = {
+						# any_vassal = {
+						# at_location = ROOT
+						# in_command = yes
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# at_location = ROOT
+								# in_command = yes
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# at_location = ROOT
+									# in_command = yes
+								# }
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# any_vassal = {
+										# at_location = ROOT
+										# in_command = yes
+									# }
+								# }
+							# }
+						# }
+					# }
+			# }
+# }
+
+# effect = {
+# ROOT = { 
+# set_character_flag = cast_doom_and_darkness
+# character_event = { id = death.1 days = 30 } 
+# location = {
+			# ROOT = {
+				# spawn_unit = {
+					# province = PREV
+					# troops = {
+						# magical_spells = {
+							# 40 40
+						# }
+					# }
+					# earmark = doom_and_darkness_troops
+				# }
+			# }
+		# }
+
+# }
+	# }
+	
+	# ai_will_do = {
+	# factor = 1000
+	# }
+	
+	# }
+	
+# cast_purple_sun_of_xereus2 = { 
+# is_high_prio = yes
+
+# potential = {
+# age = 16
+# NOT = { has_character_flag = cast_purple_sun_of_xereus } ##there is a 30 day cool down for spells##
+# trait = lore_death
+# has_character_modifier = magic_power_4
+# OR = {
+				# any_current_enemy = {
+						# at_location = ROOT
+						# in_command = yes
+				# }
+				
+					# any_current_enemy = {
+						# any_vassal = {
+						# at_location = ROOT
+						# in_command = yes
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# at_location = ROOT
+								# in_command = yes
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# at_location = ROOT
+									# in_command = yes
+								# }
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# any_vassal = {
+										# at_location = ROOT
+										# in_command = yes
+									# }
+								# }
+							# }
+						# }
+					# }
+			# }
+# }
+
+# allow = {
+# age = 16
+# NOT = { has_character_flag = cast_purple_sun_of_xereus } ##there is a 30 day cool down for spells##
+# trait = lore_death
+# has_character_modifier = magic_power_4
+# OR = {
+				# any_current_enemy = {
+						# at_location = ROOT
+						# in_command = yes
+				# }
+				
+					# any_current_enemy = {
+						# any_vassal = {
+						# at_location = ROOT
+						# in_command = yes
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# at_location = ROOT
+								# in_command = yes
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# at_location = ROOT
+									# in_command = yes
+								# }
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# any_vassal = {
+										# at_location = ROOT
+										# in_command = yes
+									# }
+								# }
+							# }
+						# }
+					# }
+			# }
+# }
+
+# effect = {
+# ROOT = { 
+# character_event = { id = death.2 days = 30 } 
+# set_character_flag = cast_purple_sun_of_xereus
+# location = {
+			# ROOT = {
+				# spawn_unit = {
+					# province = PREV
+					# troops = {
+						# magical_spells = {
+							# 60 60
+						# }
+					# }
+					# earmark = purple_sun_of_xereus_troops
+				# }
+			# }
+		# }
+
+# }
+	# }
+	
+	# ai_will_do = {
+	# factor = 1000
+	# }
+	
+	# }
+
+	
+# ##LORE SHADOW MAGIC##
+
+# #Shadow magic seems to have no direct damage spells##
+
+
+# ##LORE WAAAGH MAGIC##
+
+
+# cast_gaze_of_gork = {
+# is_high_prio = yes
+
+# potential = {
+# age = 16
+# NOT = { has_character_flag = cast_gaze_of_gork } ##there is a 30 day cool down for spells##
+# trait = greenskin_shaman
+# OR = {
+# has_character_modifier = magic_power_1
+# has_character_modifier = magic_power_2
+# has_character_modifier = magic_power_3
+# has_character_modifier = magic_power_4
+# }
+# OR = {
+				# any_current_enemy = {
+						# at_location = ROOT
+						# in_command = yes
+				# }
+				
+					# any_current_enemy = {
+						# any_vassal = {
+						# at_location = ROOT
+						# in_command = yes
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# at_location = ROOT
+								# in_command = yes
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# at_location = ROOT
+									# in_command = yes
+								# }
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# any_vassal = {
+										# at_location = ROOT
+										# in_command = yes
+									# }
+								# }
+							# }
+						# }
+					# }
+			# }
+# }
+
+# allow = {
+# age = 16
+# NOT = { has_character_flag = cast_gaze_of_gork } ##there is a 30 day cool down for spells##
+# trait = greenskin_shaman
+# OR = {
+# has_character_modifier = magic_power_1
+# has_character_modifier = magic_power_2
+# has_character_modifier = magic_power_3
+# has_character_modifier = magic_power_4
+# }
+# OR = {
+				# any_current_enemy = {
+						# at_location = ROOT
+						# in_command = yes
+				# }
+				
+					# any_current_enemy = {
+						# any_vassal = {
+						# at_location = ROOT
+						# in_command = yes
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# at_location = ROOT
+								# in_command = yes
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# at_location = ROOT
+									# in_command = yes
+								# }
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# any_vassal = {
+										# at_location = ROOT
+										# in_command = yes
+									# }
+								# }
+							# }
+						# }
+					# }
+			# }
+# }
+
+# effect = {
+# ROOT = { 
+# set_character_flag = cast_gaze_of_gork
+# character_event = { id = waaagh.0 days = 30 } 
+# location = {
+			# ROOT = {
+				# spawn_unit = {
+					# province = PREV
+					# troops = {
+						# magical_spells = {
+							# 20 20
+						# }
+					# }
+					# earmark = gaze_of_gork_troops
+				# }
+			# }
+		# }
+
+# }
+	# }
+	
+	# ai_will_do = {
+	# factor = 1000
+	# }
+	
+	# }
+
+# cast_foot_of_gork = {
+# is_high_prio = yes
+
+# potential = {
+# age = 16
+# NOT = { has_character_flag = cast_foot_of_gork } ##there is a 30 day cool down for spells##
+# trait = greenskin_shaman
+# OR = {
+# has_character_modifier = magic_power_2
+# has_character_modifier = magic_power_3
+# has_character_modifier = magic_power_4
+# }
+# OR = {
+				# any_current_enemy = {
+						# at_location = ROOT
+						# in_command = yes
+				# }
+				
+					# any_current_enemy = {
+						# any_vassal = {
+						# at_location = ROOT
+						# in_command = yes
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# at_location = ROOT
+								# in_command = yes
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# at_location = ROOT
+									# in_command = yes
+								# }
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# any_vassal = {
+										# at_location = ROOT
+										# in_command = yes
+									# }
+								# }
+							# }
+						# }
+					# }
+			# }
+# }
+
+# allow = {
+# age = 16
+# NOT = { has_character_flag = cast_foot_of_gork } ##there is a 30 day cool down for spells##
+# trait = greenskin_shaman
+# OR = {
+# has_character_modifier = magic_power_2
+# has_character_modifier = magic_power_3
+# has_character_modifier = magic_power_4
+# }
+# OR = {
+				# any_current_enemy = {
+						# at_location = ROOT
+						# in_command = yes
+				# }
+				
+					# any_current_enemy = {
+						# any_vassal = {
+						# at_location = ROOT
+						# in_command = yes
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# at_location = ROOT
+								# in_command = yes
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# at_location = ROOT
+									# in_command = yes
+								# }
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# any_vassal = {
+										# at_location = ROOT
+										# in_command = yes
+									# }
+								# }
+							# }
+						# }
+					# }
+			# }
+# }
+
+# effect = {
+# ROOT = { 
+# set_character_flag = cast_foot_of_gork
+# character_event = { id = waaagh.1 days = 30 } 
+# location = {
+			# ROOT = {
+				# spawn_unit = {
+					# province = PREV
+					# troops = {
+						# magical_spells = {
+							# 40 40
+						# }
+					# }
+					# earmark = foot_of_gork_troops
+				# }
+			# }
+		# }
+
+# }
+	# }
+	
+	# ai_will_do = {
+	# factor = 1000
+	# }
+	
+	# }
+	
+# cast_mork_wants_ya = { 
+# is_high_prio = yes
+
+# potential = {
+# age = 16
+# NOT = { has_character_flag = cast_mork_wants_ya } ##there is a 30 day cool down for spells##
+# trait = greenskin_shaman
+# has_character_modifier = magic_power_4
+# OR = {
+				# any_current_enemy = {
+						# at_location = ROOT
+						# in_command = yes
+				# }
+				
+					# any_current_enemy = {
+						# any_vassal = {
+						# at_location = ROOT
+						# in_command = yes
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# at_location = ROOT
+								# in_command = yes
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# at_location = ROOT
+									# in_command = yes
+								# }
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# any_vassal = {
+										# at_location = ROOT
+										# in_command = yes
+									# }
+								# }
+							# }
+						# }
+					# }
+			# }
+# }
+
+# allow = {
+# age = 16
+# NOT = { has_character_flag = cast_mork_wants_ya } ##there is a 30 day cool down for spells##
+# trait = greenskin_shaman
+# has_character_modifier = magic_power_4
+# OR = {
+				# any_current_enemy = {
+						# at_location = ROOT
+						# in_command = yes
+				# }
+				
+					# any_current_enemy = {
+						# any_vassal = {
+						# at_location = ROOT
+						# in_command = yes
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# at_location = ROOT
+								# in_command = yes
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# at_location = ROOT
+									# in_command = yes
+								# }
+							# }
+						# }
+					# }
+					# any_current_enemy = {
+						# any_vassal = {
+							# any_vassal = {
+								# any_vassal = {
+									# any_vassal = {
+										# at_location = ROOT
+										# in_command = yes
+									# }
+								# }
+							# }
+						# }
+					# }
+			# }
+# }
+
+# effect = {
+# ROOT = { 
+# character_event = { id = waaagh.2 days = 30 } 
+# set_character_flag = cast_mork_wants_ya
+# location = {
+			# ROOT = {
+				# spawn_unit = {
+					# province = PREV
+					# troops = {
+						# magical_spells = {
+							# 60 60
+						# }
+					# }
+					# earmark = mork_wants_ya_troops
+				# }
+			# }
+		# }
+
+# }
+	# }
+	
+	# ai_will_do = {
+	# factor = 1000
+	# }
+	
+	# }	
+	
+	# }

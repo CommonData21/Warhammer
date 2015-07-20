@@ -1,0 +1,15 @@
+# c_sopa
+
+# County Title
+title = c_sopa
+
+# Settlements
+max_settlements = 1
+
+b_sopa = tribal
+
+# Misc
+culture = lizardman
+religion = old_ones
+terrain = jungle
+#History

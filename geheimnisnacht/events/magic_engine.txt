@@ -1,0 +1,6852 @@
+################################
+# Joel Williamson <modding@joelwilliamson.ca>
+# Compatible with Geheimnisnacht 0.1.4
+# Battlefield magic, event based system
+#
+# The combat magic system is triggered by a combat_pulse. This fires
+# magicengine.12, the lore dispatcher. The character will be given a selection
+# of lores to choose from. In most cases, a wizard has one lore and will be
+# shown one option. If a character has multiple lores, they can choose amongst
+# them.
+# Once a lore has been chosen, a menu will appear with the spells of that lore
+# the wizard is capable of casting. This is currently limited to the spell
+# precisely corresponding to their magic_power. Each option on this menu contains
+# the effects of the spell. Any miscast effects should also go here. The effect
+# of a spell is typically to summon a number of troops to the battle. These will
+# be given a random leader from the court of the character actually involved in
+# the war. (E.g. If Malekith declares a war, and Morathi casts a spell, the
+# will come from Malekith's court.)
+#
+# Once the battle is finished, magicengine.10 will be triggered. This will reap
+# all the magical_spells belonging to the war participant. ISSUE: If there are
+# no leaders remaining alive, the troops may remain!
+#
+# 30(?) days after casting the spell, a flag is cleared to allow the character
+# to cast it again.
+
+
+# The following changes must be made to other files to integrate this event set
+# * the trait greenskin_shaman must be changed to lore_waaagh
+# * magicengien.12 -> magicengine.12 in common/on_actions/00_on_actions.txt[on_combat_pulse.events]
+
+
+### Used Events
+# 10 - clear the event forces
+# 12 - dispatch to the correct lore
+# 50-64 - Handle each lore
+# 62-100 - Reserved for future lores (esp. chaotic magic)
+# 300-389 - Clear magic flags
+# 390-605 - Reserved for clearing flags
+namespace = magicengine
+
+# make_unit(no_spells_in_unit)
+
+
+# make_spell(lore,num,trigger,effect,ai_weight)
+
+
+
+
+#clear_spell_flags(spell_num,lore_num,lore_name)
+
+
+
+# make_lore(lore_num,lore,lvl1,lvl2,lvl3,lvl4)
+
+
+
+### LORE dark_magic ###
+character_event = {
+	id = magicengine.50
+	title = dark_magic_cast_title
+	desc = dark_magic_cast_desc
+	is_triggered_only = yes
+	picture = GFX_evt_mage_lore_dark_magic
+	
+	trigger = {
+		is_alive = yes
+		OR = {
+			has_character_modifier = magic_power_1
+			has_character_modifier = magic_power_2
+			has_character_modifier = magic_power_3
+			has_character_modifier = magic_power_4
+			}
+		trait = lore_dark_magic
+		}
+	
+	weight_multiplier = {
+		days = 1
+		modifier = {
+			OR = {
+				has_character_modifier = magic_power_1
+				has_character_modifier = magic_power_2
+				has_character_modifier = magic_power_3
+				has_character_modifier = magic_power_4
+				}
+			factor = 500
+			}
+		}
+	
+	option = {
+		name = dark_magic_level1_opt
+
+		clr_character_flag = casting_battle_magic
+		trigger = {
+			OR = {
+				has_character_modifier = magic_power_1
+				has_character_modifier = magic_power_2
+				has_character_modifier = magic_power_3
+				has_character_modifier = magic_power_4
+				}
+			NOT = { has_character_flag = cast_dark_magic_1 }
+			}
+		location = {
+			ROOT = {
+				if = {
+					limit= { any_war = { always = yes } }
+					random_courtier = {
+						spawn_unit = {
+							province = PREVPREV
+							owner = ROOT
+							home = PREVPREV
+							leader = THIS
+							earmark = magical_spells
+							attrition = 1.0
+							troops = { magical_spells = { 25 25 } }
+							}
+						}
+					}
+				}
+			ROOT = {
+				if = {
+					limit = { independent = false }
+					liege = {
+						if = {
+							limit = { any_war = { always = yes } }
+							random_courtier = {
+								spawn_unit = {
+									province = PREVPREVPREV
+									owner = PREV
+									home = PREVPREVPREV
+									leader = THIS
+									earmark = magical_spells
+									attrition = 1.0
+									troops = { magical_spells = { 25 25 } }
+									}
+								}
+							}
+						}
+					}
+				}}
+		set_character_flag = cast_dark_magic_1
+		ai_chance = { factor = 1 }
+		character_event = {
+			id = magicengine.300
+			days = 60
+			}
+		}
+	
+	option = {
+		name = dark_magic_level2_opt
+
+		clr_character_flag = casting_battle_magic
+		trigger = {
+			OR = {
+				has_character_modifier = magic_power_2
+				has_character_modifier = magic_power_3
+				has_character_modifier = magic_power_4
+				}
+			NOT = { has_character_flag = cast_dark_magic_2 }
+			}
+		location = {
+			ROOT = {
+				if = {
+					limit= { any_war = { always = yes } }
+					random_courtier = {
+						spawn_unit = {
+							province = PREVPREV
+							owner = ROOT
+							home = PREVPREV
+							leader = THIS
+							earmark = magical_spells
+							attrition = 1.0
+							troops = { magical_spells = { 50 50 } }
+							}
+						}
+					}
+				}
+			ROOT = {
+				if = {
+					limit = { independent = false }
+					liege = {
+						if = {
+							limit = { any_war = { always = yes } }
+							random_courtier = {
+								spawn_unit = {
+									province = PREVPREVPREV
+									owner = PREV
+									home = PREVPREVPREV
+									leader = THIS
+									earmark = magical_spells
+									attrition = 1.0
+									troops = { magical_spells = { 50 50 } }
+									}
+								}
+							}
+						}
+					}
+				}}
+		set_character_flag = cast_dark_magic_2
+		ai_chance = { factor = 10 }
+		character_event = {
+			id = magicengine.301
+			days = 60
+			}
+		}
+	
+	option = {
+		name = dark_magic_level3_opt
+
+		clr_character_flag = casting_battle_magic
+		trigger = {
+			OR = {
+				has_character_modifier = magic_power_3
+				has_character_modifier = magic_power_4
+				}
+			NOT = { has_character_flag = cast_dark_magic_3 }
+			}
+		location = {
+			ROOT = {
+				if = {
+					limit= { any_war = { always = yes } }
+					random_courtier = {
+						spawn_unit = {
+							province = PREVPREV
+							owner = ROOT
+							home = PREVPREV
+							leader = THIS
+							earmark = magical_spells
+							attrition = 1.0
+							troops = { magical_spells = { 75 75 } }
+							}
+						}
+					}
+				}
+			ROOT = {
+				if = {
+					limit = { independent = false }
+					liege = {
+						if = {
+							limit = { any_war = { always = yes } }
+							random_courtier = {
+								spawn_unit = {
+									province = PREVPREVPREV
+									owner = PREV
+									home = PREVPREVPREV
+									leader = THIS
+									earmark = magical_spells
+									attrition = 1.0
+									troops = { magical_spells = { 75 75 } }
+									}
+								}
+							}
+						}
+					}
+				}}
+		set_character_flag = cast_dark_magic_3
+		ai_chance = { factor = 100 }
+		character_event = {
+			id = magicengine.302
+			days = 60
+			}
+		}
+	
+	option = {
+		name = dark_magic_level4_opt
+
+		clr_character_flag = casting_battle_magic
+		trigger = {
+			has_character_modifier = magic_power_4
+			NOT = { has_character_flag = cast_dark_magic_4 }
+			}
+		location = {
+			ROOT = {
+				if = {
+					limit= { any_war = { always = yes } }
+					random_courtier = {
+						spawn_unit = {
+							province = PREVPREV
+							owner = ROOT
+							home = PREVPREV
+							leader = THIS
+							earmark = magical_spells
+							attrition = 1.0
+							troops = { magical_spells = { 100 100 } }
+							}
+						}
+					}
+				}
+			ROOT = {
+				if = {
+					limit = { independent = false }
+					liege = {
+						if = {
+							limit = { any_war = { always = yes } }
+							random_courtier = {
+								spawn_unit = {
+									province = PREVPREVPREV
+									owner = PREV
+									home = PREVPREVPREV
+									leader = THIS
+									earmark = magical_spells
+									attrition = 1.0
+									troops = { magical_spells = { 100 100 } }
+									}
+								}
+							}
+						}
+					}
+				}}
+		set_character_flag = cast_dark_magic_4
+		ai_chance = { factor = 1000 }
+		character_event = {
+			id = magicengine.303
+			days = 60
+			}
+		}
+		
+	option = {
+		name = EVTOPTcant_cast_more_spells
+		trigger = {
+			has_character_flag = cast_dark_magic_1
+			has_character_flag = cast_dark_magic_2
+			has_character_flag = cast_dark_magic_3
+			has_character_flag = cast_dark_magic_4
+		}
+		
+		clr_character_flag = casting_battle_magic		
+	}
+}
+character_event = {
+	id = magicengine.300
+	title = clear_spell_flag_title
+	desc = clear_spell_flag_desc
+	hide_window = yes
+	
+	trigger = {
+		has_character_flag = cast_dark_magic_1
+		}
+	
+	immediate = {
+		if = {
+			limit = {
+				had_character_flag = {
+					flag = cast_dark_magic_1
+					days = 30
+					}
+				}
+			clr_character_flag = cast_dark_magic_1
+			}
+		
+		if = {
+			limit = {
+				NOT = { had_character_flag = {
+						flag = cast_dark_magic_1
+						days = 30
+						}}
+				}
+			character_event = {
+				id = magicengine.300
+				days = 30
+				}
+			}
+		}
+	}
+character_event = {
+	id = magicengine.301
+	title = clear_spell_flag_title
+	desc = clear_spell_flag_desc
+	hide_window = yes
+	
+	trigger = {
+		has_character_flag = cast_dark_magic_2
+		}
+	
+	immediate = {
+		if = {
+			limit = {
+				had_character_flag = {
+					flag = cast_dark_magic_2
+					days = 30
+					}
+				}
+			clr_character_flag = cast_dark_magic_2
+			}
+		
+		if = {
+			limit = {
+				NOT = { had_character_flag = {
+						flag = cast_dark_magic_2
+						days = 30
+						}}
+				}
+			character_event = {
+				id = magicengine.301
+				days = 30
+				}
+			}
+		}
+	}
+character_event = {
+	id = magicengine.302
+	title = clear_spell_flag_title
+	desc = clear_spell_flag_desc
+	hide_window = yes
+	
+	trigger = {
+		has_character_flag = cast_dark_magic_3
+		}
+	
+	immediate = {
+		if = {
+			limit = {
+				had_character_flag = {
+					flag = cast_dark_magic_3
+					days = 30
+					}
+				}
+			clr_character_flag = cast_dark_magic_3
+			}
+		
+		if = {
+			limit = {
+				NOT = { had_character_flag = {
+						flag = cast_dark_magic_3
+						days = 30
+						}}
+				}
+			character_event = {
+				id = magicengine.302
+				days = 30
+				}
+			}
+		}
+	}
+character_event = {
+	id = magicengine.303
+	title = clear_spell_flag_title
+	desc = clear_spell_flag_desc
+	hide_window = yes
+	
+	trigger = {
+		has_character_flag = cast_dark_magic_4
+		}
+	
+	immediate = {
+		if = {
+			limit = {
+				had_character_flag = {
+					flag = cast_dark_magic_4
+					days = 30
+					}
+				}
+			clr_character_flag = cast_dark_magic_4
+			}
+		
+		if = {
+			limit = {
+				NOT = { had_character_flag = {
+						flag = cast_dark_magic_4
+						days = 30
+						}}
+				}
+			character_event = {
+				id = magicengine.303
+				days = 30
+				}
+			}
+		}
+	}
+
+
+### LORE high_magic ###
+character_event = {
+	id = magicengine.51
+	title = high_magic_cast_title
+	desc = high_magic_cast_desc
+	is_triggered_only = yes
+	picture = GFX_evt_mage_lore_high_magic
+	
+	trigger = {
+		is_alive = yes
+		OR = {
+			has_character_modifier = magic_power_1
+			has_character_modifier = magic_power_2
+			has_character_modifier = magic_power_3
+			has_character_modifier = magic_power_4
+			}
+		trait = lore_high_magic
+		}
+	
+	weight_multiplier = {
+		days = 1
+		modifier = {
+			OR = {
+				has_character_modifier = magic_power_1
+				has_character_modifier = magic_power_2
+				has_character_modifier = magic_power_3
+				has_character_modifier = magic_power_4
+				}
+			factor = 500
+			}
+		}
+	
+	option = {
+		name = high_magic_level1_opt
+
+		clr_character_flag = casting_battle_magic
+		trigger = {
+			OR = {
+				has_character_modifier = magic_power_1
+				has_character_modifier = magic_power_2
+				has_character_modifier = magic_power_3
+				has_character_modifier = magic_power_4
+				}
+			NOT = { has_character_flag = cast_high_magic_1 }
+			}
+		location = {
+			ROOT = {
+				if = {
+					limit= { any_war = { always = yes } }
+					random_courtier = {
+						spawn_unit = {
+							province = PREVPREV
+							owner = ROOT
+							home = PREVPREV
+							leader = THIS
+							earmark = magical_spells
+							attrition = 1.0
+							troops = { magical_spells = { 25 25 } }
+							}
+						}
+					}
+				}
+			ROOT = {
+				if = {
+					limit = { independent = false }
+					liege = {
+						if = {
+							limit = { any_war = { always = yes } }
+							random_courtier = {
+								spawn_unit = {
+									province = PREVPREVPREV
+									owner = PREV
+									home = PREVPREVPREV
+									leader = THIS
+									earmark = magical_spells
+									attrition = 1.0
+									troops = { magical_spells = { 25 25 } }
+									}
+								}
+							}
+						}
+					}
+				}}
+		set_character_flag = cast_high_magic_1
+		ai_chance = { factor = 1 }
+		character_event = {
+			id = magicengine.306
+			days = 60
+			}
+		}
+	
+	option = {
+		name = high_magic_level2_opt
+
+		clr_character_flag = casting_battle_magic
+		trigger = {
+			OR = {
+				has_character_modifier = magic_power_2
+				has_character_modifier = magic_power_3
+				has_character_modifier = magic_power_4
+				}
+			NOT = { has_character_flag = cast_high_magic_2 }
+			}
+		location = {
+			ROOT = {
+				if = {
+					limit= { any_war = { always = yes } }
+					random_courtier = {
+						spawn_unit = {
+							province = PREVPREV
+							owner = ROOT
+							home = PREVPREV
+							leader = THIS
+							earmark = magical_spells
+							attrition = 1.0
+							troops = { magical_spells = { 50 50 } }
+							}
+						}
+					}
+				}
+			ROOT = {
+				if = {
+					limit = { independent = false }
+					liege = {
+						if = {
+							limit = { any_war = { always = yes } }
+							random_courtier = {
+								spawn_unit = {
+									province = PREVPREVPREV
+									owner = PREV
+									home = PREVPREVPREV
+									leader = THIS
+									earmark = magical_spells
+									attrition = 1.0
+									troops = { magical_spells = { 50 50 } }
+									}
+								}
+							}
+						}
+					}
+				}}
+		set_character_flag = cast_high_magic_2
+		ai_chance = { factor = 10 }
+		character_event = {
+			id = magicengine.307
+			days = 60
+			}
+		}
+	
+	option = {
+		name = high_magic_level3_opt
+
+		clr_character_flag = casting_battle_magic
+		trigger = {
+			OR = {
+				has_character_modifier = magic_power_3
+				has_character_modifier = magic_power_4
+				}
+			NOT = { has_character_flag = cast_high_magic_3 }
+			}
+		location = {
+			ROOT = {
+				if = {
+					limit= { any_war = { always = yes } }
+					random_courtier = {
+						spawn_unit = {
+							province = PREVPREV
+							owner = ROOT
+							home = PREVPREV
+							leader = THIS
+							earmark = magical_spells
+							attrition = 1.0
+							troops = { magical_spells = { 75 75 } }
+							}
+						}
+					}
+				}
+			ROOT = {
+				if = {
+					limit = { independent = false }
+					liege = {
+						if = {
+							limit = { any_war = { always = yes } }
+							random_courtier = {
+								spawn_unit = {
+									province = PREVPREVPREV
+									owner = PREV
+									home = PREVPREVPREV
+									leader = THIS
+									earmark = magical_spells
+									attrition = 1.0
+									troops = { magical_spells = { 75 75 } }
+									}
+								}
+							}
+						}
+					}
+				}}
+		set_character_flag = cast_high_magic_3
+		ai_chance = { factor = 100 }
+		character_event = {
+			id = magicengine.308
+			days = 60
+			}
+		}
+	
+	option = {
+		name = high_magic_level4_opt
+
+		clr_character_flag = casting_battle_magic
+		trigger = {
+			has_character_modifier = magic_power_4
+			NOT = { has_character_flag = cast_high_magic_4 }
+			}
+		location = {
+			ROOT = {
+				if = {
+					limit= { any_war = { always = yes } }
+					random_courtier = {
+						spawn_unit = {
+							province = PREVPREV
+							owner = ROOT
+							home = PREVPREV
+							leader = THIS
+							earmark = magical_spells
+							attrition = 1.0
+							troops = { magical_spells = { 100 100 } }
+							}
+						}
+					}
+				}
+			ROOT = {
+				if = {
+					limit = { independent = false }
+					liege = {
+						if = {
+							limit = { any_war = { always = yes } }
+							random_courtier = {
+								spawn_unit = {
+									province = PREVPREVPREV
+									owner = PREV
+									home = PREVPREVPREV
+									leader = THIS
+									earmark = magical_spells
+									attrition = 1.0
+									troops = { magical_spells = { 100 100 } }
+									}
+								}
+							}
+						}
+					}
+				}}
+		set_character_flag = cast_high_magic_4
+		ai_chance = { factor = 1000 }
+		character_event = {
+			id = magicengine.309
+			days = 60
+			}
+		}
+		
+		option = {
+		name = EVTOPTcant_cast_more_spells
+		trigger = {
+			has_character_flag = cast_high_magic_1
+			has_character_flag = cast_high_magic_2
+			has_character_flag = cast_high_magic_3
+			has_character_flag = cast_high_magic_4
+		}
+		
+		clr_character_flag = casting_battle_magic		
+	}
+	}
+character_event = {
+	id = magicengine.306
+	title = clear_spell_flag_title
+	desc = clear_spell_flag_desc
+	hide_window = yes
+	
+	trigger = {
+		has_character_flag = cast_high_magic_1
+		}
+	
+	immediate = {
+		if = {
+			limit = {
+				had_character_flag = {
+					flag = cast_high_magic_1
+					days = 30
+					}
+				}
+			clr_character_flag = cast_high_magic_1
+			}
+		
+		if = {
+			limit = {
+				NOT = { had_character_flag = {
+						flag = cast_high_magic_1
+						days = 30
+						}}
+				}
+			character_event = {
+				id = magicengine.306
+				days = 30
+				}
+			}
+		}
+	}
+character_event = {
+	id = magicengine.307
+	title = clear_spell_flag_title
+	desc = clear_spell_flag_desc
+	hide_window = yes
+	
+	trigger = {
+		has_character_flag = cast_high_magic_2
+		}
+	
+	immediate = {
+		if = {
+			limit = {
+				had_character_flag = {
+					flag = cast_high_magic_2
+					days = 30
+					}
+				}
+			clr_character_flag = cast_high_magic_2
+			}
+		
+		if = {
+			limit = {
+				NOT = { had_character_flag = {
+						flag = cast_high_magic_2
+						days = 30
+						}}
+				}
+			character_event = {
+				id = magicengine.307
+				days = 30
+				}
+			}
+		}
+	}
+character_event = {
+	id = magicengine.308
+	title = clear_spell_flag_title
+	desc = clear_spell_flag_desc
+	hide_window = yes
+	
+	trigger = {
+		has_character_flag = cast_high_magic_3
+		}
+	
+	immediate = {
+		if = {
+			limit = {
+				had_character_flag = {
+					flag = cast_high_magic_3
+					days = 30
+					}
+				}
+			clr_character_flag = cast_high_magic_3
+			}
+		
+		if = {
+			limit = {
+				NOT = { had_character_flag = {
+						flag = cast_high_magic_3
+						days = 30
+						}}
+				}
+			character_event = {
+				id = magicengine.308
+				days = 30
+				}
+			}
+		}
+	}
+character_event = {
+	id = magicengine.309
+	title = clear_spell_flag_title
+	desc = clear_spell_flag_desc
+	hide_window = yes
+	
+	trigger = {
+		has_character_flag = cast_high_magic_4
+		}
+	
+	immediate = {
+		if = {
+			limit = {
+				had_character_flag = {
+					flag = cast_high_magic_4
+					days = 30
+					}
+				}
+			clr_character_flag = cast_high_magic_4
+			}
+		
+		if = {
+			limit = {
+				NOT = { had_character_flag = {
+						flag = cast_high_magic_4
+						days = 30
+						}}
+				}
+			character_event = {
+				id = magicengine.309
+				days = 30
+				}
+			}
+		}
+	}
+
+
+### LORE necromancy ###
+character_event = {
+	id = magicengine.52
+	title = necromancy_cast_title
+	desc = necromancy_cast_desc
+	is_triggered_only = yes
+	picture = GFX_evt_mage_lore_necromancy
+	
+	trigger = {
+		is_alive = yes
+		OR = {
+			has_character_modifier = magic_power_1
+			has_character_modifier = magic_power_2
+			has_character_modifier = magic_power_3
+			has_character_modifier = magic_power_4
+			}
+		trait = lore_necromancy
+		}
+	
+	weight_multiplier = {
+		days = 1
+		modifier = {
+			OR = {
+				has_character_modifier = magic_power_1
+				has_character_modifier = magic_power_2
+				has_character_modifier = magic_power_3
+				has_character_modifier = magic_power_4
+				}
+			factor = 500
+			}
+		}
+	
+	option = {
+		name = necromancy_level1_opt
+
+		clr_character_flag = casting_battle_magic
+		trigger = {
+			OR = {
+				has_character_modifier = magic_power_1
+				has_character_modifier = magic_power_2
+				has_character_modifier = magic_power_3
+				has_character_modifier = magic_power_4
+				}
+			NOT = { has_character_flag = cast_necromancy_1 }
+			}
+		location = {
+			ROOT = {
+				if = {
+					limit= { any_war = { always = yes } }
+					random_courtier = {
+						spawn_unit = {
+							province = PREVPREV
+							owner = ROOT
+							home = PREVPREV
+							leader = THIS
+							earmark = magical_spells
+							attrition = 1.0
+							troops = { magical_spells = { 20 20 } }
+							}
+						}
+					}
+				}
+			ROOT = {
+				if = {
+					limit = { independent = false }
+					liege = {
+						if = {
+							limit = { any_war = { always = yes } }
+							random_courtier = {
+								spawn_unit = {
+									province = PREVPREVPREV
+									owner = PREV
+									home = PREVPREVPREV
+									leader = THIS
+									earmark = magical_spells
+									attrition = 1.0
+									troops = { magical_spells = { 20 20 } }
+									}
+								}
+							}
+						}
+					}
+				}}
+		set_character_flag = cast_necromancy_1
+		ai_chance = { factor = 1 }
+		character_event = {
+			id = magicengine.312
+			days = 60
+			}
+		}
+	
+	option = {
+		name = necromancy_level2_opt
+
+		clr_character_flag = casting_battle_magic
+		trigger = {
+			OR = {
+				has_character_modifier = magic_power_2
+				has_character_modifier = magic_power_3
+				has_character_modifier = magic_power_4
+				}
+			NOT = { has_character_flag = cast_necromancy_2 }
+			}
+		location = {
+			ROOT = {
+				if = {
+					limit= { any_war = { always = yes } }
+					random_courtier = {
+						spawn_unit = {
+							province = PREVPREV
+							owner = ROOT
+							home = PREVPREV
+							leader = THIS
+							earmark = magical_spells
+							attrition = 1.0
+							troops = { magical_spells = { 35 35 } }
+							}
+						}
+					}
+				}
+			ROOT = {
+				if = {
+					limit = { independent = false }
+					liege = {
+						if = {
+							limit = { any_war = { always = yes } }
+							random_courtier = {
+								spawn_unit = {
+									province = PREVPREVPREV
+									owner = PREV
+									home = PREVPREVPREV
+									leader = THIS
+									earmark = magical_spells
+									attrition = 1.0
+									troops = { magical_spells = { 35 35 } }
+									}
+								}
+							}
+						}
+					}
+				}}
+		set_character_flag = cast_necromancy_2
+		ai_chance = { factor = 10 }
+		character_event = {
+			id = magicengine.313
+			days = 60
+			}
+		}
+	
+	option = {
+		name = necromancy_level3_opt
+
+		clr_character_flag = casting_battle_magic
+		trigger = {
+			OR = {
+				has_character_modifier = magic_power_3
+				has_character_modifier = magic_power_4
+				}
+			NOT = { has_character_flag = cast_necromancy_3 }
+			}
+		location = {
+			ROOT = {
+				if = {
+					limit= { any_war = { always = yes } }
+					random_courtier = {
+						spawn_unit = {
+							province = PREVPREV
+							owner = ROOT
+							home = PREVPREV
+							leader = THIS
+							earmark = magical_spells
+							attrition = 1.0
+							troops = { magical_spells = { 50 50 } }
+							}
+						}
+					}
+				}
+			ROOT = {
+				if = {
+					limit = { independent = false }
+					liege = {
+						if = {
+							limit = { any_war = { always = yes } }
+							random_courtier = {
+								spawn_unit = {
+									province = PREVPREVPREV
+									owner = PREV
+									home = PREVPREVPREV
+									leader = THIS
+									earmark = magical_spells
+									attrition = 1.0
+									troops = { magical_spells = { 50 50 } }
+									}
+								}
+							}
+						}
+					}
+				}}
+		set_character_flag = cast_necromancy_3
+		ai_chance = { factor = 100 }
+		character_event = {
+			id = magicengine.314
+			days = 60
+			}
+		}
+	
+	option = {
+		name = necromancy_level4_opt
+
+		clr_character_flag = casting_battle_magic
+		trigger = {
+			has_character_modifier = magic_power_4
+			NOT = { has_character_flag = cast_necromancy_4 }
+			}
+		location = {
+			ROOT = {
+				if = {
+					limit= { any_war = { always = yes } }
+					random_courtier = {
+						spawn_unit = {
+							province = PREVPREV
+							owner = ROOT
+							home = PREVPREV
+							leader = THIS
+							earmark = magical_spells
+							attrition = 1.0
+							troops = { magical_spells = { 65 65 } }
+							}
+						}
+					}
+				}
+			ROOT = {
+				if = {
+					limit = { independent = false }
+					liege = {
+						if = {
+							limit = { any_war = { always = yes } }
+							random_courtier = {
+								spawn_unit = {
+									province = PREVPREVPREV
+									owner = PREV
+									home = PREVPREVPREV
+									leader = THIS
+									earmark = magical_spells
+									attrition = 1.0
+									troops = { magical_spells = { 65 65 } }
+									}
+								}
+							}
+						}
+					}
+				}}
+		set_character_flag = cast_necromancy_4
+		ai_chance = { factor = 1000 }
+		character_event = {
+			id = magicengine.315
+			days = 60
+			}
+		}
+	option = {
+		name = EVTOPTcant_cast_more_spells
+		trigger = {
+			has_character_flag = cast_necromancy_1
+			has_character_flag = cast_necromancy_2
+			has_character_flag = cast_necromancy_3
+			has_character_flag = cast_necromancy_4
+		}
+		
+		clr_character_flag = casting_battle_magic		
+	}
+	}
+character_event = {
+	id = magicengine.312
+	title = clear_spell_flag_title
+	desc = clear_spell_flag_desc
+	hide_window = yes
+	
+	trigger = {
+		has_character_flag = cast_necromancy_1
+		}
+	
+	immediate = {
+		if = {
+			limit = {
+				had_character_flag = {
+					flag = cast_necromancy_1
+					days = 30
+					}
+				}
+			clr_character_flag = cast_necromancy_1
+			}
+		
+		if = {
+			limit = {
+				NOT = { had_character_flag = {
+						flag = cast_necromancy_1
+						days = 30
+						}}
+				}
+			character_event = {
+				id = magicengine.312
+				days = 30
+				}
+			}
+		}
+	}
+character_event = {
+	id = magicengine.313
+	title = clear_spell_flag_title
+	desc = clear_spell_flag_desc
+	hide_window = yes
+	
+	trigger = {
+		has_character_flag = cast_necromancy_2
+		}
+	
+	immediate = {
+		if = {
+			limit = {
+				had_character_flag = {
+					flag = cast_necromancy_2
+					days = 30
+					}
+				}
+			clr_character_flag = cast_necromancy_2
+			}
+		
+		if = {
+			limit = {
+				NOT = { had_character_flag = {
+						flag = cast_necromancy_2
+						days = 30
+						}}
+				}
+			character_event = {
+				id = magicengine.313
+				days = 30
+				}
+			}
+		}
+	}
+character_event = {
+	id = magicengine.314
+	title = clear_spell_flag_title
+	desc = clear_spell_flag_desc
+	hide_window = yes
+	
+	trigger = {
+		has_character_flag = cast_necromancy_3
+		}
+	
+	immediate = {
+		if = {
+			limit = {
+				had_character_flag = {
+					flag = cast_necromancy_3
+					days = 30
+					}
+				}
+			clr_character_flag = cast_necromancy_3
+			}
+		
+		if = {
+			limit = {
+				NOT = { had_character_flag = {
+						flag = cast_necromancy_3
+						days = 30
+						}}
+				}
+			character_event = {
+				id = magicengine.314
+				days = 30
+				}
+			}
+		}
+	}
+character_event = {
+	id = magicengine.315
+	title = clear_spell_flag_title
+	desc = clear_spell_flag_desc
+	hide_window = yes
+	
+	trigger = {
+		has_character_flag = cast_necromancy_4
+		}
+	
+	immediate = {
+		if = {
+			limit = {
+				had_character_flag = {
+					flag = cast_necromancy_4
+					days = 30
+					}
+				}
+			clr_character_flag = cast_necromancy_4
+			}
+		
+		if = {
+			limit = {
+				NOT = { had_character_flag = {
+						flag = cast_necromancy_4
+						days = 30
+						}}
+				}
+			character_event = {
+				id = magicengine.315
+				days = 30
+				}
+			}
+		}
+	}
+
+
+### LORE ice ###
+character_event = {
+	id = magicengine.53
+	title = ice_cast_title
+	desc = ice_cast_desc
+	is_triggered_only = yes
+	picture = GFX_evt_mage_lore_ice
+	
+	trigger = {
+		is_alive = yes
+		OR = {
+			has_character_modifier = magic_power_1
+			has_character_modifier = magic_power_2
+			has_character_modifier = magic_power_3
+			has_character_modifier = magic_power_4
+			}
+		trait = lore_ice
+		}
+	
+	weight_multiplier = {
+		days = 1
+		modifier = {
+			OR = {
+				has_character_modifier = magic_power_1
+				has_character_modifier = magic_power_2
+				has_character_modifier = magic_power_3
+				has_character_modifier = magic_power_4
+				}
+			factor = 500
+			}
+		}
+	
+	option = {
+		name = ice_level1_opt
+
+		clr_character_flag = casting_battle_magic
+		trigger = {
+			OR = {
+				has_character_modifier = magic_power_1
+				has_character_modifier = magic_power_2
+				has_character_modifier = magic_power_3
+				has_character_modifier = magic_power_4
+				}
+			NOT = { has_character_flag = cast_ice_1 }
+			}
+		location = {
+			ROOT = {
+				if = {
+					limit= { any_war = { always = yes } }
+					random_courtier = {
+						spawn_unit = {
+							province = PREVPREV
+							owner = ROOT
+							home = PREVPREV
+							leader = THIS
+							earmark = magical_spells
+							attrition = 1.0
+							troops = { magical_spells = { 20 20 } }
+							}
+						}
+					}
+				}
+			ROOT = {
+				if = {
+					limit = { independent = false }
+					liege = {
+						if = {
+							limit = { any_war = { always = yes } }
+							random_courtier = {
+								spawn_unit = {
+									province = PREVPREVPREV
+									owner = PREV
+									home = PREVPREVPREV
+									leader = THIS
+									earmark = magical_spells
+									attrition = 1.0
+									troops = { magical_spells = { 20 20 } }
+									}
+								}
+							}
+						}
+					}
+				}}
+		set_character_flag = cast_ice_1
+		ai_chance = { factor = 1 }
+		character_event = {
+			id = magicengine.318
+			days = 60
+			}
+		}
+	
+	option = {
+		name = ice_level2_opt
+
+		clr_character_flag = casting_battle_magic
+		trigger = {
+			OR = {
+				has_character_modifier = magic_power_2
+				has_character_modifier = magic_power_3
+				has_character_modifier = magic_power_4
+				}
+			NOT = { has_character_flag = cast_ice_2 }
+			}
+		location = {
+			ROOT = {
+				if = {
+					limit= { any_war = { always = yes } }
+					random_courtier = {
+						spawn_unit = {
+							province = PREVPREV
+							owner = ROOT
+							home = PREVPREV
+							leader = THIS
+							earmark = magical_spells
+							attrition = 1.0
+							troops = { magical_spells = { 35 35 } }
+							}
+						}
+					}
+				}
+			ROOT = {
+				if = {
+					limit = { independent = false }
+					liege = {
+						if = {
+							limit = { any_war = { always = yes } }
+							random_courtier = {
+								spawn_unit = {
+									province = PREVPREVPREV
+									owner = PREV
+									home = PREVPREVPREV
+									leader = THIS
+									earmark = magical_spells
+									attrition = 1.0
+									troops = { magical_spells = { 35 35 } }
+									}
+								}
+							}
+						}
+					}
+				}}
+		set_character_flag = cast_ice_2
+		ai_chance = { factor = 10 }
+		character_event = {
+			id = magicengine.319
+			days = 60
+			}
+		}
+	
+	option = {
+		name = ice_level3_opt
+
+		clr_character_flag = casting_battle_magic
+		trigger = {
+			OR = {
+				has_character_modifier = magic_power_3
+				has_character_modifier = magic_power_4
+				}
+			NOT = { has_character_flag = cast_ice_3 }
+			}
+		location = {
+			ROOT = {
+				if = {
+					limit= { any_war = { always = yes } }
+					random_courtier = {
+						spawn_unit = {
+							province = PREVPREV
+							owner = ROOT
+							home = PREVPREV
+							leader = THIS
+							earmark = magical_spells
+							attrition = 1.0
+							troops = { magical_spells = { 50 50 } }
+							}
+						}
+					}
+				}
+			ROOT = {
+				if = {
+					limit = { independent = false }
+					liege = {
+						if = {
+							limit = { any_war = { always = yes } }
+							random_courtier = {
+								spawn_unit = {
+									province = PREVPREVPREV
+									owner = PREV
+									home = PREVPREVPREV
+									leader = THIS
+									earmark = magical_spells
+									attrition = 1.0
+									troops = { magical_spells = { 50 50 } }
+									}
+								}
+							}
+						}
+					}
+				}}
+		set_character_flag = cast_ice_3
+		ai_chance = { factor = 100 }
+		character_event = {
+			id = magicengine.320
+			days = 60
+			}
+		}
+	
+	option = {
+		name = ice_level4_opt
+
+		clr_character_flag = casting_battle_magic
+		trigger = {
+			has_character_modifier = magic_power_4
+			NOT = { has_character_flag = cast_ice_4 }
+			}
+		location = {
+			ROOT = {
+				if = {
+					limit= { any_war = { always = yes } }
+					random_courtier = {
+						spawn_unit = {
+							province = PREVPREV
+							owner = ROOT
+							home = PREVPREV
+							leader = THIS
+							earmark = magical_spells
+							attrition = 1.0
+							troops = { magical_spells = { 65 65 } }
+							}
+						}
+					}
+				}
+			ROOT = {
+				if = {
+					limit = { independent = false }
+					liege = {
+						if = {
+							limit = { any_war = { always = yes } }
+							random_courtier = {
+								spawn_unit = {
+									province = PREVPREVPREV
+									owner = PREV
+									home = PREVPREVPREV
+									leader = THIS
+									earmark = magical_spells
+									attrition = 1.0
+									troops = { magical_spells = { 65 65 } }
+									}
+								}
+							}
+						}
+					}
+				}}
+		set_character_flag = cast_ice_4
+		ai_chance = { factor = 1000 }
+		character_event = {
+			id = magicengine.321
+			days = 60
+			}
+		}
+	option = {
+		name = EVTOPTcant_cast_more_spells
+		trigger = {
+			has_character_flag = cast_ice_1
+			has_character_flag = cast_ice_2
+			has_character_flag = cast_ice_3
+			has_character_flag = cast_ice_4
+		}
+		
+		clr_character_flag = casting_battle_magic		
+	}
+	}
+character_event = {
+	id = magicengine.318
+	title = clear_spell_flag_title
+	desc = clear_spell_flag_desc
+	hide_window = yes
+	
+	trigger = {
+		has_character_flag = cast_ice_1
+		}
+	
+	immediate = {
+		if = {
+			limit = {
+				had_character_flag = {
+					flag = cast_ice_1
+					days = 30
+					}
+				}
+			clr_character_flag = cast_ice_1
+			}
+		
+		if = {
+			limit = {
+				NOT = { had_character_flag = {
+						flag = cast_ice_1
+						days = 30
+						}}
+				}
+			character_event = {
+				id = magicengine.318
+				days = 30
+				}
+			}
+		}
+	}
+character_event = {
+	id = magicengine.319
+	title = clear_spell_flag_title
+	desc = clear_spell_flag_desc
+	hide_window = yes
+	
+	trigger = {
+		has_character_flag = cast_ice_2
+		}
+	
+	immediate = {
+		if = {
+			limit = {
+				had_character_flag = {
+					flag = cast_ice_2
+					days = 30
+					}
+				}
+			clr_character_flag = cast_ice_2
+			}
+		
+		if = {
+			limit = {
+				NOT = { had_character_flag = {
+						flag = cast_ice_2
+						days = 30
+						}}
+				}
+			character_event = {
+				id = magicengine.319
+				days = 30
+				}
+			}
+		}
+	}
+character_event = {
+	id = magicengine.320
+	title = clear_spell_flag_title
+	desc = clear_spell_flag_desc
+	hide_window = yes
+	
+	trigger = {
+		has_character_flag = cast_ice_3
+		}
+	
+	immediate = {
+		if = {
+			limit = {
+				had_character_flag = {
+					flag = cast_ice_3
+					days = 30
+					}
+				}
+			clr_character_flag = cast_ice_3
+			}
+		
+		if = {
+			limit = {
+				NOT = { had_character_flag = {
+						flag = cast_ice_3
+						days = 30
+						}}
+				}
+			character_event = {
+				id = magicengine.320
+				days = 30
+				}
+			}
+		}
+	}
+character_event = {
+	id = magicengine.321
+	title = clear_spell_flag_title
+	desc = clear_spell_flag_desc
+	hide_window = yes
+	
+	trigger = {
+		has_character_flag = cast_ice_4
+		}
+	
+	immediate = {
+		if = {
+			limit = {
+				had_character_flag = {
+					flag = cast_ice_4
+					days = 30
+					}
+				}
+			clr_character_flag = cast_ice_4
+			}
+		
+		if = {
+			limit = {
+				NOT = { had_character_flag = {
+						flag = cast_ice_4
+						days = 30
+						}}
+				}
+			character_event = {
+				id = magicengine.321
+				days = 30
+				}
+			}
+		}
+	}
+
+
+### LORE fire ###
+character_event = {
+	id = magicengine.54
+	title = fire_cast_title
+	desc = fire_cast_desc
+	is_triggered_only = yes
+	picture = GFX_evt_mage_lore_fire
+	
+	trigger = {
+		is_alive = yes
+		OR = {
+			has_character_modifier = magic_power_1
+			has_character_modifier = magic_power_2
+			has_character_modifier = magic_power_3
+			has_character_modifier = magic_power_4
+			}
+		trait = lore_fire
+		}
+	
+	weight_multiplier = {
+		days = 1
+		modifier = {
+			OR = {
+				has_character_modifier = magic_power_1
+				has_character_modifier = magic_power_2
+				has_character_modifier = magic_power_3
+				has_character_modifier = magic_power_4
+				}
+			factor = 500
+			}
+		}
+	
+	option = {
+		name = fire_level1_opt
+
+		clr_character_flag = casting_battle_magic
+		trigger = {
+			OR = {
+				has_character_modifier = magic_power_1
+				has_character_modifier = magic_power_2
+				has_character_modifier = magic_power_3
+				has_character_modifier = magic_power_4
+				}
+			NOT = { has_character_flag = cast_fire_1 }
+			}
+		location = {
+			ROOT = {
+				if = {
+					limit= { any_war = { always = yes } }
+					random_courtier = {
+						spawn_unit = {
+							province = PREVPREV
+							owner = ROOT
+							home = PREVPREV
+							leader = THIS
+							earmark = magical_spells
+							attrition = 1.0
+							troops = { magical_spells = { 20 20 } }
+							}
+						}
+					}
+				}
+			ROOT = {
+				if = {
+					limit = { independent = false }
+					liege = {
+						if = {
+							limit = { any_war = { always = yes } }
+							random_courtier = {
+								spawn_unit = {
+									province = PREVPREVPREV
+									owner = PREV
+									home = PREVPREVPREV
+									leader = THIS
+									earmark = magical_spells
+									attrition = 1.0
+									troops = { magical_spells = { 20 20 } }
+									}
+								}
+							}
+						}
+					}
+				}}
+		set_character_flag = cast_fire_1
+		ai_chance = { factor = 1 }
+		character_event = {
+			id = magicengine.324
+			days = 60
+			}
+		}
+	
+	option = {
+		name = fire_level2_opt
+
+		clr_character_flag = casting_battle_magic
+		trigger = {
+			OR = {
+				has_character_modifier = magic_power_2
+				has_character_modifier = magic_power_3
+				has_character_modifier = magic_power_4
+				}
+			NOT = { has_character_flag = cast_fire_2 }
+			}
+		location = {
+			ROOT = {
+				if = {
+					limit= { any_war = { always = yes } }
+					random_courtier = {
+						spawn_unit = {
+							province = PREVPREV
+							owner = ROOT
+							home = PREVPREV
+							leader = THIS
+							earmark = magical_spells
+							attrition = 1.0
+							troops = { magical_spells = { 35 35 } }
+							}
+						}
+					}
+				}
+			ROOT = {
+				if = {
+					limit = { independent = false }
+					liege = {
+						if = {
+							limit = { any_war = { always = yes } }
+							random_courtier = {
+								spawn_unit = {
+									province = PREVPREVPREV
+									owner = PREV
+									home = PREVPREVPREV
+									leader = THIS
+									earmark = magical_spells
+									attrition = 1.0
+									troops = { magical_spells = { 35 35 } }
+									}
+								}
+							}
+						}
+					}
+				}}
+		set_character_flag = cast_fire_2
+		ai_chance = { factor = 10 }
+		character_event = {
+			id = magicengine.325
+			days = 60
+			}
+		}
+	
+	option = {
+		name = fire_level3_opt
+
+		clr_character_flag = casting_battle_magic
+		trigger = {
+			OR = {
+				has_character_modifier = magic_power_3
+				has_character_modifier = magic_power_4
+				}
+			NOT = { has_character_flag = cast_fire_3 }
+			}
+		location = {
+			ROOT = {
+				if = {
+					limit= { any_war = { always = yes } }
+					random_courtier = {
+						spawn_unit = {
+							province = PREVPREV
+							owner = ROOT
+							home = PREVPREV
+							leader = THIS
+							earmark = magical_spells
+							attrition = 1.0
+							troops = { magical_spells = { 50 50 } }
+							}
+						}
+					}
+				}
+			ROOT = {
+				if = {
+					limit = { independent = false }
+					liege = {
+						if = {
+							limit = { any_war = { always = yes } }
+							random_courtier = {
+								spawn_unit = {
+									province = PREVPREVPREV
+									owner = PREV
+									home = PREVPREVPREV
+									leader = THIS
+									earmark = magical_spells
+									attrition = 1.0
+									troops = { magical_spells = { 50 50 } }
+									}
+								}
+							}
+						}
+					}
+				}}
+		set_character_flag = cast_fire_3
+		ai_chance = { factor = 100 }
+		character_event = {
+			id = magicengine.326
+			days = 60
+			}
+		}
+	
+	option = {
+		name = fire_level4_opt
+
+		clr_character_flag = casting_battle_magic
+		trigger = {
+			has_character_modifier = magic_power_4
+			NOT = { has_character_flag = cast_fire_4 }
+			}
+		location = {
+			ROOT = {
+				if = {
+					limit= { any_war = { always = yes } }
+					random_courtier = {
+						spawn_unit = {
+							province = PREVPREV
+							owner = ROOT
+							home = PREVPREV
+							leader = THIS
+							earmark = magical_spells
+							attrition = 1.0
+							troops = { magical_spells = { 65 65 } }
+							}
+						}
+					}
+				}
+			ROOT = {
+				if = {
+					limit = { independent = false }
+					liege = {
+						if = {
+							limit = { any_war = { always = yes } }
+							random_courtier = {
+								spawn_unit = {
+									province = PREVPREVPREV
+									owner = PREV
+									home = PREVPREVPREV
+									leader = THIS
+									earmark = magical_spells
+									attrition = 1.0
+									troops = { magical_spells = { 65 65 } }
+									}
+								}
+							}
+						}
+					}
+				}}
+		set_character_flag = cast_fire_4
+		ai_chance = { factor = 1000 }
+		character_event = {
+			id = magicengine.327
+			days = 60
+			}
+		}
+		
+		option = {
+		name = EVTOPTcant_cast_more_spells
+		trigger = {
+			has_character_flag = cast_fire_1
+			has_character_flag = cast_fire_2
+			has_character_flag = cast_fire_3
+			has_character_flag = cast_fire_4
+		}
+		
+		clr_character_flag = casting_battle_magic		
+	}
+
+		}
+character_event = {
+	id = magicengine.324
+	title = clear_spell_flag_title
+	desc = clear_spell_flag_desc
+	hide_window = yes
+	
+	trigger = {
+		has_character_flag = cast_fire_1
+		}
+	
+	immediate = {
+		if = {
+			limit = {
+				had_character_flag = {
+					flag = cast_fire_1
+					days = 30
+					}
+				}
+			clr_character_flag = cast_fire_1
+			}
+		
+		if = {
+			limit = {
+				NOT = { had_character_flag = {
+						flag = cast_fire_1
+						days = 30
+						}}
+				}
+			character_event = {
+				id = magicengine.324
+				days = 30
+				}
+			}
+		}
+	}
+character_event = {
+	id = magicengine.325
+	title = clear_spell_flag_title
+	desc = clear_spell_flag_desc
+	hide_window = yes
+	
+	trigger = {
+		has_character_flag = cast_fire_2
+		}
+	
+	immediate = {
+		if = {
+			limit = {
+				had_character_flag = {
+					flag = cast_fire_2
+					days = 30
+					}
+				}
+			clr_character_flag = cast_fire_2
+			}
+		
+		if = {
+			limit = {
+				NOT = { had_character_flag = {
+						flag = cast_fire_2
+						days = 30
+						}}
+				}
+			character_event = {
+				id = magicengine.325
+				days = 30
+				}
+			}
+		}
+	}
+character_event = {
+	id = magicengine.326
+	title = clear_spell_flag_title
+	desc = clear_spell_flag_desc
+	hide_window = yes
+	
+	trigger = {
+		has_character_flag = cast_fire_3
+		}
+	
+	immediate = {
+		if = {
+			limit = {
+				had_character_flag = {
+					flag = cast_fire_3
+					days = 30
+					}
+				}
+			clr_character_flag = cast_fire_3
+			}
+		
+		if = {
+			limit = {
+				NOT = { had_character_flag = {
+						flag = cast_fire_3
+						days = 30
+						}}
+				}
+			character_event = {
+				id = magicengine.326
+				days = 30
+				}
+			}
+		}
+	}
+character_event = {
+	id = magicengine.327
+	title = clear_spell_flag_title
+	desc = clear_spell_flag_desc
+	hide_window = yes
+	
+	trigger = {
+		has_character_flag = cast_fire_4
+		}
+	
+	immediate = {
+		if = {
+			limit = {
+				had_character_flag = {
+					flag = cast_fire_4
+					days = 30
+					}
+				}
+			clr_character_flag = cast_fire_4
+			}
+		
+		if = {
+			limit = {
+				NOT = { had_character_flag = {
+						flag = cast_fire_4
+						days = 30
+						}}
+				}
+			character_event = {
+				id = magicengine.327
+				days = 30
+				}
+			}
+		}
+	}
+
+
+# N.B The lore of light is currently very underpowered
+
+### LORE light ###
+character_event = {
+	id = magicengine.55
+	title = light_cast_title
+	desc = light_cast_desc
+	is_triggered_only = yes
+	picture = GFX_evt_mage_lore_light
+	
+	trigger = {
+		is_alive = yes
+		OR = {
+			has_character_modifier = magic_power_1
+			has_character_modifier = magic_power_2
+			has_character_modifier = magic_power_3
+			has_character_modifier = magic_power_4
+			}
+		trait = lore_light
+		}
+	
+	weight_multiplier = {
+		days = 1
+		modifier = {
+			OR = {
+				has_character_modifier = magic_power_1
+				has_character_modifier = magic_power_2
+				has_character_modifier = magic_power_3
+				has_character_modifier = magic_power_4
+				}
+			factor = 500
+			}
+		}
+	
+	option = {
+		name = light_level1_opt
+
+		clr_character_flag = casting_battle_magic
+		trigger = {
+			OR = {
+				has_character_modifier = magic_power_1
+				has_character_modifier = magic_power_2
+				has_character_modifier = magic_power_3
+				has_character_modifier = magic_power_4
+				}
+			NOT = { has_character_flag = cast_light_1 }
+			}
+		location = {
+			ROOT = {
+				if = {
+					limit= { any_war = { always = yes } }
+					random_courtier = {
+						spawn_unit = {
+							province = PREVPREV
+							owner = ROOT
+							home = PREVPREV
+							leader = THIS
+							earmark = magical_spells
+							attrition = 1.0
+							troops = { magical_spells = { 15 15 } }
+							}
+						}
+					}
+				}
+			ROOT = {
+				if = {
+					limit = { independent = false }
+					liege = {
+						if = {
+							limit = { any_war = { always = yes } }
+							random_courtier = {
+								spawn_unit = {
+									province = PREVPREVPREV
+									owner = PREV
+									home = PREVPREVPREV
+									leader = THIS
+									earmark = magical_spells
+									attrition = 1.0
+									troops = { magical_spells = { 15 15 } }
+									}
+								}
+							}
+						}
+					}
+				}}
+		set_character_flag = cast_light_1
+		ai_chance = { factor = 1 }
+		character_event = {
+			id = magicengine.330
+			days = 60
+			}
+		}
+	
+	option = {
+		name = light_level2_opt
+
+		clr_character_flag = casting_battle_magic
+		trigger = {
+			OR = {
+				has_character_modifier = magic_power_2
+				has_character_modifier = magic_power_3
+				has_character_modifier = magic_power_4
+				}
+			NOT = { has_character_flag = cast_light_2 }
+			}
+		location = {
+			ROOT = {
+				if = {
+					limit= { any_war = { always = yes } }
+					random_courtier = {
+						spawn_unit = {
+							province = PREVPREV
+							owner = ROOT
+							home = PREVPREV
+							leader = THIS
+							earmark = magical_spells
+							attrition = 1.0
+							troops = { magical_spells = { 25 25 } }
+							}
+						}
+					}
+				}
+			ROOT = {
+				if = {
+					limit = { independent = false }
+					liege = {
+						if = {
+							limit = { any_war = { always = yes } }
+							random_courtier = {
+								spawn_unit = {
+									province = PREVPREVPREV
+									owner = PREV
+									home = PREVPREVPREV
+									leader = THIS
+									earmark = magical_spells
+									attrition = 1.0
+									troops = { magical_spells = { 25 25 } }
+									}
+								}
+							}
+						}
+					}
+				}}
+		set_character_flag = cast_light_2
+		ai_chance = { factor = 10 }
+		character_event = {
+			id = magicengine.331
+			days = 60
+			}
+		}
+	
+	option = {
+		name = light_level3_opt
+
+		clr_character_flag = casting_battle_magic
+		trigger = {
+			OR = {
+				has_character_modifier = magic_power_3
+				has_character_modifier = magic_power_4
+				}
+			NOT = { has_character_flag = cast_light_3 }
+			}
+		location = {
+			ROOT = {
+				if = {
+					limit= { any_war = { always = yes } }
+					random_courtier = {
+						spawn_unit = {
+							province = PREVPREV
+							owner = ROOT
+							home = PREVPREV
+							leader = THIS
+							earmark = magical_spells
+							attrition = 1.0
+							troops = { magical_spells = { 40 40 } }
+							}
+						}
+					}
+				}
+			ROOT = {
+				if = {
+					limit = { independent = false }
+					liege = {
+						if = {
+							limit = { any_war = { always = yes } }
+							random_courtier = {
+								spawn_unit = {
+									province = PREVPREVPREV
+									owner = PREV
+									home = PREVPREVPREV
+									leader = THIS
+									earmark = magical_spells
+									attrition = 1.0
+									troops = { magical_spells = { 40 40 } }
+									}
+								}
+							}
+						}
+					}
+				}}
+		set_character_flag = cast_light_3
+		ai_chance = { factor = 100 }
+		character_event = {
+			id = magicengine.332
+			days = 60
+			}
+		}
+	
+	option = {
+		name = light_level4_opt
+
+		clr_character_flag = casting_battle_magic
+		trigger = {
+			has_character_modifier = magic_power_4
+			NOT = { has_character_flag = cast_light_4 }
+			}
+		location = {
+			ROOT = {
+				if = {
+					limit= { any_war = { always = yes } }
+					random_courtier = {
+						spawn_unit = {
+							province = PREVPREV
+							owner = ROOT
+							home = PREVPREV
+							leader = THIS
+							earmark = magical_spells
+							attrition = 1.0
+							troops = { magical_spells = { 50 50 } }
+							}
+						}
+					}
+				}
+			ROOT = {
+				if = {
+					limit = { independent = false }
+					liege = {
+						if = {
+							limit = { any_war = { always = yes } }
+							random_courtier = {
+								spawn_unit = {
+									province = PREVPREVPREV
+									owner = PREV
+									home = PREVPREVPREV
+									leader = THIS
+									earmark = magical_spells
+									attrition = 1.0
+									troops = { magical_spells = { 50 50 } }
+									}
+								}
+							}
+						}
+					}
+				}}
+		set_character_flag = cast_light_4
+		ai_chance = { factor = 1000 }
+		character_event = {
+			id = magicengine.333
+			days = 60
+			}
+		}
+
+		option = {
+		name = EVTOPTcant_cast_more_spells
+		trigger = {
+			has_character_flag = cast_light_1
+			has_character_flag = cast_light_2
+			has_character_flag = cast_light_3
+			has_character_flag = cast_light_4
+		}
+		
+		clr_character_flag = casting_battle_magic		
+	}
+		}
+character_event = {
+	id = magicengine.330
+	title = clear_spell_flag_title
+	desc = clear_spell_flag_desc
+	hide_window = yes
+	
+	trigger = {
+		has_character_flag = cast_light_1
+		}
+	
+	immediate = {
+		if = {
+			limit = {
+				had_character_flag = {
+					flag = cast_light_1
+					days = 30
+					}
+				}
+			clr_character_flag = cast_light_1
+			}
+		
+		if = {
+			limit = {
+				NOT = { had_character_flag = {
+						flag = cast_light_1
+						days = 30
+						}}
+				}
+			character_event = {
+				id = magicengine.330
+				days = 30
+				}
+			}
+		}
+	}
+character_event = {
+	id = magicengine.331
+	title = clear_spell_flag_title
+	desc = clear_spell_flag_desc
+	hide_window = yes
+	
+	trigger = {
+		has_character_flag = cast_light_2
+		}
+	
+	immediate = {
+		if = {
+			limit = {
+				had_character_flag = {
+					flag = cast_light_2
+					days = 30
+					}
+				}
+			clr_character_flag = cast_light_2
+			}
+		
+		if = {
+			limit = {
+				NOT = { had_character_flag = {
+						flag = cast_light_2
+						days = 30
+						}}
+				}
+			character_event = {
+				id = magicengine.331
+				days = 30
+				}
+			}
+		}
+	}
+character_event = {
+	id = magicengine.332
+	title = clear_spell_flag_title
+	desc = clear_spell_flag_desc
+	hide_window = yes
+	
+	trigger = {
+		has_character_flag = cast_light_3
+		}
+	
+	immediate = {
+		if = {
+			limit = {
+				had_character_flag = {
+					flag = cast_light_3
+					days = 30
+					}
+				}
+			clr_character_flag = cast_light_3
+			}
+		
+		if = {
+			limit = {
+				NOT = { had_character_flag = {
+						flag = cast_light_3
+						days = 30
+						}}
+				}
+			character_event = {
+				id = magicengine.332
+				days = 30
+				}
+			}
+		}
+	}
+character_event = {
+	id = magicengine.333
+	title = clear_spell_flag_title
+	desc = clear_spell_flag_desc
+	hide_window = yes
+	
+	trigger = {
+		has_character_flag = cast_light_4
+		}
+	
+	immediate = {
+		if = {
+			limit = {
+				had_character_flag = {
+					flag = cast_light_4
+					days = 30
+					}
+				}
+			clr_character_flag = cast_light_4
+			}
+		
+		if = {
+			limit = {
+				NOT = { had_character_flag = {
+						flag = cast_light_4
+						days = 30
+						}}
+				}
+			character_event = {
+				id = magicengine.333
+				days = 30
+				}
+			}
+		}
+	}
+
+
+### LORE beast ###
+character_event = {
+	id = magicengine.56
+	title = beast_cast_title
+	desc = beast_cast_desc
+	is_triggered_only = yes
+	picture = GFX_evt_mage_lore_beasts
+	
+	trigger = {
+		is_alive = yes
+		OR = {
+			has_character_modifier = magic_power_1
+			has_character_modifier = magic_power_2
+			has_character_modifier = magic_power_3
+			has_character_modifier = magic_power_4
+			}
+		trait = lore_beasts
+		}
+	
+	weight_multiplier = {
+		days = 1
+		modifier = {
+			OR = {
+				has_character_modifier = magic_power_1
+				has_character_modifier = magic_power_2
+				has_character_modifier = magic_power_3
+				has_character_modifier = magic_power_4
+				}
+			factor = 500
+			}
+		}
+	
+	option = {
+		name = beast_level1_opt
+
+		clr_character_flag = casting_battle_magic
+		trigger = {
+			OR = {
+				has_character_modifier = magic_power_1
+				has_character_modifier = magic_power_2
+				has_character_modifier = magic_power_3
+				has_character_modifier = magic_power_4
+				}
+			NOT = { has_character_flag = cast_beast_1 }
+			}
+		location = {
+			ROOT = {
+				if = {
+					limit= { any_war = { always = yes } }
+					random_courtier = {
+						spawn_unit = {
+							province = PREVPREV
+							owner = ROOT
+							home = PREVPREV
+							leader = THIS
+							earmark = magical_spells
+							attrition = 1.0
+							troops = { magical_spells = { 20 20 } }
+							}
+						}
+					}
+				}
+			ROOT = {
+				if = {
+					limit = { independent = false }
+					liege = {
+						if = {
+							limit = { any_war = { always = yes } }
+							random_courtier = {
+								spawn_unit = {
+									province = PREVPREVPREV
+									owner = PREV
+									home = PREVPREVPREV
+									leader = THIS
+									earmark = magical_spells
+									attrition = 1.0
+									troops = { magical_spells = { 20 20 } }
+									}
+								}
+							}
+						}
+					}
+				}}
+		set_character_flag = cast_beast_1
+		ai_chance = { factor = 1 }
+		character_event = {
+			id = magicengine.336
+			days = 60
+			}
+		}
+	
+	option = {
+		name = beast_level2_opt
+
+		clr_character_flag = casting_battle_magic
+		trigger = {
+			OR = {
+				has_character_modifier = magic_power_2
+				has_character_modifier = magic_power_3
+				has_character_modifier = magic_power_4
+				}
+			NOT = { has_character_flag = cast_beast_2 }
+			}
+		location = {
+			ROOT = {
+				if = {
+					limit= { any_war = { always = yes } }
+					random_courtier = {
+						spawn_unit = {
+							province = PREVPREV
+							owner = ROOT
+							home = PREVPREV
+							leader = THIS
+							earmark = magical_spells
+							attrition = 1.0
+							troops = { magical_spells = { 35 35 } }
+							}
+						}
+					}
+				}
+			ROOT = {
+				if = {
+					limit = { independent = false }
+					liege = {
+						if = {
+							limit = { any_war = { always = yes } }
+							random_courtier = {
+								spawn_unit = {
+									province = PREVPREVPREV
+									owner = PREV
+									home = PREVPREVPREV
+									leader = THIS
+									earmark = magical_spells
+									attrition = 1.0
+									troops = { magical_spells = { 35 35 } }
+									}
+								}
+							}
+						}
+					}
+				}}
+		set_character_flag = cast_beast_2
+		ai_chance = { factor = 10 }
+		character_event = {
+			id = magicengine.337
+			days = 60
+			}
+		}
+	
+	option = {
+		name = beast_level3_opt
+
+		clr_character_flag = casting_battle_magic
+		trigger = {
+			OR = {
+				has_character_modifier = magic_power_3
+				has_character_modifier = magic_power_4
+				}
+			NOT = { has_character_flag = cast_beast_3 }
+			}
+		location = {
+			ROOT = {
+				if = {
+					limit= { any_war = { always = yes } }
+					random_courtier = {
+						spawn_unit = {
+							province = PREVPREV
+							owner = ROOT
+							home = PREVPREV
+							leader = THIS
+							earmark = magical_spells
+							attrition = 1.0
+							troops = { magical_spells = { 50 50 } }
+							}
+						}
+					}
+				}
+			ROOT = {
+				if = {
+					limit = { independent = false }
+					liege = {
+						if = {
+							limit = { any_war = { always = yes } }
+							random_courtier = {
+								spawn_unit = {
+									province = PREVPREVPREV
+									owner = PREV
+									home = PREVPREVPREV
+									leader = THIS
+									earmark = magical_spells
+									attrition = 1.0
+									troops = { magical_spells = { 50 50 } }
+									}
+								}
+							}
+						}
+					}
+				}}
+		set_character_flag = cast_beast_3
+		ai_chance = { factor = 100 }
+		character_event = {
+			id = magicengine.338
+			days = 60
+			}
+		}
+	
+	option = {
+		name = beast_level4_opt
+
+		clr_character_flag = casting_battle_magic
+		trigger = {
+			has_character_modifier = magic_power_4
+			NOT = { has_character_flag = cast_beast_4 }
+			}
+		location = {
+			ROOT = {
+				if = {
+					limit= { any_war = { always = yes } }
+					random_courtier = {
+						spawn_unit = {
+							province = PREVPREV
+							owner = ROOT
+							home = PREVPREV
+							leader = THIS
+							earmark = magical_spells
+							attrition = 1.0
+							troops = { magical_spells = { 65 65 } }
+							}
+						}
+					}
+				}
+			ROOT = {
+				if = {
+					limit = { independent = false }
+					liege = {
+						if = {
+							limit = { any_war = { always = yes } }
+							random_courtier = {
+								spawn_unit = {
+									province = PREVPREVPREV
+									owner = PREV
+									home = PREVPREVPREV
+									leader = THIS
+									earmark = magical_spells
+									attrition = 1.0
+									troops = { magical_spells = { 65 65 } }
+									}
+								}
+							}
+						}
+					}
+				}}
+		set_character_flag = cast_beast_4
+		ai_chance = { factor = 1000 }
+		character_event = {
+			id = magicengine.339
+			days = 60
+			}
+		}
+
+		option = {
+		name = EVTOPTcant_cast_more_spells
+		trigger = {
+			has_character_flag = cast_beast_1
+			has_character_flag = cast_beast_2
+			has_character_flag = cast_beast_3
+			has_character_flag = cast_beast_4
+		}
+		
+		clr_character_flag = casting_battle_magic		
+	}
+		}
+character_event = {
+	id = magicengine.336
+	title = clear_spell_flag_title
+	desc = clear_spell_flag_desc
+	hide_window = yes
+	
+	trigger = {
+		has_character_flag = cast_beast_1
+		}
+	
+	immediate = {
+		if = {
+			limit = {
+				had_character_flag = {
+					flag = cast_beast_1
+					days = 30
+					}
+				}
+			clr_character_flag = cast_beast_1
+			}
+		
+		if = {
+			limit = {
+				NOT = { had_character_flag = {
+						flag = cast_beast_1
+						days = 30
+						}}
+				}
+			character_event = {
+				id = magicengine.336
+				days = 30
+				}
+			}
+		}
+	}
+character_event = {
+	id = magicengine.337
+	title = clear_spell_flag_title
+	desc = clear_spell_flag_desc
+	hide_window = yes
+	
+	trigger = {
+		has_character_flag = cast_beast_2
+		}
+	
+	immediate = {
+		if = {
+			limit = {
+				had_character_flag = {
+					flag = cast_beast_2
+					days = 30
+					}
+				}
+			clr_character_flag = cast_beast_2
+			}
+		
+		if = {
+			limit = {
+				NOT = { had_character_flag = {
+						flag = cast_beast_2
+						days = 30
+						}}
+				}
+			character_event = {
+				id = magicengine.337
+				days = 30
+				}
+			}
+		}
+	}
+character_event = {
+	id = magicengine.338
+	title = clear_spell_flag_title
+	desc = clear_spell_flag_desc
+	hide_window = yes
+	
+	trigger = {
+		has_character_flag = cast_beast_3
+		}
+	
+	immediate = {
+		if = {
+			limit = {
+				had_character_flag = {
+					flag = cast_beast_3
+					days = 30
+					}
+				}
+			clr_character_flag = cast_beast_3
+			}
+		
+		if = {
+			limit = {
+				NOT = { had_character_flag = {
+						flag = cast_beast_3
+						days = 30
+						}}
+				}
+			character_event = {
+				id = magicengine.338
+				days = 30
+				}
+			}
+		}
+	}
+character_event = {
+	id = magicengine.339
+	title = clear_spell_flag_title
+	desc = clear_spell_flag_desc
+	hide_window = yes
+	
+	trigger = {
+		has_character_flag = cast_beast_4
+		}
+	
+	immediate = {
+		if = {
+			limit = {
+				had_character_flag = {
+					flag = cast_beast_4
+					days = 30
+					}
+				}
+			clr_character_flag = cast_beast_4
+			}
+		
+		if = {
+			limit = {
+				NOT = { had_character_flag = {
+						flag = cast_beast_4
+						days = 30
+						}}
+				}
+			character_event = {
+				id = magicengine.339
+				days = 30
+				}
+			}
+		}
+	}
+
+
+### LORE metal ###
+character_event = {
+	id = magicengine.57
+	title = metal_cast_title
+	desc = metal_cast_desc
+	is_triggered_only = yes
+	picture = GFX_evt_mage_lore_metal
+	
+	trigger = {
+		is_alive = yes
+		OR = {
+			has_character_modifier = magic_power_1
+			has_character_modifier = magic_power_2
+			has_character_modifier = magic_power_3
+			has_character_modifier = magic_power_4
+			}
+		trait = lore_metal
+		}
+	
+	weight_multiplier = {
+		days = 1
+		modifier = {
+			OR = {
+				has_character_modifier = magic_power_1
+				has_character_modifier = magic_power_2
+				has_character_modifier = magic_power_3
+				has_character_modifier = magic_power_4
+				}
+			factor = 500
+			}
+		}
+	
+	option = {
+		name = metal_level1_opt
+
+		clr_character_flag = casting_battle_magic
+		trigger = {
+			OR = {
+				has_character_modifier = magic_power_1
+				has_character_modifier = magic_power_2
+				has_character_modifier = magic_power_3
+				has_character_modifier = magic_power_4
+				}
+			NOT = { has_character_flag = cast_metal_1 }
+			}
+		location = {
+			ROOT = {
+				if = {
+					limit= { any_war = { always = yes } }
+					random_courtier = {
+						spawn_unit = {
+							province = PREVPREV
+							owner = ROOT
+							home = PREVPREV
+							leader = THIS
+							earmark = magical_spells
+							attrition = 1.0
+							troops = { magical_spells = { 20 20 } }
+							}
+						}
+					}
+				}
+			ROOT = {
+				if = {
+					limit = { independent = false }
+					liege = {
+						if = {
+							limit = { any_war = { always = yes } }
+							random_courtier = {
+								spawn_unit = {
+									province = PREVPREVPREV
+									owner = PREV
+									home = PREVPREVPREV
+									leader = THIS
+									earmark = magical_spells
+									attrition = 1.0
+									troops = { magical_spells = { 20 20 } }
+									}
+								}
+							}
+						}
+					}
+				}}
+		set_character_flag = cast_metal_1
+		ai_chance = { factor = 1 }
+		character_event = {
+			id = magicengine.342
+			days = 60
+			}
+		}
+	
+	option = {
+		name = metal_level2_opt
+
+		clr_character_flag = casting_battle_magic
+		trigger = {
+			OR = {
+				has_character_modifier = magic_power_2
+				has_character_modifier = magic_power_3
+				has_character_modifier = magic_power_4
+				}
+			NOT = { has_character_flag = cast_metal_2 }
+			}
+		location = {
+			ROOT = {
+				if = {
+					limit= { any_war = { always = yes } }
+					random_courtier = {
+						spawn_unit = {
+							province = PREVPREV
+							owner = ROOT
+							home = PREVPREV
+							leader = THIS
+							earmark = magical_spells
+							attrition = 1.0
+							troops = { magical_spells = { 35 35 } }
+							}
+						}
+					}
+				}
+			ROOT = {
+				if = {
+					limit = { independent = false }
+					liege = {
+						if = {
+							limit = { any_war = { always = yes } }
+							random_courtier = {
+								spawn_unit = {
+									province = PREVPREVPREV
+									owner = PREV
+									home = PREVPREVPREV
+									leader = THIS
+									earmark = magical_spells
+									attrition = 1.0
+									troops = { magical_spells = { 35 35 } }
+									}
+								}
+							}
+						}
+					}
+				}}
+		set_character_flag = cast_metal_2
+		ai_chance = { factor = 10 }
+		character_event = {
+			id = magicengine.343
+			days = 60
+			}
+		}
+	
+	option = {
+		name = metal_level3_opt
+
+		clr_character_flag = casting_battle_magic
+		trigger = {
+			OR = {
+				has_character_modifier = magic_power_3
+				has_character_modifier = magic_power_4
+				}
+			NOT = { has_character_flag = cast_metal_3 }
+			}
+		location = {
+			ROOT = {
+				if = {
+					limit= { any_war = { always = yes } }
+					random_courtier = {
+						spawn_unit = {
+							province = PREVPREV
+							owner = ROOT
+							home = PREVPREV
+							leader = THIS
+							earmark = magical_spells
+							attrition = 1.0
+							troops = { magical_spells = { 50 50 } }
+							}
+						}
+					}
+				}
+			ROOT = {
+				if = {
+					limit = { independent = false }
+					liege = {
+						if = {
+							limit = { any_war = { always = yes } }
+							random_courtier = {
+								spawn_unit = {
+									province = PREVPREVPREV
+									owner = PREV
+									home = PREVPREVPREV
+									leader = THIS
+									earmark = magical_spells
+									attrition = 1.0
+									troops = { magical_spells = { 50 50 } }
+									}
+								}
+							}
+						}
+					}
+				}}
+		set_character_flag = cast_metal_3
+		ai_chance = { factor = 100 }
+		character_event = {
+			id = magicengine.344
+			days = 60
+			}
+		}
+	
+	option = {
+		name = metal_level4_opt
+
+		clr_character_flag = casting_battle_magic
+		trigger = {
+			has_character_modifier = magic_power_4
+			NOT = { has_character_flag = cast_metal_4 }
+			}
+		location = {
+			ROOT = {
+				if = {
+					limit= { any_war = { always = yes } }
+					random_courtier = {
+						spawn_unit = {
+							province = PREVPREV
+							owner = ROOT
+							home = PREVPREV
+							leader = THIS
+							earmark = magical_spells
+							attrition = 1.0
+							troops = { magical_spells = { 65 65 } }
+							}
+						}
+					}
+				}
+			ROOT = {
+				if = {
+					limit = { independent = false }
+					liege = {
+						if = {
+							limit = { any_war = { always = yes } }
+							random_courtier = {
+								spawn_unit = {
+									province = PREVPREVPREV
+									owner = PREV
+									home = PREVPREVPREV
+									leader = THIS
+									earmark = magical_spells
+									attrition = 1.0
+									troops = { magical_spells = { 65 65 } }
+									}
+								}
+							}
+						}
+					}
+				}}
+		set_character_flag = cast_metal_4
+		ai_chance = { factor = 1000 }
+		character_event = {
+			id = magicengine.345
+			days = 60
+			}
+		}
+
+	option = {
+		name = EVTOPTcant_cast_more_spells
+		trigger = {
+			has_character_flag = cast_metal_1
+			has_character_flag = cast_metal_2
+			has_character_flag = cast_metal_3
+			has_character_flag = cast_metal_4
+		}
+		
+		clr_character_flag = casting_battle_magic		
+	}
+		}
+character_event = {
+	id = magicengine.342
+	title = clear_spell_flag_title
+	desc = clear_spell_flag_desc
+	hide_window = yes
+	
+	trigger = {
+		has_character_flag = cast_metal_1
+		}
+	
+	immediate = {
+		if = {
+			limit = {
+				had_character_flag = {
+					flag = cast_metal_1
+					days = 30
+					}
+				}
+			clr_character_flag = cast_metal_1
+			}
+		
+		if = {
+			limit = {
+				NOT = { had_character_flag = {
+						flag = cast_metal_1
+						days = 30
+						}}
+				}
+			character_event = {
+				id = magicengine.342
+				days = 30
+				}
+			}
+		}
+	}
+character_event = {
+	id = magicengine.343
+	title = clear_spell_flag_title
+	desc = clear_spell_flag_desc
+	hide_window = yes
+	
+	trigger = {
+		has_character_flag = cast_metal_2
+		}
+	
+	immediate = {
+		if = {
+			limit = {
+				had_character_flag = {
+					flag = cast_metal_2
+					days = 30
+					}
+				}
+			clr_character_flag = cast_metal_2
+			}
+		
+		if = {
+			limit = {
+				NOT = { had_character_flag = {
+						flag = cast_metal_2
+						days = 30
+						}}
+				}
+			character_event = {
+				id = magicengine.343
+				days = 30
+				}
+			}
+		}
+	}
+character_event = {
+	id = magicengine.344
+	title = clear_spell_flag_title
+	desc = clear_spell_flag_desc
+	hide_window = yes
+	
+	trigger = {
+		has_character_flag = cast_metal_3
+		}
+	
+	immediate = {
+		if = {
+			limit = {
+				had_character_flag = {
+					flag = cast_metal_3
+					days = 30
+					}
+				}
+			clr_character_flag = cast_metal_3
+			}
+		
+		if = {
+			limit = {
+				NOT = { had_character_flag = {
+						flag = cast_metal_3
+						days = 30
+						}}
+				}
+			character_event = {
+				id = magicengine.344
+				days = 30
+				}
+			}
+		}
+	}
+character_event = {
+	id = magicengine.345
+	title = clear_spell_flag_title
+	desc = clear_spell_flag_desc
+	hide_window = yes
+	
+	trigger = {
+		has_character_flag = cast_metal_4
+		}
+	
+	immediate = {
+		if = {
+			limit = {
+				had_character_flag = {
+					flag = cast_metal_4
+					days = 30
+					}
+				}
+			clr_character_flag = cast_metal_4
+			}
+		
+		if = {
+			limit = {
+				NOT = { had_character_flag = {
+						flag = cast_metal_4
+						days = 30
+						}}
+				}
+			character_event = {
+				id = magicengine.345
+				days = 30
+				}
+			}
+		}
+	}
+
+
+### LORE life ###
+character_event = {
+	id = magicengine.58
+	title = life_cast_title
+	desc = life_cast_desc
+	is_triggered_only = yes
+	picture = GFX_evt_mage_lore_life
+	
+	trigger = {
+		is_alive = yes
+		OR = {
+			has_character_modifier = magic_power_1
+			has_character_modifier = magic_power_2
+			has_character_modifier = magic_power_3
+			has_character_modifier = magic_power_4
+			}
+		trait = lore_life
+		}
+	
+	weight_multiplier = {
+		days = 1
+		modifier = {
+			OR = {
+				has_character_modifier = magic_power_1
+				has_character_modifier = magic_power_2
+				has_character_modifier = magic_power_3
+				has_character_modifier = magic_power_4
+				}
+			factor = 500
+			}
+		}
+	
+	option = {
+		name = life_level1_opt
+
+		clr_character_flag = casting_battle_magic
+		trigger = {
+			OR = {
+				has_character_modifier = magic_power_1
+				has_character_modifier = magic_power_2
+				has_character_modifier = magic_power_3
+				has_character_modifier = magic_power_4
+				}
+			NOT = { has_character_flag = cast_life_1 }
+			}
+		location = {
+			ROOT = {
+				if = {
+					limit= { any_war = { always = yes } }
+					random_courtier = {
+						spawn_unit = {
+							province = PREVPREV
+							owner = ROOT
+							home = PREVPREV
+							leader = THIS
+							earmark = magical_spells
+							attrition = 1.0
+							troops = { magical_spells = { 20 20 } }
+							}
+						}
+					}
+				}
+			ROOT = {
+				if = {
+					limit = { independent = false }
+					liege = {
+						if = {
+							limit = { any_war = { always = yes } }
+							random_courtier = {
+								spawn_unit = {
+									province = PREVPREVPREV
+									owner = PREV
+									home = PREVPREVPREV
+									leader = THIS
+									earmark = magical_spells
+									attrition = 1.0
+									troops = { magical_spells = { 20 20 } }
+									}
+								}
+							}
+						}
+					}
+				}}
+		set_character_flag = cast_life_1
+		ai_chance = { factor = 1 }
+		character_event = {
+			id = magicengine.348
+			days = 60
+			}
+		}
+	
+	option = {
+		name = life_level2_opt
+
+		clr_character_flag = casting_battle_magic
+		trigger = {
+			OR = {
+				has_character_modifier = magic_power_2
+				has_character_modifier = magic_power_3
+				has_character_modifier = magic_power_4
+				}
+			NOT = { has_character_flag = cast_life_2 }
+			}
+		location = {
+			ROOT = {
+				if = {
+					limit= { any_war = { always = yes } }
+					random_courtier = {
+						spawn_unit = {
+							province = PREVPREV
+							owner = ROOT
+							home = PREVPREV
+							leader = THIS
+							earmark = magical_spells
+							attrition = 1.0
+							troops = { magical_spells = { 35 35 } }
+							}
+						}
+					}
+				}
+			ROOT = {
+				if = {
+					limit = { independent = false }
+					liege = {
+						if = {
+							limit = { any_war = { always = yes } }
+							random_courtier = {
+								spawn_unit = {
+									province = PREVPREVPREV
+									owner = PREV
+									home = PREVPREVPREV
+									leader = THIS
+									earmark = magical_spells
+									attrition = 1.0
+									troops = { magical_spells = { 35 35 } }
+									}
+								}
+							}
+						}
+					}
+				}}
+		set_character_flag = cast_life_2
+		ai_chance = { factor = 10 }
+		character_event = {
+			id = magicengine.349
+			days = 60
+			}
+		}
+	
+	option = {
+		name = life_level3_opt
+
+		clr_character_flag = casting_battle_magic
+		trigger = {
+			OR = {
+				has_character_modifier = magic_power_3
+				has_character_modifier = magic_power_4
+				}
+			NOT = { has_character_flag = cast_life_3 }
+			}
+		location = {
+			ROOT = {
+				if = {
+					limit= { any_war = { always = yes } }
+					random_courtier = {
+						spawn_unit = {
+							province = PREVPREV
+							owner = ROOT
+							home = PREVPREV
+							leader = THIS
+							earmark = magical_spells
+							attrition = 1.0
+							troops = { magical_spells = { 50 50 } }
+							}
+						}
+					}
+				}
+			ROOT = {
+				if = {
+					limit = { independent = false }
+					liege = {
+						if = {
+							limit = { any_war = { always = yes } }
+							random_courtier = {
+								spawn_unit = {
+									province = PREVPREVPREV
+									owner = PREV
+									home = PREVPREVPREV
+									leader = THIS
+									earmark = magical_spells
+									attrition = 1.0
+									troops = { magical_spells = { 50 50 } }
+									}
+								}
+							}
+						}
+					}
+				}}
+		set_character_flag = cast_life_3
+		ai_chance = { factor = 100 }
+		character_event = {
+			id = magicengine.350
+			days = 60
+			}
+		}
+	
+	option = {
+		name = life_level4_opt
+
+		clr_character_flag = casting_battle_magic
+		trigger = {
+			has_character_modifier = magic_power_4
+			NOT = { has_character_flag = cast_life_4 }
+			}
+		location = {
+			ROOT = {
+				if = {
+					limit= { any_war = { always = yes } }
+					random_courtier = {
+						spawn_unit = {
+							province = PREVPREV
+							owner = ROOT
+							home = PREVPREV
+							leader = THIS
+							earmark = magical_spells
+							attrition = 1.0
+							troops = { magical_spells = { 65 65 } }
+							}
+						}
+					}
+				}
+			ROOT = {
+				if = {
+					limit = { independent = false }
+					liege = {
+						if = {
+							limit = { any_war = { always = yes } }
+							random_courtier = {
+								spawn_unit = {
+									province = PREVPREVPREV
+									owner = PREV
+									home = PREVPREVPREV
+									leader = THIS
+									earmark = magical_spells
+									attrition = 1.0
+									troops = { magical_spells = { 65 65 } }
+									}
+								}
+							}
+						}
+					}
+				}}
+		set_character_flag = cast_life_4
+		ai_chance = { factor = 1000 }
+		character_event = {
+			id = magicengine.351
+			days = 60
+			}
+		}
+		option = {
+		name = EVTOPTcant_cast_more_spells
+		trigger = {
+			has_character_flag = cast_life_1
+			has_character_flag = cast_life_2
+			has_character_flag = cast_life_3
+			has_character_flag = cast_life_4
+		}
+		
+		clr_character_flag = casting_battle_magic		
+	}	
+	
+	}
+character_event = {
+	id = magicengine.348
+	title = clear_spell_flag_title
+	desc = clear_spell_flag_desc
+	hide_window = yes
+	
+	trigger = {
+		has_character_flag = cast_life_1
+		}
+	
+	immediate = {
+		if = {
+			limit = {
+				had_character_flag = {
+					flag = cast_life_1
+					days = 30
+					}
+				}
+			clr_character_flag = cast_life_1
+			}
+		
+		if = {
+			limit = {
+				NOT = { had_character_flag = {
+						flag = cast_life_1
+						days = 30
+						}}
+				}
+			character_event = {
+				id = magicengine.348
+				days = 30
+				}
+			}
+		}
+	}
+character_event = {
+	id = magicengine.349
+	title = clear_spell_flag_title
+	desc = clear_spell_flag_desc
+	hide_window = yes
+	
+	trigger = {
+		has_character_flag = cast_life_2
+		}
+	
+	immediate = {
+		if = {
+			limit = {
+				had_character_flag = {
+					flag = cast_life_2
+					days = 30
+					}
+				}
+			clr_character_flag = cast_life_2
+			}
+		
+		if = {
+			limit = {
+				NOT = { had_character_flag = {
+						flag = cast_life_2
+						days = 30
+						}}
+				}
+			character_event = {
+				id = magicengine.349
+				days = 30
+				}
+			}
+		}
+	}
+character_event = {
+	id = magicengine.350
+	title = clear_spell_flag_title
+	desc = clear_spell_flag_desc
+	hide_window = yes
+	
+	trigger = {
+		has_character_flag = cast_life_3
+		}
+	
+	immediate = {
+		if = {
+			limit = {
+				had_character_flag = {
+					flag = cast_life_3
+					days = 30
+					}
+				}
+			clr_character_flag = cast_life_3
+			}
+		
+		if = {
+			limit = {
+				NOT = { had_character_flag = {
+						flag = cast_life_3
+						days = 30
+						}}
+				}
+			character_event = {
+				id = magicengine.350
+				days = 30
+				}
+			}
+		}
+	}
+character_event = {
+	id = magicengine.351
+	title = clear_spell_flag_title
+	desc = clear_spell_flag_desc
+	hide_window = yes
+	
+	trigger = {
+		has_character_flag = cast_life_4
+		}
+	
+	immediate = {
+		if = {
+			limit = {
+				had_character_flag = {
+					flag = cast_life_4
+					days = 30
+					}
+				}
+			clr_character_flag = cast_life_4
+			}
+		
+		if = {
+			limit = {
+				NOT = { had_character_flag = {
+						flag = cast_life_4
+						days = 30
+						}}
+				}
+			character_event = {
+				id = magicengine.351
+				days = 30
+				}
+			}
+		}
+	}
+
+
+### LORE heavens ###
+character_event = {
+	id = magicengine.59
+	title = heavens_cast_title
+	desc = heavens_cast_desc
+	is_triggered_only = yes
+	picture = GFX_evt_mage_lore_heavens
+	
+	trigger = {
+		is_alive = yes
+		OR = {
+			has_character_modifier = magic_power_1
+			has_character_modifier = magic_power_2
+			has_character_modifier = magic_power_3
+			has_character_modifier = magic_power_4
+			}
+		trait = lore_heavens
+		}
+	
+	weight_multiplier = {
+		days = 1
+		modifier = {
+			OR = {
+				has_character_modifier = magic_power_1
+				has_character_modifier = magic_power_2
+				has_character_modifier = magic_power_3
+				has_character_modifier = magic_power_4
+				}
+			factor = 500
+			}
+		}
+	
+	option = {
+		name = heavens_level1_opt
+
+		clr_character_flag = casting_battle_magic
+		trigger = {
+			OR = {
+				has_character_modifier = magic_power_1
+				has_character_modifier = magic_power_2
+				has_character_modifier = magic_power_3
+				has_character_modifier = magic_power_4
+				}
+			NOT = { has_character_flag = cast_heavens_1 }
+			}
+		location = {
+			ROOT = {
+				if = {
+					limit= { any_war = { always = yes } }
+					random_courtier = {
+						spawn_unit = {
+							province = PREVPREV
+							owner = ROOT
+							home = PREVPREV
+							leader = THIS
+							earmark = magical_spells
+							attrition = 1.0
+							troops = { magical_spells = { 20 20 } }
+							}
+						}
+					}
+				}
+			ROOT = {
+				if = {
+					limit = { independent = false }
+					liege = {
+						if = {
+							limit = { any_war = { always = yes } }
+							random_courtier = {
+								spawn_unit = {
+									province = PREVPREVPREV
+									owner = PREV
+									home = PREVPREVPREV
+									leader = THIS
+									earmark = magical_spells
+									attrition = 1.0
+									troops = { magical_spells = { 20 20 } }
+									}
+								}
+							}
+						}
+					}
+				}}
+		set_character_flag = cast_heavens_1
+		ai_chance = { factor = 1 }
+		character_event = {
+			id = magicengine.354
+			days = 60
+			}
+		}
+	
+	option = {
+		name = heavens_level2_opt
+
+		clr_character_flag = casting_battle_magic
+		trigger = {
+			OR = {
+				has_character_modifier = magic_power_2
+				has_character_modifier = magic_power_3
+				has_character_modifier = magic_power_4
+				}
+			NOT = { has_character_flag = cast_heavens_2 }
+			}
+		location = {
+			ROOT = {
+				if = {
+					limit= { any_war = { always = yes } }
+					random_courtier = {
+						spawn_unit = {
+							province = PREVPREV
+							owner = ROOT
+							home = PREVPREV
+							leader = THIS
+							earmark = magical_spells
+							attrition = 1.0
+							troops = { magical_spells = { 35 35 } }
+							}
+						}
+					}
+				}
+			ROOT = {
+				if = {
+					limit = { independent = false }
+					liege = {
+						if = {
+							limit = { any_war = { always = yes } }
+							random_courtier = {
+								spawn_unit = {
+									province = PREVPREVPREV
+									owner = PREV
+									home = PREVPREVPREV
+									leader = THIS
+									earmark = magical_spells
+									attrition = 1.0
+									troops = { magical_spells = { 35 35 } }
+									}
+								}
+							}
+						}
+					}
+				}}
+		set_character_flag = cast_heavens_2
+		ai_chance = { factor = 10 }
+		character_event = {
+			id = magicengine.355
+			days = 60
+			}
+		}
+	
+	option = {
+		name = heavens_level3_opt
+
+		clr_character_flag = casting_battle_magic
+		trigger = {
+			OR = {
+				has_character_modifier = magic_power_3
+				has_character_modifier = magic_power_4
+				}
+			NOT = { has_character_flag = cast_heavens_3 }
+			}
+		location = {
+			ROOT = {
+				if = {
+					limit= { any_war = { always = yes } }
+					random_courtier = {
+						spawn_unit = {
+							province = PREVPREV
+							owner = ROOT
+							home = PREVPREV
+							leader = THIS
+							earmark = magical_spells
+							attrition = 1.0
+							troops = { magical_spells = { 50 50 } }
+							}
+						}
+					}
+				}
+			ROOT = {
+				if = {
+					limit = { independent = false }
+					liege = {
+						if = {
+							limit = { any_war = { always = yes } }
+							random_courtier = {
+								spawn_unit = {
+									province = PREVPREVPREV
+									owner = PREV
+									home = PREVPREVPREV
+									leader = THIS
+									earmark = magical_spells
+									attrition = 1.0
+									troops = { magical_spells = { 50 50 } }
+									}
+								}
+							}
+						}
+					}
+				}}
+		set_character_flag = cast_heavens_3
+		ai_chance = { factor = 100 }
+		character_event = {
+			id = magicengine.356
+			days = 60
+			}
+		}
+	
+	option = {
+		name = heavens_level4_opt
+
+		clr_character_flag = casting_battle_magic
+		trigger = {
+			has_character_modifier = magic_power_4
+			NOT = { has_character_flag = cast_heavens_4 }
+			}
+		location = {
+			ROOT = {
+				if = {
+					limit= { any_war = { always = yes } }
+					random_courtier = {
+						spawn_unit = {
+							province = PREVPREV
+							owner = ROOT
+							home = PREVPREV
+							leader = THIS
+							earmark = magical_spells
+							attrition = 1.0
+							troops = { magical_spells = { 65 65 } }
+							}
+						}
+					}
+				}
+			ROOT = {
+				if = {
+					limit = { independent = false }
+					liege = {
+						if = {
+							limit = { any_war = { always = yes } }
+							random_courtier = {
+								spawn_unit = {
+									province = PREVPREVPREV
+									owner = PREV
+									home = PREVPREVPREV
+									leader = THIS
+									earmark = magical_spells
+									attrition = 1.0
+									troops = { magical_spells = { 65 65 } }
+									}
+								}
+							}
+						}
+					}
+				}}
+		set_character_flag = cast_heavens_4
+		ai_chance = { factor = 1000 }
+		character_event = {
+			id = magicengine.357
+			days = 60
+			}
+		}
+
+			option = {
+		name = EVTOPTcant_cast_more_spells
+		trigger = {
+			has_character_flag = cast_heavens_1
+			has_character_flag = cast_heavens_2
+			has_character_flag = cast_heavens_3
+			has_character_flag = cast_heavens_4
+		}
+		
+		clr_character_flag = casting_battle_magic		
+	}
+		}
+character_event = {
+	id = magicengine.354
+	title = clear_spell_flag_title
+	desc = clear_spell_flag_desc
+	hide_window = yes
+	
+	trigger = {
+		has_character_flag = cast_heavens_1
+		}
+	
+	immediate = {
+		if = {
+			limit = {
+				had_character_flag = {
+					flag = cast_heavens_1
+					days = 30
+					}
+				}
+			clr_character_flag = cast_heavens_1
+			}
+		
+		if = {
+			limit = {
+				NOT = { had_character_flag = {
+						flag = cast_heavens_1
+						days = 30
+						}}
+				}
+			character_event = {
+				id = magicengine.354
+				days = 30
+				}
+			}
+		}
+	}
+character_event = {
+	id = magicengine.355
+	title = clear_spell_flag_title
+	desc = clear_spell_flag_desc
+	hide_window = yes
+	
+	trigger = {
+		has_character_flag = cast_heavens_2
+		}
+	
+	immediate = {
+		if = {
+			limit = {
+				had_character_flag = {
+					flag = cast_heavens_2
+					days = 30
+					}
+				}
+			clr_character_flag = cast_heavens_2
+			}
+		
+		if = {
+			limit = {
+				NOT = { had_character_flag = {
+						flag = cast_heavens_2
+						days = 30
+						}}
+				}
+			character_event = {
+				id = magicengine.355
+				days = 30
+				}
+			}
+		}
+	}
+character_event = {
+	id = magicengine.356
+	title = clear_spell_flag_title
+	desc = clear_spell_flag_desc
+	hide_window = yes
+	
+	trigger = {
+		has_character_flag = cast_heavens_3
+		}
+	
+	immediate = {
+		if = {
+			limit = {
+				had_character_flag = {
+					flag = cast_heavens_3
+					days = 30
+					}
+				}
+			clr_character_flag = cast_heavens_3
+			}
+		
+		if = {
+			limit = {
+				NOT = { had_character_flag = {
+						flag = cast_heavens_3
+						days = 30
+						}}
+				}
+			character_event = {
+				id = magicengine.356
+				days = 30
+				}
+			}
+		}
+	}
+character_event = {
+	id = magicengine.357
+	title = clear_spell_flag_title
+	desc = clear_spell_flag_desc
+	hide_window = yes
+	
+	trigger = {
+		has_character_flag = cast_heavens_4
+		}
+	
+	immediate = {
+		if = {
+			limit = {
+				had_character_flag = {
+					flag = cast_heavens_4
+					days = 30
+					}
+				}
+			clr_character_flag = cast_heavens_4
+			}
+		
+		if = {
+			limit = {
+				NOT = { had_character_flag = {
+						flag = cast_heavens_4
+						days = 30
+						}}
+				}
+			character_event = {
+				id = magicengine.357
+				days = 30
+				}
+			}
+		}
+	}
+
+
+### LORE death ###
+character_event = {
+	id = magicengine.60
+	title = death_cast_title
+	desc = death_cast_desc
+	is_triggered_only = yes
+	picture = GFX_evt_mage_lore_death
+	
+	trigger = {
+		is_alive = yes
+		OR = {
+			has_character_modifier = magic_power_1
+			has_character_modifier = magic_power_2
+			has_character_modifier = magic_power_3
+			has_character_modifier = magic_power_4
+			}
+		trait = lore_death
+		}
+	
+	weight_multiplier = {
+		days = 1
+		modifier = {
+			OR = {
+				has_character_modifier = magic_power_1
+				has_character_modifier = magic_power_2
+				has_character_modifier = magic_power_3
+				has_character_modifier = magic_power_4
+				}
+			factor = 500
+			}
+		}
+	
+	option = {
+		name = death_level1_opt
+
+		clr_character_flag = casting_battle_magic
+		trigger = {
+			OR = {
+				has_character_modifier = magic_power_1
+				has_character_modifier = magic_power_2
+				has_character_modifier = magic_power_3
+				has_character_modifier = magic_power_4
+				}
+			NOT = { has_character_flag = cast_death_1 }
+			}
+		location = {
+			ROOT = {
+				if = {
+					limit= { any_war = { always = yes } }
+					random_courtier = {
+						spawn_unit = {
+							province = PREVPREV
+							owner = ROOT
+							home = PREVPREV
+							leader = THIS
+							earmark = magical_spells
+							attrition = 1.0
+							troops = { magical_spells = { 20 20 } }
+							}
+						}
+					}
+				}
+			ROOT = {
+				if = {
+					limit = { independent = false }
+					liege = {
+						if = {
+							limit = { any_war = { always = yes } }
+							random_courtier = {
+								spawn_unit = {
+									province = PREVPREVPREV
+									owner = PREV
+									home = PREVPREVPREV
+									leader = THIS
+									earmark = magical_spells
+									attrition = 1.0
+									troops = { magical_spells = { 20 20 } }
+									}
+								}
+							}
+						}
+					}
+				}}
+		set_character_flag = cast_death_1
+		ai_chance = { factor = 1 }
+		character_event = {
+			id = magicengine.360
+			days = 60
+			}
+		}
+	
+	option = {
+		name = death_level2_opt
+
+		clr_character_flag = casting_battle_magic
+		trigger = {
+			OR = {
+				has_character_modifier = magic_power_2
+				has_character_modifier = magic_power_3
+				has_character_modifier = magic_power_4
+				}
+			NOT = { has_character_flag = cast_death_2 }
+			}
+		location = {
+			ROOT = {
+				if = {
+					limit= { any_war = { always = yes } }
+					random_courtier = {
+						spawn_unit = {
+							province = PREVPREV
+							owner = ROOT
+							home = PREVPREV
+							leader = THIS
+							earmark = magical_spells
+							attrition = 1.0
+							troops = { magical_spells = { 35 35 } }
+							}
+						}
+					}
+				}
+			ROOT = {
+				if = {
+					limit = { independent = false }
+					liege = {
+						if = {
+							limit = { any_war = { always = yes } }
+							random_courtier = {
+								spawn_unit = {
+									province = PREVPREVPREV
+									owner = PREV
+									home = PREVPREVPREV
+									leader = THIS
+									earmark = magical_spells
+									attrition = 1.0
+									troops = { magical_spells = { 35 35 } }
+									}
+								}
+							}
+						}
+					}
+				}}
+		set_character_flag = cast_death_2
+		ai_chance = { factor = 10 }
+		character_event = {
+			id = magicengine.361
+			days = 60
+			}
+		}
+	
+	option = {
+		name = death_level3_opt
+
+		clr_character_flag = casting_battle_magic
+		trigger = {
+			OR = {
+				has_character_modifier = magic_power_3
+				has_character_modifier = magic_power_4
+				}
+			NOT = { has_character_flag = cast_death_3 }
+			}
+		location = {
+			ROOT = {
+				if = {
+					limit= { any_war = { always = yes } }
+					random_courtier = {
+						spawn_unit = {
+							province = PREVPREV
+							owner = ROOT
+							home = PREVPREV
+							leader = THIS
+							earmark = magical_spells
+							attrition = 1.0
+							troops = { magical_spells = { 50 50 } }
+							}
+						}
+					}
+				}
+			ROOT = {
+				if = {
+					limit = { independent = false }
+					liege = {
+						if = {
+							limit = { any_war = { always = yes } }
+							random_courtier = {
+								spawn_unit = {
+									province = PREVPREVPREV
+									owner = PREV
+									home = PREVPREVPREV
+									leader = THIS
+									earmark = magical_spells
+									attrition = 1.0
+									troops = { magical_spells = { 50 50 } }
+									}
+								}
+							}
+						}
+					}
+				}}
+		set_character_flag = cast_death_3
+		ai_chance = { factor = 100 }
+		character_event = {
+			id = magicengine.362
+			days = 60
+			}
+		}
+	
+	option = {
+		name = death_level4_opt
+
+		clr_character_flag = casting_battle_magic
+		trigger = {
+			has_character_modifier = magic_power_4
+			NOT = { has_character_flag = cast_death_4 }
+			}
+		location = {
+			ROOT = {
+				if = {
+					limit= { any_war = { always = yes } }
+					random_courtier = {
+						spawn_unit = {
+							province = PREVPREV
+							owner = ROOT
+							home = PREVPREV
+							leader = THIS
+							earmark = magical_spells
+							attrition = 1.0
+							troops = { magical_spells = { 65 65 } }
+							}
+						}
+					}
+				}
+			ROOT = {
+				if = {
+					limit = { independent = false }
+					liege = {
+						if = {
+							limit = { any_war = { always = yes } }
+							random_courtier = {
+								spawn_unit = {
+									province = PREVPREVPREV
+									owner = PREV
+									home = PREVPREVPREV
+									leader = THIS
+									earmark = magical_spells
+									attrition = 1.0
+									troops = { magical_spells = { 65 65 } }
+									}
+								}
+							}
+						}
+					}
+				}}
+		set_character_flag = cast_death_4
+		ai_chance = { factor = 1000 }
+		character_event = {
+			id = magicengine.363
+			days = 60
+			}
+		}
+
+		option = {
+		name = EVTOPTcant_cast_more_spells
+		trigger = {
+			has_character_flag = cast_death_1
+			has_character_flag = cast_death_2
+			has_character_flag = cast_death_3
+			has_character_flag = cast_death_4
+		}
+		
+		clr_character_flag = casting_battle_magic		
+	}
+		}
+character_event = {
+	id = magicengine.360
+	title = clear_spell_flag_title
+	desc = clear_spell_flag_desc
+	hide_window = yes
+	
+	trigger = {
+		has_character_flag = cast_death_1
+		}
+	
+	immediate = {
+		if = {
+			limit = {
+				had_character_flag = {
+					flag = cast_death_1
+					days = 30
+					}
+				}
+			clr_character_flag = cast_death_1
+			}
+		
+		if = {
+			limit = {
+				NOT = { had_character_flag = {
+						flag = cast_death_1
+						days = 30
+						}}
+				}
+			character_event = {
+				id = magicengine.360
+				days = 30
+				}
+			}
+		}
+	}
+character_event = {
+	id = magicengine.361
+	title = clear_spell_flag_title
+	desc = clear_spell_flag_desc
+	hide_window = yes
+	
+	trigger = {
+		has_character_flag = cast_death_2
+		}
+	
+	immediate = {
+		if = {
+			limit = {
+				had_character_flag = {
+					flag = cast_death_2
+					days = 30
+					}
+				}
+			clr_character_flag = cast_death_2
+			}
+		
+		if = {
+			limit = {
+				NOT = { had_character_flag = {
+						flag = cast_death_2
+						days = 30
+						}}
+				}
+			character_event = {
+				id = magicengine.361
+				days = 30
+				}
+			}
+		}
+	}
+character_event = {
+	id = magicengine.362
+	title = clear_spell_flag_title
+	desc = clear_spell_flag_desc
+	hide_window = yes
+	
+	trigger = {
+		has_character_flag = cast_death_3
+		}
+	
+	immediate = {
+		if = {
+			limit = {
+				had_character_flag = {
+					flag = cast_death_3
+					days = 30
+					}
+				}
+			clr_character_flag = cast_death_3
+			}
+		
+		if = {
+			limit = {
+				NOT = { had_character_flag = {
+						flag = cast_death_3
+						days = 30
+						}}
+				}
+			character_event = {
+				id = magicengine.362
+				days = 30
+				}
+			}
+		}
+	}
+character_event = {
+	id = magicengine.363
+	title = clear_spell_flag_title
+	desc = clear_spell_flag_desc
+	hide_window = yes
+	
+	trigger = {
+		has_character_flag = cast_death_4
+		}
+	
+	immediate = {
+		if = {
+			limit = {
+				had_character_flag = {
+					flag = cast_death_4
+					days = 30
+					}
+				}
+			clr_character_flag = cast_death_4
+			}
+		
+		if = {
+			limit = {
+				NOT = { had_character_flag = {
+						flag = cast_death_4
+						days = 30
+						}}
+				}
+			character_event = {
+				id = magicengine.363
+				days = 30
+				}
+			}
+		}
+	}
+
+# Orc shamans are slightly weaker at low levels, but stronger at high levels
+
+### LORE waaagh ###
+character_event = {
+	id = magicengine.61
+	title = waaagh_cast_title
+	desc = waaagh_cast_desc
+	is_triggered_only = yes
+	picture = GFX_evt_mage_lore_waaagh
+	
+	trigger = {
+		is_alive = yes
+		OR = {
+			has_character_modifier = magic_power_1
+			has_character_modifier = magic_power_2
+			has_character_modifier = magic_power_3
+			has_character_modifier = magic_power_4
+			}
+		trait = lore_waaagh
+		}
+	
+	weight_multiplier = {
+		days = 1
+		modifier = {
+			OR = {
+				has_character_modifier = magic_power_1
+				has_character_modifier = magic_power_2
+				has_character_modifier = magic_power_3
+				has_character_modifier = magic_power_4
+				}
+			factor = 500
+			}
+		}
+	
+	option = {
+		name = waaagh_level1_opt
+
+		clr_character_flag = casting_battle_magic
+		trigger = {
+			OR = {
+				has_character_modifier = magic_power_1
+				has_character_modifier = magic_power_2
+				has_character_modifier = magic_power_3
+				has_character_modifier = magic_power_4
+				}
+			NOT = { has_character_flag = cast_waaagh_1 }
+			}
+		location = {
+			ROOT = {
+				if = {
+					limit= { any_war = { always = yes } }
+					random_courtier = {
+						spawn_unit = {
+							province = PREVPREV
+							owner = ROOT
+							home = PREVPREV
+							leader = THIS
+							earmark = magical_spells
+							attrition = 1.0
+							troops = { magical_spells = { 15 15 } }
+							}
+						}
+					}
+				}
+			ROOT = {
+				if = {
+					limit = { independent = false }
+					liege = {
+						if = {
+							limit = { any_war = { always = yes } }
+							random_courtier = {
+								spawn_unit = {
+									province = PREVPREVPREV
+									owner = PREV
+									home = PREVPREVPREV
+									leader = THIS
+									earmark = magical_spells
+									attrition = 1.0
+									troops = { magical_spells = { 15 15 } }
+									}
+								}
+							}
+						}
+					}
+				}}
+		set_character_flag = cast_waaagh_1
+		ai_chance = { factor = 1 }
+		character_event = {
+			id = magicengine.366
+			days = 60
+			}
+		}
+	
+	option = {
+		name = waaagh_level2_opt
+
+		clr_character_flag = casting_battle_magic
+		trigger = {
+			OR = {
+				has_character_modifier = magic_power_2
+				has_character_modifier = magic_power_3
+				has_character_modifier = magic_power_4
+				}
+			NOT = { has_character_flag = cast_waaagh_2 }
+			}
+		location = {
+			ROOT = {
+				if = {
+					limit= { any_war = { always = yes } }
+					random_courtier = {
+						spawn_unit = {
+							province = PREVPREV
+							owner = ROOT
+							home = PREVPREV
+							leader = THIS
+							earmark = magical_spells
+							attrition = 1.0
+							troops = { magical_spells = { 30 30 } }
+							}
+						}
+					}
+				}
+			ROOT = {
+				if = {
+					limit = { independent = false }
+					liege = {
+						if = {
+							limit = { any_war = { always = yes } }
+							random_courtier = {
+								spawn_unit = {
+									province = PREVPREVPREV
+									owner = PREV
+									home = PREVPREVPREV
+									leader = THIS
+									earmark = magical_spells
+									attrition = 1.0
+									troops = { magical_spells = { 30 30 } }
+									}
+								}
+							}
+						}
+					}
+				}}
+		set_character_flag = cast_waaagh_2
+		ai_chance = { factor = 10 }
+		character_event = {
+			id = magicengine.367
+			days = 60
+			}
+		}
+	
+	option = {
+		name = waaagh_level3_opt
+
+		clr_character_flag = casting_battle_magic
+		trigger = {
+			OR = {
+				has_character_modifier = magic_power_3
+				has_character_modifier = magic_power_4
+				}
+			NOT = { has_character_flag = cast_waaagh_3 }
+			}
+		location = {
+			ROOT = {
+				if = {
+					limit= { any_war = { always = yes } }
+					random_courtier = {
+						spawn_unit = {
+							province = PREVPREV
+							owner = ROOT
+							home = PREVPREV
+							leader = THIS
+							earmark = magical_spells
+							attrition = 1.0
+							troops = { magical_spells = { 60 60 } }
+							}
+						}
+					}
+				}
+			ROOT = {
+				if = {
+					limit = { independent = false }
+					liege = {
+						if = {
+							limit = { any_war = { always = yes } }
+							random_courtier = {
+								spawn_unit = {
+									province = PREVPREVPREV
+									owner = PREV
+									home = PREVPREVPREV
+									leader = THIS
+									earmark = magical_spells
+									attrition = 1.0
+									troops = { magical_spells = { 60 60 } }
+									}
+								}
+							}
+						}
+					}
+				}}
+		set_character_flag = cast_waaagh_3
+		ai_chance = { factor = 100 }
+		character_event = {
+			id = magicengine.368
+			days = 60
+			}
+		}
+	
+	option = {
+		name = waaagh_level4_opt
+
+		clr_character_flag = casting_battle_magic
+		trigger = {
+			has_character_modifier = magic_power_4
+			NOT = { has_character_flag = cast_waaagh_4 }
+			}
+		location = {
+			ROOT = {
+				if = {
+					limit= { any_war = { always = yes } }
+					random_courtier = {
+						spawn_unit = {
+							province = PREVPREV
+							owner = ROOT
+							home = PREVPREV
+							leader = THIS
+							earmark = magical_spells
+							attrition = 1.0
+							troops = { magical_spells = { 120 120 } }
+							}
+						}
+					}
+				}
+			ROOT = {
+				if = {
+					limit = { independent = false }
+					liege = {
+						if = {
+							limit = { any_war = { always = yes } }
+							random_courtier = {
+								spawn_unit = {
+									province = PREVPREVPREV
+									owner = PREV
+									home = PREVPREVPREV
+									leader = THIS
+									earmark = magical_spells
+									attrition = 1.0
+									troops = { magical_spells = { 120 120 } }
+									}
+								}
+							}
+						}
+					}
+				}}
+		set_character_flag = cast_waaagh_4
+		ai_chance = { factor = 1000 }
+		character_event = {
+			id = magicengine.369
+			days = 60
+			}
+		}
+			option = {
+		name = EVTOPTcant_cast_more_spells
+		trigger = {
+			has_character_flag = cast_waagh_1
+			has_character_flag = cast_waagh_2
+			has_character_flag = cast_waagh_3
+			has_character_flag = cast_waagh_4
+		}
+		
+		clr_character_flag = casting_battle_magic		
+	}
+	}
+character_event = {
+	id = magicengine.366
+	title = clear_spell_flag_title
+	desc = clear_spell_flag_desc
+	hide_window = yes
+	
+	trigger = {
+		has_character_flag = cast_waaagh_1
+		}
+	
+	immediate = {
+		if = {
+			limit = {
+				had_character_flag = {
+					flag = cast_waaagh_1
+					days = 30
+					}
+				}
+			clr_character_flag = cast_waaagh_1
+			}
+		
+		if = {
+			limit = {
+				NOT = { had_character_flag = {
+						flag = cast_waaagh_1
+						days = 30
+						}}
+				}
+			character_event = {
+				id = magicengine.366
+				days = 30
+				}
+			}
+		}
+	}
+character_event = {
+	id = magicengine.367
+	title = clear_spell_flag_title
+	desc = clear_spell_flag_desc
+	hide_window = yes
+	
+	trigger = {
+		has_character_flag = cast_waaagh_2
+		}
+	
+	immediate = {
+		if = {
+			limit = {
+				had_character_flag = {
+					flag = cast_waaagh_2
+					days = 30
+					}
+				}
+			clr_character_flag = cast_waaagh_2
+			}
+		
+		if = {
+			limit = {
+				NOT = { had_character_flag = {
+						flag = cast_waaagh_2
+						days = 30
+						}}
+				}
+			character_event = {
+				id = magicengine.367
+				days = 30
+				}
+			}
+		}
+	}
+character_event = {
+	id = magicengine.368
+	title = clear_spell_flag_title
+	desc = clear_spell_flag_desc
+	hide_window = yes
+	
+	trigger = {
+		has_character_flag = cast_waaagh_3
+		}
+	
+	immediate = {
+		if = {
+			limit = {
+				had_character_flag = {
+					flag = cast_waaagh_3
+					days = 30
+					}
+				}
+			clr_character_flag = cast_waaagh_3
+			}
+		
+		if = {
+			limit = {
+				NOT = { had_character_flag = {
+						flag = cast_waaagh_3
+						days = 30
+						}}
+				}
+			character_event = {
+				id = magicengine.368
+				days = 30
+				}
+			}
+		}
+	}
+character_event = {
+	id = magicengine.369
+	title = clear_spell_flag_title
+	desc = clear_spell_flag_desc
+	hide_window = yes
+	
+	trigger = {
+		has_character_flag = cast_waaagh_4
+		}
+	
+	immediate = {
+		if = {
+			limit = {
+				had_character_flag = {
+					flag = cast_waaagh_4
+					days = 30
+					}
+				}
+			clr_character_flag = cast_waaagh_4
+			}
+		
+		if = {
+			limit = {
+				NOT = { had_character_flag = {
+						flag = cast_waaagh_4
+						days = 30
+						}}
+				}
+			character_event = {
+				id = magicengine.369
+				days = 30
+				}
+			}
+		}
+	}
+
+
+
+### LORE nurgle ###
+character_event = {
+	id = magicengine.62
+	title = nurgle_cast_title
+	desc = nurgle_cast_desc
+	is_triggered_only = yes
+	picture = GFX_evt_mage_lore_nurgle
+	
+	trigger = {
+		is_alive = yes
+		OR = {
+			has_character_modifier = magic_power_1
+			has_character_modifier = magic_power_2
+			has_character_modifier = magic_power_3
+			has_character_modifier = magic_power_4
+			}
+		trait = lore_nurgle
+		}
+	
+	weight_multiplier = {
+		days = 1
+		modifier = {
+			OR = {
+				has_character_modifier = magic_power_1
+				has_character_modifier = magic_power_2
+				has_character_modifier = magic_power_3
+				has_character_modifier = magic_power_4
+				}
+			factor = 500
+			}
+		}
+	
+	option = {
+		name = nurgle_level1_opt
+
+		clr_character_flag = casting_battle_magic
+		trigger = {
+			OR = {
+				has_character_modifier = magic_power_1
+				has_character_modifier = magic_power_2
+				has_character_modifier = magic_power_3
+				has_character_modifier = magic_power_4
+				}
+			NOT = { has_character_flag = cast_nurgle_1 }
+			}
+		location = {
+			ROOT = {
+				if = {
+					limit= { any_war = { always = yes } }
+					random_courtier = {
+						spawn_unit = {
+							province = PREVPREV
+							owner = ROOT
+							home = PREVPREV
+							leader = THIS
+							earmark = magical_spells
+							attrition = 1.0
+							troops = { magical_spells = { 20 20 } }
+							}
+						}
+					}
+				}
+			ROOT = {
+				if = {
+					limit = { independent = false }
+					liege = {
+						if = {
+							limit = { any_war = { always = yes } }
+							random_courtier = {
+								spawn_unit = {
+									province = PREVPREVPREV
+									owner = PREV
+									home = PREVPREVPREV
+									leader = THIS
+									earmark = magical_spells
+									attrition = 1.0
+									troops = { magical_spells = { 20 20 } }
+									}
+								}
+							}
+						}
+					}
+				}}
+		set_character_flag = cast_nurgle_1
+		ai_chance = { factor = 1 }
+		character_event = {
+			id = magicengine.372
+			days = 60
+			}
+		}
+	
+	option = {
+		name = nurgle_level2_opt
+
+		clr_character_flag = casting_battle_magic
+		trigger = {
+			OR = {
+				has_character_modifier = magic_power_2
+				has_character_modifier = magic_power_3
+				has_character_modifier = magic_power_4
+				}
+			NOT = { has_character_flag = cast_nurgle_2 }
+			}
+		location = {
+			ROOT = {
+				if = {
+					limit= { any_war = { always = yes } }
+					random_courtier = {
+						spawn_unit = {
+							province = PREVPREV
+							owner = ROOT
+							home = PREVPREV
+							leader = THIS
+							earmark = magical_spells
+							attrition = 1.0
+							troops = { magical_spells = { 35 35 } }
+							}
+						}
+					}
+				}
+			ROOT = {
+				if = {
+					limit = { independent = false }
+					liege = {
+						if = {
+							limit = { any_war = { always = yes } }
+							random_courtier = {
+								spawn_unit = {
+									province = PREVPREVPREV
+									owner = PREV
+									home = PREVPREVPREV
+									leader = THIS
+									earmark = magical_spells
+									attrition = 1.0
+									troops = { magical_spells = { 35 35 } }
+									}
+								}
+							}
+						}
+					}
+				}}
+		set_character_flag = cast_nurgle_2
+		ai_chance = { factor = 10 }
+		character_event = {
+			id = magicengine.373
+			days = 60
+			}
+		}
+	
+	option = {
+		name = nurgle_level3_opt
+
+		clr_character_flag = casting_battle_magic
+		trigger = {
+			OR = {
+				has_character_modifier = magic_power_3
+				has_character_modifier = magic_power_4
+				}
+			NOT = { has_character_flag = cast_nurgle_3 }
+			}
+		location = {
+			ROOT = {
+				if = {
+					limit= { any_war = { always = yes } }
+					random_courtier = {
+						spawn_unit = {
+							province = PREVPREV
+							owner = ROOT
+							home = PREVPREV
+							leader = THIS
+							earmark = magical_spells
+							attrition = 1.0
+							troops = { magical_spells = { 50 50 } }
+							}
+						}
+					}
+				}
+			ROOT = {
+				if = {
+					limit = { independent = false }
+					liege = {
+						if = {
+							limit = { any_war = { always = yes } }
+							random_courtier = {
+								spawn_unit = {
+									province = PREVPREVPREV
+									owner = PREV
+									home = PREVPREVPREV
+									leader = THIS
+									earmark = magical_spells
+									attrition = 1.0
+									troops = { magical_spells = { 50 50 } }
+									}
+								}
+							}
+						}
+					}
+				}}
+		set_character_flag = cast_nurgle_3
+		ai_chance = { factor = 100 }
+		character_event = {
+			id = magicengine.374
+			days = 60
+			}
+		}
+	
+	option = {
+		name = nurgle_level4_opt
+
+		clr_character_flag = casting_battle_magic
+		trigger = {
+			has_character_modifier = magic_power_4
+			NOT = { has_character_flag = cast_nurgle_4 }
+			}
+		location = {
+			ROOT = {
+				if = {
+					limit= { any_war = { always = yes } }
+					random_courtier = {
+						spawn_unit = {
+							province = PREVPREV
+							owner = ROOT
+							home = PREVPREV
+							leader = THIS
+							earmark = magical_spells
+							attrition = 1.0
+							troops = { magical_spells = { 65 65 } }
+							}
+						}
+					}
+				}
+			ROOT = {
+				if = {
+					limit = { independent = false }
+					liege = {
+						if = {
+							limit = { any_war = { always = yes } }
+							random_courtier = {
+								spawn_unit = {
+									province = PREVPREVPREV
+									owner = PREV
+									home = PREVPREVPREV
+									leader = THIS
+									earmark = magical_spells
+									attrition = 1.0
+									troops = { magical_spells = { 65 65 } }
+									}
+								}
+							}
+						}
+					}
+				}}
+		set_character_flag = cast_nurgle_4
+		ai_chance = { factor = 1000 }
+		character_event = {
+			id = magicengine.375
+			days = 60
+			}
+		}
+		
+		option = {
+		name = EVTOPTcant_cast_more_spells
+		trigger = {
+			has_character_flag = cast_nurgle_1
+			has_character_flag = cast_nurgle_2
+			has_character_flag = cast_nurgle_3
+			has_character_flag = cast_nurgle_4
+		}
+		
+		clr_character_flag = casting_battle_magic		
+	}
+	}
+character_event = {
+	id = magicengine.372
+	title = clear_spell_flag_title
+	desc = clear_spell_flag_desc
+	hide_window = yes
+	
+	trigger = {
+		has_character_flag = cast_nurgle_1
+		}
+	
+	immediate = {
+		if = {
+			limit = {
+				had_character_flag = {
+					flag = cast_nurgle_1
+					days = 30
+					}
+				}
+			clr_character_flag = cast_nurgle_1
+			}
+		
+		if = {
+			limit = {
+				NOT = { had_character_flag = {
+						flag = cast_nurgle_1
+						days = 30
+						}}
+				}
+			character_event = {
+				id = magicengine.372
+				days = 30
+				}
+			}
+		}
+	}
+character_event = {
+	id = magicengine.373
+	title = clear_spell_flag_title
+	desc = clear_spell_flag_desc
+	hide_window = yes
+	
+	trigger = {
+		has_character_flag = cast_nurgle_2
+		}
+	
+	immediate = {
+		if = {
+			limit = {
+				had_character_flag = {
+					flag = cast_nurgle_2
+					days = 30
+					}
+				}
+			clr_character_flag = cast_nurgle_2
+			}
+		
+		if = {
+			limit = {
+				NOT = { had_character_flag = {
+						flag = cast_nurgle_2
+						days = 30
+						}}
+				}
+			character_event = {
+				id = magicengine.373
+				days = 30
+				}
+			}
+		}
+	}
+character_event = {
+	id = magicengine.374
+	title = clear_spell_flag_title
+	desc = clear_spell_flag_desc
+	hide_window = yes
+	
+	trigger = {
+		has_character_flag = cast_nurgle_3
+		}
+	
+	immediate = {
+		if = {
+			limit = {
+				had_character_flag = {
+					flag = cast_nurgle_3
+					days = 30
+					}
+				}
+			clr_character_flag = cast_nurgle_3
+			}
+		
+		if = {
+			limit = {
+				NOT = { had_character_flag = {
+						flag = cast_nurgle_3
+						days = 30
+						}}
+				}
+			character_event = {
+				id = magicengine.374
+				days = 30
+				}
+			}
+		}
+	}
+character_event = {
+	id = magicengine.375
+	title = clear_spell_flag_title
+	desc = clear_spell_flag_desc
+	hide_window = yes
+	
+	trigger = {
+		has_character_flag = cast_nurgle_4
+		}
+	
+	immediate = {
+		if = {
+			limit = {
+				had_character_flag = {
+					flag = cast_nurgle_4
+					days = 30
+					}
+				}
+			clr_character_flag = cast_nurgle_4
+			}
+		
+		if = {
+			limit = {
+				NOT = { had_character_flag = {
+						flag = cast_nurgle_4
+						days = 30
+						}}
+				}
+			character_event = {
+				id = magicengine.375
+				days = 30
+				}
+			}
+		}
+	}
+
+
+### LORE tzeentch ###
+character_event = {
+	id = magicengine.63
+	title = tzeentch_cast_title
+	desc = tzeentch_cast_desc
+	is_triggered_only = yes
+	picture = GFX_evt_mage_lore_tzeentch
+	
+	trigger = {
+		is_alive = yes
+		OR = {
+			has_character_modifier = magic_power_1
+			has_character_modifier = magic_power_2
+			has_character_modifier = magic_power_3
+			has_character_modifier = magic_power_4
+			}
+		trait = lore_tzeentch
+		}
+	
+	weight_multiplier = {
+		days = 1
+		modifier = {
+			OR = {
+				has_character_modifier = magic_power_1
+				has_character_modifier = magic_power_2
+				has_character_modifier = magic_power_3
+				has_character_modifier = magic_power_4
+				}
+			factor = 500
+			}
+		}
+	
+	option = {
+		name = tzeentch_level1_opt
+
+		clr_character_flag = casting_battle_magic
+		trigger = {
+			OR = {
+				has_character_modifier = magic_power_1
+				has_character_modifier = magic_power_2
+				has_character_modifier = magic_power_3
+				has_character_modifier = magic_power_4
+				}
+			NOT = { has_character_flag = cast_tzeentch_1 }
+			}
+		location = {
+			ROOT = {
+				if = {
+					limit= { any_war = { always = yes } }
+					random_courtier = {
+						spawn_unit = {
+							province = PREVPREV
+							owner = ROOT
+							home = PREVPREV
+							leader = THIS
+							earmark = magical_spells
+							attrition = 1.0
+							troops = { magical_spells = { 25 25 } }
+							}
+						}
+					}
+				}
+			ROOT = {
+				if = {
+					limit = { independent = false }
+					liege = {
+						if = {
+							limit = { any_war = { always = yes } }
+							random_courtier = {
+								spawn_unit = {
+									province = PREVPREVPREV
+									owner = PREV
+									home = PREVPREVPREV
+									leader = THIS
+									earmark = magical_spells
+									attrition = 1.0
+									troops = { magical_spells = { 25 25 } }
+									}
+								}
+							}
+						}
+					}
+				}}
+		set_character_flag = cast_tzeentch_1
+		ai_chance = { factor = 1 }
+		character_event = {
+			id = magicengine.378
+			days = 60
+			}
+		}
+	
+	option = {
+		name = tzeentch_level2_opt
+
+		clr_character_flag = casting_battle_magic
+		trigger = {
+			OR = {
+				has_character_modifier = magic_power_2
+				has_character_modifier = magic_power_3
+				has_character_modifier = magic_power_4
+				}
+			NOT = { has_character_flag = cast_tzeentch_2 }
+			}
+		location = {
+			ROOT = {
+				if = {
+					limit= { any_war = { always = yes } }
+					random_courtier = {
+						spawn_unit = {
+							province = PREVPREV
+							owner = ROOT
+							home = PREVPREV
+							leader = THIS
+							earmark = magical_spells
+							attrition = 1.0
+							troops = { magical_spells = { 50 50 } }
+							}
+						}
+					}
+				}
+			ROOT = {
+				if = {
+					limit = { independent = false }
+					liege = {
+						if = {
+							limit = { any_war = { always = yes } }
+							random_courtier = {
+								spawn_unit = {
+									province = PREVPREVPREV
+									owner = PREV
+									home = PREVPREVPREV
+									leader = THIS
+									earmark = magical_spells
+									attrition = 1.0
+									troops = { magical_spells = { 50 50 } }
+									}
+								}
+							}
+						}
+					}
+				}}
+		set_character_flag = cast_tzeentch_2
+		ai_chance = { factor = 10 }
+		character_event = {
+			id = magicengine.379
+			days = 60
+			}
+		}
+	
+	option = {
+		name = tzeentch_level3_opt
+
+		clr_character_flag = casting_battle_magic
+		trigger = {
+			OR = {
+				has_character_modifier = magic_power_3
+				has_character_modifier = magic_power_4
+				}
+			NOT = { has_character_flag = cast_tzeentch_3 }
+			}
+		location = {
+			ROOT = {
+				if = {
+					limit= { any_war = { always = yes } }
+					random_courtier = {
+						spawn_unit = {
+							province = PREVPREV
+							owner = ROOT
+							home = PREVPREV
+							leader = THIS
+							earmark = magical_spells
+							attrition = 1.0
+							troops = { magical_spells = { 75 75 } }
+							}
+						}
+					}
+				}
+			ROOT = {
+				if = {
+					limit = { independent = false }
+					liege = {
+						if = {
+							limit = { any_war = { always = yes } }
+							random_courtier = {
+								spawn_unit = {
+									province = PREVPREVPREV
+									owner = PREV
+									home = PREVPREVPREV
+									leader = THIS
+									earmark = magical_spells
+									attrition = 1.0
+									troops = { magical_spells = { 75 75 } }
+									}
+								}
+							}
+						}
+					}
+				}}
+		set_character_flag = cast_tzeentch_3
+		ai_chance = { factor = 100 }
+		character_event = {
+			id = magicengine.380
+			days = 60
+			}
+		}
+	
+	option = {
+		name = tzeentch_level4_opt
+
+		clr_character_flag = casting_battle_magic
+		trigger = {
+			has_character_modifier = magic_power_4
+			NOT = { has_character_flag = cast_tzeentch_4 }
+			}
+		location = {
+			ROOT = {
+				if = {
+					limit= { any_war = { always = yes } }
+					random_courtier = {
+						spawn_unit = {
+							province = PREVPREV
+							owner = ROOT
+							home = PREVPREV
+							leader = THIS
+							earmark = magical_spells
+							attrition = 1.0
+							troops = { magical_spells = { 100 100 } }
+							}
+						}
+					}
+				}
+			ROOT = {
+				if = {
+					limit = { independent = false }
+					liege = {
+						if = {
+							limit = { any_war = { always = yes } }
+							random_courtier = {
+								spawn_unit = {
+									province = PREVPREVPREV
+									owner = PREV
+									home = PREVPREVPREV
+									leader = THIS
+									earmark = magical_spells
+									attrition = 1.0
+									troops = { magical_spells = { 100 100 } }
+									}
+								}
+							}
+						}
+					}
+				}}
+		set_character_flag = cast_tzeentch_4
+		ai_chance = { factor = 1000 }
+		character_event = {
+			id = magicengine.381
+			days = 60
+			}
+		}
+		
+		option = {
+		name = EVTOPTcant_cast_more_spells
+		trigger = {
+			has_character_flag = cast_tzeentch_1
+			has_character_flag = cast_tzeentch_2
+			has_character_flag = cast_tzeentch_3
+			has_character_flag = cast_tzeentch_4
+		}
+		
+		clr_character_flag = casting_battle_magic		
+	}
+	}
+character_event = {
+	id = magicengine.378
+	title = clear_spell_flag_title
+	desc = clear_spell_flag_desc
+	hide_window = yes
+	
+	trigger = {
+		has_character_flag = cast_tzeentch_1
+		}
+	
+	immediate = {
+		if = {
+			limit = {
+				had_character_flag = {
+					flag = cast_tzeentch_1
+					days = 30
+					}
+				}
+			clr_character_flag = cast_tzeentch_1
+			}
+		
+		if = {
+			limit = {
+				NOT = { had_character_flag = {
+						flag = cast_tzeentch_1
+						days = 30
+						}}
+				}
+			character_event = {
+				id = magicengine.378
+				days = 30
+				}
+			}
+		}
+	}
+character_event = {
+	id = magicengine.379
+	title = clear_spell_flag_title
+	desc = clear_spell_flag_desc
+	hide_window = yes
+	
+	trigger = {
+		has_character_flag = cast_tzeentch_2
+		}
+	
+	immediate = {
+		if = {
+			limit = {
+				had_character_flag = {
+					flag = cast_tzeentch_2
+					days = 30
+					}
+				}
+			clr_character_flag = cast_tzeentch_2
+			}
+		
+		if = {
+			limit = {
+				NOT = { had_character_flag = {
+						flag = cast_tzeentch_2
+						days = 30
+						}}
+				}
+			character_event = {
+				id = magicengine.379
+				days = 30
+				}
+			}
+		}
+	}
+character_event = {
+	id = magicengine.380
+	title = clear_spell_flag_title
+	desc = clear_spell_flag_desc
+	hide_window = yes
+	
+	trigger = {
+		has_character_flag = cast_tzeentch_3
+		}
+	
+	immediate = {
+		if = {
+			limit = {
+				had_character_flag = {
+					flag = cast_tzeentch_3
+					days = 30
+					}
+				}
+			clr_character_flag = cast_tzeentch_3
+			}
+		
+		if = {
+			limit = {
+				NOT = { had_character_flag = {
+						flag = cast_tzeentch_3
+						days = 30
+						}}
+				}
+			character_event = {
+				id = magicengine.380
+				days = 30
+				}
+			}
+		}
+	}
+character_event = {
+	id = magicengine.381
+	title = clear_spell_flag_title
+	desc = clear_spell_flag_desc
+	hide_window = yes
+	
+	trigger = {
+		has_character_flag = cast_tzeentch_4
+		}
+	
+	immediate = {
+		if = {
+			limit = {
+				had_character_flag = {
+					flag = cast_tzeentch_4
+					days = 30
+					}
+				}
+			clr_character_flag = cast_tzeentch_4
+			}
+		
+		if = {
+			limit = {
+				NOT = { had_character_flag = {
+						flag = cast_tzeentch_4
+						days = 30
+						}}
+				}
+			character_event = {
+				id = magicengine.381
+				days = 30
+				}
+			}
+		}
+	}
+
+
+### LORE slaaneesh ###
+character_event = {
+	id = magicengine.64
+	title = slaaneesh_cast_title
+	desc = slaaneesh_cast_desc
+	is_triggered_only = yes
+	picture = GFX_evt_mage_lore_slaanesh
+	
+	trigger = {
+		is_alive = yes
+		OR = {
+			has_character_modifier = magic_power_1
+			has_character_modifier = magic_power_2
+			has_character_modifier = magic_power_3
+			has_character_modifier = magic_power_4
+			}
+		trait = lore_slaanesh
+		}
+	
+	weight_multiplier = {
+		days = 1
+		modifier = {
+			OR = {
+				has_character_modifier = magic_power_1
+				has_character_modifier = magic_power_2
+				has_character_modifier = magic_power_3
+				has_character_modifier = magic_power_4
+				}
+			factor = 500
+			}
+		}
+	
+	option = {
+		name = slaaneesh_level1_opt
+
+		clr_character_flag = casting_battle_magic
+		trigger = {
+			OR = {
+				has_character_modifier = magic_power_1
+				has_character_modifier = magic_power_2
+				has_character_modifier = magic_power_3
+				has_character_modifier = magic_power_4
+				}
+			NOT = { has_character_flag = cast_slaaneesh_1 }
+			}
+		location = {
+			ROOT = {
+				if = {
+					limit= { any_war = { always = yes } }
+					random_courtier = {
+						spawn_unit = {
+							province = PREVPREV
+							owner = ROOT
+							home = PREVPREV
+							leader = THIS
+							earmark = magical_spells
+							attrition = 1.0
+							troops = { magical_spells = { 20 20 } }
+							}
+						}
+					}
+				}
+			ROOT = {
+				if = {
+					limit = { independent = false }
+					liege = {
+						if = {
+							limit = { any_war = { always = yes } }
+							random_courtier = {
+								spawn_unit = {
+									province = PREVPREVPREV
+									owner = PREV
+									home = PREVPREVPREV
+									leader = THIS
+									earmark = magical_spells
+									attrition = 1.0
+									troops = { magical_spells = { 20 20 } }
+									}
+								}
+							}
+						}
+					}
+				}}
+		set_character_flag = cast_slaaneesh_1
+		ai_chance = { factor = 1 }
+		character_event = {
+			id = magicengine.384
+			days = 60
+			}
+		}
+	
+	option = {
+		name = slaaneesh_level2_opt
+
+		clr_character_flag = casting_battle_magic
+		trigger = {
+			OR = {
+				has_character_modifier = magic_power_2
+				has_character_modifier = magic_power_3
+				has_character_modifier = magic_power_4
+				}
+			NOT = { has_character_flag = cast_slaaneesh_2 }
+			}
+		location = {
+			ROOT = {
+				if = {
+					limit= { any_war = { always = yes } }
+					random_courtier = {
+						spawn_unit = {
+							province = PREVPREV
+							owner = ROOT
+							home = PREVPREV
+							leader = THIS
+							earmark = magical_spells
+							attrition = 1.0
+							troops = { magical_spells = { 35 35 } }
+							}
+						}
+					}
+				}
+			ROOT = {
+				if = {
+					limit = { independent = false }
+					liege = {
+						if = {
+							limit = { any_war = { always = yes } }
+							random_courtier = {
+								spawn_unit = {
+									province = PREVPREVPREV
+									owner = PREV
+									home = PREVPREVPREV
+									leader = THIS
+									earmark = magical_spells
+									attrition = 1.0
+									troops = { magical_spells = { 35 35 } }
+									}
+								}
+							}
+						}
+					}
+				}}
+		set_character_flag = cast_slaaneesh_2
+		ai_chance = { factor = 10 }
+		character_event = {
+			id = magicengine.385
+			days = 60
+			}
+		}
+	
+	option = {
+		name = slaaneesh_level3_opt
+
+		clr_character_flag = casting_battle_magic
+		trigger = {
+			OR = {
+				has_character_modifier = magic_power_3
+				has_character_modifier = magic_power_4
+				}
+			NOT = { has_character_flag = cast_slaaneesh_3 }
+			}
+		location = {
+			ROOT = {
+				if = {
+					limit= { any_war = { always = yes } }
+					random_courtier = {
+						spawn_unit = {
+							province = PREVPREV
+							owner = ROOT
+							home = PREVPREV
+							leader = THIS
+							earmark = magical_spells
+							attrition = 1.0
+							troops = { magical_spells = { 50 50 } }
+							}
+						}
+					}
+				}
+			ROOT = {
+				if = {
+					limit = { independent = false }
+					liege = {
+						if = {
+							limit = { any_war = { always = yes } }
+							random_courtier = {
+								spawn_unit = {
+									province = PREVPREVPREV
+									owner = PREV
+									home = PREVPREVPREV
+									leader = THIS
+									earmark = magical_spells
+									attrition = 1.0
+									troops = { magical_spells = { 50 50 } }
+									}
+								}
+							}
+						}
+					}
+				}}
+		set_character_flag = cast_slaaneesh_3
+		ai_chance = { factor = 100 }
+		character_event = {
+			id = magicengine.386
+			days = 60
+			}
+		}
+	
+	option = {
+		name = slaaneesh_level4_opt
+
+		clr_character_flag = casting_battle_magic
+		trigger = {
+			has_character_modifier = magic_power_4
+			NOT = { has_character_flag = cast_slaaneesh_4 }
+			}
+		location = {
+			ROOT = {
+				if = {
+					limit= { any_war = { always = yes } }
+					random_courtier = {
+						spawn_unit = {
+							province = PREVPREV
+							owner = ROOT
+							home = PREVPREV
+							leader = THIS
+							earmark = magical_spells
+							attrition = 1.0
+							troops = { magical_spells = { 65 65 } }
+							}
+						}
+					}
+				}
+			ROOT = {
+				if = {
+					limit = { independent = false }
+					liege = {
+						if = {
+							limit = { any_war = { always = yes } }
+							random_courtier = {
+								spawn_unit = {
+									province = PREVPREVPREV
+									owner = PREV
+									home = PREVPREVPREV
+									leader = THIS
+									earmark = magical_spells
+									attrition = 1.0
+									troops = { magical_spells = { 65 65 } }
+									}
+								}
+							}
+						}
+					}
+				}}
+		set_character_flag = cast_slaaneesh_4
+		ai_chance = { factor = 1000 }
+		character_event = {
+			id = magicengine.387
+			days = 60
+			}
+		}
+		
+		option = {
+		name = EVTOPTcant_cast_more_spells
+		trigger = {
+			has_character_flag = cast_slaaneesh_1
+			has_character_flag = cast_slaaneesh_2
+			has_character_flag = cast_slaaneesh_3
+			has_character_flag = cast_slaaneesh_4
+		}
+		
+		clr_character_flag = casting_battle_magic		
+	}
+	}
+character_event = {
+	id = magicengine.384
+	title = clear_spell_flag_title
+	desc = clear_spell_flag_desc
+	hide_window = yes
+	
+	trigger = {
+		has_character_flag = cast_slaaneesh_1
+		}
+	
+	immediate = {
+		if = {
+			limit = {
+				had_character_flag = {
+					flag = cast_slaaneesh_1
+					days = 30
+					}
+				}
+			clr_character_flag = cast_slaaneesh_1
+			}
+		
+		if = {
+			limit = {
+				NOT = { had_character_flag = {
+						flag = cast_slaaneesh_1
+						days = 30
+						}}
+				}
+			character_event = {
+				id = magicengine.384
+				days = 30
+				}
+			}
+		}
+	}
+character_event = {
+	id = magicengine.385
+	title = clear_spell_flag_title
+	desc = clear_spell_flag_desc
+	hide_window = yes
+	
+	trigger = {
+		has_character_flag = cast_slaaneesh_2
+		}
+	
+	immediate = {
+		if = {
+			limit = {
+				had_character_flag = {
+					flag = cast_slaaneesh_2
+					days = 30
+					}
+				}
+			clr_character_flag = cast_slaaneesh_2
+			}
+		
+		if = {
+			limit = {
+				NOT = { had_character_flag = {
+						flag = cast_slaaneesh_2
+						days = 30
+						}}
+				}
+			character_event = {
+				id = magicengine.385
+				days = 30
+				}
+			}
+		}
+	}
+character_event = {
+	id = magicengine.386
+	title = clear_spell_flag_title
+	desc = clear_spell_flag_desc
+	hide_window = yes
+	
+	trigger = {
+		has_character_flag = cast_slaaneesh_3
+		}
+	
+	immediate = {
+		if = {
+			limit = {
+				had_character_flag = {
+					flag = cast_slaaneesh_3
+					days = 30
+					}
+				}
+			clr_character_flag = cast_slaaneesh_3
+			}
+		
+		if = {
+			limit = {
+				NOT = { had_character_flag = {
+						flag = cast_slaaneesh_3
+						days = 30
+						}}
+				}
+			character_event = {
+				id = magicengine.386
+				days = 30
+				}
+			}
+		}
+	}
+character_event = {
+	id = magicengine.387
+	title = clear_spell_flag_title
+	desc = clear_spell_flag_desc
+	hide_window = yes
+	
+	trigger = {
+		has_character_flag = cast_slaaneesh_4
+		}
+	
+	immediate = {
+		if = {
+			limit = {
+				had_character_flag = {
+					flag = cast_slaaneesh_4
+					days = 30
+					}
+				}
+			clr_character_flag = cast_slaaneesh_4
+			}
+		
+		if = {
+			limit = {
+				NOT = { had_character_flag = {
+						flag = cast_slaaneesh_4
+						days = 30
+						}}
+				}
+			character_event = {
+				id = magicengine.387
+				days = 30
+				}
+			}
+		}
+	}
+
+### LORE hashut ###
+character_event = {
+	id = magicengine.65
+	title = hashut_cast_title
+	desc = hashut_cast_desc
+	is_triggered_only = yes
+	picture = GFX_evt_mage_lore_hashut
+	
+	trigger = {
+		is_alive = yes
+		OR = {
+			has_character_modifier = magic_power_1
+			has_character_modifier = magic_power_2
+			has_character_modifier = magic_power_3
+			has_character_modifier = magic_power_4
+			}
+		trait = chaos_dwarf_sorcerer
+		}
+	
+	weight_multiplier = {
+		days = 1
+		modifier = {
+			OR = {
+				has_character_modifier = magic_power_1
+				has_character_modifier = magic_power_2
+				has_character_modifier = magic_power_3
+				has_character_modifier = magic_power_4
+				}
+			factor = 500
+			}
+		}
+	
+	option = {
+		name = hashut_level1_opt
+
+		clr_character_flag = casting_battle_magic
+		trigger = {
+			OR = {
+				has_character_modifier = magic_power_1
+				has_character_modifier = magic_power_2
+				has_character_modifier = magic_power_3
+				has_character_modifier = magic_power_4
+				}
+			NOT = { has_character_flag = cast_hashut_1 }
+			}
+		location = {
+			ROOT = {
+				if = {
+					limit= { any_war = { always = yes } }
+					random_courtier = {
+						spawn_unit = {
+							province = PREVPREV
+							owner = ROOT
+							home = PREVPREV
+							leader = THIS
+							earmark = magical_spells
+							attrition = 1.0
+							troops = { magical_spells = { 20 20 } }
+							}
+						}
+					}
+				}
+			ROOT = {
+				if = {
+					limit = { independent = false }
+					liege = {
+						if = {
+							limit = { any_war = { always = yes } }
+							random_courtier = {
+								spawn_unit = {
+									province = PREVPREVPREV
+									owner = PREV
+									home = PREVPREVPREV
+									leader = THIS
+									earmark = magical_spells
+									attrition = 1.0
+									troops = { magical_spells = { 20 20 } }
+									}
+								}
+							}
+						}
+					}
+				}}
+		set_character_flag = cast_hashut_1
+		ai_chance = { factor = 1 }
+		character_event = {
+			id = magicengine.388
+			days = 60
+			}
+		}
+	
+	option = {
+		name = hashut_level2_opt
+
+		clr_character_flag = casting_battle_magic
+		trigger = {
+			OR = {
+				has_character_modifier = magic_power_2
+				has_character_modifier = magic_power_3
+				has_character_modifier = magic_power_4
+				}
+			NOT = { has_character_flag = cast_hashut_2 }
+			}
+		location = {
+			ROOT = {
+				if = {
+					limit= { any_war = { always = yes } }
+					random_courtier = {
+						spawn_unit = {
+							province = PREVPREV
+							owner = ROOT
+							home = PREVPREV
+							leader = THIS
+							earmark = magical_spells
+							attrition = 1.0
+							troops = { magical_spells = { 35 35 } }
+							}
+						}
+					}
+				}
+			ROOT = {
+				if = {
+					limit = { independent = false }
+					liege = {
+						if = {
+							limit = { any_war = { always = yes } }
+							random_courtier = {
+								spawn_unit = {
+									province = PREVPREVPREV
+									owner = PREV
+									home = PREVPREVPREV
+									leader = THIS
+									earmark = magical_spells
+									attrition = 1.0
+									troops = { magical_spells = { 35 35 } }
+									}
+								}
+							}
+						}
+					}
+				}}
+		set_character_flag = cast_hashut_2
+		ai_chance = { factor = 10 }
+		character_event = {
+			id = magicengine.389
+			days = 60
+			}
+		}
+	
+	option = {
+		name = hashut_level3_opt
+
+		clr_character_flag = casting_battle_magic
+		trigger = {
+			OR = {
+				has_character_modifier = magic_power_3
+				has_character_modifier = magic_power_4
+				}
+			NOT = { has_character_flag = cast_hashut_3 }
+			}
+		location = {
+			ROOT = {
+				if = {
+					limit= { any_war = { always = yes } }
+					random_courtier = {
+						spawn_unit = {
+							province = PREVPREV
+							owner = ROOT
+							home = PREVPREV
+							leader = THIS
+							earmark = magical_spells
+							attrition = 1.0
+							troops = { magical_spells = { 65 65 } }
+							}
+						}
+					}
+				}
+			ROOT = {
+				if = {
+					limit = { independent = false }
+					liege = {
+						if = {
+							limit = { any_war = { always = yes } }
+							random_courtier = {
+								spawn_unit = {
+									province = PREVPREVPREV
+									owner = PREV
+									home = PREVPREVPREV
+									leader = THIS
+									earmark = magical_spells
+									attrition = 1.0
+									troops = { magical_spells = { 65 65 } }
+									}
+								}
+							}
+						}
+					}
+				}}
+		set_character_flag = cast_hashut_3
+		ai_chance = { factor = 100 }
+		character_event = {
+			id = magicengine.390
+			days = 60
+			}
+		}
+	
+	option = {
+		name = hashut_level4_opt
+
+		clr_character_flag = casting_battle_magic
+		trigger = {
+			has_character_modifier = magic_power_4
+			NOT = { has_character_flag = cast_hashut_4 }
+			}
+		location = {
+			ROOT = {
+				if = {
+					limit= { any_war = { always = yes } }
+					random_courtier = {
+						spawn_unit = {
+							province = PREVPREV
+							owner = ROOT
+							home = PREVPREV
+							leader = THIS
+							earmark = magical_spells
+							attrition = 1.0
+							troops = { magical_spells = { 100 100 } }
+							}
+						}
+					}
+				}
+			ROOT = {
+				if = {
+					limit = { independent = false }
+					liege = {
+						if = {
+							limit = { any_war = { always = yes } }
+							random_courtier = {
+								spawn_unit = {
+									province = PREVPREVPREV
+									owner = PREV
+									home = PREVPREVPREV
+									leader = THIS
+									earmark = magical_spells
+									attrition = 1.0
+									troops = { magical_spells = { 100 100 } }
+									}
+								}
+							}
+						}
+					}
+				}}
+		set_character_flag = cast_hashut_4
+		ai_chance = { factor = 1000 }
+		character_event = {
+			id = magicengine.391
+			days = 60
+			}
+		}
+		
+		option = {
+		name = EVTOPTcant_cast_more_spells
+		trigger = {
+			has_character_flag = cast_hashut_1
+			has_character_flag = cast_hashut_2
+			has_character_flag = cast_hashut_3
+			has_character_flag = cast_hashut_4
+		}
+		
+		clr_character_flag = casting_battle_magic		
+	}
+	}
+character_event = {
+	id = magicengine.388
+	title = clear_spell_flag_title
+	desc = clear_spell_flag_desc
+	hide_window = yes
+	
+	trigger = {
+		has_character_flag = cast_hashut_1
+		}
+	
+	immediate = {
+		if = {
+			limit = {
+				had_character_flag = {
+					flag = cast_hashut_1
+					days = 30
+					}
+				}
+			clr_character_flag = cast_hashut_1
+			}
+		
+		if = {
+			limit = {
+				NOT = { had_character_flag = {
+						flag = cast_hashut_1
+						days = 30
+						}}
+				}
+			character_event = {
+				id = magicengine.384
+				days = 30
+				}
+			}
+		}
+	}
+character_event = {
+	id = magicengine.389
+	title = clear_spell_flag_title
+	desc = clear_spell_flag_desc
+	hide_window = yes
+	
+	trigger = {
+		has_character_flag = cast_hashut_2
+		}
+	
+	immediate = {
+		if = {
+			limit = {
+				had_character_flag = {
+					flag = cast_hashut_2
+					days = 30
+					}
+				}
+			clr_character_flag = cast_hashut_2
+			}
+		
+		if = {
+			limit = {
+				NOT = { had_character_flag = {
+						flag = cast_hashut_2
+						days = 30
+						}}
+				}
+			character_event = {
+				id = magicengine.385
+				days = 30
+				}
+			}
+		}
+	}
+character_event = {
+	id = magicengine.390
+	title = clear_spell_flag_title
+	desc = clear_spell_flag_desc
+	hide_window = yes
+	
+	trigger = {
+		has_character_flag = cast_hashut_3
+		}
+	
+	immediate = {
+		if = {
+			limit = {
+				had_character_flag = {
+					flag = cast_hashut_3
+					days = 30
+					}
+				}
+			clr_character_flag = cast_hashut_3
+			}
+		
+		if = {
+			limit = {
+				NOT = { had_character_flag = {
+						flag = cast_hashut_3
+						days = 30
+						}}
+				}
+			character_event = {
+				id = magicengine.386
+				days = 30
+				}
+			}
+		}
+	}
+character_event = {
+	id = magicengine.391
+	title = clear_spell_flag_title
+	desc = clear_spell_flag_desc
+	hide_window = yes
+	
+	trigger = {
+		has_character_flag = cast_hashut_4
+		}
+	
+	immediate = {
+		if = {
+			limit = {
+				had_character_flag = {
+					flag = cast_hashut_4
+					days = 30
+					}
+				}
+			clr_character_flag = cast_hashut_4
+			}
+		
+		if = {
+			limit = {
+				NOT = { had_character_flag = {
+						flag = cast_hashut_4
+						days = 30
+						}}
+				}
+			character_event = {
+				id = magicengine.387
+				days = 30
+				}
+			}
+		}
+	}
+
+	
+	
+# dispatch(lore,idnum)
+
+
+character_event = {
+	id = magicengine.12
+	title = lore_dispatcher_title
+	desc = lore_dispatcher_desc
+	is_triggered_only = yes
+	picture = GFX_evt_mage_choose_lore
+	
+	trigger = { 
+		OR = { #Players must trigger it from the "Cast Magic" decision
+			ai = yes 
+			has_character_flag = casting_battle_magic
+		}
+		is_alive = yes
+		OR = {
+			has_character_modifier = magic_power_1
+			has_character_modifier = magic_power_2
+			has_character_modifier = magic_power_3
+			has_character_modifier = magic_power_4
+			}
+	}
+	
+	option = {
+		name = dispatch_dark_magic_desc
+		trigger = {
+			trait = lore_dark_magic
+			}
+		character_event = { id = magicengine.50 }
+		}
+	option = {
+		name = dispatch_high_magic_desc
+		trigger = {
+			trait = lore_high_magic
+			}
+		character_event = { id = magicengine.51 }
+		}
+	option = {
+		name = dispatch_necromancy_desc
+		trigger = {
+			trait = lore_necromancy
+			}
+		character_event = { id = magicengine.52 }
+		}
+	option = {
+		name = dispatch_ice_desc
+		trigger = {
+			trait = lore_ice
+			}
+		character_event = { id = magicengine.53 }
+		}
+	option = {
+		name = dispatch_fire_desc
+		trigger = {
+			trait = lore_fire
+			}
+		character_event = { id = magicengine.54 }
+		}
+	option = {
+		name = dispatch_light_desc
+		trigger = {
+			trait = lore_light
+			}
+		character_event = { id = magicengine.55 }
+		}
+	option = {
+		name = dispatch_beast_desc
+		trigger = {
+			trait = lore_beasts
+			}
+		character_event = { id = magicengine.56 }
+		}
+	option = {
+		name = dispatch_metal_desc
+		trigger = {
+			trait = lore_metal
+			}
+		character_event = { id = magicengine.57 }
+		}
+	option = {
+		name = dispatch_life_desc
+		trigger = {
+			trait = lore_life
+			}
+		character_event = { id = magicengine.58 }
+		}
+	option = {
+		name = dispatch_heavens_desc
+		trigger = {
+			trait = lore_heavens
+			}
+		character_event = { id = magicengine.59 }
+		}
+	option = {
+		name = dispatch_death_desc
+		trigger = {
+			trait = lore_death
+			}
+		character_event = { id = magicengine.60 }
+		}
+	option = {
+		name = dispatch_waaagh_desc
+		trigger = {
+			OR = {
+				trait = lore_waaagh
+				trait = greenskin_shaman
+			}
+		}
+		character_event = { id = magicengine.61 }
+		}
+	option = {
+		name = dispatch_nurgle_desc
+		trigger = {
+			trait = lore_nurgle
+			}
+		character_event = { id = magicengine.62 }
+		}
+	option = {
+		name = dispatch_tzeentch_desc
+		trigger = {
+			trait = lore_tzeentch
+			}
+		character_event = { id = magicengine.63 }
+		}
+	option = {
+		name = dispatch_slaaneesh_desc
+		trigger = {
+			trait = lore_slaanesh
+			}
+		character_event = { id = magicengine.64 }
+		}	
+	option = {
+		name = dispatch_hashut_desc
+		trigger = {
+			trait = chaos_dwarf_sorcerer
+			}
+		character_event = { id = magicengine.65 }
+	}
+}
+
+
+### Remove any spells after the end of a battle
+character_event = {
+	id = magicengine.10
+	title = magic_disappears_title
+	desc = magic_disappears_desc
+	is_triggered_only = yes
+	hide_window = yes
+	
+	trigger = {
+		is_alive = yes
+		}
+	
+	immediate = {
+		disband_event_forces = magical_spells # If this fires while some spells are in combat, can they be disbanded?
+		any_liege = {
+			disband_event_forces = magical_spells
+			}
+		}
+	
+	option = {
+		name = magic_disappears_confirm
+		
+		ai_chance = {
+			factor = 1
+			}
+		}
+	}

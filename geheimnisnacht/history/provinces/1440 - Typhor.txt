@@ -1,0 +1,16 @@
+# c_typhor
+
+# County Title
+title = c_typhor
+
+# Settlements
+max_settlements = 2
+
+b_typhor = tribal
+#b_malkorm = city
+
+# Misc
+culture = autarri
+religion = anath_raema
+
+#History

@@ -1,0 +1,17 @@
+# c_huatl
+
+# County Title
+title = c_huatl
+
+# Settlements
+max_settlements = 3
+
+b_huatl = tribal
+#b_maxli = city
+#b_lotechi = temple
+
+# Misc
+culture = avilian
+religion = vampiric
+terrain = jungle
+#History

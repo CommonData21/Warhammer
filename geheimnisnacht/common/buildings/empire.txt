@@ -1,0 +1,537 @@
+# 
+# @author Shade, Pietrko
+# @description Imperial buildings additions & replacements
+# @compatibility 2.2.0
+#
+#
+# Castle
+castle = { 
+	# Imperial Addition State Army building represents 
+	# that imperial army is composed of professional troops
+	# those are capital only buildings for elector counts and 
+	# emperor itself
+
+        #################################################################################
+        # Represents the size of army provided by elector counts
+        # 0.25k
+        ca_imperial_army_1 = {
+		desc = building_imperial_army
+		potential = { 
+			culture_group = imperial_group
+			is_capital = yes
+			FROM = { has_landed_title = e_the_empire }
+		        FROM = { check_variable = { which = "state_army" value = 2 }}
+		        NOT = { FROM = { check_variable = { which = "state_army" value = 5 }}}
+		}
+		trigger = { always = no }
+		gold_cost = 0
+		build_time = 0
+                retinuesize = 250 # 50% of full retinues
+		ai_creation_factor = 200
+		extra_tech_building_start = 0.0		
+        }
+        # 0.5k 
+        ca_imperial_army_2 = {
+		desc = building_imperial_army
+		potential = { 
+			culture_group = imperial_group
+			is_capital = yes
+			FROM = { has_landed_title = e_the_empire }
+		        FROM = { check_variable = { which = "state_army" value = 5 }}
+		        NOT = { FROM = { check_variable = { which = "state_army" value = 10 }}}
+		}
+		trigger = { always = no }
+		gold_cost = 0
+		build_time = 0
+                retinuesize = 500
+		ai_creation_factor = 200
+
+		extra_tech_building_start = 0.0		
+        }
+        # 1k
+        ca_imperial_army_3 = {
+		desc = building_imperial_army
+		potential = { 
+			culture_group = imperial_group
+			is_capital = yes
+			FROM = { has_landed_title = e_the_empire }
+		        FROM = { check_variable = { which = "state_army" value = 10 }}
+		        NOT = { FROM = { check_variable = { which = "state_army" value = 15 }}}
+		}
+		trigger = { always = no }
+		gold_cost = 0
+		build_time = 0
+                retinuesize = 1000
+		ai_creation_factor = 200
+		extra_tech_building_start = 0.0		
+        }
+        # 1.5k retinues
+        ca_imperial_army_4 = {
+		desc = building_imperial_army
+		potential = { 
+			culture_group = imperial_group
+			is_capital = yes
+			FROM = { has_landed_title = e_the_empire }
+		        FROM = { check_variable = { which = "state_army" value = 15 }}
+		        NOT = { FROM = { check_variable = { which = "state_army" value = 20 }}}
+		}
+		trigger = { always = no }
+		gold_cost = 0
+		build_time = 0
+                retinuesize = 1500
+		ai_creation_factor = 200
+		extra_tech_building_start = 0.0		
+        }
+        # 2k retinues
+        ca_imperial_army_5 = {
+		desc = building_imperial_army
+		potential = { 
+			culture_group = imperial_group
+			is_capital = yes
+			FROM = { has_landed_title = e_the_empire }
+		        FROM = { check_variable = { which = "state_army" value = 20 }}
+		        NOT = { FROM = { check_variable = { which = "state_army" value = 30 }}}
+		}
+		trigger = { always = no }
+		gold_cost = 0
+		build_time = 0
+                retinuesize = 2000
+		ai_creation_factor = 200
+		extra_tech_building_start = 0.0		
+        }
+        # 3k retinues
+        ca_imperial_army_6 = {
+		desc = building_imperial_army
+		potential = { 
+			culture_group = imperial_group
+			is_capital = yes
+			FROM = { has_landed_title = e_the_empire }
+		        FROM = { check_variable = { which = "state_army" value = 30 }}
+		        NOT = { FROM = { check_variable = { which = "state_army" value = 40 }}}
+		}
+		trigger = { always = no }
+		gold_cost = 0
+		build_time = 0
+                retinuesize = 3000
+		ai_creation_factor = 200
+		extra_tech_building_start = 0.0		
+        }
+        # 4k retinues
+        ca_imperial_army_7 = {
+		desc = building_imperial_army
+		potential = { 
+			culture_group = imperial_group
+			is_capital = yes
+			FROM = { has_landed_title = e_the_empire }
+		        FROM = { check_variable = { which = "state_army" value = 40 }}
+		        NOT = { FROM = { check_variable = { which = "state_army" value = 50 }}}
+		}
+		trigger = { always = no }
+		gold_cost = 0
+		build_time = 0
+                retinuesize = 4000
+		ai_creation_factor = 200
+		extra_tech_building_start = 0.0		
+        }
+        # 5k retinues
+        ca_imperial_army_8 = {
+		desc = building_imperial_army
+		potential = { 
+			culture_group = imperial_group
+			is_capital = yes
+			FROM = { has_landed_title = e_the_empire }
+		        FROM = { check_variable = { which = "state_army" value = 50 }}
+		        NOT = { FROM = { check_variable = { which = "state_army" value = 70 }}}
+		}
+		trigger = { always = no }
+		gold_cost = 0
+		build_time = 0
+                retinuesize = 5000
+		ai_creation_factor = 200
+		extra_tech_building_start = 0.0		
+        }
+        # 7k retinues
+        ca_imperial_army_9 = {
+		desc = building_imperial_army
+		potential = { 
+			culture_group = imperial_group
+			is_capital = yes
+			FROM = { has_landed_title = e_the_empire }
+		        FROM = { check_variable = { which = "state_army" value = 70 }}
+		        NOT = { FROM = { check_variable = { which = "state_army" value = 90 }}}
+		}
+		trigger = { always = no }
+		gold_cost = 0
+		build_time = 0
+                retinuesize = 7000
+		ai_creation_factor = 200
+		extra_tech_building_start = 0.0		
+        }
+        # 9k retinues
+        ca_imperial_army_10 = {
+		desc = building_imperial_army
+		potential = { 
+			culture_group = imperial_group
+			is_capital = yes
+			FROM = { has_landed_title = e_the_empire }
+		        FROM = { check_variable = { which = "state_army" value = 90 }}
+		}
+		trigger = { always = no }
+		gold_cost = 0
+		build_time = 0
+                retinuesize = 9000
+		ai_creation_factor = 200
+		extra_tech_building_start = 0.0		
+        }
+
+
+        #################################################################################
+        # Duke & Count army headquatores
+	# Army 
+	ca_imperial_state_1 = {
+		desc = ca_imperial_state_1_desc
+		potential = {
+			is_capital = yes
+			FROM = { 
+				culture_group = imperial_group
+				OR = {	
+					tier = king 
+					tier = emperor
+				}
+				NOT = {	has_landed_title = e_the_empire }
+                                has_character_modifier = state_troops_given
+			}
+			FROMFROM = { has_landed_title = e_the_empire }
+		}
+		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+		gold_cost = 0
+		build_time = 0
+		retinuesize_perc = -0.5
+		ai_creation_factor = 200
+
+		extra_tech_building_start = 0.0		
+	}
+	# Emperor Level state troops headquaters
+	ca_imperial_state_2 = {
+		desc = ca_imperial_state_1_desc
+		potential = {
+			is_capital = yes
+			FROM = { 
+				culture_group = imperial_group
+				OR = {	
+					tier = king 
+					tier = emperor
+				}
+                                NOT = { has_character_modifier = state_troops_given }
+			}
+			FROMFROM = { has_landed_title = e_the_empire }
+		}
+		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+		#prerequisites = { ca_imperial_barracks_1 }	
+		replaces = ca_imperial_state_1
+		gold_cost = 0
+		build_time = 0
+		retinuesize_perc = 1.5 # Typical empire bonus
+		ai_creation_factor = 200
+
+		extra_tech_building_start = 0.0		
+	}
+
+	# barracks replacement
+	ca_imperial_barracks_1 = {
+		desc = ca_imperial_barracks_1_desc
+		potential = {
+			FROM = { culture_group = imperial_group }
+		}
+		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+		replaces = ca_barracks_1
+		gold_cost = 50
+		build_time = 30
+		retinuesize = 50
+		ai_creation_factor = 105
+
+		extra_tech_building_start = 0.0		
+	}
+	
+	ca_imperial_barracks_2 = {
+		desc = ca_imperial_barracks_1_desc
+		potential = {
+			FROM = { culture_group = imperial_group }
+		}
+		trigger = { TECH_CASTLE_CONSTRUCTION = 1 }
+		upgrades_from = ca_imperial_barracks_1
+		prerequisites = { ca_wall_1 }
+		replaces = ca_barracks_2
+		gold_cost = 100
+		build_time = 365
+		retinuesize = 100
+		ai_creation_factor = 104
+		
+		extra_tech_building_start = 0.5
+	}
+	
+	ca_imperial_barracks_3 = {
+		desc = ca_imperial_barracks_1_desc
+		potential = {
+			FROM = { culture_group = imperial_group }
+		}
+		trigger = { TECH_CASTLE_CONSTRUCTION = 2 }
+		replaces = ca_barracks_3
+		upgrades_from = ca_imperial_barracks_2
+		gold_cost = 150
+		build_time = 365
+		retinuesize = 150
+		ai_creation_factor = 103
+
+		extra_tech_building_start = 3.0		
+	}
+	ca_imperial_barracks_4 = {
+		desc = ca_imperial_barracks_1_desc
+		potential = {
+			FROM = { culture_group = imperial_group }
+		}
+		trigger = { TECH_CASTLE_CONSTRUCTION = 3 }
+		replaces = ca_barracks_4
+		upgrades_from = ca_imperial_barracks_3
+		gold_cost = 200
+		build_time = 365
+		retinuesize = 200
+		ai_creation_factor = 102
+
+		extra_tech_building_start = 4.0		
+	}
+	
+	ca_imperial_barracks_5 = {
+		desc = ca_imperial_barracks_1_desc
+		potential = {
+			FROM = { culture_group = imperial_group }
+		}
+		trigger = { TECH_CASTLE_CONSTRUCTION = 4 }
+		replaces = ca_barracks_5
+		upgrades_from = ca_imperial_barracks_4
+		gold_cost = 250
+		build_time = 365
+		retinuesize = 250
+		ai_creation_factor = 101
+
+		extra_tech_building_start = 5.0		
+	}
+	ca_imperial_barracks_6 = {
+		desc = ca_imperial_barracks_1_desc
+		trigger = { TECH_CASTLE_CONSTRUCTION = 7 }
+		potential = {
+			FROM = { culture_group = imperial_group }
+		}
+		replaces = ca_barracks_5
+		upgrades_from = ca_imperial_barracks_5
+		gold_cost = 500
+		build_time = 2190
+		retinuesize = 300
+		ai_creation_factor = 100
+
+		extra_tech_building_start = 6.0
+	}
+
+	
+	#Stable, gives heavy cavalry - castle only
+	ca_imperial_stable_1 = {
+		desc = ca_imperial_stable_1_desc
+		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+		potential = {
+			FROM = { culture_group = imperial_group }
+		}
+		replaces = ca_stable_1
+		gold_cost = 100
+		build_time = 365
+		knights = 5
+		ai_creation_factor = 89
+		
+		extra_tech_building_start = 0.4
+	}
+	ca_imperial_stable_2 = {
+		desc = ca_imperial_stable_1_desc
+		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+		potential = {
+			FROM = { culture_group = imperial_group }
+		}
+		prerequisites = { ca_wall_1 }
+		upgrades_from = ca_imperial_stable_1
+		replaces = ca_stable_2
+		gold_cost = 120
+		build_time = 547
+		knights = 5
+		ai_creation_factor = 88
+
+		extra_tech_building_start = 0.8
+	}
+	ca_imperial_stable_3 = {
+		desc = ca_imperial_stable_1_desc
+		trigger = { TECH_CASTLE_CONSTRUCTION = 2 }
+		potential = {
+			FROM = { culture_group = imperial_group }
+		}
+		prerequisites = { ca_wall_2 }
+		upgrades_from = ca_imperial_stable_2
+		replaces = ca_stable_3
+		gold_cost = 200
+		build_time = 730
+		knights = 10
+		ai_creation_factor = 87
+
+		extra_tech_building_start = 2.0
+	}
+	ca_imperial_stable_4 = {
+		desc = ca_imperial_stable_1_desc
+		trigger = { TECH_CASTLE_CONSTRUCTION = 4 }
+		potential = {
+			FROM = { culture_group = imperial_group }
+		}
+		upgrades_from = ca_imperial_stable_3
+		replaces = ca_stable_4
+		gold_cost = 300
+		build_time = 1095
+		retinuesize = 50
+		knights = 15
+		ai_creation_factor = 86
+
+		extra_tech_building_start = 4.0
+	}
+	ca_imperial_stable_5 = {
+		desc = ca_imperial_stable_1_desc
+		trigger = { TECH_CASTLE_CONSTRUCTION = 6 }
+		potential = {
+			FROM = { culture_group = imperial_group }
+		}
+		upgrades_from = ca_imperial_stable_4
+		replaces = ca_stable_5
+		gold_cost = 400
+		build_time = 2190
+		retinuesize = 50
+		knights = 20
+		ai_creation_factor = 85
+
+		extra_tech_building_start = 5.0
+	}
+	ca_imperial_stable_6 = {
+		desc = ca_imperial_stable_1_desc
+		trigger = { TECH_CASTLE_CONSTRUCTION = 8 }
+		potential = {
+			FROM = { culture_group = imperial_group }
+		}
+		upgrades_from = ca_imperial_stable_5
+		replaces = ca_stable_6
+		gold_cost = 500
+		build_time = 2190
+		knights = 25
+		ai_creation_factor = 85
+
+		extra_tech_building_start = 6.0
+	}
+
+        # IMPERIAL NON-STATE TROOPS FOR CASTLES
+        # 
+        # Knightly Orders are mainly nobles who are not state soldiers
+	# therefore the should be treated as levies
+ 	# in case of empire the replace imperial_stables
+	# imperial_stable replacements (Secular Knightly Orders)
+        # deleted
+}
+
+
+# City replacements
+city = {
+	# barracks replacement
+	ct_imperial_barracks_1 = {
+		desc = ct_imperial_barracks_1_desc
+		potential = {
+			FROM = { culture_group = imperial_group }
+		}
+		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+		replaces = ct_barracks_1
+		gold_cost = 50
+		build_time = 30
+		retinuesize = 50
+		ai_creation_factor = 105
+
+		extra_tech_building_start = 0.0		
+	}
+	
+	ct_imperial_barracks_2 = {
+		desc = ct_imperial_barracks_1_desc
+		potential = {
+			FROM = { culture_group = imperial_group }
+		}
+		trigger = { TECH_CASTLE_CONSTRUCTION = 1 }
+		upgrades_from = ct_imperial_barracks_1
+		prerequisites = { ct_wall_1 }
+		replaces = ct_barracks_2
+		gold_cost = 100
+		build_time = 365
+		retinuesize = 100
+		ai_creation_factor = 104
+		
+		extra_tech_building_start = 0.5
+	}
+	
+	ct_imperial_barracks_3 = {
+		desc = ct_imperial_barracks_1_desc
+		potential = {
+			FROM = { culture_group = imperial_group }
+		}
+		trigger = { TECH_CASTLE_CONSTRUCTION = 2 }
+		replaces = ct_barracks_3
+		upgrades_from = ct_imperial_barracks_2
+		gold_cost = 150
+		build_time = 365
+		retinuesize = 150
+		ai_creation_factor = 103
+
+		extra_tech_building_start = 3.0		
+	}
+	ct_imperial_barracks_4 = {
+		desc = ct_imperial_barracks_1_desc
+		potential = {
+			FROM = { culture_group = imperial_group }
+		}
+		trigger = { TECH_CASTLE_CONSTRUCTION = 3 }
+		replaces = ct_barracks_4
+		upgrades_from = ct_imperial_barracks_3
+		gold_cost = 200
+		build_time = 365
+		retinuesize = 200
+		ai_creation_factor = 102
+
+		extra_tech_building_start = 4.0		
+	}
+	
+	ct_imperial_barracks_5 = {
+		desc = ct_imperial_barracks_1_desc
+		potential = {
+			FROM = { culture_group = imperial_group }
+		}
+		trigger = { TECH_CASTLE_CONSTRUCTION = 4 }
+		replaces = ct_barracks_5
+		upgrades_from = ct_imperial_barracks_4
+		gold_cost = 250
+		build_time = 365
+		retinuesize = 250
+		ai_creation_factor = 101
+
+		extra_tech_building_start = 5.0		
+	}
+	ct_imperial_barracks_6 = {
+		desc = ct_imperial_barracks_1_desc
+		trigger = { TECH_CASTLE_CONSTRUCTION = 7 }
+		potential = {
+			FROM = { culture_group = imperial_group }
+		}
+		replaces = ct_barracks_5
+		upgrades_from = ct_imperial_barracks_5
+		gold_cost = 500
+		build_time = 2190
+		retinuesize = 300
+		ai_creation_factor = 100
+
+		extra_tech_building_start = 6.0
+	}
+}

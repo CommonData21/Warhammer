@@ -1,0 +1,17 @@
+# c_khymerica
+
+# County Title
+title = c_khymerica
+
+# Settlements
+max_settlements = 3
+
+b_khymerica_spire = tribal
+b_skarix = city
+b_wrake = temple
+
+# Misc
+culture = autarri
+religion = anath_raema
+
+#History

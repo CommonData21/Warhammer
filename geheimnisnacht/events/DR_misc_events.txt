@@ -1,0 +1,95 @@
+##Events for Miscellaneous cultures and races
+namespace = DR_misc
+##Estalia & Tilea
+
+#Eternal Empire restored
+narrative_event = {
+	id = DR_misc.1
+	title = EVTNAMEDR_misc.1
+	desc = EVTDESCDR_misc.1
+	
+	picture = GFX_evt_myrmidian_warrior
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTADR_misc.1
+		hidden_tooltip = {
+			primary_title = {
+				any_direct_de_jure_vassal_title = {
+					de_jure_liege = e_eternal_empire
+				}
+			}
+		}
+		add_trait = myrmidia_incarnate
+		give_nickname = nick_the_glorious
+	}	
+}
+
+# Myrmidia Incarnate Trait Gained
+character_event = {
+	id = DR_misc.2
+	
+	hide_window = yes
+	
+	trigger = {
+		has_global_flag = ee_restored
+		has_landed_title = e_eternal_empire
+		NOT = { trait = myrmidia_incarnate }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = OK
+		add_trait = myrmidia_incarnate
+	}
+}
+
+# Myrmidia Incarnate Trait Lost
+character_event = {
+	id = DR_misc.3
+	
+	hide_window = yes
+	
+	trigger = {
+		has_global_flag = ee_restored
+		trait = myrmidia_incarnate
+		NOT = { has_landed_title = e_eternal_empire }
+		is_alive = yes
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = OK
+		remove_trait = myrmidia_incarnate
+	}
+}
+
+##Other Stuff
+#Win a war ( Ambiton )
+character_event = {
+	id = DR_misc.1000
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		FROM = { 
+			has_ambition = obj_win_war 
+			NOT = { has_character_flag = obj_win_war_won_war }
+		}
+	}
+	
+	option = {
+		name = OK
+		FROM = { 
+			set_character_flag = obj_win_war_won_war
+		}
+	}
+}

@@ -1,0 +1,16 @@
+# c_charix
+
+# County Title
+title = c_charix
+
+# Settlements
+max_settlements = 2
+
+b_charix = castle
+b_glaurung = temple
+
+# Misc
+culture = clari
+religion = cytharai
+
+#History

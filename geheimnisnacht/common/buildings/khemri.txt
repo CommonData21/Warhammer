@@ -1,0 +1,20 @@
+castle={
+
+	#Khemri Tombs - autobuilt in khemri provinces, but disappear if the ruler is no longer nehekharan group
+	ca_khemri_tombs = {
+		desc = ca_khemri_tombs_desc
+		auto_add_at_year = 10
+		potential = {
+			FROM = { trait = khemri_tomb_king }
+			culture = nehekharan
+		}
+		gold_cost = 10
+		build_time = 60
+		light_infantry = 100
+		heavy_infantry = 100
+		archers = 100
+		fort_level = 1
+		ai_creation_factor = 300 #AI should always build this if it can
+	}
+	
+	}

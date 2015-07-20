@@ -1,0 +1,16 @@
+# c_tunsuca
+
+# County Title
+title = c_tunsuca
+
+# Settlements
+max_settlements = 2
+
+b_tunsuca = tribal
+#b_tonic = city
+
+# Misc
+culture = lizardman
+religion = old_ones
+terrain = jungle
+#History

@@ -1,0 +1,17 @@
+# c_tor_tamarha
+
+# County Title
+title = c_tor_tamarha
+
+# Settlements
+max_settlements = 3
+
+b_tor_tamarha = castle
+#b_tor_khetharas = city
+#b_blackthorn = temple
+
+# Misc
+culture = yvressi
+religion = cadai
+
+#History

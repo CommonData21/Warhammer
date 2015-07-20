@@ -1,0 +1,2242 @@
+namespace = TNT
+character_event = {
+	id = TNT.12000
+	is_triggered_only = yes
+	hide_window = yes
+	
+
+	immediate = {
+		random_list  = {
+			80 = {
+				modifier = {
+					factor = 1.5
+					combat_rating = 1
+				}
+				modifier = {
+					factor = 1.5
+					combat_rating = 2
+				}
+				modifier = {
+					factor = 1.5
+					combat_rating = 3
+				}
+				modifier = {
+					factor = 1.5
+					combat_rating = 4
+				}
+				modifier = {
+					factor = 1.5
+					combat_rating = 5
+				}
+				modifier = {
+					factor = 1.5
+					combat_rating = 6
+				}
+				modifier = {
+					factor = 1.5
+					combat_rating = 7
+				}
+				modifier = {
+					factor = 1.5
+					combat_rating = 8
+				}
+				modifier = {
+					factor = 1.5
+					combat_rating = 9
+				}
+				modifier = {
+					factor = 1.5
+					combat_rating = 10
+				}
+				modifier = {
+					factor = 1.5
+					combat_rating = 11
+				}
+				modifier = {
+					factor = 1.5
+					combat_rating = 12
+				}
+				modifier = {
+					factor = 1.5
+					combat_rating = 13
+				}
+				modifier = {
+					factor = 1.5
+					combat_rating = 14
+				}
+				modifier = {
+					factor = 1.5
+					combat_rating = 15
+				}
+				modifier = {
+					factor = 0.5
+					NOT = {combat_rating = -1}
+				}
+				modifier = {
+					factor = 0.5
+					NOT = {combat_rating = -4}
+				}
+			}
+			10 = {#W
+				
+				character_event = {id = 88261 days = 1}
+			}
+			5 = {#M - LOSE FIRST ROUND
+				
+				character_event = {id = 88260 days = 2}
+			}
+			5 = {#D
+				character_event = {id = 88259 days = 3}
+			}
+		}
+	}
+	
+}
+
+#Flavour
+character_event = {
+	id = TNT.13000
+	is_triggered_only = yes
+	hide_window = yes
+	
+
+	immediate = {
+		random_list = {
+			570 = {
+			}
+			10 = {
+				character_event = {id = 88274 days = 1}
+			}
+			10 = {
+				character_event = {id = 88275 days = 1}
+			}
+			10 = {
+				character_event = {id = 88276 days = 1}
+			}
+		}
+	}
+	
+}
+
+character_event = {
+	id = TNT.14000
+	is_triggered_only = yes
+	hide_window = yes
+	
+
+	immediate = {
+		random_list = {
+			#WIN
+			5 = {
+				character_event = {id = 88262 days = 1}
+			}
+			5 = {
+				character_event = {id = 88263 days = 1}
+			}
+			1 = {
+				character_event = {id = 88264 days = 1}
+			}
+			1 = {
+				character_event = {id = 88265 days = 1}
+			}
+			1 = {
+				character_event = {id = 88266 days = 1}
+			}
+			1 = {
+				character_event = {id = 88267 days = 1}
+			}
+			53 = {
+			
+			}
+			#LOSE
+			11 = {
+				modifier = {
+					factor = 4.0
+					NOT = {combat_rating = 0}
+				}
+				modifier = {
+					factor = 2.0
+					NOT = {combat_rating = 1}
+				}
+				modifier = {
+					factor = 2.0
+					NOT = {combat_rating = 2}
+				}
+				character_event = {id = 88277 days = 1}
+			}
+			11 = {
+				modifier = {
+					factor = 4.0
+					NOT = {combat_rating = 0}
+				}
+				modifier = {
+					factor = 2.0
+					NOT = {combat_rating = 1}
+				}
+				modifier = {
+					factor = 2.0
+					NOT = {combat_rating = 2}
+				}
+				character_event = {id = 88279 days = 1}
+			}
+			11 = {
+				modifier = {
+					factor = 4.0
+					NOT = {combat_rating = 0}
+				}
+				modifier = {
+					factor = 2.0
+					NOT = {combat_rating = 1}
+				}
+				modifier = {
+					factor = 2.0
+					NOT = {combat_rating = 2}
+				}
+				character_event = {id = 88281 days = 1}
+			}
+		}
+	}
+	
+}
+
+
+
+
+
+character_event = {
+	id = TNT.2000
+	is_triggered_only = yes
+	hide_window = yes
+	
+
+	immediate = {
+		random_list  = {
+			80 = {
+				modifier = {
+					factor = 1.5
+					combat_rating = 1
+				}
+				modifier = {
+					factor = 1.5
+					combat_rating = 2
+				}
+				modifier = {
+					factor = 1.5
+					combat_rating = 3
+				}
+				modifier = {
+					factor = 1.5
+					combat_rating = 4
+				}
+				modifier = {
+					factor = 1.5
+					combat_rating = 5
+				}
+				modifier = {
+					factor = 1.5
+					combat_rating = 6
+				}
+				modifier = {
+					factor = 1.5
+					combat_rating = 7
+				}
+				modifier = {
+					factor = 1.5
+					combat_rating = 8
+				}
+				modifier = {
+					factor = 1.5
+					combat_rating = 9
+				}
+				modifier = {
+					factor = 1.5
+					combat_rating = 10
+				}
+				modifier = {
+					factor = 1.5
+					combat_rating = 11
+				}
+				modifier = {
+					factor = 1.5
+					combat_rating = 12
+				}
+				modifier = {
+					factor = 1.5
+					combat_rating = 13
+				}
+				modifier = {
+					factor = 1.5
+					combat_rating = 14
+				}
+				modifier = {
+					factor = 1.5
+					combat_rating = 15
+				}
+				modifier = {
+					factor = 0.5
+					NOT = {combat_rating = -1}
+				}
+				modifier = {
+					factor = 0.5
+					NOT = {combat_rating = -4}
+				}
+			}
+			10 = {#W
+				
+				character_event = {id = 70011 days = 1}
+			}
+			5 = {#M - LOSE FIRST ROUND
+				
+				character_event = {id = 70010 days = 2}
+			}
+			5 = {#D
+				character_event = {id = 70009 days = 3}
+			}
+		}
+	}
+	
+}
+
+
+character_event = {
+	id = TNT.3000
+	is_triggered_only = yes
+	hide_window = yes
+	
+
+	immediate = {
+		random_list = {
+			570 = {
+			}
+			10 = {
+				character_event = {id = 70024 days = 1}
+			}
+			10 = {
+				character_event = {id = 70025 days = 1}
+			}
+			10 = {
+				character_event = {id = 70026 days = 1}
+			}
+		}
+	}
+	
+}
+
+character_event = {
+	id = TNT.4000
+	is_triggered_only = yes
+	hide_window = yes
+	
+
+	immediate = {
+		random_list = {
+			#WIN
+			5 = {
+				character_event = {id = 70012 days = 1}
+			}
+			5 = {
+				character_event = {id = 70013 days = 1}
+			}
+			1 = {
+				character_event = {id = 70014 days = 1}
+			}
+			1 = {
+				character_event = {id = 70015 days = 1}
+			}
+			1 = {
+				character_event = {id = 70016 days = 1}
+			}
+			1 = {
+				character_event = {id = 70017 days = 1}
+			}
+			53 = {
+			
+			}
+			
+			#LOSE
+			11 = {
+				modifier = {
+					factor = 4.0
+					NOT = {combat_rating = 0}
+				}
+				modifier = {
+					factor = 2.0
+					NOT = {combat_rating = 1}
+				}
+				modifier = {
+					factor = 2.0
+					NOT = {combat_rating = 2}
+				}
+				character_event = {id = 70027 days = 1}
+			}
+			11 = {
+				modifier = {
+					factor = 4.0
+					NOT = {combat_rating = 0}
+				}
+				modifier = {
+					factor = 2.0
+					NOT = {combat_rating = 1}
+				}
+				modifier = {
+					factor = 2.0
+					NOT = {combat_rating = 2}
+				}
+				character_event = {id = 70029 days = 1}
+			}
+			11 = {
+				modifier = {
+					factor = 4.0
+					NOT = {combat_rating = 0}
+				}
+				modifier = {
+					factor = 2.0
+					NOT = {combat_rating = 1}
+				}
+				modifier = {
+					factor = 2.0
+					NOT = {combat_rating = 2}
+				}
+				character_event = {id = 70031 days = 1}
+			}
+		}
+	}
+	
+}
+
+
+
+character_event = {
+	id = TNT.1000
+	is_triggered_only = yes
+	hide_window = yes
+	immediate = {
+		random_realm_character = {
+			limit = {
+				has_character_flag = tntk
+				NOT = {has_character_flag = tntl}
+				ROOT = {
+					NOT = {
+						any_realm_character = {
+							has_character_flag = tntk
+							NOT = {has_character_flag = tntl}
+							combat_rating_diff = {
+								character = PREVPREV
+								value = 1
+							}
+						}
+					}
+				}
+			}
+			set_character_flag = tnth
+			character_event = {
+				id = TNT.1001
+				days = 3
+				random = 2
+			}
+		}
+		
+	}
+
+}
+
+character_event = {
+	id = TNT.1001
+	is_triggered_only = yes
+	hide_window = yes
+	immediate = {
+		FROM = {
+			random_realm_character = {
+				limit = {
+					has_character_flag = tntk
+					NOT = {has_character_flag = tntl}
+					NOT = {has_character_flag = tnth}
+					
+					FROM = {
+						NOT = {
+							any_realm_character = {
+								has_character_flag = tntk
+								NOT = {has_character_flag = tntl}
+								NOT = {has_character_flag = tnth}
+
+								combat_rating_diff = {
+									character = PREVPREV
+									value = 1
+								}
+
+							
+							}
+						}
+					}
+				}
+				set_character_flag = tnth2
+			}
+		}
+	}
+
+	
+}
+
+
+
+character_event = {
+	id = TNT.1010
+	is_triggered_only = yes
+	hide_window = yes
+	
+	trigger = {
+
+		any_realm_character = {
+			has_character_flag = tnth
+		}
+	
+		OR = {
+			any_realm_character = {
+				has_character_flag = tnth2
+			}
+			has_character_flag = tnth2 #YOU HAVE IT?
+		}
+	}
+	immediate = {
+		random_realm_character = {
+			limit = {
+				has_character_flag = tnth
+			}
+			character_event = {id = TNT.1011 days = 1} #LETS JOUST!
+		}
+	}
+	
+}
+
+narrative_event = { #HIGHEST INFORMED ABOUT THE FINALS
+	id = TNT.1011
+	title = "TNT1011T"
+	desc = "TNT1011"
+	picture = "GFX_evt_joust"
+	is_triggered_only = yes
+	
+
+	option = {
+		name = TNT1011A
+		top_liege = {
+			random_realm_character = {
+				limit = {
+					has_character_flag = tnth2
+				}
+				character_event = {id = TNT.1012 days = 1 tooltip = TNT1011M} #LETS JOUST!
+			}
+		}
+	}
+}
+
+narrative_event = { #2ND INFORMED ABOUT THE FINALS
+	id = TNT.1012
+	title = "TNT1011T"
+	desc = "TNT1012"
+	picture = "GFX_evt_joust"
+	is_triggered_only = yes
+	
+	option = {
+		name = TNT1012A
+		FROM = {character_event = {id = TNT.1100 days = 7 random = 3 tooltip = TNT1012M}} #IT BEGINS
+		hidden_tooltip = {
+			top_liege = {#Inform everyone we will be fighting
+				any_realm_character = {
+					limit = {
+						NOT = {character = FROM}
+						NOT = {character = ROOT}
+						NOT = {trait = incapable}
+						prisoner = no
+					}
+					character_event = {id = TNT.1013 days = 2 random = 3}
+				}
+			}
+		}
+	}
+}
+
+narrative_event = { #High Combat = Gets to go first
+	id = TNT.1100
+	title = "TNT1011T"
+	desc = "TNT1100"
+	picture = "GFX_evt_joust"
+	is_triggered_only = yes
+	
+	option = { #Reckless Charge
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 1.5
+				trait = brave
+			}
+			modifier = {
+				factor = 1.5
+				trait = arbitrary
+			}
+		}
+		prestige = -50
+		random_list = {
+			40 = {
+				modifier = {
+					factor = 1.5
+					FROM = {
+						combat_rating_diff = {
+							character = ROOT
+							value = 1
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					FROM = {
+						combat_rating_diff = {
+							character = ROOT
+							value = 2
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					FROM = {
+						combat_rating_diff = {
+							character = ROOT
+							value = 3
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					FROM = {
+						combat_rating_diff = {
+							character = ROOT
+							value = 4
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					FROM = {
+						combat_rating_diff = {
+							character = ROOT
+							value = 5
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					FROM = {
+						combat_rating_diff = {
+							character = ROOT
+							value = 6
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					FROM = {
+						combat_rating_diff = {
+							character = ROOT
+							value = 7
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					FROM = {
+						combat_rating_diff = {
+							character = ROOT
+							value = 8
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					FROM = {
+						combat_rating_diff = {
+							character = ROOT
+							value = 9
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					FROM = {
+						combat_rating_diff = {
+							character = ROOT
+							value = 10
+						}
+					}
+				}
+				FROM = {character_event = {id = TNT.1200 days = 1 tooltip = tnt_counter_attack}}
+			}
+			20 = {
+
+				FROM = {
+					add_trait = maimed
+				}
+
+				hidden_tooltip = {
+					FROM = {
+						set_character_flag = tntmm
+						character_event = {id = TNT.1101 days = 1}
+					}
+				}
+			}
+			
+			20 = {
+				tooltip = {
+					FROM = {
+						add_trait = incapable
+					}
+				}
+				hidden_tooltip = {
+					FROM = {
+						set_character_flag = tntdth
+					
+						character_event = {id = TNT.1101 days = 1}
+					}
+				}
+			}
+			
+			20 = {
+				tooltip = {
+					add_trait = incapable
+				}
+				hidden_tooltip = {
+					set_character_flag = tntdth
+					FROM = {character_event = {id = TNT.1102 days = 1}}
+				}
+			}
+		}
+		name = TNT1100A
+	}
+	
+	option = { #Strategic Jab
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 1.5
+				trait = just
+			}
+			modifier = {
+				factor = 1.5
+				trait = honest
+			}
+		}
+		prestige = 25
+		random_list = {
+			70 = {
+				modifier = {
+					factor = 1.5
+					FROM = {
+						combat_rating_diff = {
+							character = ROOT
+							value = 1
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					FROM = {
+						combat_rating_diff = {
+							character = ROOT
+							value = 2
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					FROM = {
+						combat_rating_diff = {
+							character = ROOT
+							value = 3
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					FROM = {
+						combat_rating_diff = {
+							character = ROOT
+							value = 4
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					FROM = {
+						combat_rating_diff = {
+							character = ROOT
+							value = 5
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					FROM = {
+						combat_rating_diff = {
+							character = ROOT
+							value = 6
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					FROM = {
+						combat_rating_diff = {
+							character = ROOT
+							value = 7
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					FROM = {
+						combat_rating_diff = {
+							character = ROOT
+							value = 8
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					FROM = {
+						combat_rating_diff = {
+							character = ROOT
+							value = 9
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					FROM = {
+						combat_rating_diff = {
+							character = ROOT
+							value = 10
+						}
+					}
+				}
+				FROM = {character_event = {id = TNT.1200 days = 1 tooltip = tnt_counter_attack}}
+			}
+			10 = {
+				FROM = {add_trait = maimed}
+				hidden_tooltip = {
+					FROM = {
+						set_character_flag = tntmm
+						
+						character_event = {id = TNT.1101 days = 1}
+					}
+				}
+			}
+			10 = {
+				FROM = {add_trait = wounded}
+				hidden_tooltip = {
+					FROM = {
+						set_character_flag = tntwd
+						character_event = {id = TNT.1101 days = 1}
+					}
+				}
+			}
+			10 = {
+				add_trait = wounded
+				hidden_tooltip = {
+					set_character_flag = tntwd
+					FROM = {character_event = {id = TNT.1102 days = 1}}
+				}
+			}
+			
+		}
+		name = TNT1100B
+	}
+	
+	option = { #Go for the killing blow
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 1.5
+				trait = cruel
+			}
+			modifier = {
+				factor = 1.5
+				trait = deceitful
+			}
+		}
+		piety = -100
+		random_list = {
+			60 = {
+				modifier = {
+					factor = 1.5
+					FROM = {
+						combat_rating_diff = {
+							character = ROOT
+							value = 1
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					FROM = {
+						combat_rating_diff = {
+							character = ROOT
+							value = 2
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					FROM = {
+						combat_rating_diff = {
+							character = ROOT
+							value = 3
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					FROM = {
+						combat_rating_diff = {
+							character = ROOT
+							value = 4
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					FROM = {
+						combat_rating_diff = {
+							character = ROOT
+							value = 5
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					FROM = {
+						combat_rating_diff = {
+							character = ROOT
+							value = 6
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					FROM = {
+						combat_rating_diff = {
+							character = ROOT
+							value = 7
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					FROM = {
+						combat_rating_diff = {
+							character = ROOT
+							value = 8
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					FROM = {
+						combat_rating_diff = {
+							character = ROOT
+							value = 9
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					FROM = {
+						combat_rating_diff = {
+							character = ROOT
+							value = 10
+						}
+					}
+				}
+				FROM = {character_event = {id = TNT.1200 days = 1 tooltip = tnt_counter_attack}}
+			}
+			
+			30 = {
+				tooltip = {
+					FROM = {
+						add_trait = incapable
+					}
+				}
+				hidden_tooltip = {
+					FROM = {
+						set_character_flag = tntdth
+						character_event = {id = TNT.1101 days = 1}
+					}
+				}
+			}
+			10 = {
+				tooltip = {
+					add_trait = incapable
+				}
+				hidden_tooltip = {
+					set_character_flag = tntdth
+					FROM = {
+						character_event = {id = TNT.1102 days = 1}
+					}
+				}
+			}
+		}
+		
+		name = TNT1100C
+		
+	}
+}
+
+character_event = {
+	id = TNT.1101
+	desc = "TNT1101"
+	title = "TNT1011T"
+	picture = "GFX_evt_joust"
+	is_triggered_only = yes
+	
+	option = {
+		trigger = {
+			has_character_flag = tntwd
+		}
+		hidden_tooltip = {
+			if = {
+				limit = {NOT = {top_liege = {religion_group = muslim}}}
+				FROM = {
+					set_character_flag = tnt1st
+					character_event = {
+						id = 70020
+						days = 2
+					}
+				}
+				
+				set_character_flag = tnt2nd
+				character_event = {
+					id = 70021
+					days = 1
+				}
+			}
+			if = {
+				limit = {top_liege = {religion_group = muslim}}
+				FROM = {
+					set_character_flag = tnt1st
+					character_event = {
+						id = 88270
+						days = 2
+					}
+				}
+				
+				set_character_flag = tnt2nd
+				character_event = {
+					id = 88271
+					days = 1
+				}
+			}
+		}
+		add_trait = wounded
+		name = TNT1101A
+	}
+	
+	option = {
+		trigger = {
+			has_character_flag = tntmm
+		}
+		hidden_tooltip = {
+			if = {
+				limit = {NOT = {top_liege = {religion_group = muslim}}}
+				FROM = {
+					set_character_flag = tnt1st
+					character_event = {
+						id = 70020
+						days = 2
+					}
+				}
+				
+				set_character_flag = tnt2nd
+				character_event = {
+					id = 70021
+					days = 1
+				}
+			}
+			if = {
+				limit = {top_liege = {religion_group = muslim}}
+				FROM = {
+					set_character_flag = tnt1st
+					character_event = {
+						id = 88270
+						days = 2
+					}
+				}
+				
+				set_character_flag = tnt2nd
+				character_event = {
+					id = 88271
+					days = 1
+				}
+			}
+		}
+		add_trait = maimed
+
+		name = TNT1101A
+	}
+	
+	option = {
+		trigger = {
+			has_character_flag = tntdth
+		}
+		FROM = {
+			set_character_flag = tnt1st
+		}
+		hidden_tooltip = {
+			if = {
+				limit = {NOT = {top_liege = {religion_group = muslim}}}
+				FROM = {
+					set_character_flag = tnt1st
+					character_event = {
+						id = 70020
+						days = 2
+					}
+				}
+
+			}
+			if = {
+				limit = {top_liege = {religion_group = muslim}}
+				FROM = {
+					set_character_flag = tnt1st
+					character_event = {
+						id = 88270
+						days = 2
+					}
+				}
+			}
+		}
+		
+		add_trait = incapable
+		
+		name = TNT1101A
+	}
+}
+
+character_event = {#BOUNCE
+	id = TNT.1102
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		FROM = {character_event = {id = TNT.1101 days = 1}}
+	}
+	
+}
+
+
+
+narrative_event = { #High Combat = Gets to go first
+	id = TNT.1200
+	title = "TNT1011T"
+	desc = "TNT1100"
+	picture = "GFX_evt_joust"
+	is_triggered_only = yes
+	
+	option = { #Reckless Charge
+		
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 1.5
+				trait = brave
+			}
+			modifier = {
+				factor = 1.5
+				trait = arbitrary
+			}
+		}
+		
+		prestige = -50
+		random_list = {
+			40 = {
+				modifier = {
+					factor = 1.5
+					FROM = {
+						combat_rating_diff = {
+							character = ROOT
+							value = 1
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					FROM = {
+						combat_rating_diff = {
+							character = ROOT
+							value = 2
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					FROM = {
+						combat_rating_diff = {
+							character = ROOT
+							value = 3
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					FROM = {
+						combat_rating_diff = {
+							character = ROOT
+							value = 4
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					FROM = {
+						combat_rating_diff = {
+							character = ROOT
+							value = 5
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					FROM = {
+						combat_rating_diff = {
+							character = ROOT
+							value = 6
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					FROM = {
+						combat_rating_diff = {
+							character = ROOT
+							value = 7
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					FROM = {
+						combat_rating_diff = {
+							character = ROOT
+							value = 8
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					FROM = {
+						combat_rating_diff = {
+							character = ROOT
+							value = 9
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					FROM = {
+						combat_rating_diff = {
+							character = ROOT
+							value = 10
+						}
+					}
+				}
+				FROM = {character_event = {id = TNT.1300 days = 1 tooltip = tnt_final}}
+			}
+			20 = {
+				tooltip = {
+					FROM = {
+						add_trait = maimed
+					}
+				}
+				hidden_tooltip = {
+					FROM = {
+						set_character_flag = tntmm
+						character_event = {id = TNT.1101 days = 1}
+					}
+				}
+			}
+			
+			20 = {
+				tooltip = {
+					FROM = {
+						add_trait = incapable
+					}
+				}
+				hidden_tooltip = {
+					FROM = {
+						set_character_flag = tntdth
+						character_event = {id = TNT.1101 days = 1}
+					}
+				}
+			}
+			20 = {
+				tooltip = {
+					add_trait = incapable
+				}
+				hidden_tooltip = {
+					set_character_flag = tntdth
+					FROM = {character_event = {id = TNT.1102 days = 1}}
+				}
+			}
+		}
+		name = TNT1100A
+	}
+	
+	option = { #Strategic Jab
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 1.5
+				trait = just
+			}
+			modifier = {
+				factor = 1.5
+				trait = honest
+			}
+		}
+		prestige = 25
+		random_list = {
+			70 = {
+				modifier = {
+					factor = 1.5
+					FROM = {
+						combat_rating_diff = {
+							character = ROOT
+							value = 1
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					FROM = {
+						combat_rating_diff = {
+							character = ROOT
+							value = 2
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					FROM = {
+						combat_rating_diff = {
+							character = ROOT
+							value = 3
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					FROM = {
+						combat_rating_diff = {
+							character = ROOT
+							value = 4
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					FROM = {
+						combat_rating_diff = {
+							character = ROOT
+							value = 5
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					FROM = {
+						combat_rating_diff = {
+							character = ROOT
+							value = 6
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					FROM = {
+						combat_rating_diff = {
+							character = ROOT
+							value = 7
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					FROM = {
+						combat_rating_diff = {
+							character = ROOT
+							value = 8
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					FROM = {
+						combat_rating_diff = {
+							character = ROOT
+							value = 9
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					FROM = {
+						combat_rating_diff = {
+							character = ROOT
+							value = 10
+						}
+					}
+				}
+				FROM = {character_event = {id = TNT.1300 days = 1 tooltip = tnt_final}}
+			}
+			10 = {
+				FROM = {add_trait = maimed}
+				hidden_tooltip = {
+					FROM = {
+						set_character_flag = tntmm
+						character_event = {id = TNT.1101 days = 1}
+					}
+				}
+			}
+			10 = {
+				FROM = {add_trait = wounded}
+				hidden_tooltip = {
+					FROM = {
+						set_character_flag = tntwd
+						character_event = {id = TNT.1101 days = 1}
+					}
+				}
+			}
+			10 = {
+				add_trait = wounded
+				hidden_tooltip = {
+					set_character_flag = tntwd
+					FROM = {character_event = {id = TNT.1102 days = 1}}
+				}
+			}
+			
+		}
+		name = TNT1100B
+	}
+	
+	option = { #Go for the killing blow
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 1.5
+				trait = cruel
+			}
+			modifier = {
+				factor = 1.5
+				trait = deceitful
+			}
+		}
+		piety = -100
+		random_list = {
+			60 = {
+				modifier = {
+					factor = 1.5
+					FROM = {
+						combat_rating_diff = {
+							character = ROOT
+							value = 1
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					FROM = {
+						combat_rating_diff = {
+							character = ROOT
+							value = 2
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					FROM = {
+						combat_rating_diff = {
+							character = ROOT
+							value = 3
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					FROM = {
+						combat_rating_diff = {
+							character = ROOT
+							value = 4
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					FROM = {
+						combat_rating_diff = {
+							character = ROOT
+							value = 5
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					FROM = {
+						combat_rating_diff = {
+							character = ROOT
+							value = 6
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					FROM = {
+						combat_rating_diff = {
+							character = ROOT
+							value = 7
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					FROM = {
+						combat_rating_diff = {
+							character = ROOT
+							value = 8
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					FROM = {
+						combat_rating_diff = {
+							character = ROOT
+							value = 9
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					FROM = {
+						combat_rating_diff = {
+							character = ROOT
+							value = 10
+						}
+					}
+				}
+				FROM = {character_event = {id = TNT.1300 days = 1 tooltip = tnt_final}}
+			}
+			
+			30 = {
+				tooltip = {
+					FROM = {
+						add_trait = incapable
+					}
+				}
+				hidden_tooltip = {
+					FROM = {
+						set_character_flag = tntdth
+						character_event = {id = TNT.1101 days = 1}
+					}
+				}
+			}
+			10 = {
+				tooltip = {
+					add_trait = incapable
+				}
+				hidden_tooltip = {
+					set_character_flag = tntdth
+					FROM = {character_event = {id = TNT.1102 days = 1}}
+				}
+			}
+		}
+		
+		name = TNT1100C
+		
+	}
+}
+
+narrative_event = { #Final Showdown SHOWN
+	id = TNT.1300
+	title = "TOURNAMENTTITLE"
+	desc = "TNT1300T"
+	desc = "TNT1100"
+	picture = "GFX_evt_joust"
+	is_triggered_only = yes
+	
+	option = {
+		name = TNT1300A
+		tooltip = {
+			random_list = {
+				50 = {
+					modifier = {
+						factor = 0.7
+						FROM = {
+							combat_rating_diff = {
+								character = ROOT
+								value = 1
+							}
+						}
+					}
+					modifier = {
+						factor = 0.7
+						FROM = {
+							combat_rating_diff = {
+								character = ROOT
+								value = 2
+							}
+						}
+					}
+					modifier = {
+						factor = 0.7
+						FROM = {
+							combat_rating_diff = {
+								character = ROOT
+								value = 3
+							}
+						}
+					}
+					modifier = {
+						factor = 0.7
+						FROM = {
+							combat_rating_diff = {
+								character = ROOT
+								value = 4
+							}
+						}
+					}
+					modifier = {
+						factor = 0.7
+						FROM = {
+							combat_rating_diff = {
+								character = ROOT
+								value = 5
+							}
+						}
+					}
+					modifier = {
+						factor = 0.7
+						FROM = {
+							combat_rating_diff = {
+								character = ROOT
+								value = 6
+							}
+						}
+					}
+					modifier = {
+						factor = 0.7
+						FROM = {
+							combat_rating_diff = {
+								character = ROOT
+								value = 7
+							}
+						}
+					}
+					modifier = {
+						factor = 0.7
+						FROM = {
+							combat_rating_diff = {
+								character = ROOT
+								value = 8
+							}
+						}
+					}
+					modifier = {
+						factor = 0.7
+						FROM = {
+							combat_rating_diff = {
+								character = ROOT
+								value = 9
+							}
+						}
+					}
+					modifier = {
+						factor = 0.7
+						FROM = {
+							combat_rating_diff = {
+								character = ROOT
+								value = 10
+							}
+						}
+					}
+					add_trait = tournament_winner
+				}
+				50 = {
+					modifier = {
+						factor = 0.7
+						combat_rating_diff = {
+							character = FROM
+							value = 1
+						}
+					}
+					modifier = {
+						factor = 0.7
+						combat_rating_diff = {
+							character = FROM
+							value = 2
+						}
+					}
+					modifier = {
+						factor = 0.7
+						combat_rating_diff = {
+							character = FROM
+							value = 3
+						}
+					}
+					modifier = {
+						factor = 0.7
+						combat_rating_diff = {
+							character = FROM
+							value = 4
+						}
+					}
+					modifier = {
+						factor = 0.7
+						combat_rating_diff = {
+							character = FROM
+							value = 5
+						}
+					}
+					modifier = {
+						factor = 0.7
+						combat_rating_diff = {
+							character = FROM
+							value = 6
+						}
+					}
+					modifier = {
+						factor = 0.7
+						combat_rating_diff = {
+							character = FROM
+							value = 7
+						}
+					}
+					modifier = {
+						factor = 0.7
+						combat_rating_diff = {
+							character = FROM
+							value = 8
+						}
+					}
+					modifier = {
+						factor = 0.7
+						combat_rating_diff = {
+							character = FROM
+							value = 9
+						}
+					}
+					modifier = {
+						factor = 0.7
+						combat_rating_diff = {
+							character = FROM
+							value = 10
+						}
+					}
+					FROM = {add_trait = tournament_winner}
+				}
+			}
+		}
+	
+		hidden_tooltip = {
+			FROM = {
+				character_event = {
+					id = TNT.1301
+					days = 1
+				}
+			}
+		}
+	}
+}
+
+narrative_event = { #Final Showdown
+	id = TNT.1301
+	title = "TNT1300T"
+	desc = "TNT1300"
+	picture = "GFX_evt_joust"
+	is_triggered_only = yes
+	
+	option = {
+		name = TNT1300A
+
+		random_list = {
+			50 = {
+				modifier = {
+					factor = 0.7
+					FROM = {
+						combat_rating_diff = {
+							character = ROOT
+							value = 1
+						}
+					}
+				}
+				modifier = {
+					factor = 0.7
+					FROM = {
+						combat_rating_diff = {
+							character = ROOT
+							value = 2
+						}
+					}
+				}
+				modifier = {
+					factor = 0.7
+					FROM = {
+						combat_rating_diff = {
+							character = ROOT
+							value = 3
+						}
+					}
+				}
+				modifier = {
+					factor = 0.7
+					FROM = {
+						combat_rating_diff = {
+							character = ROOT
+							value = 4
+						}
+					}
+				}
+				modifier = {
+					factor = 0.7
+					FROM = {
+						combat_rating_diff = {
+							character = ROOT
+							value = 5
+						}
+					}
+				}
+				modifier = {
+					factor = 0.7
+					FROM = {
+						combat_rating_diff = {
+							character = ROOT
+							value = 6
+						}
+					}
+				}
+				modifier = {
+					factor = 0.7
+					FROM = {
+						combat_rating_diff = {
+							character = ROOT
+							value = 7
+						}
+					}
+				}
+				modifier = {
+					factor = 0.7
+					FROM = {
+						combat_rating_diff = {
+							character = ROOT
+							value = 8
+						}
+					}
+				}
+				modifier = {
+					factor = 0.7
+					FROM = {
+						combat_rating_diff = {
+							character = ROOT
+							value = 9
+						}
+					}
+				}
+				modifier = {
+					factor = 0.7
+					FROM = {
+						combat_rating_diff = {
+							character = ROOT
+							value = 10
+						}
+					}
+				}
+				hidden_tooltip = {
+					if = {
+						limit = {NOT = {top_liege = {religion_group = muslim}}}
+						FROM = {
+							set_character_flag = tnt2nd
+							character_event = {
+								id = 70021
+								days = 2
+							}
+						}
+						
+						set_character_flag = tnt1st
+						character_event = {
+							id = 70020
+							days = 1
+						}
+					}
+					if = {
+						limit = {top_liege = {religion_group = muslim}}
+						FROM = {
+							set_character_flag = tnt2nd
+							character_event = {
+								id = 88271
+								days = 2
+							}
+						}
+						
+						set_character_flag = tnt1st
+						character_event = {
+							id = 88270
+							days = 1
+						}
+					}
+				}
+				
+				tooltip = {add_trait = tournament_winner}
+			}
+			50 = {
+				modifier = {
+					factor = 0.7
+					combat_rating_diff = {
+						character = FROM
+						value = 1
+					}
+				}
+				modifier = {
+					factor = 0.7
+					combat_rating_diff = {
+						character = FROM
+						value = 2
+					}
+				}
+				modifier = {
+					factor = 0.7
+					combat_rating_diff = {
+						character = FROM
+						value = 3
+					}
+				}
+				modifier = {
+					factor = 0.7
+					combat_rating_diff = {
+						character = FROM
+						value = 4
+					}
+				}
+				modifier = {
+					factor = 0.7
+					combat_rating_diff = {
+						character = FROM
+						value = 5
+					}
+				}
+				modifier = {
+					factor = 0.7
+					combat_rating_diff = {
+						character = FROM
+						value = 6
+					}
+				}
+				modifier = {
+					factor = 0.7
+					combat_rating_diff = {
+						character = FROM
+						value = 7
+					}
+				}
+				modifier = {
+					factor = 0.7
+					combat_rating_diff = {
+						character = FROM
+						value = 8
+					}
+				}
+				modifier = {
+					factor = 0.7
+					combat_rating_diff = {
+						character = FROM
+						value = 9
+					}
+				}
+				modifier = {
+					factor = 0.7
+					combat_rating_diff = {
+						character = FROM
+						value = 10
+					}
+				}
+				tooltip = {FROM = {add_trait = tournament_winner}}
+				hidden_tooltip = {
+					if = {
+						limit = {NOT = {top_liege = {religion_group = muslim}}}
+						FROM = {
+							set_character_flag = tnt1st
+							character_event = {
+								id = 70020
+								days = 2
+							}
+						}
+						
+						set_character_flag = tnt2nd
+						character_event = {
+							id = 70021
+							days = 1
+						}
+					}
+					if = {
+						limit = {top_liege = {religion_group = muslim}}
+						FROM = {
+							set_character_flag = tnt1st
+							character_event = {
+								id = 88270
+								days = 2
+							}
+						}
+						
+						set_character_flag = tnt2nd
+						character_event = {
+							id = 88271
+							days = 1
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+narrative_event = { #BETTING OPTIONS
+	id = TNT.1013
+	title = "TNT1011T"
+	desc = "TNT1013"
+	picture = "GFX_evt_joust"
+	
+	is_triggered_only = yes
+	
+	option = {
+		trigger = {
+			ai = yes
+			NOT = {wealth = 50}
+		}
+		ai_chance = {
+			factor = 1000
+		}
+		name = TNT1013E
+	}
+	
+	option = {
+		trigger = {
+			is_adult = yes
+			wealth = 50
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				is_lover = FROMFROM
+			}
+			modifier = {
+				factor = 2
+				is_friend = FROMFROM
+			}
+		}
+		
+		wealth = -50
+		
+		reverse_opinion = {
+			modifier = tntch
+			who = FROMFROM
+			years = 10
+		}
+		hidden_tooltip = {
+			character_event = {id = TNT.1014 days = 25}
+		}
+		name = TNT1013A
+	}
+	
+	option = {
+		trigger = {
+			is_adult = yes
+			wealth = 50
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				is_lover = FROM
+			}
+			modifier = {
+				factor = 2
+				is_friend = FROM
+			}
+		}
+		
+		wealth = -50
+		
+		reverse_opinion = {
+			modifier = tntch
+			who = FROM
+			years = 10
+		}
+		hidden_tooltip = {
+			character_event = {id = TNT.1015 days = 25}
+		}
+		name = TNT1013B
+	}
+	
+	option = {
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0.01
+				trait = gambler
+			}
+			modifier = {
+				factor = 0.01
+				trait = gamer
+			}
+			modifier = {
+				factor = 100
+				is_lover = FROMFROM
+			}
+			modifier = {
+				factor = 50
+				is_friend = FROMFROM
+			}
+			modifier = {
+				factor = 0.01
+				NOT = {dynasty = FROMFROM}
+			}
+		}
+		reverse_opinion = { #Cheer for #1
+			modifier = tntch
+			who = FROMFROM
+			years = 10
+		}
+		FROMFROM = {
+			add_character_modifier = {
+				modifier = tntmr
+				duration = 30
+			}
+		}
+		name = TNT1013C
+	}
+	
+	option = {
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0.01
+				trait = gambler
+			}
+			modifier = {
+				factor = 0.01
+				trait = gamer
+			}
+			modifier = {
+				factor = 100
+				is_lover = FROM
+			}
+			modifier = {
+				factor = 50
+				is_friend = FROM
+			}
+			modifier = {
+				factor = 0.01
+				NOT = {dynasty = FROM}
+			}
+		}
+		reverse_opinion = { #Cheer for the Underdog
+			modifier = tntch
+			who = FROM
+			years = 10
+		}
+		FROM = {
+			add_character_modifier = {
+				modifier = tntmr
+				duration = 30
+			}
+		}
+		name = TNT1013D
+	}
+	
+}
+
+character_event = {
+	id = TNT.1014
+	title = "TNT1014T"
+	desc = "TNT1014"
+	picture = "GFX_evt_joust"
+	hide_from = yes
+	is_triggered_only = yes
+	option = {
+		trigger = {
+			FROMFROMFROM = {
+				has_character_flag = tnt1st
+			}
+		}
+		wealth = 80
+		name = TNT1014A
+	}
+	option = {
+		trigger = {
+			NOT = {
+				FROMFROMFROM = {
+					has_character_flag = tnt1st
+				}
+			}
+		}
+		name = TNT1014C
+	}
+}
+
+character_event = {
+	id = TNT.1015
+	title = "TNT1014T"
+	desc = "TNT1014"
+	picture = "GFX_evt_joust"
+	hide_from = yes
+	is_triggered_only = yes
+	option = {
+		trigger = {
+			FROMFROM = {
+				has_character_flag = tnt1st
+			}
+		}
+		wealth = 120
+		if = {
+			limit = {
+				is_landed = no
+				NOT = {lifestyle_traits = 1}
+				dynasty = none
+				intrigue = 10
+			}
+			add_trait = gambler
+		}
+		name = TNT1014A
+	}
+	option = {
+		trigger = {
+			ai = no #Become a Gambler
+			FROMFROM = {
+				has_character_flag = tnt1st
+			}
+			NOT = {lifestyle_traits = 1}
+		}
+		wealth = 120
+		add_trait = gambler
+		name = TNT1014B
+	}
+	option = {
+		trigger = {
+			NOT = {
+				FROMFROM = {
+					has_character_flag = tnt1st
+				}
+			}
+		}
+		name = TNT1014C
+	}
+}
+
+

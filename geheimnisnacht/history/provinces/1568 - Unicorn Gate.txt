@@ -1,0 +1,17 @@
+# c_unicorn_gate
+
+# County Title
+title = c_unicorn_gate
+
+# Settlements
+max_settlements = 3
+
+b_unicorn_tor = castle
+#b_elvaen_tor = city
+#b_forthael_tor = temple
+
+# Misc
+culture = ellyrian
+religion = cadai
+
+#History

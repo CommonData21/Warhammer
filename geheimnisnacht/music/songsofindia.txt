@@ -1,0 +1,51 @@
+# Three songs for Indian rulers.
+
+song = {
+	name = "alauddinbesiegechittor.ogg"
+	
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0 
+			NOT = {	religion_group = nehekharan_gods_group }
+			NOT = {	religion_group = ormazd_gods_group }
+			NOT = {	culture_group = arabyan_group }
+			NOT = {	culture_group = nehekharan_group }
+			NOT = {	culture_group = orient_group }
+		}		
+	}
+}
+
+song = {
+	name = "chargeofthewarelephants.ogg"
+	
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			NOT = {	religion_group = nehekharan_gods_group }
+			NOT = {	religion_group = ormazd_gods_group }
+			NOT = {	culture_group = arabyan_group }
+			NOT = {	culture_group = nehekharan_group }
+			NOT = {	culture_group = orient_group }
+		}		
+	}
+}
+
+song = {
+	name = "fromeasttofarthereast.ogg"
+	
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			NOT = {	religion_group = nehekharan_gods_group }
+			NOT = {	religion_group = ormazd_gods_group }
+			NOT = {	culture_group = arabyan_group }
+			NOT = {	culture_group = nehekharan_group }
+			NOT = {	culture_group = orient_group }
+		}		
+	}
+}
+
+

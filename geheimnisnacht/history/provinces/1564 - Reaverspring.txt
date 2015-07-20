@@ -1,0 +1,17 @@
+# c_reaverspring
+
+# County Title
+title = c_reaverspring
+
+# Settlements
+max_settlements = 3
+
+b_reaverspring = castle
+#b_athel_alacane = city
+#b_esgaroth = temple
+
+# Misc
+culture = ellyrian
+religion = cadai
+
+#History

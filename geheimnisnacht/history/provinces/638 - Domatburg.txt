@@ -1,0 +1,20 @@
+# c_domatburg
+
+# County Title
+title = c_domatburg
+
+# Settlements
+max_settlements = 3
+
+b_domatburg = castle
+#b_alemento = city
+#b_fidalguia = temple
+
+# Misc
+culture = neueslander
+religion = sigmarite
+
+#History
+1.1.1={ 
+b_domatburg = ca_domatburg
+}

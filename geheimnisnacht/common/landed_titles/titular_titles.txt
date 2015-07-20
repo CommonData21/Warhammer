@@ -1,0 +1,1155 @@
+d_rijkspoort_gazette = {
+	color = { 200 200 200 }
+	color2 = { 255 255 255 }
+	
+	title = "EDITOR"
+	title_female = "EDITOR"		
+		
+	capital = 222 #Marienburg
+	
+	short_name = yes
+
+	religion = myrmidian
+	culture = westerlander
+	
+	landless = yes
+	
+	primary = yes
+	
+	independent = yes	
+	
+}
+
+d_imperial_engineers_school = {
+	color = { 250 250 250 }
+	color2 = { 255 255 255 }
+	
+	title = "MASTER_ENGINEER"
+	title_female = "MASTER_ENGINEER"		
+		
+	capital = 299 #Altdorf
+	
+	short_name = yes
+
+	religion = sigmarite
+	culture = reiklander
+	
+	landless = yes
+	
+	primary = yes
+	
+	independent = yes	
+}
+
+d_imperial_gunnery_school = {
+	color = { 250 250 250 }
+	color2 = { 255 255 255 }
+	
+	title = "MASTER_ENGINEER"
+	title_female = "MASTER_ENGINEER"		
+		
+	capital = 309 #Nuln
+	
+	short_name = yes
+
+	religion = sigmarite
+	culture = wissenlander
+	
+	landless = yes
+	
+	primary = yes
+	
+	independent = yes	
+}
+
+d_university_of_altdorf = {
+	color = { 250 250 250 }
+	color2 = { 255 255 255 }
+	
+	title = "MASTER"
+	title_female = "MISTRESS"			
+		
+	capital = 299 #Altdorf
+	
+	religion = sigmarite
+	culture = reiklander
+	
+	short_name = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	dynasty_title_names = no
+}
+
+d_university_of_nuln = {
+	color = { 250 250 250 }
+	color2 = { 255 255 255 }
+	
+	title = "MASTER"
+	title_female = "MISTRESS"		
+		
+	capital = 309 #Nuln
+	
+	religion = sigmarite
+	culture = wissenlander
+	
+	short_name = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	dynasty_title_names = no
+}
+
+d_university_of_streissen = {
+	color = { 250 250 250 }
+	color2 = { 255 255 255 }
+	
+	title = "MASTER"
+	title_female = "MISTRESS"		
+		
+	capital = 355 #Streissen
+	
+	religion = sigmarite
+	culture = averlander
+	
+	short_name = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	dynasty_title_names = no
+}
+
+d_university_of_praag = {
+	color = { 250 250 250 }
+	color2 = { 255 255 255 }
+	
+	title = "MASTER"
+	title_female = "MISTRESS"		
+		
+	capital = 600 # c_remas
+	
+	religion = sigmarite
+	culture = wissenlander
+	
+	short_name = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	dynasty_title_names = no	
+}
+
+d_university_of_remas = {
+	color = { 250 250 250 }
+	color2 = { 255 255 255 }
+	
+	title = "MASTER"
+	title_female = "MISTRESS"		
+		
+	capital = 309 #Nuln
+	
+	religion = myrmidian
+	culture = reman
+	
+	short_name = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	dynasty_title_names = no
+}
+
+d_university_of_martek = {
+	color = { 250 250 250 }
+	color2 = { 255 255 255 }
+	
+	title = "MASTER"
+	title_female = "MISTRESS"		
+		
+	capital = 1037 # c_martek
+	
+	religion = ormazd
+	culture = cophic
+	
+	short_name = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	dynasty_title_names = no
+}
+
+d_university_of_miragliano = {
+	color = { 250 250 250 }
+	color2 = { 255 255 255 }
+	
+	title = "MASTER"
+	title_female = "MISTRESS"		
+		
+	capital = 584 # c_miragliano
+	
+	religion = myrmidian
+	culture = miraglian
+	
+	short_name = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	dynasty_title_names = no
+}
+
+d_university_of_kufra = {
+	color = { 250 250 250 }
+	color2 = { 255 255 255 }
+	
+	title = "MASTER"
+	title_female = "MISTRESS"		
+		
+	capital = 1035 # c_kufra
+	
+	religion = ormazd
+	culture = cophic
+	
+	short_name = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	dynasty_title_names = no
+}
+
+d_university_of_magritta = {
+	color = { 250 250 250 }
+	color2 = { 255 255 255 }
+	
+	title = "MASTER"
+	title_female = "MISTRESS"		
+		
+	capital = 553 # c_magritta
+	
+	religion = myrmidian
+	culture = astur
+	
+	short_name = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	dynasty_title_names = no	
+}
+
+d_colleges_of_magic = {
+	color = { 250 250 250 }
+	color2 = { 255 255 255 }
+	
+	title = "SUPREME_PATRIARCH"
+	title_female = "SUPREME_MATRIARCH"		
+		
+	capital = 299 #Altdorf
+	
+	religion = sigmarite
+	culture = reiklander
+	
+	short_name = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	dynasty_title_names = no
+	
+}
+
+
+d_freieland = {
+	color = { 190 60 128 }
+	color2 = { 255 255 255 }
+	
+	capital = 1269 #Rosszutvonal
+}
+
+# e_malleum_maleficus = {
+	# color = { 190 160 228 }
+	# color2 = { 255 255 255 }
+
+	# title = "GOVERNOR_MILITANT"
+	# title_female = "GOVERNOR_MILITANT"		
+	
+	# short_name = yes
+	
+	# capital = 299 #Altdorf
+# }
+
+
+e_communards = {
+	color = { 135 174 237 }
+	color2 = { 255 255 255 }
+	title = "HIGH_TRIBUNE"
+	title_female = "HIGH_TRIBUNE"	
+	capital = 553 #Magritta
+	
+	short_name = yes	
+}
+
+k_myrmidens = {
+	color = { 158 148 78 }
+	color2 = { 255 255 255 }
+	
+	capital = 657 #Myrmidens
+	
+	title = "PRINCE"
+	title_female = "PRINCESS"
+	
+	title_prefix = "PRINCIPALITY_OF"		
+	
+}
+
+###Imperial
+
+e_reikland = {
+	color = { 235 234 237 }
+	color2 = { 255 255 255 }
+	
+	title = "EMPEROR"
+	title_female = "EMPRESS"		
+		
+	capital = 299 #Altdorf
+	
+	allow = {
+		has_landed_title = k_reikland
+		e_the_empire = { has_holder = no }
+	}
+	short_name = yes	
+}
+
+e_westerland = {
+	color = { 55 124 237 }
+	color2 = { 255 255 255 }
+	
+	title = "EMPEROR"
+	title_female = "EMPRESS"		
+		
+	capital = 222 #Marienburg
+	
+	allow = {
+		has_landed_title = k_westerland
+		e_the_empire = { has_holder = no }
+	}
+	
+	short_name = yes	
+}
+
+e_talabecland = {
+	color = { 205 104 167 }
+	color2 = { 255 255 255 }
+	
+	title = "EMPEROR"
+	title_female = "EMPRESS"		
+		
+	capital = 324 # c_talabheim
+	
+	allow = {
+		has_landed_title = k_talabecland
+		e_the_empire = { has_holder = no }
+	}
+	
+	short_name = yes	
+}
+
+e_middenland = {
+	color = { 55 34 137 }
+	color2 = { 255 255 255 }
+	
+	title = "EMPEROR"
+	title_female = "EMPRESS"		
+		
+	capital = 274 #Middenheim
+	
+	allow = {
+		has_landed_title = k_middenland
+		e_the_empire = { has_holder = no }
+	}
+	
+	short_name = yes	
+}
+		
+k_eagle_confederacy = {
+	color = { 190 190 18 }
+	color2 = { 255 255 255 }
+
+	capital = 675 #Vidovdan
+	
+	title = "PRINCE"
+	title_female = "PRINCESS"
+	
+	short_name = yes
+}
+
+k_northern_border_confederacy = {
+	color = { 170 40 20 }
+	color2 = { 255 255 255 }
+
+	capital = 702 #Brovska
+	
+	title = "PRINCE"
+	title_female = "PRINCESS"
+	
+	short_name = yes
+}
+
+k_sarngul = {
+	color = { 215 124 37 }
+	color2 = { 255 255 255 }
+	
+	capital = 695 # c_geistenmund
+	
+	title = "PRINCE"
+	title_female = "PRINCESS"
+}
+
+k_khypria = {
+	color = { 65 94 177 }
+	color2 = { 255 255 255 }
+	
+	capital = 723 #Khypris
+	
+	title = "PRINCE"
+	title_female = "PRINCESS"
+}
+	
+k_vampire_coast = {
+	color = { 185 24 17 }
+	color2 = { 255 255 255 }
+	
+	capital = 1761 # c_huatl
+	
+	title = "PRINCE"
+	title_female = "PRINCESS"
+}
+	
+###Republics
+
+d_ambacht = {
+	color={ 142 142 142 }
+	color2={ 255 255 255 }
+	
+	capital = 223 #Klessen
+	
+	dignity = 200 
+	
+	allow = {
+		always = no
+		is_republic = yes
+	}
+}
+
+d_texelhaven = {
+	color={ 89 44 178 }
+	color2={ 255 255 255 }
+	
+	capital = 225 #Manaanspoort
+	
+	dignity = 200 
+	
+	allow = {
+		always = no
+		is_republic = yes
+	}
+}
+
+d_boegenhafen = {
+	color={ 142 232 192 }
+	color2={ 255 255 255 }
+	
+	capital = 296 #Bogenhafen
+	
+	dignity = 200 
+		
+	allow = {
+		always = no
+		is_republic = yes
+	}
+}
+
+d_societas_mercatoria_septentrionalis = {
+	color={ 142 232 192 }
+	color2={ 255 255 255 }
+	
+	capital = 236 #Manaansufer
+	short_name = yes
+	
+	dignity = 200 
+	
+	allow = {
+		always = no
+		is_republic = yes
+	}
+}
+
+d_grande_charte = {
+	color={ 142 232 192 }
+	color2={ 255 255 255 }
+	
+	capital = 866 #Gransette
+	short_name = yes
+	
+	dignity = 200 
+		
+	allow = {
+		always = no
+		is_republic = yes
+	}
+}		
+		
+k_norvard = {
+	color={ 190 160 60 }
+	color2={ 255 255 255 }
+	
+	capital = 175 #Erengrad	
+	
+	short_name = yes
+	
+	dignity = 200 
+		
+	allow = {
+		always = no
+		is_republic = yes
+	}
+}		
+	
+###Religious Titles
+
+	k_cult_of_myrmidia = {
+		color={ 50 50 200 }
+		color2={ 220 220 0 }
+
+		capital = 553 #Magritta
+		
+		title = "ULTIMA_AQUILA"
+		title_female = "ULTIMA_AQUILA"
+		short_name = yes
+		location_ruler_title = yes
+		
+		controls_religion = myrmidian
+	
+		landless = yes
+		religion = myrmidian
+		culture = astur
+		primary = yes
+	
+		dynasty_title_names = no
+	}
+
+	k_cult_of_sigmar = {
+		color={ 200 50 50 }
+		color2={ 220 220 0 }
+	
+		capital = 299 # Altdorf
+	
+		title = "GRAND_THEOGONIST"
+		foa = "GRAND_THEOGONIST_FOA"
+		short_name = yes
+		location_ruler_title = yes
+	
+		landless = yes
+		controls_religion = sigmarite
+		religion = sigmarite
+		culture = reiklander
+		primary = yes
+		dynasty_title_names = no 
+
+		male_names = { 
+			Aglim Alric Azram
+			Belgar
+			Durak
+			Einar Esmer
+			Falgrim
+			Gamil Garik Gludred Grimnar Gurni
+			Holgar Hulfden
+			Johann Josef Jurgen 
+			Kaslain Kasmir Kazgar Kurgan Kurt 
+			Lothor Luthor 
+			Mordrek Morgrim
+			Skalf Strom Sven Svengin
+			Thorgad Thulfram
+			Ulfar
+			Varmir Vikram Volkmar
+			Wilhelm
+			Yorri
+		}
+	}
+
+	k_cult_of_ulric = {
+		color={ 50 50 200 }
+		color2={ 220 220 0 }
+	
+		capital = 274 #Middenheim
+	
+		title = "AR_ULRIC"
+		foa = "AR_ULRIC_FOA"
+		short_name = yes
+		location_ruler_title = yes
+	
+		landless = yes
+		controls_religion = ulrican
+		religion = ulrican
+		culture = middenlander
+		primary = yes
+		dynasty_title_names = no
+		
+		male_names = { 
+			Emil
+			Franz
+			Kriestov
+			Ulfred Ulli Ulrich Ulrict
+			Valgeir
+			Wolf Wolfgang Wolfram
+		}
+	}	
+
+	k_cult_of_taal_and_rhya = {
+		color={ 50 190 50 }
+		color2={ 220 220 0 }
+	
+		capital = 324 # c_talabheim
+	
+		title = "HIERARCH"
+		title_female = "HIERARCH"
+		foa = "AR_ULRIC_FOA"
+		short_name = yes
+		location_ruler_title = yes
+	
+		landless = yes
+		controls_religion = taalite
+		religion = taalite
+		culture = talabeclander
+		primary = yes
+		dynasty_title_names = no
+	}
+
+	k_cult_of_ursun = {
+		color={ 250 100 100 }
+		color2={ 220 220 0 }
+	
+		capital = 202 #Kislev
+	
+		title = "HIGH_PRIEST"
+		title_female = "HIGH_PRIEST"
+		foa = "HIGH_PRIEST_FOA"
+		short_name = yes
+		location_ruler_title = yes
+		
+		landless = yes
+		controls_religion = ursun
+		religion = ursun
+		culture = gospodar
+		primary = yes	
+		dynasty_title_names = no 	
+	}
+
+	k_cult_of_shallya = {
+		color={ 250 100 100 }
+		color2={ 220 220 0 }
+	
+		capital = 810 #Couronne
+	
+		title = "HOLY_PATRIARCH"
+		title_female = "HOLY_MATRIARCH"
+		foa = "HIGH_PRIEST_FOA"
+		short_name = yes
+		location_ruler_title = yes
+		
+		landless = yes
+		controls_religion = shallyan
+		religion = shallyan
+		culture = nortagnese
+		primary = yes	
+		dynasty_title_names = no 	
+	}
+	
+	k_cult_of_the_lady = {
+		color={ 250 100 100 }
+		color2={ 220 220 0 }
+	
+		capital = 810 #Couronne
+	
+		title = "FAY_ENCHANTER"
+		title_female = "FAY_ENCHANTRESS"
+		foa = "LADY_FOA"
+		short_name = yes
+		location_ruler_title = yes
+		
+		landless = yes
+		controls_religion = grail
+		religion = grail
+		culture = breton
+		primary = yes	
+		dynasty_title_names = no 	
+	}
+
+	d_cult_of_hashut = {
+		color={ 0.6 0.4 0.1 }
+	
+		capital = 478 #Zharr-Naggrund
+	
+		title = "HEAD_PRIEST"
+		title_female = "HEAD_PRIESTESS"
+		foa = "HEAD_PRIEST_FOA"
+		short_name = yes
+		location_ruler_title = yes
+		
+		controls_religion = hashut
+		religion = hashut
+		culture = dwarf_chaos
+		# primary = yes	
+		dynasty_title_names = no 	
+	}
+	
+	#d_cult_of_nagash = {
+	#	color={ 50 190 50 }
+	#	color2={ 220 220 0 }
+	#
+	#	capital = 471 #Cripple Peak
+	#
+	#	title = "MASTER"
+	#	title_female = "MISTRESS"
+	#	short_name = yes
+	#	location_ruler_title = yes
+	#
+	#	landless = yes
+	#	controls_religion = nagashi
+	#	religion = nagashi
+	#	primary = yes
+	#	dynasty_title_names = no
+	#}
+
+	d_high_temple_of_remas = {
+		color={ 50 190 50 }
+		color2={ 220 220 0 }
+	
+		capital = 600 #Remas
+	
+		title = "EAGLE"
+		title_female = "EAGLE"
+		short_name = yes
+		location_ruler_title = yes
+	
+		landless = yes
+		religion = myrmidian
+		culture = reman
+		primary = yes
+		dynasty_title_names = no
+	}
+
+	d_high_temple_of_magritta = {
+		color={ 50 190 50 }
+		color2={ 220 220 0 }
+	
+		capital = 553 #Magritta
+	
+		title = "EAGLE"
+		title_female = "EAGLE"
+		short_name = yes
+		location_ruler_title = yes
+	
+		landless = yes
+		religion = myrmidian
+		culture = astur
+		primary = yes
+		dynasty_title_names = no
+	}
+
+	d_arch_lectory_talabheim = {
+		color = { 159 130 101 }
+		color2 = { 255 255 255 }
+		
+		capital = 324 # c_talabheim
+			
+		title = "ARCH_LECTOR"
+		short_name = yes
+		location_ruler_title = yes
+	
+		landless = yes
+		religion = sigmarite
+		culture = talabeclander
+		primary = yes
+		dynasty_title_names = no
+	}	
+
+	d_arch_lectory_nuln = {
+		color = { 159 130 101 }
+		color2 = { 255 255 255 }
+	
+		capital = 309 #Nuln
+			
+		title = "ARCH_LECTOR"
+		short_name = yes
+		location_ruler_title = yes
+	
+		landless = yes
+		religion = sigmarite
+		culture = wissenlander
+		primary = yes
+		dynasty_title_names = no
+	}	
+
+c_high_kingdom = { #High King of the Dwarfs as spiritual position
+	color={ 140 60 190 }
+	color2={ 220 220 0 }
+	
+	capital = 451 #Karaz-a-Karak
+	
+	dignity = -100
+	
+	allow = {
+		religion = ancestor_gods
+		num_of_holy_sites = 3
+		piety = 500
+		prestige = 1000
+	}
+	
+	title = "HIGH_KING"
+	title_female = "HIGH_QUEEN"
+	foa = "HIGH_KING_FOA"
+	short_name = yes
+	caliphate = yes
+	dynasty_title_names = no
+	
+	religion = ancestor_gods
+	
+	controls_religion = ancestor_gods
+}	
+	
+# e_host_khorne = {
+	# color={ 190 60 60 }
+	# color2={ 220 220 0 }
+	
+	# capital = 409 #Dragoynovo
+	
+	# title = "CHAOS_CHAMPION"
+	# title_female = "CHAOS_CHAMPION"
+	# foa = "CHAOS_CHAMPION_FOA"
+	# short_name = yes
+	
+	# religion = khorne
+	
+	# primary = yes
+	
+	# controls_religion = khorne
+# }
+	
+# e_host_slaanesh = {
+	# color={ 180 60 160 }
+	# color2={ 220 220 0 }
+	
+	# capital = 1230 #Kamas
+	
+	# title = "CHAOS_CHAMPION"
+	# title_female = "CHAOS_CHAMPION"
+	# foa = "CHAOS_CHAMPION_FOA"
+	# short_name = yes
+	
+	# religion = slaanesh
+	
+	# primary = yes
+	
+	# controls_religion = slaanesh
+# }	
+	
+# e_host_tzeentch = {
+	# color={ 70 110 190 }
+	# color2={ 220 220 0 }
+	
+	# capital = 1187 #Angara
+	
+	# title = "CHAOS_CHAMPION"
+	# title_female = "CHAOS_CHAMPION"
+	# foa = "CHAOS_CHAMPION_FOA"
+	# short_name = yes
+	
+	# religion = tzeentch
+	
+	# primary = yes
+	
+	# controls_religion = tzeentch
+# }
+	
+# e_host_nurgle = {
+	# color={ 120 160 60 }
+	# color2={ 220 220 0 }
+	
+	# capital = 393 #Blatnista
+	
+	# title = "CHAOS_CHAMPION"
+	# title_female = "CHAOS_CHAMPION"
+	# foa = "CHAOS_CHAMPION_FOA"
+	# short_name = yes
+	
+	# religion = nurgle
+	
+	# primary = yes
+	
+	# controls_religion = nurgle
+# }
+	
+e_host_chaos = {
+	color={ 100 60 70 }
+	color2={ 220 220 0 }
+	
+	capital = 404 #Rakovitska
+	
+	title = "EVERCHOSEN"
+	title_female = "EVERCHOSEN"
+	foa = "EVERCHOSEN_FOA"
+	short_name = yes
+	# Always exists
+	landless = yes
+	
+	allow = {
+		always = no
+		trait = everchosen
+	}
+	
+	religion = chaos
+	
+	primary = yes
+	
+}		
+
+
+e_eternal_empire = {
+	color = { 118 201 222 }
+	color2 = { 255 255 255 }
+
+	allow = {
+		always = no #Only through Special Decision
+	}
+	
+	tilean_group = "Remean Empire"
+	estalian_group = "Gran Estalia"
+	
+	capital = 553 #Magritta ( or Remas? )
+	short_name = yes	
+	
+}
+
+k_caliph_al_umma = {
+	color = { 40 220 20 }
+	color2 = { 230 190 20 }
+	
+	allow = {
+		always = no #Only through special event/decision
+	}
+	
+	capital = 1037
+	
+	short_name = yes
+	religion = ormazd
+	controls_religion = ormazd
+	title = "CALIF"
+	title_female = "CALIFA"
+	foa = "CALIPH_FOA"
+	caliphate = yes
+}
+			
+#TITULAR!
+
+######Titular Realms
+
+e_sylvania = {
+	color = { 100 40 130 }
+	color2 = { 255 255 255 }
+		
+	capital = 386 #Drakenhof
+		
+	title = "EMPEROR"
+	title_female = "EMPRESS"	
+		
+	allow = {
+		has_landed_title = k_sylvania
+		trait = carstein_ring
+	}
+}
+
+
+
+### Chaos Wastes
+
+###Norsca
+
+###Bretonnia
+
+###Chaos Dwarf
+
+d_black_fortress = {
+	color = { 87 35 28 }
+	color2 = { 255 255 255 }
+	
+	capital = 1273 #Black Fortress
+}
+
+k_unzkulak = {
+	color = { 187 130 108 }
+	color2 = { 255 255 255 }
+	
+	capital = 416 #Unzkulak
+}
+
+###Greenskin
+
+d_red_eye_mountain = {
+	color = { 197 50 18 }
+	color2 = { 255 255 255 }
+	
+	capital = 433 #Karak Ungor
+}
+
+d_cragmere = {
+	color = { 167 150 148 }
+	color2 = { 255 255 255 }
+	
+	capital = 441 #Karak Varn
+}
+
+d_bonepick = {
+	color = { 197 170 198 }
+	color2 = { 255 255 255 }
+	
+	capital = 1258 #Chalde
+}
+
+d_mount_grey_hag = {
+	color = { 109 130 141 }
+	color2 = { 255 255 255 }
+	
+	capital = 497 #Mount Grey Hag
+}
+
+k_iron_rock = {
+	color = { 189 130 111 }
+	color2 = { 255 255 255 }
+	
+	capital = 712 #Iron Rock
+}
+
+k_black_crag = {
+	color = { 59 80 31 }
+	color2 = { 255 255 255 }
+	
+	capital = 465 #Black Crag
+}
+
+d_misty_mountain = {
+	color = { 199 180 231 }
+	color2 = { 255 255 255 }
+	
+	capital = 781 #Misty Mountain
+}
+
+### Southern
+
+k_olohrad = {
+	color = { 129 180 131 }
+	color2 = { 255 255 255 }
+	
+	capital = 1061 #Olohrad
+}
+
+d_wasai = {
+	color = { 59 130 101 }
+	color2 = { 255 255 255 }
+	
+	capital = 1020 #Oldrag
+	tribe = yes
+}
+
+
+###Republics & Leagues
+
+
+d_angazklad = {
+	color={ 72 92 142 }
+	color2={ 255 255 255 }
+	
+	capital = 686 #Barak Varr
+
+	short_name = no
+	
+	dignity = 200 
+	
+	allow = {
+		always = no
+		is_republic = yes
+	}
+}
+
+#Chaos guys
+
+k_realm_of_khorne = {
+	color = { 230 100 100 }
+	color2 = { 255 255 255 }
+		
+	capital = 2350 # c_realm_of_chaos
+	
+	religion = khorne
+	culture = daemon_khorne
+		
+	title = "HERALD"
+	title_female = "HERALD"
+	
+	short_name = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	dynasty_title_names = no
+}
+
+k_realm_of_nurgle = {
+	color = { 130 230 130 }
+	color2 = { 255 255 255 }
+		
+	capital = 2350 # c_realm_of_chaos
+	
+	religion = nurgle
+	culture = daemon_nurgle
+	
+	title = "HERALD"
+	title_female = "HERALD"
+	
+	short_name = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	dynasty_title_names = no
+}
+
+k_realm_of_slaanesh = {
+	color = { 230 180 180 }
+	color2 = { 255 255 255 }
+		
+	capital = 2350 # c_realm_of_chaos
+	
+	religion = slaanesh
+	culture = daemon_slaanesh
+	
+	title = "HERALD"
+	title_female = "HERALD"
+	
+	short_name = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	dynasty_title_names = no
+}
+
+k_realm_of_tzeentch = {
+	color = { 130 130 230 }
+	color2 = { 255 255 255 }
+		
+	capital = 2350 # c_realm_of_chaos
+	
+	religion = tzeentch
+	culture = daemon_tzeentch
+	
+	title = "HERALD"
+	title_female = "HERALD"
+	
+	short_name = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	dynasty_title_names = no
+}

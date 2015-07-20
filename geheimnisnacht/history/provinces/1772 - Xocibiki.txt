@@ -1,0 +1,16 @@
+# c_xocibiki
+
+# County Title
+title = c_xocibiki
+
+# Settlements
+max_settlements = 2
+
+b_xocibiki = tribal
+#b_pe_acuil = city
+
+# Misc
+culture = amazon_main
+religion = amazon
+terrain = jungle
+#History

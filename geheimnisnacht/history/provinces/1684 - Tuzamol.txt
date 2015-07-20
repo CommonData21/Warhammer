@@ -1,0 +1,16 @@
+# c_tuzamol
+
+# County Title
+title = c_tuzamol
+
+# Settlements
+max_settlements = 2
+
+b_tuzamol = tribal
+#b_cuihtli = city
+
+# Misc
+culture = lizardman
+religion = old_ones
+terrain = jungle
+#History

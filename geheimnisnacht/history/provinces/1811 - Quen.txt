@@ -1,0 +1,16 @@
+# c_quen
+
+# County Title
+title = c_quen
+
+# Settlements
+max_settlements = 2
+
+b_quen = tribal
+#b_huitzilin = city
+
+# Misc
+culture = lizardman
+religion = old_ones
+terrain = jungle
+#History

@@ -1,0 +1,29 @@
+500 = { 
+name = "Anakonda" 
+culture = "amazon_main" 
+}
+
+501 = { 
+name = "Pantheros" 
+culture = "amazon_main" 
+}
+
+502 = { 
+name = "Pythona" 
+culture = "amazon_main" 
+}
+
+503 = { 
+name = "Toucana" 
+culture = "amazon_main" 
+}
+
+504 = { 
+name = "Piranha" 
+culture = "amazon_main" 
+}
+
+505 = { 
+name = "Jaguar" 
+culture = "amazon_main" 
+}

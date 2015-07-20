@@ -1,0 +1,31 @@
+# 2 Songs of the Holy Land
+
+song = {
+	name = "ascalon.ogg"
+	
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			NOT = {	culture_group = sartosan_group }
+			NOT = {	culture_group = estalian_group }
+			NOT = {	culture_group = tilean_group }
+		}
+	}		
+}
+
+
+
+song = {
+	name = "theholyland.ogg"
+	
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			NOT = {	culture_group = sartosan_group }
+			NOT = {	culture_group = estalian_group }
+			NOT = {	culture_group = tilean_group }
+		}
+	}	
+}

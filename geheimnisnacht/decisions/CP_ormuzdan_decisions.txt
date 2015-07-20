@@ -1,0 +1,71 @@
+decisions = {
+	become_ormazd_caliph = {
+		is_high_prio = yes
+		potential = {
+			religion = ormazd
+			k_caliph_al_umma = {
+				has_holder = no
+			}
+		}
+		allow = {
+			has_landed_title = e_araby
+			piety = 300
+			any_courtier = {
+				religion = ormazd
+				trait = ormazd_sayyid
+				NOT = {
+					character = PREV
+				}
+			}
+		}
+		effect = {
+			piety = -300
+			activate_title = { title = k_caliph_al_umma status = yes }
+			if = {
+				limit = {
+					trait = ormazd_sayyid
+				}				
+				k_caliph_al_umma = {
+					grant_title = PREV
+				}
+			}
+			random_courtier = {
+				limit = {
+					religion = ormazd
+					trait = ormazd_sayyid
+					ROOT = {
+						NOT = { trait = ormazd_sayyid
+						}
+					}
+					OR = {
+						is_priest = yes
+						NOT = {
+							ROOT = {
+								any_courtier = {
+									religion = ormazd
+									trait = ormazd_sayyid
+									is_priest = yes
+								}
+							}
+						}
+					}
+				}
+				k_caliph_al_umma = {
+					grant_title = PREV
+				}
+			}
+			k_caliph_al_umma = {
+				holder_scope = {
+					e_araby = {
+						holder_scope = {
+							set_defacto_vassal = PREVPREV
+						}
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

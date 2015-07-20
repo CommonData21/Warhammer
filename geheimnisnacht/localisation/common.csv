@@ -1,0 +1,273 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+January;Nachhexen (1);Janvier;Januar;Styczeñ;Enero;Gennaio;Január;Leden;;;;;;x
+February;Jahrdrung (2);Février;Februar;Luty;Febrero;Febbraio;Február;Únor;;;;;;x
+March;Pflugzeit (3);Mars;März;Marzec;Marzo;Marzo;Március;Bøezen;;;;;;x
+April;Sigmarzeit (4);Avril;April;Kwiecieñ;Abril;Aprile;Április;Duben;;;;;;x
+May;Sommerzeit (5);Mai;Mai;Maj;Mayo;Maggio;Május;Kvìten;;;;;;x
+June;Vorgeheim (6);Juin;Juni;Czerwiec;Junio;Giugno;Június;Èerven;;;;;;x
+July;Nachgeheim (7);Juillet;Juli;Lipiec;Julio;Luglio;Július;Èervenec;;;;;;x
+August;Erntzeit (8);Août;August;Sierpieñ;Agosto;Agosto;Augusztus;Srpen;;;;;;x
+September;Brauzeit (9);Septembre;September;Wrzesieñ;Septiembre;Settembre;September;Záøí;;;;;;x
+October;Kaldezeit (10);Octobre;Oktober;PaŸdziernik;Octubre;Ottobre;Október;Øíjen;;;;;;x
+November;Ulriczeit (11);Novembre;November;Listopad;Noviembre;Novembre;November;Listopad;;;;;;x
+December;Vorhexen (12);Décembre;Dezember;Grudzieñ;Diciembre;Dicembre;December;Prosinec;;;;;;x
+Sunday;Sunday;Dimanche;Sonntag;Nd;Domingo;Domenica;Vasárnap;Nedìle;;;;;;x
+Monday;Monday;Lundi;Montag;Pn;Lunes;Lunedì;Hétfõ;Pondìlí;;;;;;x
+Tuesday;Tuesday;Mardi;Dienstag;Wt;Martes;Martedì;Kedd;Úterý;;;;;;x
+Wednesday;Wednesday;Mercredi;Mittwoch;Œr;Miércoles;Mercoledì;Szerda;Støeda;;;;;;x
+Thursday;Thursday;Jeudi;Donnerstag;Cz;Jueves;Giovedì;Csütörtök;Ètvrtek;;;;;;x
+Friday;Friday;Vendredi;Freitag;Pt;Viernes;Venerdì;Péntek;Pátek;;;;;;x
+Saturday;Saturday;Samedi;Samstag;So;Sábado;Sabato;Szombat;Sobota;;;;;;x
+marsh;Marsh;;;;;;;;;;;;;x
+wasteland;Wasteland;;;;;;;;;;;;;x
+mountain_pass;Mountain Pass;;;;;;;;;;;;;x
+
+#Bookmarks
+#BM_NORTHERN_MERCANTILE_SOCIETY;The Northern Mercantile Society;;;;;;;;;;;;;x
+#BM_NORTHERN_MERCANTILE_SOCIETY_DESC;In a bid to regain some of the trade lost from the secession of Marienburg, the Electors of Hochland, Ostland and Nordland have funded the foundation of a new merchant league in the Sea of Claws. Based in the towns of Neues Emskrank and Salkalten, Jens-Peter hopes to build a profitable enterprise in the northern Empire. With fierce opposition from the established powers in Marienburg and Erengrad, the survival of the Northern Mercantile Society is not guaranteed.;;;;;;;;;;;;;x
+PICK_STARTING_ERA_TEXT;Choose your region.;;;;;;;;;;;;;x
+PICK_ERA_YEAR;$YEAR$ I.C.;;;;;;;;;;;;;x
+EARLY_MED;The Vampire Wars;;;;;;;;;;;;;x
+EARLY_MED_INFO;The turn of the millennium was a time of great change and upheaval in what was left of the Empire. It was heralded in an ominous fashion when the city of Mordheim was destroyed by a warpstone meteor at the stroke of midnight. For over six centuries the Empire had been in a state of civil war, with each of claimants to the Imperial throne making war upon any who would deny their right to rule. This infighting would prove to have disastrous consequences...;;;;;;;;;;;;;x 
+HIGH_MED;Realms of Chaos;;;;;;;;;;;;;x
+HIGH_MED_INFO;The lands of the north are not just cold and savage. Beyond the merely mundane threats, the polar Warp Gates open to the Realm of Chaos and pulsate with foul vigour, mutating the landscape, empowering the evil, and driving the righteous to madness. The barbaric Kurgan and Hung revel in this twisting energy, seeking the favour of the Dark Gods of Chaos, while the Norscans reave their way south for plunder and glory. Those who resist these monstrous foes are certainly brave, as without their efforts the Old World would certainly be ravaged.;;;;;;;;;;;;;x
+LATE_MED;Blood of Ancients;;;;;;;;;;;;;x
+LATE_MED_INFO;In Ulthuan, the Phoenix King Bel-Hathor of Saphery decided to send an expedition to the Old World for the first time in centuries. Lead by Finubar, Prince of Eataine, the expedition established contact and trade with many of the civilized nations they found there. In cold Naggaroth, Malekith, the Witch King, sent raiders and ambassadors to the four corners of the world, hoping to grow his wealth and influence and sabotage the efforts of the Phoenix King.;;;;;;;;;;;;;x
+BM_FATE_OF_ENGLAND;The Vampire Wars;;;;;;;;;;;;;x
+BM_VAMPIRE;The Vampire Wars;;;;;;;;;;;;;x
+BM_VAMPIRE_DESC;The turn of the millennium was a time of great change and upheaval in what was left of the Empire. It was heralded in an ominous fashion when the city of Mordheim was destroyed by a warpstone meteor at the stroke of midnight. For over six centuries the Empire had been in a state of civil war, with each of claimants to the Imperial throne making war upon any who would deny their right to rule. This infighting would prove to have disastrous consequences...;;;;;;;;;;;;;x
+BM_RISE_OF_THE_HANSA;Realms of Chaos;;;;;;;;;;;;;x
+BM_CHAOS;Realms of Chaos;;;;;;;;;;;;;x
+BM_CHAOS_DESC;The lands of the north are not just cold and savage. Beyond the merely mundane threats, the polar Warp Gates open to the Realm of Chaos and pulsate with foul vigour, mutating the landscape, empowering the evil, and driving the righteous to madness. The barbaric Kurgan and Hung revel in this twisting energy, seeking the favour of the dark gods of Chaos, while the Norscans reave their way south for plunder and glory. Those few that resist these monstrous foes are certainly brave, as without their efforts the Old World would certainly be ravaged.;;;;;;;;;;;;;x
+BM_100_YEARS_WAR;Blood of Ancients;;;;;;;;;;;;x
+BM_ANCIENTS;Blood of Ancients;;;;;;;;;;;;;x
+BM_ANCIENTS_DESC;In Ulthuan, the Phoenix King Bel-Hathor of Saphery decided to send an expedition to the Old World for the first time in centuries. Lead by Finubar, Prince of Eataine, the expedition established contact and trade with many of the civilized nations they found there. In cold Naggaroth, Malekith, the Witch King, sent raiders and ambassadors to the four corners of the world, hoping to grow his wealth and influence and sabotage the efforts of the Phoenix King.;;;;;;;;;;;;;x
+#Era 1 (846 characters)
+ERA_CHAR_INFO_350000;Independent since the Night of the Restless Dead in 1681, Sylvania had long been ruled by the von Drak dynasty. This all changed in 1797 when Count Otto 'the Mad', now on his death bed, married his daughter Isabella to the mysterious Vlad von Carstein to keep his brother Leopold from the throne. Leopold von Drak saw his inheritance slipping away and protested the union, only to be hurled from the castle’s window by Vlad. This was later known as the First Defenestration of Drakenhof. Vlad and Isabella ruled for many years in a fair, but often brutal fashion (as can be seen in the Second through Thirteenth Defenestrations of Drakenhof). As Sylvania was backwater in the Empire, no one questioned how each new Count of Sylvania looked so similar to the one before him. However, Sylvania will not stay a backwater for much longer...;;;;;;;;;;;;;x
+ERA_CHAR_INFO_600000;During what was later known as the Time of Three Emperors, the line of elected Emperors continued to hold against the Emperors of Talabecland and the Wolf Emperors of Middenland. This tenuous authority ended in 1979 IC when the infant Grand Baroness Magritta van der Maacht of Westerland was elected with only the support of Elector Counts of Wissenland, Stirland, and Averland. The Grand Theogonist, seeing this for the farce that was, declared the office of Emperor vacant. Magritta naturally disputes this and is willing to enforce her claim through force of arms if need be. The fractured states in the Empire could provide the opportunity for 'Empress' Magritta to make this dream become a reality, or it could be her destruction...;;;;;;;;;;;;;x
+ERA_CHAR_INFO_700000;Following the death of the legendary Mandred 'Skavenslayer', the office of Emperor became a ceremonial title, traded among the Elector Counts for favours. This state of affairs ended in 1359 IC when the the Grand Count of Stirland was elected to serve as Emperor, much to the chagrin of Grand Duchess Ottilia of Talabecland. Supported by the cult of Taal and Rhya, Ottilia decided to press her own claim to the throne. Despite winning a decisive victory in the Battle of the Talabec in 1360 IC, Ottilia was ultimately unable take the throne for herself. Still, Talabeland's independence and Ottilia's claim to the throne have been preserved to this day. The current (self styled) Empress Ottilia, like her ancestor of the same name, seeks to unite the Empire under her rule. It remains to be seen if ancient Talabecland can survive the coming wars...;;;;;;;;;;;;;x
+ERA_CHAR_INFO_900000;In the aftermath of the Grand Theogonist's dissolution of the Empire in 1980 IC, nobles across the Empire began to picture themselves sitting the Imperial throne. Greatest among these was Grand Prince Siegfried von Holzkrug of Reikland. Reikland has always considered itself the most important place in the Empire, as it was location where the the Unberogen tribe of Sigmar's blood had settled. Altdorf's strategic location on the Reik and the near-unconditional support of the Cult of Sigmar has always helped reinforce this claim, much to the chagrin of other Electors. Known elsewhere as the Reikland Pretender, Siegfried seeks the Imperial throne for himself and already has the support of Wissenland. Only time will tell if Siegfried's abilities are equal to his ambitions...;;;;;;;;;;;;;x
+ERA_CHAR_INFO_400000;Almost two centuries after the civil war over the Imperial throne began, the matter was still not settled. The situation worsened noticeably when the Ulrican Grand Duke Heinrich of Middenland lost the Imperial Election to the Sigmarite Grand Count of Wissenland. Believing himself robbed of his birthright he stormed off in a rage back to Middenheim. There, with the support of the Ar-Ulric, the Grand Duke issued a proclamation declaring himself Emperor, issuing coins and edicts to that effect, and declaring the Sigmarite faith false and heretical. This Ulrican line of so-called 'Wolf' Emperors has continued to this day with Mannfred Todbringer, but like his ancestors it may well be that his reach exceeds his grasp...;;;;;;;;;;;;;x
+ERA_CHAR_INFO_95001;Considered an eccentric Leader to be easily manipulated by the Elven court, Bel-Hathor was crowned Phoenix King of Ulthuan in 1503. As a wizard prince of Saphery, he was trained to be a skilled warrior and a able diplomat. He would also prove to be a strong ruler, famed for his resolve and wisdom.Despite urgings from the Elven court, Bel-Hathor knew an invasion of Naggaroth would cripple Ulthuan, as well as gamble the extinction of the Elven race, even if the invasion proved successful. Instead, he constructed a system of magical wards around Ulthuan to mislead and confuse potential invaders with illusions. When lone Human traders still managed to find their way to Lothern, Bel-Hathor issued a proclamation barring all non-Elves from Ulthuan...;;;;;;;;;;;;;x
+ERA_CHAR_INFO_95010;Prince Finubar of Eataine, the southern principality which holds the great city-state and trade ports of Lothern. When Human traders found their way past Ulthuan's magical wards and onto Lothern's shores Bel-Hathor proclaimed that all non-elven were forbidden to enter Ulthuan. With his great wisdom, the Phoenix King called upon Prince Finubar and told him to sail to the old world and see how it had changed since the Asur had left for Ulthuan, and it was in the east Finubar the Seafarer found not only the Human empires, but their lost kin the Asrai. Finubar has returned to passionatly argue that contact with the young and growing Human nations are vital for Ulthuan, that the declining High Elves need the dynamism of the younger races, as well as seeing a potential in the Humans of The Empire that no elf would openly admit...;;;;;;;;;;;;;;x
+ERA_CHAR_INFO_90000;Prince of the northern province of Nagarythe, considered next to be Phoenix King, except the Elven court felt he was not suited to rule. Malekith was instead appointed Commander of the High Elf army, he seemed to take the turn of events well and proved to be a brilliant general. Many decades passed and Malekith worked himself into a position of power second only to the Phoenix King's, and in -2751 IC he accused the King of being a member of the forbidden pleasure cult. With the kings 'suicide', Malekith demanded that the crown pass to him. Confidently Malekith marched into the sacred flame of the god Asuryan, to prove himself as Phoenix King, yet the flame refused to suffer his presence scarring his body. After a long and bloody civil war, Malekith and his followers retreated into exile vowing to one day return and retake Ulthuan...;;;;;;;;;;;;;x
+ERA_CHAR_INFO_90300;Morathi the Hag Sorceress mother of Malekith. She was the second wife of Aenarion who rescued her from a Slaaneshi warband in the days of the first Chaos invasion before The Sundering. First Hag queen of the Witch Elves, Morathi can be seen as the indirect cause of The Sundering as it was she who introduced the pleasure cults to Ulthuan.  being an immensely powerful sorceress and making numerous daemonic pacts to further her own power. Morathi is second in power only to her own son. She has spent 5000 years teaching her son all she knows of statecraft and magic, and works continuously to maintain his grip on the throne of Naggaroth...;;;;;;;;;;;;;x
+#Era 2
+ERA_CHAR_INFO_1550000;Tzarina Tetyana may be undisputed ruler of a strong and independent people, but her position is hardly enviable. Her allies are at best unreliable and prone to barbarism, and her enemies are far worse. The Gospodar tribe decided to settle on the unforgiving plains of Kislev, carved from the northern marches of the Empire, but the land is still open to invasion. The Ungol and Roppsman tribes may have been humbled by her ancestors, but they remain strong and independent. The Norscan savages to the north are an ever-present threat, and the Kurgan have begun to migrate south as well, bringing their Dark Gods with them. To the south, the squabbling Imperial claimants continue their bloodshed for no gain, but the newest contender, Vlad, might not prove content with just the Empire...;;;;;;;;;;;;;x
+#Era 3
+ERA_CHAR_INFO_900043;;;;;;;;;;;;;;x
+
+#
+#
+#Loading tips that must be used in this file: 0,10,16,17,28,45,46,47,53,54
+#Loading tips that mustn't be used in this file: 20
+#
+LOADING_TIP_0;Small steps corrupt.;;;;;;;;;;;;;x
+LOADING_TIP_1;'Deliver us, Lord Sigmar, from the savage race of Northmen which lays waste our realm.' - Common Nordlander prayer;;;;;;;;;;;;;x
+LOADING_TIP_2;Never confuse a Tilean with an Estalian.;;;;;;;;;;;;;x
+LOADING_TIP_3;'KILL FOR KHORNE! KILL FOR KHORNE! KILL FOR KHORNE!' - Khornate berserker;;;;;;;;;;;;;x
+LOADING_TIP_4;The cross is a popular symbol in the Empire. The left, right, and upper arms represent the Human tribes uniting, and the lower arm represents the Dwarfs.;;;;;;;;;;;;;x
+LOADING_TIP_5;The fleur de lys is a common symbol in Bretonnia. The flower is the sacred emblem of the Lady of the Lake, and grows around holy sites.;;;;;;;;;;;;;x
+LOADING_TIP_6;In the Chaos Wastes, time and space lose consistency the further north you travel.;;;;;;;;;;;;;x
+LOADING_TIP_7;The Hung are the least trustworthy people in the world, even among the treacherous savages of the North.;;;;;;;;;;;;;x
+LOADING_TIP_8;Tilea and Estalia were once briefly united in a great empire.;;;;;;;;;;;;;x
+LOADING_TIP_9;The ancient empire of Nehekhara had a terrible and long reach, taking slaves and erecting monuments as far north as the present Empire.;;;;;;;;;;;;;x
+LOADING_TIP_10;Far to the east, the great empire of Cathay endures.;;;;;;;;;;;;;x
+LOADING_TIP_11;Nobody quite knows where little Orcs come from.;;;;;;;;;;;;;x
+LOADING_TIP_12;The Lynsk is commonly regarded as the true northern border of civilisation.;;;;;;;;;;;;;x
+LOADING_TIP_13;The great rolling plains of Bretonnia are home to some of the greatest knights in the world.;;;;;;;;;;;;;x
+LOADING_TIP_14;Pirates originating from Sartosa are a constant thorn in the side of Tilean merchants.;;;;;;;;;;;;;x
+LOADING_TIP_15;Eight is the sacred number of Khorne.;;;;;;;;;;;;;x
+LOADING_TIP_16;Six is the sacred number of Slaanesh.;;;;;;;;;;;;;x
+LOADING_TIP_17;Seven is the sacred number of Nurgle.;;;;;;;;;;;;;x
+LOADING_TIP_18;Nine is the sacred number of Tzeentch.;;;;;;;;;;;;;x
+LOADING_TIP_19;Norscans are sometimes traders, sometimes raiders.;;;;;;;;;;;;;x
+LOADING_TIP_21;Orkz is made fer' two fings! Fightin', and winnin'!;;;;;;;;;;;;;x
+LOADING_TIP_22;The Great Forest of the Empire harbours innumerable beasts and foes.;;;;;;;;;;;;;x
+LOADING_TIP_28;'There are great deeds that remain undone, enemies yet to conquer and raptures yet to rejoice in. So as it is written, so shall it be done. I, Settra, have proclaimed it and let none dare oppose my will.' - Settra the Imperishable;;;;;;;;;;;;;x
+LOADING_TIP_45;'These are the marks of the blackest evil, these are the marks of the Vampire.' - Witch Hunter von Ingeheim;;;;;;;;;;;;;x
+LOADING_TIP_46;'There is no such thing as an innocent verdict in my court. A plea of innocence is guilty of wasting my time.' - Inquisitor Lord Karamazov, Witch Hunter;;;;;;;;;;;;;x
+LOADING_TIP_47;'Orcses is never defeated in battle. If we win we win, if we die we die fighting so it don't count. If we runs for it we don't die neither, cos we can come back for annuver go, see!' - Orc view of warfare;;;;;;;;;;;;;x
+LOADING_TIP_53;'There's nothin' as sure in the world as the glitter of gold and the treachery of Elves.' - Dwarf saying;;;;;;;;;;;;;x
+LOADING_TIP_54;Knowledge is power, guard it well.;;;;;;;;;;;;;x
+LOADING_TIP_55;Hope is the first step on the road to disappointment.;;;;;;;;;;;;;x
+LOADING_TIP_56;Estalians insist that Tilea was conquered by them under the leadership of the avatar of Myrmidia.;;;;;;;;;;;;;x
+LOADING_TIP_57;Tileans insist that Estalia was conquered by them under the leadership of the avatar of Myrmidia.;;;;;;;;;;;;;x
+LOADING_TIP_58;The moon Morrslieb is comprised almost entirely of Warpstone. The Skaven are attempting to develop a way of harvesting it.;;;;;;;;;;;;;x
+LOADING_TIP_59;Khorne cares not from whence the blood flows, only that it flows.;;;;;;;;;;;;;x
+LOADING_TIP_60;Drachenfels, the Great Enchanter, was defeated by Sigmar. He eventually returned, but weaker than before.;;;;;;;;;;;;;x
+LOADING_TIP_61;Mordheim was the great capital of Ostermark. It was destroyed  by a large Warpstone meteor at the stroke of midnight that marked the beginning of the year 2000 IC.;;;;;;;;;;;;;x
+LOADING_TIP_62;Mousillon sits on a natural convergence of the Winds of Magic, which makes the living sickly and the dead restless.;;;;;;;;;;;;;x
+LOADING_TIP_63;Nehekhara was destroyed in ancient times by the necromancer Nagash.;;;;;;;;;;;;;x
+LOADING_TIP_64;Vampires were created by the necromancer Nagash to act as the captains of his armies.;;;;;;;;;;;;;x
+LOADING_TIP_65;The dark forests of the world are home to tribes of Beastmen. They gather around the largest and cruellest of their kind.;;;;;;;;;;;;;x
+LOADING_TIP_66;Time in Athel Loren does not pass in a typical fashion.;;;;;;;;;;;;;x
+LOADING_TIP_67;The Chaos Wastes often shift. Any map of the land is unreliable at best.;;;;;;;;;;;;;x
+LOADING_TIP_68;Bretonnia is periodically ravaged by the insane Vampire known as the Red Duke.;;;;;;;;;;;;;x
+LOADING_TIP_69;Lizardmen do not appreciate explorers entering their territory in search of treasure.;;;;;;;;;;;;;x
+LOADING_TIP_70;Araby is very far from the polar gates, and thus is safe from the worst of Chaos.;;;;;;;;;;;;;x
+DYN1_DESC;With a score of $SCORE$ you$FAILED$ beat House Holswig-Schliestein. Originally lords of Ubersreik, the family quietly built its wealth and prestige as wars raged all around. The family catapulted to fame when the childless Magnus the Pious chose to pass the realm of Reikland to his good friend Wilhelm, rather than to a distant relative. The family held this title for many years until the latest Prince of Reikland, Wilhelm III won the Imperial throne after the debacle of Dieter IV's abdication. Since then they have yet to relinquish the position, maintaining an unbroken series of generally popular Emperors. The latest in the family being Karl-Franz, who has had to face the worst challenges the Empire has ever seen.;;;;;;;;;;;;;x
+DYN2_DESC;With a score of $SCORE$ you$FAILED$ beat House von Carstein. The von Carsteins originated with Vlad von Carstein, a powerful Vampire who in 1797 married Isabella von Drak, daughter of the Graf of Sylvania. With subterfuge, brutality and sorcery he took control of the province, eliminated resistance and recruited promising nobles into his Vampiric bloodline. His influence grew until he attempted to take over the fractured Empire in 2010, which resulted in his death in 2051 during the siege of Altdorf. Without his dominant leadership, his extensive 'family' of Vampires, cultists and necromancers fragmented into competing claimants, allowing them to be defeated piecemeal by the armies of the Empire. Despite the infighting and setbacks, the von Carstein bloodline survived and has continued to grow in influence, most notably under the control of Mannfred von Carstein.;;;;;;;;;;;;;x
+DYN3_DESC;With a score of $SCORE$ you$FAILED$ beat House von Bildhofen. This house is very old and widespread, with landed estates found throughout the Empire, and several Electors hailing from their dynasty. The most famous of all is Magnus the Pious, formerly a minor noble of Nuln, who united the Empire through his bravery and zealous devotion to Sigmar.;;;;;;;;;;;;;x
+DYN4_DESC;With a score of $SCORE$ you$FAILED$ beat House Untermensch. Despite the unfortunate name, the Untermensch family held a significant amount of influence on the history of the Empire. Most infamous of all is the first Ottilia, Elector of Talabecland, who rebelled against the Imperial election of 1359 and triggered the start of what would become the Age of Three Emperors. The Untermensch dynasty held onto the province of Talabecland and maintained their claim for the Imperial throne right until the ascension of Magnus the Pious in 2304. Despite their longevity and persistence, they never extended outside of Talabecland, and are mostly remembered for causing the fragmentation of the Empire.;;;;;;;;;;;;;x
+DYN5_DESC;With a score of $SCORE$ you$FAILED$ beat House Bokha of Kislev. Directly descended from Khan-Queen Miska of the Gospodars, the Bokhas have withstood some of the fiercest Chaos incursions the world has seen, culminating in the invasion of Archaon the Everchosen.;;;;;;;;;;;;;x
+DYN6_DESC;With a score of $SCORE$ you$FAILED$ beat House van der Maacht. Their influence in Marienburg and Westerland stretches back into the hazy past, but it is believed they are distantly related to the various Nordlander ruling houses. The power of Marienburg under the van der Maachts grew as the Imperial system weakened during the Age of Three Emperors, as they took advantage of the general confusion and corruption to strengthen their own position. Nominally a subject territory of Nordland, the political and economic power of the city-state grew to the extent that in 1979 the infant Countess Magritta was elected Empress. The obvious fraud and bribery of the decision dissolved whatever integrity the Empire still had, and by 1980 the Empire had completely broken apart into constituent provinces and imperial claimants. The van der Maachts continued to make their claim for the Imperial throne, but were unable to make much headway due to the destruction caused by the Vampire Wars. In 2302, the last surviving member, Paulus van der Maacht, marched with Magnus the Pious to fight the forces of Chaos in Kislev. His death in battle resulted in the city being thrown into confusion over the succession, which Magnus solved in 2305 by giving control of the city to a board of merchants.;;;;;;;;;;;;;x
+DYN7_DESC;With a score of $SCORE$ you$FAILED$ beat House Todbringer. Sometimes known instead as Wüterich, they have held Middenland and Middenheim for many centuries, building a reputation for fierce and proud servants of Ulric. They are especially adept (or obsessed) at hunting down the Beastmen that plague their realm.;;;;;;;;;;;;;x
+DYN8_DESC;With a score of $SCORE$ you$FAILED$ beat House von Holzkrug. The von Holzkrugs held the throne of Reikland for centuries during the Age of Three Emperors, and even held the Imperial throne at one point. With the support of the Grand Theogonist, they rebelled against the election of Magritta van der Maacht and attempted to press their own claim for the throne, resulting in the total fragmentation of the already ailing Empire. The rulers of Reikland gained some fame for their exploits in the Vampire Wars, but the distrust and enmity of their neighbours prevented them from reuniting the Empire. The family came to an end in 2302 when the last heir, Lorenz, travelled with Magnus the Pious to Kislev to fight in the Great War Against Chaos. His death caused no small turmoil in the succession, which resulted in the Grand Theogonist ceding control of the realm to Magnus in recognition of his services to Sigmar.;;;;;;;;;;;;;x
+DYN9_DESC;With a score of $SCORE$ you$FAILED$ beat House von Alptraum. The Alptraums ruled Averland for many generations, culminating in the occasionally brutal rule of Ludmilla von Alptraum. This came undone when the brilliant general Marius Leitdorf married Helena von Alptraum, sister to the heiress Marlene. With the backing of the state army and his marriage providing a veneer of legitimacy, Marius Leitdorf was able to push his claim on Averland, ending the reign of the von Alptraum family.;;;;;;;;;;;;;x
+DYN10_DESC;With a score of $SCORE$ you$FAILED$ beat House Toppenheimer. Though not Electors, the Toppenheimers expanded through Wissenland and Solland, securing an excellent power base despite the best efforts of their peers.;;;;;;;;;;;;;x
+DYN11_DESC;With a score of $SCORE$ you$FAILED$ beat House Gausser. The Gausser family ruled Nordland for many years, and insisted that by bloodline they had the right to the errant realm of Marienburg. However, they were never able to enforce this claim, which if successful would have launched them to untold riches and prestige.;;;;;;;;;;;;;x
+DYN12_DESC;With a score of $SCORE$ you$FAILED$ beat House von Krystallbach. After the defeat of Mannfred von Carstein in 2145, a moment of ill-conceived ambition led Graf Martin von Krystallbach to declare that Sylvania was a component province of Stirland, to the mild concern of his peers. Although this did effectively double the size of his realm, Sylvania proved to be nigh-impossible to govern and remained a regional menace for centuries to come.;;;;;;;;;;;;;x
+DYN13_DESC;With a score of $SCORE$ you$FAILED$ beat House von Drak. The von Draks of Sylvania were legendary in their ill-governance. Under their rule Sylvania was overrun by monsters and petty nobles abused their vassals with impunity. Their reign of ambivalent terror was only ended by the arrival of Vlad von Carstein.;;;;;;;;;;;;;x
+DYN14_DESC;With a score of $SCORE$ you$FAILED$ beat House Stoutheart. In the 26th century, Hisme Stoutheart achieved a record ten consecutive three-year terms as Elder of the Mootland.;;;;;;;;;;;;;x
+DYN15_DESC;With a score of $SCORE$ you$FAILED$ beat House Nikse. The Nikse family were a minor noble family in Nordland, and are only known from their occasional marriages into the Todbringer dynasty.;;;;;;;;;;;;;x
+# RETINUES
+RETTYPE_CUL_IMP;Imperial Free Company;;;;;;;;;;;;;x
+RETTYPE_CUL_IMP2;Imperial State Halabardiers;;;;;;;;;;;;;x
+RETTYPE_CUL_IMP3;Imperial State Spearmen;;;;;;;;;;;;;x
+RETTYPE_CUL_IMP4;Imperial State Handgunners;;;;;;;;;;;;;x
+RETTYPE_CUL_IMP5;Imperial State Swordsmen;;;;;;;;;;;;;x
+RETTYPE_CUL_BRET;Bertonian Pikeman Company;;;;;;;;;;;;;x
+RETTYPE_CUL_BRET2;Bertonian Archers Company;;;;;;;;;;;;;x
+RETTYPE_CUL_BRET3;Knights of the Realm;;;;;;;;;;;;;x
+RETTYPE_CUL_KISLEV1;Kossar Rota;;;;;;;;;;;;;x
+RETTYPE_CUL_KISLEV2;Kremlin Guard Rota;;;;;;;;;;;;;x
+RETTYPE_CUL_ORC;Black Orc Boyz;;;;;;;;;;;;;x
+RETTYPE_CUL_DWARF;Longbeards;;;;;;;;;;;;;x
+RETTYPE_SPEC_VAMP;Vampire Knights;;;;;;;;;;;;;x
+# DISEASES GUI INFO
+has_creeping_buboes;Has Creeping Buboes;;;;;;;;;;;;;x
+has_creeping_buboes_desc;This character has Creeping Buboes, which leave horrible itchy red welts.;;;;;;;;;;;;;x
+has_green_pox;Has the Green Pox;;;;;;;;;;;;;x
+has_green_pox_desc;This character has the Green Pox, which causes pus-filled boils to appear and burst, trickling green ichor.;;;;;;;;;;;;;x
+has_red_pox;Has the Red Pox;;;;;;;;;;;;;x
+has_red_pox_desc;This character has the Red Pox, which is sometimes known as the Scarlet Scourge.;;;;;;;;;;;;;x
+has_rattlelung;Has Rattlelung;;;;;;;;;;;;;x
+has_rattlelung_desc;This character has Rattlelung, and can never seem to stop coughing.;;;;;;;;;;;;;x
+has_tomb_rot;Has Tomb Rot;;;;;;;;;;;;;x
+has_tomb_rot_desc;This character has Tomb Rot, which causes the flesh to rot away.;;;;;;;;;;;;;x
+has_nurgles_rot;Has Nurgle's Rot!;;;;;;;;;;;;;x
+has_nurgles_rot_desc;This character has Nurgle's Rot, and is cursed to spread father Nurgle's 'gifts'.;;;;;;;;;;;;;x
+has_bone_auge;Has Bone Auge;;;;;;;;;;;;;x
+has_bone_auge_desc;This character has Bone Auge, his bones are malformed in terrible way, [This.GetSheHe] is in constant pain.;;;;;;;;;;;;;x
+creeping_buboes;Creeping Buboes;;;;;;;;;;;;;x
+CREEPING_BUBOES_INFO;There is an epidemic of Creeping Buboes in this place.;;;;;;;;;;;;;x
+rattlelung;Rattlelung;;;;;;;;;;;;;x
+RATTLELUNG_ROT_INFO;There is an epidemic of Rattlelung in this place.;;;;;;;;;;;;;x
+nurgles_rot;Nurgle's Rot;;;;;;;;;;;;;x
+NURGLES_ROT_INFO;Father Nurgle has gifted this place with one his most virulent diseases.;;;;;;;;;;;;;x
+red_pox;the Red Pox;;;;;;;;;;;;;x
+RED_POX_INFO;There is an epidemic of the Red Pox in this place.;;;;;;;;;;;;;x
+green_pox;the Green Pox;;;;;;;;;;;;;x
+GREEN_POX_INFO;There is an epidemic of the Green Pox in this place.;;;;;;;;;;;;;x
+# EVENT MODIFIERS
+state_troops_given;Provided Professional Troops;;;;;;;;;;;;;x
+state_troops_given_desc;The Character has provided Emperor with professional troops.;;;;;;;;;;;;;x
+# duel
+battlefield_fight;Fight on the Battlefield;;;;;;;;;;;;;x
+battlefield_fight_desc;This character recently fought on a battlefield.;;;;;;;;;;;;;x
+# magic ones
+spell_inspiration;Inspiration;;;;;;;;;;;;;x
+spell_inspiration_desc;The luminous power of Hysh filled this character with wisdom.;;;;;;;;;;;;;x
+spell_truthpower;The Power of Truth;;;;;;;;;;;;;x
+spell_truthpower_desc;The words of this characters are empowered with powers of Hysh.;;;;;;;;;;;;;x
+spell_eyesoftruth;Eyes of Truth;;;;;;;;;;;;;x
+spell_eyesoftruth_desc;The Wind of Magic allows this character to see through lies of others.;;;;;;;;;;;;;x
+spell_blizzard;Under Spell: Blizzard;;;;;;;;;;;;;x
+spell_blizzard_desc;There is terrible blizzard of magical origin raging in this province.;;;;;;;;;;;;;x
+# battle magic modifiers
+battle_magic_light;White Wizard;;;;;;;;;;;;;x
+battle_magic_light_desc;This character uses White Wind of Magic to aid his troops in battle;;;;;;;;;;;;;x
+# chaos connected
+called_for_help_chaos;Called for help;;;;;;;;;;;;;x
+called_for_help_chaos_desc;This character called for help in defending against Chaos invasion.;;;;;;;;;;;;;x
+# province modifiers
+ravaged_by_chaos;Ravaged by Chaos;;;;;;;;;;;;;x
+ravaged_by_chaos_desc;These lands were target of a recent Chaos incursion, those who didn't escape from this defiled land were killed by Chaos host. This earth is soaked by blood and terrible creatures are haunting city streets in the light of day.;;;;;;;;;;;;;x
+resistance;Resistance against Chaos;;;;;;;;;;;;;x
+resistance_desc;There are still some unwilling to surrender to the forces of Chaos and rather intend to oppose them until the bitter end.;;;;;;;;;;;;;x
+dead_raised;Dead Raised;;;;;;;;;;;;;x
+dead_raised_desc;The whole legion of undead was raised in this province.;;;;;;;;;;;;;x
+depopulated;Depopulated;;;;;;;;;;;;;x
+depopulated_desc;The province was severely depopulated - it will take years for it to reach the former number of inhabitants.;;;;;;;;;;;;;x
+# CULTURE MODIFIERS
+###Special Units stuff;;;;;;;;;;x
+gun_volley_tactic;Gun Volley;;;;;;;;;;;;x
+magic_barrage_tactic;Magical Barrage;;;;;;;;;;;;x
+artillery_barrage_tactic;Artillery Barrage;;;;;;;;;;;;x
+artillery;Artillery;;;;;;;;;;;;x
+artillery_offensive;Artillery Offensive;;;;;;;;;;;;x
+artillery_defensive;Artillery Defensive;;;;;;;;;;;;x
+artillery_morale;Artillery Morale;;;;;;;;;;;;x
+###Culture Modifiers;;;;;;;;;;x
+default_culture_modifier;Default culture modifier;;;;;;;;;;;;x
+daemons_culture_modifier;Daemonic culture modifier;;;;;;;;;;;;x
+empire_culture_modifier;Imperial culture modifier;;;;;;;;;;;;x
+tilea_culture_modifier;Tilean culture modifier;;;;;;;;;;;;x
+estalia_culture_modifier;Estalian culture modifier;;;;;;;;;;;;x
+norsca_culture_modifier;Norscan culture modifier;;;;;;;;;;;;x
+gospodar_culture_modifier;Gospodar culture modifier;;;;;;;;;;;;x
+kurgan_culture_modifer;Kurgan culture modifier;;;;;;;;;;;;x
+hungs_culture_modifier;Hung culture modifier;;;;;;;;;;;;x
+kislevite_culture_modifier;Kislevite culture modifier;;;;;;;;;;;;x
+ungol_culture_modifier;Ungol culture modifier;;;;;;;;;;;;x
+dwarven_culture_modifier;Dwarf culture modifier;;;;;;;;;;;;x
+elven_culture_modifier;Elven culture modifier;;;;;;;;;;;;x
+goblin_culture_modifier;Goblin culture modifier;;;;;;;;;;;;x
+orc_culture_modifier;Orc culture modifier;;;;;;;;;;;;x
+###Variables;;;;;;;;;;x
+suspicion;Suspicion;;;;;;;;;;x
+doom_counter;Doom Counter;;;;;;;;;;x
+khornefavor;Khorne's favour;;;;;;;;;;x
+nurglefavor;Nurgle's favour;;;;;;;;;;x
+tzeentchfavor;Tzeentch's favour;;;;;;;;;;x
+slaaneshfavor;Slaanesh' favour;;;;;;;;;;x
+undividedfavor;Chaos Undivided favour;;;;;;;;;;x
+khornecultpower;Khorne's cult power;;;;;;;;;;x
+nurglecultpower;Nurgle's cult power;;;;;;;;;;x
+tzeentchcultpower;Tzeentch's cult power;;;;;;;;;;x
+slaaneshcultpower;Slaanesh' cult power;;;;;;;;;;x
+undividedcultpower;Chaos Undivided cult power;;;;;;;;;;x
+humanslaves;Human Slaves;;;;;;;;;;x
+dwarfslaves;Dwarf Slaves;;;;;;;;;;x
+elfslaves;Elf Slaves;;;;;;;;;;x
+duel_max_hp;Max HP;;;;;;;;;;x
+duel_att;Attack;;;;;;;;;;x
+duel_def;Defence;;;;;;;;;;x
+SW;Willpower;;;;;;;;;;x
+magic_points;Magic Points;;;;;;;;;;x
+Int;Intelligence;;;;;;;;;;x
+k4_roll;D4 Roll;;;;;;;;;;x
+k10_roll;D10 Roll;;;;;;;;;;x
+carstein_death_count;times Von Carstein ringbearer died;;;;;;;;;;x
+sleep_level;Slann's sleep level;;;;;;;;;;x
+hashut_favour_points;Hashut's favour;;;;;;;;;;x
+#CBS
+# Chaos subjugation
+CB_NAME_CHAOS_SUBJUGATION;Unholy Subjugation of [Title.GetBaseName];Assujettissement de [Title.GetBaseName];Unterwerfung von [Title.GetBaseName];;Subyugación de [Title.GetBaseName];;;;;;;;;x
+chaos_subjugation_desc;The strongest will rule!;;;;;;;;;;;;;x
+WAR_NAME_CHAOS_SUBJUGATION;$ORDER$$FIRST_ADJ$ Unholy Subjugation of $OTHER_TITLE$;$ORDER$$FIRST_ADJ$ assujettissement de $OTHER_TITLE$;$ORDER$$FIRST_ADJ$ Unterwerfung von $OTHER_TITLE$;;$ORDER$$FIRST_ADJ$ Subyugación de $OTHER_TITLE$;;;;;;;;;x
+#chaos invasion
+CB_NAME_CHAOS_INVASION;Chaos Invasion of [Title.GetBaseName];;;;;;;;;;;;;x
+chaos_invasion_desc;Starts a Chaos Invasion in the glory of Dark Gods. Only a true champion of Gods may receive help form other follower of Chaos.;;;;;;;;;;;;;x
+WAR_NAME_CHAOS_INVASION;$ORDER$$FIRST_ADJ$ Chaos Invasion of $OTHER_TITLE$;;;;;;;;;;;;;x 
+#
+# NEW TROOP TYPES 
+#
+magical_spells;Spell Points;;;;;;;;;;;;;x
+magical_spells_MORALE;<not applicable>;;;;;;;;;;;;;x
+magical_spells_DISCIPLINE;<not applicable>;;;;;;;;;;;;;x
+magical_spells_OFFENSIVE_FIRE;Spells Damage;;;;;;;;;;;;;x
+magical_spells_DEFENSIVE_FIRE;Spells Duration;;;;;;;;;;;;;x
+magical_spells_modifier;Combat Modifier boost to Spells;;;;;;;;;;;;;x
+magical_spells_offensive;Spells Offensive;;;;;;;;;;;;;x
+magical_spells_defensive;Spells Defensive;;;;;;;;;;;;;x
+#
+gunpowder;Gunners;;;;;;;;;;;;;x
+gunpowder_MORALE;Gunners Morale;;;;;;;;;;;;;x
+gunpowder_DISCIPLINE;Gunners Discipline;;;;;;;;;;;;;x
+gunpowder_modifier;Combat Modifier boost to Gunners Troops;;;;;;;;;;;;;x
+gunpowder_OFFENSIVE_FIRE;Gunners Damage;;;;;;;;;;;;;x
+gunpowder_DFENSIVE_FIRE;Gunners Defence;;;;;;;;;;;;;x
+gunpowder_defensive;Gunners Defensive;;;;;;;;;;;;;x
+gunpowder_offensive;Gunners Offensive;;;;;;;;;;;;;x

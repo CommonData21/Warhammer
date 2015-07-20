@@ -1,0 +1,16 @@
+# c_horod
+
+# County Title
+title = c_horod
+
+# Settlements
+max_settlements = 2
+
+b_horod = castle
+b_harganog = castle
+
+# Misc
+culture = naggarondi
+religion = cytharai
+
+#History

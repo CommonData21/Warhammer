@@ -1,0 +1,74 @@
+tall = {
+	birth = 50
+	inherit_chance = 33
+	
+	opposites =  {
+		dwarf
+	}
+
+	diplomacy = 1
+	customizer = no
+	combat_rating = 1
+	sex_appeal_opinion = 5
+	vassal_opinion = 5	
+}
+old_1 = {	#for averages
+	
+	opposites =  {
+		old_2	#for fair
+		old_3	#for pretty
+		old_4	#for beautiful
+	}
+
+	combat_rating = -1
+	same_opinion = 5
+	opposite_opinion = 5
+	sex_appeal_opinion = -5
+	customizer = no
+
+}
+old_2 = {	#for fair
+	
+	opposites =  {
+		old_1	
+		old_3	
+		old_4	
+	}
+
+	combat_rating = -1
+	same_opinion = 5
+	opposite_opinion = 5
+	sex_appeal_opinion = -15
+	customizer = no
+
+}
+old_3 = {	#for pretty
+	
+	opposites =  {
+		old_1	
+		old_2	
+		old_4	
+	}
+
+	combat_rating = -1
+	same_opinion = 5
+	opposite_opinion = 5
+	sex_appeal_opinion = -30
+	customizer = no
+
+}
+old_4 = {	#for beautiful
+	
+	opposites =  {
+		old_1	
+		old_2	
+		old_3	
+	}
+
+	combat_rating = -1
+	same_opinion = 5
+	opposite_opinion = 5
+	sex_appeal_opinion = -45
+	customizer = no
+
+}

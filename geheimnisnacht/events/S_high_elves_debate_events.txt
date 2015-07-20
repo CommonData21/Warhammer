@@ -1,0 +1,665 @@
+############################################
+namespace = asurdebate
+#asurdebate.11000 is challenged
+#asurdebate.11001 debate starts
+#asurdebate.11002 debate rejected 
+#asurdebate.11003 hidden event determining scopes
+#asurdebate.11004 hidden ping to opponent
+#asurdebate.11005 magic debate event (hidden)
+#asurdebate.11006 winner event
+#asurdebate.11007 loser event 
+#asurdebate.110075 remove isolationist
+#asurdebate.11008 remove interventionist
+#asurdebate.11009 no consensus reached - a new rivalry is born
+
+
+### Debates
+
+# Get challenged
+character_event = {
+	id = asurdebate.11000
+	desc = EVTDESC_asurdebate_11000
+	picture = GFX_evt_elf_pondering
+	border = GFX_event_normal_frame_war
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = { NOT = { has_character_modifier = recent_debate_timer } }
+			add_character_modifier = {
+				name = recent_debate_timer
+				hidden = yes
+				duration = 365
+			}
+		}
+		FROMFROM = {
+			if = {
+				limit = { NOT = { has_character_modifier = recent_debate_timer } }
+				add_character_modifier = {
+					name = recent_debate_timer
+					hidden = yes
+					duration = 365
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_asurdebate_11000
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 2
+				trait = gregarious
+			}
+			modifier = {
+				factor = 1.5
+				trait = proud
+			}
+			modifier = {
+				factor = 1.5
+				trait = patient
+			}
+			modifier = {
+				factor = 1.5
+				age = 800
+			}
+			modifier = {
+				factor = 0.75
+				trait = craven
+			}
+			modifier = {
+				factor = 0.75
+				religion = cult_of_pleasure	# Booring...
+			}
+		}
+		if = {
+			limit = { trait = shy }
+			random = {
+				chance = 20
+				remove_trait = shy
+			}
+		}
+		if = {
+			limit = { 
+				FROMFROM = { 
+					has_opinion_modifier = { who = ROOT modifier = grievously_offended }
+				}
+			}
+			FROMFROM = {
+				remove_opinion = { who = ROOT modifier = grievously_offended }
+			}
+		}
+		save_event_target_as = opponent
+		FROMFROM = {
+			save_event_target_as = challenger
+			hidden_tooltip = {
+				character_event = { id = asurdebate.11001 days = 3 }
+			}
+		}
+		clr_character_flag = punish_declining
+	}
+	option = {
+		name = EVTOPTB_asurdebate_11000
+		ai_chance = {
+			factor = 1
+		}
+		if = {
+			limit = { has_character_flag = punish_declining }
+			if = {
+				limit = { 
+					NOT = { trait = shy }
+					NOT = { trait = gregarious }
+				}
+				random = {
+					chance = 30
+					add_trait = shy
+				}
+			}
+			if = {
+				limit = {
+					trait = gregarious
+				}
+				remove_trait = gregarious
+			}
+			prestige = -50
+			add_character_modifier = {
+				name = declined_prestige_debate_timer
+				hidden = yes
+				duration = 1095
+			}
+		}
+		hidden_tooltip = {
+			remove_character_modifier = recent_debate_timer
+		}
+		FROMFROM = {
+			hidden_tooltip = {
+				remove_character_modifier = recent_debate_timer
+				opinion = {
+					modifier = opinion_fled_debate
+					who = ROOT
+					years = 100
+				}
+				character_event = { id = asurdebate.11002 days = 3 }
+			}
+		}
+		clr_character_flag = punish_declining
+	}
+}
+
+# Start the debate
+character_event = {
+	id = asurdebate.11001
+	is_triggered_only = yes
+	desc = EVTDESC_asurdebate_11001
+	picture = GFX_evt_elf_pondering
+	border = GFX_event_normal_frame_war
+	
+	option = {
+		name = EVTOPTA_asurdebate_11001
+		character_event = { id = asurdebate.11003 }
+	}
+}
+
+# debate rejected
+character_event = {
+	id = asurdebate.11002
+	is_triggered_only = yes
+	desc = EVTDESC_asurdebate_11002
+	picture = GFX_evt_elf_pondering
+	border = GFX_event_normal_frame_war
+	
+	option = {
+		name = EVTOPTA_asurdebate_11002
+	}
+}
+
+# Pop-in without dialogue to accept (event_target:opponent and event_target:challenger must be set)
+character_event = {
+	id = asurdebate.11003
+	is_triggered_only = yes
+	hide_window = yes
+	
+	immediate = {
+		if = {
+			limit = { NOT = { has_character_modifier = recent_debate_timer } }
+			add_character_modifier = {
+				name = recent_debate_timer
+				hidden = yes
+				duration = 365
+			}
+		}
+		event_target:opponent = {
+			if = {
+				limit = { NOT = { has_character_modifier = recent_debate_timer } }
+				add_character_modifier = {
+					name = recent_debate_timer
+					hidden = yes
+					duration = 365
+				}
+			}
+		}
+		opinion = {
+			modifier = opinion_fought_debate
+			who = event_target:opponent
+			years = 150
+		}
+		if = {
+			limit = {
+				has_character_modifier = recent_debate_victory
+			}
+			remove_character_modifier = recent_debate_victory
+		}
+		event_target:opponent = {			
+			opinion = {
+				modifier = opinion_fought_debate
+				who = ROOT
+				years = 150
+			}
+			hidden_tooltip = {
+				character_event = { id = asurdebate.11004 }
+			}
+		}
+	}
+}
+
+# Opponent bounce for scopes (hidden)
+character_event = {
+	id = asurdebate.11004
+	is_triggered_only = yes
+	hide_window = yes
+	
+	immediate = {
+		if = {
+			limit = {
+				has_character_modifier = recent_debate_victory
+			}
+			remove_character_modifier = recent_debate_victory
+		}
+		FROM = {
+			character_event = { id = asurdebate.11005 }
+		}
+	}
+}
+
+
+# debate (hidden)
+character_event = {
+	id = asurdebate.11005
+	is_triggered_only = yes
+	hide_window = yes
+	
+	immediate = {
+		random_list = {
+			75 = { # no consensus reached
+				modifier = {
+					OR = { attribute_diff = { character = FROM
+								attribute = diplomacy
+								value = 4 }
+						FROM = { attribute_diff = { character = ROOT
+								attribute = diplomacy
+								value = 4 } }
+					}
+					factor = 0.2
+				}
+				modifier = {
+					trait = wroth
+					FROM = {
+						trait = wroth
+					}
+					factor = 5
+				}
+				long_character_event = { id = asurdebate.11009 }
+				FROM = { long_character_event = { id = asurdebate.11009 } }
+			}
+			200 = { # challenger wins
+				modifier = {
+					FROM = {
+						 attribute_diff = { character = ROOT
+								attribute = diplomacy
+								value = 1 }
+					}
+					factor = 0.7
+				}
+				modifier = {
+					FROM = {
+						 attribute_diff = { character = ROOT
+								attribute = diplomacy
+								value = 2 }
+					}
+					factor = 0.7
+				}
+				modifier = {
+					FROM = {
+						 attribute_diff = { character = ROOT
+								attribute = diplomacy
+								value = 3 }
+					}
+					factor = 0.7
+				}
+				modifier = {
+					FROM = {
+						 attribute_diff = { character = ROOT
+								attribute = diplomacy
+								value = 4 }
+					}
+					factor = 0.7
+				}
+				modifier = {
+					FROM = {
+						 attribute_diff = { character = ROOT
+								attribute = diplomacy
+								value = 5 }
+					}
+					factor = 0.7
+				}
+				modifier = {
+					FROM = {
+						 attribute_diff = { character = ROOT
+								attribute = diplomacy
+								value = 6 }
+					}
+					factor = 0.7
+				}
+				modifier = {
+					FROM = {
+						 attribute_diff = { character = ROOT
+								attribute = diplomacy
+								value = 7 }
+					}
+					factor = 0.7
+				}
+				modifier = {
+					FROM = {
+						 attribute_diff = { character = ROOT
+								attribute = diplomacy
+								value = 8 }
+					}
+					factor = 0.7
+				}
+				modifier = {
+					FROM = {
+						 attribute_diff = { character = ROOT
+								attribute = diplomacy
+								value = 9 }
+					}
+					factor = 0.7
+				}
+				modifier = {
+					FROM = {
+						 attribute_diff = { character = ROOT
+								attribute = diplomacy
+								value = 10 }
+					}
+					factor = 0.7
+				}
+				### effects					
+						add_character_modifier = {
+							name = recent_debate_victory
+							months = 12
+						}
+						long_character_event = { id = asurdebate.11006 }
+			}
+			200 = { # opponent win
+				modifier = {
+					 attribute_diff = { character = ROOT
+								attribute = diplomacy
+								value = 1 }
+					factor = 0.7
+				}
+				modifier = {
+					 attribute_diff = { character = ROOT
+								attribute = diplomacy
+								value = 2 }
+					factor = 0.7
+				}
+				modifier = {
+					 attribute_diff = { character = ROOT
+								attribute = diplomacy
+								value = 3 }
+					factor = 0.7
+				}
+				modifier = {
+					 attribute_diff = { character = ROOT
+								attribute = diplomacy
+								value = 4 }
+					factor = 0.7
+				}
+				modifier = {
+					 attribute_diff = { character = ROOT
+								attribute = diplomacy
+								value = 5 }
+					factor = 0.7
+				}
+				modifier = {
+					 attribute_diff = { character = ROOT
+								attribute = diplomacy
+								value = 6 }
+					factor = 0.7
+				}
+				modifier = {
+					 attribute_diff = { character = ROOT
+								attribute = diplomacy
+								value = 7 }
+					factor = 0.7
+				}
+				modifier = {
+					 attribute_diff = { character = ROOT
+								attribute = diplomacy
+								value = 8 }
+					factor = 0.7
+				}
+				modifier = {
+					 attribute_diff = { character = ROOT
+								attribute = diplomacy
+								value = 9 }
+					factor = 0.7
+				}
+				modifier = {
+					 attribute_diff = { character = ROOT
+								attribute = diplomacy
+								value = 10 }
+					factor = 0.7
+				}
+				### effects
+						FROM = {
+							add_character_modifier = {
+								name = recent_debate_victory
+								months = 12
+								}
+							long_character_event = { id = asurdebate.11006  } 
+						}	#closesFROM
+			}	#closes200
+		}	#closesrandomlist
+	}	#closeseffect
+}
+
+# Winner event
+long_character_event = {
+	id = asurdebate.11006
+	is_triggered_only = yes
+	picture = GFX_evt_elf_pondering
+	border = GFX_event_long_frame_war
+	title = debate_title
+	
+	desc = {
+		text = EVTDESCA_asurdebate_11006 # Winning over opponent as an isolationist
+		trigger = {
+			trait = isolationist_elf
+			event_target:challenger = { character = ROOT }
+			}
+		}
+	desc = {
+		text = EVTDESCB_asurdebate_11006 # Winning over opponent as an interventionist
+		trigger = {
+			trait = interventionist_elf
+			event_target:challenger = { character = ROOT }
+			}
+		}
+	desc = {
+		text = EVTDESCC_asurdebate_11006 # Winning over challenger as an isolationist
+		trigger = {
+			trait = isolationist_elf
+			NOT = { event_target:challenger = { character = ROOT } }
+			}
+		}
+	desc = {
+		text = EVTDESCD_asurdebate_11006 # Winning over challenger as an interventionist
+		trigger = {
+			trait = interventionist_elf
+			NOT = { event_target:challenger = { character = ROOT } }
+			}
+		}
+	option = {
+		name = EVTOPTA_asurdebate_11006
+		ai_chance = { factor = 1 }
+		prestige = 50
+		piety = 50
+		if = {
+			limit = { event_target:challenger = { character = ROOT } }
+			hidden_tooltip = { event_target:opponent = { long_character_event = { id = asurdebate.11007 } } }
+		}		
+		if = {
+			limit = { NOT = { event_target:challenger = { character = ROOT } } }
+			hidden_tooltip = { event_target:challenger = { long_character_event = { id = asurdebate.11007 } } }
+			}
+	}
+}
+
+# Loser event
+long_character_event = {
+	id = asurdebate.11007
+	is_triggered_only = yes
+	picture = GFX_evt_elf_pondering
+	border = GFX_event_long_frame_war
+	title = debate_title
+	
+	desc = {
+		text = EVTDESCA_asurdebate_11007 # Losing as an isolationist
+		trigger = { trait = interventionist_elf }
+		}
+	desc = {
+		text = EVTDESCB_asurdebate_11007 # Losing as an interventionist
+		trigger = { trait = isolationist_elf }
+		}
+
+	
+	option = {
+		name = EVTOPTA_asurdebate_11007
+		prestige = -200
+		hidden_tooltip = { if = { limit = { trait = isolationist_elf } 
+					character_event = { id = asurdebate.11011 days = 1 } } 
+				if = { limit = { trait = interventionist_elf } 
+					character_event = { id = asurdebate.11008 days = 1 } } 
+				}
+		ai_chance = {
+			factor = 65
+			modifier = {
+				factor = 0.75
+				trait = wroth
+				}
+			modifier = {
+				factor = 0.75
+				trait = dim
+				}
+			modifier = {
+				factor = 0.75
+				trait = slow
+				}
+			modifier = {
+				factor = 0.75
+				trait = dumb
+				}
+			modifier = {
+				factor = 0.75
+				trait = idiot
+				}
+			modifier = {
+				factor = 0.5
+				trait = imbecile
+				}
+			modifier = {
+				factor = 0.75
+				trait = envious
+				}
+			modifier = {
+				factor = 0.75
+				trait = proud
+				}
+			modifier = {
+				factor = 0.75
+				trait = arbitrary
+				}
+			}
+	}
+	option = {
+		name = EVTOPTB_asurdebate_11007		#Refuse result
+		prestige = -500
+		add_character_modifier = {
+					name = refused_debate_result 
+					duration = 800
+					}
+		hidden_tooltip = { FROM = { character_event = { id = asurdebate.11010 days = 1 } } 
+				}
+		ai_chance = {
+			factor = 35
+			modifier = {
+				factor = 0.75
+				trait = patient
+				}
+			modifier = {
+				factor = 0.75
+				trait = smart
+				}
+			modifier = {
+				factor = 0.75
+				trait = bright
+				}
+			modifier = {
+				factor = 0.75
+				trait = quick
+				}
+			modifier = {
+				factor = 0.75
+				trait = brilliant
+				}
+			modifier = {
+				factor = 0.5
+				trait = genius
+				}
+			modifier = {
+				factor = 0.75
+				trait = honest
+				}
+			modifier = {
+				factor = 0.75
+				trait = humble
+				}
+			modifier = {
+				factor = 0.75
+				trait = just
+				}
+			}
+	}
+}
+
+character_event = {
+	id = asurdebate.11011
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = { remove_trait = isolationist_elf
+			add_trait = interventionist_elf
+			}
+}
+
+character_event = {
+	id = asurdebate.11008
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = { remove_trait = interventionist_elf
+			add_trait = isolationist_elf
+			}
+}
+
+# No consensus reached (challenger)
+long_character_event = {
+	id = asurdebate.11009
+	is_triggered_only = yes
+	picture = GFX_evt_elf_pondering
+	border = GFX_event_long_frame_war
+	title = debate_title
+	desc = {
+		text = EVTDESCA_asurdebate_11009 # Challenger desc
+		trigger = {
+			trait = isolationist_elf
+		}
+	}
+	desc = {
+		text = EVTDESCB_asurdebate_11009 # Opponent desc
+		trigger = {
+			trait = interventionist_elf
+		}
+	}
+
+	option = {
+		name = EVTOPTA_asurdebate_11009
+			if = { limit = { NOT = { num_of_rivals = 2 } } 
+			event_target:opponent = { event_target:challenger = { add_rival = PREV } } }
+	}
+}
+
+# The loser still clings to their claims
+character_event = {
+	id = asurdebate.11010 
+	is_triggered_only = yes
+	picture = GFX_evt_elf_pondering
+	border = GFX_event_normal_frame_war
+	desc = EVTDESC_asurdebate_11010
+
+	option = {
+		name = EVTOPTA_asurdebate_11010
+	}
+}

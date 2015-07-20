@@ -1,0 +1,16 @@
+# c_tlapeco
+
+# County Title
+title = c_tlapeco
+
+# Settlements
+max_settlements = 2
+
+b_tlapeco = tribal
+#b_nochmiz = city
+
+# Misc
+culture = lizardman
+religion = old_ones
+terrain = jungle
+#History

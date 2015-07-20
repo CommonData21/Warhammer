@@ -1,0 +1,16 @@
+# c_cavadaco
+
+# County Title
+title = c_cavadaco
+
+# Settlements
+max_settlements = 2
+
+b_cadavaco = tribal
+#b_tez_mezcoatl = city
+
+# Misc
+culture = lizardman
+religion = old_ones
+terrain = jungle
+#History

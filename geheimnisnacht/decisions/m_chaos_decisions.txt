@@ -1,0 +1,194 @@
+#decisions = {	
+#	find_Pet_Daemonette = {
+#		potential = {
+#			age = 16
+#			is_ruler = yes
+##			OR = {
+#				is_feudal = yes
+#				is_tribal = yes
+#			}
+#			prisoner = no
+#			religion = slaanesh
+#			NOT = { has_character_flag = looking_for_Pet_Daemonette}
+#			NOT = { has_character_flag = found_Pet_Daemonette}
+##			NOT = {
+#				any_courtier = {
+#					has_character_flag = Pet_Daemonette
+#				}
+#			}
+#		}
+#		allow = {
+#			prisoner = no
+#			wealth = 50
+#			piety = 150
+#			prestige = 200
+#				hidden_tooltip = {
+#				OR = {
+#				1 = { check_variable = { which = "doom_counter" value = 50  } }
+#					OR = {
+#					location = { province_id = 1667 }
+#					location = { province_id = 1665 }
+#					location = { province_id = 1668 }
+#					location = { province_id = 1682 }
+#					location = { province_id = 1670 }
+#					location = { province_id = 1672 }
+#					location = { province_id = 1671 }
+#					location = { province_id = 1673 }
+#					location = { province_id = 1663 }
+#					location = { province_id = 1675 }
+#					location = { province_id = 1411 }
+#					location = { province_id = 1657 }
+#					location = { province_id = 1410 }
+#					location = { province_id = 1674 }
+#					location = { province_id = 1676 }
+#					location = { province_id = 1666 }
+#					location = { province_id = 1669 }
+##					location = { province_id = 1654 }
+#					location = { province_id = 1655 }
+#					location = { province_id = 1656 }
+#					location = { province_id = 1678 }
+#					location = { province_id = 1680 }
+#					location = { province_id = 1681 }
+#					location = { province_id = 954 }
+#					location = { province_id = 1662 }
+#					location = { province_id = 1664 }
+#					location = { province_id = 1661 }
+#					location = { province_id = 1677 }
+#					location = { province_id = 1679 }
+#					location = { province_id = 1658 }
+#					location = { province_id = 1659 }
+#					location = { province_id = 1660 }
+#					location = { province_id = 1202 }
+#					location = { province_id = 1203 }
+#					location = { province_id = 1206 }
+#					location = { province_id = 1683 }
+#					location = { province_id = 952 }
+#					location = { province_id = 953 }
+#					location = { province_id = 1201 }
+#					location = { province_id = 1204 }
+#					location = { province_id = 1205 }
+#					location = { province_id = 1207 }
+##					location = { province_id = 1208 }
+#					location = { province_id = 1209 }
+#					location = { province_id = 1210 }
+#					location = { province_id = 1212 }
+#					location = { province_id = 1213 }
+#					location = { province_id = 1211 }
+#					location = { province_id = 1214 }
+#					location = { province_id = 1215 }
+#					location = { province_id = 1216 }
+#					location = { province_id = 1218 }
+#					location = { province_id = 1219 }
+#					location = { province_id = 1217 }
+#					location = { province_id = 1220 }
+#					location = { province_id = 1221 }
+#					location = { province_id = 1222 }
+#					location = { province_id = 1223 }
+#					location = { province_id = 1224 }
+#					location = { province_id = 1225 }
+#					location = { province_id = 1226 }
+#					location = { province_id = 1227 }
+#					location = { province_id = 1229 }
+##					location = { province_id = 1230 }
+#					location = { province_id = 1228 }
+#					location = { province_id = 1232 }
+#					location = { province_id = 1234 }
+#					location = { province_id = 1231 }
+#					location = { province_id = 1233 }
+#					location = { province_id = 1235 }
+#					location = { province_id = 1247 }
+#					location = { province_id = 390 }
+#					location = { province_id = 391 }
+#					location = { province_id = 392 }
+##					location = { province_id = 1236 }
+#					location = { province_id = 393 }
+#					location = { province_id = 396 }
+#					location = { province_id = 397 }
+#					location = { province_id = 1237 }
+#					location = { province_id = 400 }
+#					location = { province_id = 401 }
+#					location = { province_id = 402 }
+#					location = { province_id = 406 }
+#					location = { province_id = 409 }
+#					location = { province_id = 410 }
+#					location = { province_id = 412 }
+#					location = { province_id = 408 }
+#					location = { province_id = 411 }
+#					location = { province_id = 413 }
+#					location = { province_id = 1242 }
+#					location = { province_id = 403 }
+#					location = { province_id = 407 }
+#					location = { province_id = 395 }
+#					location = { province_id = 399 }
+##					location = { province_id = 404 }
+#					location = { province_id = 405 }
+#					location = { province_id = 1244 }
+#					location = { province_id = 394 }
+#					location = { province_id = 398 }
+#					location = { province_id = 951 }
+#					location = { province_id = 945 }
+#					location = { province_id = 946 }
+#					location = { province_id = 948 }
+#					location = { province_id = 949 }
+#					location = { province_id = 950 }
+#					location = { province_id = 956 }
+#					location = { province_id = 943 }
+#					location = { province_id = 944 }
+#					location = { province_id = 947 }
+#					location = { province_id = 1240 }
+#					location = { province_id = 1243 }
+#					location = { province_id = 1197 }
+#					location = { province_id = 1198 }
+#					location = { province_id = 1238 }
+#					location = { province_id = 1239 }
+#					location = { province_id = 1241 }
+#					location = { province_id = 1245 }
+#					location = { province_id = 1246 }
+#					location = { province_id = 1248 }
+#					location = { province_id = 1195 }
+#					location = { province_id = 1196 }
+#					location = { province_id = 1181 }
+#					location = { province_id = 1182 }
+#					location = { province_id = 1183 }
+#					location = { province_id = 1176 }
+#					location = { province_id = 1177 }
+#					location = { province_id = 1178 }
+#					location = { province_id = 1179 }
+#					location = { province_id = 1180 }
+#					location = { province_id = 1184 }
+#					location = { province_id = 1185 }
+#					location = { province_id = 1187 }
+#					location = { province_id = 1189 }
+#					location = { province_id = 1190 }
+#					location = { province_id = 1192 }
+#					location = { province_id = 1188 }
+#					location = { province_id = 1193 }
+#					location = { province_id = 1194 }
+#					}	
+#				}
+#			}
+#		}
+#		effect = {
+#			wealth = -50
+#			piety = -150
+#			prestige = -200
+#			set_character_flag = looking_for_Pet_Daemonette
+#			character_event = { id = slaaneshbless.0 }
+#		}
+#		revoke_allowed = {
+#			always = no
+#		}
+#		ai_will_do = {
+#			factor = 1
+#			
+#			modifier = {
+#				factor = 0
+#				trait = cynical
+#			}
+#			modifier = {
+#				factor = 0
+#				NOT = { wealth = 200 }
+#			}
+#		}
+#	}
+#}

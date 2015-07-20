@@ -1,0 +1,20 @@
+# c_tor_dynal
+
+# County Title
+title = c_tor_dynal
+
+# Settlements
+max_settlements = 3
+
+b_tor_dynal = castle
+#b_orchil = city
+#b_maltharane = temple
+
+# Misc
+culture = cothiq
+religion = cadai
+
+#History
+1.1.1={ 
+b_tor_dynal = ca_cothique
+}

@@ -1,0 +1,15 @@
+# c_nin
+
+# County Title
+title = c_nin
+
+# Settlements
+max_settlements = 1
+
+b_nin = tribal
+
+# Misc
+culture = lizardman
+religion = old_ones
+terrain = jungle
+#History

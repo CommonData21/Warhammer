@@ -1,0 +1,1047 @@
+# IMPERIAL PROVINCES
+k_averland = {	
+	old_imperial = "Brigundia" }
+k_hochland = {	
+	old_imperial = "Cherusen" }
+k_ostermark = {	
+	old_imperial = "Ostagoth" }
+k_ostland = {	
+	old_imperial = "Udose" }
+k_reikland = {	
+	old_imperial = "Unberogen" }
+k_talabecland = {
+	old_imperial = "Taleuten" }
+k_westerland = {
+	old_imperial = "Endal" }
+k_wissenland = {
+	old_imperial = "Menogoth" }
+k_sylvania = {	
+	old_imperial = "Fennone" }
+k_stirland = {	
+	old_imperial = "Asoborn" }
+k_middenland = {
+	old_imperial = "Teutogen" }
+
+# DWARF NAMES
+c_kylklava_valley = {
+	dwarf_norse = "Kylkava Kadrin"
+	dwarf_main = "Kylkava Kadrin"
+	dwarf_chaos = "Kylkava Kadrin"
+}
+c_silver_pinnacle = {
+	dwarf_norse = "Kazad-Azril-Karak"
+	dwarf_main = "Kazad-Azril-Karak"
+	dwarf_chaos = "Kazad-Azril-Karak"
+}
+c_seep_gore = {
+	dwarf_norse = "Zan Umgak"
+	dwarf_main = "Zan Umgak"
+	dwarf_chaos = "Zan Umgak"
+}
+b_silverspear_hold = {
+	dwarf_norse = "Karak Agrilwutraz"
+	dwarf_main = "Karak Agrilwutraz"
+	dwarf_chaos = "Karak Agrilwutraz"
+}
+b_silverspear_spire = {
+	dwarf_norse = "Und Agrilwutraz"
+	dwarf_main = "Und Agrilwutraz"
+	dwarf_chaos = "Und Agrilwutraz"
+}
+d_peak_pass = {
+	dwarf_norse = "Kadrin Gorm"
+	dwarf_main = "Kadrin Gorm"
+	dwarf_chaos = "Kadrin Gorm"
+}
+c_mount_silverspear = {
+	dwarf_norse = "Karag Agrilwutraz"
+	dwarf_main = "Karag Agrilwutraz"
+	dwarf_chaos = "Karag Agrilwutraz"
+}
+k_the_vaults = {
+	dwarf_norse = "Irkubar"
+	dwarf_main = "Irkubar"
+	dwarf_chaos = "Irkubar"
+}
+c_silver_pass = {
+	dwarf_norse = "Kadrin Azril"
+	dwarf_main = "Kadrin Azril"
+	dwarf_chaos = "Kadrin Azril"
+}
+c_thunder_mountain = {
+	dwarf_norse = "Karag Dron"
+	dwarf_main = "Karag Dron"
+	dwarf_chaos = "Karag Dron"
+}
+c_cragmere = {
+	dwarf_norse = "Karak Varn"
+	dwarf_main = "Karak Varn"
+	dwarf_chaos = "Karak Varn"
+}
+b_morghaarstein = {
+	dwarf_norse = "Barak Morghaar"
+	dwarf_main = "Barak Morghaar"
+	dwarf_chaos = "Barak Morghaar"
+}
+k_everpeak = {
+	dwarf_norse = "Karaz Ankor"
+	dwarf_main = "Karaz Ankor"
+	dwarf_chaos = "Karaz Ankor"
+}
+d_everpeak = {
+	dwarf_norse = "Karaz-a-Karak"
+	dwarf_main = "Karaz-a-Karak"
+	dwarf_chaos = "Karaz-a-Karak"
+}
+c_everpeak = {
+	dwarf_norse = "Karaz-a-Karak"
+	dwarf_main = "Karaz-a-Karak"
+	dwarf_chaos = "Karaz-a-Karak"
+}
+b_everpeak = {
+	dwarf_norse = "Karaz-a-Karak"
+	dwarf_main = "Karaz-a-Karak"
+	dwarf_chaos = "Karaz-a-Karak"
+}
+c_black_fire_pass = {
+	dwarf_norse = "Haz-Drazh Kadrin"
+	dwarf_main = "Haz-Drazh Kadrin"
+	dwarf_chaos = "Haz-Drazh Kadrin"
+}
+c_misty_mountain = {
+	dwarf_norse = "Karag Shathur"
+	dwarf_main = "Karag Shathur"
+	dwarf_chaos = "Karag Shathur"
+}
+c_slayer_keep = {
+	dwarf_norse = "Karak Kadrin"
+	dwarf_main = "Karak Kadrin"
+	dwarf_chaos = "Karak Kadrin"
+}
+c_west_rock_mountain = {
+	dwarf_norse = "Karag Yar-Duraz"
+	dwarf_main = "Karag Yar-Duraz"
+	dwarf_chaos = "Karag Yar-Duraz"
+}
+c_black_crag = {
+	dwarf_norse = "Karak Drahz"
+	dwarf_main = "Karak Drahz"
+	dwarf_chaos = "Karak Drahz"
+}
+b_drageberg = {
+	dwarf_norse = "Karak Drage"
+	dwarf_main = "Karak Drage"
+	dwarf_chaos = "Karak Drage"
+}
+c_morghaar = {
+	dwarf_norse = "Karak Morghaar"
+	dwarf_main = "Karak Morghaar"
+	dwarf_chaos = "Karak Morghaar"
+}
+c_mount_bloodhorn = {
+	dwarf_norse = "Kazad Zanhirn"
+	dwarf_main = "Kazad Zanhirn"
+	dwarf_chaos = "Kazad Zanhirn"
+}
+c_blindr_valley = {
+	dwarf_norse = "Blindr Kadrin"
+	dwarf_main = "Blindr Kadrin"
+	dwarf_chaos = "Blindr Kadrin"
+}
+d_death_pass = {
+	dwarf_norse = Kadazgul
+	dwarf_main = Kadazgul
+	dwarf_chaos = Kadazgul
+}
+c_horn_hold = {
+	dwarf_norse = "Karak Hirn"
+	dwarf_main = "Karak Hirn"
+	dwarf_chaos = "Karak Hirn"
+}
+c_ikrumal_ravine = {
+	dwarf_norse = "Ikrumal Kadrin"
+	dwarf_main = "Ikrumal Kadrin"
+	dwarf_chaos = "Ikrumal Kadrin"
+}
+c_daemons_stump = {
+	dwarf_norse = "Zharrakhaos"
+	dwarf_main = "Zharrakhaos"
+	dwarf_chaos = "Zharrakhaos"
+}
+c_mount_squighorn = {
+	dwarf_norse = Squigoruz
+	dwarf_main = Squigoruz
+	dwarf_chaos = Squigoruz
+}
+c_drageberg = {
+	dwarf_norse = "Karak Drage"
+	dwarf_main = "Karak Drage"
+	dwarf_chaos = "Karak Drage"
+}
+b_bloodhorn_citadel = {
+	dwarf_norse = "Khazid Zanhirn"
+	dwarf_main = "Khazid Zanhirn"
+	dwarf_chaos = "Khazid Zanhirn"
+}
+b_misty_keep = {
+	dwarf_norse = "Migdhal Shathur"
+	dwarf_main = "Migdhal Shathur"
+	dwarf_chaos = "Migdhal Shathur"
+}
+c_copper_mountain = {
+	dwarf_norse = "Karak Izor"
+	dwarf_main = "Karak Izor"
+	dwarf_chaos = "Karak Izor"
+}
+c_taldursfjord = {
+	dwarf_norse = "Kraka Dorden"
+	dwarf_main = "Kraka Dorden"
+	dwarf_chaos = "Kraka Dorden"
+}
+c_pigbarter = {
+	dwarf_norse = "Urogash"
+	dwarf_main = "Urogash"
+	dwarf_chaos = "Urogash"
+}
+c_red_eye_mountain = {
+	dwarf_norse = "Karak Ungor"
+	dwarf_main = "Karak Ungor"
+	dwarf_chaos = "Karak Ungor"
+}
+k_black_mountains = {
+	dwarf_norse = "Haz Karag"
+	dwarf_main = "Haz Karag"
+	dwarf_chaos = "Haz Karag"
+}
+b_pigbarter = {
+	dwarf_norse = "Urogash"
+	dwarf_main = "Urogash"
+	dwarf_chaos = "Urogash"
+}
+c_fire_mountain = {
+	dwarf_norse = "Karag Haraz"
+	dwarf_main = "Karag Haraz"
+	dwarf_chaos = "Karag Haraz"
+}
+c_grom_peak = {
+	dwarf_norse = "Karak Grom"
+	dwarf_main = "Karak Grom"
+	dwarf_chaos = "Karak Grom"
+}
+c_red_cloud_mountain = {
+	dwarf_norse = "Karag Orrud"
+	dwarf_main = "Karag Orrud"
+	dwarf_chaos = "Karag Orrud"
+}
+d_mad_dog_pass = {
+	dwarf_norse = "Varag Kadrin"
+	dwarf_main = "Varag Kadrin"
+	dwarf_chaos = "Varag Kadrin"
+}
+c_mount_karlnir = {
+	dwarf_norse = "Karak Karlnir"
+	dwarf_main = "Karak Karlnir"
+	dwarf_chaos = "Karak Karlnir"
+}
+b_daemons_stump = {
+	dwarf_norse = "Zharrakhaos"
+	dwarf_main = "Zharrakhaos"
+	dwarf_chaos = "Zharrakhaos"
+}
+c_mount_gunbad = {
+	dwarf_norse = "Karak Gunbad"
+	dwarf_main = "Karak Gunbad"
+	dwarf_chaos = "Karak Gunbad"
+}
+
+####
+
+d_the_serpents = {
+	lizardman = "Coatlnenetz"
+	lizardman_lost = "Coatlnenetz"
+}
+
+c_fuming_serpent = {
+	lizardman = "Coatlpoctli"
+	lizardman_lost = "Coatlpoctli"
+}
+
+c_spitting_serpent = {
+	lizardman = "Coatlchicha"
+	lizardman_lost = "Coatlchicha"
+}
+
+c_sulpheret_islands = {
+	lizardman = "Xoquializtli"
+	lizardman_lost = "Xoquializtli"
+}
+
+k_dragon_isles = {
+	lizardman = "Drakkolaz"
+	lizardman_lost = "Drakkolaz"
+}
+
+####
+d_the_czegniks = {
+	baersonling = "Goromadnyrond"
+	graeling = "Goromadnyrond"
+	sarl = "Goromadnyrond"
+	aesling = "Goromadnyrond"
+	bjornling = "Goromadnyrond"
+	varg = "Goromadnyrond"
+	fjarmann = "Goromadnyrond"
+	skaeling = "Goromadnyrond"
+}
+c_the_czegniks = {
+	baersonling = "Goromadnyrond"
+	graeling = "Goromadnyrond"
+	sarl = "Goromadnyrond"
+	aesling = "Goromadnyrond"
+	bjornling = "Goromadnyrond"
+	varg = "Goromadnyrond"
+	fjarmann = "Goromadnyrond"
+	skaeling = "Goromadnyrond"
+}
+c_flainaut = {
+	ostermarker = "Neuötting"
+	middenlander = "Neuötting"
+	sylvanian = "Neuötting"
+	wissenlander = "Neuötting"
+	mootlander = "Neuötting"
+	westerlander = "Neuötting"
+	averlander = "Neuötting"
+	nordlander = "Neuötting"
+	reiklander = "Neuötting"
+	sollander = "Neuötting"
+	drakwalder = "Neuötting"
+	hochlander = "Neuötting"
+	ostlander = "Neuötting"
+	neueslander = "Neuötting"
+	talabeclander = "Neuötting"
+	stirlander = "Neuötting"
+}
+d_dypvann = {
+	ropsmann = "Groenelv"
+	kyazak = "Groenelv"
+	gospodar = "Groenelv"
+	ungol = "Groenelv"
+	kislevite = "Groenelv"
+}
+b_brasov = {
+	nortagnese = "Sainte Thérèse"
+	bourgon = "Sainte Thérèse"
+	armoric = "Sainte Thérèse"
+	gascon = "Sainte Thérèse"
+	breton = "Sainte Thérèse"
+	mousillonian = "Sainte Thérèse"
+	gisoren = "Sainte Thérèse"
+	marcheur = "Sainte Thérèse"
+	carcassian = "Sainte Thérèse"
+}
+b_somjek = {
+	nortagnese = "Chabourg"
+	bourgon = "Chabourg"
+	armoric = "Chabourg"
+	gascon = "Chabourg"
+	breton = "Chabourg"
+	mousillonian = "Chabourg"
+	gisoren = "Chabourg"
+	marcheur = "Chabourg"
+	carcassian = "Chabourg"
+}
+b_harenskarpel = {
+	nortagnese = "Carpel"
+	bourgon = "Carpel"
+	armoric = "Carpel"
+	gascon = "Carpel"
+	breton = "Carpel"
+	mousillonian = "Carpel"
+	gisoren = "Carpel"
+	carcassian = "Carpel"
+}
+k_zorn_uzkul = {
+	ropsmann = "Smertimest"
+	hastling = "Smertimest"
+	kvellig = "Smertimest"
+	khazag = "Smertimest"
+	kislevite = "Smertimest"
+	gharhar = "Smertimest"
+	yusak = "Smertimest"
+	kyazak = "Smertimest"
+	dolgan = "Smertimest"
+	gospodar = "Smertimest"
+	aghol = "Smertimest"
+	tokmar = "Smertimest"
+	ungol = "Smertimest"
+	tahmak = "Smertimest"
+	kul = "Smertimest"
+}
+b_arnalos = {
+	nortagnese = "Dijonville"
+	bourgon = "Dijonville"
+	armoric = "Dijonville"
+	gascon = "Dijonville"
+	breton = "Dijonville"
+	mousillonian = "Dijonville"
+	gisoren = "Dijonville"
+	marcheur = "Dijonville"
+	carcassian = "Dijonville"
+}
+c_almshoven = {
+	nortagnese = "Alsauvre"
+	bourgon = "Alsauvre"
+	armoric = "Alsauvre"
+	gascon = "Alsauvre"
+	breton = "Alsauvre"
+	mousillonian = "Alsauvre"
+	gisoren = "Alsauvre"
+	carcassian = "Alsauvre"
+}
+c_dornhan = {
+	nortagnese = "Donjon"
+	bourgon = "Donjon"
+	armoric = "Donjon"
+	gascon = "Donjon"
+	breton = "Donjon"
+	mousillonian = "Donjon"
+	gisoren = "Donjon"
+	carcassian = "Donjon"
+}
+d_noordhaven = {
+	nortagnese = "Nedellande"
+	bourgon = "Nedellande"
+	armoric = "Nedellande"
+	gascon = "Nedellande"
+	breton = "Nedellande"
+	mousillonian = "Nedellande"
+	gisoren = "Nedellande"
+	carcassian = "Nedellande"
+}
+b_aarnau = {
+	nortagnese = "Arneau"
+	bourgon = "Arneau"
+	armoric = "Arneau"
+	gascon = "Arneau"
+	breton = "Arneau"
+	mousillonian = "Arneau"
+	gisoren = "Arneau"
+	carcassian = "Arneau"
+}
+c_matorca = {
+	nortagnese = "Beauport"
+	bourgon = "Beauport"
+	armoric = "Beauport"
+	gascon = "Beauport"
+	breton = "Beauport"
+	mousillonian = "Beauport"
+	gisoren = "Beauport"
+	marcheur = "Beauport"
+	carcassian = "Beauport"
+}
+b_vardanos = {
+	nortagnese = "Esterel"
+	bourgon = "Esterel"
+	armoric = "Esterel"
+	gascon = "Esterel"
+	breton = "Esterel"
+	mousillonian = "Esterel"
+	gisoren = "Esterel"
+	marcheur = "Esterel"
+	carcassian = "Esterel"
+}
+c_zandt = {
+	nortagnese = "Zande"
+	bourgon = "Zande"
+	armoric = "Zande"
+	gascon = "Zande"
+	breton = "Zande"
+	mousillonian = "Zande"
+	gisoren = "Zande"
+	carcassian = "Zande"
+}
+c_vardanos = {
+	nortagnese = "Esterel"
+	bourgon = "Esterel"
+	armoric = "Esterel"
+	gascon = "Esterel"
+	breton = "Esterel"
+	mousillonian = "Esterel"
+	gisoren = "Esterel"
+	marcheur = "Esterel"
+	carcassian = "Esterel"
+}
+c_brasov = {
+	nortagnese = "Sainte Thérèse"
+	bourgon = "Sainte Thérèse"
+	armoric = "Sainte Thérèse"
+	gascon = "Sainte Thérèse"
+	breton = "Sainte Thérèse"
+	mousillonian = "Sainte Thérèse"
+	gisoren = "Sainte Thérèse"
+	marcheur = "Sainte Thérèse"
+	carcassian = "Sainte Thérèse"
+}
+c_brabois = {
+	ostermarker = "Teltow"
+	middenlander = "Teltow"
+	sylvanian = "Teltow"
+	wissenlander = "Teltow"
+	mootlander = "Teltow"
+	westerlander = "Teltow"
+	averlander = "Teltow"
+	nordlander = "Teltow"
+	reiklander = "Teltow"
+	sollander = "Teltow"
+	drakwalder = "Teltow"
+	hochlander = "Teltow"
+	ostlander = "Teltow"
+	neueslander = "Teltow"
+	talabeclander = "Teltow"
+	stirlander = "Teltow"
+}
+d_unzkulak = {
+	ropsmann = "Ossia"
+	dolgan = "Ossia"
+	kyazak = "Ossia"
+	gospodar = "Ossia"
+	ungol = "Ossia"
+	kislevite = "Ossia"
+}
+b_cabanal = {
+	nortagnese = "Charlesbourg"
+	bourgon = "Charlesbourg"
+	armoric = "Charlesbourg"
+	gascon = "Charlesbourg"
+	breton = "Charlesbourg"
+	mousillonian = "Charlesbourg"
+	gisoren = "Charlesbourg"
+	marcheur = "Charlesbourg"
+	carcassian = "Charlesbourg"
+}
+b_fauligmere = {
+	nortagnese = "Faugilmère"
+	bourgon = "Faugilmère"
+	armoric = "Faugilmère"
+	gascon = "Faugilmère"
+	breton = "Faugilmère"
+	mousillonian = "Faugilmère"
+	gisoren = "Faugilmère"
+	carcassian = "Faugilmère"
+}
+d_vorbergland = {
+	bourbon = "La Morsure"
+	nortagnese = "La Morsure"
+	armoric = "La Morsure"
+	gascon = "La Morsure"
+	breton = "La Morsure"
+	mousillonian = "La Morsure"
+	gisoren = "La Morsure"
+	marcheur = "La Morsure"
+	carcassian = "La Morsure"
+}
+d_korv_ozero = {
+	baersonling = Ladogash
+	graeling = Ladogash
+	sarl = Ladogash
+	aesling = Ladogash
+	bjornling = Ladogash
+	varg = Ladogash
+	fjarmann = Lagodash
+	skaeling = Ladogash
+}
+c_manaanspoort = {
+	nortagnese = "Grau de Manne"
+	bourgon = "Grau de Manne"
+	armoric = "Grau de Manne"
+	gascon = "Grau de Manne"
+	breton = "Grau de Manne"
+	mousillonian = "Grau de Manne"
+	gisoren = "Grau de Manne"
+	carcassian = "Grau de Manne"
+}
+c_somjek = {
+	nortagnese = "Chabourg"
+	bourgon = "Chabourg"
+	armoric = "Chabourg"
+	gascon = "Chabourg"
+	breton = "Chabourg"
+	mousillonian = "Chabourg"
+	gisoren = "Chabourg"
+	marcheur = "Chabourg"
+	carcassian = "Chabourg"
+}
+b_dornhan = {
+	nortagnese = "Donjon"
+	bourgon = "Donjon"
+	armoric = "Donjon"
+	gascon = "Donjon"
+	breton = "Donjon"
+	mousillonian = "Donjon"
+	gisoren = "Donjon"
+	carcassian = "Donjon"
+}
+c_buuren = {
+	nortagnese = "Bouran"
+	bourgon = "Bouran"
+	armoric = "Bouran"
+	gascon = "Bouran"
+	breton = "Bouran"
+	mousillonian = "Bouran"
+	gisoren = "Bouran"
+	carcassian = "Bouran"
+}
+b_harskamp = {
+	nortagnese = "Archamp"
+	bourgon = "Archamp"
+	armoric = "Archamp"
+	gascon = "Archamp"
+	breton = "Archamp"
+	mousillonian = "Archamp"
+	gisoren = "Archamp"
+	carcassian = "Archamp"
+}
+b_neveutin = {
+	ostermarker = "Neuötting"
+	middenlander = "Neuötting"
+	sylvanian = "Neuötting"
+	wissenlander = "Neuötting"
+	mootlander = "Neuötting"
+	westerlander = "Neuötting"
+	averlander = "Neuötting"
+	nordlander = "Neuötting"
+	reiklander = "Neuötting"
+	sollander = "Neuötting"
+	drakwalder = "Neuötting"
+	hochlander = "Neuötting"
+	ostlander = "Neuötting"
+	neueslander = "Neuötting"
+	talabeclander = "Neuötting"
+	stirlander = "Neuötting"
+}
+c_zenres = {
+	nortagnese = "Saint Pierre"
+	bourgon = "Saint Pierre"
+	armoric = "Saint Pierre"
+	gascon = "Saint Pierre"
+	breton = "Saint Pierre"
+	mousillonian = "Saint Pierre"
+	gisoren = "Saint Pierre"
+	marcheur = "Saint Pierre"
+	carcassian = "Saint Pierre"
+}
+b_noordbeemster = {
+	nortagnese = "Normestre"
+	bourgon = "Normestre"
+	armoric = "Normestre"
+	gascon = "Normestre"
+	breton = "Normestre"
+	mousillonian = "Normestre"
+	gisoren = "Normestre"
+	carcassian = "Normestre"
+}
+d_felskagi = {
+	baersonling = "Skargi"
+	graeling = "Skargi"
+	sarl = "Skargi"
+	aesling = "Skargi"
+	bjornling = "Skargi"
+	varg = "Skargi"
+	fjarmann = "Skargi"
+	skaeling = "Skargi"
+}
+c_gotland = {
+	baersonling = Ulfen
+	graeling = Ulfen
+	sarl = Ulfen
+	aesling = Ulfen
+	bjornling = Ulfen
+	varg = Ulfen
+	fjarmann = Ulfen
+	skaeling = Ulfen
+}
+b_mentreda = {
+	nortagnese = "Château-Herriot"
+	bourgon = "Château-Herriot"
+	armoric = "Château-Herriot"
+	gascon = "Château-Herriot"
+	breton = "Château-Herriot"
+	mousillonian = "Château-Herriot"
+	gisoren = "Château-Herriot"
+	marcheur = "Château-Herriot"
+	carcassian = "Château-Herriot"
+}
+b_talteuille = {
+	ostermarker = "Teltow"
+	middenlander = "Teltow"
+	sylvanian = "Teltow"
+	wissenlander = "Teltow"
+	mootlander = "Teltow"
+	westerlander = "Teltow"
+	averlander = "Teltow"
+	nordlander = "Teltow"
+	reiklander = "Teltow"
+	sollander = "Teltow"
+	drakwalder = "Teltow"
+	hochlander = "Teltow"
+	ostlander = "Teltow"
+	neueslander = "Teltow"
+	talabeclander = "Teltow"
+	stirlander = "Teltow"
+}
+c_moslac = {
+	nortagnese = "Charleroi"
+	bourgon = "Charleroi"
+	armoric = "Charleroi"
+	gascon = "Charleroi"
+	breton = "Charleroi"
+	mousillonian = "Charleroi"
+	gisoren = "Charleroi"
+	marcheur = "Charleroi"
+	carcassian = "Charleroi"
+}
+b_reric = {
+	ostermarker = "Rerik"
+	middenlander = "Rerik"
+	sylvanian = "Rerik"
+	wissenlander = "Rerik"
+	mootlander = "Rerik"
+	westerlander = "Rerik"
+	averlander = "Rerik"
+	nordlander = "Rerik"
+	reiklander = "Rerik"
+	sollander = "Rerik"
+	drakwalder = "Rerik"
+	hochlander = "Rerik"
+	ostlander = "Rerik"
+	neueslander = "Rerik"
+	talabeclander = "Rerik"
+	stirlander = "Rerik"
+}
+d_fauligmere = {
+	nortagnese = "Faugilmère"
+	bourgon = "Faugilmère"
+	armoric = "Faugilmère"
+	gascon = "Faugilmère"
+	breton = "Faugilmère"
+	mousillonian = "Faugilmère"
+	gisoren = "Faugilmère"
+	carcassian = "Faugilmère"
+}
+c_velsen = {
+	nortagnese = "Valse"
+	bourgon = "Valse"
+	armoric = "Valse"
+	gascon = "Valse"
+	breton = "Valse"
+	mousillonian = "Valse"
+	gisoren = "Valse"
+	carcassian = "Valse"
+}
+b_zandt = {
+	nortagnese = "Zande"
+	bourgon = "Zande"
+	armoric = "Zande"
+	gascon = "Zande"
+	breton = "Zande"
+	mousillonian = "Zande"
+	gisoren = "Zande"
+	carcassian = "Zande"
+}
+d_heideland = {
+	nortagnese = "Landes"
+	bourgon = "Landes"
+	armoric = "Landes"
+	gascon = "Landes"
+	breton = "Landes"
+	mousillonian = "Landes"
+	gisoren = "Landes"
+	carcassian = "Landes"
+}
+b_klessen = {
+	nortagnese = "Glasse"
+	bourgon = "Glasse"
+	armoric = "Glasse"
+	gascon = "Glasse"
+	breton = "Glasse"
+	mousillonian = "Glasse"
+	gisoren = "Glasse"
+	carcassian = "Glasse"
+}
+d_kikkerlandje = {
+	nortagnese = "Batave"
+	bourgon = "Batave"
+	armoric = "Batave"
+	gascon = "Batave"
+	breton = "Batave"
+	mousillonian = "Batave"
+	gisoren = "Batave"
+	carcassian = "Batave"
+}
+c_harenskarpel = {
+	nortagnese = "Carpel"
+	bourgon = "Carpel"
+	armoric = "Carpel"
+	gascon = "Carpel"
+	breton = "Carpel"
+	mousillonian = "Carpel"
+	gisoren = "Carpel"
+	carcassian = "Carpel"
+}
+b_ankeeven = {
+	nortagnese = "Arsenquère"
+	bourgon = "Arsenquère"
+	armoric = "Arsenquère"
+	gascon = "Arsenquère"
+	breton = "Arsenquère"
+	mousillonian = "Arsenquère"
+	gisoren = "Arsenquère"
+	carcassian = "Arsenquère"
+}
+k_nordland = {
+	baersonling = "Norðanland"
+	graeling = "Norðanland"
+	sarl = "Norðanland"
+	aesling = "Norðanland"
+	bjornling = "Norðanland"
+	varg = "Norðanland"
+	fjarmann = "Norðanland"
+	skaeling = "Norðanland"
+	old_imperial = "Jutone"
+}
+b_broekwater = {
+	nortagnese = "Aix-la-Bracque"
+	bourgon = "Aix-la-Bracque"
+	armoric = "Aix-la-Bracque"
+	gascon = "Aix-la-Bracque"
+	breton = "Aix-la-Bracque"
+	mousillonian = "Aix-la-Bracque"
+	gisoren = "Aix-la-Bracque"
+	carcassian = "Aix-la-Bracque"
+}
+c_ankeeven = {
+	nortagnese = "Arsenquère"
+	bourgon = "Arsenquère"
+	armoric = "Arsenquère"
+	gascon = "Arsenquère"
+	breton = "Arsenquère"
+	mousillonian = "Arsenquère"
+	gisoren = "Arsenquère"
+	carcassian = "Arsenquère"
+}
+b_velsen = {
+	nortagnese = "Valse"
+	bourgon = "Valse"
+	armoric = "Valse"
+	gascon = "Valse"
+	breton = "Valse"
+	mousillonian = "Valse"
+	gisoren = "Valse"
+	carcassian = "Valse"
+}
+b_orsinge = {
+	ostermarker = "Usingen"
+	middenlander = "Usingen"
+	sylvanian = "Usingen"
+	wissenlander = "Usingen"
+	mootlander = "Usingen"
+	westerlander = "Usingen"
+	averlander = "Usingen"
+	nordlander = "Usingen"
+	reiklander = "Usingen"
+	sollander = "Usingen"
+	drakwalder = "Usingen"
+	hochlander = "Usingen"
+	ostlander = "Usingen"
+	neueslander = "Usingen"
+	talabeclander = "Usingen"
+	stirlander = "Usingen"
+}
+c_arnalos = {
+	nortagnese = "Dijonville"
+	bourgon = "Dijonville"
+	armoric = "Dijonville"
+	gascon = "Dijonville"
+	breton = "Dijonville"
+	mousillonian = "Dijonville"
+	gisoren = "Dijonville"
+	marcheur = "Dijonville"
+	carcassian = "Dijonville"
+}
+d_zorn_uzkul = {
+	ropsmann = Groznay
+	dolgan = Groznay
+	kyazak = Groznay
+	gospodar = Groznay
+	ungol = Groznay
+	kislevite = Groznay
+}
+c_belyavorota_pass = {
+	ropsmann = "Belyavorota Pass"
+	kyazak = "Belyavorota Pass"
+	gospodar = "Belyavorota Pass"
+	ungol = "Belyavorota Pass"
+	kislevite = "Belyavorota Pass"
+}
+b_almshoven = {
+	nortagnese = "Alsauvre"
+	bourgon = "Alsauvre"
+	armoric = "Alsauvre"
+	gascon = "Alsauvre"
+	breton = "Alsauvre"
+	mousillonian = "Alsauvre"
+	gisoren = "Alsauvre"
+	carcassian = "Alsauvre"
+}
+c_klessen = {
+	nortagnese = "Glasse"
+	bourgon = "Glasse"
+	armoric = "Glasse"
+	gascon = "Glasse"
+	breton = "Glasse"
+	mousillonian = "Glasse"
+	gisoren = "Glasse"
+	carcassian = "Glasse"
+}
+c_fauligmere = {
+	nortagnese = "Faugilmère"
+	bourgon = "Faugilmère"
+	armoric = "Faugilmère"
+	gascon = "Faugilmère"
+	breton = "Faugilmère"
+	mousillonian = "Faugilmère"
+	gisoren = "Faugilmère"
+	carcassian = "Faugilmère"
+}
+d_kharnos = {
+	baersonling = "Mortensland"
+	graeling = "Mortensland"
+	sarl = "Mortensland"
+	aesling = "Mortensland"
+	bjornling = "Mortensland"
+	varg = "Mortensland"
+	fjarmann = "Mortensland"
+	skaeling = "Mortensland"
+}
+c_aarnau = {
+	nortagnese = "Arneau"
+	bourgon = "Arneau"
+	armoric = "Arneau"
+	gascon = "Arneau"
+	breton = "Arneau"
+	mousillonian = "Arneau"
+	gisoren = "Arneau"
+	carcassian = "Arneau"
+}
+b_bussum = {
+	nortagnese = "Bosson"
+	bourgon = "Bosson"
+	armoric = "Bosson"
+	gascon = "Bosson"
+	breton = "Bosson"
+	mousillonian = "Bosson"
+	gisoren = "Bosson"
+	carcassian = "Bosson"
+}
+c_cabanal = {
+	nortagnese = "Charlesbourg"
+	bourgon = "Charlesbourg"
+	armoric = "Charlesbourg"
+	gascon = "Charlesbourg"
+	breton = "Charlesbourg"
+	mousillonian = "Charlesbourg"
+	gisoren = "Charlesbourg"
+	marcheur = "Charlesbourg"
+	carcassian = "Charlesbourg"
+}
+c_noordbeemster = {
+	nortagnese = "Normestre"
+	bourgon = "Normestre"
+	armoric = "Normestre"
+	gascon = "Normestre"
+	breton = "Normestre"
+	mousillonian = "Normestre"
+	gisoren = "Normestre"
+	carcassian = "Normestre"
+}
+c_markenbinnen = {
+	nortagnese = "Marchebin"
+	bourgon = "Marchebin"
+	armoric = "Marchebin"
+	gascon = "Marchebin"
+	breton = "Marchebin"
+	mousillonian = "Marchebin"
+	gisoren = "Marchebin"
+	carcassian = "Marchebin"
+}
+d_frysland = {
+	nortagnese = "Fresie"
+	bourgon = "Fresie"
+	armoric = "Fresie"
+	gascon = "Fresie"
+	breton = "Fresie"
+	mousillonian = "Fresie"
+	gisoren = "Fresie"
+	carcassian = "Fresie"
+}
+c_kazad_dumond = {
+	baersonling = "Skargi"
+	graeling = "Skargi"
+	sarl = "Skargi"
+	aesling = "Skargi"
+	bjornling = "Skargi"
+	varg = "Skargi"
+	fjarmann = "Skargi"
+	skaeling = "Skargi"
+}
+d_masse = {
+	baersonling = "Varmrland"
+	graeling = "Varmrland"
+	sarl = "Varmrland"
+	aesling = "Varmrland"
+	bjornling = "Varmrland"
+	varg = "Varmrland"
+	fjarmann = "Varmrland"
+	skaeling = "Varmrland"
+}
+b_markenbinnen = {
+	nortagnese = "Marchebin"
+	bourgon = "Marchebin"
+	armoric = "Marchebin"
+	gascon = "Marchebin"
+	breton = "Marchebin"
+	mousillonian = "Marchebin"
+	gisoren = "Marchebin"
+	carcassian = "Marchebin"
+}
+c_harskamp = {
+	nortagnese = "Archamp"
+	bourgon = "Archamp"
+	armoric = "Archamp"
+	gascon = "Archamp"
+	breton = "Archamp"
+	mousillonian = "Archamp"
+	gisoren = "Archamp"
+	carcassian = "Archamp"
+}
+b_moslac = {
+	nortagnese = "Charleroi"
+	bourgon = "Charleroi"
+	armoric = "Charleroi"
+	gascon = "Charleroi"
+	breton = "Charleroi"
+	mousillonian = "Charleroi"
+	gisoren = "Charleroi"
+	marcheur = "Charleroi"
+	carcassian = "Charleroi"
+}
+c_mentreda = {
+	nortagnese = "Herriot"
+	bourgon = "Herriot"
+	armoric = "Herriot"
+	gascon = "Herriot"
+	breton = "Herriot"
+	mousillonian = "Herriot"
+	gisoren = "Herriot"
+	marcheur = "Herriot"
+	carcassian = "Herriot"
+}

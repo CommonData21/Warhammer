@@ -1,0 +1,142 @@
+ormazd_gods_group = { #Made to be more similar to a combination of vanilla Islam and Zoroastrianism (CP)
+	has_coa_on_barony_only = yes
+	graphical_culture = muslimgfx
+	playable = yes
+	
+	ai_convert_same_group = 1 # try to convert if ai_zeal is high
+	ai_convert_other_group = 2	# always try to convert
+
+	ormazd = {
+		graphical_culture = muslimgfx
+
+		icon = 11
+		heresy_icon = 35
+		color = { 1.0 1.0 0.3 }
+		
+		high_god_name = GOD_ORMAZD
+		
+		god_names = {
+			GOD_AL_ALNON GOD_THE_PROPHETS GOD_FATE GOD_ORMAZD
+		}
+		
+		evil_god_names = {
+			GOD_AHGRIMAN GOD_THE_DARK_GODS
+		}
+		
+		can_grant_claim = yes
+		#can_call_crusade = yes
+		priests_can_marry = yes
+		can_hold_temples = yes
+		matrilineal_marriages = yes
+		
+		landed_kin_prestige_bonus = yes		
+		crusade_name = "HOLY_WAR"
+		scripture_name = THE_PROPHETS
+		priest_title = IMAM_PRIEST
+		allow_rivermovement = no
+		female_temple_holders = no
+		max_consorts = 3
+		
+		divine_blood = yes # Sacred Xwedodah close-kin marriage mechanics
+		pc_marriage = yes
+		bs_marriage = yes
+		landed_kin_prestige_bonus = yes
+		attacking_same_religion_piety_loss = yes
+		uses_decadence = yes
+		uses_jizya_tax = yes
+	}
+
+	
+	akghan = {
+		graphical_culture = muslimgfx
+
+		icon = 37
+		color = { 0.7 0.8 0.1 }
+		
+		high_god_name = GOD_ORMAZD
+		
+		god_names = {
+			GOD_ORMAZD GOD_THE_SORCERERS GOD_SPIRITS
+		}
+		
+		evil_god_names = {
+			GOD_AHGRIMAN GOD_THE_DARK_GODS
+		}
+		
+		crusade_name = "HOLY_WAR"
+		scripture_name = THE_SORCERERS
+		priest_title = SHAMAN
+		priests_can_marry = yes
+		allow_rivermovement = no
+		female_temple_holders = yes
+		max_consorts = 3
+	}
+	
+	atruhayid = {
+		graphical_culture = muslimgfx
+
+		icon = 36
+		color = { 0.7 0.6 0.7 }
+		
+		high_god_name = GOD_HORANAM
+		
+		god_names = {
+			GOD_HORANAM GOD_ORIERUS GOD_THOUSAND_IDOLS
+		}
+		
+		evil_god_names = {
+			GOD_AHGRIMAN GOD_THE_DARK_GODS
+		}
+		
+		crusade_name = "HOLY_WAR"
+		scripture_name = THE_IDOLS
+		priest_title = PRIEST
+		priests_can_marry = yes
+		peace_prestige_loss = yes
+		aggression = 1.5 		
+		allow_looting = yes
+		seafarer = yes
+		allow_rivermovement = yes
+		female_temple_holders = yes
+		max_consorts = 3
+		
+	}
+
+	kitabid = {
+		graphical_culture = muslimgfx
+		
+		parent = ormazd
+		
+		icon = 11
+		heresy_icon = 35
+		color = { 1.0 1.0 0.5 }
+		
+		
+		high_god_name = GOD_ORMAZD
+		
+		god_names = {
+			GOD_AL_ALNON GOD_THE_PROPHETS GOD_FATE GOD_ORMAZD
+		}
+		
+		evil_god_names = {
+			GOD_AHGRIMAN GOD_THE_DARK_GODS
+		}
+		
+		#can_call_crusade = yes
+		priests_can_marry = yes
+		can_hold_temples = yes
+		matrilineal_marriages = yes
+		
+		landed_kin_prestige_bonus = yes		
+		crusade_name = "HOLY_WAR"
+		scripture_name = THE_PROPHETS
+		priest_title = IMAM_PRIEST
+		allow_rivermovement = no
+		female_temple_holders = no
+		max_consorts = 3
+		
+		divine_blood = yes # Sacred Xwedodah close-kin marriage mechanics
+		pc_marriage = yes
+		bs_marriage = yes
+	}
+}

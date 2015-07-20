@@ -1,0 +1,20 @@
+# c_tor_yvraine
+
+# County Title
+title = c_tor_yvraine
+
+# Settlements
+max_settlements = 3
+
+b_tor_yvraine = castle
+#b_ravenshome = city
+#b_orchath = temple
+
+# Misc
+culture = yvressi
+religion = cadai
+
+#History
+1.1.1={ 
+b_tor_yvraine = ca_tor_yvresse
+}

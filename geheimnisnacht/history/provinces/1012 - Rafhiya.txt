@@ -1,0 +1,16 @@
+# c_rafhiya
+
+# County Title
+title = c_rafhiya
+
+# Settlements
+max_settlements = 2
+
+b_rafhiya = city
+#b_zanjan = city
+
+# Misc
+culture = tevari
+religion = ormazd
+
+#History

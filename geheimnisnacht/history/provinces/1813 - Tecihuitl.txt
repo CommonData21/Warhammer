@@ -1,0 +1,15 @@
+# c_tecihuitl
+
+# County Title
+title = c_tecihuitl
+
+# Settlements
+max_settlements = 1
+
+b_tecihuitl = tribal
+
+# Misc
+culture = lizardman
+religion = old_ones
+terrain = jungle
+#History

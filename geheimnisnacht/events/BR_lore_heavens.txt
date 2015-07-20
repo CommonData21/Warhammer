@@ -1,0 +1,53 @@
+# namespace = heavens
+
+# character_event = {
+	# # id = heavens.0
+	# title = SPELLCASTING
+	# desc = darkmagic0 #The spell has expired and the troops and flag are removed
+	# picture = "GFX_evt_miscast"
+	# hide_window = yes
+	
+	# is_triggered_only = yes
+	
+	# option = {
+	# name = OK
+	# clr_character_flag = cast_iceshard_blizzard
+	# disband_event_forces = iceshard_blizzard_troops
+	# }
+	
+	# }
+
+	
+# character_event = {
+	# id = heavens.1
+	# title = SPELLCASTING
+	# desc = darkmagic0 #The spell has expired and the troops and flag are removed
+	# picture = "GFX_evt_miscast"
+	# hide_window = yes
+	
+	# is_triggered_only = yes
+	
+	# option = {
+	# name = OK
+	# clr_character_flag = cast_urannons_thunderbolt
+	# disband_event_forces = urannons_thunderbolt_troops
+	# }
+	
+	# }
+	
+# character_event = {
+	# id = heavens.2
+	# title = SPELLCASTING
+	# desc = darkmagic0 #The spell has expired and the troops and flag are removed
+	# picture = "GFX_evt_miscast"
+	# hide_window = yes
+	
+	# is_triggered_only = yes
+	
+	# option = {
+	# name = OK
+	# clr_character_flag = cast_chain_lightning
+	# disband_event_forces = chain_lightning_troops
+	# }
+	
+	# }

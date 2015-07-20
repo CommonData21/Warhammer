@@ -1,0 +1,17 @@
+# c_amaranth
+
+# County Title
+title = c_amaranth
+
+# Settlements
+max_settlements = 3
+
+b_amaranth = castle
+b_yenlu = castle
+b_ushuru = castle
+
+# Misc
+culture = chracian
+religion = cadai
+
+#History

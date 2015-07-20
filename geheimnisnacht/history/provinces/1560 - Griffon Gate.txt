@@ -1,0 +1,17 @@
+# c_griffon_gate
+
+# County Title
+title = c_griffon_gate
+
+# Settlements
+max_settlements = 3
+
+b_griffon_tor = castle
+#b_gorthael = city
+#b_waerstone = temple
+
+# Misc
+culture = ellyrian
+religion = cadai
+
+#History

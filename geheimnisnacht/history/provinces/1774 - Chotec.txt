@@ -1,0 +1,16 @@
+# c_chotec
+
+# County Title
+title = c_chotec
+
+# Settlements
+max_settlements = 2
+
+b_chotec = tribal
+#b_huitzpiltli = city
+
+# Misc
+culture = lizardman
+religion = old_ones
+terrain = jungle
+#History

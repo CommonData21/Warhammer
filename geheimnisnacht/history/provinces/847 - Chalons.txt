@@ -1,0 +1,26 @@
+# c_chalons
+
+# County Title
+title = c_chalons
+
+# Settlements
+max_settlements = 4
+
+b_champebourg = tribal
+#b_maisonrie = city
+b_sainte_chapelle = temple
+#b_issoroux = castle
+
+# Misc
+culture = orc_main
+religion = greenskin_gods
+
+#History
+
+2155.1.1 = { religion = grail }
+2155.1.1 = { culture = breton }
+
+2250.1.1 = {
+	b_champebourg = castle
+	b_sainte_chapelle = temple
+}

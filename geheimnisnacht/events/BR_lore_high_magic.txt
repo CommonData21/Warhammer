@@ -1,0 +1,55 @@
+# namespace = highmagic
+
+# #soulquench
+# character_event = {
+	# id = highmagic.0
+	# title = SPELLCASTING
+	# desc = darkmagic0 #The spell has expired and the troops and flag are removed
+	# picture = "GFX_evt_miscast"
+	# hide_window = yes
+	
+	# is_triggered_only = yes
+	
+	# option = {
+	# name = OK
+	# clr_character_flag = cast_soulquench
+	# disband_event_forces = soulquench_troops
+	# }
+	
+	# }
+
+# #fiery convocation
+# character_event = {
+	# id = highmagic.1
+	# title = SPELLCASTING
+	# desc = darkmagic0 #The spell has expired and the troops and flag are removed
+	# picture = "GFX_evt_miscast"
+	# hide_window = yes
+	
+	# is_triggered_only = yes
+	
+	# option = {
+	# name = OK
+	# clr_character_flag = cast_fieryconvocation
+	# disband_event_forces = fieryconvocation_troops
+	# }
+	
+	# }
+
+# #tempest
+# character_event = {
+	# id = highmagic.2
+	# title = SPELLCASTING
+	# desc = darkmagic0 #The spell has expired and the troops and flag are removed
+	# picture = "GFX_evt_miscast"
+	# hide_window = yes
+	
+	# is_triggered_only = yes
+	
+	# option = {
+	# name = OK
+	# clr_character_flag = cast_tempest
+	# disband_event_forces = tempest_troops
+	# }
+	
+	# }

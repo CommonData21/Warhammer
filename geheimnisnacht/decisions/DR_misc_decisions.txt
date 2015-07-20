@@ -1,0 +1,204 @@
+decisions = {
+
+	restore_eternal_empire = {
+		is_high_prio = yes
+		potential = {
+			age = 16
+			prisoner = no
+			NOT = { trait = incapable }
+			NOT = { has_global_flag = ee_restored }
+			religion = myrmidian
+			OR = {
+				culture_group = estalian_group
+				culture_group = tilean_group
+			}
+		}
+		allow = {
+			prestige = 1500	
+			OR = {
+				has_landed_title = e_estalia
+				has_landed_title = e_tilea
+			}
+			has_landed_title = c_magritta
+			completely_controls = d_remas
+			completely_controls = d_luccini
+			completely_controls = d_bilbali
+		}
+		effect = {
+			wealth = -500
+			prestige = 500
+			activate_title = { title = e_eternal_empire status = yes }
+			hidden_tooltip = {
+				k_astarios = { de_jure_liege = e_eternal_empire }
+				k_cantonia = { de_jure_liege = e_eternal_empire }
+				k_castillona = { de_jure_liege = e_eternal_empire }
+				k_tigarre = { de_jure_liege = e_eternal_empire }
+				k_obregon = { de_jure_liege = e_eternal_empire }
+				k_calafina = { de_jure_liege = e_eternal_empire }
+				k_tobaro = { de_jure_liege = e_eternal_empire }
+				k_adriata = { de_jure_liege = e_eternal_empire }
+				k_miragliano = { de_jure_liege = e_eternal_empire }
+				k_trantio = { de_jure_liege = e_eternal_empire }
+				k_remas = { de_jure_liege = e_eternal_empire }
+				k_pavona = { de_jure_liege = e_eternal_empire }
+				k_luccini = { de_jure_liege = e_eternal_empire }
+				k_sartosa = { de_jure_liege = e_eternal_empire }
+				k_monte_castello = { de_jure_liege = e_eternal_empire }
+				k_verezzo = { de_jure_liege = e_eternal_empire }
+				if = {
+					limit = { has_landed_title = e_estalia }
+					e_estalia = {
+						any_direct_de_jure_vassal_title = {
+							de_jure_liege = e_eternal_empire
+						}
+					}
+				}
+				if = {
+					limit = { has_landed_title = e_tilea }
+					e_tilea = {
+						any_direct_de_jure_vassal_title = {
+							de_jure_liege = e_eternal_empire
+						}
+					}
+				}
+			}
+			primary_title = {
+				e_eternal_empire = {
+					grant_title = ROOT
+					copy_title_laws = PREV
+					copy_title_history = PREV
+				}
+			}
+			hidden_tooltip = { e_eternal_empire = { make_primary_title = yes } }
+			if = {
+				limit = {
+					OR = {
+						has_landed_title = e_estalia
+						e_estalia = { has_holder = no }
+					}
+				}
+				e_estalia = { destroy_landed_title = THIS }
+				activate_title = { title = e_estalia status = no }
+			}
+			if = {
+				limit = {
+					OR = {
+						has_landed_title = e_tilea
+						e_tilea = { has_holder = no }
+					}
+				}
+				e_tilea = { destroy_landed_title = THIS }
+				activate_title = { title = e_tilea status = no }
+			}
+			set_global_flag = ee_restored
+			narrative_event = { id = DR_misc.1 tooltip = EVTTOOLTIPETERNALRESTORED }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	#For the.. normal tribal guys
+	tribalize_provinces	= {
+		is_high_prio = yes
+		potential = {
+			is_tribal = yes
+			liege = {
+				is_tribal = yes
+			}
+			NOT = {
+				OR = {
+					culture_group = beastman_group
+					trait = creature_beastman
+					religion = asrai_cadai
+					religion_group = greenskin_gods_group
+					culture_group = orc_group
+					culture_group = goblin_group
+				}
+			}
+			# ai = no
+			is_theocracy = no
+			is_republic = no
+			#any_demesne_title = { is_feudal = yes }
+		}
+		allow = {
+			higher_tier_than = COUNT
+			custom_tooltip = {
+				text = tribalize_tooltip_1
+			}
+			hidden_tooltip = {
+				any_demesne_title = {
+					location = {
+						has_empty_holding = yes
+						is_tribal = no
+						NOT = {
+							any_province_holding = {
+								holding_type = tribal
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		effect = {
+			hidden_tooltip = {
+				any_demesne_title = {
+					limit = {
+						location = {
+							has_empty_holding = yes
+							is_tribal = no
+							NOT = {
+								any_province_holding = {
+									holding_type = tribal
+								}
+							}
+						}
+					}
+					create_character = {
+					  random_traits = yes
+					  dynasty = none
+					  religion = ROOT
+					  culture = ROOT
+					  female = no
+					}
+					new_character = {
+						grant_title = PREV
+						location = {
+							build_holding = {
+								type = castle
+								holder = PREV
+							}
+							
+						}
+						ROOT = {
+							grant_title_no_opinion = PREVPREV
+						}
+						
+						any_demesne_title = {
+							convert_to = TRIBAL
+							refill_holding_levy = yes
+						}
+						grant_title_no_opinion = PREV
+						#grant_title_no_opinion = PREV
+					}
+					
+				}
+			}
+			custom_tooltip = {
+				text = tribalize_tooltip_2
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1 # On average ca 1 year before taken
+			# modifier = {
+				# factor = 0
+				# NOT = {religion_group = pagan_group}
+				
+			# }
+		}
+	}
+}

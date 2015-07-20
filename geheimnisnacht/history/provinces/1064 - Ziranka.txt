@@ -1,0 +1,16 @@
+# c_ziranka
+
+# County Title
+title = c_ziranka
+
+# Settlements
+max_settlements = 2
+
+b_tropido = tribal
+#b_lacertid = city
+
+# Misc
+culture = lizardman_lost
+religion = old_ones
+
+#History

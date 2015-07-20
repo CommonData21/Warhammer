@@ -1,0 +1,17 @@
+# c_olrosse
+
+# County Title
+title = c_olrosse
+
+# Settlements
+max_settlements = 3
+
+b_olrosse_keep = castle
+#b_olrosse = city
+#b_artek = temple
+
+# Misc
+culture = cothiq
+religion = cadai
+
+#History

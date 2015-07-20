@@ -1,0 +1,746 @@
+#
+# Those decisions are used for enforcing racial system
+# For each race we have different decision 
+#
+decisions = {
+
+    # Humans
+    ai_race_human = {
+		potential = {
+			ai=yes
+			NOT = {
+				AND = {
+					is_female = yes
+					culture_group = amazon_group
+				}
+			}
+			OR = {
+				graphical_culture = westerngfx
+				graphical_culture = muslimgfx
+				graphical_culture = frankishgfx
+				graphical_culture = englishgfx
+				graphical_culture = germangfx
+				graphical_culture = occitangfx
+				graphical_culture = southerngfx
+				graphical_culture = celticgfx
+				graphical_culture = norsegfx
+				graphical_culture = saxongfx
+				graphical_culture = normangfx
+				graphical_culture = easternslavicgfx
+				graphical_culture = westernslavicgfx
+				graphical_culture = byzantinegfx
+				graphical_culture = ugricgfx
+				graphical_culture = arabicgfx
+				graphical_culture = turkishgfx
+				graphical_culture = mongolgfx
+				graphical_culture = africangfx
+				graphical_culture = andalusiangfx
+				graphical_culture = persiangfx
+				graphical_culture = empiregfx
+				graphical_culture = sylvaniangfx
+				graphical_culture = kurgangfx
+				graphical_culture = arabyangfx
+				graphical_culture = northempiregfx
+				graphical_culture = tileagfx
+				graphical_culture = estileangfx
+				graphical_culture = hunggfx
+				graphical_culture = southarabyangfx
+				graphical_culture = northmangfx
+				graphical_culture = nomadgfx
+				graphical_culture = sartosantileangfx
+				graphical_culture = sartosantileangfx
+				graphical_culture = bretonniagfx
+				graphical_culture = nomadgfx
+				graphical_culture = livinglahmiangfx
+				AND = {
+					is_female = no
+					culture_group = amazon_group
+				}
+			}
+			NOT = { trait = creature_human }
+		}
+        allow = {
+            always = yes
+        }
+        effect = { 
+            add_trait = creature_human
+        }
+        ai_will_do = { factor = 1500 }
+	}
+	
+	# Amazons
+    ai_race_amazon = {
+		potential = {
+            ai=yes
+            OR = {
+				graphical_culture = westerngfx
+				graphical_culture = muslimgfx
+				graphical_culture = frankishgfx
+				graphical_culture = englishgfx
+				graphical_culture = germangfx
+				graphical_culture = occitangfx
+				graphical_culture = southerngfx
+				graphical_culture = celticgfx
+				graphical_culture = norsegfx
+				graphical_culture = saxongfx
+				graphical_culture = normangfx
+				graphical_culture = easternslavicgfx
+				graphical_culture = westernslavicgfx
+				graphical_culture = byzantinegfx
+				graphical_culture = ugricgfx
+				graphical_culture = arabicgfx
+				graphical_culture = turkishgfx
+				graphical_culture = mongolgfx
+				graphical_culture = africangfx
+				graphical_culture = andalusiangfx
+				graphical_culture = persiangfx
+				graphical_culture = empiregfx
+				graphical_culture = sylvaniangfx
+				graphical_culture = kurgangfx
+				graphical_culture = arabyangfx
+				graphical_culture = northempiregfx
+				graphical_culture = tileagfx
+				graphical_culture = estileangfx
+				graphical_culture = hunggfx
+				graphical_culture = southarabyangfx
+				graphical_culture = northmangfx
+				graphical_culture = nomadgfx
+				graphical_culture = sartosantileangfx
+				graphical_culture = sartosantileangfx
+				graphical_culture = bretonniagfx
+				graphical_culture = nomadgfx
+			}
+			is_female = yes
+			culture_group = amazon_group
+			NOT = { trait = creature_amazon }
+		}
+        allow = {
+            always = yes
+        }
+        effect = {
+			add_trait = creature_amazon
+        }
+        ai_will_do = { factor = 1500 }
+    }
+	
+	#remove nehekharan cultured humans
+    ai_culture_nehekharan_nomad = {
+		potential = {
+			ai=yes
+			culture = nehekharan
+			trait = creature_human
+		}
+        allow = {
+            always = yes
+        }
+        effect = { 
+            culture = nomad
+        }
+        ai_will_do = { factor = 1500 }
+    }
+	
+    # Elfs
+    ai_race_elf = {
+		potential = {
+			ai=yes
+			OR = {
+				graphical_culture = asurgfx
+				graphical_culture = asraigfx
+				graphical_culture = druchiigfx
+			}
+		   NOT = {
+				OR = {
+					trait = creature_elf
+					trait = creature_treekin
+					trait = creature_forestspirit
+				}
+		   }
+		}
+        allow = {
+            always = yes
+        }
+        effect = { 
+            add_trait = creature_elf
+        }
+        ai_will_do = { factor = 1500 }
+    }
+	
+    # Dwarfs
+    ai_race_dwarf = {
+		potential = {
+            ai=yes
+            OR = {
+				graphical_culture = dwarfgfx
+				graphical_culture = imperialdwarfgfx
+				graphical_culture = olddwarfgfx
+			}
+			NOT = {
+				trait = creature_dwarf
+			}
+		}
+        allow = {
+            always = yes
+        }
+        effect = { 
+            if = {
+				limit = {
+					NOT = { trait = creature_dwarf }
+				}
+				add_trait = creature_dwarf
+			}
+			if = {
+				limit = {
+					NOT = {
+						age = 75
+						trait = beardling
+					}
+				}
+				add_trait = beardling
+			}
+			if = {
+				limit = {
+					age = 75
+					is_female = no
+					NOT = {
+						trait = longbeard
+						trait = hammerer
+						trait = ironbreaker
+						trait = thunderer
+						trait = quarreller
+						trait = dwarf_warrior
+						has_character_flag = becoming_thunderer
+						has_character_flag = becoming_quarreller
+						has_character_flag = becoming_dwarf_warrior
+						has_character_flag = dwarf_did_not_become_warrior
+					}
+				}
+				random_list = {
+					15 = {
+						modifier = {
+							factor = 4
+							martial = 10
+							NOT = {
+								trait = craven
+							}
+						}
+						add_trait = dwarf_warrior
+					}
+					5 = {
+						modifier = {
+							factor = 4
+							martial = 10
+							NOT = {
+								trait = craven
+							}
+						}
+						add_trait = quarreller
+					}
+					5 = {
+						modifier = {
+							factor = 4
+							martial = 10
+							NOT = {
+								trait = craven
+							}
+						}
+							add_trait = thunderer
+					}
+					75 = {
+						modifier = {
+							factor = 0
+							martial = 10
+							NOT = {
+								trait = craven
+							}
+						}
+						set_character_flag = dwarf_did_not_become_warrior
+					}
+				}
+			}
+        }
+        ai_will_do = { factor = 1500 }
+    }
+	
+    # Chaos Dwarfs
+    ai_race_chaos_dwarf = {
+		potential = {
+			ai=yes
+			OR = {
+				graphical_culture = chaosdwarfgfx
+				graphical_culture = oldchaosdwarfgfx
+			}
+			NOT = { trait = creature_chaos_dwarf }
+		}
+        allow = {
+            always = yes
+        }
+        effect = { 
+            add_trait = creature_chaos_dwarf
+        }
+        ai_will_do = { factor = 1500 }
+    }
+	
+    # Halflings
+    ai_race_halfling = {
+		potential = {
+			ai=yes
+			graphical_culture = hobbitsgfx
+			NOT = { trait = creature_halfling }
+		}
+        allow = {
+            always = yes
+        }
+        effect = { 
+            add_trait = creature_halfling
+        }
+        ai_will_do = { factor = 1500 }
+    }
+	
+    # Orcs
+    ai_race_orc = {
+		potential = {
+			ai=yes
+			graphical_culture = orcgfx
+			NOT = { 
+				OR = { 
+					trait = creature_orc
+					trait = creature_snotling
+				}
+			}
+		}
+        allow = {
+            always = yes
+        }
+        effect = { 
+            if = { 
+                limit = { is_female = no }
+                add_trait = creature_orc
+				if = { 
+					limit = { 
+						is_landed = yes
+					}
+					any_courtier = {
+						limit = {
+							is_female = yes
+						}
+						add_trait = creature_snotling
+					}
+					any_vassal = {
+						limit = {
+							is_female = no
+						}
+						any_courtier = {
+							limit = {
+								is_female = yes
+							}
+							add_trait = creature_snotling
+						}
+					}
+				}
+				if = { 
+					limit = { 
+							is_theocracy = yes
+					}
+					add_trait = lore_waaagh
+					add_character_modifier = { name = magic_power_1 duration = -1 }
+				}
+            }
+			if = { 
+                limit = { is_female = yes }
+                add_trait = creature_snotling
+            }
+        }
+        ai_will_do = { factor = 1500 }
+    }
+	
+    # Goblins
+    ai_race_goblin = {
+		potential = {
+			ai=yes
+			graphical_culture = goblingfx
+			NOT = {
+				OR = {
+					trait = creature_goblin 
+					trait = creature_snotling
+				   }
+			}
+		}
+        allow = {
+            always = yes
+        }
+        effect = { 
+            if = { 
+                limit = { is_female = no }
+                add_trait = creature_goblin
+				if = { 
+					limit = { 
+						is_landed = yes
+					}
+					any_courtier = {
+						limit = {
+							is_female = yes
+						}
+						add_trait = creature_snotling
+					}
+					any_vassal = {
+						limit = {
+							is_female = no
+						}
+						any_courtier = {
+							limit = {
+								is_female = yes
+							}
+							add_trait = creature_snotling
+						}
+					}
+				}
+				if = { 
+					limit = { 
+							is_theocracy = yes
+					}
+					add_trait = lore_waaagh
+					add_character_modifier = { name = magic_power_1 duration = -1 }
+				}
+            }
+			if = { 
+                limit = { is_female = yes }
+                add_trait = creature_snotling
+            }
+        }
+        ai_will_do = { factor = 1500 }
+    }
+	
+    # Nehekharans
+    ai_race_nehekharan = {
+		potential = {
+			ai=yes
+			graphical_culture = nehekharangfx
+			NOT = { trait = creature_nehekharan }
+		}
+        allow = {
+			always = yes
+		}
+		effect = { 
+			add_trait = creature_nehekharan
+			if = { 
+				limit = {
+					is_landed = yes 
+					ruled_years = 1
+					is_theocracy = no 
+				}
+				add_trait = khemri_tomb_king 
+				break = yes
+			}
+			if = { 
+				limit = { 
+					OR = { 
+						is_landed = no
+						NOT = { ruled_years = 1 } 
+					}
+					NOT = { trait = detached_priest }
+					NOT = { trait = martial_cleric }
+					NOT = { trait = scholarly_theologian }
+					NOT = { trait = mastermind_theologian } 
+					add_trait = khemri_soldier
+				}
+				if = { 
+					limit = {  
+						is_landed = yes
+						OR = {
+							is_republic = yes
+							is_merchant_republic = yes
+							is_patrician = yes
+						} 
+					} 
+					liege = {
+						add_trait = khemri_soldier
+					}
+					break = yes
+				}
+				if = { 
+					limit = {  
+						is_landed = yes
+						OR = {
+							is_republic = no
+							is_merchant_republic = no
+							is_patrician = no
+						}
+						liege = {
+							ai = yes 
+							any_courtier = { 
+								trait = khemri_tomb_king 
+							} 
+						} 
+					} 
+					liege = { 
+						random_courtier = { 
+							limit = { 
+								trait = khemri_tomb_king 
+							} 
+							ROOT = { 
+								abdicate_to = PREV
+								add_trait = khemri_soldier
+								any_spouse = { remove_spouse = ROOT } 
+							} 
+						} 
+					}
+					break = yes
+				}
+				if = { 
+					limit = { 	
+						is_landed = yes
+						liege = { 
+							ai = yes 
+							NOT = { 
+								any_courtier = { 
+									trait = khemri_tomb_king 
+								} 
+							} 
+						} 
+					} 
+					set_graphical_culture = nomad
+					culture = nomad
+					remove_trait = creature_nehekharan
+					add_trait = creature_human
+					any_spouse = { remove_spouse = ROOT }
+					break = yes
+				}
+				add_trait = khemri_soldier
+				abdicate = yes
+				any_spouse = { remove_spouse = ROOT } 
+				break = yes
+			}
+			if = { 
+				limit = { 
+					OR = { 
+						is_theocracy = yes
+						AND = { 
+							is_landed = no
+							trait = detached_priest 
+						}
+						AND = { 
+							is_landed = no
+							trait = martial_cleric
+						}
+						AND = { 
+							is_landed = no
+							trait = scholarly_theologian 
+						}
+						AND = { 
+							is_landed = no
+							trait = mastermind_theologian 
+						} 
+					} 
+				}
+				add_trait = khemri_liche_priest
+				random_list = {
+					50 = {
+						add_character_modifier = { 
+							name = magic_power_1 duration = -1
+						}
+					}
+					40 = {
+						add_character_modifier = { 
+							name = magic_power_2 duration = -1
+						}
+					} 
+					10 = {
+						add_character_modifier = { 
+							name = magic_power_3 duration = -1
+						}
+					} 
+				}
+			}
+        }
+        ai_will_do = { factor = 1500 }
+    }
+    # Nehekharans 2 - Safety event if there's nehekharans without caste running around
+    ai_race_nehekharan_slaves = {
+		potential = {
+			ai=yes
+			graphical_culture = nehekharangfx
+			trait = creature_nehekharan
+			NOT = { trait = khemri_tomb_king }
+			NOT = { trait = khemri_liche_priest }
+			NOT = { trait = khemri_soldier }
+		}
+        allow = {
+			always = yes
+		}
+		effect = { 
+			add_trait = khemri_soldier 
+			abdicate = yes
+			any_spouse = { remove_spouse = ROOT } 
+        }
+        ai_will_do = { factor = 100 }
+    }
+	
+    # Skaven
+    ai_race_skaven = {
+		potential = {
+			ai=yes
+			graphical_culture = skavengfx
+			NOT = { trait = creature_skaven }
+		}
+        allow = {
+            always = yes
+        }
+        effect = { 
+            add_trait = creature_skaven
+        }
+        ai_will_do = { factor = 1500 }
+    }
+	
+    # Ogre
+    ai_race_ogre = {
+		potential = {
+			ai=yes
+			graphical_culture = ogregfx
+			NOT = { trait = creature_ogre }
+		}
+        allow = {
+            always = yes
+        }
+        effect = { 
+            add_trait = creature_ogre
+        }
+        ai_will_do = { factor = 1500 }
+    }
+	
+    # Lizardmen
+    ai_race_lizardman = {
+		potential = {
+			ai=yes
+			graphical_culture = lizardmangfx
+			NOT = { trait = creature_skink }
+			NOT = { trait = creature_slann }
+			NOT = { trait = creature_saurus }
+		}
+        allow = {
+            always = yes
+        }
+        effect = { 
+            add_trait = creature_skink
+        }
+        ai_will_do = { factor = 1500 }
+    }
+	
+    # Beastmen
+    ai_race_beastman = {
+		potential = {
+			ai=yes
+			graphical_culture = beastmangfx
+			NOT = { trait = creature_beastman }
+		}
+        allow = {
+            always = yes
+        }
+        effect = { 
+            add_trait = creature_beastman
+			if = {
+				limit = { 
+					is_female = no 
+					NOT = { trait = horns_none }
+					NOT = { trait = horns_small }
+					NOT = { trait = horns_average }
+					NOT = { trait = horns_big } 
+				}
+				random_list = {
+					10 = { add_trait = horns_none }
+					40 = { add_trait = horns_small }
+					45 = { add_trait = horns_average }
+					5 = { add_trait = horns_big }
+				}
+			}
+        }
+        ai_will_do = { factor = 1500 }
+    }
+	
+	# Intermarriage fix
+    ai_intermarriage_fix = {
+		potential = {
+			ai=yes
+			spouse = { is_alive = yes }
+			OR = { 
+				AND = { 
+					trait = creature_human
+					spouse = { 
+						NOT = { trait = creature_human }
+						NOT = { trait = creature_amazon }
+						NOT = { trait = creature_beastman }
+						OR = { 
+							ai = no
+							NOT = { has_global_flag = optionB } 
+						} 
+					} 
+				}
+				AND = { 
+					trait = creature_dwarf
+					spouse = { 
+						NOT = { trait = creature_dwarf }
+						NOT = { trait = creature_chaos_dwarf }
+						OR = { 
+							ai = no
+							NOT = { has_global_flag = optionB }
+						} 
+					} 
+				} 
+				AND = { 
+					trait = creature_elf
+					 spouse = { 
+						NOT = { trait = creature_elf }
+						OR = { ai = no
+							NOT = { has_global_flag = optionB } 
+						} 
+					} 
+				} 
+				AND = { 
+					trait = creature_halfling
+					spouse = { 
+						NOT = { trait = creature_halfling }
+						OR = {
+							ai = no
+							NOT = { has_global_flag = optionB } 
+						} 
+					} 
+				} 
+				AND = { 
+					trait = creature_ogre
+					spouse = { 
+						NOT = { trait = creature_ogre }
+						OR = { 
+							ai = no
+							NOT = { has_global_flag = optionB } 
+						} 
+					} 
+				} 
+				AND = { 
+					trait = creature_skaven
+					spouse = { 
+						NOT = { trait = creature_skaven }
+						OR = { ai = no
+							NOT = { has_global_flag = optionB } } 
+					} 
+				}
+				AND = { 
+					trait = creature_orc
+					is_married = yes
+				}
+				AND = { 
+					trait = creature_goblin
+					is_married = yes
+				}				
+			}
+		}
+        allow = {
+            always = yes
+        }
+        effect = { 
+			spouse = { 
+				remove_spouse = ROOT 
+			}
+        }
+        ai_will_do = { factor = 1500 }
+    }
+}
+# END OF RACIAL DECISIONS

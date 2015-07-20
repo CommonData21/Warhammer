@@ -1,0 +1,484 @@
+castle = {
+	#Estalia
+	# Rodelero training grounds ( Less light infantry than militia barracks, no archers )
+	ca_rodelero_barracks_1 = {
+		desc = ca_rodelero_barracks_1_desc
+		potential = {
+				 FROM = {   culture_group = estalian_group }
+		}
+		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+		replaces = ca_militia_barracks_1
+		gold_cost = 100
+		build_time = 365
+		light_infantry = 55
+		ai_creation_factor = 100
+		
+		extra_tech_building_start = 1.0
+	}
+	ca_rodelero_barracks_2 = {
+		desc = ca_rodelero_barracks_1_desc
+		trigger = { TECH_CASTLE_CONSTRUCTION = 1 }
+		potential = {
+				 FROM = {   culture_group = estalian_group }
+		}
+		prerequisites = { ca_wall_1 }
+		upgrades_from = ca_rodelero_barracks_1
+		replaces = ca_militia_barracks_2
+		gold_cost = 120
+		build_time = 547
+		light_infantry = 60
+		ai_creation_factor = 99
+
+		extra_tech_building_start = 2.0
+	}
+	ca_rodelero_barracks_3 = {
+		desc = ca_rodelero_barracks_1_desc
+		potential = {
+				 FROM = {   culture_group = estalian_group }
+		}
+		trigger = { TECH_CASTLE_CONSTRUCTION = 5 }
+		upgrades_from = ca_rodelero_barracks_2
+		replaces = ca_militia_barracks_3
+		gold_cost = 200
+		build_time = 1095
+		light_infantry = 65
+		ai_creation_factor = 98
+
+		extra_tech_building_start = 0.5
+	}
+	ca_rodelero_barracks_4 = {
+		desc = ca_rodelero_barracks_1_desc
+		potential = {
+				 FROM = {   culture_group = estalian_group }
+		}
+		trigger = { TECH_CASTLE_CONSTRUCTION = 7 }
+		upgrades_from = ca_rodelero_barracks_3
+		replaces = ca_militia_barracks_4
+		gold_cost = 300
+		build_time = 1095
+		light_infantry = 70
+		ai_creation_factor = 98
+
+		extra_tech_building_start = 0.5
+	}
+	#Tercio Barracks ( Replaces usual barracks ) - Pikemen and Crossbowmen ( Enhanced Archers )
+	ca_tercio_barracks_1 = {
+		desc = ca_tercio_barracks_1_desc
+		potential = {
+			FROM = {
+				culture_group = estalian_group
+			}
+		}
+		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+		replaces = ca_barracks_1
+		gold_cost = 100
+		build_time = 365
+		pikemen = 40
+		archers = 10
+		archers_defensive = 0.10
+		ai_creation_factor = 105
+		
+		extra_tech_building_start = 1.0
+	}
+	ca_tercio_barracks_2 = {
+		desc = ca_tercio_barracks_1_desc
+		potential = {
+			FROM = {
+				culture_group = estalian_group
+			}
+		}
+		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+		prerequisites = { ca_wall_1 }
+		upgrades_from = ca_tercio_barracks_1
+		replaces = ca_barracks_2
+		gold_cost = 120
+		build_time = 547
+		pikemen = 40
+		archers = 50
+		archers_defensive = 0.10
+		ai_creation_factor = 104
+		
+		extra_tech_building_start = 1.8
+	}
+	ca_tercio_barracks_3 = {
+		desc = ca_tercio_barracks_1_desc
+		potential = {
+			FROM = {
+				culture_group = estalian_group
+			}
+		}
+		trigger = { TECH_CASTLE_CONSTRUCTION = 1 }
+		prerequisites = { ca_wall_2 }
+		upgrades_from = ca_tercio_barracks_2
+		replaces = ca_barracks_3
+		gold_cost = 200
+		build_time = 730
+		pikemen = 50
+		archers = 50
+		archers_defensive = 0.10
+		ai_creation_factor = 103
+
+		extra_tech_building_start = 3.0
+	}
+	ca_tercio_barracks_4 = {
+		potential = {
+			FROM = {
+				culture_group = estalian_group
+			}
+		}
+		desc = ca_tercio_barracks_1_desc
+		trigger = { TECH_CASTLE_CONSTRUCTION = 3 }
+		upgrades_from = ca_tercio_barracks_3
+		replaces = ca_barracks_4
+		gold_cost = 300
+		build_time = 1095
+		pikemen = 50
+		archers = 50
+		archers_defensive = 0.10
+		ai_creation_factor = 102
+
+		extra_tech_building_start = 3.0
+	}
+	ca_tercio_barracks_5 = {
+		potential = {
+			FROM = {
+				culture_group = estalian_group
+			}
+		}
+		desc = ca_tercio_barracks_1_desc
+		trigger = { TECH_CASTLE_CONSTRUCTION = 5 }
+		upgrades_from = ca_tercio_barracks_4
+		replaces = ca_barracks_5
+		gold_cost = 400
+		build_time = 2190
+		pikemen = 60
+		archers = 50
+		archers_defensive = 0.10
+		ai_creation_factor = 101
+
+		extra_tech_building_start = 2.0
+	}
+	ca_tercio_barracks_6 = {
+		potential = {
+			FROM = {
+				culture_group = estalian_group
+			}
+		}
+		desc = ca_tercio_barracks_1_desc
+		trigger = { TECH_CASTLE_CONSTRUCTION = 7 }
+		upgrades_from = ca_tercio_barracks_5
+		replaces = ca_barracks_6
+		gold_cost = 500
+		build_time = 2190
+		pikemen = 65
+		archers = 55
+		archers_defensive = 0.10
+		ai_creation_factor = 100
+
+		extra_tech_building_start = 0.2
+	}
+	
+	#Genitores - exceptional light cavalry only - replaces usual stables 
+	ca_estalian_genitores_1 = {
+		desc = ca_estalian_genitores_1_desc
+		potential = {
+			FROM = { culture_group = estalian_group }
+		}
+		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+		replaces = ca_stable_1
+		gold_cost = 100
+		build_time = 730
+		light_cavalry = 20
+		light_cavalry_offensive = 0.15
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+	}
+	ca_estalian_genitores_2 = {
+		desc = ca_estalian_genitores_1_desc
+		potential = {
+			FROM = { culture_group = estalian_group }
+		}
+		trigger = { TECH_CASTLE_CONSTRUCTION = 1 }
+		upgrades_from = ca_estalian_genitores_1
+		replaces = ca_stable_2
+		gold_cost = 300
+		build_time = 1095
+		light_cavalry = 20
+		ai_creation_factor = 100
+		
+		extra_tech_building_start = 0.8
+	}
+	ca_estalian_genitores_3 = {
+		desc = ca_estalian_genitores_1_desc
+		potential = {
+			FROM = { culture_group = estalian_group }
+		}
+		trigger = { TECH_CASTLE_CONSTRUCTION = 2 }
+		upgrades_from = ca_estalian_genitores_2
+		replaces = ca_stable_3
+		gold_cost = 400
+		build_time = 2190
+		light_cavalry = 50
+		ai_creation_factor = 99
+		
+		extra_tech_building_start = 0.8
+	}
+	ca_estalian_genitores_4 = {
+		desc = ca_estalian_genitores_1_desc
+		potential = {
+			FROM = { culture_group = estalian_group }
+		}
+		trigger = { TECH_CASTLE_CONSTRUCTION = 4 }
+		upgrades_from = ca_estalian_genitores_3
+		replaces = ca_stable_4
+		gold_cost = 500
+		build_time = 2190
+		light_cavalry = 55
+		light_cavalry_offensive = 0.15
+		ai_creation_factor = 98
+		
+		extra_tech_building_start = 0.8
+	}
+	ca_estalian_genitores_5 = {
+		desc = ca_estalian_genitores_1_desc
+		potential = {
+			FROM = { culture_group = estalian_group }
+		}
+		trigger = { TECH_CASTLE_CONSTRUCTION = 2 }
+		upgrades_from = ca_estalian_genitores_4
+		replaces = ca_stable_5
+		gold_cost = 600
+		build_time = 2190
+		light_cavalry = 70
+		ai_creation_factor = 99
+		
+		extra_tech_building_start = 0.8
+	}
+	
+	ca_estalian_genitores_6 = {
+		desc = ca_estalian_genitores_1_desc
+		potential = {
+			FROM = { culture_group = estalian_group }
+		}
+		trigger = { TECH_CASTLE_CONSTRUCTION = 4 }
+		upgrades_from = ca_estalian_genitores_5
+		replaces = ca_stable_6
+		gold_cost = 700
+		build_time = 2190
+		light_cavalry = 75
+		light_cavalry_offensive = 0.15
+		ai_creation_factor = 98
+		
+		extra_tech_building_start = 0.8
+	}	
+	
+	#Royal Guard - elite Estalian handgunners
+		 ca_culture_estalian_group_1 = {
+		desc = ca_culture_estalian_group_1_desc
+		potential = {
+				  FROM = {  culture_group = estalian_group }
+		}
+		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+		prerequisites = { ca_wall_2 }
+		gold_cost = 200
+		build_time = 730
+		gunpowder = 25
+		retinuesize = 20
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+	}
+	
+	 ca_culture_estalian_group_2 = {
+		desc = ca_culture_estalian_group_1_desc
+		potential = {
+				  FROM = {  culture_group = estalian_group }
+		}
+		trigger = { TECH_CASTLE_CONSTRUCTION = 1 }
+		upgrades_from = ca_culture_estalian_group_1
+		gold_cost = 300
+		build_time = 1095
+		gunpowder = 25
+		retinuesize = 40
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+	}
+	
+	 ca_culture_estalian_group_3 = {
+		desc = ca_culture_estalian_group_1_desc
+		potential = {
+				 FROM = {   culture_group = estalian_group }
+		}
+		trigger = { TECH_CASTLE_CONSTRUCTION = 2 }
+		upgrades_from = ca_culture_estalian_group_2
+		gold_cost = 400
+		build_time = 2190
+		gunpowder = 50
+		retinuesize = 60
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+	}
+	
+	 ca_culture_estalian_group_4 = {
+		desc = ca_culture_estalian_group_1_desc
+		potential = {
+				  FROM = {  culture_group = estalian_group }
+		}
+		trigger = { TECH_CASTLE_CONSTRUCTION = 2 }
+		upgrades_from = ca_culture_estalian_group_3
+		gold_cost = 500
+		build_time = 2190
+		gunpowder = 60
+		retinuesize = 80
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+	}
+	
+	##Tilea
+	ca_culture_tilean_1 = {
+		desc = ca_culture_tilean_1_desc
+		potential = {
+			FROM = { 
+					culture_group = tilean_group
+					NOT = { culture = myken }
+			}
+		}
+		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+		prerequisites = { ca_wall_2 }
+		gold_cost = 200
+		build_time = 730
+		pikemen = 15
+		archers = 30
+		pikemen_defensive = 0.15
+		archers_defensive = 0.15
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+	}
+	ca_culture_tilean_2 = {
+		desc = ca_culture_tilean_1_desc
+		potential = {
+			FROM = { 
+					culture_group = tilean_group
+					NOT = { culture = myken }
+			}
+		}
+		trigger = { TECH_CASTLE_CONSTRUCTION = 1 }
+		upgrades_from = ca_culture_tilean_1
+		gold_cost = 300
+		build_time = 1095
+		pikemen = 20
+		archers = 40
+		pikemen_defensive = 0.15
+		archers_defensive = 0.15
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+	}
+	ca_culture_tilean_3 = {
+		desc = ca_culture_tilean_1_desc
+		potential = {
+			FROM = { 
+					culture_group = tilean_group
+					NOT = { culture = myken }
+			}
+		}
+		trigger = { TECH_CASTLE_CONSTRUCTION = 2 }
+		upgrades_from = ca_culture_tilean_2
+		gold_cost = 400
+		build_time = 2190
+		pikemen = 25
+		archers = 50
+		pikemen_defensive = 0.15
+		archers_defensive = 0.15
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+	}
+	ca_culture_tilean_4 = {
+		desc = ca_culture_tilean_1_desc
+		potential = {
+			FROM = { 
+					culture_group = tilean_group
+					NOT = { culture = myken }
+			}
+		}
+		trigger = { TECH_CASTLE_CONSTRUCTION = 4 }
+		upgrades_from = ca_culture_tilean_3
+		gold_cost = 500
+		build_time = 2190
+		pikemen = 30
+		archers = 60
+		pikemen_defensive = 0.15
+		archers_defensive = 0.15
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+	}
+	#Myken
+	# ca_culture_myken_1 = {
+		# desc = ca_culture_myken_1_desc
+		# potential = {
+			# FROM = { culture = myken }
+		# }
+		# trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+		# prerequisites = { ca_wall_2 }
+		# gold_cost = 200
+		# build_time = 730
+		# pikemen = 30
+		# pikemen_morale = 0.15
+		# ai_creation_factor = 101
+		
+		# extra_tech_building_start = 0.8
+	# }
+	# ca_culture_myken_2 = {
+		# desc = ca_culture_myken_1_desc
+		# potential = {
+			# FROM = { culture = myken }
+		# }
+		# trigger = { TECH_CASTLE_CONSTRUCTION = 1 }
+		# upgrades_from = ca_culture_myken_1
+		# gold_cost = 300
+		# build_time = 1095
+		# pikemen = 40
+		# pikemen_morale = 0.15
+		# ai_creation_factor = 101
+		
+		# extra_tech_building_start = 0.8
+	# }
+	# ca_culture_myken_3 = {
+		# desc = ca_culture_myken_1_desc
+		# potential = {
+			# FROM = { culture = myken }
+		# }
+		# trigger = { TECH_CASTLE_CONSTRUCTION = 2 }
+		# upgrades_from = ca_culture_myken_2
+		# gold_cost = 400
+		# build_time = 2190
+		# pikemen = 50
+		# pikemen_morale = 0.15
+		# ai_creation_factor = 101
+		
+		# extra_tech_building_start = 0.8
+	# }
+	# ca_culture_myken_4 = {
+		# desc = ca_culture_myken_1_desc
+		# potential = {
+			# FROM = { culture = myken }
+		# }
+		# trigger = { TECH_CASTLE_CONSTRUCTION = 4 }
+		# upgrades_from = ca_culture_myken_3
+		# gold_cost = 500
+		# build_time = 2190
+		# pikemen = 60
+		# pikemen_morale = 0.15
+		# ai_creation_factor = 101
+		
+		# extra_tech_building_start = 0.8
+	# }
+	#Sartosan	
+}

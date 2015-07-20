@@ -1,0 +1,16 @@
+# c_arkon
+
+# County Title
+title = c_arkon
+
+# Settlements
+max_settlements = 2
+
+b_arkon = castle
+b_chamoan = temple
+
+# Misc
+culture = clari
+religion = cytharai
+
+#History

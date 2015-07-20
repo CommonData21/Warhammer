@@ -1,0 +1,82 @@
+decisions = {
+
+	study_magic_decision = {
+			potential = {
+				age = 16
+				is_ruler = yes
+				NOT = { trait = khemri_liche_priest }
+				NOT = { trait = khemri_tomb_king }
+				NOT = { trait = studying_magic }
+				NOT = { trait = bray_shaman }
+
+				OR = {
+					has_character_modifier = magic_power_1
+					has_character_modifier = magic_power_2
+					has_character_modifier = magic_power_3
+					}
+				}
+
+		allow = {
+			wealth = 75
+			NOT = { learning = 40 }
+			war = no
+			liege = { war = no }
+			}
+
+		effect = {
+			wealth = -75
+			ROOT = { character_event = { id = studymagic.0 } }
+			}
+	
+	ai_will_do = {
+		factor = 1
+		modifier = { factor = 0.25
+				}
+		modifier = { factor = 0.05
+				trait = slothful
+				}
+		modifier = { factor = 0.15
+				trait = content
+				}
+		modifier = { factor = 0
+				NOT = { trait = ambitious }
+				NOT = { trait = lunatic_1 }
+				NOT = { trait = lunatic_2 }
+				NOT = { trait = lunatic_3 }
+				NOT = { has_focus = focus_scholarship }
+				}
+		modifier = { factor = 1.5
+				trait = envious
+				}
+		modifier = { factor = 0.5
+				religion_group = chaos_gods_group
+				}
+		modifier = { factor = 1.25
+				trait = creature_elf
+				}
+		}
+}
+	
+stop_studying_magic_decision ={
+
+		potential = {
+				age = 16
+				trait = studying_magic
+				}
+
+		allow = {
+			age = 16
+			trait = studying_magic
+		}
+
+	effect = {
+		ROOT = { remove_trait = studying_magic }
+		}
+	
+	ai_will_do = {
+		factor = 0
+		}
+	
+	}
+	
+}

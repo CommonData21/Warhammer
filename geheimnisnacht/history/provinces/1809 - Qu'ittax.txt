@@ -1,0 +1,17 @@
+# c_quittax
+
+# County Title
+title = c_quittax
+
+# Settlements
+max_settlements = 3
+
+b_quittax = tribal
+#b_natlalipopoca = city
+#b_tlazohtyacatl = temple
+
+# Misc
+culture = lizardman
+religion = old_ones
+terrain = jungle
+#History

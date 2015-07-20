@@ -1,0 +1,16 @@
+# c_skarud
+
+# County Title
+title = c_skarud
+
+# Settlements
+max_settlements = 2
+
+b_skarud = castle
+b_meliz = temple
+
+# Misc
+culture = dwarf_chaos
+religion = hashut
+
+#History

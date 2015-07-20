@@ -1,0 +1,2860 @@
+# The choice is made based on a weighted random, but the first factor that evaluates to >= 100 will be automatically chosen
+
+# p0 background
+0 = {
+	0 = { # castle 1
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { religion_group = old_world_group }
+		}
+	}
+
+	1 = { #throne room
+		factor = 50
+		modifier = {
+			factor = 0
+			NOT = { real_tier = king }
+			NOT = { real_tier = emperor }
+		}
+	}
+
+	2 = { # dungeon
+		factor = 100
+		modifier = {
+			factor = 0
+			prisoner = no
+		}
+	}
+
+	3 = { # forest
+		factor = 1
+		modifier = {
+			factor = 0
+			religion_group = ormazdic_gods_group
+		}
+	}
+
+	4 = { # bed
+		factor = 100
+		modifier = {
+			factor = 0
+			NOT = { trait = incapable }
+			NOT = { trait = infirm }
+		}
+		modifier = {
+			factor = 0.01
+			trait = infirm
+		}
+	}
+	
+	5 = { # tavern
+		factor = 100
+		modifier = {
+			factor = 0
+			NOT = { 
+				OR = {
+					trait = drunkard
+					trait = hedonist
+					trait = lustful
+				}
+			}
+		}
+	}
+	
+	6 = { # military camp
+		factor = 100
+		modifier = {
+			factor = 0
+			in_command = no
+			NOT = { has_job_title  = job_marshal }
+		}
+		modifier = {
+			factor = 0.02
+			has_job_title = job_marshal
+		}
+	}
+	7 = { # Dolmen
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { religion_group = pagan_group }
+		}
+	}
+	8 = { # Gallows
+		factor = 0
+	}
+	9 = { # Church
+		factor = 100
+		modifier = {
+			factor = 0
+			NOT = { religion_group = christian }
+		}
+		modifier = {
+			factor = 0
+			is_ruler = no
+			
+			}
+		modifier = {
+			factor = 0
+			OR = {
+				is_ruler = no
+				is_theocracy = no
+			}
+		}
+	}
+	10 = { # Desert
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { religion_group = muslim }
+			#NOT = { capital_scope = { terrain = desert } }
+			#NOT = { capital_scope = { terrain = coastal_desert } }
+		}
+	}
+	11 = { # Steppe
+		factor = 1
+		modifier = {
+			factor = 0
+			#NOT = { capital_scope = { terrain = steppe } }
+			#NOT = { capital_scope = { terrain = plains } }
+			NOT = { culture_group = altaic }
+		}
+		modifier = {
+			factor = 10
+			culture_group = altaic
+			NOT = { culture = turkish }
+		}
+	}
+	12 = { # Ocean w ships
+		factor = 0
+		#modifier = {
+			#factor = 0
+			#NOT = { location = { terrain = ocean } }
+		#}
+	}
+	13 = { # Muslim interior
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { religion_group = muslim }
+		}
+	}
+	14 = { # Harem
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { religion_group = muslim }
+		}
+	}
+	15 = { # Muslim interior 2
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { religion_group = muslim }
+		}
+	}
+
+	16 = { # Mongol camp 1
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { culture = mongol }
+		}
+	}
+
+	17 = { # Mongol camp 2
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { culture = mongol }
+		}
+	}
+
+	18 = { # Papal palace
+		factor = 100
+		modifier = {
+			factor = 0
+			NOT = { has_landed_title = k_papal_state }
+			NOT = { has_landed_title = d_fraticelli }
+			NOT = { has_claim = k_papal_state }
+			NOT = { has_claim = d_fraticelli }
+		}
+	}
+
+	19 = { # Muslim mosque
+		factor = 100
+		modifier = {
+			factor = 0
+			NOT = { religion_group = muslim }
+		}
+
+		modifier = {
+			factor = 0
+			is_ruler = no
+			
+			}
+		modifier = {
+			factor = 0
+			OR = {
+				is_ruler = no
+				is_theocracy = no
+			}
+		}
+	}
+
+	20 = { # Pagan human sacrifice
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { religion_group = pagan_group }
+		}
+	}
+}
+
+# p1 hair  --- WARNING! Property 1 MUST be Hair, otherwise the hair hiding helmets wont work ---
+1 = {
+	0 = { # Completely bald
+		factor = 1
+		modifier = {
+			factor = 0.1
+			is_female = no
+			NOT = {
+				age = 50
+			}
+		}
+		modifier = {
+			factor = 0.1
+			is_female = yes
+		}
+		
+		# Does not suit African females of a Western Culture
+		modifier = {
+			factor = 0
+			is_female = yes
+			graphical_culture = africangfx
+			NOT = { culture = manden }
+			NOT = { culture = ethiopian }
+			OR = {
+				higher_tier_than = count
+				spouse = { higher_tier_than = count }
+				has_minor_title = title_prince
+			}
+		}
+	}
+
+	1 = { # Black Adder
+		factor = 1
+		
+		# Does not suit African females of a Western Culture
+		modifier = {
+			factor = 0
+			is_female = yes
+			graphical_culture = africangfx
+			NOT = { culture = manden }
+			NOT = { culture = ethiopian }
+			OR = {
+				higher_tier_than = count
+				spouse = { higher_tier_than = count }
+				has_minor_title = title_prince
+			}
+		}
+	}
+	
+	2 = { # Page
+		factor = 1
+		
+		# Does not suit Western females with African style headgear
+		modifier = {
+			factor = 0
+			is_female = yes
+			OR = {
+				culture = manden
+				culture = ethiopian
+			}
+			NOT = { graphical_culture = africangfx }
+			NOT = { graphical_culture = muslimgfx }
+			OR = {
+				higher_tier_than = count
+				spouse = { higher_tier_than = count }
+				has_minor_title = title_prince
+			}
+		}
+	}
+
+	3 = { # Synth
+		factor = 1
+		
+		# Does not suit Western females with African style headgear
+		modifier = {
+			factor = 0
+			is_female = yes
+			OR = {
+				culture = manden
+				culture = ethiopian
+			}
+			NOT = { graphical_culture = africangfx }
+			NOT = { graphical_culture = muslimgfx }
+			OR = {
+				higher_tier_than = count
+				spouse = { higher_tier_than = count }
+				has_minor_title = title_prince
+			}
+		}
+	}
+
+	4 = { # Long Straight
+		factor = 1
+		
+		# Does not suit Western females with African style headgear
+		modifier = {
+			factor = 0
+			is_female = yes
+			OR = {
+				culture = manden
+				culture = ethiopian
+			}
+			NOT = { graphical_culture = africangfx }
+			NOT = { graphical_culture = muslimgfx }
+			OR = {
+				higher_tier_than = count
+				spouse = { higher_tier_than = count }
+				has_minor_title = title_prince
+			}
+		}
+	}
+
+	5 = { # Long Curly
+		factor = 1
+		
+		# Does not suit African females of a Western Culture
+		modifier = {
+			factor = 0
+			is_female = yes
+			graphical_culture = africangfx
+			NOT = { culture = manden }
+			NOT = { culture = ethiopian }
+			OR = {
+				higher_tier_than = count
+				spouse = { higher_tier_than = count }
+				has_minor_title = title_prince
+			}
+		}
+	}
+
+	6 = {  # Tonsure
+		factor = 1
+		modifier = {
+			factor = 0
+			is_female = no
+			is_ruler = yes
+		}
+		modifier = {
+			factor = 0
+			is_female = no
+			NOT = { religion_group = christian }
+		}
+		modifier = {
+			factor = 0
+			is_female = no
+			NOT = { trait = detached_priest }
+			NOT = { trait = martial_cleric }
+			NOT = { trait = scholarly_theologian }
+			NOT = { trait = mastermind_theologian }
+			NOT = { has_job_title = job_spiritual }
+			NOT = { trait = monk }
+		}
+
+		modifier = {
+			factor = 50
+			is_female = no
+			trait = monk
+		}
+		
+		# Does not suit Western females with African style headgear
+		modifier = {
+			factor = 0
+			is_female = yes
+			OR = {
+				culture = manden
+				culture = ethiopian
+			}
+			NOT = { graphical_culture = africangfx }
+			NOT = { graphical_culture = muslimgfx }
+			OR = {
+				higher_tier_than = count
+				spouse = { higher_tier_than = count }
+				has_minor_title = title_prince
+			}
+		}
+		
+		# Does not suit African females of a Western Culture
+		modifier = {
+			factor = 0
+			is_female = yes
+			graphical_culture = africangfx
+			NOT = { culture = manden }
+			NOT = { culture = ethiopian }
+			OR = {
+				higher_tier_than = count
+				spouse = { higher_tier_than = count }
+				has_minor_title = title_prince
+			}
+		}
+	}
+	
+	7 = {  # Short
+		factor = 1
+		
+		# Does not suit Western females with African style headgear
+		modifier = {
+			factor = 0
+			is_female = yes
+			OR = {
+				culture = manden
+				culture = ethiopian
+			}
+			NOT = { graphical_culture = africangfx }
+			NOT = { graphical_culture = muslimgfx }
+			OR = {
+				higher_tier_than = count
+				spouse = { higher_tier_than = count }
+				has_minor_title = title_prince
+			}
+		}
+		
+		# Does not suit African females of a Western Culture
+		modifier = {
+			factor = 0
+			is_female = yes
+			graphical_culture = africangfx
+			NOT = { culture = manden }
+			NOT = { culture = ethiopian }
+			OR = {
+				higher_tier_than = count
+				spouse = { higher_tier_than = count }
+				has_minor_title = title_prince
+			}
+		}
+	}
+	
+	8 = { # Short Curly
+		factor = 1
+	}
+	
+	9 = {  # Short Uncouth
+		factor = 1
+		modifier = {
+			factor = 5
+			religion_group = pagan_group
+		}
+		
+		# Does not suit Western females with African style headgear
+		modifier = {
+			factor = 0
+			is_female = yes
+			OR = {
+				culture = manden
+				culture = ethiopian
+			}
+			NOT = { graphical_culture = africangfx }
+			NOT = { graphical_culture = muslimgfx }
+			OR = {
+				higher_tier_than = count
+				spouse = { higher_tier_than = count }
+				has_minor_title = title_prince
+			}
+		}
+	}
+	
+	10 = {  # Long Uncouth
+		factor = 1
+		
+		modifier = {
+			factor = 5
+			religion_group = pagan_group
+		}
+		
+		# Does not suit Western females with African style headgear
+		modifier = {
+			factor = 0
+			is_female = yes
+			OR = {
+				culture = manden
+				culture = ethiopian
+			}
+			NOT = { graphical_culture = africangfx }
+			NOT = { graphical_culture = muslimgfx }
+			OR = {
+				higher_tier_than = count
+				spouse = { higher_tier_than = count }
+				has_minor_title = title_prince
+			}
+		}
+	}
+	
+	11 = { # Balding
+		factor = 1
+		modifier = {
+			factor = 0.1
+			is_female = no
+			NOT = {
+				age = 50
+			}
+		}
+	}
+	
+	12 = { # Marine
+		factor = 1
+		
+		# Does not suit Western females with African style headgear
+		modifier = {
+			factor = 0
+			is_female = yes
+			OR = {
+				culture = manden
+				culture = ethiopian
+			}
+			NOT = { graphical_culture = africangfx }
+			NOT = { graphical_culture = muslimgfx }
+			OR = {
+				higher_tier_than = count
+				spouse = { higher_tier_than = count }
+				has_minor_title = title_prince
+			}
+		}
+	}
+	
+	13 = { # Mohawk
+		factor = 1
+	}
+	
+	14 = { # Mohawk
+		factor = 1
+	}
+	
+	15 = { # Mohawk
+		factor = 1
+	}
+}
+
+# p2 base
+#2 = {
+#}
+
+# p3 clothes
+3 = {
+	
+	0 = { # Royal clothes 1
+		factor = 1
+		modifier = {
+			factor = 0
+			trait = khemri_liche_priest
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				trait = peasant_leader
+				trait = heresiarch
+			}
+		}
+		modifier = {
+			factor = 0
+			NOT = { real_tier = king }
+			NOT = { real_tier = emperor }
+			NOT = { spouse = { real_tier = king } }
+			NOT = { spouse = { real_tier = emperor } }
+			NOT = { has_minor_title = title_prince }
+		}
+	}
+	
+	1 = { # Royal clothes 2
+		factor = 1
+		modifier = {
+			factor = 0
+			trait = khemri_liche_priest
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				trait = peasant_leader
+				trait = heresiarch
+			}
+		}
+		modifier = {
+			factor = 0
+			NOT = { real_tier = king }
+			NOT = { real_tier = emperor }
+			NOT = { spouse = { real_tier = king } }
+			NOT = { spouse = { real_tier = emperor } }
+			NOT = { has_minor_title = title_prince }
+		}
+	}
+	
+	2 = { # Royal clothes 3
+		factor = 1
+		modifier = {
+			factor = 0
+			trait = khemri_liche_priest
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				trait = peasant_leader
+				trait = heresiarch
+			}
+		}
+		modifier = {
+			factor = 0
+			NOT = { real_tier = king }
+			NOT = { real_tier = emperor }
+			NOT = { spouse = { real_tier = king } }
+			NOT = { spouse = { real_tier = emperor } }
+			NOT = { has_minor_title = title_prince }
+		}
+	}
+	
+	3 = { # Noble clothes 1
+		factor = 1
+		modifier = {
+			factor = 0
+			trait = khemri_liche_priest
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				trait = peasant_leader
+				trait = heresiarch
+			}
+		}
+		modifier = {
+			factor = 0
+			NOT = { real_tier = duke }
+			NOT = { real_tier = count }
+			NOT = { real_tier = baron }
+			NOT = { spouse = { real_tier = duke } }
+			NOT = { spouse = { real_tier = count } }
+			NOT = { spouse = { real_tier = baron } }
+			NOT = { has_minor_title = title_prince }
+		}
+	}
+	
+	4 = { # Noble clothes 2
+		factor = 1
+		modifier = {
+			factor = 0
+			trait = khemri_liche_priest
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				trait = peasant_leader
+				trait = heresiarch
+			}
+		}
+		modifier = {
+			factor = 0
+			NOT = { real_tier = duke }
+			NOT = { real_tier = count }
+			NOT = { real_tier = baron }
+			NOT = { spouse = { real_tier = duke } }
+			NOT = { spouse = { real_tier = count } }
+			NOT = { spouse = { real_tier = baron } }
+			NOT = { has_minor_title = title_prince }
+		}
+	}
+	
+	5 = { # Noble clothes 3
+		factor = 1
+		modifier = {
+			factor = 0
+			OR = {
+				trait = peasant_leader
+				trait = heresiarch
+			}
+		}
+		modifier = {
+			factor = 0
+			NOT = { real_tier = duke }
+			NOT = { real_tier = count }
+			NOT = { real_tier = baron }
+			NOT = { spouse = { real_tier = duke } }
+			NOT = { spouse = { real_tier = count } }
+			NOT = { spouse = { real_tier = baron } }
+			NOT = { has_minor_title = title_prince }
+		}
+		modifier = {
+			factor = 0
+			trait = khemri_liche_priest
+		}
+	}
+	
+	6 = { # Modest clothes 1
+		factor = 1
+		modifier = {
+			factor = 0
+			trait = khemri_liche_priest
+		}
+		modifier = {
+			factor = 0
+			NOT = { trait = peasant_leader }
+			NOT = { trait = heresiarch }
+			OR = {
+				is_ruler = yes
+				has_minor_title = title_prince
+				spouse = { real_tier = emperor }
+				spouse = { real_tier = king }
+				spouse = { real_tier = duke }
+			}
+		}
+		modifier = {
+			factor = 10
+			is_ruler = yes
+			is_theocracy = yes
+			religion_group = pagan_group
+		}
+	}
+	7 = { # Modest clothes 2
+		factor = 1
+		modifier = {
+			factor = 0
+			trait = khemri_liche_priest
+		}
+		modifier = {
+			factor = 0
+			NOT = { trait = peasant_leader }
+			NOT = { trait = heresiarch }
+			OR = {
+				is_ruler = yes
+				has_minor_title = title_prince
+				spouse = { real_tier = emperor }
+				spouse = { real_tier = king }
+				spouse = { real_tier = duke }
+			}
+		}
+	}
+	
+	8 = { # Modest clothes 3
+		factor = 1
+		modifier = {
+			factor = 0
+			trait = khemri_liche_priest
+		}
+		modifier = {
+			factor = 0
+			NOT = { trait = peasant_leader }
+			NOT = { trait = heresiarch }
+			OR = {
+				is_ruler = yes
+				has_minor_title = title_prince
+				spouse = { real_tier = emperor }
+				spouse = { real_tier = king }
+				spouse = { real_tier = duke }
+			}
+		}
+	}
+	# Shady clothes
+	9 = {
+		factor = 3
+		modifier = {
+			factor = 0
+			NOT = { trait = creature_nehekharan }
+			OR = {
+				real_tier = king
+				real_tier = emperor
+				AND = {
+					real_tier = duke
+					any_demesne_title = {
+						real_tier = baron
+					}
+				}
+				spouse = { real_tier = king }
+				spouse = { real_tier = emperor }
+			}
+		}
+		modifier = {
+			factor = 0
+			NOT = { trait = creature_nehekharan }
+			NOT = { has_job_title = job_spymaster }
+			in_command = no
+			culture_group = asrai_group
+		}
+		modifier = {
+			factor = 0
+			liege = { any_war = { using_cb = great_wild_hunt } }
+			any_war = { using_cb = great_wild_hunt }	#asrai are dressed like rangers, except during Wild Hunts
+			in_command = yes
+			culture_group = asrai_group
+		}
+		modifier = {
+			factor = 0
+			NOT = { trait = creature_nehekharan }
+			NOT = { has_job_title = job_spymaster }
+			NOT = { culture_group = asrai_group }
+		}
+		modifier = {
+			factor = 0
+			trait = creature_nehekharan
+			NOT = { trait = khemri_liche_priest }
+		}
+	}
+	# Martial clothes
+	10 = {
+		factor = 100
+		modifier = {
+			factor = 0
+			NOT = { has_job_title  = job_marshal }
+			NOT = { martial = 10 }
+			NOT = {
+				primary_title = {
+					OR = {
+						mercenary = yes
+						title = d_knights_hospitaler
+						title = d_knights_templar
+						title = d_teutonic_order
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			in_command = yes
+			higher_tier_than = COUNT
+			OR = { culture_group = goblin_group
+				culture_group = orc_group
+				culture_group = beastman_group } #They all wear armors
+		}
+		modifier = {
+			factor = 0
+			in_command = no
+		}
+		modifier = {
+			factor = 0
+			culture_group = asrai_group
+			NOT = { any_war = { using_cb = great_wild_hunt } }
+			NOT = { liege = { any_war = { using_cb = great_wild_hunt } } }
+		}
+	}
+
+	# Ragged prison clothes
+	11 = {
+		factor = 100
+		modifier = {
+			factor = 0
+			prisoner = no
+			NOT = { trait = pet_consort }
+		}
+	}
+}
+
+# p4 beard
+4 = {
+	0 = {
+		factor = 1
+		modifier = {
+			factor = 0
+			religion_group = muslim
+			NOT = { graphical_culture = muslimgfx }
+		}
+		modifier = {
+			factor = 30
+			religion_group = christian
+			OR = {
+				culture = greek
+				culture = italian
+			}
+			OR = {
+				graphical_culture = southerngfx
+				graphical_culture = byzantinegfx
+			}
+		}
+		modifier = {
+			factor = 15
+			religion_group = christian
+			culture_group = iberian
+			OR = {
+				graphical_culture = southerngfx
+				graphical_culture = byzantinegfx
+			}
+		}
+	}
+	1 = {
+		factor = 1
+		modifier = {
+			factor = 0
+				trait = mut_beak
+			}
+	}
+	2 = {
+		factor = 1
+		modifier = {
+			factor = 0
+				trait = mut_beak
+			}
+	}
+	3 = {
+		factor = 1
+		modifier = {
+			factor = 0
+				trait = mut_beak
+			}
+	}
+	4 = {
+		factor = 1
+		modifier = {
+			factor = 0
+				trait = mut_beak
+			}
+	}
+	5 = {
+		factor = 1
+		modifier = {
+			factor = 0
+				trait = mut_beak
+			}
+	}
+	6 = {
+		factor = 1
+		modifier = {
+			factor = 0
+				trait = mut_beak
+			}
+	}
+	7 = {
+		factor = 1
+		modifier = {
+			factor = 0
+				trait = mut_beak
+			}
+	}
+	8 = {
+		factor = 1
+		modifier = {
+			factor = 0
+				trait = mut_beak
+			}
+	}
+	9 = {
+		factor = 1
+		modifier = {
+			factor = 5
+			religion_group = christian
+			culture_group = iberian
+			OR = {
+				graphical_culture = southerngfx
+				graphical_culture = byzantinegfx
+			}
+		}
+		modifier = {
+			factor = 0
+				trait = mut_beak
+			}
+	}
+	10 = {
+		factor = 1
+		modifier = {
+			factor = 0
+			religion_group = muslim
+			NOT = { graphical_culture = muslimgfx }
+		}
+		modifier = {
+			factor = 20
+			religion_group = christian
+			culture_group = iberian
+			OR = {
+				graphical_culture = southerngfx
+				graphical_culture = byzantinegfx
+			}
+		}
+		modifier = {
+			factor = 60
+			religion_group = christian
+			OR = {
+				culture = greek
+				culture = italian
+			}
+			OR = {
+				graphical_culture = southerngfx
+				graphical_culture = byzantinegfx
+			}
+		}
+		modifier = {
+			factor = 0
+				trait = mut_beak
+			}
+	}
+}
+
+# p5 headgear
+5 = {
+	# Imperial crown/Chaliph turban
+	0 = {
+		factor = 100
+		modifier = {
+			factor = 0
+			trait = khemri_liche_priest
+		}
+		modifier = {
+			factor = 0
+			NOT = { trait = everqueen }
+			NOT = { real_tier = emperor }
+			NOT = { spouse = { real_tier = emperor } }
+		}
+		modifier = {
+			factor = 0
+			is_feudal = no
+			is_tribal = no
+			is_nomadic = no
+			NOT = { trait = everqueen }
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				trait = peasant_leader
+				trait = heresiarch
+			}
+		}
+		modifier = {
+			factor = 0
+			prisoner = yes
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				trait = mut_doublehead
+				# trait = mut_beak
+			}
+		}
+	}
+	
+	# Royal crown/turban 1
+	1 = {
+		factor = 1
+		modifier = {
+			factor = 0
+			trait = khemri_liche_priest
+		}
+		modifier = {
+			factor = 0
+			NOT = { real_tier = king }
+			NOT = { spouse = { real_tier = king } }
+		}
+		modifier = {
+			factor = 0
+			is_feudal = no
+			is_tribal = no
+			is_nomadic = no
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				trait = peasant_leader
+				trait = heresiarch
+			}
+		}
+		modifier = {
+			factor = 0
+			prisoner = yes
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				trait = mut_doublehead
+				# trait = mut_beak
+			}
+		}
+	}
+
+	# Royal crown/turban 2
+	2 = {
+		factor = 1
+		modifier = {
+			factor = 0
+			trait = khemri_liche_priest
+		}
+		modifier = {
+			factor = 0
+			NOT = { real_tier = king }
+			NOT = { spouse = { real_tier = king } }
+		}
+		modifier = {
+			factor = 0
+			is_feudal = no
+			is_tribal = no
+			is_nomadic = no
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				trait = peasant_leader
+				trait = heresiarch
+			}
+		}
+		modifier = {
+			factor = 0
+			prisoner = yes
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				trait = mut_doublehead
+				# trait = mut_beak
+			}
+		}
+	}
+
+	# Royal crown/turban 3
+	3 = {
+		factor = 1
+		modifier = {
+			factor = 0
+			trait = khemri_liche_priest
+		}
+		modifier = {
+			factor = 0
+			trait = khemri_liche_priest
+		}
+		modifier = {
+			factor = 0
+			NOT = { real_tier = king }
+			NOT = { spouse = { real_tier = king } }
+		}
+		modifier = {
+			factor = 0
+			is_feudal = no
+			is_tribal = no
+			is_nomadic = no
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				trait = peasant_leader
+				trait = heresiarch
+			}
+		}
+		modifier = {
+			factor = 0
+			prisoner = yes
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				trait = mut_doublehead
+				# trait = mut_beak
+			}
+		}
+	}
+
+	# Simple golden band/turban
+	4 = {
+		factor = 1
+		modifier = {
+			factor = 0
+			trait = khemri_liche_priest
+		}
+		modifier = {
+			factor = 0
+			is_feudal = yes
+			NOT = { real_tier = duke }
+			NOT = { spouse = { real_tier = duke } }
+			NOT = { has_minor_title = title_prince }
+		}
+		modifier = {
+			factor = 0
+			is_republic = yes
+			NOT = { real_tier = duke }
+			NOT = { real_tier = king }
+			NOT = { real_tier = emperor }
+			NOT = { has_minor_title = title_prince }
+			NOT = { spouse = { real_tier = emperor } }
+			NOT = { spouse = { real_tier = king } }
+			NOT = { spouse = { real_tier = duke } }
+		}
+		modifier = {
+			factor = 0
+			#is_feudal = yes
+			real_tier = king
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				trait = peasant_leader
+				trait = heresiarch
+			}
+		}
+		modifier = {
+			factor = 0
+			prisoner = yes
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				trait = mut_doublehead
+				# trait = mut_beak
+			}
+		}
+	}
+
+	# Common headgear 1 - hood
+	5 = {
+		factor = 1
+		modifier = {
+			factor = 0
+			trait = khemri_liche_priest
+		}
+		modifier = {
+			factor = 0
+			OR = { real_tier = emperor
+				real_tier = king }
+		}
+		modifier = {
+			factor = 0
+			NOT = { trait = peasant_leader }
+			NOT = { trait = heresiarch }
+			OR = {
+				is_ruler = yes
+				has_minor_title = title_prince
+				spouse = { real_tier = emperor }
+				spouse = { real_tier = king }
+				spouse = { real_tier = duke }
+			}
+		}
+		modifier = {
+			factor = 10
+			is_ruler = yes
+			is_theocracy = yes
+			religion_group = pagan_group
+		}
+		modifier = {
+			factor = 0
+			prisoner = yes
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				trait = mut_doublehead
+				# trait = mut_beak
+			}
+		}
+	}
+	
+	# Common headgear 2 - hood
+	6 = {
+		factor = 1
+		modifier = {
+			factor = 0
+			trait = khemri_liche_priest
+		}
+		modifier = {
+			factor = 0
+			OR = { real_tier = emperor
+				real_tier = king }
+		}
+		modifier = {
+			factor = 0
+			NOT = { trait = peasant_leader }
+			NOT = { trait = heresiarch }
+			OR = {
+				is_ruler = yes
+				has_minor_title = title_prince
+				spouse = { real_tier = emperor }
+				spouse = { real_tier = king }
+				spouse = { real_tier = duke }
+			}
+		}
+		modifier = {
+			factor = 0
+			prisoner = yes
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				trait = mut_doublehead
+				# trait = mut_beak
+			}
+		}
+	}
+
+	# Common headgear 3 - Red hat
+	7 = {
+		factor = 1
+		modifier = {
+			factor = 0
+			trait = khemri_liche_priest
+		}
+		modifier = {
+			factor = 0
+			OR = { real_tier = emperor
+				real_tier = king }
+		}
+		modifier = {
+			factor = 0
+			NOT = { trait = peasant_leader }
+			NOT = { trait = heresiarch }
+			OR = {
+				NOT = { religion = orthodox }
+				is_ruler = yes
+				has_minor_title = title_prince
+				spouse = { real_tier = emperor }
+				spouse = { real_tier = king }
+				spouse = { real_tier = duke }
+			}
+		}
+		modifier = {
+			factor = 0
+			prisoner = yes
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				trait = mut_doublehead
+				# trait = mut_beak
+			}
+		}
+	}
+	
+	# Common headgear 4 - hood
+	8 = {
+		factor = 1
+		modifier = {
+			factor = 0
+			trait = khemri_liche_priest
+		}
+		modifier = {
+			factor = 0
+			OR = { real_tier = emperor
+				real_tier = king }
+		}
+		modifier = {
+			factor = 0
+			NOT = { trait = peasant_leader }
+			NOT = { trait = heresiarch }
+			OR = {
+				is_ruler = yes
+				has_minor_title = title_prince
+				spouse = { real_tier = emperor }
+				spouse = { real_tier = king }
+				spouse = { real_tier = duke }
+			}
+		}
+		modifier = {
+			factor = 0
+			prisoner = yes
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				trait = mut_doublehead
+				# trait = mut_beak
+			}
+		}
+	}
+
+	# Shady headgear
+	9 = {
+		factor = 3
+		modifier = {
+			factor = 0
+			NOT = { trait = creature_nehekharan }
+			OR = {
+				real_tier = king
+				real_tier = emperor
+				AND = {
+					real_tier = duke
+					any_demesne_title = {
+						real_tier = baron
+					}
+				}
+				spouse = { real_tier = king }
+				spouse = { real_tier = emperor }
+			}
+		}
+		modifier = {
+			factor = 0
+			NOT = { trait = creature_nehekharan }
+			NOT = { has_job_title = job_spymaster }
+			in_command = no
+			culture_group = asrai_group
+		}
+		modifier = {
+			factor = 0
+			any_war = { using_cb = great_wild_hunt }
+			liege = { any_war = { using_cb = great_wild_hunt } }
+			in_command = yes
+			culture_group = asrai_group
+		}
+		modifier = {
+			factor = 0
+			NOT = { trait = creature_nehekharan }
+			NOT = { has_job_title = job_spymaster }
+			NOT = { culture_group = asrai_group }
+		}
+		modifier = {
+			factor = 0
+			trait = creature_nehekharan
+			NOT = { trait = khemri_liche_priest }
+		}
+		modifier = {
+			factor = 0
+			prisoner = yes
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				trait = mut_doublehead
+				trait = mut_beak
+			}
+		}
+	}
+	# Martial headgear
+	10 = {
+		factor = 100
+		modifier = {
+			factor = 0
+			OR = { real_tier = emperor
+				real_tier = king }
+		}
+		modifier = {
+			factor = 0
+			NOT = { has_job_title  = job_marshal }
+			NOT = { martial = 10 }
+			NOT = {
+				primary_title = {
+					OR = {
+						mercenary = yes
+						title = d_knights_hospitaler
+						title = d_knights_templar
+						title = d_teutonic_order
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			in_command = no
+		}
+		modifier = {
+			factor = 0
+			in_command = yes
+			higher_tier_than = COUNT
+			OR = { culture_group = goblin_group
+				culture_group = orc_group
+				culture_group = beastman_group } #They all wear armors
+		}
+		modifier = {
+			factor = 0
+			culture_group = asrai_group
+			NOT = { any_war = { using_cb = great_wild_hunt } }
+			NOT = { liege = { any_war = { using_cb = great_wild_hunt } } }
+		}
+		modifier = {
+			factor = 0
+			prisoner = yes
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				trait = mut_doublehead
+				trait = mut_beak
+			}
+		}
+	}
+
+
+	# Blank
+	11 = {
+		factor = 3
+		modifier = {
+			factor = 0
+			NOT = { prisoner = yes }
+			OR = {
+				real_tier = emperor
+				real_tier = king
+				real_tier = duke
+				has_minor_title = title_prince
+				spouse = { real_tier = emperor }
+				spouse = { real_tier = king }
+				spouse = { real_tier = duke }
+			}
+		}
+	}
+}
+
+# p6 imprisoned
+6 = {
+	0 = { # blank
+		factor = 100
+		modifier = {
+			factor = 0
+			prisoner = yes
+		}
+	}
+
+	1 = { # prisoner
+		factor = 100
+		modifier = {
+			factor = 0
+			prisoner = no
+		}
+	}
+}
+
+# p7 scars
+7 = {
+	0 = { # blank
+		factor = 100
+		modifier = {
+			factor = 0
+			trait = undernourished
+		}
+		modifier = {
+			factor = 0
+			trait = fat
+		}
+ 	}
+	1 = { # blank (to protect the portrait border)
+		factor = 0
+ 	}
+
+	2 = { # fat female white
+		factor = 1
+		modifier = {
+			factor = 0
+			is_female = no
+			}
+		modifier = {
+			factor = 0
+			NOT = { trait = fat }
+			}
+		modifier = {
+			factor = 0
+				OR = {  graphical_culture = africangfx
+					graphical_culture = indiangfx
+					graphical_culture = westafricangfx
+					graphical_culture = southerngfx
+					graphical_culture = muslimgfx
+					graphical_culture = turkishgfx
+					graphical_culture = persiangfx
+					graphical_culture = byzantinegfx
+					graphical_culture = arabicgfx 
+					graphical_culture = andalusiangfx 
+					
+					# Custom Cultures (the # cultures use this sprite)
+					# graphical_culture = empiregfx 
+					# graphical_culture = sylvaniangfx 
+					graphical_culture = kurgangfx 
+					graphical_culture = arabyangfx 
+					graphical_culture = westerngfx_immortal 
+					graphical_culture = lahmiangfx
+					graphical_culture = ungorgfx
+					# graphical_culture = dwarfgfx 
+					# graphical_culture = imperialdwarfgfx 
+					# graphical_culture = chaosdwarfgfx 
+					# graphical_culture = elfgfx 
+					graphical_culture = asurgfx 
+					graphical_culture = asraigfx 
+					graphical_culture = druchiigfx 
+					# graphical_culture = hobbitsgfx 
+					graphical_culture = sartosantileangfx 
+					# graphical_culture = bretonniagfx 
+					# graphical_culture = amazongfx 
+					# graphical_culture = northempiregfx 
+					graphical_culture = tileagfx 
+					graphical_culture = estileangfx 
+					graphical_culture = hunggfx 
+					graphical_culture = southarabyangfx 
+					# graphical_culture = northmangfx 
+
+					# Monsters (the # cultures use this sprite)
+					# graphical_culture = greenskinsgfx 
+					# graphical_culture = skavengfx 
+					# graphical_culture = lizardmangfx 
+					} 
+		}
+  	}
+	3 = { # fat male white
+		factor = 1
+		modifier = {
+			factor = 0
+			is_female = yes
+			}
+		modifier = {
+			factor = 0
+			trait = undernourished
+		}
+		modifier = {
+			factor = 0
+			NOT = { trait = fat }
+			}
+		modifier = {
+			factor = 0
+				OR = {  
+					graphical_culture = norsegfx
+					graphical_culture = indiangfx
+					graphical_culture = africangfx
+					graphical_culture = westafricangfx
+					graphical_culture = southerngfx
+					graphical_culture = andalusiangfx
+					graphical_culture = byzantinegfx
+					graphical_culture = turkishgfx
+					graphical_culture = persiangfx
+					graphical_culture = muslimgfx
+					graphical_culture = arabicgfx 
+					
+					# Custom Cultures (the # cultures use this sprite)
+					# graphical_culture = empiregfx 
+					# graphical_culture = sylvaniangfx 
+					graphical_culture = kurgangfx 
+					graphical_culture = arabyangfx 
+					graphical_culture = ungorgfx
+					graphical_culture = westerngfx_immortal 
+					graphical_culture = lahmiangfx
+					# graphical_culture = dwarfgfx 
+					# graphical_culture = imperialdwarfgfx 
+					# graphical_culture = chaosdwarfgfx 
+					# graphical_culture = elfgfx 
+					graphical_culture = asurgfx 
+					graphical_culture = asraigfx 
+					graphical_culture = druchiigfx 
+					# graphical_culture = hobbitsgfx 
+					graphical_culture = sartosantileangfx 
+					# graphical_culture = bretonniagfx 
+					graphical_culture = amazongfx 
+					# graphical_culture = northempiregfx 
+					graphical_culture = tileagfx 
+					graphical_culture = estileangfx 
+					graphical_culture = hunggfx 
+					graphical_culture = southarabyangfx 
+					# graphical_culture = northmangfx 
+					graphical_culture = nomadgfx
+
+					# Monsters (the # cultures use this sprite)
+					# graphical_culture = greenskinsgfx 
+					# graphical_culture = skavengfx 
+					# graphical_culture = lizardmangfx 
+					} 
+		}
+  	}
+	4 = { # fat female iberian
+		factor = 1
+		modifier = {
+			factor = 0
+			is_female = no
+			}
+		modifier = {
+			factor = 0
+			trait = undernourished
+		}
+		modifier = {
+			factor = 0
+			NOT = { trait = fat }
+			}
+		modifier = {
+			factor = 0
+			NOT = { graphical_culture = southerngfx }
+			NOT = { graphical_culture = byzantinegfx }
+			NOT = { graphical_culture = turkishgfx }
+			NOT = { graphical_culture = persiangfx }
+			NOT = { graphical_culture = andalusiangfx }
+
+					# Custom Cultures (that use this sprite)
+					NOT = { graphical_culture = sartosantileangfx }
+					NOT = { graphical_culture = tileagfx } 
+					NOT = { graphical_culture = estileangfx }
+					NOT = { graphical_culture = hunggfx } 
+					NOT = { graphical_culture = southarabyangfx }
+		}
+  	}
+	5 = { # fat male iberian
+		factor = 1
+		modifier = {
+			factor = 0
+			is_female = yes
+			}
+		modifier = {
+			factor = 0
+			trait = undernourished
+		}
+		modifier = {
+			factor = 0
+			NOT = { trait = fat }
+			}
+		modifier = {
+			factor = 0
+			NOT = { graphical_culture = southerngfx }
+			NOT = { graphical_culture = byzantinegfx }
+			NOT = { graphical_culture = turkishgfx }
+			NOT = { graphical_culture = persiangfx }
+			NOT = { graphical_culture = andalusiangfx }
+
+					# Custom Cultures (that use this sprite)
+					NOT = { graphical_culture = sartosantileangfx }
+					NOT = { graphical_culture = tileagfx } 
+					NOT = { graphical_culture = estileangfx }
+					NOT = { graphical_culture = hunggfx } 
+					NOT = { graphical_culture = southarabyangfx }
+		}
+  	}
+	6 = { # fat female lightbrown
+		factor = 1
+		modifier = {
+			factor = 0
+			is_female = no
+			}
+		modifier = {
+			factor = 0
+			trait = undernourished
+		}
+		modifier = {
+			factor = 0
+			NOT = { trait = fat }
+			}
+		modifier = {
+			factor = 0
+			NOT = { graphical_culture = muslimgfx }
+			NOT = { graphical_culture = arabicgfx }
+			NOT = { graphical_culture = indiangfx }
+
+					# Custom Cultures (that use this sprite)
+					NOT = { graphical_culture = kurgangfx }
+					NOT = { graphical_culture = arabyangfx } 
+					NOT = { graphical_culture = sartosantileangfx } 
+					NOT = { graphical_culture = hunggfx }
+					NOT = { graphical_culture = southarabyangfx }
+					NOT = { graphical_culture = nomadgfx }
+
+		}
+  	}
+	7 = { # fat male lightbrown
+		factor = 1
+		modifier = {
+			factor = 0
+			is_female = yes
+			}
+		modifier = {
+			factor = 0
+			trait = undernourished
+		}
+		modifier = {
+			factor = 0
+			NOT = { trait = fat }
+			}
+		modifier = {
+			factor = 0
+			NOT = { graphical_culture = muslimgfx }
+			NOT = { graphical_culture = arabicgfx }
+			NOT = { graphical_culture = indiangfx }
+
+					# Custom Cultures (that use this sprite)
+					NOT = { graphical_culture = kurgangfx }
+					NOT = { graphical_culture = arabyangfx } 
+					NOT = { graphical_culture = sartosantileangfx } 
+					NOT = { graphical_culture = hunggfx }
+					NOT = { graphical_culture = southarabyangfx }
+					NOT = { graphical_culture = nomadgfx }
+		}
+  	}
+	8 = { # fat female darkbrown
+		factor = 1
+		modifier = {
+			factor = 0
+			is_female = no
+			}
+		modifier = {
+			factor = 0
+			trait = undernourished
+		}
+		modifier = {
+			factor = 0
+			NOT = { trait = fat }
+			}
+		modifier = {
+			factor = 0
+			NOT = { graphical_culture = africangfx }
+			NOT = { graphical_culture = westafricangfx }
+		}
+  	}
+	9 = { # fat male darkbrown
+		factor = 1
+		modifier = {
+			factor = 0
+			is_female = yes
+			}
+		modifier = {
+			factor = 0
+			trait = undernourished
+		}
+		modifier = {
+			factor = 0
+			NOT = { trait = fat }
+			}
+		modifier = {
+			factor = 0
+			NOT = { graphical_culture = africangfx }
+			NOT = { graphical_culture = westafricangfx }
+		}
+  	}
+
+	10 = { # fat male norse
+		factor = 1
+		modifier = {
+			factor = 0
+			is_female = yes
+			}
+		modifier = {
+			factor = 0
+			trait = undernourished
+		}
+		modifier = {
+			factor = 0
+			NOT = { trait = fat }
+			}
+		modifier = {
+			factor = 0
+			NOT = { graphical_culture = norsegfx }
+			NOT = { graphical_culture = amazongfx }
+		}
+		modifier = {
+			factor = 0
+			trait = burnt_by_asuryan
+			}
+  	}
+	11 = { # malnourished
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { trait = undernourished }
+			}
+		modifier = {
+			factor = 0
+			trait = fat
+			}
+  	}
+	12 = { # fat female asur
+		factor = 1
+		modifier = {
+			factor = 0
+			is_female = no
+			}
+		modifier = {
+			factor = 0
+			trait = undernourished
+		}
+		modifier = {
+			factor = 0
+			NOT = { trait = fat }
+			}
+		modifier = {
+			factor = 0
+			NOT = { graphical_culture = asurgfx }
+			NOT = { graphical_culture = asraigfx }
+			NOT = { graphical_culture = ungorgfx }
+			NOT = { graphical_culture = westerngfx_immortal }
+			NOT = { graphical_culture = lahmiangfx }
+		}
+  	}
+	13 = { # fat male asur
+		factor = 1
+		modifier = {
+			factor = 0
+			is_female = yes
+			}
+		modifier = {
+			factor = 0
+			trait = undernourished
+		}
+		modifier = {
+			factor = 0
+			NOT = { trait = fat }
+			}
+		modifier = {
+			factor = 0
+			NOT = { graphical_culture = asurgfx }
+			NOT = { graphical_culture = asraigfx }
+			NOT = { graphical_culture = ungorgfx }
+			NOT = { graphical_culture = westerngfx_immortal }
+			NOT = { graphical_culture = lahmiangfx }
+		}
+  	}
+
+	14 = { # fat female druchii
+		factor = 1
+		modifier = {
+			factor = 0
+			is_female = no
+			}
+		modifier = {
+			factor = 0
+			trait = undernourished
+		}
+		modifier = {
+			factor = 0
+			NOT = { trait = fat }
+			}
+		modifier = {
+			factor = 0
+			NOT = { graphical_culture = druchiigfx }
+		}
+  	}
+	15 = { # fat male druchii
+		factor = 1
+		modifier = {
+			factor = 0
+			is_female = yes
+			}
+		modifier = {
+			factor = 0
+			trait = undernourished
+		}
+		modifier = {
+			factor = 0
+			NOT = { trait = fat }
+			}
+		modifier = {
+			factor = 0
+			NOT = { graphical_culture = druchiigfx }
+		}
+  	}
+}
+
+# p8 red dots
+8 = {
+	0 = { # blank
+		factor = 100
+		modifier = {
+			factor = 0
+			OR = {
+				trait = everchosen
+				culture_group = goblin_group
+				graphical_culture = nehekharangfx
+				trait = khorne_demon
+				trait = nurgle_demon
+				culture_group = orc_group
+				trait = slaanesh_demon
+				trait = tzeentch_demon
+				trait = valkia
+				trait = creature_slann
+				trait = awn_magian
+				trait = creature_toad
+				culture_group = lizardman_group
+				culture_group = skaven_group
+				trait = creature_pig
+				trait = khorne_bloodletter
+				trait = nurgle_plaguebearer
+				trait = slaanesh_daemonette
+				trait = tzeentch_flamer	
+				trait = creature_saurus
+				OR = {				
+					has_nickname = nick_the_Razorback
+					has_nickname = nick_the_Cold_One
+					has_nickname = nick_the_Terradon
+					has_nickname = nick_the_Stegadon
+					has_nickname = nick_the_Sauropod
+					has_nickname = nick_the_Thunder_Lizard
+					has_nickname = nick_the_Carnosaur
+				}
+			}
+		}
+ 	}
+
+	1 = { # red dots
+		factor = 100
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = {
+					trait = everchosen
+				}
+			}
+		}
+  	}
+	2 = { # red dots
+		factor = 100
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = {
+					culture_group = goblin_group
+				}
+			}
+		}
+  	}
+	3 = { # red dots
+		factor = 100
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = {
+				AND = {
+					graphical_culture = nehekharangfx
+					is_female = no
+					higher_tier_than = BARON 
+				}
+				}
+			}
+		}
+  	}
+	4 = { # red dots
+		factor = 100
+		modifier = {
+			factor = 0
+					OR = {
+				NOT = {
+				AND = {
+					graphical_culture = nehekharangfx
+					lower_tier_than = COUNT 
+				}
+				}
+			}	
+			}
+		}
+	5 = { # red dots
+		factor = 100
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = {
+				AND = {
+					graphical_culture = nehekharangfx
+					is_female = yes
+					higher_tier_than = BARON
+				}
+				}
+			}
+		}
+  	}	
+	6 = { # red dots
+		factor = 100
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = {
+					trait = khorne_demon
+				}
+			}
+		}
+  	}
+	7 = { # red dots
+		factor = 100
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = {
+					trait = nurgle_demon
+
+				}
+			}
+		}
+  	}
+	8 = { # red dots
+		factor = 100
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = {
+				culture_group = orc_group
+				}
+			}
+		}
+  	}
+	9 = { # red dots
+		factor = 100
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = {
+					trait = slaanesh_demon
+				}
+			}
+		}
+  	}
+	10 = { # red dots
+		factor = 100
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = {
+					trait = tzeentch_demon
+				}
+			}
+		}
+  	}
+	11 = { # red dots
+		factor = 100
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = {
+					trait = valkia
+				}
+			}
+		}
+  	}
+	12 = { # red dots
+		factor = 100
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = {
+					trait = creature_slann
+				}
+			}
+		}
+  	}
+	13 = { # red dots
+		factor = 100
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = {
+					trait = creature_toad
+				}
+			}
+		}
+  	}	
+	14 = { # red dots
+		factor = 100
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = {
+					culture_group = lizardman_group
+				}
+				AND = {
+					culture_group = lizardman_group
+					trait = creature_saurus
+				}
+				OR = {					
+					has_nickname = nick_the_Razorback
+					has_nickname = nick_the_Cold_One
+					has_nickname = nick_the_Terradon
+					has_nickname = nick_the_Stegadon
+					has_nickname = nick_the_Sauropod
+					has_nickname = nick_the_Thunder_Lizard
+					has_nickname = nick_the_Carnosaur
+				}
+			}
+		}
+  	}
+	
+	15 = { # red dots
+		factor = 100
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = {
+					culture_group = skaven_group
+				}
+			}
+		}
+  	}	
+	16 = { # red dots
+		factor = 100
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = {
+					trait = creature_pig
+				}
+			}
+		}
+  	}
+	17 = { # red dots
+		factor = 100
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = {
+					trait = awn_siren #should be bel-akhor or whatever when we get that trait
+				}
+			}
+		}
+  	}
+	18 = { # red dots
+		factor = 100
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = {
+					trait = khorne_bloodletter
+				}
+			}
+		}
+  	}
+	19 = { # red dots
+		factor = 100
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = {
+					trait = nurgle_plaguebearer
+				}
+			}
+		}
+  	}
+	20 = { # red dots
+		factor = 100
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = {
+					trait = slaanesh_daemonette
+				}
+			}
+		}
+  	}
+	21 = { # red dots
+		factor = 100
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = {
+					trait = tzeentch_flamer
+				}
+			}
+		}
+  	}
+	22 = { # red dots
+		factor = 100
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = {
+					trait = creature_saurus
+				}
+			}
+		}
+  	}
+	23 = { # red dots
+		factor = 100
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = {					
+				has_nickname = nick_the_Razorback
+				has_nickname = nick_the_Cold_One
+				has_nickname = nick_the_Terradon
+				has_nickname = nick_the_Stegadon
+				has_nickname = nick_the_Sauropod
+				has_nickname = nick_the_Thunder_Lizard
+				has_nickname = nick_the_Carnosaur
+				}
+			}
+		}
+  	}
+}
+
+
+# p9 boils - Now used for mutations and scars as well
+
+9 = {
+
+	0 = { # blank
+		factor = 100
+		modifier = {
+			factor = 0
+				OR = { trait = has_bubonic_plague 
+					trait = has_nurgle_rot
+					trait = burnt_by_asuryan  
+					trait = scarred
+					trait = maimed
+					trait = wounded
+					trait = mut_thirdeye
+					trait = mut_spines
+					trait = mut_scales
+					trait = mut_tongue
+					trait = mut_crests
+					trait = mut_horns
+					trait = mut_doublehead
+					trait = mut_beak
+					trait = mut_teeth
+					trait = mut_eyes
+					trait = mut_bigeyes
+					trait = disfigured }
+		}
+ 	}
+
+	1 = { # boils
+		factor = 100
+		modifier = {
+			factor = 0
+			NOT = { trait = has_bubonic_plague }
+			NOT = { trait = has_nurgle_rot }
+			}
+ 	}
+	2 = { # scar 
+		factor = 1
+		modifier = {
+			factor = 0
+			OR = { trait = burnt_by_asuryan 
+				trait = has_bubonic_plague
+				trait = has_nurgle_rot
+				trait = mut_thirdeye
+				trait = mut_spines
+				trait = mut_scales
+				trait = mut_tongue
+				trait = mut_crests
+				trait = mut_horns
+				trait = mut_doublehead
+				trait = mut_beak
+				trait = mut_teeth
+				trait = mut_eyes
+				trait = mut_bigeyes
+				trait = disfigured }
+			}
+		modifier = {
+			factor = 0
+			NOT = { 
+				OR = { trait = maimed
+					trait = wounded
+					trait = scarred
+					}
+				}
+			}
+   	}
+
+	3 = { # burnt by asuryan
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { trait = burnt_by_asuryan }
+			}
+   	}
+
+	4 = { # disfigurement
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { trait = disfigured }
+			}
+		modifier = {
+			factor = 0
+			trait = burnt_by_asuryan
+			}
+  	}
+	5 = { # horns
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { trait = mut_horns }
+			}
+		modifier = {
+			factor = 0
+			OR = { trait = burnt_by_asuryan  
+				trait = mut_thirdeye
+				trait = mut_spines
+				trait = mut_scales
+				trait = mut_tongue
+				trait = mut_crests
+				# trait = mut_horns
+				trait = mut_doublehead
+				trait = mut_beak
+				trait = mut_teeth
+				trait = mut_eyes
+				trait = mut_bigeyes
+				trait = disfigured }
+			}
+  	}
+	6 = { # crests
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { trait = mut_crests }
+			}
+		modifier = {
+			factor = 0
+			OR = { trait = burnt_by_asuryan  
+				trait = mut_thirdeye
+				trait = mut_spines
+				trait = mut_scales
+				trait = mut_tongue
+				# trait = mut_crests
+				trait = mut_horns
+				trait = mut_doublehead
+				trait = mut_beak
+				trait = mut_teeth
+				trait = mut_eyes
+				trait = mut_bigeyes
+				trait = disfigured }
+			}
+  	}
+	7 = { # tongue
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { trait = mut_tongue }
+			}
+		modifier = {
+			factor = 0
+			OR = { trait = burnt_by_asuryan  
+				trait = mut_thirdeye
+				trait = mut_spines
+				trait = mut_scales
+				# trait = mut_tongue
+				trait = mut_crests
+				trait = mut_horns
+				trait = mut_doublehead
+				trait = mut_beak
+				trait = mut_teeth
+				trait = mut_eyes
+				trait = mut_bigeyes
+				trait = disfigured }
+			}
+  	}
+	8 = { # scales
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { trait = mut_scales }
+			}
+		modifier = {
+			factor = 0
+			OR = { trait = burnt_by_asuryan  
+				trait = mut_thirdeye
+				trait = mut_spines
+				# trait  = mut_scales
+				trait = mut_tongue
+				trait = mut_crests
+				trait = mut_horns
+				trait = mut_doublehead
+				trait = mut_beak
+				trait = mut_teeth
+				trait = mut_eyes
+				trait = mut_bigeyes
+				trait = disfigured }
+			}
+  	}
+	9 = { # spines
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { trait = mut_spines }
+			}
+		modifier = {
+			factor = 0
+			OR = { trait = burnt_by_asuryan 
+				trait = mut_thirdeye
+				# trait = mut_spines
+				trait = mut_scales
+				trait = mut_tongue
+				trait = mut_crests
+				trait = mut_horns
+				trait = mut_doublehead
+				trait = mut_beak
+				trait = mut_teeth
+				trait = mut_eyes
+				trait = mut_bigeyes
+				trait = disfigured }
+			}
+  	}
+	10 = { # third eye
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { trait = mut_thirdeye }
+			}
+		modifier = {
+			factor = 0
+			OR = { trait = burnt_by_asuryan  
+				# trait = mut_thirdeye
+				trait = mut_spines
+				trait = mut_scales
+				trait = mut_tongue
+				trait = mut_crests
+				trait = mut_horns
+				trait = mut_doublehead
+				trait = mut_beak
+				trait = mut_teeth
+				trait = mut_eyes
+				trait = mut_bigeyes
+				trait = disfigured }
+			}
+  	}
+	11 = { # second head
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { trait = mut_doublehead }
+			}
+		modifier = {
+			factor = 0
+			OR = { trait = burnt_by_asuryan  
+				trait = mut_thirdeye
+				trait = mut_spines
+				trait = mut_scales
+				trait = mut_tongue
+				trait = mut_crests
+				trait = mut_horns
+				# trait = mut_doublehead
+				trait = mut_beak
+				trait = mut_teeth
+				trait = mut_eyes
+				trait = mut_bigeyes
+				trait = disfigured }
+			}
+  	}
+	12 = { # beak
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { trait = mut_beak }
+			}
+		modifier = {
+			factor = 0
+			OR = { trait = burnt_by_asuryan  
+				trait = mut_thirdeye
+				trait = mut_spines
+				trait = mut_scales
+				trait = mut_tongue
+				trait = mut_crests
+				trait = mut_horns
+				trait = mut_doublehead
+				# trait = mut_beak
+				trait = mut_teeth
+				trait = mut_eyes
+				trait = mut_bigeyes
+				trait = disfigured }
+			}
+  	}
+	13 = { # teeth
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { trait = mut_teeth }
+			}
+		modifier = {
+			factor = 0
+			OR = { trait = burnt_by_asuryan  
+				trait = mut_thirdeye
+				trait = mut_spines
+				trait = mut_scales
+				trait = mut_tongue
+				trait = mut_crests
+				trait = mut_horns
+				trait = mut_doublehead
+				trait = mut_beak
+				# trait = mut_teeth
+				trait = mut_eyes
+				trait = mut_bigeyes
+				trait = disfigured }
+			}
+  	}
+	14 = { # eyes
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { trait = mut_eyes }
+			}
+		modifier = {
+			factor = 0
+			OR = { trait = burnt_by_asuryan  
+				trait = mut_thirdeye
+				trait = mut_spines
+				trait = mut_scales
+				trait = mut_tongue
+				trait = mut_crests
+				trait = mut_horns
+				trait = mut_doublehead
+				trait = mut_beak
+				trait = mut_teeth
+				# trait = mut_eyes
+				trait = mut_bigeyes
+				trait = disfigured }
+			}
+  	}
+	15 = { # big eyes
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { trait = mut_bigeyes }
+			}
+		modifier = {
+			factor = 0
+			OR = { trait = burnt_by_asuryan  
+				trait = mut_thirdeye
+				trait = mut_spines
+				trait = mut_scales
+				trait = mut_tongue
+				trait = mut_crests
+				trait = mut_horns
+				trait = mut_doublehead
+				trait = mut_beak
+				trait = mut_teeth
+				trait = mut_eyes
+				# trait = mut_bigeyes
+				trait = disfigured }
+			}
+  	}
+ 	
+}
+
+# p10 blinded
+10 = {
+	0 = {
+		factor = 1
+		modifier = {
+			factor = 0
+			trait = blinded
+			NOT = { trait = creature_beastman }
+			NOT = { trait = creature_nehekharan }
+		}
+		modifier = {
+			factor = 0
+			trait = mut_beak
+			NOT = { trait = creature_beastman }
+			NOT = { trait = creature_nehekharan }
+		}
+		modifier = {
+			factor = 0
+			trait = creature_beastman
+			NOT = { trait = horns_none }
+		}
+		modifier = {
+			factor = 0
+			trait = creature_nehekharan 
+			trait = khemri_mask
+		}
+	}
+	
+	1 =  {
+		factor = 100
+		modifier = {
+			factor = 0
+			NOT = { trait = blinded }
+			NOT = { trait = creature_beastman }
+			NOT = { trait = creature_nehekharan }
+		}
+		modifier = {
+			factor = 0
+			trait = creature_beastman
+			NOT = { trait = horns_none }
+		}
+		modifier = {
+			factor = 0
+			trait = creature_nehekharan 
+			NOT = { trait = khemri_mask }
+		}
+		modifier = {
+			factor = 0
+			NOT = { trait = creature_beastman }
+			trait = mut_beak
+		}
+	}
+	#horns small
+	2 =  {
+		factor = 1
+		modifier = {
+			factor = 100
+			NOT = { trait = creature_beastman }
+			trait = mut_beak
+		}
+		modifier = {
+			factor = 0
+			NOT = { trait = creature_beastman }
+			NOT = { trait = mut_beak }
+		}
+		modifier = {
+			factor = 0
+			trait = creature_beastman
+			OR = { trait = horns_none 
+				trait = horns_average
+				trait = horns_big }
+		}
+	}
+	3 =  {
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { trait = creature_beastman }
+		}
+		modifier = {
+			factor = 0
+			trait = creature_beastman
+			OR = { trait = horns_none 
+				trait = horns_average
+				trait = horns_big }
+		}
+	}
+	4 =  {
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { trait = creature_beastman }
+		}
+		modifier = {
+			factor = 0
+			trait = creature_beastman
+			OR = { trait = horns_none 
+				trait = horns_average
+				trait = horns_big }
+		}
+	}
+	5 =  {
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { trait = creature_beastman }
+		}
+		modifier = {
+			factor = 0
+			trait = creature_beastman
+			OR = { trait = horns_none 
+				trait = horns_average
+				trait = horns_big }
+		}
+	}
+	#horns average
+	6 =  {
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { trait = creature_beastman }
+		}
+		modifier = {
+			factor = 0
+			trait = creature_beastman
+			OR = { trait = horns_none 
+				trait = horns_small
+				trait = horns_big }
+		}
+	}
+	7 =  {
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { trait = creature_beastman }
+		}
+		modifier = {
+			factor = 0
+			trait = creature_beastman
+			OR = { trait = horns_none 
+				trait = horns_small
+				trait = horns_big }
+		}
+	}
+	8 =  {
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { trait = creature_beastman }
+		}
+		modifier = {
+			factor = 0
+			trait = creature_beastman
+			OR = { trait = horns_none 
+				trait = horns_small
+				trait = horns_big }
+		}
+	}
+	9 =  {
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { trait = creature_beastman }
+		}
+		modifier = {
+			factor = 0
+			trait = creature_beastman
+			OR = { trait = horns_none 
+				trait = horns_small
+				trait = horns_big }
+		}
+	}
+	10 =  {
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { trait = creature_beastman }
+		}
+		modifier = {
+			factor = 0
+			trait = creature_beastman
+			OR = { trait = horns_none 
+				trait = horns_small
+				trait = horns_big }
+		}
+	}
+	#horns big
+	11 =  {
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { trait = creature_beastman }
+		}
+		modifier = {
+			factor = 0
+			trait = creature_beastman
+			OR = { trait = horns_none 
+				trait = horns_small
+				trait = horns_average }
+		}
+	}
+	12 =  {
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { trait = creature_beastman }
+		}
+		modifier = {
+			factor = 0
+			trait = creature_beastman
+			OR = { trait = horns_none 
+				trait = horns_small
+				trait = horns_average }
+		}
+	}
+	13 =  {
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { trait = creature_beastman }
+		}
+		modifier = {
+			factor = 0
+			trait = creature_beastman
+			OR = { trait = horns_none 
+				trait = horns_small
+				trait = horns_average }
+		}
+	}
+	14 =  {
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { trait = creature_beastman }
+		}
+		modifier = {
+			factor = 0
+			trait = creature_beastman
+			OR = { trait = horns_none 
+				trait = horns_small
+				trait = horns_average }
+		}
+	}
+}
+
+
+# p11 player
+11 = {
+	0 = { # blank
+		factor = 100
+		modifier = {
+			factor = 0
+			AND = {
+				ai = no
+				multiplayer = yes
+			}
+		}
+	}
+
+	1 = { # player
+		factor = 100
+		modifier = {
+			factor = 0
+			OR = {
+				ai = yes
+				multiplayer = no
+			}
+		}
+	}
+}

@@ -1,0 +1,16 @@
+# c_xiquihta
+
+# County Title
+title = c_xiquihta
+
+# Settlements
+max_settlements = 2
+
+b_xiquihta = tribal
+#b_cuilxohual = city
+
+# Misc
+culture = lizardman
+religion = old_ones
+terrain = jungle
+#History

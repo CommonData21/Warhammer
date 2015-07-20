@@ -1,0 +1,16 @@
+# c_kyssos
+
+# County Title
+title = c_kyssos
+
+# Settlements
+max_settlements = 2
+
+b_kyssos = tribal
+#b_aros = city
+
+# Misc
+culture = autarri
+religion = anath_raema
+
+#History

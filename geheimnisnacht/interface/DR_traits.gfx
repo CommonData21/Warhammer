@@ -1,0 +1,89 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_trait_myrmidia_incarnate"
+		texturefile = "gfx/traits/myrmidia_incarnate.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	
+	spriteType = {
+		name = "GFX_trait_chaos_dwarf_sorcerer"
+		texturefile = "gfx/traits/ChaosDwarfDaemonsmith.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	
+	spriteType = {
+		name = "GFX_trait_chaos_dwarf_petrification_1"
+		texturefile = "gfx/traits/a_heart_icon.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	
+	spriteType = {
+		name = "GFX_trait_chaos_dwarf_petrification_2"
+		texturefile = "gfx/traits/a_heart_icon.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	
+	spriteType = {
+		name = "GFX_trait_great_taurus_mount"
+		texturefile = "gfx/traits/great_taurus_mount.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	
+	spriteType = {
+		name = "GFX_trait_lamassu_mount"
+		texturefile = "gfx/traits/lamassu_mount.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	
+	spriteType = {
+		name = "GFX_trait_greenskin_gods_gork"
+		texturefile = "gfx/traits/worship_gork.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	
+	spriteType = {
+		name = "GFX_trait_greenskin_gods_mork"
+		texturefile = "gfx/traits/worship_mork.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	
+	spriteType = {
+		name = "GFX_trait_on_errantry_quest"
+		texturefile = "gfx/traits/bretonnian_quest.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	
+	spriteType = {
+		name = "GFX_trait_tournament_winner"
+		texturefile = "gfx/traits/tournament_winner.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	
+	spriteType = {
+		name = "GFX_trait_hashut_kdaai"
+		texturefile = "gfx/traits/hashut_kdaai.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+}

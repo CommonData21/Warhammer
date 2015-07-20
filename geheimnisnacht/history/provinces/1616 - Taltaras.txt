@@ -1,0 +1,17 @@
+# c_taltaras
+
+# County Title
+title = c_taltaras
+
+# Settlements
+max_settlements = 3
+
+b_taltaras = castle
+#b_meridian = city
+#b_rhoan = temple
+
+# Misc
+culture = yvressi
+religion = cadai
+
+#History

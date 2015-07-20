@@ -1,0 +1,42 @@
+decisions = {
+	#Tomb Kings
+	awaken_servants = {
+		potential = {
+			always = no #WIP
+			higher_real_tier_than = BARON
+			culture_group = nehekharan_group
+			trait = khemri_tomb_king
+			location = {
+				any_province_lord = {
+					character = ROOT
+				}
+				NOT = {
+					has_province_modifier = tomb_kings_awakened_province_3
+				}
+			}
+		}
+		allow = {
+		
+		}
+		effect = {
+			character_event = { id = khemri.4 }
+		}
+		ai_will_do = {
+				factor = 1
+				
+				modifier = {
+					factor = 0.05 # Slow it down
+				}
+				
+				modifier = {
+					factor = 0 # A minimum of 1000 of prestige so that Nehekharan rulers don't waste their prestige
+					NOT = {
+						prestige = 1000
+					}
+				}    
+		}
+	
+	}
+	#Orcs & Goblins
+	
+}

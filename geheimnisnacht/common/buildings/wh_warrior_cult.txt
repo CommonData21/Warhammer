@@ -1,0 +1,63 @@
+castle={
+
+	#Warrior Cult, special pagan building that gives more infantry to pagans
+	ca_warrior_cult = {
+		auto_add_at_year = 10
+		potential = {
+			NOT = { religion = hashut }
+			NOT = { religion = stromfels }
+			OR = {
+				religion_group = chaos_gods_group
+				
+				# religion_group = greenskin_gods_group
+				religion_group = old_gods_group
+				
+			}
+		}
+		gold_cost = 10
+		build_time = 60
+		light_infantry = 50
+		heavy_infantry = 100
+		archers = 50
+		galleys = 2
+		tech_growth_modifier = -0.005
+		culture_techpoints = -0.005
+		economy_techpoints = -0.005
+		military_techpoints = -0.005
+		fort_level = 1
+		ai_creation_factor = 300 #AI should always build this if it can
+	}
+	
+	}
+	
+tribal={
+
+	#Warrior Cult, special pagan building that gives more infantry to pagans
+	tr_warrior_cult = {
+		auto_add_at_year = 10
+		potential = {
+			NOT = { religion = hashut }
+			NOT = { religion = stromfels }
+			OR = {
+				religion_group = chaos_gods_group
+				
+				# religion_group = greenskin_gods_group
+				religion_group = old_gods_group
+				
+			}
+		}
+		gold_cost = 10
+		build_time = 60
+		light_infantry = 50
+		heavy_infantry = 100
+		archers = 50
+		galleys = 2
+		tech_growth_modifier = -0.005
+		culture_techpoints = -0.005
+		economy_techpoints = -0.005
+		military_techpoints = -0.005
+		fort_level = 1
+		ai_creation_factor = 300 #AI should always build this if it can
+	}
+	
+	}

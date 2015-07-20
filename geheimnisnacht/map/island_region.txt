@@ -1,0 +1,166 @@
+# Island regions - no land path from the continent
+# The AI needs these to optimize path finding
+#
+# NOTE: do not add any regions here that are NOT islands
+
+#Chaos
+
+region_chaos = {
+	provinces = { 2350 }
+}
+
+#North Sea
+
+region_kuldevind = {
+	provinces = { 1200 }
+}
+
+region_ildelver = {
+	provinces = { 1199 }
+}
+
+#Bretonnia
+
+region_saintilles = {
+	provinces = { 819 }
+}
+
+region_lile_tranquille = {
+	provinces = { 917 }
+}
+
+
+#South Sea
+
+region_isla_santa_clair = {
+	provinces = { 919 }
+}
+
+region_isla_vega = {
+	provinces = { 920 }
+}
+
+region_isla_montanoza = {
+	provinces = { 921 }
+}
+
+region_isla_colina = {
+	provinces = { 922 }
+}
+
+region_isla_corazon = {
+	provinces = { 923 }
+}
+
+region_isla_dazure = {
+	provinces = { 924 }
+}
+
+region_liburni = {
+	provinces = { 575 }
+}
+
+region_delamata = {
+	provinces = { 577 }
+}
+
+region_isole_sirene = {
+	provinces = { 579 }
+}
+
+region_scordisci = {
+	provinces = { 580 }
+}
+
+region_autaria = {
+	provinces = { 581 }
+}
+
+region_sartosa = {
+	provinces = { 626 627 628 629 }
+}
+
+#Araby
+
+region_suqutra = {
+	provinces = { 1017 }
+}
+
+region_tripolana = {
+	provinces = { 993 }
+}
+
+region_fyrus = {
+	provinces = { 1021 }
+}
+
+region_hadmaut_islands = {
+	provinces = { 1055 963 962 961 }
+}
+
+#Dragon Isles
+
+region_mazur = {
+	provinces = { 1066 1067 1068 1072 }
+}
+
+region_dtella = {
+	provinces = { 1064 1074 1075 }
+}
+
+region_typhlos = {
+	provinces = { 1065 1069 1070 1071 1073 }
+}
+
+#Naggaroth
+
+region_iros = {
+	provinces = { 1350 1427 }
+}
+
+region_loibeth = {
+	provinces = { 1346 }
+}
+
+region_krunos = {
+	provinces = { 1428 }
+}
+
+
+region_karond_kar = {
+	provinces = { 1348 1429 1430 1431 1432 1433 }
+}
+#Ulthuan
+
+region_ulthuan = {
+	provinces = { 1492 1493 1494 1495 1496 1497 1498 1499 1500 1501 1502 1503 1504 1505 1506 1507 1508 1509 1510 1511 1512 1513 1514 1515 1516 1517 1518 1519 1520 1521 1522 1523 1524 1525 1526 1527 1528 1529 1530 1531 1532 1533 1534 1535 1537 1538 1539 1540 1541 1542 1543 1544 1545 1546 1547 1548 1549 1550 1551 1552 1553 1554 1555 1556 1557 1558 1559 1560 1561 1562 1563 1564 1565 1566 1567 1568 1569 1570 1571 1572 1573 1577 1578 1579 1580 1581 1582 1583 1584 1589 1590 1591 1592 1593 1594 1595 1596 1597 1598 1599 1600 1601 1602 1603 1604 1605 1606 1607 1608 1609 1610 1611 1612 1613 1617 1618 1619 1620 1621 1622 1623 1624 1625 1626 1627 1628 1629 }
+}
+
+region_blight_isles = {
+	provinces = { 1574 1575 1576 1585 1586 1587 1588 }
+}
+
+region_tralinia = {
+	provinces = { 1614 1615 1616 }
+}
+
+region_meralori = {
+	provinces = { 1536 }
+}
+
+#Lustria
+region_zarmuda = {
+	provinces = { 1781 }
+}
+
+region_chupayotl = {
+	provinces = { 1646 }
+}
+
+region_kavanna_islands = {
+	provinces = { 1772 1773 1776 }
+}
+
+region_the_serpents = {
+	provinces = { 1764 1765 }
+}

@@ -1,0 +1,50 @@
+# Traits for lizardman subraces - maybe eventually move to racial_traits
+
+creature_slann = {
+	potential = {
+		culture_group = lizardman_group
+	}
+	
+	inherit_chance = 100
+	fertility = -10
+	immortal = yes
+	learning = 5
+	customizer = no
+	
+	cannot_marry = yes
+	ruler_designer_cost = 0
+}
+
+creature_saurus = {
+	potential = {
+		culture_group = lizardman_group
+	}
+	
+	cannot_inherit = yes
+	inherit_chance = 100
+	fertility = -10
+	immortal = yes
+	martial = 3
+	combat_rating = 2
+	customizer = no
+	
+	cannot_marry = yes
+	ruler_designer_cost = 0
+}
+
+# lizardman_skink = {
+	# potential = {
+		# culture_group = lizardman_group
+	# }
+	
+	# stewardship = 2
+	# inherit_chance = 100
+	# fertility = -10
+	
+	# cannot_marry = yes
+# }
+
+lizardman_sleepingslann = {
+	incapacitating = yes
+	customizer = no
+}
